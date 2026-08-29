@@ -1,0 +1,4100 @@
+{
+ "eseguito": "2026-08-29T11:27:31.667Z",
+ "stagioni": [
+  "2324",
+  "2425",
+  "2526"
+ ],
+ "perLega": {
+  "Serie A": {
+   "giocate": 99,
+   "vinte": 74,
+   "attese": 64.7,
+   "percentuale": 74.7,
+   "saldo": 12.78,
+   "rendimento": 12.91
+  },
+  "Premier League": {
+   "giocate": 99,
+   "vinte": 65,
+   "attese": 64.8,
+   "percentuale": 65.7,
+   "saldo": -1.32,
+   "rendimento": -1.33
+  },
+  "Liga": {
+   "giocate": 99,
+   "vinte": 61,
+   "attese": 64.4,
+   "percentuale": 61.6,
+   "saldo": -8.06,
+   "rendimento": -8.14
+  },
+  "Ligue 1": {
+   "giocate": 76,
+   "vinte": 46,
+   "attese": 49.8,
+   "percentuale": 60.5,
+   "saldo": -7.22,
+   "rendimento": -9.5
+  },
+  "Bundesliga": {
+   "giocate": 76,
+   "vinte": 52,
+   "attese": 49.9,
+   "percentuale": 68.4,
+   "saldo": 0.61,
+   "rendimento": 0.81
+  }
+ },
+ "totale": {
+  "giocate": 449,
+  "vinte": 298,
+  "attese": 293.59999999999997,
+  "saldo": -3.2100000000000013
+ },
+ "nota": "Le quote di 1X2 e over/under 2.5 sono reali e di chiusura. Per gli altri mercati il prezzo e stimato applicando il margine osservato sull 1X2 della stessa partita.",
+ "giocate": [
+  {
+   "lega": "I1",
+   "data": "2023-12-14",
+   "partita": "Genoa-Juventus",
+   "mercato": "2",
+   "prob": 0.627,
+   "quota": 2.11,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2023-12-21",
+   "partita": "Empoli-Lazio",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.655,
+   "quota": 1.5,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2023-12-28",
+   "partita": "Fiorentina-Torino",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.682,
+   "quota": 1.43,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-01-04",
+   "partita": "Bologna-Genoa",
+   "mercato": "NoGol",
+   "prob": 0.664,
+   "quota": 1.46,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-01-12",
+   "partita": "Genoa-Torino",
+   "mercato": "X2",
+   "prob": 0.65,
+   "quota": 1.5,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-01-19",
+   "partita": "Roma-Verona",
+   "mercato": "Multigol 1-3",
+   "prob": 0.658,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-01-27",
+   "partita": "Genoa-Lecce",
+   "mercato": "Under 2.5",
+   "prob": 0.678,
+   "quota": 1.48,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-02-02",
+   "partita": "Bologna-Sassuolo",
+   "mercato": "Multigol 2-5",
+   "prob": 0.698,
+   "quota": 1.39,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-02-10",
+   "partita": "Fiorentina-Frosinone",
+   "mercato": "1",
+   "prob": 0.666,
+   "quota": 1.56,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-02-16",
+   "partita": "Verona-Juventus",
+   "mercato": "12",
+   "prob": 0.687,
+   "quota": 1.41,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-02-23",
+   "partita": "Salernitana-Monza",
+   "mercato": "Over 1.5",
+   "prob": 0.654,
+   "quota": 1.49,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-02-29",
+   "partita": "Lazio-Milan",
+   "mercato": "1X",
+   "prob": 0.642,
+   "quota": 1.52,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-03-07",
+   "partita": "Napoli-Torino",
+   "mercato": "Casa segna",
+   "prob": 0.687,
+   "quota": 1.41,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-03-14",
+   "partita": "Empoli-Bologna",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.586,
+   "quota": 1.65,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-03-29",
+   "partita": "Genoa-Frosinone",
+   "mercato": "Trasferta segna",
+   "prob": 0.661,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-04-05",
+   "partita": "Milan-Lecce",
+   "mercato": "Under 3.5",
+   "prob": 0.643,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-04-12",
+   "partita": "Lecce-Empoli",
+   "mercato": "X2",
+   "prob": 0.656,
+   "quota": 1.48,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-04-19",
+   "partita": "Empoli-Napoli",
+   "mercato": "Multigol 2-4",
+   "prob": 0.602,
+   "quota": 1.61,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-04-26",
+   "partita": "Lecce-Monza",
+   "mercato": "Under 2.5",
+   "prob": 0.657,
+   "quota": 1.67,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-05-03",
+   "partita": "Monza-Lazio",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.669,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-05-10",
+   "partita": "Napoli-Bologna",
+   "mercato": "Over 1.5",
+   "prob": 0.639,
+   "quota": 1.52,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-05-17",
+   "partita": "Lecce-Atalanta",
+   "mercato": "Multigol 1-3",
+   "prob": 0.65,
+   "quota": 1.5,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-05-23",
+   "partita": "Genoa-Bologna",
+   "mercato": "12",
+   "prob": 0.695,
+   "quota": 1.39,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-08-16",
+   "partita": "Genoa-Inter",
+   "mercato": "Multigol 2-5",
+   "prob": 0.663,
+   "quota": 1.46,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-08-23",
+   "partita": "Parma-Milan",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.662,
+   "quota": 1.46,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-08-29",
+   "partita": "Venezia-Torino",
+   "mercato": "Multigol 1-4",
+   "prob": 0.731,
+   "quota": 1.33,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-09-13",
+   "partita": "Como-Bologna",
+   "mercato": "2",
+   "prob": 0.693,
+   "quota": 2.68,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-09-19",
+   "partita": "Cagliari-Empoli",
+   "mercato": "Trasferta segna",
+   "prob": 0.643,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-09-26",
+   "partita": "Milan-Lecce",
+   "mercato": "Over 2.5",
+   "prob": 0.597,
+   "quota": 1.5,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-10-03",
+   "partita": "Napoli-Como",
+   "mercato": "Gol",
+   "prob": 0.642,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-10-18",
+   "partita": "Como-Parma",
+   "mercato": "Under 4.5",
+   "prob": 0.591,
+   "quota": 1.64,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-10-24",
+   "partita": "Udinese-Cagliari",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.582,
+   "quota": 1.67,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-10-28",
+   "partita": "Lecce-Verona",
+   "mercato": "Under 2.5",
+   "prob": 0.647,
+   "quota": 1.67,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-11-01",
+   "partita": "Udinese-Juventus",
+   "mercato": "NoGol",
+   "prob": 0.608,
+   "quota": 1.6,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-11-07",
+   "partita": "Lecce-Empoli",
+   "mercato": "Multigol 1-5",
+   "prob": 0.721,
+   "quota": 1.35,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-11-22",
+   "partita": "Milan-Juventus",
+   "mercato": "Casa segna",
+   "prob": 0.696,
+   "quota": 1.4,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-11-29",
+   "partita": "Como-Monza",
+   "mercato": "Multigol 2-4",
+   "prob": 0.592,
+   "quota": 1.64,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-12-06",
+   "partita": "Genoa-Torino",
+   "mercato": "1X",
+   "prob": 0.658,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-12-13",
+   "partita": "Udinese-Napoli",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.586,
+   "quota": 1.66,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-12-20",
+   "partita": "Genoa-Napoli",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.678,
+   "quota": 1.43,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2024-12-27",
+   "partita": "Cagliari-Inter",
+   "mercato": "Multigol 1-4",
+   "prob": 0.675,
+   "quota": 1.43,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-01-03",
+   "partita": "Verona-Udinese",
+   "mercato": "Under 3.5",
+   "prob": 0.637,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-01-11",
+   "partita": "Genoa-Parma",
+   "mercato": "Multigol 1-3",
+   "prob": 0.653,
+   "quota": 1.49,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-01-17",
+   "partita": "Juventus-Milan",
+   "mercato": "Trasferta segna",
+   "prob": 0.661,
+   "quota": 1.47,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-01-24",
+   "partita": "Napoli-Juventus",
+   "mercato": "Casa segna",
+   "prob": 0.657,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-01-31",
+   "partita": "Udinese-Venezia",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.674,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-02-07",
+   "partita": "Verona-Atalanta",
+   "mercato": "Over 2.5",
+   "prob": 0.688,
+   "quota": 1.8,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-02-14",
+   "partita": "Atalanta-Cagliari",
+   "mercato": "Under 4.5",
+   "prob": 0.683,
+   "quota": 1.42,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-02-21",
+   "partita": "Parma-Bologna",
+   "mercato": "Gol",
+   "prob": 0.571,
+   "quota": 1.7,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-02-27",
+   "partita": "Fiorentina-Lecce",
+   "mercato": "1",
+   "prob": 0.69,
+   "quota": 1.94,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-03-06",
+   "partita": "Cagliari-Genoa",
+   "mercato": "Over 1.5",
+   "prob": 0.657,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-03-13",
+   "partita": "Genoa-Lecce",
+   "mercato": "NoGol",
+   "prob": 0.665,
+   "quota": 1.46,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-03-28",
+   "partita": "Como-Empoli",
+   "mercato": "Multigol 2-5",
+   "prob": 0.674,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-04-03",
+   "partita": "Genoa-Udinese",
+   "mercato": "1X",
+   "prob": 0.683,
+   "quota": 1.43,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-04-10",
+   "partita": "Udinese-Milan",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.579,
+   "quota": 1.68,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-04-18",
+   "partita": "Lecce-Como",
+   "mercato": "Multigol 2-4",
+   "prob": 0.6,
+   "quota": 1.62,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-04-26",
+   "partita": "Como-Genoa",
+   "mercato": "12",
+   "prob": 0.715,
+   "quota": 1.36,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-05-01",
+   "partita": "Torino-Venezia",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.662,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-05-08",
+   "partita": "Milan-Bologna",
+   "mercato": "Under 3.5",
+   "prob": 0.687,
+   "quota": 1.42,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-05-16",
+   "partita": "Genoa-Atalanta",
+   "mercato": "2",
+   "prob": 0.617,
+   "quota": 2.34,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-05-22",
+   "partita": "Como-Inter",
+   "mercato": "Under 3.5",
+   "prob": 0.661,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-08-22",
+   "partita": "Genoa-Lecce",
+   "mercato": "NoGol",
+   "prob": 0.653,
+   "quota": 1.49,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-08-28",
+   "partita": "Cremonese-Sassuolo",
+   "mercato": "Under 4.5",
+   "prob": 0.627,
+   "quota": 1.55,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-09-12",
+   "partita": "Cagliari-Parma",
+   "mercato": "X2",
+   "prob": 0.621,
+   "quota": 1.56,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-09-18",
+   "partita": "Lecce-Cagliari",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.67,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-09-26",
+   "partita": "Como-Cremonese",
+   "mercato": "12",
+   "prob": 0.663,
+   "quota": 1.46,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-10-02",
+   "partita": "Verona-Sassuolo",
+   "mercato": "Multigol 1-3",
+   "prob": 0.651,
+   "quota": 1.5,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-10-17",
+   "partita": "Lecce-Sassuolo",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.587,
+   "quota": 1.66,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-10-23",
+   "partita": "Milan-Pisa",
+   "mercato": "Over 1.5",
+   "prob": 0.65,
+   "quota": 1.49,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-10-27",
+   "partita": "Lecce-Napoli",
+   "mercato": "Multigol 2-5",
+   "prob": 0.658,
+   "quota": 1.47,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-10-31",
+   "partita": "Udinese-Atalanta",
+   "mercato": "2",
+   "prob": 0.659,
+   "quota": 1.72,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-11-06",
+   "partita": "Pisa-Cremonese",
+   "mercato": "Under 2.5",
+   "prob": 0.685,
+   "quota": 1.53,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-11-21",
+   "partita": "Cagliari-Genoa",
+   "mercato": "Trasferta segna",
+   "prob": 0.644,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-11-27",
+   "partita": "Como-Sassuolo",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.587,
+   "quota": 1.66,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-12-05",
+   "partita": "Sassuolo-Fiorentina",
+   "mercato": "1X",
+   "prob": 0.671,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-12-11",
+   "partita": "Lecce-Pisa",
+   "mercato": "Multigol 1-5",
+   "prob": 0.778,
+   "quota": 1.25,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-12-19",
+   "partita": "Lazio-Cremonese",
+   "mercato": "Over 1.5",
+   "prob": 0.657,
+   "quota": 1.48,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2025-12-26",
+   "partita": "Pisa-Juventus",
+   "mercato": "Under 2.5",
+   "prob": 0.657,
+   "quota": 1.73,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-01-02",
+   "partita": "Juventus-Lecce",
+   "mercato": "1",
+   "prob": 0.685,
+   "quota": 1.25,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-01-06",
+   "partita": "Napoli-Verona",
+   "mercato": "Multigol 2-4",
+   "prob": 0.611,
+   "quota": 1.59,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-01-10",
+   "partita": "Lecce-Parma",
+   "mercato": "12",
+   "prob": 0.655,
+   "quota": 1.49,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-01-15",
+   "partita": "Pisa-Atalanta",
+   "mercato": "Multigol 2-5",
+   "prob": 0.662,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-01-22",
+   "partita": "Inter-Pisa",
+   "mercato": "Over 2.5",
+   "prob": 0.592,
+   "quota": 1.53,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-01-29",
+   "partita": "Lazio-Genoa",
+   "mercato": "Casa segna",
+   "prob": 0.722,
+   "quota": 1.31,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-02-05",
+   "partita": "Verona-Pisa",
+   "mercato": "X2",
+   "prob": 0.65,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-02-13",
+   "partita": "Como-Fiorentina",
+   "mercato": "1",
+   "prob": 0.598,
+   "quota": 1.73,
+   "esito": "ko"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-02-19",
+   "partita": "Sassuolo-Verona",
+   "mercato": "Multigol 1-3",
+   "prob": 0.664,
+   "quota": 1.42,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-02-26",
+   "partita": "Parma-Cagliari",
+   "mercato": "Trasferta segna",
+   "prob": 0.652,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-03-05",
+   "partita": "Napoli-Torino",
+   "mercato": "1",
+   "prob": 0.674,
+   "quota": 1.55,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-03-12",
+   "partita": "Torino-Parma",
+   "mercato": "1X",
+   "prob": 0.665,
+   "quota": 1.41,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-03-19",
+   "partita": "Cagliari-Napoli",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.575,
+   "quota": 1.65,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-04-03",
+   "partita": "Sassuolo-Cagliari",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.586,
+   "quota": 1.61,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-04-09",
+   "partita": "Roma-Pisa",
+   "mercato": "Under 3.5",
+   "prob": 0.698,
+   "quota": 1.35,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-04-16",
+   "partita": "Sassuolo-Como",
+   "mercato": "Multigol 2-4",
+   "prob": 0.618,
+   "quota": 1.53,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-04-23",
+   "partita": "Napoli-Cremonese",
+   "mercato": "NoGol",
+   "prob": 0.649,
+   "quota": 1.49,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-04-30",
+   "partita": "Pisa-Lecce",
+   "mercato": "X2",
+   "prob": 0.708,
+   "quota": 1.35,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-05-07",
+   "partita": "Torino-Sassuolo",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.657,
+   "quota": 1.43,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-05-16",
+   "partita": "Como-Parma",
+   "mercato": "NoGol",
+   "prob": 0.656,
+   "quota": 1.43,
+   "esito": "ok"
+  },
+  {
+   "lega": "I1",
+   "data": "2026-05-21",
+   "partita": "Fiorentina-Atalanta",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.697,
+   "quota": 1.36,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2023-12-08",
+   "partita": "Crystal Palace-Liverpool",
+   "mercato": "Multigol 2-5",
+   "prob": 0.668,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2023-12-14",
+   "partita": "Nott'm Forest-Tottenham",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.653,
+   "quota": 1.49,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2023-12-21",
+   "partita": "Aston Villa-Sheffield United",
+   "mercato": "NoGol",
+   "prob": 0.643,
+   "quota": 1.5,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2023-12-25",
+   "partita": "Sheffield United-Luton",
+   "mercato": "Multigol 1-3",
+   "prob": 0.666,
+   "quota": 1.46,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2023-12-29",
+   "partita": "Crystal Palace-Brentford",
+   "mercato": "Trasferta segna",
+   "prob": 0.667,
+   "quota": 1.46,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-01-12",
+   "partita": "Newcastle-Man City",
+   "mercato": "X2",
+   "prob": 0.666,
+   "quota": 1.46,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-01-29",
+   "partita": "Luton-Brighton",
+   "mercato": "Gol",
+   "prob": 0.639,
+   "quota": 1.52,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-02-02",
+   "partita": "Burnley-Fulham",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.694,
+   "quota": 1.4,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-02-09",
+   "partita": "Liverpool-Burnley",
+   "mercato": "Multigol 1-4",
+   "prob": 0.676,
+   "quota": 1.43,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-02-16",
+   "partita": "Fulham-Aston Villa",
+   "mercato": "Under 3.5",
+   "prob": 0.627,
+   "quota": 1.55,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-02-23",
+   "partita": "Aston Villa-Nott'm Forest",
+   "mercato": "1",
+   "prob": 0.652,
+   "quota": 1.61,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-03-01",
+   "partita": "Fulham-Brighton",
+   "mercato": "Multigol 2-4",
+   "prob": 0.616,
+   "quota": 1.58,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-03-08",
+   "partita": "Crystal Palace-Luton",
+   "mercato": "1X",
+   "prob": 0.645,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-03-15",
+   "partita": "Luton-Nott'm Forest",
+   "mercato": "Over 2.5",
+   "prob": 0.639,
+   "quota": 1.7,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-03-29",
+   "partita": "Brentford-Man United",
+   "mercato": "Under 3.5",
+   "prob": 0.667,
+   "quota": 1.46,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-04-02",
+   "partita": "Man City-Aston Villa",
+   "mercato": "Trasferta segna",
+   "prob": 0.642,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-04-06",
+   "partita": "Man United-Liverpool",
+   "mercato": "Casa segna",
+   "prob": 0.627,
+   "quota": 1.55,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-04-13",
+   "partita": "West Ham-Fulham",
+   "mercato": "1X",
+   "prob": 0.662,
+   "quota": 1.47,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-04-22",
+   "partita": "Arsenal-Chelsea",
+   "mercato": "Under 4.5",
+   "prob": 0.695,
+   "quota": 1.4,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-04-26",
+   "partita": "Wolves-Luton",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.583,
+   "quota": 1.66,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-05-03",
+   "partita": "Burnley-Newcastle",
+   "mercato": "Gol",
+   "prob": 0.662,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-05-10",
+   "partita": "Newcastle-Brighton",
+   "mercato": "Multigol 1-4",
+   "prob": 0.666,
+   "quota": 1.46,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-05-18",
+   "partita": "Arsenal-Everton",
+   "mercato": "Over 1.5",
+   "prob": 0.701,
+   "quota": 1.38,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-08-15",
+   "partita": "Man United-Fulham",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.678,
+   "quota": 1.43,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-08-23",
+   "partita": "Brighton-Man United",
+   "mercato": "12",
+   "prob": 0.733,
+   "quota": 1.33,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-08-30",
+   "partita": "Arsenal-Brighton",
+   "mercato": "NoGol",
+   "prob": 0.641,
+   "quota": 1.51,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-09-13",
+   "partita": "Southampton-Man United",
+   "mercato": "2",
+   "prob": 0.61,
+   "quota": 1.82,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-09-20",
+   "partita": "West Ham-Chelsea",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.578,
+   "quota": 1.68,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-09-27",
+   "partita": "Newcastle-Man City",
+   "mercato": "2",
+   "prob": 0.66,
+   "quota": 1.69,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-10-04",
+   "partita": "Crystal Palace-Liverpool",
+   "mercato": "Multigol 1-3",
+   "prob": 0.629,
+   "quota": 1.54,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-10-18",
+   "partita": "Tottenham-West Ham",
+   "mercato": "Under 4.5",
+   "prob": 0.663,
+   "quota": 1.46,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-10-24",
+   "partita": "Leicester-Nott'm Forest",
+   "mercato": "Multigol 2-4",
+   "prob": 0.62,
+   "quota": 1.57,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-11-01",
+   "partita": "Newcastle-Arsenal",
+   "mercato": "Casa segna",
+   "prob": 0.66,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-11-08",
+   "partita": "Brentford-Bournemouth",
+   "mercato": "Over 2.5",
+   "prob": 0.62,
+   "quota": 1.67,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-11-22",
+   "partita": "Leicester-Chelsea",
+   "mercato": "Multigol 2-5",
+   "prob": 0.69,
+   "quota": 1.41,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-11-28",
+   "partita": "Brighton-Southampton",
+   "mercato": "1",
+   "prob": 0.698,
+   "quota": 1.38,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-12-02",
+   "partita": "Ipswich-Crystal Palace",
+   "mercato": "Under 2.5",
+   "prob": 0.569,
+   "quota": 1.86,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-12-06",
+   "partita": "Aston Villa-Southampton",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.667,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-12-13",
+   "partita": "Liverpool-Fulham",
+   "mercato": "1",
+   "prob": 0.683,
+   "quota": 1.29,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-12-20",
+   "partita": "Brentford-Nott'm Forest",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.587,
+   "quota": 1.66,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-12-25",
+   "partita": "Bournemouth-Crystal Palace",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.656,
+   "quota": 1.48,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2024-12-28",
+   "partita": "Crystal Palace-Southampton",
+   "mercato": "Over 1.5",
+   "prob": 0.683,
+   "quota": 1.42,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-01-03",
+   "partita": "Aston Villa-Leicester",
+   "mercato": "Multigol 1-4",
+   "prob": 0.661,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-01-13",
+   "partita": "Chelsea-Bournemouth",
+   "mercato": "Gol",
+   "prob": 0.617,
+   "quota": 1.57,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-01-17",
+   "partita": "Brentford-Liverpool",
+   "mercato": "Under 4.5",
+   "prob": 0.652,
+   "quota": 1.49,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-01-24",
+   "partita": "Brighton-Everton",
+   "mercato": "Under 2.5",
+   "prob": 0.676,
+   "quota": 1.85,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-01-31",
+   "partita": "Bournemouth-Liverpool",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.583,
+   "quota": 1.66,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-02-13",
+   "partita": "Brighton-Chelsea",
+   "mercato": "Over 2.5",
+   "prob": 0.65,
+   "quota": 1.57,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-02-18",
+   "partita": "Aston Villa-Liverpool",
+   "mercato": "Casa segna",
+   "prob": 0.672,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-02-22",
+   "partita": "Man City-Liverpool",
+   "mercato": "X2",
+   "prob": 0.632,
+   "quota": 1.55,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-02-26",
+   "partita": "West Ham-Leicester",
+   "mercato": "Trasferta segna",
+   "prob": 0.648,
+   "quota": 1.5,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-03-09",
+   "partita": "West Ham-Newcastle",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.693,
+   "quota": 1.41,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-03-31",
+   "partita": "Wolves-West Ham",
+   "mercato": "1X",
+   "prob": 0.666,
+   "quota": 1.46,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-04-04",
+   "partita": "Crystal Palace-Brighton",
+   "mercato": "Multigol 1-3",
+   "prob": 0.643,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-04-11",
+   "partita": "Brighton-Leicester",
+   "mercato": "Under 3.5",
+   "prob": 0.656,
+   "quota": 1.47,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-04-18",
+   "partita": "Brentford-Brighton",
+   "mercato": "12",
+   "prob": 0.758,
+   "quota": 1.28,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-04-21",
+   "partita": "Man City-Aston Villa",
+   "mercato": "Multigol 2-4",
+   "prob": 0.605,
+   "quota": 1.62,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-05-01",
+   "partita": "Man City-Wolves",
+   "mercato": "Multigol 2-5",
+   "prob": 0.725,
+   "quota": 1.33,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-05-09",
+   "partita": "Fulham-Everton",
+   "mercato": "Under 2.5",
+   "prob": 0.666,
+   "quota": 1.9,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-05-15",
+   "partita": "Aston Villa-Tottenham",
+   "mercato": "Gol",
+   "prob": 0.665,
+   "quota": 1.46,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-05-24",
+   "partita": "Bournemouth-Leicester",
+   "mercato": "Multigol 1-3",
+   "prob": 0.629,
+   "quota": 1.54,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-08-14",
+   "partita": "Liverpool-Bournemouth",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.654,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-08-21",
+   "partita": "West Ham-Chelsea",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.575,
+   "quota": 1.69,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-08-29",
+   "partita": "Chelsea-Fulham",
+   "mercato": "Trasferta segna",
+   "prob": 0.631,
+   "quota": 1.53,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-09-12",
+   "partita": "Arsenal-Nott'm Forest",
+   "mercato": "Over 1.5",
+   "prob": 0.743,
+   "quota": 1.29,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-09-19",
+   "partita": "Liverpool-Everton",
+   "mercato": "Multigol 2-5",
+   "prob": 0.686,
+   "quota": 1.41,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-09-26",
+   "partita": "Brentford-Man United",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.568,
+   "quota": 1.71,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-10-02",
+   "partita": "Bournemouth-Fulham",
+   "mercato": "12",
+   "prob": 0.731,
+   "quota": 1.33,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-10-17",
+   "partita": "Nott'm Forest-Chelsea",
+   "mercato": "X2",
+   "prob": 0.731,
+   "quota": 1.33,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-10-23",
+   "partita": "Leeds-West Ham",
+   "mercato": "1X",
+   "prob": 0.644,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-10-31",
+   "partita": "Brighton-Leeds",
+   "mercato": "Under 3.5",
+   "prob": 0.625,
+   "quota": 1.56,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-11-07",
+   "partita": "Tottenham-Man United",
+   "mercato": "Multigol 2-4",
+   "prob": 0.616,
+   "quota": 1.59,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-11-21",
+   "partita": "Burnley-Chelsea",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.65,
+   "quota": 1.5,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-11-28",
+   "partita": "Brentford-Burnley",
+   "mercato": "1",
+   "prob": 0.669,
+   "quota": 1.5,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-12-01",
+   "partita": "Bournemouth-Everton",
+   "mercato": "Over 1.5",
+   "prob": 0.704,
+   "quota": 1.38,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-12-05",
+   "partita": "Aston Villa-Arsenal",
+   "mercato": "NoGol",
+   "prob": 0.588,
+   "quota": 1.66,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-12-12",
+   "partita": "Chelsea-Everton",
+   "mercato": "Under 2.5",
+   "prob": 0.655,
+   "quota": 2,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-12-19",
+   "partita": "Newcastle-Chelsea",
+   "mercato": "X2",
+   "prob": 0.656,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-12-25",
+   "partita": "Man United-Newcastle",
+   "mercato": "Over 2.5",
+   "prob": 0.623,
+   "quota": 1.57,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2025-12-29",
+   "partita": "Burnley-Newcastle",
+   "mercato": "Casa segna",
+   "prob": 0.66,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-01-02",
+   "partita": "Aston Villa-Nott'm Forest",
+   "mercato": "Multigol 1-3",
+   "prob": 0.63,
+   "quota": 1.54,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-01-05",
+   "partita": "West Ham-Nott'm Forest",
+   "mercato": "X2",
+   "prob": 0.662,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-01-16",
+   "partita": "Man United-Man City",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.652,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-01-23",
+   "partita": "West Ham-Sunderland",
+   "mercato": "12",
+   "prob": 0.701,
+   "quota": 1.34,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-01-30",
+   "partita": "Brighton-Everton",
+   "mercato": "Over 1.5",
+   "prob": 0.67,
+   "quota": 1.41,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-02-05",
+   "partita": "Leeds-Nott'm Forest",
+   "mercato": "1X",
+   "prob": 0.667,
+   "quota": 1.42,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-02-09",
+   "partita": "Chelsea-Leeds",
+   "mercato": "Trasferta segna",
+   "prob": 0.663,
+   "quota": 1.42,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-02-17",
+   "partita": "Wolves-Arsenal",
+   "mercato": "2",
+   "prob": 0.726,
+   "quota": 1.22,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-02-22",
+   "partita": "Everton-Man United",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.656,
+   "quota": 1.36,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-02-28",
+   "partita": "Arsenal-Chelsea",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.572,
+   "quota": 1.65,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-03-04",
+   "partita": "Tottenham-Crystal Palace",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.584,
+   "quota": 1.62,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-03-15",
+   "partita": "Brentford-Wolves",
+   "mercato": "Under 3.5",
+   "prob": 0.697,
+   "quota": 1.36,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-04-10",
+   "partita": "Arsenal-Bournemouth",
+   "mercato": "1",
+   "prob": 0.698,
+   "quota": 1.44,
+   "esito": "ko"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-04-17",
+   "partita": "Leeds-Wolves",
+   "mercato": "Multigol 2-5",
+   "prob": 0.679,
+   "quota": 1.39,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-04-21",
+   "partita": "Bournemouth-Leeds",
+   "mercato": "Multigol 2-4",
+   "prob": 0.62,
+   "quota": 1.53,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-05-01",
+   "partita": "Brentford-West Ham",
+   "mercato": "Multigol 1-4",
+   "prob": 0.769,
+   "quota": 1.22,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-05-08",
+   "partita": "Brighton-Wolves",
+   "mercato": "NoGol",
+   "prob": 0.571,
+   "quota": 1.66,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-05-14",
+   "partita": "Aston Villa-Liverpool",
+   "mercato": "Gol",
+   "prob": 0.617,
+   "quota": 1.53,
+   "esito": "ok"
+  },
+  {
+   "lega": "E0",
+   "data": "2026-05-23",
+   "partita": "Brighton-Man United",
+   "mercato": "Under 3.5",
+   "prob": 0.672,
+   "quota": 1.41,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2023-12-08",
+   "partita": "Alaves-Las Palmas",
+   "mercato": "1X",
+   "prob": 0.671,
+   "quota": 1.44,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2023-12-15",
+   "partita": "Celta-Granada",
+   "mercato": "Under 3.5",
+   "prob": 0.655,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2023-12-18",
+   "partita": "Ath Madrid-Getafe",
+   "mercato": "Multigol 1-3",
+   "prob": 0.646,
+   "quota": 1.5,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-01-01",
+   "partita": "Getafe-Vallecano",
+   "mercato": "Over 1.5",
+   "prob": 0.648,
+   "quota": 1.49,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-01-11",
+   "partita": "Sevilla-Alaves",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.663,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-01-19",
+   "partita": "Valencia-Ath Bilbao",
+   "mercato": "Casa segna",
+   "prob": 0.665,
+   "quota": 1.46,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-01-26",
+   "partita": "Barcelona-Villarreal",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.67,
+   "quota": 1.45,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-02-01",
+   "partita": "Ath Bilbao-Mallorca",
+   "mercato": "NoGol",
+   "prob": 0.675,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-02-08",
+   "partita": "Cadiz-Betis",
+   "mercato": "12",
+   "prob": 0.643,
+   "quota": 1.52,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-02-15",
+   "partita": "Villarreal-Getafe",
+   "mercato": "Multigol 1-4",
+   "prob": 0.666,
+   "quota": 1.46,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-02-22",
+   "partita": "Sociedad-Villarreal",
+   "mercato": "1",
+   "prob": 0.657,
+   "quota": 1.65,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-03-01",
+   "partita": "Sevilla-Sociedad",
+   "mercato": "Under 2.5",
+   "prob": 0.662,
+   "quota": 1.4,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-03-08",
+   "partita": "Valencia-Getafe",
+   "mercato": "Trasferta segna",
+   "prob": 0.654,
+   "quota": 1.48,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-03-15",
+   "partita": "Mallorca-Granada",
+   "mercato": "Multigol 2-5",
+   "prob": 0.637,
+   "quota": 1.52,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-03-29",
+   "partita": "Getafe-Sevilla",
+   "mercato": "Multigol 2-4",
+   "prob": 0.62,
+   "quota": 1.57,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-04-11",
+   "partita": "Betis-Celta",
+   "mercato": "Multigol 2-5",
+   "prob": 0.661,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-04-18",
+   "partita": "Ath Bilbao-Granada",
+   "mercato": "Over 2.5",
+   "prob": 0.632,
+   "quota": 1.67,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-04-25",
+   "partita": "Sociedad-Real Madrid",
+   "mercato": "Multigol 1-3",
+   "prob": 0.666,
+   "quota": 1.46,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-05-02",
+   "partita": "Getafe-Ath Bilbao",
+   "mercato": "X2",
+   "prob": 0.708,
+   "quota": 1.37,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-05-09",
+   "partita": "Alaves-Girona",
+   "mercato": "Casa segna",
+   "prob": 0.655,
+   "quota": 1.49,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-05-13",
+   "partita": "Osasuna-Mallorca",
+   "mercato": "12",
+   "prob": 0.667,
+   "quota": 1.46,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-05-17",
+   "partita": "Alaves-Getafe",
+   "mercato": "Under 2.5",
+   "prob": 0.655,
+   "quota": 1.67,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-05-23",
+   "partita": "Girona-Granada",
+   "mercato": "Multigol 1-5",
+   "prob": 0.716,
+   "quota": 1.35,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-08-14",
+   "partita": "Ath Bilbao-Getafe",
+   "mercato": "1",
+   "prob": 0.66,
+   "quota": 1.61,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-08-22",
+   "partita": "Celta-Valencia",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.586,
+   "quota": 1.66,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-08-25",
+   "partita": "Villarreal-Celta",
+   "mercato": "Under 4.5",
+   "prob": 0.639,
+   "quota": 1.52,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-08-30",
+   "partita": "Ath Bilbao-Ath Madrid",
+   "mercato": "Trasferta segna",
+   "prob": 0.664,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-09-13",
+   "partita": "Mallorca-Villarreal",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.657,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-09-17",
+   "partita": "Betis-Getafe",
+   "mercato": "NoGol",
+   "prob": 0.651,
+   "quota": 1.49,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-09-21",
+   "partita": "Vallecano-Ath Madrid",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.586,
+   "quota": 1.66,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-09-26",
+   "partita": "Valladolid-Mallorca",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.625,
+   "quota": 1.56,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-10-03",
+   "partita": "Leganes-Valencia",
+   "mercato": "1X",
+   "prob": 0.657,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-10-17",
+   "partita": "Alaves-Valladolid",
+   "mercato": "Multigol 2-4",
+   "prob": 0.608,
+   "quota": 1.6,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-10-24",
+   "partita": "Espanol-Sevilla",
+   "mercato": "X2",
+   "prob": 0.613,
+   "quota": 1.59,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-10-31",
+   "partita": "Alaves-Mallorca",
+   "mercato": "NoGol",
+   "prob": 0.663,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-11-08",
+   "partita": "Villarreal-Alaves",
+   "mercato": "Gol",
+   "prob": 0.625,
+   "quota": 1.55,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-11-22",
+   "partita": "Girona-Espanol",
+   "mercato": "Multigol 1-4",
+   "prob": 0.675,
+   "quota": 1.44,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-11-29",
+   "partita": "Espanol-Celta",
+   "mercato": "Under 3.5",
+   "prob": 0.63,
+   "quota": 1.55,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-12-06",
+   "partita": "Las Palmas-Valladolid",
+   "mercato": "Multigol 1-3",
+   "prob": 0.632,
+   "quota": 1.56,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-12-13",
+   "partita": "Espanol-Osasuna",
+   "mercato": "Under 3.5",
+   "prob": 0.673,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-12-17",
+   "partita": "Villarreal-Vallecano",
+   "mercato": "Trasferta segna",
+   "prob": 0.644,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2024-12-21",
+   "partita": "Betis-Vallecano",
+   "mercato": "Over 1.5",
+   "prob": 0.61,
+   "quota": 1.58,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-01-16",
+   "partita": "Espanol-Valladolid",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.587,
+   "quota": 1.65,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-01-23",
+   "partita": "Las Palmas-Osasuna",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.654,
+   "quota": 1.49,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-01-30",
+   "partita": "Leganes-Vallecano",
+   "mercato": "12",
+   "prob": 0.67,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-02-06",
+   "partita": "Vallecano-Valladolid",
+   "mercato": "Over 1.5",
+   "prob": 0.674,
+   "quota": 1.44,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-02-13",
+   "partita": "Girona-Getafe",
+   "mercato": "Multigol 2-5",
+   "prob": 0.626,
+   "quota": 1.55,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-02-20",
+   "partita": "Celta-Osasuna",
+   "mercato": "Gol",
+   "prob": 0.586,
+   "quota": 1.65,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-02-27",
+   "partita": "Valladolid-Las Palmas",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.579,
+   "quota": 1.68,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-03-07",
+   "partita": "Alaves-Villarreal",
+   "mercato": "Over 2.5",
+   "prob": 0.597,
+   "quota": 2.2,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-03-14",
+   "partita": "Mallorca-Espanol",
+   "mercato": "Casa segna",
+   "prob": 0.672,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-03-28",
+   "partita": "Espanol-Ath Madrid",
+   "mercato": "Under 2.5",
+   "prob": 0.6,
+   "quota": 1.67,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-04-04",
+   "partita": "Girona-Alaves",
+   "mercato": "Multigol 2-4",
+   "prob": 0.62,
+   "quota": 1.57,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-04-11",
+   "partita": "Sociedad-Mallorca",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.638,
+   "quota": 1.51,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-04-18",
+   "partita": "Vallecano-Valencia",
+   "mercato": "1X",
+   "prob": 0.694,
+   "quota": 1.4,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-04-21",
+   "partita": "Barcelona-Mallorca",
+   "mercato": "Over 2.5",
+   "prob": 0.61,
+   "quota": 1.57,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-05-01",
+   "partita": "Vallecano-Getafe",
+   "mercato": "X2",
+   "prob": 0.686,
+   "quota": 1.42,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-05-08",
+   "partita": "Las Palmas-Vallecano",
+   "mercato": "Over 1.5",
+   "prob": 0.657,
+   "quota": 1.48,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-05-12",
+   "partita": "Valladolid-Girona",
+   "mercato": "2",
+   "prob": 0.633,
+   "quota": 1.72,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-05-17",
+   "partita": "Ath Madrid-Betis",
+   "mercato": "Trasferta segna",
+   "prob": 0.639,
+   "quota": 1.52,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-05-22",
+   "partita": "Betis-Valencia",
+   "mercato": "Under 3.5",
+   "prob": 0.661,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-08-14",
+   "partita": "Girona-Vallecano",
+   "mercato": "Multigol 2-5",
+   "prob": 0.65,
+   "quota": 1.5,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-08-21",
+   "partita": "Betis-Alaves",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.587,
+   "quota": 1.66,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-08-26",
+   "partita": "Celta-Betis",
+   "mercato": "Gol",
+   "prob": 0.649,
+   "quota": 1.5,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-08-30",
+   "partita": "Vallecano-Barcelona",
+   "mercato": "2",
+   "prob": 0.623,
+   "quota": 1.42,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-09-14",
+   "partita": "Espanol-Mallorca",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.665,
+   "quota": 1.46,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-09-20",
+   "partita": "Barcelona-Getafe",
+   "mercato": "Under 4.5",
+   "prob": 0.752,
+   "quota": 1.29,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-09-25",
+   "partita": "Girona-Espanol",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.585,
+   "quota": 1.66,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-10-02",
+   "partita": "Osasuna-Getafe",
+   "mercato": "12",
+   "prob": 0.684,
+   "quota": 1.42,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-10-16",
+   "partita": "Oviedo-Espanol",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.648,
+   "quota": 1.5,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-10-23",
+   "partita": "Sociedad-Sevilla",
+   "mercato": "X2",
+   "prob": 0.648,
+   "quota": 1.5,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-10-30",
+   "partita": "Getafe-Girona",
+   "mercato": "Multigol 1-3",
+   "prob": 0.702,
+   "quota": 1.38,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-11-06",
+   "partita": "Elche-Sociedad",
+   "mercato": "Under 2.5",
+   "prob": 0.678,
+   "quota": 1.67,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-11-20",
+   "partita": "Valencia-Levante",
+   "mercato": "Multigol 1-4",
+   "prob": 0.742,
+   "quota": 1.31,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-11-27",
+   "partita": "Getafe-Elche",
+   "mercato": "NoGol",
+   "prob": 0.648,
+   "quota": 1.5,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-12-01",
+   "partita": "Barcelona-Ath Madrid",
+   "mercato": "Over 2.5",
+   "prob": 0.667,
+   "quota": 1.4,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-12-06",
+   "partita": "Real Madrid-Celta",
+   "mercato": "Under 4.5",
+   "prob": 0.726,
+   "quota": 1.34,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-12-14",
+   "partita": "Vallecano-Betis",
+   "mercato": "Casa segna",
+   "prob": 0.646,
+   "quota": 1.48,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2025-12-21",
+   "partita": "Ath Bilbao-Espanol",
+   "mercato": "Casa segna",
+   "prob": 0.658,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-01-03",
+   "partita": "Sociedad-Ath Madrid",
+   "mercato": "2",
+   "prob": 0.57,
+   "quota": 1.88,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-01-16",
+   "partita": "Real Madrid-Levante",
+   "mercato": "Under 4.5",
+   "prob": 0.659,
+   "quota": 1.43,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-01-23",
+   "partita": "Vallecano-Osasuna",
+   "mercato": "1X",
+   "prob": 0.659,
+   "quota": 1.43,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-01-30",
+   "partita": "Oviedo-Girona",
+   "mercato": "Trasferta segna",
+   "prob": 0.655,
+   "quota": 1.44,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-02-06",
+   "partita": "Barcelona-Mallorca",
+   "mercato": "Multigol 1-5",
+   "prob": 0.745,
+   "quota": 1.25,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-02-13",
+   "partita": "Getafe-Villarreal",
+   "mercato": "Over 1.5",
+   "prob": 0.67,
+   "quota": 1.41,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-02-20",
+   "partita": "Sociedad-Oviedo",
+   "mercato": "1",
+   "prob": 0.662,
+   "quota": 1.57,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-02-27",
+   "partita": "Vallecano-Ath Bilbao",
+   "mercato": "Under 2.5",
+   "prob": 0.667,
+   "quota": 1.62,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-03-05",
+   "partita": "Celta-Real Madrid",
+   "mercato": "Multigol 2-4",
+   "prob": 0.62,
+   "quota": 1.52,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-03-12",
+   "partita": "Alaves-Villarreal",
+   "mercato": "Multigol 1-3",
+   "prob": 0.659,
+   "quota": 1.42,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-03-19",
+   "partita": "Villarreal-Sociedad",
+   "mercato": "Gol",
+   "prob": 0.617,
+   "quota": 1.54,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-04-02",
+   "partita": "Vallecano-Elche",
+   "mercato": "Multigol 2-5",
+   "prob": 0.65,
+   "quota": 1.46,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-04-09",
+   "partita": "Real Madrid-Girona",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.668,
+   "quota": 1.42,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-04-20",
+   "partita": "Ath Bilbao-Osasuna",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.579,
+   "quota": 1.6,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-04-23",
+   "partita": "Betis-Real Madrid",
+   "mercato": "Multigol 1-4",
+   "prob": 0.747,
+   "quota": 1.28,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-04-30",
+   "partita": "Girona-Mallorca",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.644,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-05-07",
+   "partita": "Levante-Osasuna",
+   "mercato": "X2",
+   "prob": 0.655,
+   "quota": 1.43,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-05-11",
+   "partita": "Celta-Levante",
+   "mercato": "1",
+   "prob": 0.622,
+   "quota": 1.91,
+   "esito": "ko"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-05-16",
+   "partita": "Ath Bilbao-Celta",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.585,
+   "quota": 1.61,
+   "esito": "ok"
+  },
+  {
+   "lega": "SP1",
+   "data": "2026-05-22",
+   "partita": "Alaves-Vallecano",
+   "mercato": "12",
+   "prob": 0.7,
+   "quota": 1.35,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2023-12-19",
+   "partita": "Reims-Le Havre",
+   "mercato": "Multigol 2-5",
+   "prob": 0.647,
+   "quota": 1.5,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-01-13",
+   "partita": "Le Havre-Lyon",
+   "mercato": "Under 2.5",
+   "prob": 0.677,
+   "quota": 1.62,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-01-27",
+   "partita": "Paris SG-Brest",
+   "mercato": "Multigol 1-3",
+   "prob": 0.645,
+   "quota": 1.5,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-02-08",
+   "partita": "Marseille-Metz",
+   "mercato": "1",
+   "prob": 0.675,
+   "quota": 1.43,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-02-16",
+   "partita": "Lille-Le Havre",
+   "mercato": "NoGol",
+   "prob": 0.686,
+   "quota": 1.41,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-02-23",
+   "partita": "Strasbourg-Brest",
+   "mercato": "Over 1.5",
+   "prob": 0.633,
+   "quota": 1.54,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-03-02",
+   "partita": "Toulouse-Nice",
+   "mercato": "1X",
+   "prob": 0.651,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-03-09",
+   "partita": "Le Havre-Toulouse",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.655,
+   "quota": 1.49,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-03-16",
+   "partita": "Monaco-Lorient",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.675,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-03-30",
+   "partita": "Nice-Nantes",
+   "mercato": "12",
+   "prob": 0.691,
+   "quota": 1.41,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-04-06",
+   "partita": "Monaco-Rennes",
+   "mercato": "Over 2.5",
+   "prob": 0.667,
+   "quota": 1.48,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-04-19",
+   "partita": "Lens-Clermont",
+   "mercato": "Multigol 2-4",
+   "prob": 0.601,
+   "quota": 1.62,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-04-25",
+   "partita": "Montpellier-Nantes",
+   "mercato": "Multigol 1-3",
+   "prob": 0.667,
+   "quota": 1.46,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-05-02",
+   "partita": "Lens-Lorient",
+   "mercato": "Under 3.5",
+   "prob": 0.674,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-05-11",
+   "partita": "Montpellier-Monaco",
+   "mercato": "Gol",
+   "prob": 0.616,
+   "quota": 1.57,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-05-18",
+   "partita": "Lorient-Clermont",
+   "mercato": "Trasferta segna",
+   "prob": 0.69,
+   "quota": 1.4,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-08-24",
+   "partita": "Nantes-Auxerre",
+   "mercato": "Multigol 1-4",
+   "prob": 0.695,
+   "quota": 1.4,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-08-31",
+   "partita": "Le Havre-Auxerre",
+   "mercato": "Trasferta segna",
+   "prob": 0.66,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-09-14",
+   "partita": "Toulouse-Le Havre",
+   "mercato": "Casa segna",
+   "prob": 0.731,
+   "quota": 1.33,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-09-21",
+   "partita": "Lyon-Marseille",
+   "mercato": "Under 4.5",
+   "prob": 0.723,
+   "quota": 1.34,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-10-03",
+   "partita": "Marseille-Angers",
+   "mercato": "Multigol 1-4",
+   "prob": 0.648,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-10-18",
+   "partita": "Brest-Rennes",
+   "mercato": "Under 3.5",
+   "prob": 0.652,
+   "quota": 1.49,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-10-25",
+   "partita": "Reims-Brest",
+   "mercato": "X2",
+   "prob": 0.617,
+   "quota": 1.57,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-11-01",
+   "partita": "Brest-Nice",
+   "mercato": "Casa segna",
+   "prob": 0.658,
+   "quota": 1.48,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-11-09",
+   "partita": "Nice-Lille",
+   "mercato": "Under 2.5",
+   "prob": 0.665,
+   "quota": 1.83,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-11-23",
+   "partita": "Lille-Rennes",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.563,
+   "quota": 1.73,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-11-30",
+   "partita": "Lyon-Nice",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.651,
+   "quota": 1.49,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-12-07",
+   "partita": "Strasbourg-Reims",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.583,
+   "quota": 1.67,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2024-12-14",
+   "partita": "Paris SG-Lyon",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.642,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-01-09",
+   "partita": "Nantes-Monaco",
+   "mercato": "2",
+   "prob": 0.592,
+   "quota": 2.15,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-01-16",
+   "partita": "Lille-Nice",
+   "mercato": "Multigol 2-5",
+   "prob": 0.678,
+   "quota": 1.43,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-01-24",
+   "partita": "Strasbourg-Lille",
+   "mercato": "Multigol 2-4",
+   "prob": 0.617,
+   "quota": 1.58,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-01-31",
+   "partita": "Lille-St Etienne",
+   "mercato": "1",
+   "prob": 0.73,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-02-07",
+   "partita": "St Etienne-Rennes",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.648,
+   "quota": 1.5,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-02-15",
+   "partita": "Le Havre-Nice",
+   "mercato": "2",
+   "prob": 0.632,
+   "quota": 1.63,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-02-22",
+   "partita": "Nice-Montpellier",
+   "mercato": "Over 2.5",
+   "prob": 0.676,
+   "quota": 1.57,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-03-01",
+   "partita": "Montpellier-Rennes",
+   "mercato": "Casa segna",
+   "prob": 0.661,
+   "quota": 1.47,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-03-08",
+   "partita": "Nice-Lyon",
+   "mercato": "Gol",
+   "prob": 0.618,
+   "quota": 1.57,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-03-27",
+   "partita": "Strasbourg-Lyon",
+   "mercato": "X2",
+   "prob": 0.648,
+   "quota": 1.5,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-04-04",
+   "partita": "Paris SG-Angers",
+   "mercato": "Multigol 1-5",
+   "prob": 0.754,
+   "quota": 1.28,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-04-11",
+   "partita": "Toulouse-Lille",
+   "mercato": "Over 1.5",
+   "prob": 0.679,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-04-19",
+   "partita": "Lille-Auxerre",
+   "mercato": "Multigol 2-5",
+   "prob": 0.658,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-04-26",
+   "partita": "Angers-Lille",
+   "mercato": "Over 1.5",
+   "prob": 0.663,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-05-03",
+   "partita": "Auxerre-Le Havre",
+   "mercato": "Trasferta segna",
+   "prob": 0.646,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-05-09",
+   "partita": "Reims-St Etienne",
+   "mercato": "Multigol 1-3",
+   "prob": 0.663,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-05-16",
+   "partita": "St Etienne-Toulouse",
+   "mercato": "Under 3.5",
+   "prob": 0.654,
+   "quota": 1.49,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-08-16",
+   "partita": "Nantes-Paris SG",
+   "mercato": "Over 2.5",
+   "prob": 0.645,
+   "quota": 1.44,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-08-28",
+   "partita": "Lens-Brest",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.657,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-09-12",
+   "partita": "Nice-Nantes",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.574,
+   "quota": 1.68,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-09-19",
+   "partita": "Brest-Nice",
+   "mercato": "Gol",
+   "prob": 0.639,
+   "quota": 1.52,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-09-26",
+   "partita": "Paris SG-Auxerre",
+   "mercato": "Under 4.5",
+   "prob": 0.732,
+   "quota": 1.32,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-10-04",
+   "partita": "Lyon-Toulouse",
+   "mercato": "Multigol 2-4",
+   "prob": 0.619,
+   "quota": 1.57,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-10-18",
+   "partita": "Lorient-Brest",
+   "mercato": "X2",
+   "prob": 0.679,
+   "quota": 1.43,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-10-25",
+   "partita": "Auxerre-Le Havre",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.562,
+   "quota": 1.73,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-10-28",
+   "partita": "Strasbourg-Auxerre",
+   "mercato": "12",
+   "prob": 0.77,
+   "quota": 1.26,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-11-01",
+   "partita": "Brest-Lyon",
+   "mercato": "Multigol 1-4",
+   "prob": 0.695,
+   "quota": 1.4,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-11-20",
+   "partita": "Nice-Marseille",
+   "mercato": "1X",
+   "prob": 0.599,
+   "quota": 1.62,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-11-28",
+   "partita": "Monaco-Paris SG",
+   "mercato": "Under 4.5",
+   "prob": 0.659,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-12-05",
+   "partita": "Nantes-Lens",
+   "mercato": "NoGol",
+   "prob": 0.599,
+   "quota": 1.61,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2025-12-12",
+   "partita": "Paris FC-Toulouse",
+   "mercato": "1X",
+   "prob": 0.638,
+   "quota": 1.53,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-01-03",
+   "partita": "Marseille-Nantes",
+   "mercato": "Multigol 1-4",
+   "prob": 0.683,
+   "quota": 1.41,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-01-17",
+   "partita": "Strasbourg-Metz",
+   "mercato": "1",
+   "prob": 0.724,
+   "quota": 1.42,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-01-24",
+   "partita": "Metz-Lyon",
+   "mercato": "2",
+   "prob": 0.622,
+   "quota": 1.67,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-01-31",
+   "partita": "Toulouse-Auxerre",
+   "mercato": "Multigol 2-5",
+   "prob": 0.668,
+   "quota": 1.42,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-02-07",
+   "partita": "Paris SG-Marseille",
+   "mercato": "Gol",
+   "prob": 0.669,
+   "quota": 1.41,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-02-19",
+   "partita": "Brest-Marseille",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.581,
+   "quota": 1.62,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-02-27",
+   "partita": "Rennes-Toulouse",
+   "mercato": "Under 3.5",
+   "prob": 0.671,
+   "quota": 1.41,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-03-06",
+   "partita": "Auxerre-Strasbourg",
+   "mercato": "12",
+   "prob": 0.728,
+   "quota": 1.31,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-03-13",
+   "partita": "Monaco-Brest",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.66,
+   "quota": 1.42,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-03-21",
+   "partita": "Marseille-Lille",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.581,
+   "quota": 1.63,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-04-04",
+   "partita": "Lorient-Paris FC",
+   "mercato": "Trasferta segna",
+   "prob": 0.645,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-04-16",
+   "partita": "Lens-Toulouse",
+   "mercato": "Multigol 1-3",
+   "prob": 0.622,
+   "quota": 1.52,
+   "esito": "ko"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-04-23",
+   "partita": "Brest-Lens",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.671,
+   "quota": 1.42,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-05-01",
+   "partita": "Paris SG-Lorient",
+   "mercato": "Over 2.5",
+   "prob": 0.656,
+   "quota": 1.4,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-05-09",
+   "partita": "Auxerre-Nice",
+   "mercato": "Over 1.5",
+   "prob": 0.704,
+   "quota": 1.36,
+   "esito": "ok"
+  },
+  {
+   "lega": "F1",
+   "data": "2026-05-16",
+   "partita": "Lille-Auxerre",
+   "mercato": "Under 2.5",
+   "prob": 0.627,
+   "quota": 2.1,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-01-13",
+   "partita": "Bochum-Werder Bremen",
+   "mercato": "1X",
+   "prob": 0.659,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-01-23",
+   "partita": "Bayern Munich-Union Berlin",
+   "mercato": "Multigol 2-5",
+   "prob": 0.639,
+   "quota": 1.52,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-02-01",
+   "partita": "Heidenheim-Dortmund",
+   "mercato": "Gol",
+   "prob": 0.673,
+   "quota": 1.44,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-02-08",
+   "partita": "Dortmund-Freiburg",
+   "mercato": "Over 2.5",
+   "prob": 0.659,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-02-16",
+   "partita": "Darmstadt-Stuttgart",
+   "mercato": "Casa segna",
+   "prob": 0.653,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-02-23",
+   "partita": "Stuttgart-FC Koln",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.655,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-03-01",
+   "partita": "Heidenheim-Ein Frankfurt",
+   "mercato": "Under 3.5",
+   "prob": 0.643,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-03-08",
+   "partita": "RB Leipzig-Darmstadt",
+   "mercato": "Multigol 1-5",
+   "prob": 0.712,
+   "quota": 1.36,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-03-15",
+   "partita": "Wolfsburg-Augsburg",
+   "mercato": "X2",
+   "prob": 0.645,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-03-30",
+   "partita": "Augsburg-FC Koln",
+   "mercato": "1",
+   "prob": 0.675,
+   "quota": 1.67,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-04-06",
+   "partita": "Hoffenheim-Augsburg",
+   "mercato": "Multigol 1-4",
+   "prob": 0.688,
+   "quota": 1.42,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-04-13",
+   "partita": "Leverkusen-Werder Bremen",
+   "mercato": "NoGol",
+   "prob": 0.656,
+   "quota": 1.47,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-04-25",
+   "partita": "Bochum-Hoffenheim",
+   "mercato": "Under 4.5",
+   "prob": 0.693,
+   "quota": 1.4,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-05-03",
+   "partita": "Dortmund-Augsburg",
+   "mercato": "Trasferta segna",
+   "prob": 0.636,
+   "quota": 1.53,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-05-10",
+   "partita": "Freiburg-Heidenheim",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.687,
+   "quota": 1.41,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-05-17",
+   "partita": "Hoffenheim-Bayern Munich",
+   "mercato": "2",
+   "prob": 0.603,
+   "quota": 1.89,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-08-23",
+   "partita": "Mainz-Union Berlin",
+   "mercato": "Under 2.5",
+   "prob": 0.637,
+   "quota": 1.83,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-08-30",
+   "partita": "Werder Bremen-Dortmund",
+   "mercato": "Multigol 2-4",
+   "prob": 0.621,
+   "quota": 1.56,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-09-13",
+   "partita": "Holstein Kiel-Bayern Munich",
+   "mercato": "Multigol 2-5",
+   "prob": 0.651,
+   "quota": 1.48,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-09-21",
+   "partita": "Stuttgart-Dortmund",
+   "mercato": "Gol",
+   "prob": 0.649,
+   "quota": 1.5,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-09-28",
+   "partita": "Hoffenheim-Werder Bremen",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.581,
+   "quota": 1.68,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-10-17",
+   "partita": "Dortmund-St Pauli",
+   "mercato": "Multigol 1-3",
+   "prob": 0.618,
+   "quota": 1.57,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-10-25",
+   "partita": "Augsburg-Dortmund",
+   "mercato": "Under 4.5",
+   "prob": 0.665,
+   "quota": 1.46,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-11-01",
+   "partita": "Ein Frankfurt-Bochum",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.655,
+   "quota": 1.47,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-11-08",
+   "partita": "St Pauli-Bayern Munich",
+   "mercato": "Under 3.5",
+   "prob": 0.691,
+   "quota": 1.4,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-11-22",
+   "partita": "Stuttgart-Bochum",
+   "mercato": "Multigol 1-5",
+   "prob": 0.713,
+   "quota": 1.36,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-11-29",
+   "partita": "Werder Bremen-Stuttgart",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.585,
+   "quota": 1.66,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-12-06",
+   "partita": "M'gladbach-Dortmund",
+   "mercato": "Over 2.5",
+   "prob": 0.686,
+   "quota": 1.5,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-12-14",
+   "partita": "Dortmund-Hoffenheim",
+   "mercato": "1",
+   "prob": 0.646,
+   "quota": 1.36,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2024-12-21",
+   "partita": "Wolfsburg-Dortmund",
+   "mercato": "X2",
+   "prob": 0.64,
+   "quota": 1.52,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-01-13",
+   "partita": "Holstein Kiel-Dortmund",
+   "mercato": "2",
+   "prob": 0.675,
+   "quota": 1.48,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-01-17",
+   "partita": "Bayern Munich-Wolfsburg",
+   "mercato": "Trasferta segna",
+   "prob": 0.665,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-01-24",
+   "partita": "Dortmund-Werder Bremen",
+   "mercato": "Multigol 1-4",
+   "prob": 0.668,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-01-31",
+   "partita": "Heidenheim-Dortmund",
+   "mercato": "12",
+   "prob": 0.777,
+   "quota": 1.25,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-02-07",
+   "partita": "Mainz-Augsburg",
+   "mercato": "Multigol 1-3",
+   "prob": 0.66,
+   "quota": 1.47,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-02-14",
+   "partita": "Leverkusen-Bayern Munich",
+   "mercato": "1X",
+   "prob": 0.656,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-02-22",
+   "partita": "RB Leipzig-Heidenheim",
+   "mercato": "Multigol 2-4",
+   "prob": 0.595,
+   "quota": 1.63,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-03-01",
+   "partita": "Union Berlin-Holstein Kiel",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.716,
+   "quota": 1.35,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-03-08",
+   "partita": "Hoffenheim-Heidenheim",
+   "mercato": "Over 2.5",
+   "prob": 0.657,
+   "quota": 1.73,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-03-27",
+   "partita": "Leverkusen-Bochum",
+   "mercato": "Multigol 1-4",
+   "prob": 0.655,
+   "quota": 1.48,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-04-04",
+   "partita": "Bochum-Stuttgart",
+   "mercato": "Casa segna",
+   "prob": 0.679,
+   "quota": 1.43,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-04-11",
+   "partita": "Hoffenheim-Mainz",
+   "mercato": "Over 1.5",
+   "prob": 0.778,
+   "quota": 1.25,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-04-18",
+   "partita": "RB Leipzig-Holstein Kiel",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.65,
+   "quota": 1.49,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-04-25",
+   "partita": "Leverkusen-Augsburg",
+   "mercato": "Multigol 1-3",
+   "prob": 0.666,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-05-02",
+   "partita": "Dortmund-Wolfsburg",
+   "mercato": "Gol",
+   "prob": 0.667,
+   "quota": 1.45,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-05-10",
+   "partita": "Leverkusen-Dortmund",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.585,
+   "quota": 1.66,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-05-16",
+   "partita": "RB Leipzig-Stuttgart",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.582,
+   "quota": 1.67,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-09-11",
+   "partita": "Leverkusen-Ein Frankfurt",
+   "mercato": "1X",
+   "prob": 0.683,
+   "quota": 1.42,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-09-19",
+   "partita": "Augsburg-Mainz",
+   "mercato": "Over 1.5",
+   "prob": 0.639,
+   "quota": 1.52,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-09-26",
+   "partita": "Mainz-Dortmund",
+   "mercato": "Under 3.5",
+   "prob": 0.672,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-10-03",
+   "partita": "Leverkusen-Union Berlin",
+   "mercato": "1",
+   "prob": 0.675,
+   "quota": 1.7,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-10-17",
+   "partita": "RB Leipzig-Hamburg",
+   "mercato": "12",
+   "prob": 0.72,
+   "quota": 1.35,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-10-24",
+   "partita": "M'gladbach-Bayern Munich",
+   "mercato": "Multigol 2-5",
+   "prob": 0.663,
+   "quota": 1.45,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-10-31",
+   "partita": "Bayern Munich-Leverkusen",
+   "mercato": "Multigol casa 1-3",
+   "prob": 0.668,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-11-08",
+   "partita": "Stuttgart-Augsburg",
+   "mercato": "Trasferta segna",
+   "prob": 0.618,
+   "quota": 1.56,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-11-22",
+   "partita": "St Pauli-Union Berlin",
+   "mercato": "NoGol",
+   "prob": 0.633,
+   "quota": 1.54,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-12-04",
+   "partita": "Mainz-M'gladbach",
+   "mercato": "X2",
+   "prob": 0.63,
+   "quota": 1.54,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-12-12",
+   "partita": "Ein Frankfurt-Augsburg",
+   "mercato": "Under 4.5",
+   "prob": 0.722,
+   "quota": 1.35,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2025-12-19",
+   "partita": "FC Koln-Union Berlin",
+   "mercato": "Multigol 2-4",
+   "prob": 0.62,
+   "quota": 1.57,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-01-09",
+   "partita": "Union Berlin-Mainz",
+   "mercato": "Under 2.5",
+   "prob": 0.613,
+   "quota": 1.6,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-01-13",
+   "partita": "RB Leipzig-Freiburg",
+   "mercato": "Multigol trasferta 1-3",
+   "prob": 0.668,
+   "quota": 1.44,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-01-17",
+   "partita": "Augsburg-Freiburg",
+   "mercato": "Casa segna",
+   "prob": 0.668,
+   "quota": 1.42,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-01-26",
+   "partita": "St Pauli-RB Leipzig",
+   "mercato": "Over 1.5",
+   "prob": 0.685,
+   "quota": 1.38,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-01-31",
+   "partita": "Dortmund-Heidenheim",
+   "mercato": "Over 2.5",
+   "prob": 0.679,
+   "quota": 1.4,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-02-12",
+   "partita": "Dortmund-Mainz",
+   "mercato": "Under 3.5",
+   "prob": 0.648,
+   "quota": 1.46,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-02-20",
+   "partita": "Bayern Munich-Ein Frankfurt",
+   "mercato": "Gol",
+   "prob": 0.678,
+   "quota": 1.39,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-02-27",
+   "partita": "Leverkusen-Mainz",
+   "mercato": "Multigol 2-4",
+   "prob": 0.62,
+   "quota": 1.51,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-03-06",
+   "partita": "Heidenheim-Hoffenheim",
+   "mercato": "2",
+   "prob": 0.649,
+   "quota": 1.5,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-03-13",
+   "partita": "Hoffenheim-Wolfsburg",
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.581,
+   "quota": 1.62,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-03-20",
+   "partita": "Wolfsburg-Werder Bremen",
+   "mercato": "1X",
+   "prob": 0.672,
+   "quota": 1.42,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-04-03",
+   "partita": "Werder Bremen-RB Leipzig",
+   "mercato": "Casa segna",
+   "prob": 0.666,
+   "quota": 1.43,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-04-11",
+   "partita": "FC Koln-Werder Bremen",
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.582,
+   "quota": 1.63,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-04-18",
+   "partita": "Bayern Munich-Stuttgart",
+   "mercato": "Multigol 1-5",
+   "prob": 0.683,
+   "quota": 1.4,
+   "esito": "ko"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-04-25",
+   "partita": "Dortmund-Freiburg",
+   "mercato": "1",
+   "prob": 0.649,
+   "quota": 1.44,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-05-07",
+   "partita": "Dortmund-Ein Frankfurt",
+   "mercato": "Trasferta segna",
+   "prob": 0.667,
+   "quota": 1.41,
+   "esito": "ok"
+  },
+  {
+   "lega": "D1",
+   "data": "2026-05-15",
+   "partita": "Ein Frankfurt-Stuttgart",
+   "mercato": "Under 4.5",
+   "prob": 0.646,
+   "quota": 1.46,
+   "esito": "ok"
+  }
+ ]
+}

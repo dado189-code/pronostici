@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pronostici — generatore schedina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --board:#0E3B34; --board2:#092A25; --line:#1C554B;
+  --paper:#F1EDE0; --paper2:#E3DDCB; --ink:#16211D;
+  --gold:#D9A441; --mint:#5FBF9B; --clay:#C4553A; --dim:#8FB3AA;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:linear-gradient(180deg,var(--board) 0%,var(--board2) 100%);background-attachment:fixed;
+  color:var(--paper);font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:20px 16px 70px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+h1{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:44px;line-height:.95;margin:6px 0 6px}
+h1 em{font-style:normal;color:var(--gold)}
+.sub{color:var(--dim);font-size:14px;max-width:58ch;margin:0}
+header{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}
+
+label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.field{display:flex;flex-direction:column;gap:5px}
+input{background:rgba(0,0,0,.22);border:1px solid var(--line);color:var(--paper);
+  font-family:'IBM Plex Mono',monospace;font-size:15px;padding:9px 11px;border-radius:2px;outline:none;width:110px}
+input:focus{border-color:var(--gold);box-shadow:0 0 0 2px rgba(217,164,65,.22)}
+.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:transparent;border:1px solid var(--line);color:var(--dim);border-radius:2px;cursor:pointer;
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:15px;padding:8px 13px}
+.chip[aria-pressed=true]{background:var(--gold);color:var(--board2);border-color:var(--gold)}
+.btn{background:var(--gold);color:var(--board2);border:0;border-radius:2px;cursor:pointer;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+  font-size:20px;padding:14px 28px;width:100%;margin-top:18px}
+.btn:hover{background:#E8B75C}
+button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:26px}
+@media(max-width:760px){.duo{grid-template-columns:1fr}}
+.out{margin-top:28px;display:grid;grid-template-columns:1fr 330px;gap:24px;align-items:start}
+@media(max-width:840px){.out{grid-template-columns:1fr}}
+
+.card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-left:3px solid var(--gold);
+  padding:16px;border-radius:2px;margin-bottom:14px;animation:rise .3s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.card.flat{border-left-color:var(--line)}
+.card.safe{border-left-color:var(--mint)}
+.card.wild{border-left-color:var(--clay)}
+.card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:22px;margin:4px 0 8px}
+.badge{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;font-size:14px;padding:3px 9px;border-radius:2px;margin-bottom:6px}
+.badge.safe{background:rgba(95,191,155,.18);color:var(--mint)}
+.badge.wild{background:rgba(196,85,58,.2);color:#E58467}
+.pick{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  padding:10px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.market{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:25px;text-transform:uppercase;line-height:1}
+.fair{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:22px;color:var(--gold);text-align:right}
+.fair span{display:block;font-size:10px;letter-spacing:.13em;color:var(--dim);text-transform:uppercase}
+.bar{height:4px;background:rgba(255,255,255,.1);margin:12px 0 6px;position:relative}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--mint)}
+.meta{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);gap:8px;flex-wrap:wrap}
+.why{font-size:14px;color:#DCE9E4;margin:12px 0 0}
+.src{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--dim);margin-top:8px}
+.val{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 7px;border-radius:2px;margin-top:8px;display:inline-block}
+.val.pos{background:rgba(95,191,155,.16);color:var(--mint)}
+.val.neg{background:rgba(196,85,58,.16);color:#E58467}
+.sec{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:17px;letter-spacing:.06em;
+  color:var(--dim);border-bottom:1px solid var(--line);padding-bottom:6px;margin:26px 0 14px}
+
+.ticket{background:var(--paper);color:var(--ink);border-radius:2px;padding:18px 16px 22px;
+  box-shadow:0 18px 40px rgba(0,0,0,.35);position:sticky;top:16px}
+.ticket::before,.ticket::after{content:"";position:absolute;left:0;right:0;height:9px;
+  background-image:radial-gradient(circle at 5px 0, transparent 5px, var(--paper) 5.5px);
+  background-size:10px 9px;background-repeat:repeat-x}
+.ticket::before{top:-9px;transform:rotate(180deg)}
+.ticket::after{bottom:-9px}
+.ticket .stamp{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#6C7A74;text-transform:uppercase}
+.ticket h2{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:22px;margin:2px 0 10px;letter-spacing:.03em}
+.tk-line{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed var(--paper2);font-size:13px}
+.tk-line b{display:block;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:16px}
+.tk-line small{color:#6C7A74;font-size:11px}
+.tk-line .n{font-family:'IBM Plex Mono',monospace;font-weight:600;text-align:right;white-space:nowrap}
+.totals{margin-top:14px;padding-top:12px;border-top:2px solid var(--ink)}
+.trow{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:13px;padding:3px 0}
+.trow.big{font-size:28px;font-weight:600;align-items:baseline;padding-top:6px}
+.trow .k{font-family:'IBM Plex Sans',sans-serif;font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:#6C7A74;align-self:center}
+.note{color:#6C7A74;font-size:11px;line-height:1.45;margin-top:14px;border-top:1px solid var(--paper2);padding-top:10px}
+.empty{color:#6C7A74;font-size:13px;padding:20px 0;text-align:center}
+.warn{border-left:3px solid var(--clay);background:rgba(196,85,58,.1);padding:12px 14px;font-size:13px;margin-bottom:14px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">analisi aggiornata sabato 29 agosto</div>
+  <h1>Generatore <em>pronostici</em></h1>
+  <p class="sub">Serie A, Premier, Liga, Ligue 1, ritorni di Champions, WNBA e ATP Winston-Salem. I mercati sul calcio escono da un modello Poisson calibrato sulle probabilita 1X2, quindi multigol, gol squadra e under oltre alle doppie chance. Scegli la quota che vuoi giocare e l'app costruisce la giocata che la raggiunge con la probabilita piu alta.</p>
+</header>
+
+<div class="duo">
+  <div id="safe"></div>
+  <div id="wild"></div>
+</div>
+
+<div class="sec">Genera la tua schedina</div>
+
+<div class="controls">
+  <div class="field">
+    <label>Quota obiettivo</label>
+    <input type="number" id="target" value="3.00" min="1.05" step="0.05">
+  </div>
+  <div class="field">
+    <label>Scorciatoie</label>
+    <div class="chips" id="presets">
+      <button class="chip" data-q="1.5">1.50</button>
+      <button class="chip" data-q="2">2.00</button>
+      <button class="chip" data-q="3">3.00</button>
+      <button class="chip" data-q="5">5.00</button>
+      <button class="chip" data-q="10">10.00</button>
+    </div>
+  </div>
+</div>
+
+<div class="controls" style="margin-top:14px">
+  <div class="field">
+    <label>Sport</label>
+    <div class="chips" id="fSport">
+      <button class="chip" data-c="tutti" aria-pressed="true">Tutti</button>
+      <button class="chip" data-c="calcio" aria-pressed="false">Calcio</button>
+      <button class="chip" data-c="tennis" aria-pressed="false">Tennis</button>
+      <button class="chip" data-c="basket" aria-pressed="false">Basket</button>
+    </div>
+  </div>
+  <div class="field">
+    <label>Finestra</label>
+    <div class="chips" id="fWin">
+      <button class="chip" data-w="tutto" aria-pressed="true">Tutti</button>
+      <button class="chip" data-w="24" aria-pressed="false">Entro 24h</button>
+      <button class="chip" data-w="72" aria-pressed="false">Entro 72h</button>
+    </div>
+  </div>
+  <div class="field">
+    <label>Max eventi</label>
+    <input type="number" id="maxLegs" value="4" min="1" max="6">
+  </div>
+</div>
+
+<button class="btn" id="go">Genera il pronostico</button>
+
+<div class="out">
+  <main id="res"></main>
+  <aside><div class="ticket" id="ticket"></div></aside>
+</div>
+
+<div class="sec">Rendimento dei pronostici</div>
+<div id="storico"></div>
+
+<div class="sec">Tutti gli eventi analizzati</div>
+<div id="all"></div>
+
+</div>
+
+<script>
+// Analisi svolta il 18/08/2026.
+// prob  = probabilita stimata dell'esito
+// book  = quota verificata sulla lavagna, presente solo dove l'ho trovata pubblicata
+// tipo  = 'sorpresa' segnala le giocate ad alta quota tenute d'occhio
+let PICKS = [
+ {sport:'calcio', comp:'Serie A', evento:'Fiorentina - Frosinone', quando:'sab 29/08 18:30', ore:4, match:'fiorentina-frosinone',
+  mercato:'Multigol 1-3', prob:0.647,
+  why:"La Fiorentina viene dal 4-0 subito a Roma, il Frosinone ha perso 1-0 con la Juve: due squadre che segnano poco. Gol attesi 1.78 contro 0.92, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Serie A', evento:'Monza - Udinese', quando:'sab 29/08 18:30', ore:4, match:'monza-udinese',
+  mercato:'Trasferta segna (Over 0.5 osp.)', prob:0.654,
+  why:"Il modello mette l'Udinese leggermente avanti pur giocando fuori, 37,9% contro 31,4%. Gol attesi 0.94 contro 1.06, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Serie A', evento:'Sassuolo - Torino', quando:'sab 29/08 18:30', ore:4, match:'sassuolo-torino',
+  mercato:'Multigol casa 1-3', prob:0.665,
+  why:"Tre esiti entro tredici punti percentuali, il Sassuolo ha perso 2-1 a Bergamo giocandosela. Gol attesi 1.20 contro 0.96, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Serie A', evento:'Juventus - Parma', quando:'sab 29/08 20:45', ore:6, match:'juventus-parma',
+  mercato:'Under 3.5', prob:0.638,
+  why:"Juventus al 78% con 2,44 gol attesi, ma il Parma ha perso solo 1-0 col Cagliari: partita a senso unico senza per forza tanti gol. Gol attesi 2.44 contro 0.60, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Serie A', evento:'Napoli - Como', quando:'dom 30/08 18:30', ore:28, match:'napoli-como',
+  mercato:'Casa segna (Over 0.5 casa)', prob:0.647,
+  why:"Partita piu equilibrata di quanto sembri: 37,8% Napoli contro 31,2% Como, che ha gia pareggiato a Udine. Gol attesi 1.04 contro 0.92, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Serie A', evento:'Cagliari - Inter', quando:'dom 30/08 20:45', ore:30, match:'cagliari-inter',
+  mercato:'2', prob:0.675,
+  why:"Inter al 67,6% con 1,98 gol attesi dopo il 4-1 al Monza. Il Cagliari ha vinto a Parma ma qui il divario e ampio. Gol attesi 0.70 contro 1.98, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Serie A', evento:'Lazio - Genoa', quando:'dom 30/08 20:45', ore:30, match:'lazio-genoa',
+  mercato:'NoGol', prob:0.638,
+  why:"Lazio a 1,18 gol attesi contro 0,74 del Genoa, che a Marassi ha perso 2-0 col Napoli senza segnare. Gol attesi 1.18 contro 0.74, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Serie A', evento:'Lecce - Roma', quando:'lun 31/08 18:30', ore:52, match:'lecce-roma',
+  mercato:'Multigol 2-5', prob:0.673,
+  why:"Roma al 65,9% dopo il 4-0 alla Fiorentina, con 1,86 gol attesi in trasferta. Il Lecce ha vinto 2-0 a Venezia. Gol attesi 0.66 contro 1.86, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Serie A', evento:'Atalanta - Bologna', quando:'lun 31/08 20:45', ore:54, match:'atalanta-bologna',
+  mercato:'Over 1.5', prob:0.700,
+  why:"Atalanta a 1,50 gol attesi contro 0,94. Il Bologna ha perso 1-0 in casa con la Lazio. Gol attesi 1.50 contro 0.94, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Premier League', evento:'Liverpool - Nottingham Forest', quando:'sab 29/08 13:30', ore:0, match:'liverpool-nottingham-fores',
+  mercato:'1', prob:0.663,
+  why:"Liverpool al 66,4% con 2,24 gol attesi, ma reduce dal 2-2 di Newcastle. Il Forest ha perso in casa col Leeds. Gol attesi 2.24 contro 0.96, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Premier League', evento:'Tottenham - Newcastle', quando:'sab 29/08 18:30', ore:4, match:'tottenham-newcastle',
+  mercato:'Multigol trasferta 1-3', prob:0.661,
+  why:"Gol attesi 1,44 contro 1,18: il Tottenham arriva dal 3-0 subito a Brentford, il Newcastle dal pareggio col Liverpool. Gol attesi 1.44 contro 1.18, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Premier League', evento:'Chelsea - Brighton', quando:'dom 30/08 15:00', ore:25, match:'chelsea-brighton',
+  mercato:'Multigol 2-4', prob:0.616,
+  why:"Chelsea a 1,72 gol attesi dopo il 3-2 a Craven Cottage, Brighton reduce dal 4-0 al Villa: due squadre che segnano. Gol attesi 1.72 contro 1.06, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Premier League', evento:'Manchester United - Ipswich', quando:'dom 30/08 17:30', ore:27, match:'manchester-united-ipswich',
+  mercato:'1', prob:0.685,
+  why:"United al 68,5% con 2,26 gol attesi, ma dopo il 2-0 subito a Hull la fiducia del mercato e da verificare. Gol attesi 2.26 contro 0.88, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Premier League', evento:'Aston Villa - Arsenal', quando:'lun 31/08 21:00', ore:55, match:'aston-villa-arsenal',
+  mercato:'Multigol 1-3', prob:0.659,
+  why:"Arsenal al 62,6% con 1,84 gol attesi in trasferta. Il Villa arriva dal 4-0 preso a Brighton. Gol attesi 0.78 contro 1.84, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Liga', evento:'Levante - Real Betis', quando:'sab 29/08 17:00', ore:3, match:'levante-real-betis',
+  mercato:'X2', prob:0.712,
+  why:"Betis al 42,7% pur giocando fuori, dopo l'1-0 a Valencia. Il Levante ha perso 3-0 con l'Espanyol e pareggiato a Pamplona. Gol attesi 0.98 contro 1.26, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Liga', evento:'Real Sociedad - Espanyol', quando:'sab 29/08 19:00', ore:5, match:'real-sociedad-espanyol',
+  mercato:'Multigol 2-5', prob:0.665,
+  why:"Sociedad a 1,56 gol attesi contro 0,90, ma viene dal 4-1 preso al Bernabeu. Gol attesi 1.56 contro 0.90, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Liga', evento:'Siviglia - Atletico Madrid', quando:'sab 29/08 21:30', ore:7, match:'siviglia-atletico-madrid',
+  mercato:'Over 1.5', prob:0.655,
+  why:"Atletico al 48,8% con 1,38 gol attesi. Il Siviglia ha vinto 3-1 a Bilbao: partita da gol da entrambe le parti. Gol attesi 0.86 contro 1.38, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Liga', evento:'Real Madrid - Malaga', quando:'dom 30/08 17:00', ore:27, match:'real-madrid-malaga',
+  mercato:'Under 4.5', prob:0.633,
+  why:"Real all'87,5% con 3,34 gol attesi contro una neopromossa che ha gia perso 2-0 al Metropolitano. Gol attesi 3.34 contro 0.64, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Liga', evento:'Barcellona - Rayo Vallecano', quando:'lun 31/08 21:30', ore:55, match:'barcellona-rayo-vallecano',
+  mercato:'Multigol 1-4', prob:0.639,
+  why:"Barcellona all'83,5% con 3,10 gol attesi dopo il 5-0 a Elche e il 2-0 all'Athletic. Gol attesi 3.10 contro 0.74, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Ligue 1', evento:'Lione - Le Havre', quando:'sab 29/08 20:45', ore:6, match:'lione-le-havre',
+  mercato:'Under 3.5', prob:0.679,
+  why:"Lione al 65,7% con 2,04 gol attesi, ma reduce dall'1-2 interno col Fenerbahce in Champions. Gol attesi 2.04 contro 0.82, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Ligue 1', evento:'Rennes - Le Mans', quando:'dom 30/08 17:15', ore:27, match:'rennes-le-mans',
+  mercato:'Multigol casa 1-3', prob:0.703,
+  why:"Rennes al 67,1% dopo il 2-2 col PSG. Il Le Mans e neopromosso e ha pareggiato 2-2 col Brest. Gol attesi 2.26 contro 0.94, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'calcio', comp:'Ligue 1', evento:'Monaco - Marsiglia', quando:'dom 30/08 20:45', ore:30, match:'monaco-marsiglia',
+  mercato:'1X', prob:0.622,
+  why:"37% Monaco, 37,7% Marsiglia: la partita piu equilibrata del turno francese, con 1,38 e 1,40 gol attesi. Gol attesi 1.38 contro 1.40, stimati con Poisson dalle probabilita 1X2.",
+  src:'modello 1X2 SportRadar + Poisson'},
+ {sport:'basket', comp:'WNBA', evento:'Atlanta Dream - Minnesota Lynx', quando:'dom 30/08 21:00', ore:31, match:'wnba-atl-min',
+  mercato:'Minnesota vincente', prob:0.557,
+  why:"Modello a 55,7% Minnesota pur giocando fuori. Atlanta ha appena perso 101-83 in casa con Portland, Minnesota e caduta con Golden State: entrambe in calo, margine sottile.",
+  src:'modello SportRadar'},
+ {sport:'calcio', comp:'Serie A', evento:'Napoli - Como', quando:'dom 30/08 18:30', ore:28, match:'napoli-como', tipo:'sorpresa',
+  mercato:'Como vincente', prob:0.312,
+  why:"Il 31,2% al Como e alto per una trasferta a Napoli, e il modello lo mette a un solo punto dal segno 1. Il Como ha gia pareggiato a Udine. Avvertenza: la categoria sorpresa e a zero successi su otto tentativi.",
+  src:'modello SportRadar'},
+ {sport:'calcio', comp:'Premier League', evento:'Tottenham - Newcastle', quando:'sab 29/08 18:30', ore:4, match:'tottenham-newcastle', tipo:'sorpresa',
+  mercato:'Newcastle vincente', prob:0.310,
+  why:"Il Tottenham ha appena perso 3-0 a Brentford, il Newcastle ha fermato il Liverpool sul 2-2. Il 31% agli ospiti sottostima lo scarto di condizione. Avvertenza: la categoria sorpresa e a zero su otto.",
+  src:'modello SportRadar'}
+];
+
+
+// ---- Storico dei pronostici chiusi. esito: 'ok' | 'ko'
+const STORICO = [
+ {cat:'standard', data:'18/08', evento:'Fenerbahce - Lione', mercato:'1X', quota:1.37, risultato:'1-1', esito:'ok'},
+ {cat:'standard', data:'18/08', evento:'Dinamo Zagabria - Viking', mercato:'1X', quota:1.27, risultato:'2-2', esito:'ok'},
+ {cat:'standard', data:'18/08', evento:'Levski - AEK', mercato:'X2', quota:1.39, risultato:'0-0', esito:'ok'},
+ {cat:'standard', data:'19/08', evento:'Celtic - LASK', mercato:'1X', quota:1.22, risultato:'3-0', esito:'ok'},
+ {cat:'standard', data:'19/08', evento:'Slovan - Celje', mercato:'1X', quota:1.25, risultato:'1-1', esito:'ok'},
+ {cat:'standard', data:'19/08', evento:'Atletico Madrid - Malaga', mercato:'1', quota:1.37, risultato:'2-0', esito:'ok'},
+ {cat:'standard', data:'20/08', evento:'Rayo Vallecano - Alaves', mercato:'1X', quota:1.37, risultato:'1-1', esito:'ok'},
+ {cat:'standard', data:'21/08', evento:'Las Vegas - Connecticut', mercato:'1', quota:1.11, risultato:'101-78', esito:'ok'},
+ {cat:'standard', data:'21/08', evento:'LA Sparks - Atlanta', mercato:'2', quota:1.30, risultato:'88-124', esito:'ok'},
+ {cat:'standard', data:'21/08', evento:'Dallas - Indiana', mercato:'2', quota:1.68, risultato:'91-85', esito:'ko'},
+ {cat:'standard', data:'21/08', evento:'Arsenal - Coventry', mercato:'1 + Over 1.5', quota:1.39, risultato:'3-0', esito:'ok'},
+ {cat:'standard', data:'21/08', evento:'Marsiglia - Strasburgo', mercato:'1X', quota:1.28, risultato:'4-0', esito:'ok'},
+ {cat:'standard', data:'22/08', evento:'Chicago - Golden State', mercato:'2', quota:1.45, risultato:'73-70', esito:'ko'},
+ {cat:'standard', data:'22/08', evento:'Washington - Minnesota', mercato:'2', quota:1.49, risultato:'84-94', esito:'ok'},
+ {cat:'standard', data:'22/08', evento:'Toronto - Portland', mercato:'2', quota:1.88, risultato:'82-79', esito:'ko'},
+ {cat:'standard', data:'22/08', evento:'Inter - Monza', mercato:'1 + Over 1.5', quota:1.43, risultato:'4-1', esito:'ok'},
+ {cat:'standard', data:'22/08', evento:'Genoa - Napoli', mercato:'X2', quota:1.35, risultato:'0-2', esito:'ok'},
+ {cat:'standard', data:'22/08', evento:'Hull City - Manchester United', mercato:'X2', quota:1.13, risultato:'2-0', esito:'ko'},
+ {cat:'standard', data:'22/08', evento:'Athletic Bilbao - Siviglia', mercato:'1X', quota:1.22, risultato:'1-3', esito:'ko'},
+ {cat:'standard', data:'22/08', evento:'Espanyol - Real Madrid', mercato:'X2', quota:1.16, risultato:'1-2', esito:'ok'},
+ {cat:'standard', data:'22/08', evento:'Lens - Auxerre', mercato:'1X', quota:1.22, risultato:'5-2', esito:'ok'},
+ {cat:'standard', data:'23/08', evento:'Angers - Lille', mercato:'X2', quota:1.24, risultato:'0-2', esito:'ok'},
+ {cat:'standard', data:'23/08', evento:'Manchester City - Bournemouth', mercato:'1X', quota:1.18, risultato:'2-1', esito:'ok'},
+ {cat:'cassaforte', data:'18/08', evento:'City 1X + Dinamo 1X', mercato:'doppia', quota:1.50, risultato:'entrambi ok', esito:'ok'},
+ {cat:'cassaforte', data:'20/08', evento:'Rayo 1X + Las Vegas 1', mercato:'doppia', quota:1.52, risultato:'entrambi ok', esito:'ok'},
+ {cat:'sorpresa', data:'19/08', evento:'Hapoel Beer Sheva - Sabah', mercato:'2', quota:3.28, risultato:'2-1', esito:'ko'},
+ {cat:'sorpresa', data:'20/08', evento:'Rayo Vallecano - Alaves', mercato:'2', quota:3.73, risultato:'1-1', esito:'ko'},
+ {cat:'sorpresa', data:'22/08', evento:'Ipswich - Sunderland', mercato:'X', quota:3.51, risultato:'2-1', esito:'ko'},
+ {cat:'sorpresa', data:'23/08', evento:'Newcastle - Liverpool', mercato:'1', quota:3.77, risultato:'2-2', esito:'ko'},
+ {cat:'standard', data:'23/08', evento:'Frosinone - Juventus', mercato:'Multigol 1-3', quota:1.66, risultato:'0-1', esito:'ok'},
+ {cat:'standard', data:'23/08', evento:'Venezia - Lecce', mercato:'NoGol', quota:1.71, risultato:'0-2', esito:'ok'},
+ {cat:'standard', data:'23/08', evento:'Atalanta - Sassuolo', mercato:'Multigol 2-4', quota:1.63, risultato:'2-1', esito:'ok'},
+ {cat:'standard', data:'23/08', evento:'Torino - Milan', mercato:'NoGol', quota:1.71, risultato:'1-2', esito:'ko'},
+ {cat:'standard', data:'23/08', evento:'Getafe - Racing Santander', mercato:'Over 1.5', quota:1.72, risultato:'1-0', esito:'ko'},
+ {cat:'standard', data:'23/08', evento:'Elche - Barcellona', mercato:'Multigol 2-4', quota:1.69, risultato:'0-5', esito:'ko'},
+ {cat:'standard', data:'23/08', evento:'Rennes - PSG', mercato:'Under 3.5', quota:1.71, risultato:'2-2', esito:'ko'},
+ {cat:'standard', data:'23/08', evento:'Dallas - Seattle', mercato:'1', quota:1.34, risultato:'92-70', esito:'ok'},
+ {cat:'standard', data:'24/08', evento:'Toronto - Las Vegas', mercato:'2', quota:1.11, risultato:'78-88', esito:'ok'},
+ {cat:'standard', data:'24/08', evento:'Portland - Washington', mercato:'2', quota:1.52, risultato:'100-105', esito:'ok'},
+ {cat:'cassaforte', data:'23/08', evento:'Las Vegas 1 + Getafe 1X', mercato:'doppia', quota:1.51, risultato:'entrambi ok', esito:'ok'},
+ {cat:'sorpresa', data:'23/08', evento:'Getafe - Racing Santander', mercato:'2', quota:3.79, risultato:'1-0', esito:'ko'},
+ {cat:'sorpresa', data:'24/08', evento:'Chicago - Indiana', mercato:'1', quota:2.48, risultato:'90-113', esito:'ko'},
+ {cat:'standard', data:'24/08', evento:'Roma - Fiorentina', mercato:'Multigol 2-5', quota:1.52, risultato:'4-0', esito:'ok'},
+ {cat:'standard', data:'24/08', evento:'Fulham - Chelsea', mercato:'Casa segna', quota:1.51, risultato:'2-3', esito:'ok'},
+ {cat:'standard', data:'24/08', evento:'Malaga - Deportivo', mercato:'Multigol casa 1-3', quota:1.55, risultato:'1-1', esito:'ok'},
+ {cat:'standard', data:'25/08', evento:'Sabah - Hapoel Beer Sheva', mercato:'Trasferta segna', quota:1.51, risultato:'5-2', esito:'ok'},
+ {cat:'standard', data:'25/08', evento:'Bodo/Glimt - NEC', mercato:'Multigol trasferta 1-3', quota:1.52, risultato:'3-0', esito:'ko'},
+ {cat:'standard', data:'25/08', evento:'Minnesota - Golden State', mercato:'1', quota:1.54, risultato:'66-80', esito:'ko'},
+ {cat:'standard', data:'25/08', evento:'LA Sparks - Atlanta', mercato:'2', quota:1.20, risultato:'71-78', esito:'ok'},
+ {cat:'standard', data:'26/08', evento:'AEK Atene - Levski', mercato:'Multigol 1-3', quota:1.45, risultato:'4-0', esito:'ko'},
+ {cat:'standard', data:'26/08', evento:'Celje - Slovan', mercato:'Over 1.5', quota:1.50, risultato:'1-2', esito:'ok'},
+ {cat:'standard', data:'26/08', evento:'Lione - Fenerbahce', mercato:'Multigol 2-4', quota:1.67, risultato:'1-2', esito:'ok'},
+ {cat:'cassaforte', data:'26/08', evento:'Over 1.5 Celje - Slovan', mercato:'singola', quota:1.50, risultato:'1-2', esito:'ok'},
+ {cat:'sorpresa', data:'24/08', evento:'Malaga - Deportivo', mercato:'2', quota:3.53, risultato:'1-1', esito:'ko'},
+ {cat:'sorpresa', data:'26/08', evento:'Viking - Dinamo Zagabria', mercato:'2', quota:2.99, risultato:'3-1', esito:'ko'}
+];
+
+function renderStorico(){
+  const cats = [
+    {k:'standard',   t:'Pronostici standard'},
+    {k:'cassaforte', t:'Cassaforte'},
+    {k:'sorpresa',   t:'Sorpresa'}
+  ];
+  const box = document.getElementById('storico');
+  if(!box) return;
+  let tot = {ok:0, n:0, ritorno:0};
+  const blocchi = cats.map(c => {
+    const r = STORICO.filter(x => x.cat === c.k);
+    const ok = r.filter(x => x.esito === 'ok').length;
+    const ritorno = r.reduce((a,x) => a + (x.esito === 'ok' ? x.quota - 1 : -1), 0);
+    tot.ok += ok; tot.n += r.length; tot.ritorno += ritorno;
+    const perc = r.length ? (ok / r.length * 100).toFixed(0) : '0';
+    return `<div class="card flat" style="border-left-color:${ok/Math.max(1,r.length) >= 0.5 ? 'var(--mint)' : 'var(--clay)'}">
+      <div class="eyebrow">${c.t}</div>
+      <div class="pick" style="border-bottom:0">
+        <span class="market">${ok} su ${r.length}</span>
+        <span class="fair">${perc}%<span>colpiti</span></span>
+      </div>
+      <div class="meta" style="margin-top:8px">
+        <span>saldo a stake fisso</span>
+        <span style="color:${ritorno >= 0 ? 'var(--mint)' : 'var(--clay)'}">${ritorno >= 0 ? '+' : ''}${ritorno.toFixed(2)} unita</span>
+      </div>
+      <div style="margin-top:12px">
+        ${r.map(x => `<div class="meta" style="padding:4px 0;border-top:1px solid var(--line)">
+          <span>${x.data} &middot; ${esc(x.evento)} &middot; ${esc(x.mercato)}</span>
+          <span style="color:${x.esito === 'ok' ? 'var(--mint)' : 'var(--clay)'}">${x.risultato} ${x.esito === 'ok' ? '\u2713' : '\u2717'}</span>
+        </div>`).join('')}
+      </div>
+    </div>`;
+  }).join('');
+  box.innerHTML = `<div class="meta" style="margin-bottom:12px;font-size:13px">
+      <span>totale complessivo</span>
+      <span>${tot.ok} su ${tot.n} &middot; saldo ${tot.ritorno >= 0 ? '+' : ''}${tot.ritorno.toFixed(2)} unita</span>
+    </div>
+    <div class="duo" style="grid-template-columns:1fr 1fr 1fr">${blocchi}</div>
+    <p class="hint">Saldo calcolato con una unita puntata su ogni pronostico, alla quota minima indicata. Le quote reali della lavagna sono in genere piu basse, quindi il saldo va letto come limite superiore, non come guadagno effettivo.</p>`;
+}
+
+const $ = s => document.querySelector(s);
+const state = {sport:'tutti', win:'tutto'};
+const fair = p => 1/p;
+const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+document.querySelectorAll('#presets .chip').forEach(b=>{
+  b.onclick = () => { $('#target').value = Number(b.dataset.q).toFixed(2); genera(); };
+});
+document.querySelectorAll('#fSport .chip').forEach(b=>{
+  b.onclick = () => { state.sport = b.dataset.c;
+    document.querySelectorAll('#fSport .chip').forEach(x=>x.setAttribute('aria-pressed', x===b)); genera(); };
+});
+document.querySelectorAll('#fWin .chip').forEach(b=>{
+  b.onclick = () => { state.win = b.dataset.w;
+    document.querySelectorAll('#fWin .chip').forEach(x=>x.setAttribute('aria-pressed', x===b)); genera(); };
+});
+$('#go').onclick = genera;
+
+function pool(){
+  const lim = state.win==='tutto' ? 1e9 : parseInt(state.win);
+  return PICKS.filter(p => p.tipo !== 'sorpresa' &&
+    (state.sport==='tutti' || p.sport===state.sport) && p.ore <= lim);
+}
+
+// Q combinata = 1/prodotto(prob). Cerchiamo il prodotto piu alto che resta sotto 1/target.
+function componi(list, target, maxLegs){
+  const soglia = 1/target;
+  const arr = list.slice().sort((a,b)=>b.prob-a.prob);
+  let best = null;
+  const sel = [];
+  const usati = new Set();
+  (function rec(i, prod){
+    if(sel.length && prod <= soglia){
+      // ogni evento in piu abbassa la probabilita: qui siamo al massimo, non si estende
+      if(!best || prod > best.pr) best = {sel:sel.slice(), pr:prod};
+      return;
+    }
+    if(sel.length === maxLegs) return;
+    for(let j=i; j<arr.length; j++){
+      const m = arr[j].match;
+      if(m && usati.has(m)) continue;   // mai due mercati della stessa partita
+      sel.push(arr[j]); if(m) usati.add(m);
+      rec(j+1, prod * arr[j].prob);
+      sel.pop(); if(m) usati.delete(m);
+    }
+  })(0, 1);
+  return best ? {sel:best.sel, pr:best.pr, q:1/best.pr} : null;
+}
+
+function valBadge(p){
+  if(!p.book) return '';
+  const ev = p.prob * p.book - 1;
+  return `<div class="val ${ev>0?'pos':'neg'}">lavagna ${p.book.toFixed(2)} · valore ${ev>0?'+':''}${(ev*100).toFixed(1)}%</div>`;
+}
+
+function cardHTML(p, titolo, cls, badge){
+  return `<div class="card ${cls||''}">
+    ${badge?`<div class="badge ${cls}">${esc(badge)}</div>`:''}
+    <div class="eyebrow">${esc(titolo)} &middot; ${esc(p.comp)}</div>
+    <h3>${esc(p.evento)}</h3>
+    <div class="pick">
+      <span class="market">${esc(p.mercato)}</span>
+      <span class="fair">${fair(p.prob).toFixed(2)}<span>quota minima</span></span>
+    </div>
+    <div class="bar"><i style="width:${Math.round(p.prob*100)}%"></i></div>
+    <div class="meta"><span>${esc(p.quando)}</span><span>probabilita ${Math.round(p.prob*100)}%</span></div>
+    ${valBadge(p)}
+    <p class="why">${esc(p.why)}</p>
+    <div class="src">base: ${esc(p.src)}</div>
+  </div>`;
+}
+
+// --- Cassaforte: combinazione piu probabile che arriva almeno a 1.50
+function renderSafe(){
+  const c = componi(PICKS.filter(p=>p.tipo!=='sorpresa'), 1.5, 3);
+  if(!c){ $('#safe').innerHTML = ''; return; }
+  $('#safe').innerHTML = `<div class="card safe">
+    <div class="badge safe">Cassaforte</div>
+    <div class="eyebrow">quota minima 1.50 &middot; ${c.sel.length} eventi</div>
+    <h3>${(c.pr*100).toFixed(1)}% di probabilita</h3>
+    ${c.sel.map(p=>`<div class="pick" style="border-bottom:0">
+      <span class="market" style="font-size:20px">${esc(p.mercato)}</span>
+      <span class="fair" style="font-size:18px">${fair(p.prob).toFixed(2)}<span>${esc(p.evento)}</span></span>
+    </div>`).join("")}
+    <div class="meta" style="margin-top:10px"><span>quota totale</span><span>${c.q.toFixed(2)}</span></div>
+    <p class="why">Nessun singolo esito davvero sicuro arriva a 1.50: una probabilita dell'80% vale 1.25. Per stare sopra 1.50 restando straprobabile serve accoppiare due esiti solidi, ed e quello che trovi qui.</p>
+  </div>`;
+}
+
+// --- Sorpresa: la giocata ad alta quota con la base statistica piu solida
+function renderWild(){
+  const s = PICKS.filter(p=>p.tipo==='sorpresa').sort((a,b)=>a.prob-b.prob);
+  if(!s.length){ $('#wild').innerHTML=''; return; }
+  const top = s[0];
+  $('#wild').innerHTML = cardHTML(top, 'Alta quota', 'wild', 'La sorpresa') +
+    `<div class="card wild" style="padding:12px 16px">
+      <div class="eyebrow" style="margin-bottom:8px">altre sorprese in lista</div>
+      ${s.slice(1).map(p=>`<div class="meta" style="padding:5px 0">
+        <span>${esc(p.evento)} &middot; ${esc(p.mercato)}</span><span>${fair(p.prob).toFixed(2)}</span></div>`).join("")}
+    </div>`;
+}
+
+function genera(){
+  const target = parseFloat($('#target').value)||1.5;
+  const maxLegs = Math.min(6, Math.max(1, parseInt($('#maxLegs').value)||4));
+  const list = pool();
+  const res = $('#res'), tk = $('#ticket');
+
+  if(!list.length){
+    res.innerHTML = '<div class="warn">Nessun evento con questi filtri. Allarga la finestra temporale.</div>';
+    tk.innerHTML = '<div class="stamp">schedina</div><div class="empty">Nessuna giocata.</div>';
+    return;
+  }
+
+  const ok = list.filter(p => fair(p.prob) >= target).sort((a,b)=>b.prob-a.prob);
+  const singola = ok[0] || list.slice().sort((a,b)=>fair(b.prob)-fair(a.prob))[0];
+  let html = '';
+  if(!ok.length){
+    html += `<div class="warn">Nessuna singola arriva a ${target.toFixed(2)} con un margine difendibile. Sotto trovi la quota piu alta disponibile, poi guarda la schedina.</div>`;
+  }
+  res.innerHTML = html + cardHTML(singola, 'La singola migliore');
+
+  const combo = componi(list, target, maxLegs);
+  if(!combo){
+    tk.innerHTML = `<div class="stamp">schedina</div><h2>Non raggiungibile</h2>
+      <div class="empty">Con al massimo ${maxLegs} eventi non si arriva a ${target.toFixed(2)}. Alza il numero di eventi o abbassa l'obiettivo.</div>`;
+    return;
+  }
+  tk.innerHTML = `<div class="stamp">schedina generata</div><h2>Obiettivo ${target.toFixed(2)}</h2>` +
+    combo.sel.map(p=>`<div class="tk-line">
+      <div><b>${esc(p.mercato)}</b><small>${esc(p.evento)} &middot; ${esc(p.quando)}</small></div>
+      <div class="n">${fair(p.prob).toFixed(2)}<br><small>${Math.round(p.prob*100)}%</small></div>
+    </div>`).join("") +
+    `<div class="totals">
+      <div class="trow"><span class="k">Eventi</span><span>${combo.sel.length}</span></div>
+      <div class="trow"><span class="k">Probabilita</span><span>${(combo.pr*100).toFixed(1)}%</span></div>
+      <div class="trow big"><span class="k">Quota minima</span><span>${combo.q.toFixed(2)}</span></div>
+    </div>
+    <p class="note">La quota mostrata e quella equa, calcolata dalle probabilita stimate. Gioca solo se il tuo bookmaker paga piu di ${combo.q.toFixed(2)}. La probabilita combinata tratta gli eventi come indipendenti, quindi va letta come indicativa.</p>`;
+}
+
+function renderAll(){
+  $('#all').innerHTML = PICKS.map(p=>`<div class="card flat">
+    <div class="eyebrow">${esc(p.comp)} &middot; ${esc(p.quando)}${p.tipo==='sorpresa'?' &middot; sorpresa':''}</div>
+    <h3>${esc(p.evento)}</h3>
+    <div class="pick">
+      <span class="market">${esc(p.mercato)}</span>
+      <span class="fair">${fair(p.prob).toFixed(2)}<span>quota minima</span></span>
+    </div>
+    ${valBadge(p)}
+    <p class="why">${esc(p.why)}</p>
+    <div class="src">base: ${esc(p.src)}</div>
+  </div>`).join("");
+}
+
+function disegnaTutto(){ renderSafe(); renderWild(); renderAll(); renderStorico(); genera(); }
+
+// Carica i dati aggiornati dalla pipeline automatica.
+// Se il file non c'e ancora, resta l'analisi incorporata nella pagina.
+fetch('data/picks.json?t=' + Date.now())
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(d => {
+    if (d && Array.isArray(d.eventi) && d.eventi.length) {
+      PICKS = d.eventi.map(p => Object.assign({}, p, {book: p.prezzo}));
+      const q = document.querySelector('header .eyebrow');
+      if (q) q.textContent = 'quote aggiornate il ' +
+        new Date(d.aggiornato).toLocaleString('it-IT', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'});
+    }
+  })
+  .catch(() => {})
+  .finally(disegnaTutto);
+</script>
+</body>
+</html>
