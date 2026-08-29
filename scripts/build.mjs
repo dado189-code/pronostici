@@ -29,13 +29,19 @@ const ALIAS = {
   'manchester utd': 'manchester united', 'wolverhampton wanderers': 'wolves',
   'tottenham hotspur': 'tottenham', 'brighton and hove albion': 'brighton',
   'nottingham forest': 'nottm forest',
+  // Understat scrive "Hull": troppo corto per il ripiego sul prefisso, che vuole 5 caratteri
+  'hull city': 'hull',
   'atletico de madrid': 'atletico madrid', 'athletic club': 'athletic bilbao',
+  'ca osasuna': 'osasuna',
   'real betis balompie': 'real betis', 'celta de vigo': 'celta vigo',
   'espanyol barcelona': 'espanyol', 'deportivo alaves': 'alaves',
   'paris saint germain': 'psg', 'paris saint-germain': 'psg',
   'olympique marseille': 'marseille', 'olympique lyonnais': 'lyon', 'olympique lyon': 'lyon',
   'bayern munich': 'bayern munchen', 'borussia dortmund': 'dortmund',
-  'bayer leverkusen': 'leverkusen', 'eintracht frankfurt': 'frankfurt'
+  'bayer leverkusen': 'leverkusen', 'eintracht frankfurt': 'frankfurt',
+  // Understat usa il nome inglese o la ragione sociale lunga, i bookmaker no
+  '1 fc koln': 'cologne', 'tsg hoffenheim': 'hoffenheim',
+  'rb leipzig': 'rasenballsport leipzig', 'fsv mainz 05': 'mainz 05'
 };
 
 function chiave(nome) {
