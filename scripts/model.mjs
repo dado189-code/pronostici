@@ -29,18 +29,35 @@ function tau(i, j, lh, la, rho) {
 
 // ---------------------------------------------------------------- dati
 
-// Understat pubblica gli xG partita per partita dentro un blob JSON nella pagina.
+// Understat serve gli xG partita per partita da un endpoint JSON.
+// Fino al 2026 i dati stavano dentro la pagina, in un blob "datesData = JSON.parse('...')";
+// ora la pagina si popola via AJAX e quel blob non esiste piu'. La risposta ha la
+// stessa forma di prima ({dates, teams, players}), quindi cambia solo come la si prende.
+// Senza gli header da browser il server risponde con una pagina HTML di errore.
 async function scaricaUnderstat(lega, stagione) {
-  const url = `https://understat.com/league/${lega}/${stagione}`;
-  const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
-  if (!res.ok) throw new Error(`Understat ${lega}: HTTP ${res.status}`);
-  const html = await res.text();
-  const m = html.match(/datesData\s*=\s*JSON\.parse\('([^']+)'\)/);
-  if (!m) throw new Error(`Understat ${lega}: blob datesData non trovato`);
-  const grezzo = JSON.parse(m[1].replace(/\\x([0-9A-Fa-f]{2})/g,
-    (_, h) => String.fromCharCode(parseInt(h, 16))));
+  const url = `https://understat.com/getLeagueData/${lega}/${stagione}`;
+  const headers = {
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 '
+      + '(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    'X-Requested-With': 'XMLHttpRequest',
+    'Referer': `https://understat.com/league/${lega}/${stagione}`,
+    'Accept': 'application/json, text/javascript, */*; q=0.01'
+  };
 
-  return grezzo
+  let dati = null, ultimo = '';
+  for (let tentativo = 1; tentativo <= 3 && !dati; tentativo++) {
+    if (tentativo > 1) await new Promise(r => setTimeout(r, 1000 * tentativo));
+    const res = await fetch(url, { headers });
+    if (!res.ok) { ultimo = `HTTP ${res.status}`; continue; }
+    const testo = await res.text();
+    // sotto carico risponde HTML al posto del JSON: e' un errore, non dati vuoti
+    try { dati = JSON.parse(testo); }
+    catch { ultimo = `risposta non JSON (${testo.slice(0, 40).replace(/\s+/g, ' ')}...)`; }
+  }
+  if (!dati) throw new Error(`Understat ${lega}: ${ultimo}`);
+  if (!Array.isArray(dati.dates)) throw new Error(`Understat ${lega}: campo dates assente`);
+
+  return dati.dates
     .filter(p => p.isResult)
     .map(p => ({
       data: new Date(p.datetime),
