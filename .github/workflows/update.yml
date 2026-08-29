@@ -2,7 +2,9 @@ name: Aggiorna pronostici
 
 on:
   schedule:
-    - cron: '0 6,12,18 * * *'   # 08:00, 14:00 e 20:00 ora italiana
+    # UTC. Con l'Italia a UTC+2 (ora legale) sono le 07:00 e le 17:00 locali.
+    # Da fine ottobre, con UTC+1, diventano 06:00 e 16:00: vanno portate a '0 6,16 * * *'.
+    - cron: '0 5,15 * * *'
   workflow_dispatch:             # pulsante per lanciarlo a mano
 
 permissions:
