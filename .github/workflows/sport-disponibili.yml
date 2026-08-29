@@ -1,0 +1,20 @@
+name: Sport disponibili
+
+# Diagnostica temporanea: solo a mano, non tocca nessun file del repository.
+on:
+  workflow_dispatch:
+
+jobs:
+  elenca:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Elenca gli sport attivi
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: node scripts/sport-disponibili.mjs
