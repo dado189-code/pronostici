@@ -1,0 +1,9 @@
+{
+ "chiusi": [],
+ "pendenti": [],
+ "aggiornato": "2026-08-29T12:26:24.396Z",
+ "diagnostica": [
+  "94 pronostici senza data di inizio ignorati (formato precedente)"
+ ],
+ "nota": "La quota e la quota minima 1/probabilita, non il prezzo di un bookmaker: il saldo va letto come limite superiore. La categoria cassaforte nasce dalla combinazione costruita nella pagina e non e ricavabile da qui, quindi non viene aggiornata in automatico."
+}
