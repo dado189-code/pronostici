@@ -10,6 +10,7 @@
 //   node scripts/backtest.mjs 2223,2324,2425 I1
 
 import { writeFileSync } from 'node:fs';
+import { pathToFileURL } from 'node:url';
 import { stimaForze, stimaRho, lambde, mercati } from './model.mjs';
 
 const STAGIONI = (process.argv[2] || '2223,2324,2425').split(',');
@@ -59,7 +60,9 @@ async function scarica(stagione, lega) {
 
 // ---------- esito dei mercati
 
-function vinta(mercato, gc, ga) {
+// Esportata: e' la regola di liquidazione unica, usata sia qui sia da chiudi.mjs.
+// Se cambia una regola deve cambiare in un posto solo.
+export function vinta(mercato, gc, ga) {
   const t = gc + ga;
   switch (mercato) {
     case '1': return gc > ga;
@@ -113,86 +116,94 @@ function scegli(mk, lo, hi, obiettivo, usati) {
 
 // ---------- esecuzione
 
-const risultati = [];
-const perLega = {};
+// Sta dentro una funzione, non al livello del modulo, perche' chiudi.mjs importa
+// vinta() da qui: senza questo, ogni import farebbe ripartire tutto il backtest.
+async function main() {
+  const risultati = [];
+  const perLega = {};
 
-for (const lega of LEGHE) {
-  let tutte = [];
-  for (const st of STAGIONI) {
-    try { tutte.push(...await scarica(st, lega)); }
-    catch (e) { console.warn(e.message); }
+  for (const lega of LEGHE) {
+    let tutte = [];
+    for (const st of STAGIONI) {
+      try { tutte.push(...await scarica(st, lega)); }
+      catch (e) { console.warn(e.message); }
+    }
+    if (tutte.length < 200) { console.warn(`${lega}: solo ${tutte.length} partite, salto`); continue; }
+    tutte.sort((a, b) => a.data - b.data);
+
+    // walk-forward: per ogni partita stimo il modello SOLO sulle precedenti.
+    // Usare anche le successive sarebbe barare, ed e' l'errore piu' comune
+    // nei backtest che sembrano funzionare.
+    const MINIMO = 150;
+    const usati = {};
+    let saldo = 0, giocate = 0, vinte = 0, probTot = 0;
+
+    for (let i = MINIMO; i < tutte.length; i++) {
+      const p = tutte[i];
+      const passate = tutte.slice(Math.max(0, i - 600), i);
+      if (i % 10 !== 0) continue;             // una partita su dieci: tiene i tempi ragionevoli
+      const forze = stimaForze(passate, { emivita: 180, iterazioni: 60, oggi: p.data });
+      if (!forze.att[p.casa] || !forze.att[p.ospite]) continue;
+      const rho = -0.03;
+      const { lh, la } = lambde(forze, p.casa, p.ospite);
+      if (!lh || !la) continue;
+      const mk = mercati(lh, la, rho);
+
+      const scelta = scegli(mk, 0.56, 0.78, 0.66, usati);
+      if (!scelta) continue;
+      const [mercato, prob] = scelta;
+      usati[mercato] = (usati[mercato] || 0) + 1;
+
+      const esito = vinta(mercato, p.golCasa, p.golOspite);
+      if (esito === null) continue;
+
+      const marg = margineOsservato(p);
+      // se ho la quota vera la uso, altrimenti la stimo col margine di quella partita
+      let quota = null;
+      if (mercato === '1' && p.q1 > 1) quota = p.q1;
+      else if (mercato === 'X' && p.qX > 1) quota = p.qX;
+      else if (mercato === '2' && p.q2 > 1) quota = p.q2;
+      else if (mercato === 'Over 2.5' && p.qOver > 1) quota = p.qOver;
+      else if (mercato === 'Under 2.5' && p.qUnder > 1) quota = p.qUnder;
+      else quota = prezzoStimato(prob, marg);
+
+      saldo += esito ? quota - 1 : -1;
+      giocate++; if (esito) vinte++; probTot += prob;
+      risultati.push({ lega, data: p.data.toISOString().slice(0, 10), partita: `${p.casa}-${p.ospite}`,
+        mercato, prob: +prob.toFixed(3), quota: +quota.toFixed(2), esito: esito ? 'ok' : 'ko' });
+    }
+
+    perLega[NOMI[lega] || lega] = {
+      giocate, vinte, attese: +probTot.toFixed(1),
+      percentuale: giocate ? +(vinte / giocate * 100).toFixed(1) : 0,
+      saldo: +saldo.toFixed(2),
+      rendimento: giocate ? +(saldo / giocate * 100).toFixed(2) : 0
+    };
+    console.log(`${(NOMI[lega] || lega).padEnd(16)} ${giocate} giocate, ${vinte} vinte `
+      + `(attese ${probTot.toFixed(1)}), saldo ${saldo.toFixed(2)}, rendimento ${(saldo / giocate * 100).toFixed(2)}%`);
   }
-  if (tutte.length < 200) { console.warn(`${lega}: solo ${tutte.length} partite, salto`); continue; }
-  tutte.sort((a, b) => a.data - b.data);
 
-  // walk-forward: per ogni partita stimo il modello SOLO sulle precedenti.
-  // Usare anche le successive sarebbe barare, ed e' l'errore piu' comune
-  // nei backtest che sembrano funzionare.
-  const MINIMO = 150;
-  const usati = {};
-  let saldo = 0, giocate = 0, vinte = 0, probTot = 0;
+  const tot = Object.values(perLega).reduce((a, x) => ({
+    giocate: a.giocate + x.giocate, vinte: a.vinte + x.vinte,
+    attese: a.attese + x.attese, saldo: a.saldo + x.saldo
+  }), { giocate: 0, vinte: 0, attese: 0, saldo: 0 });
 
-  for (let i = MINIMO; i < tutte.length; i++) {
-    const p = tutte[i];
-    const passate = tutte.slice(Math.max(0, i - 600), i);
-    if (i % 10 !== 0) continue;             // una partita su dieci: tiene i tempi ragionevoli
-    const forze = stimaForze(passate, { emivita: 180, iterazioni: 60, oggi: p.data });
-    if (!forze.att[p.casa] || !forze.att[p.ospite]) continue;
-    const rho = -0.03;
-    const { lh, la } = lambde(forze, p.casa, p.ospite);
-    if (!lh || !la) continue;
-    const mk = mercati(lh, la, rho);
+  console.log('\n== TOTALE');
+  console.log(`giocate ${tot.giocate}, vinte ${tot.vinte}, attese dal modello ${tot.attese.toFixed(1)}`);
+  console.log(`saldo ${tot.saldo.toFixed(2)} unita, rendimento ${(tot.saldo / tot.giocate * 100).toFixed(2)}% per giocata`);
+  const sd = Math.sqrt(tot.giocate) * 0.5;
+  console.log(`errore statistico indicativo su ${tot.giocate} giocate: circa ${sd.toFixed(1)} unita.`);
+  console.log(tot.saldo > 2 * sd ? 'Il vantaggio supera il rumore.'
+    : tot.saldo < -2 * sd ? 'La strategia perde in modo sistematico.'
+    : 'Risultato dentro il rumore: non si puo concludere nulla.');
 
-    const scelta = scegli(mk, 0.56, 0.78, 0.66, usati);
-    if (!scelta) continue;
-    const [mercato, prob] = scelta;
-    usati[mercato] = (usati[mercato] || 0) + 1;
-
-    const esito = vinta(mercato, p.golCasa, p.golOspite);
-    if (esito === null) continue;
-
-    const marg = margineOsservato(p);
-    // se ho la quota vera la uso, altrimenti la stimo col margine di quella partita
-    let quota = null;
-    if (mercato === '1' && p.q1 > 1) quota = p.q1;
-    else if (mercato === 'X' && p.qX > 1) quota = p.qX;
-    else if (mercato === '2' && p.q2 > 1) quota = p.q2;
-    else if (mercato === 'Over 2.5' && p.qOver > 1) quota = p.qOver;
-    else if (mercato === 'Under 2.5' && p.qUnder > 1) quota = p.qUnder;
-    else quota = prezzoStimato(prob, marg);
-
-    saldo += esito ? quota - 1 : -1;
-    giocate++; if (esito) vinte++; probTot += prob;
-    risultati.push({ lega, data: p.data.toISOString().slice(0, 10), partita: `${p.casa}-${p.ospite}`,
-      mercato, prob: +prob.toFixed(3), quota: +quota.toFixed(2), esito: esito ? 'ok' : 'ko' });
-  }
-
-  perLega[NOMI[lega] || lega] = {
-    giocate, vinte, attese: +probTot.toFixed(1),
-    percentuale: giocate ? +(vinte / giocate * 100).toFixed(1) : 0,
-    saldo: +saldo.toFixed(2),
-    rendimento: giocate ? +(saldo / giocate * 100).toFixed(2) : 0
-  };
-  console.log(`${(NOMI[lega] || lega).padEnd(16)} ${giocate} giocate, ${vinte} vinte `
-    + `(attese ${probTot.toFixed(1)}), saldo ${saldo.toFixed(2)}, rendimento ${(saldo / giocate * 100).toFixed(2)}%`);
+  writeFileSync('data/backtest.json', JSON.stringify({
+    eseguito: new Date().toISOString(), stagioni: STAGIONI, perLega, totale: tot,
+    nota: 'Le quote di 1X2 e over/under 2.5 sono reali e di chiusura. Per gli altri mercati il prezzo e stimato applicando il margine osservato sull 1X2 della stessa partita.',
+    giocate: risultati.slice(-500)
+  }, null, 1));
 }
 
-const tot = Object.values(perLega).reduce((a, x) => ({
-  giocate: a.giocate + x.giocate, vinte: a.vinte + x.vinte,
-  attese: a.attese + x.attese, saldo: a.saldo + x.saldo
-}), { giocate: 0, vinte: 0, attese: 0, saldo: 0 });
-
-console.log('\n== TOTALE');
-console.log(`giocate ${tot.giocate}, vinte ${tot.vinte}, attese dal modello ${tot.attese.toFixed(1)}`);
-console.log(`saldo ${tot.saldo.toFixed(2)} unita, rendimento ${(tot.saldo / tot.giocate * 100).toFixed(2)}% per giocata`);
-const sd = Math.sqrt(tot.giocate) * 0.5;
-console.log(`errore statistico indicativo su ${tot.giocate} giocate: circa ${sd.toFixed(1)} unita.`);
-console.log(tot.saldo > 2 * sd ? 'Il vantaggio supera il rumore.'
-  : tot.saldo < -2 * sd ? 'La strategia perde in modo sistematico.'
-  : 'Risultato dentro il rumore: non si puo concludere nulla.');
-
-writeFileSync('data/backtest.json', JSON.stringify({
-  eseguito: new Date().toISOString(), stagioni: STAGIONI, perLega, totale: tot,
-  nota: 'Le quote di 1X2 e over/under 2.5 sono reali e di chiusura. Per gli altri mercati il prezzo e stimato applicando il margine osservato sull 1X2 della stessa partita.',
-  giocate: risultati.slice(-500)
-}, null, 1));
+// solo se lanciato direttamente: `node scripts/backtest.mjs`.
+// argv[1] non esiste quando node gira con -e, da qui il controllo prima.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) await main();

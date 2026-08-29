@@ -157,7 +157,10 @@ for (const lega of LEGHE) {
     const quando = inizio.toLocaleString('it-IT',
       { weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
     const idMatch = chiave(casa) + '-' + chiave(ospite);
-    const base = { sport: 'calcio', comp: lega.nome, evento: `${casa} - ${ospite}`, quando, ore, match: idMatch };
+    // "inizio" e' in ISO e serve a chiudi.mjs: "quando" e' testo localizzato,
+    // "ore" e' relativo al momento della build e non e' piu' leggibile dopo.
+    const base = { sport: 'calcio', comp: lega.nome, evento: `${casa} - ${ospite}`, quando, ore,
+      match: idMatch, inizio: inizio.toISOString(), understat: lega.understat };
 
     const spiega = (m, p) =>
       `Gol attesi ${lh.toFixed(2)} contro ${la.toFixed(2)}, stimati dagli xG delle ultime partite `

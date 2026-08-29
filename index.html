@@ -42,6 +42,8 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:26px}
 @media(max-width:760px){.duo{grid-template-columns:1fr}}
+.duo.tre{grid-template-columns:1fr 1fr 1fr}
+@media(max-width:760px){.duo.tre{grid-template-columns:1fr}}
 .out{margin-top:28px;display:grid;grid-template-columns:1fr 330px;gap:24px;align-items:start}
 @media(max-width:840px){.out{grid-template-columns:1fr}}
 
@@ -51,11 +53,13 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .card.flat{border-left-color:var(--line)}
 .card.safe{border-left-color:var(--mint)}
 .card.wild{border-left-color:var(--clay)}
+.card.oro{border-left-color:var(--gold)}
 .card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:22px;margin:4px 0 8px}
 .badge{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
   letter-spacing:.08em;font-size:14px;padding:3px 9px;border-radius:2px;margin-bottom:6px}
 .badge.safe{background:rgba(95,191,155,.18);color:var(--mint)}
 .badge.wild{background:rgba(196,85,58,.2);color:#E58467}
+.badge.oro{background:rgba(217,164,65,.18);color:var(--gold)}
 .pick{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;
   padding:10px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .market{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:25px;text-transform:uppercase;line-height:1}
@@ -104,8 +108,9 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   <p class="sub">Serie A, Premier, Liga, Ligue 1, ritorni di Champions, WNBA e ATP Winston-Salem. I mercati sul calcio escono da un modello Poisson calibrato sulle probabilita 1X2, quindi multigol, gol squadra e under oltre alle doppie chance. Scegli la quota che vuoi giocare e l'app costruisce la giocata che la raggiunge con la probabilita piu alta.</p>
 </header>
 
-<div class="duo">
+<div class="duo tre">
   <div id="safe"></div>
+  <div id="quota2"></div>
   <div id="wild"></div>
 </div>
 
@@ -168,7 +173,8 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 </div>
 
 <script>
-// Analisi svolta il 18/08/2026.
+// Ripiego incorporato, fotografia del 29/08/2026: vale solo finche'
+// data/picks.json non e' disponibile. Quando c'e', la pipeline lo sostituisce.
 // prob  = probabilita stimata dell'esito
 // book  = quota verificata sulla lavagna, presente solo dove l'ho trovata pubblicata
 // tipo  = 'sorpresa' segnala le giocate ad alta quota tenute d'occhio
@@ -277,7 +283,9 @@ let PICKS = [
 
 
 // ---- Storico dei pronostici chiusi. esito: 'ok' | 'ko'
-const STORICO = [
+// Ripiego incorporato: se c'e' data/storico.json, chiudi.mjs lo tiene aggiornato
+// e questo array viene sostituito.
+let STORICO = [
  {cat:'standard', data:'18/08', evento:'Fenerbahce - Lione', mercato:'1X', quota:1.37, risultato:'1-1', esito:'ok'},
  {cat:'standard', data:'18/08', evento:'Dinamo Zagabria - Viking', mercato:'1X', quota:1.27, risultato:'2-2', esito:'ok'},
  {cat:'standard', data:'18/08', evento:'Levski - AEK', mercato:'X2', quota:1.39, risultato:'0-0', esito:'ok'},
@@ -448,13 +456,36 @@ function cardHTML(p, titolo, cls, badge){
   </div>`;
 }
 
+// --- Le tre card in cima parlano solo della giornata in corso: se un evento e
+// domani non c'entra niente con la schedina di oggi. Filtro la lista in
+// ingresso, la logica di composizione resta quella di componi().
+function diOggi(list){
+  const ora = new Date();
+  return list.filter(p => {
+    const t = Date.parse(p.inizio || '');
+    if(Number.isFinite(t)){
+      const d = new Date(t);
+      return d.getFullYear()===ora.getFullYear() && d.getMonth()===ora.getMonth() && d.getDate()===ora.getDate();
+    }
+    // ripiego per i dati incorporati, che hanno solo le ore mancanti al via
+    return typeof p.ore === 'number' && p.ore >= 0 && p.ore <= 24;
+  });
+}
+
+function nulla(testo){
+  return `<div class="card flat">
+    <div class="eyebrow">niente per oggi</div>
+    <p class="why">${testo}</p>
+  </div>`;
+}
+
 // --- Cassaforte: combinazione piu probabile che arriva almeno a 1.50
 function renderSafe(){
-  const c = componi(PICKS.filter(p=>p.tipo!=='sorpresa'), 1.5, 3);
-  if(!c){ $('#safe').innerHTML = ''; return; }
+  const c = componi(diOggi(PICKS.filter(p=>p.tipo!=='sorpresa')), 1.5, 3);
+  if(!c){ $('#safe').innerHTML = nulla('Fra gli eventi di oggi non esce nessuna combinazione che arrivi a 1.50.'); return; }
   $('#safe').innerHTML = `<div class="card safe">
     <div class="badge safe">Cassaforte</div>
-    <div class="eyebrow">quota minima 1.50 &middot; ${c.sel.length} eventi</div>
+    <div class="eyebrow">oggi &middot; quota minima 1.50 &middot; ${c.sel.length} eventi</div>
     <h3>${(c.pr*100).toFixed(1)}% di probabilita</h3>
     ${c.sel.map(p=>`<div class="pick" style="border-bottom:0">
       <span class="market" style="font-size:20px">${esc(p.mercato)}</span>
@@ -465,10 +496,36 @@ function renderSafe(){
   </div>`;
 }
 
+// --- Quota 2: la giocata piu probabile che arriva almeno a 2.00.
+// Stesso componi() della cassaforte, solo con obiettivo diverso: cerca il
+// prodotto di probabilita piu alto che resti sotto 1/2. Puo uscire un singolo
+// evento, se da solo paga gia 2.00, oppure una combinazione: decide il conto,
+// non una regola fissa. Qui tengo dentro anche le sorprese, altrimenti il
+// singolo non sarebbe mai possibile: i pronostici standard stanno sopra il 55%
+// di probabilita, cioe sotto quota 1.82.
+function renderQuota2(){
+  const c = componi(diOggi(PICKS), 2, 3);
+  if(!c){ $('#quota2').innerHTML = nulla('Fra gli eventi di oggi non esce nessuna giocata che arrivi a 2.00.'); return; }
+  const singola = c.sel.length === 1;
+  $('#quota2').innerHTML = `<div class="card oro">
+    <div class="badge oro">Quota 2</div>
+    <div class="eyebrow">oggi &middot; obiettivo 2.00 &middot; ${c.sel.length} ${singola?'evento':'eventi'}</div>
+    <h3>${(c.pr*100).toFixed(1)}% di probabilita</h3>
+    ${c.sel.map(p=>`<div class="pick" style="border-bottom:0">
+      <span class="market" style="font-size:20px">${esc(p.mercato)}</span>
+      <span class="fair" style="font-size:18px">${fair(p.prob).toFixed(2)}<span>${esc(p.evento)}</span></span>
+    </div>`).join("")}
+    <div class="meta" style="margin-top:10px"><span>quota totale</span><span>${c.q.toFixed(2)}</span></div>
+    <p class="why">${singola
+      ? 'Un solo esito paga gia 2.00 da solo, ed e il piu probabile fra quelli che ci arrivano: non serve combinare niente.'
+      : `Nessun singolo esito arriva a 2.00 restando probabile, quindi la quota nasce da ${c.sel.length} eventi, scelti per massimizzare la probabilita complessiva e mai due sulla stessa partita.`}</p>
+  </div>`;
+}
+
 // --- Sorpresa: la giocata ad alta quota con la base statistica piu solida
 function renderWild(){
-  const s = PICKS.filter(p=>p.tipo==='sorpresa').sort((a,b)=>a.prob-b.prob);
-  if(!s.length){ $('#wild').innerHTML=''; return; }
+  const s = diOggi(PICKS.filter(p=>p.tipo==='sorpresa')).sort((a,b)=>a.prob-b.prob);
+  if(!s.length){ $('#wild').innerHTML = nulla('Nessuna sorpresa fra gli eventi di oggi.'); return; }
   const top = s[0];
   $('#wild').innerHTML = cardHTML(top, 'Alta quota', 'wild', 'La sorpresa') +
     `<div class="card wild" style="padding:12px 16px">
@@ -531,11 +588,11 @@ function renderAll(){
   </div>`).join("");
 }
 
-function disegnaTutto(){ renderSafe(); renderWild(); renderAll(); renderStorico(); genera(); }
+function disegnaTutto(){ renderSafe(); renderQuota2(); renderWild(); renderAll(); renderStorico(); genera(); }
 
 // Carica i dati aggiornati dalla pipeline automatica.
-// Se il file non c'e ancora, resta l'analisi incorporata nella pagina.
-fetch('data/picks.json?t=' + Date.now())
+// Se un file non c'e ancora, resta la versione incorporata nella pagina.
+const caricaPicks = fetch('data/picks.json?t=' + Date.now())
   .then(r => r.ok ? r.json() : Promise.reject())
   .then(d => {
     if (d && Array.isArray(d.eventi) && d.eventi.length) {
@@ -545,8 +602,18 @@ fetch('data/picks.json?t=' + Date.now())
         new Date(d.aggiornato).toLocaleString('it-IT', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'});
     }
   })
-  .catch(() => {})
-  .finally(disegnaTutto);
+  .catch(() => {});
+
+// Storico chiuso in automatico da scripts/chiudi.mjs.
+const caricaStorico = fetch('data/storico.json?t=' + Date.now())
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(d => {
+    if (d && Array.isArray(d.chiusi) && d.chiusi.length) STORICO = d.chiusi;
+  })
+  .catch(() => {});
+
+// disegno una volta sola, quando entrambi hanno risposto o fallito
+Promise.all([caricaPicks, caricaStorico]).finally(disegnaTutto);
 </script>
 </body>
 </html>
