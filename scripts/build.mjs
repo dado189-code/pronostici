@@ -140,6 +140,18 @@ for (const lega of LEGHE) {
     }
 
     const migliore = confronto && confronto[0];
+
+    // index.html legge la quota al primo livello, nel campo "prezzo", e ci calcola
+    // il badge "lavagna X, valore Y%" come prob * quota - 1. Perche' quel conto
+    // abbia senso la quota deve riferirsi allo STESSO mercato del pronostico.
+    // Qui scarico solo l'h2h, quindi la quota vera esiste solo per 1, X e 2:
+    // allegarla a un Multigol o a un Over darebbe un valore calcolato su due
+    // eventi diversi, cioe' un numero inventato. Negli altri casi resta assente
+    // e il badge semplicemente non compare.
+    const prezzoDi = (mercato) => {
+      const c = confronto && confronto.find(x => x.esito === mercato);
+      return c ? c.prezzo : undefined;
+    };
     const valore = scegli(mk, 0.55, 0.80);
     const solido = scegli(mk, 0.80, 0.93);
     const quando = inizio.toLocaleString('it-IT',
@@ -157,9 +169,11 @@ for (const lega of LEGHE) {
           : '');
 
     if (valore) out.push({ ...base, mercato: valore[0], prob: +valore[1].toFixed(3),
+      prezzo: prezzoDi(valore[0]),
       why: spiega(valore[0], valore[1]), src: 'modello xG Dixon-Coles + confronto bookmaker',
       confronto: migliore || null });
     if (solido) out.push({ ...base, mercato: solido[0], prob: +solido[1].toFixed(3),
+      prezzo: prezzoDi(solido[0]),
       why: `Versione prudente sulla stessa partita. ${spiega(solido[0], solido[1])}`,
       src: 'modello xG Dixon-Coles' });
 
@@ -169,6 +183,8 @@ for (const lega of LEGHE) {
         mercato: migliore.esito === '1' ? `${casa} vincente`
                : migliore.esito === '2' ? `${ospite} vincente` : 'Pareggio',
         prob: migliore.probModello,
+        // qui il mercato E' proprio l'esito 1X2 di "migliore": la quota e' quella giusta
+        prezzo: migliore.prezzo,
         why: `Il modello da questo esito al ${(migliore.probModello * 100).toFixed(1)}%, il consenso di `
            + `${migliore.nBook} bookmaker al ${(migliore.probMercato * 100).toFixed(1)}%. `
            + `Al prezzo migliore, ${migliore.prezzo.toFixed(2)} su ${migliore.book}, il valore atteso e' `
