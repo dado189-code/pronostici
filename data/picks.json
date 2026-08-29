@@ -1,1 +1,12 @@
-{"aggiornato":"","eventi":[]}
+{
+ "aggiornato": "2026-08-29T11:45:13.344Z",
+ "metodo": "forze di attacco e difesa stimate dagli xG con emivita 180 giorni, Dixon-Coles per i punteggi bassi, confronto col consenso di piu bookmaker",
+ "diagnostica": [
+  "Serie A: storico xG non disponibile (Understat Serie_A: blob datesData non trovato)",
+  "Premier League: storico xG non disponibile (Understat EPL: blob datesData non trovato)",
+  "Liga: storico xG non disponibile (Understat La_liga: blob datesData non trovato)",
+  "Ligue 1: storico xG non disponibile (Understat Ligue_1: blob datesData non trovato)",
+  "Bundesliga: storico xG non disponibile (Understat Bundesliga: blob datesData non trovato)"
+ ],
+ "eventi": []
+}
