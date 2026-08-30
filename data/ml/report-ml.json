@@ -1,0 +1,464 @@
+{
+ "algoritmo": "LightGBM (scikit-learn API), objective multiclass softmax, num_class=3",
+ "motivazione_algoritmo": "Preferito a XGBoost/CatBoost: gestisce nativamente le feature numeriche con missing value, training piu rapido su dataset tabulari di questa scala (~6700 righe), e supporto diretto a SHAP TreeExplainer. CatBoost sarebbe stato preferibile con piu categoriche ad alta cardinalita (qui solo 5 leghe, one-hot e sufficiente).",
+ "versione_libreria": "4.7.0",
+ "random_seed": 42,
+ "feature_iniziali": [
+  "home_xg_last3",
+  "home_xg_last5",
+  "home_xg_last8",
+  "home_xg_last10",
+  "home_xg_season",
+  "home_xga_last3",
+  "home_xga_last5",
+  "home_xga_last8",
+  "home_xga_last10",
+  "home_xga_season",
+  "home_npxg_last3",
+  "home_npxg_last5",
+  "home_npxg_last8",
+  "home_npxg_last10",
+  "home_npxg_season",
+  "home_npxga_last3",
+  "home_npxga_last5",
+  "home_npxga_last8",
+  "home_npxga_last10",
+  "home_npxga_season",
+  "away_xg_last3",
+  "away_xg_last5",
+  "away_xg_last8",
+  "away_xg_last10",
+  "away_xg_season",
+  "away_xga_last3",
+  "away_xga_last5",
+  "away_xga_last8",
+  "away_xga_last10",
+  "away_xga_season",
+  "away_npxg_last3",
+  "away_npxg_last5",
+  "away_npxg_last8",
+  "away_npxg_last10",
+  "away_npxg_season",
+  "away_npxga_last3",
+  "away_npxga_last5",
+  "away_npxga_last8",
+  "away_npxga_last10",
+  "away_npxga_season",
+  "xg_diff_last10",
+  "xga_diff_last10",
+  "npxgd_diff_season",
+  "elo_before_home",
+  "elo_before_away",
+  "elo_diff",
+  "elo_trend_home",
+  "elo_trend_away",
+  "xpoints_delta_home",
+  "xpoints_delta_away",
+  "ppda_home_last10",
+  "ppda_away_last10",
+  "deep_home_last10",
+  "deep_away_last10",
+  "strength_of_schedule_home",
+  "strength_of_schedule_away",
+  "matchday_home",
+  "matchday_away",
+  "sample_size_home",
+  "sample_size_away",
+  "promoted_home",
+  "promoted_away",
+  "days_since_prev_home",
+  "days_since_prev_away",
+  "league_Bundesliga",
+  "league_Liga",
+  "league_Ligue 1",
+  "league_Premier League",
+  "league_Serie A",
+  "season_phase_num"
+ ],
+ "ablation": {
+  "ML-A_core_xg_xga": {
+   "n_features": 22,
+   "logloss_validation": 0.9976034770894061,
+   "brier_validation": 0.594159453553306
+  },
+  "ML-B_+npxg": {
+   "n_features": 43,
+   "logloss_validation": 0.9967890701537263,
+   "brier_validation": 0.5940207991228263
+  },
+  "ML-C_+elo": {
+   "n_features": 48,
+   "logloss_validation": 0.994252627892889,
+   "brier_validation": 0.5919724674687882
+  },
+  "ML-D_+ppda_deep_xpoints": {
+   "n_features": 54,
+   "logloss_validation": 0.9946326069056703,
+   "brier_validation": 0.5924764670530208
+  },
+  "ML-E_+context": {
+   "n_features": 70,
+   "logloss_validation": 0.9921284727193039,
+   "brier_validation": 0.5909693959573973
+  }
+ },
+ "best_ablation": "ML-E_+context",
+ "feature_finali": [
+  "home_xg_last3",
+  "home_xg_last5",
+  "home_xg_last8",
+  "home_xg_last10",
+  "home_xg_season",
+  "home_xga_last3",
+  "home_xga_last5",
+  "home_xga_last8",
+  "home_xga_last10",
+  "home_xga_season",
+  "away_xg_last3",
+  "away_xg_last5",
+  "away_xg_last8",
+  "away_xg_last10",
+  "away_xg_season",
+  "away_xga_last3",
+  "away_xga_last5",
+  "away_xga_last8",
+  "away_xga_last10",
+  "away_xga_season",
+  "xg_diff_last10",
+  "xga_diff_last10",
+  "home_npxg_last3",
+  "home_npxg_last5",
+  "home_npxg_last8",
+  "home_npxg_last10",
+  "home_npxg_season",
+  "home_npxga_last3",
+  "home_npxga_last5",
+  "home_npxga_last8",
+  "home_npxga_last10",
+  "home_npxga_season",
+  "away_npxg_last3",
+  "away_npxg_last5",
+  "away_npxg_last8",
+  "away_npxg_last10",
+  "away_npxg_season",
+  "away_npxga_last3",
+  "away_npxga_last5",
+  "away_npxga_last8",
+  "away_npxga_last10",
+  "away_npxga_season",
+  "npxgd_diff_season",
+  "elo_before_home",
+  "elo_before_away",
+  "elo_diff",
+  "elo_trend_home",
+  "elo_trend_away",
+  "xpoints_delta_home",
+  "xpoints_delta_away",
+  "ppda_home_last10",
+  "ppda_away_last10",
+  "deep_home_last10",
+  "deep_away_last10",
+  "strength_of_schedule_home",
+  "strength_of_schedule_away",
+  "matchday_home",
+  "matchday_away",
+  "sample_size_home",
+  "sample_size_away",
+  "promoted_home",
+  "promoted_away",
+  "days_since_prev_home",
+  "days_since_prev_away",
+  "league_Bundesliga",
+  "league_Liga",
+  "league_Ligue 1",
+  "league_Premier League",
+  "league_Serie A",
+  "season_phase_num"
+ ],
+ "hyperparameters_finali": {
+  "learning_rate": 0.03,
+  "max_depth": "3",
+  "num_leaves": "31",
+  "min_child_samples": "20",
+  "subsample": 0.8,
+  "colsample_bytree": 0.6,
+  "reg_alpha": 1.0,
+  "reg_lambda": 2.0,
+  "objective": "multiclass",
+  "num_class": 3,
+  "metric": "multi_logloss",
+  "n_estimators": 800
+ },
+ "n_trials_hyperparameter_search": 20,
+ "calibrazione_confronto": {
+  "raw": {
+   "logloss_val": 0.9880002512618541,
+   "brier_val": 0.5881309612223317
+  },
+  "platt": {
+   "logloss_val": 0.9852506781171039,
+   "brier_val": 0.5865697876487299
+  },
+  "isotonic": {
+   "logloss_val": 0.9676953842274678,
+   "brier_val": 0.5768035336736885
+  }
+ },
+ "calibrazione_scelta": "isotonic",
+ "nota_calibrazione": "Appresa su VALIDATION, che e anche usata per l early stopping durante il tuning: contaminazione lieve dichiarata, non un quarto split indipendente.",
+ "shap_top20": [
+  [
+   "npxgd_diff_season",
+   0.12679229224870606
+  ],
+  [
+   "home_npxg_season",
+   0.05448625334596738
+  ],
+  [
+   "elo_diff",
+   0.05084798592268898
+  ],
+  [
+   "xg_diff_last10",
+   0.04773880492239865
+  ],
+  [
+   "deep_away_last10",
+   0.02984237248913582
+  ],
+  [
+   "sample_size_away",
+   0.022301164580512095
+  ],
+  [
+   "sample_size_home",
+   0.019788325370849128
+  ],
+  [
+   "elo_before_away",
+   0.018338711837860504
+  ],
+  [
+   "xpoints_delta_home",
+   0.01768897531412405
+  ],
+  [
+   "deep_home_last10",
+   0.017533417951029803
+  ],
+  [
+   "home_xg_last8",
+   0.017424475691166896
+  ],
+  [
+   "home_xga_last8",
+   0.01717897476020778
+  ],
+  [
+   "away_xg_last5",
+   0.016249234332914097
+  ],
+  [
+   "away_xga_last3",
+   0.015472532311860441
+  ],
+  [
+   "home_xg_season",
+   0.014786824446154579
+  ],
+  [
+   "home_xg_last3",
+   0.013778837655583766
+  ],
+  [
+   "away_npxga_last3",
+   0.01366321163015931
+  ],
+  [
+   "xga_diff_last10",
+   0.011577294433238466
+  ],
+  [
+   "home_xga_last5",
+   0.011040035283500994
+  ],
+  [
+   "days_since_prev_home",
+   0.01093352091582296
+  ]
+ ],
+ "feature_importance_gain_top20": [
+  [
+   "npxgd_diff_season",
+   134
+  ],
+  [
+   "xpoints_delta_home",
+   94
+  ],
+  [
+   "elo_diff",
+   93
+  ],
+  [
+   "home_npxg_season",
+   81
+  ],
+  [
+   "elo_before_away",
+   73
+  ],
+  [
+   "deep_away_last10",
+   71
+  ],
+  [
+   "away_xga_last3",
+   63
+  ],
+  [
+   "xg_diff_last10",
+   63
+  ],
+  [
+   "deep_home_last10",
+   60
+  ],
+  [
+   "away_npxga_last3",
+   54
+  ],
+  [
+   "home_xga_last8",
+   53
+  ],
+  [
+   "home_npxg_last3",
+   52
+  ],
+  [
+   "home_xg_last8",
+   51
+  ],
+  [
+   "strength_of_schedule_away",
+   49
+  ],
+  [
+   "home_xga_last5",
+   47
+  ],
+  [
+   "sample_size_away",
+   45
+  ],
+  [
+   "days_since_prev_home",
+   43
+  ],
+  [
+   "away_npxg_last3",
+   42
+  ],
+  [
+   "elo_trend_away",
+   42
+  ],
+  [
+   "away_xg_last5",
+   41
+  ]
+ ],
+ "distribuzione_classi_per_split": {
+  "TEST": {
+   "A": 0.30589608873321655,
+   "D": 0.2545242265032107,
+   "H": 0.4395796847635727
+  },
+  "TRAIN": {
+   "A": 0.30144127568230605,
+   "D": 0.2511499540018399,
+   "H": 0.447408770315854
+  },
+  "VALIDATION": {
+   "A": 0.3309941520467836,
+   "D": 0.24912280701754386,
+   "H": 0.4198830409356725
+  }
+ },
+ "metriche": {
+  "validation": {
+   "raw": {
+    "brier": 0.5881309612223317,
+    "logloss": 0.9880002512618541,
+    "rps": 0.20017720087438587,
+    "ece_home": 0.019503838673624048,
+    "ece_draw": 0.02277415408920593,
+    "ece_away": 0.029811282900968145,
+    "accuracy": 0.5321637426900585
+   },
+   "calibrated": {
+    "brier": 0.5768035336736885,
+    "logloss": 0.9676953842274678,
+    "rps": 0.1959530234003696,
+    "ece_home": 0.013576431378879832,
+    "ece_draw": 0.0035370185280882375,
+    "ece_away": 0.007038995981242796,
+    "accuracy": 0.5444444444444444
+   }
+  },
+  "test": {
+   "raw": {
+    "brier": 0.5959574605543652,
+    "logloss": 0.9991699431340948,
+    "rps": 0.2042710179697507,
+    "ece_home": 0.04418913173584285,
+    "ece_draw": 0.010217039824492685,
+    "ece_away": 0.02592894898719456,
+    "accuracy": 0.521891418563923
+   },
+   "calibrated": {
+    "brier": 0.6006217598336514,
+    "logloss": 1.0267502431378506,
+    "rps": 0.20591911617694725,
+    "ece_home": 0.041464454844281504,
+    "ece_draw": 0.008588609009267527,
+    "ece_away": 0.0388703771385704,
+    "accuracy": 0.5178050204319906
+   }
+  }
+ },
+ "calib_test_confronto_onesto": {
+  "raw": {
+   "brier": 0.5959574605543652,
+   "logloss": 0.9991699431340948,
+   "rps": 0.2042710179697507,
+   "ece_home": 0.04418913173584285,
+   "ece_draw": 0.010217039824492685,
+   "ece_away": 0.02592894898719456,
+   "accuracy": 0.521891418563923
+  },
+  "platt": {
+   "brier": 0.5979720613169499,
+   "logloss": 1.0012214499452234,
+   "rps": 0.20507842335414117,
+   "ece_home": 0.0529409965213642,
+   "ece_draw": 0.0023785329785505913,
+   "ece_away": 0.026504429490111708,
+   "accuracy": 0.5154699357851722
+  },
+  "isotonic": {
+   "brier": 0.6006217598336514,
+   "logloss": 1.0267502431378506,
+   "rps": 0.20591911617694725,
+   "ece_home": 0.041464454844281504,
+   "ece_draw": 0.008588609009267527,
+   "ece_away": 0.0388703771385704,
+   "accuracy": 0.5178050204319906
+  }
+ },
+ "nota_calib_test": "Le tre varianti confrontate SUL TEST (mai usato per scegliere la calibrazione): se la scelta fatta su VALIDATION non risulta la migliore qui, indica che quella calibrazione ha overfittato il VALIDATION invece di generalizzare.",
+ "training_period": "TRAIN=2022/23+2023/24, VALIDATION=2024/25 (usata anche per early stopping/calibrazione)",
+ "test_period": "TEST=2025/26, aperto una sola volta"
+}

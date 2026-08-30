@@ -1,0 +1,576 @@
+{
+ "generato_il": "2026-08-30T12:41:15.637Z",
+ "n_righe_confrontabili": 1713,
+ "formula_ml": "LightGBM (scikit-learn API), objective multiclass softmax, num_class=3",
+ "feature_finali": [
+  "home_xg_last3",
+  "home_xg_last5",
+  "home_xg_last8",
+  "home_xg_last10",
+  "home_xg_season",
+  "home_xga_last3",
+  "home_xga_last5",
+  "home_xga_last8",
+  "home_xga_last10",
+  "home_xga_season",
+  "away_xg_last3",
+  "away_xg_last5",
+  "away_xg_last8",
+  "away_xg_last10",
+  "away_xg_season",
+  "away_xga_last3",
+  "away_xga_last5",
+  "away_xga_last8",
+  "away_xga_last10",
+  "away_xga_season",
+  "xg_diff_last10",
+  "xga_diff_last10",
+  "home_npxg_last3",
+  "home_npxg_last5",
+  "home_npxg_last8",
+  "home_npxg_last10",
+  "home_npxg_season",
+  "home_npxga_last3",
+  "home_npxga_last5",
+  "home_npxga_last8",
+  "home_npxga_last10",
+  "home_npxga_season",
+  "away_npxg_last3",
+  "away_npxg_last5",
+  "away_npxg_last8",
+  "away_npxg_last10",
+  "away_npxg_season",
+  "away_npxga_last3",
+  "away_npxga_last5",
+  "away_npxga_last8",
+  "away_npxga_last10",
+  "away_npxga_season",
+  "npxgd_diff_season",
+  "elo_before_home",
+  "elo_before_away",
+  "elo_diff",
+  "elo_trend_home",
+  "elo_trend_away",
+  "xpoints_delta_home",
+  "xpoints_delta_away",
+  "ppda_home_last10",
+  "ppda_away_last10",
+  "deep_home_last10",
+  "deep_away_last10",
+  "strength_of_schedule_home",
+  "strength_of_schedule_away",
+  "matchday_home",
+  "matchday_away",
+  "sample_size_home",
+  "sample_size_away",
+  "promoted_home",
+  "promoted_away",
+  "days_since_prev_home",
+  "days_since_prev_away",
+  "league_Bundesliga",
+  "league_Liga",
+  "league_Ligue 1",
+  "league_Premier League",
+  "league_Serie A",
+  "season_phase_num"
+ ],
+ "hyperparameters": {
+  "learning_rate": 0.03,
+  "max_depth": "3",
+  "num_leaves": "31",
+  "min_child_samples": "20",
+  "subsample": 0.8,
+  "colsample_bytree": 0.6,
+  "reg_alpha": 1,
+  "reg_lambda": 2,
+  "objective": "multiclass",
+  "num_class": 3,
+  "metric": "multi_logloss",
+  "n_estimators": 800
+ },
+ "calibrazione_scelta": "isotonic",
+ "calib_test_confronto_onesto": {
+  "raw": {
+   "brier": 0.5959574605543652,
+   "logloss": 0.9991699431340948,
+   "rps": 0.2042710179697507,
+   "ece_home": 0.04418913173584285,
+   "ece_draw": 0.010217039824492685,
+   "ece_away": 0.02592894898719456,
+   "accuracy": 0.521891418563923
+  },
+  "platt": {
+   "brier": 0.5979720613169499,
+   "logloss": 1.0012214499452234,
+   "rps": 0.20507842335414117,
+   "ece_home": 0.0529409965213642,
+   "ece_draw": 0.0023785329785505913,
+   "ece_away": 0.026504429490111708,
+   "accuracy": 0.5154699357851722
+  },
+  "isotonic": {
+   "brier": 0.6006217598336514,
+   "logloss": 1.0267502431378506,
+   "rps": 0.20591911617694725,
+   "ece_home": 0.041464454844281504,
+   "ece_draw": 0.008588609009267527,
+   "ece_away": 0.0388703771385704,
+   "accuracy": 0.5178050204319906
+  }
+ },
+ "tabella_confronto_TEST": {
+  "football-v1-baseline": {
+   "n": 1713,
+   "brier": 0.5928,
+   "logLoss": 0.9949,
+   "rps": 0.2021
+  },
+  "football-v2-candidate": {
+   "n": 1713,
+   "brier": 0.5912,
+   "logLoss": 0.9922,
+   "rps": 0.2013
+  },
+  "football-ml-v1-raw": {
+   "n": 1713,
+   "brier": 0.596,
+   "logLoss": 0.9992,
+   "rps": 0.2043
+  },
+  "football-ml-v1-calibrated": {
+   "n": 1713,
+   "brier": 0.6006,
+   "logLoss": 1.0268,
+   "rps": 0.2059
+  },
+  "market-closing-no-vig": {
+   "n": 1713,
+   "brier": 0.5825,
+   "logLoss": 0.9783,
+   "rps": 0.1978
+  }
+ },
+ "bootstrap_ML_vs_v1": {
+  "ML-raw vs v1": {
+   "brier": {
+    "n_match": 1713,
+    "differenza_media": 0.00319,
+    "ic95": [
+     -0.00299,
+     0.00923
+    ],
+    "verdetto": "INCONCLUSIVE"
+   },
+   "logLoss": {
+    "n_match": 1713,
+    "differenza_media": 0.00432,
+    "ic95": [
+     -0.00542,
+     0.01381
+    ],
+    "verdetto": "INCONCLUSIVE"
+   },
+   "rps": {
+    "n_match": 1713,
+    "differenza_media": 0.00214,
+    "ic95": [
+     -0.00036,
+     0.00459
+    ],
+    "verdetto": "INCONCLUSIVE"
+   }
+  },
+  "ML-calibrated vs v1": {
+   "brier": {
+    "n_match": 1713,
+    "differenza_media": 0.00785,
+    "ic95": [
+     0.00103,
+     0.01435
+    ],
+    "verdetto": "NEGATIVE"
+   },
+   "logLoss": {
+    "n_match": 1713,
+    "differenza_media": 0.0319,
+    "ic95": [
+     0.00845,
+     0.06062
+    ],
+    "verdetto": "NEGATIVE"
+   },
+   "rps": {
+    "n_match": 1713,
+    "differenza_media": 0.00378,
+    "ic95": [
+     0.00093,
+     0.00659
+    ],
+    "verdetto": "NEGATIVE"
+   }
+  }
+ },
+ "per_lega_TEST": {
+  "Premier League": {
+   "v1": {
+    "n": 375,
+    "brier": 0.6149,
+    "logLoss": 1.0251,
+    "rps": 0.208
+   },
+   "ml_raw": {
+    "n": 375,
+    "brier": 0.6251,
+    "logLoss": 1.038,
+    "rps": 0.2123
+   },
+   "ml_calibrated": {
+    "n": 375,
+    "brier": 0.6295,
+    "logLoss": 1.1032,
+    "rps": 0.2138
+   }
+  },
+  "Liga": {
+   "v1": {
+    "n": 369,
+    "brier": 0.585,
+    "logLoss": 0.9845,
+    "rps": 0.2006
+   },
+   "ml_raw": {
+    "n": 369,
+    "brier": 0.579,
+    "logLoss": 0.9763,
+    "rps": 0.1997
+   },
+   "ml_calibrated": {
+    "n": 369,
+    "brier": 0.5928,
+    "logLoss": 1.0286,
+    "rps": 0.2047
+   }
+  },
+  "Serie A": {
+   "v1": {
+    "n": 375,
+    "brier": 0.5956,
+    "logLoss": 0.9984,
+    "rps": 0.2025
+   },
+   "ml_raw": {
+    "n": 375,
+    "brier": 0.6073,
+    "logLoss": 1.0168,
+    "rps": 0.2066
+   },
+   "ml_calibrated": {
+    "n": 375,
+    "brier": 0.6008,
+    "logLoss": 1.0082,
+    "rps": 0.2044
+   }
+  },
+  "Bundesliga": {
+   "v1": {
+    "n": 301,
+    "brier": 0.5755,
+    "logLoss": 0.974,
+    "rps": 0.1962
+   },
+   "ml_raw": {
+    "n": 301,
+    "brier": 0.5778,
+    "logLoss": 0.9768,
+    "rps": 0.1977
+   },
+   "ml_calibrated": {
+    "n": 301,
+    "brier": 0.5799,
+    "logLoss": 0.9824,
+    "rps": 0.1985
+   }
+  },
+  "Ligue 1": {
+   "v1": {
+    "n": 293,
+    "brier": 0.5883,
+    "logLoss": 0.9861,
+    "rps": 0.2022
+   },
+   "ml_raw": {
+    "n": 293,
+    "brier": 0.5842,
+    "logLoss": 0.9787,
+    "rps": 0.2034
+   },
+   "ml_calibrated": {
+    "n": 293,
+    "brier": 0.5945,
+    "logLoss": 0.996,
+    "rps": 0.2069
+   }
+  }
+ },
+ "per_stato_partita": {
+  "favorite home": {
+   "n": 616,
+   "v1": {
+    "n": 616,
+    "brier": 0.6125,
+    "logLoss": 1.0223,
+    "rps": 0.2064
+   },
+   "ml_raw": {
+    "n": 616,
+    "brier": 0.6167,
+    "logLoss": 1.0301,
+    "rps": 0.211
+   }
+  },
+  "underdog/equilibrata": {
+   "n": 538,
+   "v1": {
+    "n": 538,
+    "brier": 0.6593,
+    "logLoss": 1.0887,
+    "rps": 0.2274
+   },
+   "ml_raw": {
+    "n": 538,
+    "brier": 0.6547,
+    "logLoss": 1.0802,
+    "rps": 0.2258
+   }
+  },
+  "favorite away": {
+   "n": 302,
+   "v1": {
+    "n": 302,
+    "brier": 0.6061,
+    "logLoss": 1.0138,
+    "rps": 0.2065
+   },
+   "ml_raw": {
+    "n": 302,
+    "brier": 0.612,
+    "logLoss": 1.019,
+    "rps": 0.208
+   }
+  },
+  "heavy favorite home": {
+   "n": 221,
+   "v1": {
+    "n": 221,
+    "brier": 0.3997,
+    "logLoss": 0.725,
+    "rps": 0.1381
+   },
+   "ml_raw": {
+    "n": 221,
+    "brier": 0.4076,
+    "logLoss": 0.736,
+    "rps": 0.1403
+   }
+  },
+  "heavy favorite away": {
+   "n": 36,
+   "v1": {
+    "n": 36,
+    "brier": 0.334,
+    "logLoss": 0.6195,
+    "rps": 0.1072
+   },
+   "ml_raw": {
+    "n": 36,
+    "brier": 0.3859,
+    "logLoss": 0.7081,
+    "rps": 0.1298
+   }
+  }
+ },
+ "per_confidence_bucket": {
+  "40-50%": {
+   "n": 841,
+   "brier_v1": 0.6576,
+   "accuracy_v1": 42.4
+  },
+  "50-60%": {
+   "n": 456,
+   "brier_v1": 0.6039,
+   "accuracy_v1": 53.5
+  },
+  "60-70%": {
+   "n": 276,
+   "brier_v1": 0.5127,
+   "accuracy_v1": 64.9
+  },
+  "70%+": {
+   "n": 140,
+   "brier_v1": 0.3248,
+   "accuracy_v1": 81.4
+  }
+ },
+ "draw_analysis": {
+  "brier_draw_v1": 0.1885,
+  "brier_draw_ml_raw": 0.1874,
+  "ece_draw_v1": 0.0273,
+  "ece_draw_ml_raw": 0.0102,
+  "predicted_draw_pct_v1": 23,
+  "predicted_draw_pct_ml": 25.9,
+  "observed_draw_pct": 25.5
+ },
+ "disagreement_DC_vs_ML": {
+  "<3pp": {
+   "n": 182,
+   "brier_v1": 0.5746,
+   "brier_ml": 0.5749,
+   "chi_ha_ragione": "Dixon-Coles"
+  },
+  "3-5pp": {
+   "n": 294,
+   "brier_v1": 0.588,
+   "brier_ml": 0.5885,
+   "chi_ha_ragione": "Dixon-Coles"
+  },
+  "5-10pp": {
+   "n": 779,
+   "brier_v1": 0.5882,
+   "brier_ml": 0.5904,
+   "chi_ha_ragione": "Dixon-Coles"
+  },
+  ">10pp": {
+   "n": 458,
+   "brier_v1": 0.6107,
+   "brier_ml": 0.6185,
+   "chi_ha_ragione": "Dixon-Coles"
+  }
+ },
+ "error_correlation_pearson": 0.918,
+ "ev_clv_ML_calibrated": {
+  "per_soglia": {
+   "EV>=0.0%": {
+    "bets": 1639,
+    "hit_rate_pct": 32.2,
+    "average_odds": 3.79,
+    "roi_pct": -2.77,
+    "max_drawdown": 113.41
+   },
+   "EV>=2.0%": {
+    "bets": 1556,
+    "hit_rate_pct": 31.6,
+    "average_odds": 3.84,
+    "roi_pct": -3.61,
+    "max_drawdown": 115.37
+   },
+   "EV>=5.0%": {
+    "bets": 1406,
+    "hit_rate_pct": 31.3,
+    "average_odds": 3.93,
+    "roi_pct": -2.96,
+    "max_drawdown": 94.42
+   },
+   "EV>=7.5%": {
+    "bets": 1260,
+    "hit_rate_pct": 30.7,
+    "average_odds": 4,
+    "roi_pct": -3.03,
+    "max_drawdown": 80.03
+   },
+   "EV>=10.0%": {
+    "bets": 1123,
+    "hit_rate_pct": 29.5,
+    "average_odds": 4.12,
+    "roi_pct": -4.17,
+    "max_drawdown": 79.21
+   }
+  },
+  "clv": {
+   "n": 1639,
+   "clv_medio_pct": -1.94,
+   "pct_batte_chiusura": 34.4
+  }
+ },
+ "shap_top20": [
+  [
+   "npxgd_diff_season",
+   0.12679229224870606
+  ],
+  [
+   "home_npxg_season",
+   0.05448625334596738
+  ],
+  [
+   "elo_diff",
+   0.05084798592268898
+  ],
+  [
+   "xg_diff_last10",
+   0.04773880492239865
+  ],
+  [
+   "deep_away_last10",
+   0.02984237248913582
+  ],
+  [
+   "sample_size_away",
+   0.022301164580512095
+  ],
+  [
+   "sample_size_home",
+   0.019788325370849128
+  ],
+  [
+   "elo_before_away",
+   0.018338711837860504
+  ],
+  [
+   "xpoints_delta_home",
+   0.01768897531412405
+  ],
+  [
+   "deep_home_last10",
+   0.017533417951029803
+  ],
+  [
+   "home_xg_last8",
+   0.017424475691166896
+  ],
+  [
+   "home_xga_last8",
+   0.01717897476020778
+  ],
+  [
+   "away_xg_last5",
+   0.016249234332914097
+  ],
+  [
+   "away_xga_last3",
+   0.015472532311860441
+  ],
+  [
+   "home_xg_season",
+   0.014786824446154579
+  ],
+  [
+   "home_xg_last3",
+   0.013778837655583766
+  ],
+  [
+   "away_npxga_last3",
+   0.01366321163015931
+  ],
+  [
+   "xga_diff_last10",
+   0.011577294433238466
+  ],
+  [
+   "home_xga_last5",
+   0.011040035283500994
+  ],
+  [
+   "days_since_prev_home",
+   0.01093352091582296
+  ]
+ ]
+}
