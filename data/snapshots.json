@@ -1,6 +1,6 @@
 {
  "nota": "Ogni riga e immutabile una volta scritta: non viene mai aggiornata da esecuzioni successive, nemmeno se il modello o i dati di input cambiano. Serve a verificare a posteriori cosa il modello prevedeva PRIMA del kickoff, senza il rischio che lo storico si riscriva da solo.",
- "aggiornato": "2026-08-30T18:11:45.687Z",
+ "aggiornato": "2026-08-30T18:31:31.726Z",
  "snapshot": [
   {
    "snapshot_id": "napoli-como|2026-08-30T16:30:00.000Z|standard|Multigol casa 1-2|football-v1-baseline",
@@ -4801,6 +4801,936 @@
    "src": "consenso di 11 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline",
    "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "genoa-como|2026-09-04T18:45:00.000Z|standard|Multigol casa 1-2|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Genoa - Como",
+   "quando": "ven 04/09, 20:45",
+   "ore": 120,
+   "match": "genoa-como",
+   "inizio": "2026-09-04T18:45:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.2337,
+     "PX": 0.2301,
+     "P2": 0.5363,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.2255,
+     "PX": 0.2569,
+     "P2": 0.5176,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.027,
+     "lambda_away": 1.699
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 5.8,
+     "book": "Pinnacle",
+     "n_book": 18,
+     "no_vig_probability": 0.188
+    },
+    "value": {
+     "fair_odds": 4.274,
+     "edge": 0.046,
+     "ev": 0.3572
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.046,
+     "confidence": 59,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.046,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.734,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 94.4,
+      "current_season_contribution_pct": 5.6
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 94.4,
+      "current_season_contribution_pct": 5.6
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Genoa\" il 23.4% contro il 18.8% del mercato. La quota fair e' 4.27 contro una quota disponibile di 5.80. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.557,
+   "why": "Gol attesi 1.03 contro 1.70, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.7%. Sul segno 1 il modello dice 23.4% contro il 18.8% del consenso di 18 bookmaker, miglior prezzo 5.80 su Pinnacle.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.234,
+    "probMercato": 0.188,
+    "prezzo": 5.8,
+    "book": "Pinnacle",
+    "nBook": 18,
+    "valore": 0.355
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "genoa-como|2026-09-04T18:45:00.000Z|standard|Trasferta segna|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Genoa - Como",
+   "quando": "ven 04/09, 20:45",
+   "ore": 120,
+   "match": "genoa-como",
+   "inizio": "2026-09-04T18:45:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.2337,
+     "PX": 0.2301,
+     "P2": 0.5363,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.2255,
+     "PX": 0.2569,
+     "P2": 0.5176,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.027,
+     "lambda_away": 1.699
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 5.8,
+     "book": "Pinnacle",
+     "n_book": 18,
+     "no_vig_probability": 0.188
+    },
+    "value": {
+     "fair_odds": 4.274,
+     "edge": 0.046,
+     "ev": 0.3572
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.046,
+     "confidence": 59,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.046,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.734,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 94.4,
+      "current_season_contribution_pct": 5.6
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 94.4,
+      "current_season_contribution_pct": 5.6
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Genoa\" il 23.4% contro il 18.8% del mercato. La quota fair e' 4.27 contro una quota disponibile di 5.80. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Trasferta segna",
+   "prob": 0.817,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.03 contro 1.70, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.7%. Sul segno 1 il modello dice 23.4% contro il 18.8% del consenso di 18 bookmaker, miglior prezzo 5.80 su Pinnacle.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "genoa-como|2026-09-04T18:45:00.000Z|sorpresa|Genoa vincente|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Genoa - Como",
+   "quando": "ven 04/09, 20:45",
+   "ore": 120,
+   "match": "genoa-como",
+   "inizio": "2026-09-04T18:45:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.2337,
+     "PX": 0.2301,
+     "P2": 0.5363,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.2255,
+     "PX": 0.2569,
+     "P2": 0.5176,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.027,
+     "lambda_away": 1.699
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 5.8,
+     "book": "Pinnacle",
+     "n_book": 18,
+     "no_vig_probability": 0.188
+    },
+    "value": {
+     "fair_odds": 4.274,
+     "edge": 0.046,
+     "ev": 0.3572
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.046,
+     "confidence": 59,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.046,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.734,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 94.4,
+      "current_season_contribution_pct": 5.6
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 94.4,
+      "current_season_contribution_pct": 5.6
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Genoa\" il 23.4% contro il 18.8% del mercato. La quota fair e' 4.27 contro una quota disponibile di 5.80. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Genoa vincente",
+   "prob": 0.234,
+   "prezzo": 5.8,
+   "why": "Il modello da questo esito al 23.4%, il consenso di 18 bookmaker al 18.8%. Al prezzo migliore, 5.80 su Pinnacle, il valore atteso e' 35.5%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.234,
+    "probMercato": 0.188,
+    "prezzo": 5.8,
+    "book": "Pinnacle",
+    "nBook": 18,
+    "valore": 0.355
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "ipswich-liverpool|2026-09-04T19:00:00.000Z|standard|Multigol 2-5|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Ipswich - Liverpool",
+   "quando": "ven 04/09, 21:00",
+   "ore": 120,
+   "match": "ipswich-liverpool",
+   "inizio": "2026-09-04T19:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.2368,
+     "PX": 0.1771,
+     "P2": 0.5862,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.2369,
+     "PX": 0.1766,
+     "P2": 0.5865,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.006,
+     "lambda_away": 3.047
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 5.33,
+     "book": "1xBet",
+     "n_book": 24,
+     "no_vig_probability": 0.189
+    },
+    "value": {
+     "fair_odds": 4.219,
+     "edge": 0.048,
+     "ev": 0.2632
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.048,
+     "confidence": 59,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.048,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.737,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Ipswich\" il 23.7% contro il 18.9% del mercato. La quota fair e' 4.22 contro una quota disponibile di 5.33. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol 2-5",
+   "prob": 0.574,
+   "why": "Gol attesi 2.01 contro 3.05, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.4%. Sul segno 1 il modello dice 23.7% contro il 18.9% del consenso di 24 bookmaker, miglior prezzo 5.33 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.237,
+    "probMercato": 0.189,
+    "prezzo": 5.33,
+    "book": "1xBet",
+    "nBook": 24,
+    "valore": 0.262
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "ipswich-liverpool|2026-09-04T19:00:00.000Z|standard|12|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Ipswich - Liverpool",
+   "quando": "ven 04/09, 21:00",
+   "ore": 120,
+   "match": "ipswich-liverpool",
+   "inizio": "2026-09-04T19:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.2368,
+     "PX": 0.1771,
+     "P2": 0.5862,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.2369,
+     "PX": 0.1766,
+     "P2": 0.5865,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.006,
+     "lambda_away": 3.047
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 5.33,
+     "book": "1xBet",
+     "n_book": 24,
+     "no_vig_probability": 0.189
+    },
+    "value": {
+     "fair_odds": 4.219,
+     "edge": 0.048,
+     "ev": 0.2632
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.048,
+     "confidence": 59,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.048,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.737,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Ipswich\" il 23.7% contro il 18.9% del mercato. La quota fair e' 4.22 contro una quota disponibile di 5.33. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "12",
+   "prob": 0.823,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 2.01 contro 3.05, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 82.3%. Sul segno 1 il modello dice 23.7% contro il 18.9% del consenso di 24 bookmaker, miglior prezzo 5.33 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "ipswich-liverpool|2026-09-04T19:00:00.000Z|sorpresa|Ipswich vincente|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Ipswich - Liverpool",
+   "quando": "ven 04/09, 21:00",
+   "ore": 120,
+   "match": "ipswich-liverpool",
+   "inizio": "2026-09-04T19:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.2368,
+     "PX": 0.1771,
+     "P2": 0.5862,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.2369,
+     "PX": 0.1766,
+     "P2": 0.5865,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.006,
+     "lambda_away": 3.047
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 5.33,
+     "book": "1xBet",
+     "n_book": 24,
+     "no_vig_probability": 0.189
+    },
+    "value": {
+     "fair_odds": 4.219,
+     "edge": 0.048,
+     "ev": 0.2632
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.048,
+     "confidence": 59,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.048,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.737,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Ipswich\" il 23.7% contro il 18.9% del mercato. La quota fair e' 4.22 contro una quota disponibile di 5.33. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Ipswich vincente",
+   "prob": 0.237,
+   "prezzo": 5.33,
+   "why": "Il modello da questo esito al 23.7%, il consenso di 24 bookmaker al 18.9%. Al prezzo migliore, 5.33 su 1xBet, il valore atteso e' 26.2%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.237,
+    "probMercato": 0.189,
+    "prezzo": 5.33,
+    "book": "1xBet",
+    "nBook": 24,
+    "valore": 0.262
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "real betis-real madrid|2026-09-04T19:00:00.000Z|standard|1X|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Real Betis - Real Madrid",
+   "quando": "ven 04/09, 21:00",
+   "ore": 120,
+   "match": "real betis-real madrid",
+   "inizio": "2026-09-04T19:00:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3314,
+     "PX": 0.2389,
+     "P2": 0.4297,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3168,
+     "PX": 0.2723,
+     "P2": 0.4108,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.426,
+     "lambda_away": 1.653
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 6,
+     "book": "Matchbook",
+     "n_book": 19,
+     "no_vig_probability": 0.176
+    },
+    "value": {
+     "fair_odds": 3.021,
+     "edge": 0.155,
+     "ev": 0.986
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.155,
+     "confidence": 25,
+     "data_quality": 63
+    },
+    "market_gap": {
+     "valore": 0.155,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 25 < 55",
+     "agreement LOW",
+     "market gap 15.5pp > 5pp"
+    ],
+    "opportunity_score": 0.5495,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.7,
+      "current_season_contribution_pct": 15.3
+     },
+     "ospite": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.6,
+      "current_season_contribution_pct": 15.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Real Betis\" il 33.1% contro il 17.6% del mercato. La quota fair e' 3.02 contro una quota disponibile di 6.00. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "mercato": "1X",
+   "prob": 0.57,
+   "why": "Gol attesi 1.43 contro 1.65, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.0%. Sul segno 1 il modello dice 33.1% contro il 17.6% del consenso di 19 bookmaker, miglior prezzo 6.00 su Matchbook.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.331,
+    "probMercato": 0.176,
+    "prezzo": 6,
+    "book": "Matchbook",
+    "nBook": 19,
+    "valore": 0.988
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "real betis-real madrid|2026-09-04T19:00:00.000Z|standard|Under 4.5|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Real Betis - Real Madrid",
+   "quando": "ven 04/09, 21:00",
+   "ore": 120,
+   "match": "real betis-real madrid",
+   "inizio": "2026-09-04T19:00:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3314,
+     "PX": 0.2389,
+     "P2": 0.4297,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3168,
+     "PX": 0.2723,
+     "P2": 0.4108,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.426,
+     "lambda_away": 1.653
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 6,
+     "book": "Matchbook",
+     "n_book": 19,
+     "no_vig_probability": 0.176
+    },
+    "value": {
+     "fair_odds": 3.021,
+     "edge": 0.155,
+     "ev": 0.986
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.155,
+     "confidence": 25,
+     "data_quality": 63
+    },
+    "market_gap": {
+     "valore": 0.155,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 25 < 55",
+     "agreement LOW",
+     "market gap 15.5pp > 5pp"
+    ],
+    "opportunity_score": 0.5495,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.7,
+      "current_season_contribution_pct": 15.3
+     },
+     "ospite": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.6,
+      "current_season_contribution_pct": 15.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Real Betis\" il 33.1% contro il 17.6% del mercato. La quota fair e' 3.02 contro una quota disponibile di 6.00. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "mercato": "Under 4.5",
+   "prob": 0.802,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.43 contro 1.65, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.2%. Sul segno 1 il modello dice 33.1% contro il 17.6% del consenso di 19 bookmaker, miglior prezzo 6.00 su Matchbook.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "real betis-real madrid|2026-09-04T19:00:00.000Z|sorpresa|Real Betis vincente|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Real Betis - Real Madrid",
+   "quando": "ven 04/09, 21:00",
+   "ore": 120,
+   "match": "real betis-real madrid",
+   "inizio": "2026-09-04T19:00:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3314,
+     "PX": 0.2389,
+     "P2": 0.4297,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3168,
+     "PX": 0.2723,
+     "P2": 0.4108,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.426,
+     "lambda_away": 1.653
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 6,
+     "book": "Matchbook",
+     "n_book": 19,
+     "no_vig_probability": 0.176
+    },
+    "value": {
+     "fair_odds": 3.021,
+     "edge": 0.155,
+     "ev": 0.986
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.155,
+     "confidence": 25,
+     "data_quality": 63
+    },
+    "market_gap": {
+     "valore": 0.155,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 25 < 55",
+     "agreement LOW",
+     "market gap 15.5pp > 5pp"
+    ],
+    "opportunity_score": 0.5495,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.7,
+      "current_season_contribution_pct": 15.3
+     },
+     "ospite": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.6,
+      "current_season_contribution_pct": 15.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Real Betis\" il 33.1% contro il 17.6% del mercato. La quota fair e' 3.02 contro una quota disponibile di 6.00. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Real Betis vincente",
+   "prob": 0.331,
+   "prezzo": 6,
+   "why": "Il modello da questo esito al 33.1%, il consenso di 19 bookmaker al 17.6%. Al prezzo migliore, 6.00 su Matchbook, il valore atteso e' 98.8%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.331,
+    "probMercato": 0.176,
+    "prezzo": 6,
+    "book": "Matchbook",
+    "nBook": 19,
+    "valore": 0.988
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "marta kostyuk - storm hunter|2026-08-30T18:19:04.000Z|standard|Marta Kostyuk vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Marta Kostyuk - Storm Hunter",
+   "quando": "dom 30/08, 20:19",
+   "ore": 0,
+   "match": "marta kostyuk - storm hunter",
+   "inizio": "2026-08-30T18:19:04.000Z",
+   "fonte": "consenso",
+   "mercato": "Marta Kostyuk vincente",
+   "prob": 0.886,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 88.6%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.13 su GTbets. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 20 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "lucrezia stefanini - dayana yastremska|2026-08-30T18:21:52.000Z|standard|Lucrezia Stefanini vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Lucrezia Stefanini - Dayana Yastremska",
+   "quando": "dom 30/08, 20:21",
+   "ore": 0,
+   "match": "lucrezia stefanini - dayana yastremska",
+   "inizio": "2026-08-30T18:21:52.000Z",
+   "fonte": "consenso",
+   "mercato": "Lucrezia Stefanini vincente",
+   "prob": 0.515,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 51.5%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 2.12 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 19 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "hanne vandewinkel - karolina pliskova|2026-08-30T18:35:00.000Z|standard|Hanne Vandewinkel vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Hanne Vandewinkel - Karolina Pliskova",
+   "quando": "dom 30/08, 20:35",
+   "ore": 0,
+   "match": "hanne vandewinkel - karolina pliskova",
+   "inizio": "2026-08-30T18:35:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Hanne Vandewinkel vincente",
+   "prob": 0.509,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 50.9%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.97 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "emiliana arango - xinyu wang|2026-08-30T18:40:00.000Z|standard|Xinyu Wang vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Emiliana Arango - Xinyu Wang",
+   "quando": "dom 30/08, 20:40",
+   "ore": 0,
+   "match": "emiliana arango - xinyu wang",
+   "inizio": "2026-08-30T18:40:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Xinyu Wang vincente",
+   "prob": 0.731,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 73.1%, ricavata togliendo il margine alle quote di 17 bookmaker e facendone la media. Miglior prezzo 1.37 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 17 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "jaime faria - jenson brooksby|2026-08-30T18:50:00.000Z|standard|Jenson Brooksby vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Jaime Faria - Jenson Brooksby",
+   "quando": "dom 30/08, 20:50",
+   "ore": 0,
+   "match": "jaime faria - jenson brooksby",
+   "inizio": "2026-08-30T18:50:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Jenson Brooksby vincente",
+   "prob": 0.533,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 53.3%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.86 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 20 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "miomir kecmanovic - denis shapovalov|2026-08-30T19:35:00.000Z|standard|Denis Shapovalov vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Miomir Kecmanovic - Denis Shapovalov",
+   "quando": "dom 30/08, 21:35",
+   "ore": 1,
+   "match": "miomir kecmanovic - denis shapovalov",
+   "inizio": "2026-08-30T19:35:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Denis Shapovalov vincente",
+   "prob": 0.554,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 55.4%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.79 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:31:31.723Z"
   }
  ]
 }
