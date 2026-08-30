@@ -2,11 +2,29 @@ name: Aggiorna pronostici
 
 on:
   schedule:
-    # UTC. Con l'Italia a UTC+2 (ora legale) sono le 14:00 locali.
-    # ATTENZIONE: domenica 25 ottobre 2026 finisce l'ora legale, l'Italia passa
-    # a UTC+1 e questo cron scatterebbe alle 13:00. Va portato a '0 13 * * *'.
+    # GitHub Actions schedula sempre in UTC, ma Europe/Rome cambia offset con
+    # l'ora legale (CET=UTC+1 d'inverno, CEST=UTC+2 d'estate). Un solo cron
+    # fisso sarebbe corretto solo per meta' dell'anno. Soluzione robusta:
+    # si schedula sia alle 12:00 sia alle 13:00 UTC, e il primo step del job
+    # (vedi sotto) calcola l'ora locale reale in Europe/Rome e lascia
+    # proseguire la pipeline SOLO se sono le 14:00 li'. In ogni momento
+    # dell'anno uno solo dei due trigger corrisponde davvero alle 14:00
+    # locali; l'altro viene scartato subito, senza toccare nessun dato.
     - cron: '0 12 * * *'
-  workflow_dispatch:             # pulsante per lanciarlo a mano
+    - cron: '0 13 * * *'
+  workflow_dispatch:             # pulsante per lanciarlo a mano, anche per test
+    inputs:
+      force:
+        description: "Ignora l'orario e il controllo 'gia eseguito oggi' (solo per test manuali)"
+        type: boolean
+        default: false
+
+# Mai due esecuzioni sovrapposte di questo workflow: la seconda resta in coda
+# (non viene cancellata: se una fosse a meta' di un commit, ucciderla a meta'
+# sarebbe peggio che farla aspettare qualche minuto).
+concurrency:
+  group: aggiorna-pronostici
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -21,27 +39,118 @@ jobs:
         with:
           node-version: '20'
 
+      # Unico punto che decide se il resto del job deve girare. Sia il gate
+      # sull'orario Europe/Rome (per lo scheduler UTC-fisso) sia il "gia
+      # aggiornato oggi" (per evitare due publish nello stesso giorno se
+      # entrambi i cron dovessero risultare vicini a 14:00, o se un run
+      # manuale ha gia' pubblicato) vivono qui.
+      - name: "Decide se procedere (Europe/Rome 14:00, una volta al giorno)"
+        id: gate
+        run: |
+          OGGI_LOCALE=$(TZ='Europe/Rome' date +%F)
+          ORA_LOCALE=$(TZ='Europe/Rome' date +%H)
+          FORCE="${{ github.event.inputs.force }}"
+
+          GIA_FATTO_OGGI="no"
+          if [ -f data/ultimo-aggiornamento-giornaliero.json ]; then
+            MARKER_DATA=$(node -e "try{console.log(JSON.parse(require('fs').readFileSync('data/ultimo-aggiornamento-giornaliero.json','utf8')).data_locale||'')}catch{console.log('')}")
+            if [ "$MARKER_DATA" = "$OGGI_LOCALE" ]; then GIA_FATTO_OGGI="si"; fi
+          fi
+
+          echo "Data locale Europe/Rome: $OGGI_LOCALE, ora locale: $ORA_LOCALE, force=$FORCE, gia_fatto_oggi=$GIA_FATTO_OGGI"
+
+          if [ "$FORCE" = "true" ]; then
+            echo "Esecuzione forzata manualmente: ignoro orario e controllo giornaliero."
+            PROCEDI="true"
+          elif [ "$ORA_LOCALE" != "14" ]; then
+            echo "Non sono le 14:00 in Europe/Rome (sono le $ORA_LOCALE): questo trigger non e' quello giusto per oggi, esco senza fare nulla."
+            PROCEDI="false"
+          elif [ "$GIA_FATTO_OGGI" = "si" ]; then
+            echo "Aggiornamento giornaliero gia' pubblicato oggi ($OGGI_LOCALE): esco senza fare nulla, per non pubblicare due volte."
+            PROCEDI="false"
+          else
+            PROCEDI="true"
+          fi
+
+          echo "procedi=$PROCEDI" >> "$GITHUB_OUTPUT"
+          echo "oggi_locale=$OGGI_LOCALE" >> "$GITHUB_OUTPUT"
+
       # Guardia prima di toccare qualunque probabilita': se un test rompe, la
       # pipeline si ferma qui e picks.json/storico.json restano quelli di ieri
       # invece di pubblicare un calcolo non verificato.
       - name: Test del motore
+        if: steps.gate.outputs.procedi == 'true'
         run: node scripts/test.mjs
 
       # prima di build.mjs: e' l'ultimo momento in cui data/picks.json contiene
       # ancora i pronostici del giro precedente, quelli da chiudere.
       # Non usa l'API delle quote, solo i risultati pubblici di Understat.
       - name: Chiudi i pronostici gia' giocati
+        if: steps.gate.outputs.procedi == 'true'
         run: node scripts/chiudi.mjs
 
-      - name: Scarica quote e ricalcola i pronostici
+      - name: Scarica quote e ricalcola i pronostici (solo eventi di oggi per Cassaforte/Quota2/Sorpresa/Best Picks/High Risk)
+        if: steps.gate.outputs.procedi == 'true'
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: node scripts/build.mjs
 
+      - name: Aggiorna il marker "gia aggiornato oggi"
+        if: steps.gate.outputs.procedi == 'true'
+        run: |
+          node -e "
+            const fs = require('fs');
+            fs.writeFileSync('data/ultimo-aggiornamento-giornaliero.json', JSON.stringify({
+              data_locale: '${{ steps.gate.outputs.oggi_locale }}',
+              eseguito_alle_utc: new Date().toISOString()
+            }, null, 1));
+          "
+
       - name: Pubblica i nuovi file
+        if: steps.gate.outputs.procedi == 'true'
         run: |
           git config user.name  "pronostici-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/picks.json data/storico.json data/quote-storico.json data/snapshots.json
+          git add data/picks.json data/storico.json data/quote-storico.json data/snapshots.json data/ultimo-aggiornamento-giornaliero.json
           git diff --staged --quiet || git commit -m "Quote aggiornate $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
+
+      # Non basta che git push sia andato a buon fine: GitHub Pages ricostruisce
+      # in modo asincrono (osservato: circa 40-50s). Si aspetta che la pagina
+      # pubblica risponda davvero con QUESTO aggiornamento, non un cache stale
+      # del giro precedente, prima di considerare l'aggiornamento riuscito.
+      - name: Verifica che il deploy GitHub Pages sia online con i nuovi dati
+        if: steps.gate.outputs.procedi == 'true'
+        run: |
+          ATTESO=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/picks.json','utf8')).aggiornato)")
+          node scripts/verifica-deploy.mjs "$ATTESO"
+
+      # SOLO se tutto quanto sopra e' andato a buon fine (test, build, commit,
+      # push, verifica deploy): notifica di successo. I secret sono passati
+      # solo a questo step, mai stampati (lo script stesso non li logga mai).
+      - name: "Notifica WhatsApp: aggiornamento riuscito"
+        if: steps.gate.outputs.procedi == 'true' && success()
+        continue-on-error: true   # un problema di invio non deve marcare il job come fallito: i dati sono gia' pubblicati
+        env:
+          WHATSAPP_TOKEN: ${{ secrets.WHATSAPP_TOKEN }}
+          WHATSAPP_PHONE_NUMBER_ID: ${{ secrets.WHATSAPP_PHONE_NUMBER_ID }}
+          WHATSAPP_TO: ${{ secrets.WHATSAPP_TO }}
+          WHATSAPP_TEMPLATE_NAME: ${{ secrets.WHATSAPP_TEMPLATE_NAME }}
+          WHATSAPP_TEMPLATE_LANG: ${{ secrets.WHATSAPP_TEMPLATE_LANG }}
+          PUBLIC_URL: https://dado189-code.github.io/pronostici/
+        run: node scripts/notifica-whatsapp.mjs successo
+
+      # Se test, chiudi, build, commit/push o la verifica del deploy sono
+      # falliti: MAI dire che e' andato tutto bene. picks.json NON viene
+      # sovrascritto con dati parziali (i comandi sopra non sono arrivati a
+      # git push, oppure il commit e' li' ma il deploy non si e' confermato).
+      - name: "Notifica WhatsApp: aggiornamento fallito"
+        if: steps.gate.outputs.procedi == 'true' && failure()
+        continue-on-error: true
+        env:
+          WHATSAPP_TOKEN: ${{ secrets.WHATSAPP_TOKEN }}
+          WHATSAPP_PHONE_NUMBER_ID: ${{ secrets.WHATSAPP_PHONE_NUMBER_ID }}
+          WHATSAPP_TO: ${{ secrets.WHATSAPP_TO }}
+          WHATSAPP_TEMPLATE_NAME: ${{ secrets.WHATSAPP_TEMPLATE_NAME }}
+          WHATSAPP_TEMPLATE_LANG: ${{ secrets.WHATSAPP_TEMPLATE_LANG }}
+        run: node scripts/notifica-whatsapp.mjs fallimento
