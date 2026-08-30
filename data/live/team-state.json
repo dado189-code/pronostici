@@ -1,0 +1,1421 @@
+{
+ "squadre": {
+  "Premier League|Liverpool": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.128,
+    "dif": 0.95
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.178,
+    "dif": 1.008
+   }
+  },
+  "Premier League|Bournemouth": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.161,
+    "dif": 0.985
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.174,
+    "dif": 1.005
+   }
+  },
+  "Premier League|Aston Villa": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.009,
+    "dif": 0.958
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.998,
+    "dif": 1.037
+   }
+  },
+  "Premier League|Newcastle United": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.038,
+    "dif": 1.043
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.039,
+    "dif": 1.081
+   }
+  },
+  "Premier League|Brighton": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.992,
+    "dif": 0.898
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.094,
+    "dif": 0.865
+   }
+  },
+  "Premier League|Fulham": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.862,
+    "dif": 1.04
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.875,
+    "dif": 1.069
+   }
+  },
+  "Premier League|Sunderland": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.766,
+    "dif": 1.025
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.78,
+    "dif": 1.024
+   }
+  },
+  "Premier League|West Ham": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.887,
+    "dif": 1.11
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.904,
+    "dif": 1.107
+   }
+  },
+  "Premier League|Tottenham": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.816,
+    "dif": 0.938
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.805,
+    "dif": 0.998
+   }
+  },
+  "Premier League|Burnley": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.645,
+    "dif": 1.365
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.658,
+    "dif": 1.361
+   }
+  },
+  "Premier League|Wolverhampton Wanderers": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.695,
+    "dif": 1.179
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.708,
+    "dif": 1.175
+   }
+  },
+  "Premier League|Manchester City": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.356,
+    "dif": 0.822
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.406,
+    "dif": 0.781
+   }
+  },
+  "Premier League|Chelsea": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.192,
+    "dif": 1.027
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.247,
+    "dif": 1.023
+   }
+  },
+  "Premier League|Crystal Palace": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.046,
+    "dif": 1.053
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.076,
+    "dif": 1.067
+   }
+  },
+  "Premier League|Nottingham Forest": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.873,
+    "dif": 1.099
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.921,
+    "dif": 1.032
+   }
+  },
+  "Premier League|Brentford": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.119,
+    "dif": 1.053
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.221,
+    "dif": 1.039
+   }
+  },
+  "Premier League|Manchester United": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.214,
+    "dif": 0.857
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.24,
+    "dif": 0.866
+   }
+  },
+  "Premier League|Arsenal": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.306,
+    "dif": 0.599
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.343,
+    "dif": 0.598
+   }
+  },
+  "Premier League|Leeds": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.042,
+    "dif": 0.976
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.024,
+    "dif": 0.941
+   }
+  },
+  "Premier League|Everton": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.855,
+    "dif": 1.023
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.887,
+    "dif": 1.055
+   }
+  },
+  "Premier League|Coventry": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": null,
+    "dif": null
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.676,
+    "dif": 0.688
+   }
+  },
+  "Premier League|Hull": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": null,
+    "dif": null
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.821,
+    "dif": 1.058
+   }
+  },
+  "Premier League|Ipswich": {
+   "last_updated": "2026-08-30T13:02:45.025Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": null,
+    "dif": null
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.926,
+    "dif": 1.122
+   }
+  },
+  "Liga|Girona": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.948,
+    "dif": 1.08
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.989,
+    "dif": 1.059
+   }
+  },
+  "Liga|Rayo Vallecano": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.064,
+    "dif": 0.991
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.097,
+    "dif": 1.031
+   }
+  },
+  "Liga|Villarreal": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 3,
+   "historical_strength": {
+    "att": 1.185,
+    "dif": 0.969
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.296,
+    "dif": 0.889
+   }
+  },
+  "Liga|Real Oviedo": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.756,
+    "dif": 1.179
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.789,
+    "dif": 1.155
+   }
+  },
+  "Liga|Mallorca": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.875,
+    "dif": 1.144
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.915,
+    "dif": 1.12
+   }
+  },
+  "Liga|Barcelona": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.69,
+    "dif": 0.894
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.874,
+    "dif": 0.844
+   }
+  },
+  "Liga|Alaves": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 3,
+   "historical_strength": {
+    "att": 0.952,
+    "dif": 0.929
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.036,
+    "dif": 0.859
+   }
+  },
+  "Liga|Levante": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 3,
+   "historical_strength": {
+    "att": 1.074,
+    "dif": 1.136
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.128,
+    "dif": 1.106
+   }
+  },
+  "Liga|Valencia": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.972,
+    "dif": 0.958
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.958,
+    "dif": 0.908
+   }
+  },
+  "Liga|Real Sociedad": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 3,
+   "historical_strength": {
+    "att": 1.057,
+    "dif": 1.117
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.112,
+    "dif": 1.094
+   }
+  },
+  "Liga|Celta Vigo": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.921,
+    "dif": 0.995
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.893,
+    "dif": 0.958
+   }
+  },
+  "Liga|Getafe": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.596,
+    "dif": 0.835
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.615,
+    "dif": 0.842
+   }
+  },
+  "Liga|Athletic Club": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.969,
+    "dif": 0.842
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.976,
+    "dif": 0.876
+   }
+  },
+  "Liga|Sevilla": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 3,
+   "historical_strength": {
+    "att": 0.681,
+    "dif": 1.003
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.74,
+    "dif": 0.998
+   }
+  },
+  "Liga|Espanyol": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 3,
+   "historical_strength": {
+    "att": 0.874,
+    "dif": 1.114
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.907,
+    "dif": 1.096
+   }
+  },
+  "Liga|Atletico Madrid": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 3,
+   "historical_strength": {
+    "att": 1.196,
+    "dif": 1.007
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.185,
+    "dif": 1.038
+   }
+  },
+  "Liga|Elche": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 3,
+   "historical_strength": {
+    "att": 0.865,
+    "dif": 1.2
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.899,
+    "dif": 1.211
+   }
+  },
+  "Liga|Real Betis": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 3,
+   "historical_strength": {
+    "att": 1.052,
+    "dif": 0.896
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.094,
+    "dif": 0.915
+   }
+  },
+  "Liga|Real Madrid": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.34,
+    "dif": 0.804
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.447,
+    "dif": 0.759
+   }
+  },
+  "Liga|Osasuna": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.933,
+    "dif": 0.905
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.966,
+    "dif": 0.843
+   }
+  },
+  "Liga|Racing Santander": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 3,
+   "historical_strength": {
+    "att": null,
+    "dif": null
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.239,
+    "dif": 0.759
+   }
+  },
+  "Liga|Deportivo La Coruna": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": null,
+    "dif": null
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.458,
+    "dif": 1.673
+   }
+  },
+  "Liga|Malaga": {
+   "last_updated": "2026-08-30T13:02:48.285Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": null,
+    "dif": null
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.387,
+    "dif": 0.967
+   }
+  },
+  "Serie A|Genoa": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.897,
+    "dif": 1.019
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.857,
+    "dif": 0.959
+   }
+  },
+  "Serie A|Lecce": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.746,
+    "dif": 1.221
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.752,
+    "dif": 1.193
+   }
+  },
+  "Serie A|Sassuolo": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.935,
+    "dif": 1.154
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.966,
+    "dif": 1.053
+   }
+  },
+  "Serie A|Napoli": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.056,
+    "dif": 0.791
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.027,
+    "dif": 0.728
+   }
+  },
+  "Serie A|AC Milan": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.192,
+    "dif": 0.938
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.15,
+    "dif": 0.845
+   }
+  },
+  "Serie A|Cremonese": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.692,
+    "dif": 1.216
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.678,
+    "dif": 1.152
+   }
+  },
+  "Serie A|Roma": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.227,
+    "dif": 0.795
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.264,
+    "dif": 0.732
+   }
+  },
+  "Serie A|Bologna": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.919,
+    "dif": 0.942
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.932,
+    "dif": 0.888
+   }
+  },
+  "Serie A|Cagliari": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.871,
+    "dif": 1.109
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.856,
+    "dif": 1.049
+   }
+  },
+  "Serie A|Fiorentina": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.949,
+    "dif": 1.062
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.902,
+    "dif": 1.092
+   }
+  },
+  "Serie A|Como": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.308,
+    "dif": 0.733
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.31,
+    "dif": 0.737
+   }
+  },
+  "Serie A|Lazio": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.864,
+    "dif": 0.912
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.84,
+    "dif": 0.893
+   }
+  },
+  "Serie A|Atalanta": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.315,
+    "dif": 1.006
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.242,
+    "dif": 1.008
+   }
+  },
+  "Serie A|Pisa": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.795,
+    "dif": 1.245
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.78,
+    "dif": 1.181
+   }
+  },
+  "Serie A|Juventus": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.408,
+    "dif": 0.691
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.36,
+    "dif": 0.616
+   }
+  },
+  "Serie A|Parma Calcio 1913": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.665,
+    "dif": 1.159
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.636,
+    "dif": 1.074
+   }
+  },
+  "Serie A|Udinese": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.9,
+    "dif": 1.068
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.934,
+    "dif": 1.035
+   }
+  },
+  "Serie A|Verona": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.673,
+    "dif": 1.05
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.66,
+    "dif": 0.996
+   }
+  },
+  "Serie A|Inter": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.593,
+    "dif": 0.728
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.554,
+    "dif": 0.695
+   }
+  },
+  "Serie A|Torino": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.996,
+    "dif": 1.162
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.975,
+    "dif": 1.095
+   }
+  },
+  "Serie A|Monza": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": null,
+    "dif": null
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.186,
+    "dif": 0.677
+   }
+  },
+  "Serie A|Frosinone": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": null,
+    "dif": null
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.941,
+    "dif": 1.34
+   }
+  },
+  "Serie A|Venezia": {
+   "last_updated": "2026-08-30T13:02:52.051Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": null,
+    "dif": null
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.199,
+    "dif": 1.961
+   }
+  },
+  "Bundesliga|Bayern Munich": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.756,
+    "dif": 0.877
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.84,
+    "dif": 0.86
+   }
+  },
+  "Bundesliga|RasenBallsport Leipzig": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.295,
+    "dif": 0.978
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.385,
+    "dif": 0.976
+   }
+  },
+  "Bundesliga|FC Heidenheim": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.909,
+    "dif": 1.186
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.939,
+    "dif": 1.176
+   }
+  },
+  "Bundesliga|Wolfsburg": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.942,
+    "dif": 1.106
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.974,
+    "dif": 1.096
+   }
+  },
+  "Bundesliga|Bayer Leverkusen": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.299,
+    "dif": 0.919
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.347,
+    "dif": 0.912
+   }
+  },
+  "Bundesliga|Hoffenheim": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.077,
+    "dif": 0.928
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.125,
+    "dif": 0.943
+   }
+  },
+  "Bundesliga|Union Berlin": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.819,
+    "dif": 0.961
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.876,
+    "dif": 0.987
+   }
+  },
+  "Bundesliga|VfB Stuttgart": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.2,
+    "dif": 0.946
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.232,
+    "dif": 0.964
+   }
+  },
+  "Bundesliga|Eintracht Frankfurt": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.837,
+    "dif": 0.952
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.902,
+    "dif": 0.972
+   }
+  },
+  "Bundesliga|Werder Bremen": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.702,
+    "dif": 1.03
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.727,
+    "dif": 1.023
+   }
+  },
+  "Bundesliga|Freiburg": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.836,
+    "dif": 0.918
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.866,
+    "dif": 0.911
+   }
+  },
+  "Bundesliga|Augsburg": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.948,
+    "dif": 1.11
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.979,
+    "dif": 1.1
+   }
+  },
+  "Bundesliga|St. Pauli": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.583,
+    "dif": 1.145
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.603,
+    "dif": 1.134
+   }
+  },
+  "Bundesliga|Borussia Dortmund": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.176,
+    "dif": 0.754
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.17,
+    "dif": 0.756
+   }
+  },
+  "Bundesliga|Mainz 05": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.158,
+    "dif": 1.059
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.196,
+    "dif": 1.05
+   }
+  },
+  "Bundesliga|FC Cologne": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.935,
+    "dif": 1.044
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.989,
+    "dif": 1.046
+   }
+  },
+  "Bundesliga|Borussia M.Gladbach": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.775,
+    "dif": 0.945
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.808,
+    "dif": 0.982
+   }
+  },
+  "Bundesliga|Hamburger SV": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.753,
+    "dif": 1.14
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.787,
+    "dif": 1.088
+   }
+  },
+  "Bundesliga|Paderborn": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": null,
+    "dif": null
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.458,
+    "dif": 0.673
+   }
+  },
+  "Bundesliga|Elversberg": {
+   "last_updated": "2026-08-30T13:02:54.489Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": null,
+    "dif": null
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.797,
+    "dif": 1.353
+   }
+  },
+  "Ligue 1|Rennes": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.094,
+    "dif": 1.177
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.124,
+    "dif": 1.033
+   }
+  },
+  "Ligue 1|Marseille": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.353,
+    "dif": 1.046
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.4,
+    "dif": 0.939
+   }
+  },
+  "Ligue 1|Lens": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.441,
+    "dif": 0.836
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.639,
+    "dif": 0.844
+   }
+  },
+  "Ligue 1|Lyon": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.059,
+    "dif": 0.973
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.09,
+    "dif": 0.953
+   }
+  },
+  "Ligue 1|Monaco": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.172,
+    "dif": 0.987
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.208,
+    "dif": 0.912
+   }
+  },
+  "Ligue 1|Le Havre": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.764,
+    "dif": 1.107
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.772,
+    "dif": 1.059
+   }
+  },
+  "Ligue 1|Nice": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 0.912,
+    "dif": 1.16
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.924,
+    "dif": 1.118
+   }
+  },
+  "Ligue 1|Toulouse": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.895,
+    "dif": 0.843
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.957,
+    "dif": 0.87
+   }
+  },
+  "Ligue 1|Brest": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.887,
+    "dif": 1.103
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.022,
+    "dif": 1.049
+   }
+  },
+  "Ligue 1|Lille": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.037,
+    "dif": 0.691
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.06,
+    "dif": 0.712
+   }
+  },
+  "Ligue 1|Auxerre": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.779,
+    "dif": 0.961
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.855,
+    "dif": 1.039
+   }
+  },
+  "Ligue 1|Lorient": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.947,
+    "dif": 1.024
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.987,
+    "dif": 0.986
+   }
+  },
+  "Ligue 1|Angers": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 0.661,
+    "dif": 1.17
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.762,
+    "dif": 1.103
+   }
+  },
+  "Ligue 1|Paris FC": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": 1.01,
+    "dif": 1.069
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.061,
+    "dif": 0.982
+   }
+  },
+  "Ligue 1|Metz": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.664,
+    "dif": 1.215
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.688,
+    "dif": 1.151
+   }
+  },
+  "Ligue 1|Strasbourg": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.095,
+    "dif": 0.978
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.095,
+    "dif": 0.961
+   }
+  },
+  "Ligue 1|Nantes": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 0,
+   "historical_strength": {
+    "att": 0.765,
+    "dif": 0.959
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.792,
+    "dif": 0.906
+   }
+  },
+  "Ligue 1|Paris Saint Germain": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": 1.465,
+    "dif": 0.699
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 1.451,
+    "dif": 0.654
+   }
+  },
+  "Ligue 1|Troyes": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 2,
+   "historical_strength": {
+    "att": null,
+    "dif": null
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.682,
+    "dif": 0.825
+   }
+  },
+  "Ligue 1|Le Mans": {
+   "last_updated": "2026-08-30T13:02:55.623Z",
+   "matches_current_season": 1,
+   "historical_strength": {
+    "att": null,
+    "dif": null
+   },
+   "current_season_strength": null,
+   "combined_strength": {
+    "att": 0.433,
+    "dif": 1.905
+   }
+  }
+ }
+}

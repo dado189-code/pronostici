@@ -1,0 +1,19 @@
+{
+  "model_version": "football-v1.1-drawcal-candidate",
+  "stato": "NON promosso, in attesa di decisione esplicita dell'utente",
+  "git_sha_al_momento_della_validazione": "4ca716b",
+  "base": "football-v1-baseline (Dixon-Coles, invariato: attack/defence ratings, lambda, rho non toccati)",
+  "layer_aggiuntivo": "DC-DRAW-CAL: calibrazione isotonic 1D (pool-adjacent-violators) applicata SOLO a P_DRAW, dopo il calcolo di Dixon-Coles, mai prima. P_HOME e P_AWAY rinormalizzati mantenendo il rapporto reciproco.",
+  "training_period_calibratore": "Expanding window: nella validazione, fold multipli (2022/23 -> valuta 2023/24; 2022/23+2023/24 -> valuta 2024/25; 2022/23+2023/24+2024/25 -> valuta 2025/26). In produzione andrebbe ricalibrato a ogni fine stagione con tutto lo storico fino a quel momento.",
+  "requisito_minimo_campione": "Almeno 2 stagioni complete (~3000 partite) nel pool di calibrazione: il fold con una sola stagione (n=1325) ha mostrato instabilita (LogLoss peggiorato in media, anche se non significativamente su questo campione).",
+  "risultati_validazione": {
+    "ece_draw_fold2_2024_25": "0.0134 -> 0.0042 (-69%)",
+    "ece_draw_fold3_2025_26": "0.0288 -> 0.0085 (-70%)",
+    "bootstrap_pool_2_fold_su_proper_scores": "INCONCLUSIVE su Brier, LogLoss, RPS e Draw Brier (n=3453)",
+    "ev_clv_impact": "CLV -3.05% -> -2.94%, %beat closing 27.8% -> 28.9%, differenze piccole compatibili col rumore. 214/1608 selezioni cambiano segno, per lo piu verso il pareggio (198 nuovi draw selezionati)."
+  },
+  "calibration_type": "isotonic regression (pool-adjacent-violators), implementazione propria in JavaScript, nessuna libreria esterna",
+  "model_library_version": "n/a (implementazione propria, non scikit-learn)",
+  "mapping_version": 1,
+  "raccomandazione": "Migliora chiaramente e in modo ripetuto la calibrazione del pareggio (ECE), senza danno dimostrabile sui proper scoring rule aggregati. Non migliora pero' in modo statisticamente significativo il Brier/LogLoss/RPS complessivo quando si aggregano piu' stagioni. E' un candidato per la promozione SOLO come miglioramento di leggibilita/affidabilita della probabilita di pareggio dichiarata, non come modello con punteggio complessivo migliore. Richiede una decisione esplicita, non automatica."
+}

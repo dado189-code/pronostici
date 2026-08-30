@@ -1,0 +1,98 @@
+{
+ "generato_il": "2026-08-30T13:05:20.393Z",
+ "nota": "Stessa strategia EV delle fasi precedenti, calibratore fold 3 (calibra su 2022/23-2024/25, valuta 2025/26).",
+ "baseline": {
+  "per_soglia": {
+   "EV>=0.0%": {
+    "bets": 1608,
+    "hit_rate_pct": 30.9,
+    "average_odds": 4.09,
+    "roi_pct": -7.08,
+    "max_drawdown": 147.37
+   },
+   "EV>=2.0%": {
+    "bets": 1519,
+    "hit_rate_pct": 30.2,
+    "average_odds": 4.16,
+    "roi_pct": -7.46,
+    "max_drawdown": 146.52
+   },
+   "EV>=5.0%": {
+    "bets": 1325,
+    "hit_rate_pct": 27.7,
+    "average_odds": 4.33,
+    "roi_pct": -10.89,
+    "max_drawdown": 179.59
+   },
+   "EV>=7.5%": {
+    "bets": 1156,
+    "hit_rate_pct": 26.6,
+    "average_odds": 4.5,
+    "roi_pct": -9.92,
+    "max_drawdown": 148.85
+   },
+   "EV>=10.0%": {
+    "bets": 1021,
+    "hit_rate_pct": 25.7,
+    "average_odds": 4.64,
+    "roi_pct": -9.72,
+    "max_drawdown": 124.75
+   }
+  },
+  "clv": {
+   "n": 1608,
+   "clv_medio_pct": -3.05,
+   "pct_batte_chiusura": 27.8
+  }
+ },
+ "draw_cal": {
+  "per_soglia": {
+   "EV>=0.0%": {
+    "bets": 1582,
+    "hit_rate_pct": 29.2,
+    "average_odds": 4.16,
+    "roi_pct": -8.55,
+    "max_drawdown": 165.57
+   },
+   "EV>=2.0%": {
+    "bets": 1450,
+    "hit_rate_pct": 28.6,
+    "average_odds": 4.27,
+    "roi_pct": -8.98,
+    "max_drawdown": 170.83
+   },
+   "EV>=5.0%": {
+    "bets": 1249,
+    "hit_rate_pct": 27.1,
+    "average_odds": 4.45,
+    "roi_pct": -9.66,
+    "max_drawdown": 162.8
+   },
+   "EV>=7.5%": {
+    "bets": 1087,
+    "hit_rate_pct": 26.1,
+    "average_odds": 4.62,
+    "roi_pct": -9.35,
+    "max_drawdown": 148.34
+   },
+   "EV>=10.0%": {
+    "bets": 948,
+    "hit_rate_pct": 24.9,
+    "average_odds": 4.77,
+    "roi_pct": -9.25,
+    "max_drawdown": 142.48
+   }
+  },
+  "clv": {
+   "n": 1582,
+   "clv_medio_pct": -2.94,
+   "pct_batte_chiusura": 28.9
+  }
+ },
+ "cambi_selezione": {
+  "totale_confrontabili": 1722,
+  "cambi_segno": 214,
+  "diventa_draw": 198,
+  "smette_draw": 16
+ }
+}

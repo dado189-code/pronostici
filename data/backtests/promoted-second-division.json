@@ -1,0 +1,945 @@
+{
+  "generato_il": "2026-08-30T13:04:07.166Z",
+  "nota": "Dati REALI da football-data.co.uk (gratis): PPG, GD/game, GF/game, GA/game, posizione finale della stagione di seconda serie precedente alla promozione. Nessun xG disponibile per le seconde serie, non inventato. Campione: 35 neopromosse con match riuscito fra le fonti (su 63 identificate).",
+  "dati_seconda_serie": {
+    "Premier League|2023/24|Burnley": {
+      "ppg": 2.196,
+      "gdPg": 1.13,
+      "gfPg": 1.891,
+      "gaPg": 0.761,
+      "posizione": 1,
+      "nPartiteSeconda": 46
+    },
+    "Premier League|2023/24|Luton": {
+      "ppg": 1.739,
+      "gdPg": 0.391,
+      "gfPg": 1.239,
+      "gaPg": 0.848,
+      "posizione": 3,
+      "nPartiteSeconda": 46
+    },
+    "Premier League|2023/24|Sunderland": {
+      "ppg": 1.5,
+      "gdPg": 0.283,
+      "gfPg": 1.478,
+      "gaPg": 1.196,
+      "posizione": 7,
+      "nPartiteSeconda": 46
+    },
+    "Premier League|2024/25|Leicester": {
+      "ppg": 2.109,
+      "gdPg": 1.043,
+      "gfPg": 1.935,
+      "gaPg": 0.891,
+      "posizione": 1,
+      "nPartiteSeconda": 46
+    },
+    "Premier League|2024/25|Ipswich": {
+      "ppg": 2.087,
+      "gdPg": 0.761,
+      "gfPg": 2,
+      "gaPg": 1.239,
+      "posizione": 2,
+      "nPartiteSeconda": 46
+    },
+    "Premier League|2024/25|Leeds": {
+      "ppg": 1.957,
+      "gdPg": 0.826,
+      "gfPg": 1.761,
+      "gaPg": 0.935,
+      "posizione": 3,
+      "nPartiteSeconda": 46
+    },
+    "Premier League|2024/25|Southampton": {
+      "ppg": 1.891,
+      "gdPg": 0.522,
+      "gfPg": 1.891,
+      "gaPg": 1.37,
+      "posizione": 4,
+      "nPartiteSeconda": 46
+    },
+    "Premier League|2024/25|Sunderland": {
+      "ppg": 1.217,
+      "gdPg": -0.043,
+      "gfPg": 1.13,
+      "gaPg": 1.174,
+      "posizione": 18,
+      "nPartiteSeconda": 46
+    },
+    "Premier League|2025/26|Leeds": {
+      "ppg": 2.174,
+      "gdPg": 1.413,
+      "gfPg": 2.065,
+      "gaPg": 0.652,
+      "posizione": 1,
+      "nPartiteSeconda": 46
+    },
+    "Premier League|2025/26|Burnley": {
+      "ppg": 2.174,
+      "gdPg": 1.152,
+      "gfPg": 1.5,
+      "gaPg": 0.348,
+      "posizione": 2,
+      "nPartiteSeconda": 46
+    },
+    "Premier League|2025/26|Sunderland": {
+      "ppg": 1.652,
+      "gdPg": 0.304,
+      "gfPg": 1.261,
+      "gaPg": 0.957,
+      "posizione": 4,
+      "nPartiteSeconda": 46
+    },
+    "Premier League|2025/26|Luton": {
+      "ppg": 1.065,
+      "gdPg": -0.522,
+      "gfPg": 0.978,
+      "gaPg": 1.5,
+      "posizione": 22,
+      "nPartiteSeconda": 46
+    },
+    "Liga|2023/24|Levante": {
+      "ppg": 1.714,
+      "gdPg": 0.381,
+      "gfPg": 1.095,
+      "gaPg": 0.714,
+      "posizione": 2,
+      "nPartiteSeconda": 42
+    },
+    "Liga|2023/24|Las Palmas": {
+      "ppg": 1.714,
+      "gdPg": 0.476,
+      "gfPg": 1.167,
+      "gaPg": 0.69,
+      "posizione": 3,
+      "nPartiteSeconda": 42
+    },
+    "Liga|2023/24|Real Oviedo": {
+      "ppg": 1.405,
+      "gdPg": -0.024,
+      "gfPg": 0.81,
+      "gaPg": 0.833,
+      "posizione": 7,
+      "nPartiteSeconda": 42
+    },
+    "Liga|2023/24|Leganes": {
+      "ppg": 1.262,
+      "gdPg": -0.119,
+      "gfPg": 0.881,
+      "gaPg": 1,
+      "posizione": 13,
+      "nPartiteSeconda": 42
+    },
+    "Liga|2024/25|Leganes": {
+      "ppg": 1.762,
+      "gdPg": 0.69,
+      "gfPg": 1.333,
+      "gaPg": 0.643,
+      "posizione": 1,
+      "nPartiteSeconda": 42
+    },
+    "Liga|2024/25|Real Valladolid": {
+      "ppg": 1.714,
+      "gdPg": 0.357,
+      "gfPg": 1.214,
+      "gaPg": 0.857,
+      "posizione": 2,
+      "nPartiteSeconda": 42
+    },
+    "Liga|2024/25|Real Oviedo": {
+      "ppg": 1.524,
+      "gdPg": 0.381,
+      "gfPg": 1.31,
+      "gaPg": 0.929,
+      "posizione": 7,
+      "nPartiteSeconda": 42
+    },
+    "Liga|2024/25|Levante": {
+      "ppg": 1.405,
+      "gdPg": 0.095,
+      "gfPg": 1.167,
+      "gaPg": 1.071,
+      "posizione": 8,
+      "nPartiteSeconda": 42
+    },
+    "Liga|2024/25|Elche": {
+      "ppg": 1.405,
+      "gdPg": -0.071,
+      "gfPg": 1.024,
+      "gaPg": 1.095,
+      "posizione": 9,
+      "nPartiteSeconda": 42
+    },
+    "Liga|2025/26|Levante": {
+      "ppg": 1.881,
+      "gdPg": 0.643,
+      "gfPg": 1.643,
+      "gaPg": 1,
+      "posizione": 1,
+      "nPartiteSeconda": 42
+    },
+    "Liga|2025/26|Elche": {
+      "ppg": 1.833,
+      "gdPg": 0.595,
+      "gfPg": 1.405,
+      "gaPg": 0.81,
+      "posizione": 2,
+      "nPartiteSeconda": 42
+    },
+    "Liga|2025/26|Real Oviedo": {
+      "ppg": 1.786,
+      "gdPg": 0.333,
+      "gfPg": 1.333,
+      "gaPg": 1,
+      "posizione": 4,
+      "nPartiteSeconda": 42
+    },
+    "Liga|2025/26|Almeria": {
+      "ppg": 1.643,
+      "gdPg": 0.405,
+      "gfPg": 1.714,
+      "gaPg": 1.31,
+      "posizione": 6,
+      "nPartiteSeconda": 42
+    },
+    "Serie A|2023/24|Frosinone": {
+      "ppg": 2.105,
+      "gdPg": 0.974,
+      "gfPg": 1.658,
+      "gaPg": 0.684,
+      "posizione": 1,
+      "nPartiteSeconda": 38
+    },
+    "Serie A|2023/24|Parma Calcio 1913": {
+      "ppg": 1.605,
+      "gdPg": 0.237,
+      "gfPg": 1.263,
+      "gaPg": 1.026,
+      "posizione": 4,
+      "nPartiteSeconda": 38
+    },
+    "Serie A|2023/24|Venezia": {
+      "ppg": 1.289,
+      "gdPg": 0.026,
+      "gfPg": 1.342,
+      "gaPg": 1.316,
+      "posizione": 9,
+      "nPartiteSeconda": 38
+    },
+    "Serie A|2023/24|Pisa": {
+      "ppg": 1.237,
+      "gdPg": 0.158,
+      "gfPg": 1.263,
+      "gaPg": 1.105,
+      "posizione": 11,
+      "nPartiteSeconda": 38
+    },
+    "Serie A|2023/24|Como": {
+      "ppg": 1.237,
+      "gdPg": -0.026,
+      "gfPg": 1.237,
+      "gaPg": 1.263,
+      "posizione": 12,
+      "nPartiteSeconda": 38
+    },
+    "Serie A|2024/25|Parma Calcio 1913": {
+      "ppg": 2,
+      "gdPg": 0.816,
+      "gfPg": 1.737,
+      "gaPg": 0.921,
+      "posizione": 1,
+      "nPartiteSeconda": 38
+    },
+    "Serie A|2024/25|Como": {
+      "ppg": 1.921,
+      "gdPg": 0.474,
+      "gfPg": 1.526,
+      "gaPg": 1.053,
+      "posizione": 2,
+      "nPartiteSeconda": 38
+    },
+    "Serie A|2024/25|Venezia": {
+      "ppg": 1.842,
+      "gdPg": 0.605,
+      "gfPg": 1.816,
+      "gaPg": 1.211,
+      "posizione": 3,
+      "nPartiteSeconda": 38
+    },
+    "Serie A|2024/25|Cremonese": {
+      "ppg": 1.763,
+      "gdPg": 0.474,
+      "gfPg": 1.316,
+      "gaPg": 0.842,
+      "posizione": 4,
+      "nPartiteSeconda": 38
+    },
+    "Serie A|2024/25|Pisa": {
+      "ppg": 1.211,
+      "gdPg": -0.079,
+      "gfPg": 1.342,
+      "gaPg": 1.421,
+      "posizione": 14,
+      "nPartiteSeconda": 38
+    },
+    "Serie A|2025/26|Sassuolo": {
+      "ppg": 2.158,
+      "gdPg": 1.053,
+      "gfPg": 2.053,
+      "gaPg": 1,
+      "posizione": 1,
+      "nPartiteSeconda": 38
+    },
+    "Serie A|2025/26|Pisa": {
+      "ppg": 1.947,
+      "gdPg": 0.658,
+      "gfPg": 1.632,
+      "gaPg": 0.974,
+      "posizione": 2,
+      "nPartiteSeconda": 38
+    },
+    "Serie A|2025/26|Cremonese": {
+      "ppg": 1.605,
+      "gdPg": 0.474,
+      "gfPg": 1.632,
+      "gaPg": 1.158,
+      "posizione": 4,
+      "nPartiteSeconda": 38
+    },
+    "Serie A|2025/26|Frosinone": {
+      "ppg": 1.132,
+      "gdPg": -0.342,
+      "gfPg": 0.974,
+      "gaPg": 1.316,
+      "posizione": 16,
+      "nPartiteSeconda": 38
+    },
+    "Bundesliga|2023/24|Darmstadt": {
+      "ppg": 1.971,
+      "gdPg": 0.5,
+      "gfPg": 1.471,
+      "gaPg": 0.971,
+      "posizione": 1,
+      "nPartiteSeconda": 34
+    },
+    "Bundesliga|2023/24|FC Heidenheim": {
+      "ppg": 1.971,
+      "gdPg": 0.912,
+      "gfPg": 1.971,
+      "gaPg": 1.059,
+      "posizione": 2,
+      "nPartiteSeconda": 34
+    },
+    "Bundesliga|2023/24|Hamburger SV": {
+      "ppg": 1.941,
+      "gdPg": 0.735,
+      "gfPg": 2.059,
+      "gaPg": 1.324,
+      "posizione": 3,
+      "nPartiteSeconda": 34
+    },
+    "Bundesliga|2023/24|St. Pauli": {
+      "ppg": 1.706,
+      "gdPg": 0.471,
+      "gfPg": 1.618,
+      "gaPg": 1.147,
+      "posizione": 4,
+      "nPartiteSeconda": 34
+    },
+    "Bundesliga|2023/24|Holstein Kiel": {
+      "ppg": 1.353,
+      "gdPg": -0.088,
+      "gfPg": 1.706,
+      "gaPg": 1.794,
+      "posizione": 7,
+      "nPartiteSeconda": 34
+    },
+    "Bundesliga|2024/25|St. Pauli": {
+      "ppg": 2.029,
+      "gdPg": 0.765,
+      "gfPg": 1.824,
+      "gaPg": 1.059,
+      "posizione": 1,
+      "nPartiteSeconda": 34
+    },
+    "Bundesliga|2024/25|Holstein Kiel": {
+      "ppg": 2,
+      "gdPg": 0.765,
+      "gfPg": 1.912,
+      "gaPg": 1.147,
+      "posizione": 2,
+      "nPartiteSeconda": 34
+    },
+    "Bundesliga|2024/25|Hamburger SV": {
+      "ppg": 1.706,
+      "gdPg": 0.588,
+      "gfPg": 1.882,
+      "gaPg": 1.294,
+      "posizione": 4,
+      "nPartiteSeconda": 34
+    },
+    "Bundesliga|2025/26|FC Cologne": {
+      "ppg": 1.794,
+      "gdPg": 0.441,
+      "gfPg": 1.559,
+      "gaPg": 1.118,
+      "posizione": 1,
+      "nPartiteSeconda": 34
+    },
+    "Bundesliga|2025/26|Hamburger SV": {
+      "ppg": 1.735,
+      "gdPg": 1,
+      "gfPg": 2.294,
+      "gaPg": 1.294,
+      "posizione": 2,
+      "nPartiteSeconda": 34
+    },
+    "Bundesliga|2025/26|Darmstadt": {
+      "ppg": 1.235,
+      "gdPg": 0.029,
+      "gfPg": 1.647,
+      "gaPg": 1.618,
+      "posizione": 12,
+      "nPartiteSeconda": 34
+    },
+    "Ligue 1|2023/24|Le Havre": {
+      "ppg": 1.974,
+      "gdPg": 0.711,
+      "gfPg": 1.211,
+      "gaPg": 0.5,
+      "posizione": 1,
+      "nPartiteSeconda": 38
+    },
+    "Ligue 1|2023/24|Metz": {
+      "ppg": 1.895,
+      "gdPg": 0.737,
+      "gfPg": 1.605,
+      "gaPg": 0.868,
+      "posizione": 2,
+      "nPartiteSeconda": 38
+    },
+    "Ligue 1|2023/24|Saint-Etienne": {
+      "ppg": 1.474,
+      "gdPg": 0.158,
+      "gfPg": 1.658,
+      "gaPg": 1.5,
+      "posizione": 6,
+      "nPartiteSeconda": 38
+    },
+    "Ligue 1|2023/24|Paris FC": {
+      "ppg": 1.447,
+      "gdPg": 0.053,
+      "gfPg": 1.184,
+      "gaPg": 1.132,
+      "posizione": 8,
+      "nPartiteSeconda": 38
+    },
+    "Ligue 1|2024/25|Auxerre": {
+      "ppg": 1.947,
+      "gdPg": 0.947,
+      "gfPg": 1.895,
+      "gaPg": 0.947,
+      "posizione": 1,
+      "nPartiteSeconda": 38
+    },
+    "Ligue 1|2024/25|Angers": {
+      "ppg": 1.789,
+      "gdPg": 0.368,
+      "gfPg": 1.474,
+      "gaPg": 1.105,
+      "posizione": 2,
+      "nPartiteSeconda": 38
+    },
+    "Ligue 1|2024/25|Saint-Etienne": {
+      "ppg": 1.711,
+      "gdPg": 0.447,
+      "gfPg": 1.263,
+      "gaPg": 0.816,
+      "posizione": 3,
+      "nPartiteSeconda": 38
+    },
+    "Ligue 1|2024/25|Paris FC": {
+      "ppg": 1.553,
+      "gdPg": 0.184,
+      "gfPg": 1.289,
+      "gaPg": 1.105,
+      "posizione": 5,
+      "nPartiteSeconda": 38
+    },
+    "Ligue 1|2024/25|Troyes": {
+      "ppg": 1.108,
+      "gdPg": -0.189,
+      "gfPg": 1.135,
+      "gaPg": 1.324,
+      "posizione": 17,
+      "nPartiteSeconda": 37
+    },
+    "Ligue 1|2025/26|Lorient": {
+      "ppg": 2.088,
+      "gdPg": 1.088,
+      "gfPg": 2,
+      "gaPg": 0.912,
+      "posizione": 1,
+      "nPartiteSeconda": 34
+    },
+    "Ligue 1|2025/26|Paris FC": {
+      "ppg": 2.029,
+      "gdPg": 0.647,
+      "gfPg": 1.618,
+      "gaPg": 0.971,
+      "posizione": 2,
+      "nPartiteSeconda": 34
+    },
+    "Ligue 1|2025/26|Metz": {
+      "ppg": 1.912,
+      "gdPg": 0.882,
+      "gfPg": 1.882,
+      "gaPg": 1,
+      "posizione": 3,
+      "nPartiteSeconda": 34
+    },
+    "Ligue 1|2025/26|Troyes": {
+      "ppg": 1.294,
+      "gdPg": 0.059,
+      "gfPg": 1.059,
+      "gaPg": 1,
+      "posizione": 10,
+      "nPartiteSeconda": 34
+    }
+  },
+  "campioni_con_performance": [
+    {
+      "chiave": "Premier League|2023/24|Burnley",
+      "ppg": 2.196,
+      "gdPg": 1.13,
+      "gfPg": 1.891,
+      "gaPg": 0.761,
+      "posizione": 1,
+      "nPartiteSeconda": 46,
+      "brier5": 0.5037857219999999,
+      "brier10": 0.38922636699999996,
+      "brier15": 0.48796832999999995
+    },
+    {
+      "chiave": "Premier League|2023/24|Luton",
+      "ppg": 1.739,
+      "gdPg": 0.391,
+      "gfPg": 1.239,
+      "gaPg": 0.848,
+      "posizione": 3,
+      "nPartiteSeconda": 46,
+      "brier5": 0.7532173440000001,
+      "brier10": 0.6973391299999998,
+      "brier15": 0.6085214306666666
+    },
+    {
+      "chiave": "Premier League|2024/25|Leicester",
+      "ppg": 2.109,
+      "gdPg": 1.043,
+      "gfPg": 1.935,
+      "gaPg": 0.891,
+      "posizione": 1,
+      "nPartiteSeconda": 46,
+      "brier5": 0.713455128,
+      "brier10": 0.668246426,
+      "brier15": 0.5833801439999999
+    },
+    {
+      "chiave": "Premier League|2024/25|Ipswich",
+      "ppg": 2.087,
+      "gdPg": 0.761,
+      "gfPg": 2,
+      "gaPg": 1.239,
+      "posizione": 2,
+      "nPartiteSeconda": 46,
+      "brier5": 1.0025772960000001,
+      "brier10": 0.912279502,
+      "brier15": 0.728292856
+    },
+    {
+      "chiave": "Premier League|2024/25|Southampton",
+      "ppg": 1.891,
+      "gdPg": 0.522,
+      "gfPg": 1.891,
+      "gaPg": 1.37,
+      "posizione": 4,
+      "nPartiteSeconda": 46,
+      "brier5": 0.533665758,
+      "brier10": 0.45308482800000005,
+      "brier15": 0.43469085333333335
+    },
+    {
+      "chiave": "Premier League|2025/26|Leeds",
+      "ppg": 2.174,
+      "gdPg": 1.413,
+      "gfPg": 2.065,
+      "gaPg": 0.652,
+      "posizione": 1,
+      "nPartiteSeconda": 46,
+      "brier5": 0.539061476,
+      "brier10": 0.5947786890000001,
+      "brier15": 0.6269481573333333
+    },
+    {
+      "chiave": "Premier League|2025/26|Burnley",
+      "ppg": 2.174,
+      "gdPg": 1.152,
+      "gfPg": 1.5,
+      "gaPg": 0.348,
+      "posizione": 2,
+      "nPartiteSeconda": 46,
+      "brier5": 0.316912712,
+      "brier10": 0.40777147199999997,
+      "brier15": 0.3177845633333333
+    },
+    {
+      "chiave": "Premier League|2025/26|Sunderland",
+      "ppg": 1.652,
+      "gdPg": 0.304,
+      "gfPg": 1.261,
+      "gaPg": 0.957,
+      "posizione": 4,
+      "nPartiteSeconda": 46,
+      "brier5": 0.7228122319999999,
+      "brier10": 0.771601063,
+      "brier15": 0.7578802453333334
+    },
+    {
+      "chiave": "Liga|2023/24|Las Palmas",
+      "ppg": 1.714,
+      "gdPg": 0.476,
+      "gfPg": 1.167,
+      "gaPg": 0.69,
+      "posizione": 3,
+      "nPartiteSeconda": 42,
+      "brier5": 0.42896528199999995,
+      "brier10": 0.5623653799999999,
+      "brier15": 0.5650061413333333
+    },
+    {
+      "chiave": "Liga|2024/25|Leganes",
+      "ppg": 1.762,
+      "gdPg": 0.69,
+      "gfPg": 1.333,
+      "gaPg": 0.643,
+      "posizione": 1,
+      "nPartiteSeconda": 42,
+      "brier5": 0.6148015360000001,
+      "brier10": 0.5793475,
+      "brier15": 0.6651701726666667
+    },
+    {
+      "chiave": "Liga|2024/25|Real Valladolid",
+      "ppg": 1.714,
+      "gdPg": 0.357,
+      "gfPg": 1.214,
+      "gaPg": 0.857,
+      "posizione": 2,
+      "nPartiteSeconda": 42,
+      "brier5": 0.34111473600000003,
+      "brier10": 0.49843500400000007,
+      "brier15": 0.4634168273333334
+    },
+    {
+      "chiave": "Liga|2025/26|Levante",
+      "ppg": 1.881,
+      "gdPg": 0.643,
+      "gfPg": 1.643,
+      "gaPg": 1,
+      "posizione": 1,
+      "nPartiteSeconda": 42,
+      "brier5": 0.66146966,
+      "brier10": 0.6275951339999999,
+      "brier15": 0.6228747566666666
+    },
+    {
+      "chiave": "Liga|2025/26|Elche",
+      "ppg": 1.833,
+      "gdPg": 0.595,
+      "gfPg": 1.405,
+      "gaPg": 0.81,
+      "posizione": 2,
+      "nPartiteSeconda": 42,
+      "brier5": 0.906738526,
+      "brier10": 0.6927312259999999,
+      "brier15": 0.6790705959999997
+    },
+    {
+      "chiave": "Liga|2025/26|Real Oviedo",
+      "ppg": 1.786,
+      "gdPg": 0.333,
+      "gfPg": 1.333,
+      "gaPg": 1,
+      "posizione": 4,
+      "nPartiteSeconda": 42,
+      "brier5": 0.473243128,
+      "brier10": 0.504152483,
+      "brier15": 0.5610127373333335
+    },
+    {
+      "chiave": "Serie A|2023/24|Frosinone",
+      "ppg": 2.105,
+      "gdPg": 0.974,
+      "gfPg": 1.658,
+      "gaPg": 0.684,
+      "posizione": 1,
+      "nPartiteSeconda": 38,
+      "brier5": 0.584734666,
+      "brier10": 0.47355110600000005,
+      "brier15": 0.48331317866666673
+    },
+    {
+      "chiave": "Serie A|2024/25|Parma Calcio 1913",
+      "ppg": 2,
+      "gdPg": 0.816,
+      "gfPg": 1.737,
+      "gaPg": 0.921,
+      "posizione": 1,
+      "nPartiteSeconda": 38,
+      "brier5": 0.9770491199999999,
+      "brier10": 0.9601299299999999,
+      "brier15": 0.7982047646666665
+    },
+    {
+      "chiave": "Serie A|2024/25|Como",
+      "ppg": 1.921,
+      "gdPg": 0.474,
+      "gfPg": 1.526,
+      "gaPg": 1.053,
+      "posizione": 2,
+      "nPartiteSeconda": 38,
+      "brier5": 0.6116663740000001,
+      "brier10": 0.6802103690000001,
+      "brier15": 0.6470187693333334
+    },
+    {
+      "chiave": "Serie A|2024/25|Venezia",
+      "ppg": 1.842,
+      "gdPg": 0.605,
+      "gfPg": 1.816,
+      "gaPg": 1.211,
+      "posizione": 3,
+      "nPartiteSeconda": 38,
+      "brier5": 0.388759076,
+      "brier10": 0.47851114600000005,
+      "brier15": 0.5124090493333333
+    },
+    {
+      "chiave": "Serie A|2025/26|Sassuolo",
+      "ppg": 2.158,
+      "gdPg": 1.053,
+      "gfPg": 2.053,
+      "gaPg": 1,
+      "posizione": 1,
+      "nPartiteSeconda": 38,
+      "brier5": 0.5734034840000001,
+      "brier10": 0.60631112,
+      "brier15": 0.6843570446666667
+    },
+    {
+      "chiave": "Serie A|2025/26|Pisa",
+      "ppg": 1.947,
+      "gdPg": 0.658,
+      "gfPg": 1.632,
+      "gaPg": 0.974,
+      "posizione": 2,
+      "nPartiteSeconda": 38,
+      "brier5": 0.8209921479999999,
+      "brier10": 0.6935455949999998,
+      "brier15": 0.6646269806666666
+    },
+    {
+      "chiave": "Serie A|2025/26|Cremonese",
+      "ppg": 1.605,
+      "gdPg": 0.474,
+      "gfPg": 1.632,
+      "gaPg": 1.158,
+      "posizione": 4,
+      "nPartiteSeconda": 38,
+      "brier5": 0.948205776,
+      "brier10": 0.794552523,
+      "brier15": 0.72475195
+    },
+    {
+      "chiave": "Bundesliga|2023/24|Darmstadt",
+      "ppg": 1.971,
+      "gdPg": 0.5,
+      "gfPg": 1.471,
+      "gaPg": 0.971,
+      "posizione": 1,
+      "nPartiteSeconda": 34,
+      "brier5": 0.49356752000000004,
+      "brier10": 0.56262831,
+      "brier15": 0.5692876373333334
+    },
+    {
+      "chiave": "Bundesliga|2023/24|FC Heidenheim",
+      "ppg": 1.971,
+      "gdPg": 0.912,
+      "gfPg": 1.971,
+      "gaPg": 1.059,
+      "posizione": 2,
+      "nPartiteSeconda": 34,
+      "brier5": 0.4459105300000001,
+      "brier10": 0.448296275,
+      "brier15": 0.5818081266666667
+    },
+    {
+      "chiave": "Bundesliga|2024/25|St. Pauli",
+      "ppg": 2.029,
+      "gdPg": 0.765,
+      "gfPg": 1.824,
+      "gaPg": 1.059,
+      "posizione": 1,
+      "nPartiteSeconda": 34,
+      "brier5": 0.520526106,
+      "brier10": 0.5555198590000001,
+      "brier15": 0.5652070100000001
+    },
+    {
+      "chiave": "Bundesliga|2024/25|Holstein Kiel",
+      "ppg": 2,
+      "gdPg": 0.765,
+      "gfPg": 1.912,
+      "gaPg": 1.147,
+      "posizione": 2,
+      "nPartiteSeconda": 34,
+      "brier5": 0.732554514,
+      "brier10": 0.55936262,
+      "brier15": 0.5391144993333333
+    },
+    {
+      "chiave": "Bundesliga|2025/26|FC Cologne",
+      "ppg": 1.794,
+      "gdPg": 0.441,
+      "gfPg": 1.559,
+      "gaPg": 1.118,
+      "posizione": 1,
+      "nPartiteSeconda": 34,
+      "brier5": 0.705128472,
+      "brier10": 0.6214461009999999,
+      "brier15": 0.6172820806666667
+    },
+    {
+      "chiave": "Bundesliga|2025/26|Hamburger SV",
+      "ppg": 1.735,
+      "gdPg": 1,
+      "gfPg": 2.294,
+      "gaPg": 1.294,
+      "posizione": 2,
+      "nPartiteSeconda": 34,
+      "brier5": 0.64191109,
+      "brier10": 0.682943419,
+      "brier15": 0.6540589206666667
+    },
+    {
+      "chiave": "Ligue 1|2023/24|Le Havre",
+      "ppg": 1.974,
+      "gdPg": 0.711,
+      "gfPg": 1.211,
+      "gaPg": 0.5,
+      "posizione": 1,
+      "nPartiteSeconda": 38,
+      "brier5": 0.6346696740000001,
+      "brier10": 0.6714071680000001,
+      "brier15": 0.6640360226666667
+    },
+    {
+      "chiave": "Ligue 1|2023/24|Metz",
+      "ppg": 1.895,
+      "gdPg": 0.737,
+      "gfPg": 1.605,
+      "gaPg": 0.868,
+      "posizione": 2,
+      "nPartiteSeconda": 38,
+      "brier5": 0.33467504200000003,
+      "brier10": 0.4929560090000001,
+      "brier15": 0.452964154
+    },
+    {
+      "chiave": "Ligue 1|2024/25|Auxerre",
+      "ppg": 1.947,
+      "gdPg": 0.947,
+      "gfPg": 1.895,
+      "gaPg": 0.947,
+      "posizione": 1,
+      "nPartiteSeconda": 38,
+      "brier5": 0.593826768,
+      "brier10": 0.729063108,
+      "brier15": 0.7436072893333333
+    },
+    {
+      "chiave": "Ligue 1|2024/25|Angers",
+      "ppg": 1.789,
+      "gdPg": 0.368,
+      "gfPg": 1.474,
+      "gaPg": 1.105,
+      "posizione": 2,
+      "nPartiteSeconda": 38,
+      "brier5": 0.45752050599999994,
+      "brier10": 0.680031477,
+      "brier15": 0.5649575306666667
+    },
+    {
+      "chiave": "Ligue 1|2024/25|Saint-Etienne",
+      "ppg": 1.711,
+      "gdPg": 0.447,
+      "gfPg": 1.263,
+      "gaPg": 0.816,
+      "posizione": 3,
+      "nPartiteSeconda": 38,
+      "brier5": 0.692197774,
+      "brier10": 0.560125746,
+      "brier15": 0.47027341199999995
+    },
+    {
+      "chiave": "Ligue 1|2025/26|Lorient",
+      "ppg": 2.088,
+      "gdPg": 1.088,
+      "gfPg": 2,
+      "gaPg": 0.912,
+      "posizione": 1,
+      "nPartiteSeconda": 34,
+      "brier5": 0.564237458,
+      "brier10": 0.6890791569999999,
+      "brier15": 0.6734390786666665
+    },
+    {
+      "chiave": "Ligue 1|2025/26|Paris FC",
+      "ppg": 2.029,
+      "gdPg": 0.647,
+      "gfPg": 1.618,
+      "gaPg": 0.971,
+      "posizione": 2,
+      "nPartiteSeconda": 34,
+      "brier5": 0.639855028,
+      "brier10": 0.7162923140000002,
+      "brier15": 0.6895199726666668
+    },
+    {
+      "chiave": "Ligue 1|2025/26|Metz",
+      "ppg": 1.912,
+      "gdPg": 0.882,
+      "gfPg": 1.882,
+      "gaPg": 1,
+      "posizione": 3,
+      "nPartiteSeconda": 34,
+      "brier5": 0.47804187000000004,
+      "brier10": 0.501316333,
+      "brier15": 0.484558226
+    }
+  ],
+  "regressione_ppg_vs_brier15": {
+    "slope": -0.0763,
+    "intercept": 0.7432,
+    "r2": 0.014,
+    "n": 35
+  },
+  "regressione_gd_vs_brier15": {
+    "slope": -0.0215,
+    "intercept": 0.6122,
+    "r2": 0.003,
+    "n": 35
+  },
+  "conclusione": "Campione troppo piccolo (35) o relazione troppo debole per costruire un prior statisticamente affidabile in questa iterazione"
+}

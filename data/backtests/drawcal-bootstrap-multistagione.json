@@ -1,0 +1,53 @@
+{
+ "generato_il": "2026-08-30T13:00:57.760Z",
+ "nota": "Pool BUONO = fold 2 (calibra 2022/23+2023/24, valuta 2024/25) + fold 3 (calibra fino a 2024/25, valuta 2025/26). Ogni riga OOS entra nel bootstrap una sola volta, mai ricalibrata sulla propria stagione.",
+ "pool_buono_n": 3453,
+ "brier": {
+  "n": 3453,
+  "differenza_media": -0.00018,
+  "ic95": [
+   -0.00143,
+   0.00105
+  ],
+  "verdetto": "INCONCLUSIVE"
+ },
+ "logLoss": {
+  "n": 3453,
+  "differenza_media": -0.00039,
+  "ic95": [
+   -0.00252,
+   0.00177
+  ],
+  "verdetto": "INCONCLUSIVE"
+ },
+ "rps": {
+  "n": 3453,
+  "differenza_media": -0.00001,
+  "ic95": [
+   -0.00026,
+   0.00025
+  ],
+  "verdetto": "INCONCLUSIVE"
+ },
+ "draw_brier": {
+  "n": 3453,
+  "differenza_media": -0.00017,
+  "ic95": [
+   -0.00094,
+   0.00062
+  ],
+  "verdetto": "INCONCLUSIVE"
+ },
+ "pool_instabile_n": 1697,
+ "logLoss_fold_instabile": {
+  "n": 1697,
+  "differenza_media": 0.02146,
+  "ic95": [
+   -0.00344,
+   0.05798
+  ],
+  "verdetto": "INCONCLUSIVE"
+ },
+ "raccomandazione_stabilita": "Il fold a campione ridotto non mostra un danno statisticamente significativo, ma la mappa isotonic risultava comunque grossolana (blocchi ampi): cautela raccomandata sotto le 2 stagioni.",
+ "classificazione_finale": "INCONCLUSIVE su tutte le metriche aggregate"
+}

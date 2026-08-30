@@ -1,0 +1,276 @@
+{
+ "generato_il": "2026-08-30T13:00:00.534Z",
+ "nota": "Expanding window, ogni fold calibra solo su stagioni STRETTAMENTE precedenti a quella valutata. isotonic = PAV 1D su P_DRAW. platt = calibrazione logistica univariata (2 parametri, discesa del gradiente).",
+ "fold": [
+  {
+   "fold": "calibra[2022/23] -> valuta[2023/24]",
+   "n_calibrazione": 1325,
+   "n_oos": 1697,
+   "baseline": {
+    "brier": 0.5825,
+    "logLoss": 0.9778,
+    "rps": 0.1945,
+    "ece_home": 0.0354,
+    "ece_draw": 0.0307,
+    "ece_away": 0.0372
+   },
+   "isotonic": {
+    "brier": 0.582,
+    "logLoss": 0.9993,
+    "rps": 0.1945,
+    "ece_home": 0.0392,
+    "ece_draw": 0.0292,
+    "ece_away": 0.0422
+   },
+   "platt": {
+    "brier": 0.5826,
+    "logLoss": 0.9779,
+    "rps": 0.1945,
+    "ece_home": 0.0367,
+    "ece_draw": 0.0334,
+    "ece_away": 0.0334
+   },
+   "per_lega": {
+    "Premier League": {
+     "n": 370,
+     "predicted_draw_base_pct": 20.1,
+     "predicted_draw_iso_pct": 21,
+     "observed_draw_pct": 21.9,
+     "ece_draw_base": 0.0226,
+     "ece_draw_iso": 0.0093,
+     "brier_base": 0.5567,
+     "brier_iso": 0.5561
+    },
+    "Liga": {
+     "n": 366,
+     "predicted_draw_base_pct": 24.1,
+     "predicted_draw_iso_pct": 24,
+     "observed_draw_pct": 28.4,
+     "ece_draw_base": 0.0455,
+     "ece_draw_iso": 0.045,
+     "brier_base": 0.5763,
+     "brier_iso": 0.576
+    },
+    "Serie A": {
+     "n": 366,
+     "predicted_draw_base_pct": 24.8,
+     "predicted_draw_iso_pct": 24.4,
+     "observed_draw_pct": 29.5,
+     "ece_draw_base": 0.0515,
+     "ece_draw_iso": 0.0511,
+     "brier_base": 0.588,
+     "brier_iso": 0.589
+    },
+    "Bundesliga": {
+     "n": 300,
+     "predicted_draw_base_pct": 23.6,
+     "predicted_draw_iso_pct": 23.4,
+     "observed_draw_pct": 26.7,
+     "ece_draw_base": 0.0369,
+     "ece_draw_iso": 0.0362,
+     "brier_base": 0.5792,
+     "brier_iso": 0.5787
+    },
+    "Ligue 1": {
+     "n": 295,
+     "predicted_draw_base_pct": 25.4,
+     "predicted_draw_iso_pct": 25.2,
+     "observed_draw_pct": 25.8,
+     "ece_draw_base": 0.0127,
+     "ece_draw_iso": 0.0086,
+     "brier_base": 0.6189,
+     "brier_iso": 0.6168
+    }
+   },
+   "mappa_stabilita": {
+    "raw_020": 0.187,
+    "raw_025": 0.261,
+    "raw_030": 0.261
+   },
+   "platt_params": {
+    "a": 0.687,
+    "b": -0.366
+   }
+  },
+  {
+   "fold": "calibra[2022/23+2023/24] -> valuta[2024/25]",
+   "n_calibrazione": 3022,
+   "n_oos": 1731,
+   "baseline": {
+    "brier": 0.583,
+    "logLoss": 0.9792,
+    "rps": 0.1988,
+    "ece_home": 0.034,
+    "ece_draw": 0.0134,
+    "ece_away": 0.032
+   },
+   "isotonic": {
+    "brier": 0.5828,
+    "logLoss": 0.9786,
+    "rps": 0.1988,
+    "ece_home": 0.0254,
+    "ece_draw": 0.0042,
+    "ece_away": 0.0354
+   },
+   "platt": {
+    "brier": 0.583,
+    "logLoss": 0.9792,
+    "rps": 0.1989,
+    "ece_home": 0.0337,
+    "ece_draw": 0.0074,
+    "ece_away": 0.0357
+   },
+   "per_lega": {
+    "Premier League": {
+     "n": 378,
+     "predicted_draw_base_pct": 22.3,
+     "predicted_draw_iso_pct": 24.3,
+     "observed_draw_pct": 24.6,
+     "ece_draw_base": 0.0305,
+     "ece_draw_iso": 0.0248,
+     "brier_base": 0.5811,
+     "brier_iso": 0.581
+    },
+    "Liga": {
+     "n": 378,
+     "predicted_draw_base_pct": 23.3,
+     "predicted_draw_iso_pct": 25.1,
+     "observed_draw_pct": 25.4,
+     "ece_draw_base": 0.0415,
+     "ece_draw_iso": 0.0215,
+     "brier_base": 0.5727,
+     "brier_iso": 0.5712
+    },
+    "Serie A": {
+     "n": 372,
+     "predicted_draw_base_pct": 26.3,
+     "predicted_draw_iso_pct": 27.1,
+     "observed_draw_pct": 28.2,
+     "ece_draw_base": 0.0197,
+     "ece_draw_iso": 0.011,
+     "brier_base": 0.5818,
+     "brier_iso": 0.5828
+    },
+    "Bundesliga": {
+     "n": 299,
+     "predicted_draw_base_pct": 24.1,
+     "predicted_draw_iso_pct": 25.6,
+     "observed_draw_pct": 25.8,
+     "ece_draw_base": 0.0299,
+     "ece_draw_iso": 0.0068,
+     "brier_base": 0.5961,
+     "brier_iso": 0.5949
+    },
+    "Ligue 1": {
+     "n": 304,
+     "predicted_draw_base_pct": 23.1,
+     "predicted_draw_iso_pct": 25,
+     "observed_draw_pct": 20.4,
+     "ece_draw_base": 0.027,
+     "ece_draw_iso": 0.0464,
+     "brier_base": 0.587,
+     "brier_iso": 0.5874
+    }
+   },
+   "mappa_stabilita": {
+    "raw_020": 0.192,
+    "raw_025": 0.287,
+    "raw_030": 0.294
+   },
+   "platt_params": {
+    "a": 0.785,
+    "b": -0.16
+   }
+  },
+  {
+   "fold": "calibra[2022/23+2023/24+2024/25] -> valuta[2025/26]",
+   "n_calibrazione": 4753,
+   "n_oos": 1722,
+   "baseline": {
+    "brier": 0.5932,
+    "logLoss": 0.9952,
+    "rps": 0.2023,
+    "ece_home": 0.0164,
+    "ece_draw": 0.0288,
+    "ece_away": 0.0259
+   },
+   "isotonic": {
+    "brier": 0.5931,
+    "logLoss": 0.9951,
+    "rps": 0.2023,
+    "ece_home": 0.0124,
+    "ece_draw": 0.0085,
+    "ece_away": 0.0196
+   },
+   "platt": {
+    "brier": 0.5926,
+    "logLoss": 0.9939,
+    "rps": 0.2022,
+    "ece_home": 0.0143,
+    "ece_draw": 0.0256,
+    "ece_away": 0.0269
+   },
+   "per_lega": {
+    "Premier League": {
+     "n": 376,
+     "predicted_draw_base_pct": 23.6,
+     "predicted_draw_iso_pct": 25.7,
+     "observed_draw_pct": 27.4,
+     "ece_draw_base": 0.038,
+     "ece_draw_iso": 0.0194,
+     "brier_base": 0.6153,
+     "brier_iso": 0.6141
+    },
+    "Liga": {
+     "n": 371,
+     "predicted_draw_base_pct": 22.9,
+     "predicted_draw_iso_pct": 24.7,
+     "observed_draw_pct": 24.8,
+     "ece_draw_base": 0.0532,
+     "ece_draw_iso": 0.0389,
+     "brier_base": 0.585,
+     "brier_iso": 0.5824
+    },
+    "Serie A": {
+     "n": 376,
+     "predicted_draw_base_pct": 24.2,
+     "predicted_draw_iso_pct": 25.9,
+     "observed_draw_pct": 26.1,
+     "ece_draw_base": 0.0241,
+     "ece_draw_iso": 0.0139,
+     "brier_base": 0.5964,
+     "brier_iso": 0.5984
+    },
+    "Bundesliga": {
+     "n": 304,
+     "predicted_draw_base_pct": 22.6,
+     "predicted_draw_iso_pct": 24.5,
+     "observed_draw_pct": 24.3,
+     "ece_draw_base": 0.0202,
+     "ece_draw_iso": 0.0123,
+     "brier_base": 0.5759,
+     "brier_iso": 0.5768
+    },
+    "Ligue 1": {
+     "n": 295,
+     "predicted_draw_base_pct": 21.1,
+     "predicted_draw_iso_pct": 23.1,
+     "observed_draw_pct": 24.4,
+     "ece_draw_base": 0.035,
+     "ece_draw_iso": 0.0133,
+     "brier_base": 0.5891,
+     "brier_iso": 0.5897
+    }
+   },
+   "mappa_stabilita": {
+    "raw_020": 0.185,
+    "raw_025": 0.283,
+    "raw_030": 0.306
+   },
+   "platt_params": {
+    "a": 0.866,
+    "b": -0.074
+   }
+  }
+ ]
+}
