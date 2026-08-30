@@ -1,6 +1,6 @@
 {
  "nota": "Ogni riga e immutabile una volta scritta: non viene mai aggiornata da esecuzioni successive, nemmeno se il modello o i dati di input cambiano. Serve a verificare a posteriori cosa il modello prevedeva PRIMA del kickoff, senza il rischio che lo storico si riscriva da solo.",
- "aggiornato": "2026-08-30T18:31:31.726Z",
+ "aggiornato": "2026-08-30T18:40:45.303Z",
  "snapshot": [
   {
    "snapshot_id": "napoli-como|2026-08-30T16:30:00.000Z|standard|Multigol casa 1-2|football-v1-baseline",
@@ -5731,6 +5731,369 @@
    "src": "consenso di 21 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline",
    "generated_at": "2026-08-30T18:31:31.723Z"
+  },
+  {
+   "snapshot_id": "psg-monaco|2026-09-04T19:05:00.000Z|standard|Multigol trasferta 1-2|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Paris Saint Germain - Monaco",
+   "quando": "ven 04/09, 21:05",
+   "ore": 120,
+   "match": "psg-monaco",
+   "inizio": "2026-09-04T19:05:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6289,
+     "PX": 0.2086,
+     "P2": 0.1624,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5951,
+     "PX": 0.2511,
+     "P2": 0.1537,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.228,
+     "lambda_away": 1.066
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 8.1,
+     "book": "1xBet",
+     "n_book": 15,
+     "no_vig_probability": 0.149
+    },
+    "value": {
+     "fair_odds": 6.173,
+     "edge": 0.013,
+     "ev": 0.3122
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.013,
+     "confidence": 86,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.013,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "HIGH_VARIANCE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "quota 8.10 > 8"
+    ],
+    "opportunity_score": 0.895,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 88,
+      "current_season_contribution_pct": 12
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Monaco\" il 16.2% contro il 14.9% del mercato. La quota fair e' 6.17 contro una quota disponibile di 8.10. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.563,
+   "why": "Gol attesi 2.23 contro 1.07, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.3%. Sul segno 2 il modello dice 16.2% contro il 14.9% del consenso di 15 bookmaker, miglior prezzo 8.10 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.162,
+    "probMercato": 0.149,
+    "prezzo": 8.1,
+    "book": "1xBet",
+    "nBook": 15,
+    "valore": 0.316
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:40:45.301Z"
+  },
+  {
+   "snapshot_id": "psg-monaco|2026-09-04T19:05:00.000Z|standard|1X|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Paris Saint Germain - Monaco",
+   "quando": "ven 04/09, 21:05",
+   "ore": 120,
+   "match": "psg-monaco",
+   "inizio": "2026-09-04T19:05:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6289,
+     "PX": 0.2086,
+     "P2": 0.1624,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5951,
+     "PX": 0.2511,
+     "P2": 0.1537,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.228,
+     "lambda_away": 1.066
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 8.1,
+     "book": "1xBet",
+     "n_book": 15,
+     "no_vig_probability": 0.149
+    },
+    "value": {
+     "fair_odds": 6.173,
+     "edge": 0.013,
+     "ev": 0.3122
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.013,
+     "confidence": 86,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.013,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "HIGH_VARIANCE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "quota 8.10 > 8"
+    ],
+    "opportunity_score": 0.895,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 88,
+      "current_season_contribution_pct": 12
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Monaco\" il 16.2% contro il 14.9% del mercato. La quota fair e' 6.17 contro una quota disponibile di 8.10. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "1X",
+   "prob": 0.838,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 2.23 contro 1.07, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 83.8%. Sul segno 2 il modello dice 16.2% contro il 14.9% del consenso di 15 bookmaker, miglior prezzo 8.10 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:40:45.301Z"
+  },
+  {
+   "snapshot_id": "psg-monaco|2026-09-04T19:05:00.000Z|sorpresa|Monaco vincente|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Paris Saint Germain - Monaco",
+   "quando": "ven 04/09, 21:05",
+   "ore": 120,
+   "match": "psg-monaco",
+   "inizio": "2026-09-04T19:05:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6289,
+     "PX": 0.2086,
+     "P2": 0.1624,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5951,
+     "PX": 0.2511,
+     "P2": 0.1537,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.228,
+     "lambda_away": 1.066
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 8.1,
+     "book": "1xBet",
+     "n_book": 15,
+     "no_vig_probability": 0.149
+    },
+    "value": {
+     "fair_odds": 6.173,
+     "edge": 0.013,
+     "ev": 0.3122
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.013,
+     "confidence": 86,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.013,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "HIGH_VARIANCE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "quota 8.10 > 8"
+    ],
+    "opportunity_score": 0.895,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 88,
+      "current_season_contribution_pct": 12
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Monaco\" il 16.2% contro il 14.9% del mercato. La quota fair e' 6.17 contro una quota disponibile di 8.10. Il modello e il mercato mostrano un accordo alto."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Monaco vincente",
+   "prob": 0.162,
+   "prezzo": 8.1,
+   "why": "Il modello da questo esito al 16.2%, il consenso di 15 bookmaker al 14.9%. Al prezzo migliore, 8.10 su 1xBet, il valore atteso e' 31.6%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.162,
+    "probMercato": 0.149,
+    "prezzo": 8.1,
+    "book": "1xBet",
+    "nBook": 15,
+    "valore": 0.316
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:40:45.301Z"
+  },
+  {
+   "snapshot_id": "emiliana arango - xinyu wang|2026-08-30T18:50:00.000Z|standard|Xinyu Wang vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Emiliana Arango - Xinyu Wang",
+   "quando": "dom 30/08, 20:50",
+   "ore": 0,
+   "match": "emiliana arango - xinyu wang",
+   "inizio": "2026-08-30T18:50:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Xinyu Wang vincente",
+   "prob": 0.731,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 73.1%, ricavata togliendo il margine alle quote di 17 bookmaker e facendone la media. Miglior prezzo 1.37 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 17 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:40:45.301Z"
+  },
+  {
+   "snapshot_id": "hanne vandewinkel - karolina pliskova|2026-08-30T19:00:00.000Z|standard|Hanne Vandewinkel vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Hanne Vandewinkel - Karolina Pliskova",
+   "quando": "dom 30/08, 21:00",
+   "ore": 0,
+   "match": "hanne vandewinkel - karolina pliskova",
+   "inizio": "2026-08-30T19:00:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Hanne Vandewinkel vincente",
+   "prob": 0.509,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 50.9%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.97 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 20 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:40:45.301Z"
+  },
+  {
+   "snapshot_id": "taylah preston - alycia parks|2026-08-30T21:00:00.000Z|standard|Alycia Parks vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Taylah Preston - Alycia Parks",
+   "quando": "dom 30/08, 23:00",
+   "ore": 2,
+   "match": "taylah preston - alycia parks",
+   "inizio": "2026-08-30T21:00:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Alycia Parks vincente",
+   "prob": 0.507,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 50.7%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.96 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:40:45.301Z"
+  },
+  {
+   "snapshot_id": "thiago agustin tirante - adrian mannarino|2026-08-30T18:45:00.000Z|standard|Thiago Agustin Tirante vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Thiago Agustin Tirante - Adrian Mannarino",
+   "quando": "dom 30/08, 20:45",
+   "ore": 0,
+   "match": "thiago agustin tirante - adrian mannarino",
+   "inizio": "2026-08-30T18:45:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Thiago Agustin Tirante vincente",
+   "prob": 0.703,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 70.3%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.41 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:40:45.301Z"
+  },
+  {
+   "snapshot_id": "toby samuel - tomas machac|2026-08-30T18:50:00.000Z|standard|Toby Samuel vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Toby Samuel - Tomas Machac",
+   "quando": "dom 30/08, 20:50",
+   "ore": 0,
+   "match": "toby samuel - tomas machac",
+   "inizio": "2026-08-30T18:50:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Toby Samuel vincente",
+   "prob": 0.593,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 59.3%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.67 su 888sport. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 19 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:40:45.301Z"
   }
  ]
 }

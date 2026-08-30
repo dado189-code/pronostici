@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-08-30T18:31:31.723Z",
+ "aggiornato": "2026-08-30T18:40:45.301Z",
  "model_version": "football-v1-baseline",
  "drawcal_status": {
   "attivo": true,
@@ -7,337 +7,120 @@
   "versione": "football-v1.1-drawcal-candidate"
  },
  "metodo": "calcio: forze di attacco e difesa stimate dagli xG con emivita 180 giorni, Dixon-Coles per i punteggi bassi, confronto col consenso di piu bookmaker. Basket e tennis: nessun modello indipendente disponibile, il pronostico e il solo consenso dei bookmaker ripulito dal margine. Layer aggiuntivo sperimentale DC-DRAW-CAL sul solo P_DRAW (calibrazione isotonic), sempre mostrato accanto al modello puro, mai al suo posto. Migliori opportunita: richiedono congiuntamente confidence, data quality, agreement, market gap, quota ed EV minimo sopra soglia (mai il solo EV positivo). Selezioni con EV positivo ma quota molto alta o forte disaccordo modello/mercato finiscono in high_risk_today, mai fra le migliori opportunita.",
+ "selezione_oggi": {
+  "data_locale": "2026-08-30",
+  "fuso_orario": "Europe/Rome",
+  "nota": "Cassaforte/Quota2/Sorpresa/Best Picks/High Risk considerano ESCLUSIVAMENTE partite con calcio d'inizio nella data locale odierna (Europe/Rome), calcolata da 'inizio' (ISO, UTC), mai dalla stringa 'quando' gia' localizzata.",
+  "partite_con_analisi_totali": 17,
+  "partite_di_oggi": 4,
+  "partite_future_escluse": [
+   {
+    "evento": "Lecce - Roma",
+    "comp": "Serie A",
+    "data_locale": "2026-08-31"
+   },
+   {
+    "evento": "Atalanta - Bologna",
+    "comp": "Serie A",
+    "data_locale": "2026-08-31"
+   },
+   {
+    "evento": "Genoa - Como",
+    "comp": "Serie A",
+    "data_locale": "2026-09-04"
+   },
+   {
+    "evento": "Aston Villa - Arsenal",
+    "comp": "Premier League",
+    "data_locale": "2026-08-31"
+   },
+   {
+    "evento": "Ipswich - Liverpool",
+    "comp": "Premier League",
+    "data_locale": "2026-09-04"
+   },
+   {
+    "evento": "Osasuna - Getafe",
+    "comp": "Liga",
+    "data_locale": "2026-08-31"
+   },
+   {
+    "evento": "Barcelona - Rayo Vallecano",
+    "comp": "Liga",
+    "data_locale": "2026-08-31"
+   },
+   {
+    "evento": "Real Sociedad - Celta Vigo",
+    "comp": "Liga",
+    "data_locale": "2026-09-03"
+   },
+   {
+    "evento": "Real Betis - Real Madrid",
+    "comp": "Liga",
+    "data_locale": "2026-09-04"
+   },
+   {
+    "evento": "Toulouse - Lille",
+    "comp": "Ligue 1",
+    "data_locale": "2026-09-03"
+   },
+   {
+    "evento": "Lyon - Auxerre",
+    "comp": "Ligue 1",
+    "data_locale": "2026-09-04"
+   },
+   {
+    "evento": "Paris Saint Germain - Monaco",
+    "comp": "Ligue 1",
+    "data_locale": "2026-09-04"
+   },
+   {
+    "evento": "VfB Stuttgart - FC Cologne",
+    "comp": "Bundesliga",
+    "data_locale": "2026-09-04"
+   }
+  ]
+ },
  "cassaforte": {
-  "evento": "Lyon - Auxerre",
+  "evento": "Monaco - Marseille",
   "comp": "Ligue 1",
-  "quando": "ven 04/09, 19:00",
-  "mercato": "Under 3.5",
-  "quota": 1.551,
-  "probabilita_modello": 0.6447,
+  "quando": "dom 30/08, 20:45",
+  "mercato": "Multigol 1-4",
+  "quota": 1.502,
+  "probabilita_modello": 0.6656,
   "probabilita_calibrata": null,
-  "confidence": 85,
-  "data_quality": 60,
+  "confidence": 59,
+  "data_quality": 58,
   "market_probability": null,
-  "fair_odds": 1.551,
-  "agreement": "HIGH",
-  "market_gap": "NONE",
-  "why": "Lyon - Auxerre, mercato \"Under 3.5\": il modello lo stima al 64.5% (quota fair 1.55), confidence 85/100, data quality 60/100, accordo col mercato HIGH."
+  "fair_odds": 1.502,
+  "agreement": "MEDIUM",
+  "market_gap": "LIEVE",
+  "why": "Monaco - Marseille, mercato \"Multigol 1-4\": il modello lo stima al 66.6% (quota fair 1.50), confidence 59/100, data quality 58/100, accordo col mercato MEDIUM."
  },
  "cassaforte_nota": null,
+ "cassaforte_dettaglio": null,
  "quota_2": null,
- "quota_2_nota": "Nessuna combinazione di eventi diversi raggiunge quota 1.85-2.2 con la qualita richiesta.",
+ "quota_2_nota": "Nessuna Quota 2 disponibile oggi",
+ "quota_2_dettaglio": "Nessuna combinazione di eventi diversi raggiunge quota 1.85-2.2 con la qualita richiesta.",
  "sorpresa": {
-  "evento": "Atalanta - Bologna",
+  "evento": "Lazio - Genoa",
   "comp": "Serie A",
-  "quando": "lun 31/08, 20:45",
+  "quando": "dom 30/08, 20:45",
   "mercato": "2",
-  "quota_bookmaker": 4.4,
-  "probabilita_modello": 0.2762,
-  "probabilita_mercato": 0.233,
-  "ev": 0.2144,
-  "edge": 0.043,
-  "confidence": 59,
+  "quota_bookmaker": 4.01,
+  "probabilita_modello": 0.2998,
+  "probabilita_mercato": 0.259,
+  "ev": 0.203,
+  "edge": 0.041,
+  "confidence": 60,
   "data_quality": 58,
   "agreement": "MEDIUM",
   "market_gap": "LIEVE",
-  "why": "Il modello assegna a \"la vittoria di Bologna\" il 27.6% contro il 23.3% del mercato. La quota fair e' 3.62 contro una quota disponibile di 4.40. Il modello e il mercato mostrano un disaccordo moderato."
+  "why": "Il modello assegna a \"la vittoria di Genoa\" il 30.0% contro il 25.9% del mercato. La quota fair e' 3.33 contro una quota disponibile di 4.01. Il modello e il mercato mostrano un disaccordo moderato."
  },
  "sorpresa_nota": null,
+ "sorpresa_dettaglio": null,
  "best_picks_today": [
-  {
-   "evento": "Lyon - Auxerre",
-   "comp": "Ligue 1",
-   "quando": "ven 04/09, 19:00",
-   "match": "lyon-auxerre",
-   "esito_riferimento": "2",
-   "pure_model": {
-    "P1": 0.5536,
-    "PX": 0.2393,
-    "P2": 0.207,
-    "model_version": "football-v1-baseline"
-   },
-   "calibrated": {
-    "P1": 0.5296,
-    "PX": 0.2723,
-    "P2": 0.1981,
-    "attivo": true,
-    "motivo": null,
-    "model_version": "football-v1.1-drawcal-candidate",
-    "badge": "EXPERIMENTAL CALIBRATION"
-   },
-   "market": {
-    "esito_riferimento": "2",
-    "bookmaker_odds": 6.25,
-    "book": "Coolbet",
-    "n_book": 15,
-    "no_vig_probability": 0.179
-   },
-   "value": {
-    "fair_odds": 4.831,
-    "edge": 0.028,
-    "ev": 0.2937
-   },
-   "quality": {
-    "agreement": "HIGH",
-    "agreement_scarto": 0.028,
-    "confidence": 85,
-    "data_quality": 60
-   },
-   "market_gap": {
-    "valore": 0.028,
-    "livello": "NONE",
-    "etichetta": null
-   },
-   "rischio_quota": "CAUTION",
-   "value_class": "VALUE",
-   "opportunity_score": 0.895,
-   "why": "Il modello assegna a \"la vittoria di Auxerre\" il 20.7% contro il 17.9% del mercato. La quota fair e' 4.83 contro una quota disponibile di 6.25. Il modello e il mercato mostrano un accordo alto."
-  },
-  {
-   "evento": "Aston Villa - Arsenal",
-   "comp": "Premier League",
-   "quando": "lun 31/08, 21:00",
-   "match": "aston villa-arsenal",
-   "esito_riferimento": "1",
-   "pure_model": {
-    "P1": 0.1834,
-    "PX": 0.2536,
-    "P2": 0.5629,
-    "model_version": "football-v1-baseline"
-   },
-   "calibrated": {
-    "P1": 0.1761,
-    "PX": 0.2833,
-    "P2": 0.5405,
-    "attivo": true,
-    "motivo": null,
-    "model_version": "football-v1.1-drawcal-candidate",
-    "badge": "EXPERIMENTAL CALIBRATION"
-   },
-   "market": {
-    "esito_riferimento": "1",
-    "bookmaker_odds": 7.2,
-    "book": "Matchbook",
-    "n_book": 25,
-    "no_vig_probability": 0.147
-   },
-   "value": {
-    "fair_odds": 5.464,
-    "edge": 0.036,
-    "ev": 0.3176
-   },
-   "quality": {
-    "agreement": "MEDIUM",
-    "agreement_scarto": 0.036,
-    "confidence": 60,
-    "data_quality": 58
-   },
-   "market_gap": {
-    "valore": 0.036,
-    "livello": "LIEVE",
-    "etichetta": null
-   },
-   "rischio_quota": "CAUTION",
-   "value_class": "VALUE",
-   "opportunity_score": 0.737,
-   "why": "Il modello assegna a \"la vittoria di Aston Villa\" il 18.3% contro il 14.7% del mercato. La quota fair e' 5.46 contro una quota disponibile di 7.20. Il modello e il mercato mostrano un disaccordo moderato."
-  },
-  {
-   "evento": "Ipswich - Liverpool",
-   "comp": "Premier League",
-   "quando": "ven 04/09, 21:00",
-   "match": "ipswich-liverpool",
-   "esito_riferimento": "1",
-   "pure_model": {
-    "P1": 0.2368,
-    "PX": 0.1771,
-    "P2": 0.5862,
-    "model_version": "football-v1-baseline"
-   },
-   "calibrated": {
-    "P1": 0.2369,
-    "PX": 0.1766,
-    "P2": 0.5865,
-    "attivo": true,
-    "motivo": null,
-    "model_version": "football-v1.1-drawcal-candidate",
-    "badge": "EXPERIMENTAL CALIBRATION"
-   },
-   "market": {
-    "esito_riferimento": "1",
-    "bookmaker_odds": 5.33,
-    "book": "1xBet",
-    "n_book": 24,
-    "no_vig_probability": 0.189
-   },
-   "value": {
-    "fair_odds": 4.219,
-    "edge": 0.048,
-    "ev": 0.2632
-   },
-   "quality": {
-    "agreement": "MEDIUM",
-    "agreement_scarto": 0.048,
-    "confidence": 59,
-    "data_quality": 60
-   },
-   "market_gap": {
-    "valore": 0.048,
-    "livello": "LIEVE",
-    "etichetta": null
-   },
-   "rischio_quota": "CAUTION",
-   "value_class": "VALUE",
-   "opportunity_score": 0.737,
-   "why": "Il modello assegna a \"la vittoria di Ipswich\" il 23.7% contro il 18.9% del mercato. La quota fair e' 4.22 contro una quota disponibile di 5.33. Il modello e il mercato mostrano un disaccordo moderato."
-  },
-  {
-   "evento": "Genoa - Como",
-   "comp": "Serie A",
-   "quando": "ven 04/09, 20:45",
-   "match": "genoa-como",
-   "esito_riferimento": "1",
-   "pure_model": {
-    "P1": 0.2337,
-    "PX": 0.2301,
-    "P2": 0.5363,
-    "model_version": "football-v1-baseline"
-   },
-   "calibrated": {
-    "P1": 0.2255,
-    "PX": 0.2569,
-    "P2": 0.5176,
-    "attivo": true,
-    "motivo": null,
-    "model_version": "football-v1.1-drawcal-candidate",
-    "badge": "EXPERIMENTAL CALIBRATION"
-   },
-   "market": {
-    "esito_riferimento": "1",
-    "bookmaker_odds": 5.8,
-    "book": "Pinnacle",
-    "n_book": 18,
-    "no_vig_probability": 0.188
-   },
-   "value": {
-    "fair_odds": 4.274,
-    "edge": 0.046,
-    "ev": 0.3572
-   },
-   "quality": {
-    "agreement": "MEDIUM",
-    "agreement_scarto": 0.046,
-    "confidence": 59,
-    "data_quality": 58
-   },
-   "market_gap": {
-    "valore": 0.046,
-    "livello": "LIEVE",
-    "etichetta": null
-   },
-   "rischio_quota": "CAUTION",
-   "value_class": "VALUE",
-   "opportunity_score": 0.734,
-   "why": "Il modello assegna a \"la vittoria di Genoa\" il 23.4% contro il 18.8% del mercato. La quota fair e' 4.27 contro una quota disponibile di 5.80. Il modello e il mercato mostrano un disaccordo moderato."
-  },
-  {
-   "evento": "VfB Stuttgart - FC Cologne",
-   "comp": "Bundesliga",
-   "quando": "ven 04/09, 20:30",
-   "match": "vfb stuttgart-cologne",
-   "esito_riferimento": "2",
-   "pure_model": {
-    "P1": 0.6172,
-    "PX": 0.1865,
-    "P2": 0.1962,
-    "model_version": "football-v1-baseline"
-   },
-   "calibrated": {
-    "P1": 0.6248,
-    "PX": 0.1766,
-    "P2": 0.1986,
-    "attivo": true,
-    "motivo": null,
-    "model_version": "football-v1.1-drawcal-candidate",
-    "badge": "EXPERIMENTAL CALIBRATION"
-   },
-   "market": {
-    "esito_riferimento": "2",
-    "bookmaker_odds": 6.25,
-    "book": "Unibet (SE)",
-    "n_book": 24,
-    "no_vig_probability": 0.167
-   },
-   "value": {
-    "fair_odds": 5.102,
-    "edge": 0.029,
-    "ev": 0.225
-   },
-   "quality": {
-    "agreement": "MEDIUM",
-    "agreement_scarto": 0.0316,
-    "confidence": 69,
-    "data_quality": 58
-   },
-   "market_gap": {
-    "valore": 0.029,
-    "livello": "NONE",
-    "etichetta": null
-   },
-   "rischio_quota": "CAUTION",
-   "value_class": "VALUE",
-   "opportunity_score": 0.729,
-   "why": "Il modello assegna a \"la vittoria di FC Cologne\" il 19.6% contro il 16.7% del mercato. La quota fair e' 5.10 contro una quota disponibile di 6.25. Il modello e il mercato mostrano un disaccordo moderato."
-  },
-  {
-   "evento": "Atalanta - Bologna",
-   "comp": "Serie A",
-   "quando": "lun 31/08, 20:45",
-   "match": "atalanta-bologna",
-   "esito_riferimento": "2",
-   "pure_model": {
-    "P1": 0.5019,
-    "PX": 0.2219,
-    "P2": 0.2762,
-    "model_version": "football-v1-baseline"
-   },
-   "calibrated": {
-    "P1": 0.4793,
-    "PX": 0.2569,
-    "P2": 0.2638,
-    "attivo": true,
-    "motivo": null,
-    "model_version": "football-v1.1-drawcal-candidate",
-    "badge": "EXPERIMENTAL CALIBRATION"
-   },
-   "market": {
-    "esito_riferimento": "2",
-    "bookmaker_odds": 4.4,
-    "book": "Betfair",
-    "n_book": 24,
-    "no_vig_probability": 0.233
-   },
-   "value": {
-    "fair_odds": 3.623,
-    "edge": 0.043,
-    "ev": 0.2144
-   },
-   "quality": {
-    "agreement": "MEDIUM",
-    "agreement_scarto": 0.043,
-    "confidence": 59,
-    "data_quality": 58
-   },
-   "market_gap": {
-    "valore": 0.043,
-    "livello": "LIEVE",
-    "etichetta": null
-   },
-   "rischio_quota": "NORMALE",
-   "value_class": "VALUE",
-   "opportunity_score": 0.6842,
-   "why": "Il modello assegna a \"la vittoria di Bologna\" il 27.6% contro il 23.3% del mercato. La quota fair e' 3.62 contro una quota disponibile di 4.40. Il modello e il mercato mostrano un disaccordo moderato."
-  },
   {
    "evento": "Lazio - Genoa",
    "comp": "Serie A",
@@ -361,31 +144,31 @@
    },
    "market": {
     "esito_riferimento": "2",
-    "bookmaker_odds": 4,
-    "book": "Matchbook",
+    "bookmaker_odds": 4.01,
+    "book": "1xBet",
     "n_book": 24,
-    "no_vig_probability": 0.263
+    "no_vig_probability": 0.259
    },
    "value": {
     "fair_odds": 3.333,
-    "edge": 0.037,
-    "ev": 0.2
+    "edge": 0.041,
+    "ev": 0.203
    },
    "quality": {
     "agreement": "MEDIUM",
-    "agreement_scarto": 0.037,
+    "agreement_scarto": 0.041,
     "confidence": 60,
     "data_quality": 58
    },
    "market_gap": {
-    "valore": 0.037,
+    "valore": 0.041,
     "livello": "LIEVE",
     "etichetta": null
    },
    "rischio_quota": "NORMALE",
    "value_class": "VALUE",
-   "opportunity_score": 0.667,
-   "why": "Il modello assegna a \"la vittoria di Genoa\" il 30.0% contro il 26.3% del mercato. La quota fair e' 3.33 contro una quota disponibile di 4.00. Il modello e il mercato mostrano un disaccordo moderato."
+   "opportunity_score": 0.6712,
+   "why": "Il modello assegna a \"la vittoria di Genoa\" il 30.0% contro il 25.9% del mercato. La quota fair e' 3.33 contro una quota disponibile di 4.01. Il modello e il mercato mostrano un disaccordo moderato."
   },
   {
    "evento": "Monaco - Marseille",
@@ -410,136 +193,35 @@
    },
    "market": {
     "esito_riferimento": "2",
-    "bookmaker_odds": 3.35,
-    "book": "Unibet (SE)",
+    "bookmaker_odds": 3.4,
+    "book": "Betfair",
     "n_book": 23,
-    "no_vig_probability": 0.297
+    "no_vig_probability": 0.296
    },
    "value": {
     "fair_odds": 2.899,
-    "edge": 0.048,
-    "ev": 0.1557
+    "edge": 0.049,
+    "ev": 0.173
    },
    "quality": {
     "agreement": "MEDIUM",
-    "agreement_scarto": 0.048,
+    "agreement_scarto": 0.049,
     "confidence": 59,
     "data_quality": 58
    },
    "market_gap": {
-    "valore": 0.048,
+    "valore": 0.049,
     "livello": "LIEVE",
     "etichetta": null
    },
    "rischio_quota": "NORMALE",
    "value_class": "VALUE",
-   "opportunity_score": 0.602,
-   "why": "Il modello assegna a \"la vittoria di Marseille\" il 34.5% contro il 29.7% del mercato. La quota fair e' 2.90 contro una quota disponibile di 3.35. Il modello e il mercato mostrano un disaccordo moderato."
-  },
-  {
-   "evento": "Toulouse - Lille",
-   "comp": "Ligue 1",
-   "quando": "gio 03/09, 20:45",
-   "match": "toulouse-lille",
-   "esito_riferimento": "1",
-   "pure_model": {
-    "P1": 0.3281,
-    "PX": 0.2986,
-    "P2": 0.3733,
-    "model_version": "football-v1-baseline"
-   },
-   "calibrated": {
-    "P1": 0.3352,
-    "PX": 0.2833,
-    "P2": 0.3814,
-    "attivo": true,
-    "motivo": null,
-    "model_version": "football-v1.1-drawcal-candidate",
-    "badge": "EXPERIMENTAL CALIBRATION"
-   },
-   "market": {
-    "esito_riferimento": "1",
-    "bookmaker_odds": 3.25,
-    "book": "1xBet",
-    "n_book": 14,
-    "no_vig_probability": 0.302
-   },
-   "value": {
-    "fair_odds": 3.049,
-    "edge": 0.026,
-    "ev": 0.066
-   },
-   "quality": {
-    "agreement": "MEDIUM",
-    "agreement_scarto": 0.0332,
-    "confidence": 70,
-    "data_quality": 60
-   },
-   "market_gap": {
-    "valore": 0.026,
-    "livello": "NONE",
-    "etichetta": null
-   },
-   "rischio_quota": "NORMALE",
-   "value_class": "VALUE",
-   "opportunity_score": 0.5124,
-   "why": "Il modello assegna a \"la vittoria di Toulouse\" il 32.8% contro il 30.2% del mercato. La quota fair e' 3.05 contro una quota disponibile di 3.25. Il modello e il mercato mostrano un disaccordo moderato."
+   "opportunity_score": 0.6262,
+   "why": "Il modello assegna a \"la vittoria di Marseille\" il 34.5% contro il 29.6% del mercato. La quota fair e' 2.90 contro una quota disponibile di 3.40. Il modello e il mercato mostrano un disaccordo moderato."
   }
  ],
  "best_picks_nota": null,
  "high_risk_today": [
-  {
-   "evento": "Barcelona - Rayo Vallecano",
-   "comp": "Liga",
-   "quando": "lun 31/08, 21:30",
-   "match": "barcelona-rayo vallecano",
-   "esito_riferimento": "2",
-   "pure_model": {
-    "P1": 0.7824,
-    "PX": 0.1227,
-    "P2": 0.0948,
-    "model_version": "football-v1-baseline"
-   },
-   "calibrated": {
-    "P1": 0.7804,
-    "PX": 0.125,
-    "P2": 0.0946,
-    "attivo": true,
-    "motivo": null,
-    "model_version": "football-v1.1-drawcal-candidate",
-    "badge": "EXPERIMENTAL CALIBRATION"
-   },
-   "market": {
-    "esito_riferimento": "2",
-    "bookmaker_odds": 25,
-    "book": "Betfair",
-    "n_book": 21,
-    "no_vig_probability": 0.052
-   },
-   "value": {
-    "fair_odds": 10.526,
-    "edge": 0.043,
-    "ev": 1.375
-   },
-   "quality": {
-    "agreement": "MEDIUM",
-    "agreement_scarto": 0.043,
-    "confidence": 60,
-    "data_quality": 60
-   },
-   "market_gap": {
-    "valore": 0.043,
-    "livello": "LIEVE",
-    "etichetta": null
-   },
-   "rischio_quota": "ESCLUSA",
-   "value_class": "VALUE",
-   "opportunity_score": 0.74,
-   "why": "Il modello assegna a \"la vittoria di Rayo Vallecano\" il 9.5% contro il 5.2% del mercato. La quota fair e' 10.53 contro una quota disponibile di 25.00. Il modello e il mercato mostrano un disaccordo moderato.",
-   "motivi_esclusione": [
-    "quota 25.00 > 8"
-   ]
-  },
   {
    "evento": "Cagliari - Inter",
    "comp": "Serie A",
@@ -563,83 +245,31 @@
    },
    "market": {
     "esito_riferimento": "1",
-    "bookmaker_odds": 9,
-    "book": "Unibet (NL)",
+    "bookmaker_odds": 8.8,
+    "book": "Matchbook",
     "n_book": 24,
-    "no_vig_probability": 0.119
+    "no_vig_probability": 0.121
    },
    "value": {
     "fair_odds": 6.369,
-    "edge": 0.038,
-    "ev": 0.413
+    "edge": 0.036,
+    "ev": 0.3816
    },
    "quality": {
     "agreement": "MEDIUM",
-    "agreement_scarto": 0.0397,
+    "agreement_scarto": 0.0377,
     "confidence": 60,
     "data_quality": 58
    },
    "market_gap": {
-    "valore": 0.038,
+    "valore": 0.036,
     "livello": "LIEVE",
     "etichetta": null
    },
    "rischio_quota": "HIGH_VARIANCE",
    "value_class": "VALUE",
    "opportunity_score": 0.737,
-   "why": "Il modello assegna a \"la vittoria di Cagliari\" il 15.7% contro il 11.9% del mercato. La quota fair e' 6.37 contro una quota disponibile di 9.00. Il modello e il mercato mostrano un disaccordo moderato.",
-   "motivi_esclusione": [
-    "quota 9.00 > 8"
-   ]
-  },
-  {
-   "evento": "Lecce - Roma",
-   "comp": "Serie A",
-   "quando": "lun 31/08, 18:30",
-   "match": "lecce-roma",
-   "esito_riferimento": "1",
-   "pure_model": {
-    "P1": 0.1609,
-    "PX": 0.1959,
-    "P2": 0.6432,
-    "model_version": "football-v1-baseline"
-   },
-   "calibrated": {
-    "P1": 0.1568,
-    "PX": 0.2165,
-    "P2": 0.6268,
-    "attivo": true,
-    "motivo": null,
-    "model_version": "football-v1.1-drawcal-candidate",
-    "badge": "EXPERIMENTAL CALIBRATION"
-   },
-   "market": {
-    "esito_riferimento": "1",
-    "bookmaker_odds": 8.8,
-    "book": "Betfair",
-    "n_book": 24,
-    "no_vig_probability": 0.128
-   },
-   "value": {
-    "fair_odds": 6.211,
-    "edge": 0.033,
-    "ev": 0.4168
-   },
-   "quality": {
-    "agreement": "MEDIUM",
-    "agreement_scarto": 0.033,
-    "confidence": 60,
-    "data_quality": 58
-   },
-   "market_gap": {
-    "valore": 0.033,
-    "livello": "LIEVE",
-    "etichetta": null
-   },
-   "rischio_quota": "HIGH_VARIANCE",
-   "value_class": "VALUE",
-   "opportunity_score": 0.737,
-   "why": "Il modello assegna a \"la vittoria di Lecce\" il 16.1% contro il 12.8% del mercato. La quota fair e' 6.21 contro una quota disponibile di 8.80. Il modello e il mercato mostrano un disaccordo moderato.",
+   "why": "Il modello assegna a \"la vittoria di Cagliari\" il 15.7% contro il 12.1% del mercato. La quota fair e' 6.37 contro una quota disponibile di 8.80. Il modello e il mercato mostrano un disaccordo moderato.",
    "motivi_esclusione": [
     "quota 8.80 > 8"
    ]
@@ -670,192 +300,31 @@
     "bookmaker_odds": 2.88,
     "book": "Matchbook",
     "n_book": 21,
-    "no_vig_probability": 0.348
+    "no_vig_probability": 0.349
    },
    "value": {
     "fair_odds": 2.469,
-    "edge": 0.057,
+    "edge": 0.056,
     "ev": 0.1664
    },
    "quality": {
     "agreement": "MEDIUM",
-    "agreement_scarto": 0.057,
+    "agreement_scarto": 0.056,
     "confidence": 47,
     "data_quality": 60
    },
    "market_gap": {
-    "valore": 0.057,
+    "valore": 0.056,
     "livello": "SIGNIFICATIVA",
     "etichetta": null
    },
    "rischio_quota": "NORMALE",
    "value_class": "VALUE",
    "opportunity_score": 0.584,
-   "why": "Il modello assegna a \"la vittoria di Celta Vigo\" il 40.5% contro il 34.8% del mercato. La quota fair e' 2.47 contro una quota disponibile di 2.88. Il modello e il mercato mostrano un disaccordo moderato.",
+   "why": "Il modello assegna a \"la vittoria di Celta Vigo\" il 40.5% contro il 34.9% del mercato. La quota fair e' 2.47 contro una quota disponibile di 2.88. Il modello e il mercato mostrano un disaccordo moderato.",
    "motivi_esclusione": [
     "confidence 47 < 55",
-    "market gap 5.7pp > 5pp"
-   ]
-  },
-  {
-   "evento": "Real Sociedad - Celta Vigo",
-   "comp": "Liga",
-   "quando": "gio 03/09, 21:00",
-   "match": "real sociedad-celta vigo",
-   "esito_riferimento": "1",
-   "pure_model": {
-    "P1": 0.5128,
-    "PX": 0.2324,
-    "P2": 0.2547,
-    "model_version": "football-v1-baseline"
-   },
-   "calibrated": {
-    "P1": 0.4965,
-    "PX": 0.2569,
-    "P2": 0.2466,
-    "attivo": true,
-    "motivo": null,
-    "model_version": "football-v1.1-drawcal-candidate",
-    "badge": "EXPERIMENTAL CALIBRATION"
-   },
-   "market": {
-    "esito_riferimento": "1",
-    "bookmaker_odds": 2.26,
-    "book": "1xBet",
-    "n_book": 20,
-    "no_vig_probability": 0.436
-   },
-   "value": {
-    "fair_odds": 1.949,
-    "edge": 0.077,
-    "ev": 0.1594
-   },
-   "quality": {
-    "agreement": "MEDIUM",
-    "agreement_scarto": 0.077,
-    "confidence": 45,
-    "data_quality": 60
-   },
-   "market_gap": {
-    "valore": 0.077,
-    "livello": "SIGNIFICATIVA",
-    "etichetta": null
-   },
-   "rischio_quota": "NORMALE",
-   "value_class": "VALUE",
-   "opportunity_score": 0.5681,
-   "why": "Il modello assegna a \"la vittoria di Real Sociedad\" il 51.3% contro il 43.6% del mercato. La quota fair e' 1.95 contro una quota disponibile di 2.26. Il modello e il mercato mostrano un disaccordo moderato.",
-   "motivi_esclusione": [
-    "confidence 45 < 55",
-    "market gap 7.7pp > 5pp"
-   ]
-  },
-  {
-   "evento": "Osasuna - Getafe",
-   "comp": "Liga",
-   "quando": "lun 31/08, 19:30",
-   "match": "osasuna-getafe",
-   "esito_riferimento": "1",
-   "pure_model": {
-    "P1": 0.5472,
-    "PX": 0.2802,
-    "P2": 0.1726,
-    "model_version": "football-v1-baseline"
-   },
-   "calibrated": {
-    "P1": 0.5448,
-    "PX": 0.2833,
-    "P2": 0.1719,
-    "attivo": true,
-    "motivo": null,
-    "model_version": "football-v1.1-drawcal-candidate",
-    "badge": "EXPERIMENTAL CALIBRATION"
-   },
-   "market": {
-    "esito_riferimento": "1",
-    "bookmaker_odds": 2.28,
-    "book": "Matchbook",
-    "n_book": 21,
-    "no_vig_probability": 0.435
-   },
-   "value": {
-    "fair_odds": 1.828,
-    "edge": 0.112,
-    "ev": 0.2472
-   },
-   "quality": {
-    "agreement": "LOW",
-    "agreement_scarto": 0.112,
-    "confidence": 29,
-    "data_quality": 60
-   },
-   "market_gap": {
-    "valore": 0.112,
-    "livello": "ESTREMA",
-    "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
-   },
-   "rischio_quota": "NORMALE",
-   "value_class": "WATCH",
-   "opportunity_score": 0.553,
-   "why": "Il modello assegna a \"la vittoria di Osasuna\" il 54.7% contro il 43.5% del mercato. La quota fair e' 1.83 contro una quota disponibile di 2.28. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato.",
-   "motivi_esclusione": [
-    "confidence 29 < 55",
-    "agreement LOW",
-    "market gap 11.2pp > 5pp"
-   ]
-  },
-  {
-   "evento": "Real Betis - Real Madrid",
-   "comp": "Liga",
-   "quando": "ven 04/09, 21:00",
-   "match": "real betis-real madrid",
-   "esito_riferimento": "1",
-   "pure_model": {
-    "P1": 0.3314,
-    "PX": 0.2389,
-    "P2": 0.4297,
-    "model_version": "football-v1-baseline"
-   },
-   "calibrated": {
-    "P1": 0.3168,
-    "PX": 0.2723,
-    "P2": 0.4108,
-    "attivo": true,
-    "motivo": null,
-    "model_version": "football-v1.1-drawcal-candidate",
-    "badge": "EXPERIMENTAL CALIBRATION"
-   },
-   "market": {
-    "esito_riferimento": "1",
-    "bookmaker_odds": 6,
-    "book": "Matchbook",
-    "n_book": 19,
-    "no_vig_probability": 0.176
-   },
-   "value": {
-    "fair_odds": 3.021,
-    "edge": 0.155,
-    "ev": 0.986
-   },
-   "quality": {
-    "agreement": "LOW",
-    "agreement_scarto": 0.155,
-    "confidence": 25,
-    "data_quality": 63
-   },
-   "market_gap": {
-    "valore": 0.155,
-    "livello": "ESTREMA",
-    "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
-   },
-   "rischio_quota": "CAUTION",
-   "value_class": "WATCH",
-   "opportunity_score": 0.5495,
-   "why": "Il modello assegna a \"la vittoria di Real Betis\" il 33.1% contro il 17.6% del mercato. La quota fair e' 3.02 contro una quota disponibile di 6.00. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato.",
-   "motivi_esclusione": [
-    "confidence 25 < 55",
-    "agreement LOW",
-    "market gap 15.5pp > 5pp"
+    "market gap 5.6pp > 5pp"
    ]
   }
  ],
@@ -894,24 +363,24 @@
     },
     "market": {
      "esito_riferimento": "1",
-     "bookmaker_odds": 9,
-     "book": "Unibet (NL)",
+     "bookmaker_odds": 8.8,
+     "book": "Matchbook",
      "n_book": 24,
-     "no_vig_probability": 0.119
+     "no_vig_probability": 0.121
     },
     "value": {
      "fair_odds": 6.369,
-     "edge": 0.038,
-     "ev": 0.413
+     "edge": 0.036,
+     "ev": 0.3816
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.0397,
+     "agreement_scarto": 0.0377,
      "confidence": 60,
      "data_quality": 58
     },
     "market_gap": {
-     "valore": 0.038,
+     "valore": 0.036,
      "livello": "LIEVE",
      "etichetta": null
     },
@@ -919,7 +388,7 @@
     "value_class": "VALUE",
     "best_pick_idoneo": false,
     "best_pick_motivi_esclusione": [
-     "quota 9.00 > 8"
+     "quota 8.80 > 8"
     ],
     "opportunity_score": 0.737,
     "contesto": {
@@ -939,20 +408,20 @@
       "current_season_contribution_pct": 5.6
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Cagliari\" il 15.7% contro il 11.9% del mercato. La quota fair e' 6.37 contro una quota disponibile di 9.00. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Cagliari\" il 15.7% contro il 12.1% del mercato. La quota fair e' 6.37 contro una quota disponibile di 8.80. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "mercato": "Multigol 1-3",
    "prob": 0.571,
-   "why": "Gol attesi 0.97 contro 2.20, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.1%. Sul segno 1 il modello dice 15.7% contro il 11.9% del consenso di 24 bookmaker, miglior prezzo 9.00 su Unibet (NL).",
+   "why": "Gol attesi 0.97 contro 2.20, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.1%. Sul segno 1 il modello dice 15.7% contro il 12.1% del consenso di 24 bookmaker, miglior prezzo 8.80 su Matchbook.",
    "src": "modello xG Dixon-Coles + confronto bookmaker",
    "confronto": {
     "esito": "1",
     "probModello": 0.157,
-    "probMercato": 0.119,
-    "prezzo": 9,
-    "book": "Unibet (NL)",
+    "probMercato": 0.121,
+    "prezzo": 8.8,
+    "book": "Matchbook",
     "nBook": 24,
-    "valore": 0.416
+    "valore": 0.384
    },
    "model_version": "football-v1-baseline"
   },
@@ -987,24 +456,24 @@
     },
     "market": {
      "esito_riferimento": "1",
-     "bookmaker_odds": 9,
-     "book": "Unibet (NL)",
+     "bookmaker_odds": 8.8,
+     "book": "Matchbook",
      "n_book": 24,
-     "no_vig_probability": 0.119
+     "no_vig_probability": 0.121
     },
     "value": {
      "fair_odds": 6.369,
-     "edge": 0.038,
-     "ev": 0.413
+     "edge": 0.036,
+     "ev": 0.3816
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.0397,
+     "agreement_scarto": 0.0377,
      "confidence": 60,
      "data_quality": 58
     },
     "market_gap": {
-     "valore": 0.038,
+     "valore": 0.036,
      "livello": "LIEVE",
      "etichetta": null
     },
@@ -1012,7 +481,7 @@
     "value_class": "VALUE",
     "best_pick_idoneo": false,
     "best_pick_motivi_esclusione": [
-     "quota 9.00 > 8"
+     "quota 8.80 > 8"
     ],
     "opportunity_score": 0.737,
     "contesto": {
@@ -1032,11 +501,11 @@
       "current_season_contribution_pct": 5.6
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Cagliari\" il 15.7% contro il 11.9% del mercato. La quota fair e' 6.37 contro una quota disponibile di 9.00. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Cagliari\" il 15.7% contro il 12.1% del mercato. La quota fair e' 6.37 contro una quota disponibile di 8.80. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "mercato": "12",
    "prob": 0.816,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 0.97 contro 2.20, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.6%. Sul segno 1 il modello dice 15.7% contro il 11.9% del consenso di 24 bookmaker, miglior prezzo 9.00 su Unibet (NL).",
+   "why": "Versione prudente sulla stessa partita. Gol attesi 0.97 contro 2.20, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.6%. Sul segno 1 il modello dice 15.7% contro il 12.1% del consenso di 24 bookmaker, miglior prezzo 8.80 su Matchbook.",
    "src": "modello xG Dixon-Coles",
    "model_version": "football-v1-baseline"
   },
@@ -1071,24 +540,24 @@
     },
     "market": {
      "esito_riferimento": "1",
-     "bookmaker_odds": 9,
-     "book": "Unibet (NL)",
+     "bookmaker_odds": 8.8,
+     "book": "Matchbook",
      "n_book": 24,
-     "no_vig_probability": 0.119
+     "no_vig_probability": 0.121
     },
     "value": {
      "fair_odds": 6.369,
-     "edge": 0.038,
-     "ev": 0.413
+     "edge": 0.036,
+     "ev": 0.3816
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.0397,
+     "agreement_scarto": 0.0377,
      "confidence": 60,
      "data_quality": 58
     },
     "market_gap": {
-     "valore": 0.038,
+     "valore": 0.036,
      "livello": "LIEVE",
      "etichetta": null
     },
@@ -1096,7 +565,7 @@
     "value_class": "VALUE",
     "best_pick_idoneo": false,
     "best_pick_motivi_esclusione": [
-     "quota 9.00 > 8"
+     "quota 8.80 > 8"
     ],
     "opportunity_score": 0.737,
     "contesto": {
@@ -1116,22 +585,22 @@
       "current_season_contribution_pct": 5.6
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Cagliari\" il 15.7% contro il 11.9% del mercato. La quota fair e' 6.37 contro una quota disponibile di 9.00. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Cagliari\" il 15.7% contro il 12.1% del mercato. La quota fair e' 6.37 contro una quota disponibile di 8.80. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "tipo": "sorpresa",
    "mercato": "Cagliari vincente",
    "prob": 0.157,
-   "prezzo": 9,
-   "why": "Il modello da questo esito al 15.7%, il consenso di 24 bookmaker al 11.9%. Al prezzo migliore, 9.00 su Unibet (NL), il valore atteso e' 41.6%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "prezzo": 8.8,
+   "why": "Il modello da questo esito al 15.7%, il consenso di 24 bookmaker al 12.1%. Al prezzo migliore, 8.80 su Matchbook, il valore atteso e' 38.4%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
    "src": "modello xG Dixon-Coles + confronto bookmaker",
    "confronto": {
     "esito": "1",
     "probModello": 0.157,
-    "probMercato": 0.119,
-    "prezzo": 9,
-    "book": "Unibet (NL)",
+    "probMercato": 0.121,
+    "prezzo": 8.8,
+    "book": "Matchbook",
     "nBook": 24,
-    "valore": 0.416
+    "valore": 0.384
    },
    "model_version": "football-v1-baseline"
   },
@@ -1166,24 +635,24 @@
     },
     "market": {
      "esito_riferimento": "2",
-     "bookmaker_odds": 4,
-     "book": "Matchbook",
+     "bookmaker_odds": 4.01,
+     "book": "1xBet",
      "n_book": 24,
-     "no_vig_probability": 0.263
+     "no_vig_probability": 0.259
     },
     "value": {
      "fair_odds": 3.333,
-     "edge": 0.037,
-     "ev": 0.2
+     "edge": 0.041,
+     "ev": 0.203
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.037,
+     "agreement_scarto": 0.041,
      "confidence": 60,
      "data_quality": 58
     },
     "market_gap": {
-     "valore": 0.037,
+     "valore": 0.041,
      "livello": "LIEVE",
      "etichetta": null
     },
@@ -1191,7 +660,7 @@
     "value_class": "VALUE",
     "best_pick_idoneo": true,
     "best_pick_motivi_esclusione": [],
-    "opportunity_score": 0.667,
+    "opportunity_score": 0.6712,
     "contesto": {
      "lineup_injury_disponibile": false,
      "peso_predittivo": 0,
@@ -1209,20 +678,20 @@
       "current_season_contribution_pct": 5.6
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Genoa\" il 30.0% contro il 26.3% del mercato. La quota fair e' 3.33 contro una quota disponibile di 4.00. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Genoa\" il 30.0% contro il 25.9% del mercato. La quota fair e' 3.33 contro una quota disponibile di 4.01. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "mercato": "Multigol trasferta 1-2",
    "prob": 0.558,
-   "why": "Gol attesi 1.31 contro 1.03, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.8%. Sul segno 2 il modello dice 30.0% contro il 26.3% del consenso di 24 bookmaker, miglior prezzo 4.00 su Matchbook.",
+   "why": "Gol attesi 1.31 contro 1.03, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.8%. Sul segno 2 il modello dice 30.0% contro il 25.9% del consenso di 24 bookmaker, miglior prezzo 4.01 su 1xBet.",
    "src": "modello xG Dixon-Coles + confronto bookmaker",
    "confronto": {
     "esito": "2",
     "probModello": 0.3,
-    "probMercato": 0.263,
-    "prezzo": 4,
-    "book": "Matchbook",
+    "probMercato": 0.259,
+    "prezzo": 4.01,
+    "book": "1xBet",
     "nBook": 24,
-    "valore": 0.199
+    "valore": 0.202
    },
    "model_version": "football-v1-baseline"
   },
@@ -1257,24 +726,24 @@
     },
     "market": {
      "esito_riferimento": "2",
-     "bookmaker_odds": 4,
-     "book": "Matchbook",
+     "bookmaker_odds": 4.01,
+     "book": "1xBet",
      "n_book": 24,
-     "no_vig_probability": 0.263
+     "no_vig_probability": 0.259
     },
     "value": {
      "fair_odds": 3.333,
-     "edge": 0.037,
-     "ev": 0.2
+     "edge": 0.041,
+     "ev": 0.203
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.037,
+     "agreement_scarto": 0.041,
      "confidence": 60,
      "data_quality": 58
     },
     "market_gap": {
-     "valore": 0.037,
+     "valore": 0.041,
      "livello": "LIEVE",
      "etichetta": null
     },
@@ -1282,7 +751,7 @@
     "value_class": "VALUE",
     "best_pick_idoneo": true,
     "best_pick_motivi_esclusione": [],
-    "opportunity_score": 0.667,
+    "opportunity_score": 0.6712,
     "contesto": {
      "lineup_injury_disponibile": false,
      "peso_predittivo": 0,
@@ -1300,11 +769,11 @@
       "current_season_contribution_pct": 5.6
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Genoa\" il 30.0% contro il 26.3% del mercato. La quota fair e' 3.33 contro una quota disponibile di 4.00. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Genoa\" il 30.0% contro il 25.9% del mercato. La quota fair e' 3.33 contro una quota disponibile di 4.01. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "mercato": "Multigol 1-4",
    "prob": 0.821,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.31 contro 1.03, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 82.1%. Sul segno 2 il modello dice 30.0% contro il 26.3% del consenso di 24 bookmaker, miglior prezzo 4.00 su Matchbook.",
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.31 contro 1.03, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 82.1%. Sul segno 2 il modello dice 30.0% contro il 25.9% del consenso di 24 bookmaker, miglior prezzo 4.01 su 1xBet.",
    "src": "modello xG Dixon-Coles",
    "model_version": "football-v1-baseline"
   },
@@ -1339,24 +808,24 @@
     },
     "market": {
      "esito_riferimento": "2",
-     "bookmaker_odds": 4,
-     "book": "Matchbook",
+     "bookmaker_odds": 4.01,
+     "book": "1xBet",
      "n_book": 24,
-     "no_vig_probability": 0.263
+     "no_vig_probability": 0.259
     },
     "value": {
      "fair_odds": 3.333,
-     "edge": 0.037,
-     "ev": 0.2
+     "edge": 0.041,
+     "ev": 0.203
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.037,
+     "agreement_scarto": 0.041,
      "confidence": 60,
      "data_quality": 58
     },
     "market_gap": {
-     "valore": 0.037,
+     "valore": 0.041,
      "livello": "LIEVE",
      "etichetta": null
     },
@@ -1364,7 +833,7 @@
     "value_class": "VALUE",
     "best_pick_idoneo": true,
     "best_pick_motivi_esclusione": [],
-    "opportunity_score": 0.667,
+    "opportunity_score": 0.6712,
     "contesto": {
      "lineup_injury_disponibile": false,
      "peso_predittivo": 0,
@@ -1382,22 +851,22 @@
       "current_season_contribution_pct": 5.6
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Genoa\" il 30.0% contro il 26.3% del mercato. La quota fair e' 3.33 contro una quota disponibile di 4.00. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Genoa\" il 30.0% contro il 25.9% del mercato. La quota fair e' 3.33 contro una quota disponibile di 4.01. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "tipo": "sorpresa",
    "mercato": "Genoa vincente",
    "prob": 0.3,
-   "prezzo": 4,
-   "why": "Il modello da questo esito al 30.0%, il consenso di 24 bookmaker al 26.3%. Al prezzo migliore, 4.00 su Matchbook, il valore atteso e' 19.9%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "prezzo": 4.01,
+   "why": "Il modello da questo esito al 30.0%, il consenso di 24 bookmaker al 25.9%. Al prezzo migliore, 4.01 su 1xBet, il valore atteso e' 20.2%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
    "src": "modello xG Dixon-Coles + confronto bookmaker",
    "confronto": {
     "esito": "2",
     "probModello": 0.3,
-    "probMercato": 0.263,
-    "prezzo": 4,
-    "book": "Matchbook",
+    "probMercato": 0.259,
+    "prezzo": 4.01,
+    "book": "1xBet",
     "nBook": 24,
-    "valore": 0.199
+    "valore": 0.202
    },
    "model_version": "football-v1-baseline"
   },
@@ -2502,24 +1971,24 @@
     },
     "market": {
      "esito_riferimento": "1",
-     "bookmaker_odds": 5.33,
+     "bookmaker_odds": 5.38,
      "book": "1xBet",
      "n_book": 24,
-     "no_vig_probability": 0.189
+     "no_vig_probability": 0.188
     },
     "value": {
      "fair_odds": 4.219,
-     "edge": 0.048,
-     "ev": 0.2632
+     "edge": 0.049,
+     "ev": 0.2751
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.048,
+     "agreement_scarto": 0.049,
      "confidence": 59,
      "data_quality": 60
     },
     "market_gap": {
-     "valore": 0.048,
+     "valore": 0.049,
      "livello": "LIEVE",
      "etichetta": null
     },
@@ -2545,20 +2014,20 @@
       "current_season_contribution_pct": 11
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Ipswich\" il 23.7% contro il 18.9% del mercato. La quota fair e' 4.22 contro una quota disponibile di 5.33. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Ipswich\" il 23.7% contro il 18.8% del mercato. La quota fair e' 4.22 contro una quota disponibile di 5.38. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "mercato": "Multigol 2-5",
    "prob": 0.574,
-   "why": "Gol attesi 2.01 contro 3.05, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.4%. Sul segno 1 il modello dice 23.7% contro il 18.9% del consenso di 24 bookmaker, miglior prezzo 5.33 su 1xBet.",
+   "why": "Gol attesi 2.01 contro 3.05, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.4%. Sul segno 1 il modello dice 23.7% contro il 18.8% del consenso di 24 bookmaker, miglior prezzo 5.38 su 1xBet.",
    "src": "modello xG Dixon-Coles + confronto bookmaker",
    "confronto": {
     "esito": "1",
     "probModello": 0.237,
-    "probMercato": 0.189,
-    "prezzo": 5.33,
+    "probMercato": 0.188,
+    "prezzo": 5.38,
     "book": "1xBet",
     "nBook": 24,
-    "valore": 0.262
+    "valore": 0.274
    },
    "model_version": "football-v1-baseline"
   },
@@ -2593,24 +2062,24 @@
     },
     "market": {
      "esito_riferimento": "1",
-     "bookmaker_odds": 5.33,
+     "bookmaker_odds": 5.38,
      "book": "1xBet",
      "n_book": 24,
-     "no_vig_probability": 0.189
+     "no_vig_probability": 0.188
     },
     "value": {
      "fair_odds": 4.219,
-     "edge": 0.048,
-     "ev": 0.2632
+     "edge": 0.049,
+     "ev": 0.2751
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.048,
+     "agreement_scarto": 0.049,
      "confidence": 59,
      "data_quality": 60
     },
     "market_gap": {
-     "valore": 0.048,
+     "valore": 0.049,
      "livello": "LIEVE",
      "etichetta": null
     },
@@ -2636,11 +2105,11 @@
       "current_season_contribution_pct": 11
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Ipswich\" il 23.7% contro il 18.9% del mercato. La quota fair e' 4.22 contro una quota disponibile di 5.33. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Ipswich\" il 23.7% contro il 18.8% del mercato. La quota fair e' 4.22 contro una quota disponibile di 5.38. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "mercato": "12",
    "prob": 0.823,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 2.01 contro 3.05, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 82.3%. Sul segno 1 il modello dice 23.7% contro il 18.9% del consenso di 24 bookmaker, miglior prezzo 5.33 su 1xBet.",
+   "why": "Versione prudente sulla stessa partita. Gol attesi 2.01 contro 3.05, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 82.3%. Sul segno 1 il modello dice 23.7% contro il 18.8% del consenso di 24 bookmaker, miglior prezzo 5.38 su 1xBet.",
    "src": "modello xG Dixon-Coles",
    "model_version": "football-v1-baseline"
   },
@@ -2675,24 +2144,24 @@
     },
     "market": {
      "esito_riferimento": "1",
-     "bookmaker_odds": 5.33,
+     "bookmaker_odds": 5.38,
      "book": "1xBet",
      "n_book": 24,
-     "no_vig_probability": 0.189
+     "no_vig_probability": 0.188
     },
     "value": {
      "fair_odds": 4.219,
-     "edge": 0.048,
-     "ev": 0.2632
+     "edge": 0.049,
+     "ev": 0.2751
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.048,
+     "agreement_scarto": 0.049,
      "confidence": 59,
      "data_quality": 60
     },
     "market_gap": {
-     "valore": 0.048,
+     "valore": 0.049,
      "livello": "LIEVE",
      "etichetta": null
     },
@@ -2718,22 +2187,22 @@
       "current_season_contribution_pct": 11
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Ipswich\" il 23.7% contro il 18.9% del mercato. La quota fair e' 4.22 contro una quota disponibile di 5.33. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Ipswich\" il 23.7% contro il 18.8% del mercato. La quota fair e' 4.22 contro una quota disponibile di 5.38. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "tipo": "sorpresa",
    "mercato": "Ipswich vincente",
    "prob": 0.237,
-   "prezzo": 5.33,
-   "why": "Il modello da questo esito al 23.7%, il consenso di 24 bookmaker al 18.9%. Al prezzo migliore, 5.33 su 1xBet, il valore atteso e' 26.2%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "prezzo": 5.38,
+   "why": "Il modello da questo esito al 23.7%, il consenso di 24 bookmaker al 18.8%. Al prezzo migliore, 5.38 su 1xBet, il valore atteso e' 27.4%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
    "src": "modello xG Dixon-Coles + confronto bookmaker",
    "confronto": {
     "esito": "1",
     "probModello": 0.237,
-    "probMercato": 0.189,
-    "prezzo": 5.33,
+    "probMercato": 0.188,
+    "prezzo": 5.38,
     "book": "1xBet",
     "nBook": 24,
-    "valore": 0.262
+    "valore": 0.274
    },
    "model_version": "football-v1-baseline"
   },
@@ -2771,21 +2240,21 @@
      "bookmaker_odds": 2.88,
      "book": "Matchbook",
      "n_book": 21,
-     "no_vig_probability": 0.348
+     "no_vig_probability": 0.349
     },
     "value": {
      "fair_odds": 2.469,
-     "edge": 0.057,
+     "edge": 0.056,
      "ev": 0.1664
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.057,
+     "agreement_scarto": 0.056,
      "confidence": 47,
      "data_quality": 60
     },
     "market_gap": {
-     "valore": 0.057,
+     "valore": 0.056,
      "livello": "SIGNIFICATIVA",
      "etichetta": null
     },
@@ -2794,7 +2263,7 @@
     "best_pick_idoneo": false,
     "best_pick_motivi_esclusione": [
      "confidence 47 < 55",
-     "market gap 5.7pp > 5pp"
+     "market gap 5.6pp > 5pp"
     ],
     "opportunity_score": 0.584,
     "contesto": {
@@ -2814,16 +2283,16 @@
       "current_season_contribution_pct": 10.7
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Celta Vigo\" il 40.5% contro il 34.8% del mercato. La quota fair e' 2.47 contro una quota disponibile di 2.88. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Celta Vigo\" il 40.5% contro il 34.9% del mercato. La quota fair e' 2.47 contro una quota disponibile di 2.88. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "mercato": "Under 2.5",
    "prob": 0.55,
-   "why": "Gol attesi 1.32 contro 1.15, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.0%. Sul segno 1 il modello dice 40.5% contro il 34.8% del consenso di 21 bookmaker, miglior prezzo 2.88 su Matchbook.",
+   "why": "Gol attesi 1.32 contro 1.15, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.0%. Sul segno 1 il modello dice 40.5% contro il 34.9% del consenso di 21 bookmaker, miglior prezzo 2.88 su Matchbook.",
    "src": "modello xG Dixon-Coles + confronto bookmaker",
    "confronto": {
     "esito": "1",
     "probModello": 0.405,
-    "probMercato": 0.348,
+    "probMercato": 0.349,
     "prezzo": 2.88,
     "book": "Matchbook",
     "nBook": 21,
@@ -2865,21 +2334,21 @@
      "bookmaker_odds": 2.88,
      "book": "Matchbook",
      "n_book": 21,
-     "no_vig_probability": 0.348
+     "no_vig_probability": 0.349
     },
     "value": {
      "fair_odds": 2.469,
-     "edge": 0.057,
+     "edge": 0.056,
      "ev": 0.1664
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.057,
+     "agreement_scarto": 0.056,
      "confidence": 47,
      "data_quality": 60
     },
     "market_gap": {
-     "valore": 0.057,
+     "valore": 0.056,
      "livello": "SIGNIFICATIVA",
      "etichetta": null
     },
@@ -2888,7 +2357,7 @@
     "best_pick_idoneo": false,
     "best_pick_motivi_esclusione": [
      "confidence 47 < 55",
-     "market gap 5.7pp > 5pp"
+     "market gap 5.6pp > 5pp"
     ],
     "opportunity_score": 0.584,
     "contesto": {
@@ -2908,11 +2377,11 @@
       "current_season_contribution_pct": 10.7
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Celta Vigo\" il 40.5% contro il 34.8% del mercato. La quota fair e' 2.47 contro una quota disponibile di 2.88. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Celta Vigo\" il 40.5% contro il 34.9% del mercato. La quota fair e' 2.47 contro una quota disponibile di 2.88. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "mercato": "Multigol 1-4",
    "prob": 0.81,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.32 contro 1.15, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.0%. Sul segno 1 il modello dice 40.5% contro il 34.8% del consenso di 21 bookmaker, miglior prezzo 2.88 su Matchbook.",
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.32 contro 1.15, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.0%. Sul segno 1 il modello dice 40.5% contro il 34.9% del consenso di 21 bookmaker, miglior prezzo 2.88 su Matchbook.",
    "src": "modello xG Dixon-Coles",
    "model_version": "football-v1-baseline"
   },
@@ -2950,21 +2419,21 @@
      "bookmaker_odds": 2.88,
      "book": "Matchbook",
      "n_book": 21,
-     "no_vig_probability": 0.348
+     "no_vig_probability": 0.349
     },
     "value": {
      "fair_odds": 2.469,
-     "edge": 0.057,
+     "edge": 0.056,
      "ev": 0.1664
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.057,
+     "agreement_scarto": 0.056,
      "confidence": 47,
      "data_quality": 60
     },
     "market_gap": {
-     "valore": 0.057,
+     "valore": 0.056,
      "livello": "SIGNIFICATIVA",
      "etichetta": null
     },
@@ -2973,7 +2442,7 @@
     "best_pick_idoneo": false,
     "best_pick_motivi_esclusione": [
      "confidence 47 < 55",
-     "market gap 5.7pp > 5pp"
+     "market gap 5.6pp > 5pp"
     ],
     "opportunity_score": 0.584,
     "contesto": {
@@ -2993,18 +2462,18 @@
       "current_season_contribution_pct": 10.7
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Celta Vigo\" il 40.5% contro il 34.8% del mercato. La quota fair e' 2.47 contro una quota disponibile di 2.88. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Celta Vigo\" il 40.5% contro il 34.9% del mercato. La quota fair e' 2.47 contro una quota disponibile di 2.88. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "tipo": "sorpresa",
    "mercato": "Celta Vigo vincente",
    "prob": 0.405,
    "prezzo": 2.88,
-   "why": "Il modello da questo esito al 40.5%, il consenso di 21 bookmaker al 34.8%. Al prezzo migliore, 2.88 su Matchbook, il valore atteso e' 16.6%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "why": "Il modello da questo esito al 40.5%, il consenso di 21 bookmaker al 34.9%. Al prezzo migliore, 2.88 su Matchbook, il valore atteso e' 16.6%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
    "src": "modello xG Dixon-Coles + confronto bookmaker",
    "confronto": {
     "esito": "1",
     "probModello": 0.405,
-    "probMercato": 0.348,
+    "probMercato": 0.349,
     "prezzo": 2.88,
     "book": "Matchbook",
     "nBook": 21,
@@ -3953,24 +3422,24 @@
     },
     "market": {
      "esito_riferimento": "2",
-     "bookmaker_odds": 3.35,
-     "book": "Unibet (SE)",
+     "bookmaker_odds": 3.4,
+     "book": "Betfair",
      "n_book": 23,
-     "no_vig_probability": 0.297
+     "no_vig_probability": 0.296
     },
     "value": {
      "fair_odds": 2.899,
-     "edge": 0.048,
-     "ev": 0.1557
+     "edge": 0.049,
+     "ev": 0.173
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.048,
+     "agreement_scarto": 0.049,
      "confidence": 59,
      "data_quality": 58
     },
     "market_gap": {
-     "valore": 0.048,
+     "valore": 0.049,
      "livello": "LIEVE",
      "etichetta": null
     },
@@ -3978,7 +3447,7 @@
     "value_class": "VALUE",
     "best_pick_idoneo": true,
     "best_pick_motivi_esclusione": [],
-    "opportunity_score": 0.602,
+    "opportunity_score": 0.6262,
     "contesto": {
      "lineup_injury_disponibile": false,
      "peso_predittivo": 0,
@@ -3996,20 +3465,20 @@
       "current_season_contribution_pct": 6.4
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Marseille\" il 34.5% contro il 29.7% del mercato. La quota fair e' 2.90 contro una quota disponibile di 3.35. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Marseille\" il 34.5% contro il 29.6% del mercato. La quota fair e' 2.90 contro una quota disponibile di 3.40. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "mercato": "Multigol casa 1-2",
    "prob": 0.552,
-   "why": "Gol attesi 1.91 contro 1.72, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.2%. Sul segno 2 il modello dice 34.5% contro il 29.7% del consenso di 23 bookmaker, miglior prezzo 3.35 su Unibet (SE).",
+   "why": "Gol attesi 1.91 contro 1.72, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.2%. Sul segno 2 il modello dice 34.5% contro il 29.6% del consenso di 23 bookmaker, miglior prezzo 3.40 su Betfair.",
    "src": "modello xG Dixon-Coles + confronto bookmaker",
    "confronto": {
     "esito": "2",
     "probModello": 0.345,
-    "probMercato": 0.297,
-    "prezzo": 3.35,
-    "book": "Unibet (SE)",
+    "probMercato": 0.296,
+    "prezzo": 3.4,
+    "book": "Betfair",
     "nBook": 23,
-    "valore": 0.157
+    "valore": 0.174
    },
    "model_version": "football-v1-baseline"
   },
@@ -4044,24 +3513,24 @@
     },
     "market": {
      "esito_riferimento": "2",
-     "bookmaker_odds": 3.35,
-     "book": "Unibet (SE)",
+     "bookmaker_odds": 3.4,
+     "book": "Betfair",
      "n_book": 23,
-     "no_vig_probability": 0.297
+     "no_vig_probability": 0.296
     },
     "value": {
      "fair_odds": 2.899,
-     "edge": 0.048,
-     "ev": 0.1557
+     "edge": 0.049,
+     "ev": 0.173
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.048,
+     "agreement_scarto": 0.049,
      "confidence": 59,
      "data_quality": 58
     },
     "market_gap": {
-     "valore": 0.048,
+     "valore": 0.049,
      "livello": "LIEVE",
      "etichetta": null
     },
@@ -4069,7 +3538,7 @@
     "value_class": "VALUE",
     "best_pick_idoneo": true,
     "best_pick_motivi_esclusione": [],
-    "opportunity_score": 0.602,
+    "opportunity_score": 0.6262,
     "contesto": {
      "lineup_injury_disponibile": false,
      "peso_predittivo": 0,
@@ -4087,11 +3556,11 @@
       "current_season_contribution_pct": 6.4
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Marseille\" il 34.5% contro il 29.7% del mercato. La quota fair e' 2.90 contro una quota disponibile di 3.35. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Marseille\" il 34.5% contro il 29.6% del mercato. La quota fair e' 2.90 contro una quota disponibile di 3.40. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "mercato": "Multigol 1-5",
    "prob": 0.805,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.91 contro 1.72, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.5%. Sul segno 2 il modello dice 34.5% contro il 29.7% del consenso di 23 bookmaker, miglior prezzo 3.35 su Unibet (SE).",
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.91 contro 1.72, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.5%. Sul segno 2 il modello dice 34.5% contro il 29.6% del consenso di 23 bookmaker, miglior prezzo 3.40 su Betfair.",
    "src": "modello xG Dixon-Coles",
    "model_version": "football-v1-baseline"
   },
@@ -4126,24 +3595,24 @@
     },
     "market": {
      "esito_riferimento": "2",
-     "bookmaker_odds": 3.35,
-     "book": "Unibet (SE)",
+     "bookmaker_odds": 3.4,
+     "book": "Betfair",
      "n_book": 23,
-     "no_vig_probability": 0.297
+     "no_vig_probability": 0.296
     },
     "value": {
      "fair_odds": 2.899,
-     "edge": 0.048,
-     "ev": 0.1557
+     "edge": 0.049,
+     "ev": 0.173
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.048,
+     "agreement_scarto": 0.049,
      "confidence": 59,
      "data_quality": 58
     },
     "market_gap": {
-     "valore": 0.048,
+     "valore": 0.049,
      "livello": "LIEVE",
      "etichetta": null
     },
@@ -4151,7 +3620,7 @@
     "value_class": "VALUE",
     "best_pick_idoneo": true,
     "best_pick_motivi_esclusione": [],
-    "opportunity_score": 0.602,
+    "opportunity_score": 0.6262,
     "contesto": {
      "lineup_injury_disponibile": false,
      "peso_predittivo": 0,
@@ -4169,22 +3638,22 @@
       "current_season_contribution_pct": 6.4
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Marseille\" il 34.5% contro il 29.7% del mercato. La quota fair e' 2.90 contro una quota disponibile di 3.35. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Marseille\" il 34.5% contro il 29.6% del mercato. La quota fair e' 2.90 contro una quota disponibile di 3.40. Il modello e il mercato mostrano un disaccordo moderato."
    },
    "tipo": "sorpresa",
    "mercato": "Marseille vincente",
    "prob": 0.345,
-   "prezzo": 3.35,
-   "why": "Il modello da questo esito al 34.5%, il consenso di 23 bookmaker al 29.7%. Al prezzo migliore, 3.35 su Unibet (SE), il valore atteso e' 15.7%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "prezzo": 3.4,
+   "why": "Il modello da questo esito al 34.5%, il consenso di 23 bookmaker al 29.6%. Al prezzo migliore, 3.40 su Betfair, il valore atteso e' 17.4%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
    "src": "modello xG Dixon-Coles + confronto bookmaker",
    "confronto": {
     "esito": "2",
     "probModello": 0.345,
-    "probMercato": 0.297,
-    "prezzo": 3.35,
-    "book": "Unibet (SE)",
+    "probMercato": 0.296,
+    "prezzo": 3.4,
+    "book": "Betfair",
     "nBook": 23,
-    "valore": 0.157
+    "valore": 0.174
    },
    "model_version": "football-v1-baseline"
   },
@@ -4629,6 +4098,278 @@
   },
   {
    "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Paris Saint Germain - Monaco",
+   "quando": "ven 04/09, 21:05",
+   "ore": 120,
+   "match": "psg-monaco",
+   "inizio": "2026-09-04T19:05:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6289,
+     "PX": 0.2086,
+     "P2": 0.1624,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5951,
+     "PX": 0.2511,
+     "P2": 0.1537,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.228,
+     "lambda_away": 1.066
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 8.1,
+     "book": "1xBet",
+     "n_book": 15,
+     "no_vig_probability": 0.149
+    },
+    "value": {
+     "fair_odds": 6.173,
+     "edge": 0.013,
+     "ev": 0.3122
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.013,
+     "confidence": 86,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.013,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "HIGH_VARIANCE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "quota 8.10 > 8"
+    ],
+    "opportunity_score": 0.895,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 88,
+      "current_season_contribution_pct": 12
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Monaco\" il 16.2% contro il 14.9% del mercato. La quota fair e' 6.17 contro una quota disponibile di 8.10. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.563,
+   "why": "Gol attesi 2.23 contro 1.07, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.3%. Sul segno 2 il modello dice 16.2% contro il 14.9% del consenso di 15 bookmaker, miglior prezzo 8.10 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.162,
+    "probMercato": 0.149,
+    "prezzo": 8.1,
+    "book": "1xBet",
+    "nBook": 15,
+    "valore": 0.316
+   },
+   "model_version": "football-v1-baseline"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Paris Saint Germain - Monaco",
+   "quando": "ven 04/09, 21:05",
+   "ore": 120,
+   "match": "psg-monaco",
+   "inizio": "2026-09-04T19:05:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6289,
+     "PX": 0.2086,
+     "P2": 0.1624,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5951,
+     "PX": 0.2511,
+     "P2": 0.1537,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.228,
+     "lambda_away": 1.066
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 8.1,
+     "book": "1xBet",
+     "n_book": 15,
+     "no_vig_probability": 0.149
+    },
+    "value": {
+     "fair_odds": 6.173,
+     "edge": 0.013,
+     "ev": 0.3122
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.013,
+     "confidence": 86,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.013,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "HIGH_VARIANCE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "quota 8.10 > 8"
+    ],
+    "opportunity_score": 0.895,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 88,
+      "current_season_contribution_pct": 12
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Monaco\" il 16.2% contro il 14.9% del mercato. La quota fair e' 6.17 contro una quota disponibile di 8.10. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "1X",
+   "prob": 0.838,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 2.23 contro 1.07, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 83.8%. Sul segno 2 il modello dice 16.2% contro il 14.9% del consenso di 15 bookmaker, miglior prezzo 8.10 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Paris Saint Germain - Monaco",
+   "quando": "ven 04/09, 21:05",
+   "ore": 120,
+   "match": "psg-monaco",
+   "inizio": "2026-09-04T19:05:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6289,
+     "PX": 0.2086,
+     "P2": 0.1624,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5951,
+     "PX": 0.2511,
+     "P2": 0.1537,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.228,
+     "lambda_away": 1.066
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 8.1,
+     "book": "1xBet",
+     "n_book": 15,
+     "no_vig_probability": 0.149
+    },
+    "value": {
+     "fair_odds": 6.173,
+     "edge": 0.013,
+     "ev": 0.3122
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.013,
+     "confidence": 86,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.013,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "HIGH_VARIANCE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "quota 8.10 > 8"
+    ],
+    "opportunity_score": 0.895,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 88,
+      "current_season_contribution_pct": 12
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Monaco\" il 16.2% contro il 14.9% del mercato. La quota fair e' 6.17 contro una quota disponibile di 8.10. Il modello e il mercato mostrano un accordo alto."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Monaco vincente",
+   "prob": 0.162,
+   "prezzo": 8.1,
+   "why": "Il modello da questo esito al 16.2%, il consenso di 15 bookmaker al 14.9%. Al prezzo migliore, 8.10 su 1xBet, il valore atteso e' 31.6%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.162,
+    "probMercato": 0.149,
+    "prezzo": 8.1,
+    "book": "1xBet",
+    "nBook": 15,
+    "valore": 0.316
+   },
+   "model_version": "football-v1-baseline"
+  },
+  {
+   "sport": "calcio",
    "comp": "Bundesliga",
    "evento": "VfB Stuttgart - FC Cologne",
    "quando": "ven 04/09, 20:30",
@@ -4903,8 +4644,8 @@
    "inizio": "2026-08-30T19:00:00.000Z",
    "fonte": "consenso",
    "mercato": "Minnesota Lynx vincente",
-   "prob": 0.572,
-   "why": "Nessun modello xG copre WNBA: questa e la probabilita che il mercato sta prezzando, 57.2%, ricavata togliendo il margine alle quote di 13 bookmaker e facendone la media. Miglior prezzo 1.72 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.575,
+   "why": "Nessun modello xG copre WNBA: questa e la probabilita che il mercato sta prezzando, 57.5%, ricavata togliendo il margine alle quote di 13 bookmaker e facendone la media. Miglior prezzo 1.72 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 13 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -4918,8 +4659,8 @@
    "inizio": "2026-08-30T21:00:00.000Z",
    "fonte": "consenso",
    "mercato": "Los Angeles Sparks vincente",
-   "prob": 0.516,
-   "why": "Nessun modello xG copre WNBA: questa e la probabilita che il mercato sta prezzando, 51.6%, ricavata togliendo il margine alle quote di 14 bookmaker e facendone la media. Miglior prezzo 1.89 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.517,
+   "why": "Nessun modello xG copre WNBA: questa e la probabilita che il mercato sta prezzando, 51.7%, ricavata togliendo il margine alle quote di 14 bookmaker e facendone la media. Miglior prezzo 1.89 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 14 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -4933,8 +4674,8 @@
    "inizio": "2026-08-30T23:00:00.000Z",
    "fonte": "consenso",
    "mercato": "Golden State Valkyries vincente",
-   "prob": 0.662,
-   "why": "Nessun modello xG copre WNBA: questa e la probabilita che il mercato sta prezzando, 66.2%, ricavata togliendo il margine alle quote di 14 bookmaker e facendone la media. Miglior prezzo 1.50 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.663,
+   "why": "Nessun modello xG copre WNBA: questa e la probabilita che il mercato sta prezzando, 66.3%, ricavata togliendo il margine alle quote di 14 bookmaker e facendone la media. Miglior prezzo 1.49 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 14 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -4948,8 +4689,8 @@
    "inizio": "2026-08-31T00:30:00.000Z",
    "fonte": "consenso",
    "mercato": "Dallas Wings vincente",
-   "prob": 0.89,
-   "why": "Nessun modello xG copre WNBA: questa e la probabilita che il mercato sta prezzando, 89.0%, ricavata togliendo il margine alle quote di 14 bookmaker e facendone la media. Miglior prezzo 1.10 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.891,
+   "why": "Nessun modello xG copre WNBA: questa e la probabilita che il mercato sta prezzando, 89.1%, ricavata togliendo il margine alle quote di 14 bookmaker e facendone la media. Miglior prezzo 1.10 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 14 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -4963,9 +4704,9 @@
    "inizio": "2026-08-30T18:19:04.000Z",
    "fonte": "consenso",
    "mercato": "Marta Kostyuk vincente",
-   "prob": 0.886,
-   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 88.6%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.13 su GTbets. Non e un pronostico indipendente: e la lavagna, ripulita.",
-   "src": "consenso di 20 bookmaker, nessun modello indipendente",
+   "prob": 0.935,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 93.5%, ricavata togliendo il margine alle quote di 13 bookmaker e facendone la media. Miglior prezzo 1.08 su MyBookie.ag. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 13 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
   {
@@ -4978,34 +4719,19 @@
    "inizio": "2026-08-30T18:21:52.000Z",
    "fonte": "consenso",
    "mercato": "Lucrezia Stefanini vincente",
-   "prob": 0.515,
-   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 51.5%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 2.12 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
-   "src": "consenso di 19 bookmaker, nessun modello indipendente",
-   "model_version": "football-v1-baseline"
-  },
-  {
-   "sport": "tennis",
-   "comp": "WTA US Open",
-   "evento": "Hanne Vandewinkel - Karolina Pliskova",
-   "quando": "dom 30/08, 20:35",
-   "ore": 0,
-   "match": "hanne vandewinkel - karolina pliskova",
-   "inizio": "2026-08-30T18:35:00.000Z",
-   "fonte": "consenso",
-   "mercato": "Hanne Vandewinkel vincente",
-   "prob": 0.509,
-   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 50.9%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.97 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
-   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "prob": 0.524,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 52.4%, ricavata togliendo il margine alle quote di 16 bookmaker e facendone la media. Miglior prezzo 2.07 su BetOnline.ag. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 16 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
   {
    "sport": "tennis",
    "comp": "WTA US Open",
    "evento": "Emiliana Arango - Xinyu Wang",
-   "quando": "dom 30/08, 20:40",
+   "quando": "dom 30/08, 20:50",
    "ore": 0,
    "match": "emiliana arango - xinyu wang",
-   "inizio": "2026-08-30T18:40:00.000Z",
+   "inizio": "2026-08-30T18:50:00.000Z",
    "fonte": "consenso",
    "mercato": "Xinyu Wang vincente",
    "prob": 0.731,
@@ -5031,16 +4757,16 @@
   {
    "sport": "tennis",
    "comp": "WTA US Open",
-   "evento": "Taylah Preston - Alycia Parks",
-   "quando": "dom 30/08, 21:30",
-   "ore": 1,
-   "match": "taylah preston - alycia parks",
-   "inizio": "2026-08-30T19:30:00.000Z",
+   "evento": "Hanne Vandewinkel - Karolina Pliskova",
+   "quando": "dom 30/08, 21:00",
+   "ore": 0,
+   "match": "hanne vandewinkel - karolina pliskova",
+   "inizio": "2026-08-30T19:00:00.000Z",
    "fonte": "consenso",
-   "mercato": "Alycia Parks vincente",
-   "prob": 0.506,
-   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 50.6%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.96 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
-   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "mercato": "Hanne Vandewinkel vincente",
+   "prob": 0.509,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 50.9%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.97 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 20 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
   {
@@ -5054,8 +4780,23 @@
    "fonte": "consenso",
    "mercato": "Katie Boulter vincente",
    "prob": 0.566,
-   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 56.6%, ricavata togliendo il margine alle quote di 16 bookmaker e facendone la media. Miglior prezzo 1.76 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 56.6%, ricavata togliendo il margine alle quote di 16 bookmaker e facendone la media. Miglior prezzo 1.75 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 16 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline"
+  },
+  {
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Taylah Preston - Alycia Parks",
+   "quando": "dom 30/08, 23:00",
+   "ore": 2,
+   "match": "taylah preston - alycia parks",
+   "inizio": "2026-08-30T21:00:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Alycia Parks vincente",
+   "prob": 0.507,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 50.7%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.96 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
   {
@@ -5143,8 +4884,8 @@
    "inizio": "2026-08-31T15:00:00.000Z",
    "fonte": "consenso",
    "mercato": "Sara Bejlek vincente",
-   "prob": 0.758,
-   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 75.8%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.29 su 888sport. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.757,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 75.7%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.29 su 888sport. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 20 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -5173,9 +4914,9 @@
    "inizio": "2026-08-31T15:00:00.000Z",
    "fonte": "consenso",
    "mercato": "Peyton Stearns vincente",
-   "prob": 0.715,
-   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 71.5%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.38 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
-   "src": "consenso di 20 bookmaker, nessun modello indipendente",
+   "prob": 0.714,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 71.4%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.38 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
   {
@@ -5188,8 +4929,8 @@
    "inizio": "2026-08-31T15:00:00.000Z",
    "fonte": "consenso",
    "mercato": "Karolina Muchova vincente",
-   "prob": 0.867,
-   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 86.7%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.12 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.868,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 86.8%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.12 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 20 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -5258,7 +4999,7 @@
    "comp": "WTA US Open",
    "evento": "Anna Blinkova - Anna Kalinskaya",
    "quando": "lun 31/08, 18:10",
-   "ore": 22,
+   "ore": 21,
    "match": "anna blinkova - anna kalinskaya",
    "inizio": "2026-08-31T16:10:00.000Z",
    "fonte": "consenso",
@@ -5273,7 +5014,7 @@
    "comp": "WTA US Open",
    "evento": "Aoi Ito - Oksana Selekhmeteva",
    "quando": "lun 31/08, 18:10",
-   "ore": 22,
+   "ore": 21,
    "match": "aoi ito - oksana selekhmeteva",
    "inizio": "2026-08-31T16:10:00.000Z",
    "fonte": "consenso",
@@ -5288,7 +5029,7 @@
    "comp": "WTA US Open",
    "evento": "Maja Chwalinska - Taylor Townsend",
    "quando": "lun 31/08, 18:10",
-   "ore": 22,
+   "ore": 21,
    "match": "maja chwalinska - taylor townsend",
    "inizio": "2026-08-31T16:10:00.000Z",
    "fonte": "consenso",
@@ -5303,7 +5044,7 @@
    "comp": "WTA US Open",
    "evento": "Nadia Podoroska - Simona Waltert",
    "quando": "lun 31/08, 18:10",
-   "ore": 22,
+   "ore": 21,
    "match": "nadia podoroska - simona waltert",
    "inizio": "2026-08-31T16:10:00.000Z",
    "fonte": "consenso",
@@ -5398,8 +5139,8 @@
    "inizio": "2026-08-31T18:00:00.000Z",
    "fonte": "consenso",
    "mercato": "Clara Tauson vincente",
-   "prob": 0.7,
-   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 70.0%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.42 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.701,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 70.1%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.42 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 19 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -5459,7 +5200,7 @@
    "fonte": "consenso",
    "mercato": "Katerina Siniakova vincente",
    "prob": 0.631,
-   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 63.1%, ricavata togliendo il margine alle quote di 18 bookmaker e facendone la media. Miglior prezzo 1.56 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 63.1%, ricavata togliendo il margine alle quote di 18 bookmaker e facendone la media. Miglior prezzo 1.55 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 18 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -5474,7 +5215,7 @@
    "fonte": "consenso",
    "mercato": "Liudmila Samsonova vincente",
    "prob": 0.696,
-   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 69.6%, ricavata togliendo il margine alle quote di 18 bookmaker e facendone la media. Miglior prezzo 1.42 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 69.6%, ricavata togliendo il margine alle quote di 18 bookmaker e facendone la media. Miglior prezzo 1.41 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 18 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -5639,8 +5380,8 @@
    "fonte": "consenso",
    "mercato": "Eva Lys vincente",
    "prob": 0.632,
-   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 63.2%, ricavata togliendo il margine alle quote di 18 bookmaker e facendone la media. Miglior prezzo 1.62 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
-   "src": "consenso di 18 bookmaker, nessun modello indipendente",
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 63.2%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.62 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 19 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
   {
@@ -5812,30 +5553,15 @@
    "sport": "tennis",
    "comp": "ATP US Open",
    "evento": "Thiago Agustin Tirante - Adrian Mannarino",
-   "quando": "dom 30/08, 20:30",
+   "quando": "dom 30/08, 20:45",
    "ore": 0,
    "match": "thiago agustin tirante - adrian mannarino",
-   "inizio": "2026-08-30T18:30:00.000Z",
+   "inizio": "2026-08-30T18:45:00.000Z",
    "fonte": "consenso",
    "mercato": "Thiago Agustin Tirante vincente",
    "prob": 0.703,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 70.3%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.42 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 70.3%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.41 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 21 bookmaker, nessun modello indipendente",
-   "model_version": "football-v1-baseline"
-  },
-  {
-   "sport": "tennis",
-   "comp": "ATP US Open",
-   "evento": "Toby Samuel - Tomas Machac",
-   "quando": "dom 30/08, 20:40",
-   "ore": 0,
-   "match": "toby samuel - tomas machac",
-   "inizio": "2026-08-30T18:40:00.000Z",
-   "fonte": "consenso",
-   "mercato": "Toby Samuel vincente",
-   "prob": 0.593,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 59.3%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.67 su 888sport. Non e un pronostico indipendente: e la lavagna, ripulita.",
-   "src": "consenso di 19 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
   {
@@ -5848,9 +5574,24 @@
    "inizio": "2026-08-30T18:50:00.000Z",
    "fonte": "consenso",
    "mercato": "Jenson Brooksby vincente",
-   "prob": 0.533,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 53.3%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.86 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.532,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 53.2%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.87 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 20 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline"
+  },
+  {
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Toby Samuel - Tomas Machac",
+   "quando": "dom 30/08, 20:50",
+   "ore": 0,
+   "match": "toby samuel - tomas machac",
+   "inizio": "2026-08-30T18:50:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Toby Samuel vincente",
+   "prob": 0.593,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 59.3%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.67 su 888sport. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 19 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
   {
@@ -5903,13 +5644,13 @@
    "comp": "ATP US Open",
    "evento": "Sebastian Gorzny - Raphael Collignon",
    "quando": "dom 30/08, 22:10",
-   "ore": 2,
+   "ore": 1,
    "match": "sebastian gorzny - raphael collignon",
    "inizio": "2026-08-30T20:10:00.000Z",
    "fonte": "consenso",
    "mercato": "Raphael Collignon vincente",
-   "prob": 0.852,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 85.2%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.15 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.851,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 85.1%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.15 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 19 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -5923,8 +5664,8 @@
    "inizio": "2026-08-30T20:50:00.000Z",
    "fonte": "consenso",
    "mercato": "Martin Landaluce vincente",
-   "prob": 0.505,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 50.5%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 2.04 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.506,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 50.6%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 2.04 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 21 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -5953,8 +5694,8 @@
    "inizio": "2026-08-30T23:00:00.000Z",
    "fonte": "consenso",
    "mercato": "Novak Djokovic vincente",
-   "prob": 0.816,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 81.6%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.19 su GTbets. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.817,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 81.7%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.19 su GTbets. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 21 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -5963,13 +5704,13 @@
    "comp": "ATP US Open",
    "evento": "Alexander Bublik - JJ Wolf",
    "quando": "lun 31/08, 02:10",
-   "ore": 6,
+   "ore": 5,
    "match": "alexander bublik - jj wolf",
    "inizio": "2026-08-31T00:10:00.000Z",
    "fonte": "consenso",
    "mercato": "Alexander Bublik vincente",
-   "prob": 0.676,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 67.6%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.47 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.677,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 67.7%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.47 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 21 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -5998,9 +5739,9 @@
    "inizio": "2026-08-31T15:00:00.000Z",
    "fonte": "consenso",
    "mercato": "Andrey Rublev vincente",
-   "prob": 0.723,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 72.3%, ricavata togliendo il margine alle quote di 8 bookmaker e facendone la media. Miglior prezzo 1.35 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
-   "src": "consenso di 8 bookmaker, nessun modello indipendente",
+   "prob": 0.722,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 72.2%, ricavata togliendo il margine alle quote di 5 bookmaker e facendone la media. Miglior prezzo 1.35 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 5 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
   {
@@ -6023,13 +5764,13 @@
    "comp": "ATP US Open",
    "evento": "Brandon Nakashima - Sebastian Baez",
    "quando": "lun 31/08, 18:10",
-   "ore": 22,
+   "ore": 21,
    "match": "brandon nakashima - sebastian baez",
    "inizio": "2026-08-31T16:10:00.000Z",
    "fonte": "consenso",
    "mercato": "Brandon Nakashima vincente",
-   "prob": 0.831,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 83.1%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.20 su GTbets. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.832,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 83.2%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.20 su GTbets. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 20 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -6038,7 +5779,7 @@
    "comp": "ATP US Open",
    "evento": "Damir Dzumhur - Hubert Hurkacz",
    "quando": "lun 31/08, 18:10",
-   "ore": 22,
+   "ore": 21,
    "match": "damir dzumhur - hubert hurkacz",
    "inizio": "2026-08-31T16:10:00.000Z",
    "fonte": "consenso",
@@ -6053,7 +5794,7 @@
    "comp": "ATP US Open",
    "evento": "Jurij Rodionov - Giovanni Mpetshi Perricard",
    "quando": "lun 31/08, 18:10",
-   "ore": 22,
+   "ore": 21,
    "match": "jurij rodionov - giovanni mpetshi perricard",
    "inizio": "2026-08-31T16:10:00.000Z",
    "fonte": "consenso",
@@ -6218,7 +5959,7 @@
    "comp": "ATP US Open",
    "evento": "Grigor Dimitrov - Alexei Popyrin",
    "quando": "lun 31/08, 21:10",
-   "ore": 25,
+   "ore": 24,
    "match": "grigor dimitrov - alexei popyrin",
    "inizio": "2026-08-31T19:10:00.000Z",
    "fonte": "consenso",
@@ -6253,8 +5994,8 @@
    "inizio": "2026-08-31T20:30:00.000Z",
    "fonte": "consenso",
    "mercato": "Learner Tien vincente",
-   "prob": 0.648,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 64.8%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.53 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.647,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 64.7%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.53 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 20 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -6268,8 +6009,8 @@
    "inizio": "2026-08-31T21:00:00.000Z",
    "fonte": "consenso",
    "mercato": "Felix Auger-Aliassime vincente",
-   "prob": 0.867,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 86.7%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.13 su GTbets. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.868,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 86.8%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.13 su GTbets. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 19 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -6283,8 +6024,8 @@
    "inizio": "2026-08-31T23:00:00.000Z",
    "fonte": "consenso",
    "mercato": "Ben Shelton vincente",
-   "prob": 0.843,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 84.3%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.15 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "prob": 0.844,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 84.4%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.15 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 19 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -6293,7 +6034,7 @@
    "comp": "ATP US Open",
    "evento": "Martin Damm Jr. - Frances Tiafoe",
    "quando": "mar 01/09, 02:10",
-   "ore": 30,
+   "ore": 29,
    "match": "martin damm jr. - frances tiafoe",
    "inizio": "2026-09-01T00:10:00.000Z",
    "fonte": "consenso",
@@ -6359,8 +6100,8 @@
    "fonte": "consenso",
    "mercato": "Arthur Gea vincente",
    "prob": 0.567,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 56.7%, ricavata togliendo il margine alle quote di 11 bookmaker e facendone la media. Miglior prezzo 1.69 su Pinnacle. Non e un pronostico indipendente: e la lavagna, ripulita.",
-   "src": "consenso di 11 bookmaker, nessun modello indipendente",
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 56.7%, ricavata togliendo il margine alle quote di 12 bookmaker e facendone la media. Miglior prezzo 1.70 su Coolbet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 12 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
   {
@@ -6509,7 +6250,7 @@
    "fonte": "consenso",
    "mercato": "Ignacio Buse vincente",
    "prob": 0.558,
-   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 55.8%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.75 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 55.8%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.76 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
    "src": "consenso di 20 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline"
   },
@@ -6593,7 +6334,7 @@
    "comp": "ATP US Open",
    "evento": "Alexander Zverev - Lorenzo Sonego",
    "quando": "mer 02/09, 02:10",
-   "ore": 54,
+   "ore": 53,
    "match": "alexander zverev - lorenzo sonego",
    "inizio": "2026-09-02T00:10:00.000Z",
    "fonte": "consenso",
