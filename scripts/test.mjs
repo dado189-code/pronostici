@@ -14,6 +14,7 @@ import { isotonicFit, isotonicPredict, applicaDrawCal, costruisciCalibratore } f
 import { fairOdds, ev, edge, agreement, dataQuality, confidence, classificaValore,
   marketGapInfo, classificaRischioQuota, idoneoBestPick, opportunityScore, evCappatoPerRanking } from './valore.mjs';
 import { costruisciCassaforte, costruisciQuota2, costruisciSorpresa } from './selezioni.mjs';
+import { dataLocale, oggiLocale, eDiOggi } from './tempo.mjs';
 
 let ok = 0, ko = 0;
 const fail = [];
@@ -550,6 +551,75 @@ function assertVero(nome, condizione, dettaglio = '') {
     const r = costruisciSorpresa([{ match: 'a', analisi: finta({ bookmakerOdds: 1.5, ev: 0.1 }) }]); // quota troppo bassa per essere sorpresa
     assertVero('costruisciSorpresa: nessun candidato in banda -> selezione null', r.selezione === null);
     assertVero('costruisciSorpresa: motivo dichiarato quando null', typeof r.motivo === 'string' && r.motivo.length > 0);
+  }
+
+  // ---------------- FILTRO "SOLO OGGI" (Europe/Rome) ----------------------
+  // Replica esattamente il pattern usato in build.mjs: filtrare PRIMA con
+  // eDiOggi/dataLocale, poi passare alle funzioni di selezione. Verifica che
+  // nessun evento futuro possa mai comparire nel risultato, qualunque sia il
+  // suo punteggio.
+  const TZ = 'Europe/Rome';
+  const OGGI = oggiLocale(TZ, new Date('2026-08-30T10:00:00Z')); // finge che "adesso" sia il 30/08 mattina UTC
+  assertVero('oggiLocale: coerente con la data di riferimento passata', OGGI === '2026-08-30', OGGI);
+
+  const isoOggiPomeriggio = '2026-08-30T18:00:00Z';       // 20:00 locale, 30/08
+  const isoOggiSeraTardi = '2026-08-30T22:30:00Z';        // 00:30 locale del 31/08 (CEST, UTC+2): NON e' oggi
+  const isoDomani = '2026-08-31T14:00:00Z';               // chiaramente domani
+  const isoSettimanaProssima = '2026-09-06T14:00:00Z';    // chiaramente futuro
+
+  assertVero('eDiOggi: partita pomeridiana di oggi -> true', eDiOggi(isoOggiPomeriggio, OGGI, TZ) === true);
+  assertVero('eDiOggi: kickoff 22:30 UTC = 00:30 locale (CEST) -> gia domani, false',
+    eDiOggi(isoOggiSeraTardi, OGGI, TZ) === false, dataLocale(isoOggiSeraTardi, TZ));
+  assertVero('eDiOggi: partita di domani -> false', eDiOggi(isoDomani, OGGI, TZ) === false);
+  assertVero('eDiOggi: partita della settimana prossima -> false', eDiOggi(isoSettimanaProssima, OGGI, TZ) === false);
+
+  // candidato con inizio, per il pool di Cassaforte/Quota2/Sorpresa
+  const candidatoConData = (match, inizio, over) => ({ match, evento: `Ev ${match}`, comp: 'Serie A', quando: 'x', inizio,
+    mercato: '1', prob: 0.65, quota_fair: +(1 / 0.65).toFixed(3), analisi: finta({ confidence: 80, dataQuality: 70 }), ...over });
+
+  {
+    // CASSAFORTE: il candidato futuro ha probabilita/qualita MIGLIORI, ma va escluso a monte
+    const poolGrezzo = [
+      candidatoConData('oggi1', isoOggiPomeriggio, { prob: 0.6, quota_fair: 1.67 }),
+      candidatoConData('domani1', isoDomani, { prob: 0.9, quota_fair: 1.67, analisi: finta({ confidence: 99, dataQuality: 99 }) })
+    ];
+    const poolOggi = poolGrezzo.filter(c => eDiOggi(c.inizio, OGGI, TZ));
+    const r = costruisciCassaforte(poolOggi);
+    assertVero('costruisciCassaforte: nessun evento futuro in Cassaforte anche se migliore', r.selezione && r.selezione.match === 'oggi1', JSON.stringify(r));
+  }
+  {
+    // QUOTA 2: una delle due gambe migliori e' di domani -> va scartata dal pool, mai usata
+    const poolGrezzo = [
+      candidatoConData('oggiA', isoOggiPomeriggio, { prob: 0.68, quota_fair: 1.47 }),
+      candidatoConData('oggiB', isoOggiPomeriggio, { prob: 0.68, quota_fair: 1.47 }),
+      candidatoConData('domaniA', isoDomani, { prob: 0.99, quota_fair: 1.47, analisi: finta({ confidence: 99, dataQuality: 99 }) })
+    ];
+    const poolOggi = poolGrezzo.filter(c => eDiOggi(c.inizio, OGGI, TZ));
+    const r = costruisciQuota2(poolOggi);
+    assertVero('costruisciQuota2: nessuna gamba futura nella combinazione', r.selezioni && r.selezioni.every(s => s.match !== 'domaniA'), JSON.stringify(r));
+    assertVero('costruisciQuota2: usa solo le due di oggi', r.selezioni && r.selezioni.length === 2 && r.selezioni.every(s => s.match.startsWith('oggi')));
+  }
+  {
+    // SORPRESA: il candidato futuro ha EV molto piu alto, ma va escluso a monte
+    const partiteGrezze = [
+      { match: 'oggiX', evento: 'Oggi X', comp: 'Serie A', quando: 'x', inizio: isoOggiPomeriggio, analisi: finta({ bookmakerOdds: 3.5, noVig: 0.3, ev: 0.1, agreement: 'MEDIUM' }) },
+      { match: 'domaniY', evento: 'Domani Y', comp: 'Serie A', quando: 'x', inizio: isoDomani, analisi: finta({ bookmakerOdds: 3.8, noVig: 0.2, ev: 2.0, agreement: 'HIGH' }) }
+    ];
+    const partiteOggiTest = partiteGrezze.filter(p => eDiOggi(p.inizio, OGGI, TZ));
+    const r = costruisciSorpresa(partiteOggiTest);
+    assertVero('costruisciSorpresa: mai un evento futuro anche con EV molto piu alto', r.selezione && r.selezione.match === 'oggiX', JSON.stringify(r));
+  }
+  {
+    // BEST PICKS / HIGH RISK: stesso pattern, replicato sulla lista "tutteConAnalisi"
+    const partiteGrezze = [
+      { match: 'oggiZ', evento: 'Oggi Z', comp: 'Serie A', quando: 'x', inizio: isoOggiPomeriggio,
+        analisi: { ...finta({ ev: 0.05 }), best_pick_idoneo: true, opportunity_score: 0.5 } },
+      { match: 'settProssZ', evento: 'Sett Prossima Z', comp: 'Serie A', quando: 'x', inizio: isoSettimanaProssima,
+        analisi: { ...finta({ ev: 0.05 }), best_pick_idoneo: true, opportunity_score: 0.99 } } // punteggio migliore ma futuro
+    ];
+    const partiteOggiTest = partiteGrezze.filter(p => eDiOggi(p.inizio, OGGI, TZ));
+    const best = partiteOggiTest.filter(p => p.analisi.best_pick_idoneo).sort((a, b) => b.analisi.opportunity_score - a.analisi.opportunity_score);
+    assertVero('best_picks_today: nessun evento futuro anche con opportunity_score migliore', best.every(p => p.match !== 'settProssZ') && best.length === 1 && best[0].match === 'oggiZ');
   }
 }
 

@@ -12,6 +12,7 @@ import { costruisciCalibratore, applicaDrawCal } from './drawcal.mjs';
 import { fairOdds, ev as calcolaEV, edge, agreement, dataQuality, confidence, classificaValore, spiegaPick,
   marketGapInfo, classificaRischioQuota, idoneoBestPick, opportunityScore } from './valore.mjs';
 import { costruisciCassaforte, costruisciQuota2, costruisciSorpresa } from './selezioni.mjs';
+import { dataLocale, oggiLocale, eDiOggi } from './tempo.mjs';
 
 // DC-DRAW-CAL: layer sperimentale, calcolato UNA VOLTA per esecuzione, letto
 // solo dallo storico locale (nessuna chiamata di rete). Se il campione e'
@@ -479,6 +480,25 @@ for (const p of out) {
 }
 const tutteConAnalisi = [...perPartitaAnalisi.values()];
 
+// --- FILTRO "SOLO OGGI" (Europe/Rome) --------------------------------------
+// Cassaforte/Quota2/Sorpresa/Best Picks/High Risk devono considerare
+// ESCLUSIVAMENTE partite il cui calcio d'inizio cade nella data odierna in
+// Europe/Rome. Si usa SEMPRE p.inizio (ISO, UTC), MAI la stringa "quando"
+// gia' localizzata: un kickoff serale puo' cadere gia' nel giorno dopo in
+// Italia (es. 22:30 UTC = 00:30 locale con l'ora legale). Il filtro va
+// applicato PRIMA di qualunque ranking, non dopo.
+const OGGI_LOCALE = oggiLocale(FUSO_ORARIO);
+const partiteOggi = tutteConAnalisi.filter(p => eDiOggi(p.inizio, OGGI_LOCALE, FUSO_ORARIO));
+const partiteFutureEscluse = tutteConAnalisi.filter(p => !eDiOggi(p.inizio, OGGI_LOCALE, FUSO_ORARIO));
+const poolSelezioneOggi = poolSelezione.filter(c => eDiOggi(c.inizio, OGGI_LOCALE, FUSO_ORARIO));
+
+console.log(`\nData locale odierna (${FUSO_ORARIO}): ${OGGI_LOCALE}`);
+console.log(`Partite con analisi disponibile: ${tutteConAnalisi.length} totali, ${partiteOggi.length} di oggi, ${partiteFutureEscluse.length} future escluse dalla selezione.`);
+if (partiteFutureEscluse.length) {
+  console.log('Escluse (data locale futura):');
+  for (const p of partiteFutureEscluse) console.log(`  - ${p.evento} (${p.comp}, ${dataLocale(p.inizio, FUSO_ORARIO)})`);
+}
+
 const mappaPick = (p) => ({
   evento: p.evento, comp: p.comp, quando: p.quando, match: p.match,
   esito_riferimento: p.analisi.market.esito_riferimento,
@@ -488,7 +508,7 @@ const mappaPick = (p) => ({
   value_class: p.analisi.value_class, opportunity_score: p.analisi.opportunity_score, why: p.analisi.why
 });
 
-const bestPicksToday = tutteConAnalisi
+const bestPicksToday = partiteOggi
   .filter(p => p.analisi.best_pick_idoneo)
   .sort((a, b) => b.analisi.opportunity_score - a.analisi.opportunity_score)
   .slice(0, 10)
@@ -497,7 +517,7 @@ const bestPicksToday = tutteConAnalisi
 // speculative: EV positivo ma escluso dai Best Picks (quota alta e/o forte
 // disaccordo modello/mercato e/o qualita' insufficiente) — resta visibile,
 // mai promosso come "migliore opportunita'".
-const speculativePicksToday = tutteConAnalisi
+const speculativePicksToday = partiteOggi
   .filter(p => !p.analisi.best_pick_idoneo && p.analisi.value.ev > 0)
   .sort((a, b) => b.analisi.opportunity_score - a.analisi.opportunity_score)
   .slice(0, 10)
@@ -508,9 +528,9 @@ const speculativePicksToday = tutteConAnalisi
 // SEMPRE le metriche del value engine: mai una selezione High Risk in
 // Cassaforte/Quota2, mai una quota sopra soglia come Sorpresa principale.
 // Rigenerate ad ogni esecuzione di questa pipeline, dalle quote di oggi.
-const risCassaforte = costruisciCassaforte(poolSelezione);
-const risQuota2 = costruisciQuota2(poolSelezione);
-const risSorpresa = costruisciSorpresa(tutteConAnalisi);
+const risCassaforte = costruisciCassaforte(poolSelezioneOggi);
+const risQuota2 = costruisciQuota2(poolSelezioneOggi);
+const risSorpresa = costruisciSorpresa(partiteOggi);
 
 function formattaSingola(c) {
   if (!c) return null;
@@ -561,11 +581,21 @@ writeFileSync('data/picks.json', JSON.stringify({
     + "Layer aggiuntivo sperimentale DC-DRAW-CAL sul solo P_DRAW (calibrazione isotonic), sempre mostrato accanto al modello puro, mai al suo posto. "
     + 'Migliori opportunita: richiedono congiuntamente confidence, data quality, agreement, market gap, quota ed EV minimo sopra soglia (mai il solo EV positivo). '
     + 'Selezioni con EV positivo ma quota molto alta o forte disaccordo modello/mercato finiscono in high_risk_today, mai fra le migliori opportunita.',
-  cassaforte, cassaforte_nota: cassaforte ? null : risCassaforte.motivo,
-  quota_2: quota2, quota_2_nota: quota2 ? null : risQuota2.motivo,
-  sorpresa, sorpresa_nota: sorpresa ? null : risSorpresa.motivo,
+  selezione_oggi: {
+    data_locale: OGGI_LOCALE, fuso_orario: FUSO_ORARIO,
+    nota: "Cassaforte/Quota2/Sorpresa/Best Picks/High Risk considerano ESCLUSIVAMENTE partite con calcio d'inizio nella data locale odierna (Europe/Rome), calcolata da 'inizio' (ISO, UTC), mai dalla stringa 'quando' gia' localizzata.",
+    partite_con_analisi_totali: tutteConAnalisi.length,
+    partite_di_oggi: partiteOggi.length,
+    partite_future_escluse: partiteFutureEscluse.map(p => ({ evento: p.evento, comp: p.comp, data_locale: dataLocale(p.inizio, FUSO_ORARIO) }))
+  },
+  cassaforte, cassaforte_nota: cassaforte ? null : 'Nessuna Cassaforte disponibile oggi',
+  cassaforte_dettaglio: cassaforte ? null : risCassaforte.motivo,
+  quota_2: quota2, quota_2_nota: quota2 ? null : 'Nessuna Quota 2 disponibile oggi',
+  quota_2_dettaglio: quota2 ? null : risQuota2.motivo,
+  sorpresa, sorpresa_nota: sorpresa ? null : 'Nessuna Sorpresa disponibile oggi',
+  sorpresa_dettaglio: sorpresa ? null : risSorpresa.motivo,
   best_picks_today: bestPicksToday,
-  best_picks_nota: bestPicksToday.length ? null : 'Nessuna opportunita con sufficiente accordo modello/mercato.',
+  best_picks_nota: bestPicksToday.length ? null : 'Nessuna opportunita con sufficiente accordo modello/mercato oggi.',
   high_risk_today: speculativePicksToday,
   diagnostica,
   eventi: out
