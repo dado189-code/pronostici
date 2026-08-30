@@ -6,8 +6,19 @@
 import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { scaricaUnderstat, stimaForze, stimaRho, lambde, mercati, consenso }
   from './model.mjs';
-import { PRODUZIONE_VERSION, BUILD, FUSO_ORARIO, MODELLO } from './config.mjs';
+import { PRODUZIONE_VERSION, BASELINE_VERSION, BUILD, FUSO_ORARIO, MODELLO, DRAWCAL } from './config.mjs';
 import { salvaSnapshot } from './snapshot.mjs';
+import { costruisciCalibratore, applicaDrawCal } from './drawcal.mjs';
+import { fairOdds, ev, edge, agreement, dataQuality, confidence, classificaValore, spiegaPick } from './valore.mjs';
+
+// DC-DRAW-CAL: layer sperimentale, calcolato UNA VOLTA per esecuzione, letto
+// solo dallo storico locale (nessuna chiamata di rete). Se il campione e'
+// sotto soglia, resta con attivo:false e ogni chiamata a applicaDrawCal fa
+// fallback trasparente alla tripla baseline (vedi drawcal.mjs).
+const calibratoreDrawCal = costruisciCalibratore();
+console.log(calibratoreDrawCal.attivo
+  ? `DC-DRAW-CAL attivo: calibrato su ${calibratoreDrawCal.nCampione} partite storiche.`
+  : `DC-DRAW-CAL disattivato: ${calibratoreDrawCal.motivo}`);
 
 const KEY = process.env.ODDS_API_KEY;
 if (!KEY) { console.error('Manca ODDS_API_KEY'); process.exit(1); }
@@ -206,18 +217,23 @@ async function daConsenso(comp) {
 }
 
 for (const lega of LEGHE) {
-  let storico;
+  let storicoCorrente, storicoPrecedente = [];
   try {
-    storico = await scaricaUnderstat(lega.understat, STAGIONE);
+    storicoCorrente = await scaricaUnderstat(lega.understat, STAGIONE);
     // se la stagione e' appena iniziata, aggiungi la precedente
-    if (storico.length < 60) {
-      const prec = await scaricaUnderstat(lega.understat, String(Number(STAGIONE) - 1));
-      storico = [...prec, ...storico];
+    if (storicoCorrente.length < 60) {
+      storicoPrecedente = await scaricaUnderstat(lega.understat, String(Number(STAGIONE) - 1));
     }
   } catch (e) {
     diagnostica.push(`${lega.nome}: storico xG non disponibile (${e.message})`);
     continue;
   }
+  // Il decay temporale (emivita 180gg, gia' esistente) fa gia' tutto il lavoro:
+  // le forze si stimano su TUTTO lo storico disponibile, non solo sulla
+  // stagione corrente, quindi non si azzerano mai a inizio stagione. Qui non
+  // si tocca stimaForze/lambde/mercati: solo si registra separatamente quanta
+  // massa (pesata dal decay) viene da ciascuna fetta, per mostrarlo (punto 3).
+  const storico = [...storicoPrecedente, ...storicoCorrente];
   if (storico.length < 40) {
     diagnostica.push(`${lega.nome}: solo ${storico.length} partite con xG, troppo poche per stimare`);
     continue;
@@ -226,6 +242,24 @@ for (const lega of LEGHE) {
   const forze = stimaForze(storico, { emivita: MODELLO.emivitaGiorni });
   const rho = stimaRho(storico.slice(-300), forze, MODELLO);
   const indice = Object.fromEntries(forze.squadre.map(s => [chiave(s), s]));
+
+  // punto 3: quota di massa (pesata dal decay, stessa emivita del modello)
+  // che viene dalla stagione corrente rispetto alla precedente, "adesso" -
+  // solo per mostrarlo, non cambia lambda/rho/mercati.
+  const adesso = Date.now();
+  const pesoDecay = (data) => Math.pow(0.5, (adesso - data.getTime()) / (864e5 * MODELLO.emivitaGiorni));
+  function contributoStagionale(squadra) {
+    const partitePrec = storicoPrecedente.filter(p => p.casa === squadra || p.ospite === squadra);
+    const partiteCorr = storicoCorrente.filter(p => p.casa === squadra || p.ospite === squadra);
+    const pesoPrec = partitePrec.reduce((a, x) => a + pesoDecay(x.data), 0);
+    const pesoCorr = partiteCorr.reduce((a, x) => a + pesoDecay(x.data), 0);
+    const tot = pesoPrec + pesoCorr;
+    return {
+      matches_current_season: partiteCorr.length,
+      previous_season_contribution_pct: tot > 0 ? +(pesoPrec / tot * 100).toFixed(1) : null,
+      current_season_contribution_pct: tot > 0 ? +(pesoCorr / tot * 100).toFixed(1) : null
+    };
+  }
 
   let eventi = [];
   try {
@@ -253,6 +287,13 @@ for (const lega of LEGHE) {
     const { lh, la } = lambde(forze, casa, ospite);
     if (!lh || !la) continue;
     const mk = mercati(lh, la, rho);
+
+    // DC-DRAW-CAL: layer sperimentale, calcolato SOLO da mk['1']/mk['X']/mk['2']
+    // (pure model) gia' pronti sopra. Non tocca mk stesso.
+    const calibrato = applicaDrawCal(mk['1'], mk['X'], mk['2'], calibratoreDrawCal);
+    const calByLetter = { '1': calibrato.P1, 'X': calibrato.PX, '2': calibrato.P2 };
+    const contribCasa = contributoStagionale(casa);
+    const contribOspite = contributoStagionale(ospite);
 
     // confronto col mercato sul solo 1X2, l'unico dove ho le quote
     const cons = consenso(ev.bookmakers);
@@ -295,10 +336,46 @@ for (const lega of LEGHE) {
       quote: Object.entries(cons).map(([nome, d]) => ({
         esito: (nome === ev.home_team ? '1' : nome === ev.away_team ? '2' : nome === 'Draw' ? 'X' : nome),
         prob: +d.prob.toFixed(4), prezzo: d.prezzo, nBook: d.nBook })) });
+    // Analisi di partita (punti 4/5/6/7/9 della modalita' avanzata): calcolata
+    // UNA VOLTA per partita sul segno 1X2 di riferimento (il "migliore" per
+    // EV se le quote ci sono), poi allegata a ogni pronostico della stessa
+    // partita. Nessuna di queste chiamate modifica mk/lh/la/rho.
+    let analisi = null;
+    if (migliore) {
+      const pCal = calibrato.attivo ? calByLetter[migliore.esito] : null;
+      const agr = agreement([migliore.probModello, pCal, migliore.probMercato]);
+      const matchesRif = Math.min(contribCasa.matches_current_season, contribOspite.matches_current_season);
+      const dq = dataQuality({ nStorico: storico.length, currentSeasonMatches: matchesRif, contestoDisponibile: false });
+      const conf = confidence({
+        agreementLivello: agr.livello, nStorico: storico.length, currentSeasonMatches: matchesRif,
+        freschezzaOre: 0, contestoDisponibile: false,
+        scartoDalMercato: Math.abs(migliore.probModello - migliore.probMercato)
+      });
+      const evVal = ev(migliore.probModello, migliore.prezzo);
+      const edgeVal = edge(migliore.probModello, migliore.probMercato);
+      const fo = fairOdds(migliore.probModello);
+      analisi = {
+        pure_model: { P1: +mk['1'].toFixed(4), PX: +mk['X'].toFixed(4), P2: +mk['2'].toFixed(4), model_version: BASELINE_VERSION },
+        calibrated: { P1: +calibrato.P1.toFixed(4), PX: +calibrato.PX.toFixed(4), P2: +calibrato.P2.toFixed(4),
+          attivo: calibrato.attivo, motivo: calibrato.motivo || null, model_version: DRAWCAL.versione, badge: 'EXPERIMENTAL CALIBRATION' },
+        expected_goals: { lambda_home: +lh.toFixed(3), lambda_away: +la.toFixed(3) },
+        market: { esito_riferimento: migliore.esito, bookmaker_odds: migliore.prezzo, book: migliore.book,
+          n_book: migliore.nBook, no_vig_probability: migliore.probMercato },
+        value: { fair_odds: fo !== null ? +fo.toFixed(3) : null, edge: edgeVal !== null ? +edgeVal.toFixed(4) : null, ev: evVal !== null ? +evVal.toFixed(4) : null },
+        quality: { agreement: agr.livello, agreement_scarto: agr.scartoMassimo, confidence: conf, data_quality: dq },
+        value_class: classificaValore({ evValue: evVal, edgeValue: edgeVal, confidenceScore: conf, dataQualityScore: dq, agreementLivello: agr.livello }),
+        contesto: { lineup_injury_disponibile: false, peso_predittivo: 0,
+          nota: "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'." },
+        stagione: { casa: contribCasa, ospite: contribOspite },
+        why: spiegaPick({ evento: `${casa} - ${ospite}`, esitoLabel: migliore.esito === '1' ? `la vittoria di ${casa}` : migliore.esito === '2' ? `la vittoria di ${ospite}` : 'il pareggio',
+          pModel: migliore.probModello, pMercato: migliore.probMercato, quotaBookmaker: migliore.prezzo, agreementLivello: agr.livello })
+      };
+    }
+
     // "inizio" e' in ISO e serve a chiudi.mjs: "quando" e' testo localizzato,
     // "ore" e' relativo al momento della build e non e' piu' leggibile dopo.
     const base = { sport: 'calcio', comp: lega.nome, evento: `${casa} - ${ospite}`, quando, ore,
-      match: idMatch, inizio: inizio.toISOString(), understat: lega.understat };
+      match: idMatch, inizio: inizio.toISOString(), understat: lega.understat, analisi };
 
     const spiega = (m, p) =>
       `Gol attesi ${lh.toFixed(2)} contro ${la.toFixed(2)}, stimati dagli xG delle ultime partite `
@@ -350,11 +427,45 @@ const esitoSnapshot = salvaSnapshot('data/snapshots.json',
 console.log(`Snapshot: ${esitoSnapshot.aggiunti} nuovi, ${esitoSnapshot.ignorati} gia' presenti `
   + `(immutabili), ${esitoSnapshot.totale} in archivio.`);
 
+// --- Best Picks Today (punto 8): una riga per PARTITA (non per mercato), solo
+// quelle con analisi disponibile (quote 1X2 presenti) e classificazione
+// VALUE/STRONG_VALUE. Ordinate per una combinazione di EV, confidence,
+// agreement e data quality, mai per la sola probabilita' dell'esito.
+const puntiAgreement = { HIGH: 1, MEDIUM: 0.6, LOW: 0.2, 'N/D': 0.4 };
+const perPartitaAnalisi = new Map();
+for (const p of out) {
+  if (p.sport === 'calcio' && p.analisi && !perPartitaAnalisi.has(p.match)) perPartitaAnalisi.set(p.match, p);
+}
+const candidatiBestPicks = [...perPartitaAnalisi.values()]
+  .filter(p => p.analisi.value_class === 'VALUE' || p.analisi.value_class === 'STRONG_VALUE');
+for (const p of candidatiBestPicks) {
+  const a = p.analisi;
+  p._punteggioBestPick = (a.value.ev ?? 0) * 0.4 + (a.quality.confidence / 100) * 0.3
+    + puntiAgreement[a.quality.agreement] * 0.2 + (a.quality.data_quality / 100) * 0.1;
+}
+const bestPicksToday = candidatiBestPicks
+  .sort((a, b) => b._punteggioBestPick - a._punteggioBestPick)
+  .slice(0, 10)
+  .map(p => ({
+    evento: p.evento, comp: p.comp, quando: p.quando, match: p.match,
+    esito_riferimento: p.analisi.market.esito_riferimento,
+    pure_model: p.analisi.pure_model, calibrated: p.analisi.calibrated,
+    market: p.analisi.market, value: p.analisi.value, quality: p.analisi.quality,
+    value_class: p.analisi.value_class, why: p.analisi.why
+  }));
+for (const p of out) delete p._punteggioBestPick;
+
 writeFileSync('data/picks.json', JSON.stringify({
   aggiornato: generatoAlle,
   model_version: PRODUZIONE_VERSION,
+  drawcal_status: calibratoreDrawCal.attivo
+    ? { attivo: true, n_campione: calibratoreDrawCal.nCampione, versione: DRAWCAL.versione }
+    : { attivo: false, motivo: calibratoreDrawCal.motivo },
   metodo: 'calcio: forze di attacco e difesa stimate dagli xG con emivita 180 giorni, Dixon-Coles per i punteggi bassi, confronto col consenso di piu bookmaker. '
-    + 'Basket e tennis: nessun modello indipendente disponibile, il pronostico e il solo consenso dei bookmaker ripulito dal margine.',
+    + 'Basket e tennis: nessun modello indipendente disponibile, il pronostico e il solo consenso dei bookmaker ripulito dal margine. '
+    + "Layer aggiuntivo sperimentale DC-DRAW-CAL sul solo P_DRAW (calibrazione isotonic), sempre mostrato accanto al modello puro, mai al suo posto.",
+  best_picks_today: bestPicksToday,
+  best_picks_nota: bestPicksToday.length ? null : 'Nessuna opportunita con valore sufficiente al momento.',
   diagnostica,
   eventi: out
 }, null, 1));

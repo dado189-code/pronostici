@@ -1,2 +1,6 @@
 .claude/
 node_modules/
+
+# Fase 10 POC API-Football: cache raw locale, non va in git (dimensioni, dati grezzi di terzi)
+data/raw/api-football/
+data/normalized/api-football/

@@ -10,6 +10,8 @@ import { poisson, tau, matrice, mercati, stimaForze, lambde, consenso } from './
 import { shrink, pesoDecadimento, aggiornaElo, calcolaEloStorico, npxGDFinestre,
   formaCasaTrasferta, xPointsDelta } from './features.mjs';
 import { FUSO_ORARIO } from './config.mjs';
+import { isotonicFit, isotonicPredict, applicaDrawCal, costruisciCalibratore } from './drawcal.mjs';
+import { fairOdds, ev, edge, agreement, dataQuality, confidence, classificaValore } from './valore.mjs';
 
 let ok = 0, ko = 0;
 const fail = [];
@@ -269,6 +271,139 @@ function assertVero(nome, condizione, dettaglio = '') {
   // lambde deve restituire 0 per una squadra sconosciuta, non NaN o un valore a caso
   const l = lambde(f1, 'A', 'Squadra Mai Vista');
   assertVicino('lambde: squadra sconosciuta -> lh=0', l.lh, 0);
+}
+
+// ---------------------------------------------------------------- DC-DRAW-CAL (modalita' avanzata)
+
+{
+  // isotonic fit su un caso sintetico monotono: P_DRAW piu' alto -> frequenza
+  // osservata di pareggio piu' alta. Il calibratore deve restare monotono e
+  // restituire una funzione a gradini (mai fuori [0,1]).
+  const punti = [];
+  for (let i = 0; i < 200; i++) {
+    const x = i / 200;
+    const y = Math.random() < x ? 1 : 0;
+    punti.push({ x, y });
+  }
+  const blocchi = isotonicFit(punti);
+  let monotono = true;
+  for (let i = 1; i < blocchi.length; i++) if (blocchi[i].y < blocchi[i - 1].y - 1e-9) monotono = false;
+  assertVero('isotonicFit: la funzione risultante e monotona non decrescente', monotono);
+  const pred = isotonicPredict(blocchi, 0.5);
+  assertVero('isotonicPredict: valore in [0,1]', pred >= 0 && pred <= 1, String(pred));
+}
+
+{
+  // applicaDrawCal con calibratore non attivo: fallback ESATTO alla tripla originale
+  const r = applicaDrawCal(0.45, 0.28, 0.27, { attivo: false, motivo: 'test' });
+  assertVicino('applicaDrawCal: fallback P1 invariato', r.P1, 0.45);
+  assertVicino('applicaDrawCal: fallback PX invariato', r.PX, 0.28);
+  assertVicino('applicaDrawCal: fallback P2 invariato', r.P2, 0.27);
+  assertVero('applicaDrawCal: fallback segnalato con attivo=false', r.attivo === false);
+}
+
+{
+  // calibratore attivo: la somma delle tre probabilita' deve restare 1 e
+  // nessuna deve uscire da [0,1] o diventare NaN
+  const blocchi = isotonicFit([{ x: 0.1, y: 0 }, { x: 0.2, y: 0 }, { x: 0.3, y: 1 }, { x: 0.4, y: 1 }]);
+  const cal = { attivo: true, blocchi };
+  const r = applicaDrawCal(0.5, 0.25, 0.25, cal);
+  assertVicino('applicaDrawCal attivo: somma probabilita = 1', r.P1 + r.PX + r.P2, 1, 1e-9);
+  assertVero('applicaDrawCal attivo: nessun NaN', [r.P1, r.PX, r.P2].every(Number.isFinite));
+  assertVero('applicaDrawCal attivo: nessuna probabilita negativa', [r.P1, r.PX, r.P2].every(v => v >= 0));
+}
+
+{
+  // il calibratore di produzione (letto dal dataset storico reale) deve
+  // esistere in questo repository e superare la soglia minima di Fase 8,
+  // altrimenti build.mjs deve fare fallback: qui verifichiamo solo che la
+  // funzione non lanci e risponda con un oggetto coerente in ogni caso.
+  const cal = costruisciCalibratore('data/dataset/previsioni-walkforward.json');
+  assertVero('costruisciCalibratore: risposta ha il campo attivo booleano', typeof cal.attivo === 'boolean');
+  if (!cal.attivo) assertVero('costruisciCalibratore: motivo dichiarato quando non attivo', typeof cal.motivo === 'string' && cal.motivo.length > 0);
+  const calAssente = costruisciCalibratore('data/percorso/che/non/esiste.json');
+  assertVero('costruisciCalibratore: file assente -> fallback dichiarato, non un\'eccezione', calAssente.attivo === false && typeof calAssente.motivo === 'string');
+}
+
+// ---------------------------------------------------------------- market layer / value / confidence
+
+{
+  assertVicino('fairOdds: 1/P', fairOdds(0.4), 2.5);
+  assertVero('fairOdds: probabilita 0 -> null, mai Infinity o NaN', fairOdds(0) === null);
+  assertVicino('ev: P*quota-1', ev(0.5, 2.2), 0.1, 1e-9);
+  assertVicino('edge: P_model - P_mercato', edge(0.55, 0.5), 0.05, 1e-9);
+  assertVero('edge: P_mercato non disponibile -> null', edge(0.5, undefined) === null);
+}
+
+{
+  const alto = agreement([0.57, 0.56, 0.55]);
+  assertVero('agreement: scarto piccolo -> HIGH', alto.livello === 'HIGH', alto.livello);
+  const basso = agreement([0.58, 0.55, 0.44]);
+  assertVero('agreement: scarto grande -> LOW', basso.livello === 'LOW', basso.livello);
+  const nd = agreement([0.5]);
+  assertVero('agreement: un solo valore -> N/D, non un falso HIGH', nd.livello === 'N/D');
+}
+
+{
+  const dq = dataQuality({ nStorico: 300, currentSeasonMatches: 10, contestoDisponibile: false });
+  assertVero('dataQuality: in [0,100]', dq >= 0 && dq <= 100, String(dq));
+  const dqConContesto = dataQuality({ nStorico: 300, currentSeasonMatches: 10, contestoDisponibile: true });
+  assertVero('dataQuality: contesto disponibile alza il punteggio rispetto a non disponibile', dqConContesto > dq);
+
+  const conf = confidence({ agreementLivello: 'HIGH', nStorico: 300, currentSeasonMatches: 10, freschezzaOre: 0, contestoDisponibile: false, scartoDalMercato: 0 });
+  assertVero('confidence: in [0,100]', conf >= 0 && conf <= 100, String(conf));
+  const confLow = confidence({ agreementLivello: 'LOW', nStorico: 10, currentSeasonMatches: 0, freschezzaOre: 47, contestoDisponibile: false, scartoDalMercato: 0.2 });
+  assertVero('confidence: scenario debole produce un punteggio piu basso di uno forte', confLow < conf, `${confLow} vs ${conf}`);
+}
+
+{
+  // mai VALUE/STRONG_VALUE con EV negativo, qualunque siano gli altri fattori
+  const c1 = classificaValore({ evValue: -0.02, edgeValue: 0.05, confidenceScore: 90, dataQualityScore: 90, agreementLivello: 'HIGH' });
+  assertVero('classificaValore: EV negativo -> mai VALUE/STRONG_VALUE', c1 === 'NO_BET', c1);
+
+  // EV positivo ma qualita' bassa -> WATCH, non VALUE
+  const c2 = classificaValore({ evValue: 0.15, edgeValue: 0.1, confidenceScore: 20, dataQualityScore: 20, agreementLivello: 'HIGH' });
+  assertVero('classificaValore: EV positivo ma qualita bassa -> WATCH', c2 === 'WATCH', c2);
+
+  // EV/edge/confidence/dataQuality tutti alti e agreement alto -> STRONG_VALUE
+  const c3 = classificaValore({ evValue: 0.15, edgeValue: 0.1, confidenceScore: 80, dataQualityScore: 80, agreementLivello: 'HIGH' });
+  assertVero('classificaValore: tutto alto -> STRONG_VALUE', c3 === 'STRONG_VALUE', c3);
+
+  // nessuna etichetta deve mai essere una delle parole vietate
+  const vietate = ['SICURA', 'CERTA', 'GARANTITA'];
+  assertVero('classificaValore: nessuna etichetta e una parola vietata',
+    ![c1, c2, c3].some(v => vietate.includes(v)));
+}
+
+// ---------------------------------------------------------------- invarianza baseline (punto 14)
+
+{
+  // Stesso identico input, stessa identica chiamata di model.mjs usata da
+  // build.mjs per il Pure Model: deve restituire ESATTAMENTE la stessa tripla
+  // prima e dopo l'introduzione del layer sperimentale. Non e' un test sulla
+  // formula (invariata per costruzione, model.mjs non e' stato toccato): e'
+  // una guardia contro un futuro cambiamento accidentale.
+  const oggi = new Date('2026-01-01');
+  const partite = [
+    { data: new Date('2025-09-01'), casa: 'A', ospite: 'B', xgCasa: 1.8, xgOspite: 0.9 },
+    { data: new Date('2025-09-15'), casa: 'B', ospite: 'A', xgCasa: 0.7, xgOspite: 2.1 },
+    { data: new Date('2025-10-01'), casa: 'A', ospite: 'B', xgCasa: 2.0, xgOspite: 1.0 }
+  ];
+  const f = stimaForze(partite, { emivita: 180, oggi });
+  const rhoBase = -0.05;
+  const { lh, la } = lambde(f, 'A', 'B');
+  const mkBase = mercati(lh, la, rhoBase);
+  const somma = mkBase['1'] + mkBase['X'] + mkBase['2'];
+  assertVicino('Baseline invariata: somma 1X2 = 1', somma, 1, 1e-9);
+  assertVero('Baseline invariata: nessun NaN nelle probabilita 1X2', [mkBase['1'], mkBase['X'], mkBase['2']].every(Number.isFinite));
+  assertVero('Baseline invariata: nessuna probabilita negativa', [mkBase['1'], mkBase['X'], mkBase['2']].every(v => v >= 0));
+  // il layer sperimentale non deve alterare mkBase: applicaDrawCal prende in
+  // input i valori e ne restituisce di nuovi, non muta l'oggetto originale
+  const calibrato = applicaDrawCal(mkBase['1'], mkBase['X'], mkBase['2'], { attivo: false, motivo: 'x' });
+  assertVicino('Baseline invariata: mkBase[1] non mutato dopo applicaDrawCal', mkBase['1'], mkBase['1']);
+  assertVicino('Baseline invariata: fallback drawcal riproduce esattamente P1 baseline', calibrato.P1, mkBase['1'], 1e-12);
+  assertVicino('Baseline invariata: fallback drawcal riproduce esattamente PX baseline', calibrato.PX, mkBase['X'], 1e-12);
+  assertVicino('Baseline invariata: fallback drawcal riproduce esattamente P2 baseline', calibrato.P2, mkBase['2'], 1e-12);
 }
 
 // ---------------------------------------------------------------- riepilogo

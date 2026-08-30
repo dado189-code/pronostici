@@ -113,6 +113,57 @@ export const CHIUSURA = {
   giorniAllarmePendente: 7   // oltre questa soglia un pendente viene segnalato
 };
 
+// --- DC-DRAW-CAL (layer sperimentale, Fase 8/10) ----------------------------
+//
+// Calibratore isotonic 1D su P_DRAW, mai sulla formula Dixon-Coles. Attivo
+// solo se lo storico disponibile supera questa soglia (Fase 8: instabile con
+// una sola stagione, ~1325 righe; il requisito minimo dichiarato e' ~2
+// stagioni, ~3000 righe). Sotto soglia: fallback automatico alla baseline.
+export const DRAWCAL = {
+  minCampione: 3000,
+  versione: 'football-v1.1-drawcal-candidate'
+};
+
+// --- MODEL AGREEMENT ---------------------------------------------------------
+//
+// Scarto massimo (in probabilita', 0-1) fra le stime confrontate (baseline,
+// draw-cal, mercato no-vig) prima di scendere di livello.
+export const AGREEMENT = {
+  sogliaAlta: 0.03,   // <= 3 punti percentuali di scarto -> HIGH
+  sogliaMedia: 0.08   // <= 8 punti percentuali -> MEDIUM, oltre -> LOW
+};
+
+// --- CONFIDENCE / DATA QUALITY ------------------------------------------------
+//
+// Confidence NON e' la probabilita' dell'esito: e' quanto ci si puo' fidare
+// della stima, combinando accordo fra fonti, ampiezza del campione storico,
+// eta' del dato e distanza dal mercato. contestoDisponibile (lineup/injury,
+// Fase 10/API-Football) pesa nella DataQuality ma MAI nella probabilita'.
+export const CONFIDENCE = {
+  storicoDiRiferimento: 300,          // partite storiche oltre le quali la DataQuality storica satura
+  partiteStagioneDiRiferimento: 10,   // partite di stagione corrente oltre le quali satura
+  pesoStorico: 0.55,
+  pesoStagioneCorrente: 0.25,
+  pesoContesto: 0.20,                 // oggi sempre 0 in produzione: nessun dato di contesto integrato
+  freschezzaMassimaOre: 48,           // oltre questa eta' del dato la freschezza conta 0
+  scartoMercatoRiferimento: 0.20,     // scarto modello-mercato oltre il quale la distanza conta 0
+  pesiConfidence: { agreement: 0.35, dataQuality: 0.30, freschezza: 0.15, distanzaMercato: 0.20 }
+};
+
+// --- VALUE CLASSIFICATION -----------------------------------------------------
+//
+// Soglie configurabili, mai punteggi fissi nel codice del sito. Nessuna
+// etichetta implica certezza: sono classi di processo (EV/edge/qualita'),
+// non previsioni di esito.
+export const VALORE = {
+  confidenceMinimaWatch: 40,   // sotto: EV positivo ma qualita' troppo bassa -> WATCH, mai VALUE
+  dataQualityMinimaWatch: 35,
+  evSogliaForte: 0.08,
+  edgeSogliaForte: 0.05,
+  confidenceMinimaForte: 65,
+  dataQualityMinimaForte: 55
+};
+
 // --- fuso orario -------------------------------------------------------------
 //
 // Il runner di GitHub Actions e' in UTC. Ogni orario mostrato all'utente deve
