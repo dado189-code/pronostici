@@ -485,6 +485,39 @@
    "esito": "ko"
   },
   {
+   "id": "napoli-como|2026-08-30T16:30:00.000Z|sorpresa|Como vincente",
+   "cat": "sorpresa",
+   "data": "30/08",
+   "evento": "Napoli - Como",
+   "mercato": "Como vincente",
+   "quota": 2.62,
+   "prezzo": 3.23,
+   "risultato": "0-0",
+   "esito": "ko"
+  },
+  {
+   "id": "napoli-como|2026-08-30T16:30:00.000Z|standard|Multigol 1-4",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Napoli - Como",
+   "mercato": "Multigol 1-4",
+   "quota": 1.23,
+   "prezzo": null,
+   "risultato": "0-0",
+   "esito": "ko"
+  },
+  {
+   "id": "napoli-como|2026-08-30T16:30:00.000Z|standard|Multigol casa 1-2",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Napoli - Como",
+   "mercato": "Multigol casa 1-2",
+   "quota": 1.72,
+   "prezzo": null,
+   "risultato": "0-0",
+   "esito": "ko"
+  },
+  {
    "id": "paris-nice|2026-08-30T13:00:00.000Z|standard|Multigol 1-5",
    "cat": "standard",
    "data": "30/08",
@@ -805,71 +838,6 @@
   }
  ],
  "pendenti": [
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Napoli - Como",
-   "quando": "dom 30/08, 16:30",
-   "ore": 28,
-   "match": "napoli-como",
-   "inizio": "2026-08-30T16:30:00.000Z",
-   "understat": "Serie_A",
-   "mercato": "Multigol casa 1-2",
-   "prob": 0.581,
-   "why": "Gol attesi 1.23 contro 1.28, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 58.1%. Sul segno 2 il modello dice 38.2% contro il 30.9% del consenso di 24 bookmaker, miglior prezzo 3.23 su Pinnacle.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.382,
-    "probMercato": 0.309,
-    "prezzo": 3.23,
-    "book": "Pinnacle",
-    "nBook": 24,
-    "valore": 0.234
-   },
-   "id": "napoli-como|2026-08-30T16:30:00.000Z|standard|Multigol casa 1-2"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Napoli - Como",
-   "quando": "dom 30/08, 16:30",
-   "ore": 28,
-   "match": "napoli-como",
-   "inizio": "2026-08-30T16:30:00.000Z",
-   "understat": "Serie_A",
-   "mercato": "Multigol 1-4",
-   "prob": 0.814,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.23 contro 1.28, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.4%. Sul segno 2 il modello dice 38.2% contro il 30.9% del consenso di 24 bookmaker, miglior prezzo 3.23 su Pinnacle.",
-   "src": "modello xG Dixon-Coles",
-   "id": "napoli-como|2026-08-30T16:30:00.000Z|standard|Multigol 1-4"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Napoli - Como",
-   "quando": "dom 30/08, 16:30",
-   "ore": 28,
-   "match": "napoli-como",
-   "inizio": "2026-08-30T16:30:00.000Z",
-   "understat": "Serie_A",
-   "tipo": "sorpresa",
-   "mercato": "Como vincente",
-   "prob": 0.382,
-   "prezzo": 3.23,
-   "why": "Il modello da questo esito al 38.2%, il consenso di 24 bookmaker al 30.9%. Al prezzo migliore, 3.23 su Pinnacle, il valore atteso e' 23.4%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.382,
-    "probMercato": 0.309,
-    "prezzo": 3.23,
-    "book": "Pinnacle",
-    "nBook": 24,
-    "valore": 0.234
-   },
-   "id": "napoli-como|2026-08-30T16:30:00.000Z|sorpresa|Como vincente"
-  },
   {
    "sport": "calcio",
    "comp": "Serie A",
@@ -3560,11 +3528,188 @@
    },
    "model_version": "football-v1-baseline",
    "id": "psg-monaco|2026-09-04T19:05:00.000Z|sorpresa|Monaco vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Genoa - Como",
+   "quando": "ven 04/09, 20:45",
+   "ore": 120,
+   "match": "genoa-como",
+   "inizio": "2026-09-04T18:45:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.2326,
+     "PX": 0.2308,
+     "P2": 0.5366,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.2247,
+     "PX": 0.2569,
+     "P2": 0.5183,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.018,
+     "lambda_away": 1.691
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 5.8,
+     "book": "Pinnacle",
+     "n_book": 18,
+     "no_vig_probability": 0.188
+    },
+    "value": {
+     "fair_odds": 4.292,
+     "edge": 0.045,
+     "ev": 0.3514
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.045,
+     "confidence": 59,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.045,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.734,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 94.4,
+      "current_season_contribution_pct": 5.6
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Genoa\" il 23.3% contro il 18.8% del mercato. La quota fair e' 4.29 contro una quota disponibile di 5.80. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol 1-4",
+   "prob": 0.8,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.02 contro 1.69, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.0%. Sul segno 1 il modello dice 23.3% contro il 18.8% del consenso di 18 bookmaker, miglior prezzo 5.80 su Pinnacle.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "genoa-como|2026-09-04T18:45:00.000Z|standard|Multigol 1-4"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Toulouse - Lille",
+   "quando": "gio 03/09, 20:45",
+   "ore": 96,
+   "match": "toulouse-lille",
+   "inizio": "2026-09-03T18:45:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3281,
+     "PX": 0.2986,
+     "P2": 0.3733,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3352,
+     "PX": 0.2833,
+     "P2": 0.3814,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.152,
+     "lambda_away": 1.245
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 3.58,
+     "book": "1xBet",
+     "n_book": 15,
+     "no_vig_probability": 0.288
+    },
+    "value": {
+     "fair_odds": 3.049,
+     "edge": 0.04,
+     "ev": 0.1742
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.0472,
+     "confidence": 60,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.04,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6339,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Toulouse\" il 32.8% contro il 28.8% del mercato. La quota fair e' 3.05 contro una quota disponibile di 3.58. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Toulouse vincente",
+   "prob": 0.328,
+   "prezzo": 3.58,
+   "why": "Il modello da questo esito al 32.8%, il consenso di 15 bookmaker al 28.8%. Al prezzo migliore, 3.58 su 1xBet, il valore atteso e' 17.5%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.328,
+    "probMercato": 0.288,
+    "prezzo": 3.58,
+    "book": "1xBet",
+    "nBook": 15,
+    "valore": 0.175
+   },
+   "model_version": "football-v1-baseline",
+   "id": "toulouse-lille|2026-09-03T18:45:00.000Z|sorpresa|Toulouse vincente"
   }
  ],
- "aggiornato": "2026-08-30T18:53:22.348Z",
+ "aggiornato": "2026-08-30T19:59:07.423Z",
  "diagnostica": [
-  "114 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport"
+  "111 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport"
  ],
  "nota": "La quota e la quota minima 1/probabilita, non il prezzo di un bookmaker: il saldo va letto come limite superiore. La categoria cassaforte nasce dalla combinazione costruita nella pagina e non e ricavabile da qui, quindi non viene aggiornata in automatico."
 }
