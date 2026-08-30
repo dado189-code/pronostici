@@ -223,6 +223,95 @@ export function calcolaEloStorico(partiteOrdinateCronologico, config = ELO) {
   return { eloAttuale: elo, trend, storia, confidenzaBassa, nPartite: contaPartite };
 }
 
+// ---------------------------------------------------------------- MODEL C: Dixon-Coles con split casa/trasferta
+//
+// Stessa identica procedura a punto fisso di stimaForze, ma stimata due volte:
+// una sui soli match in casa, una sui soli match in trasferta. Ogni rating
+// split e' poi tirato (shrink) verso il rating combinato (quello di
+// stimaForze standard) in proporzione a quante partite quella squadra ha
+// giocato in quel lato: con un campione di sole 10-15 partite in casa a
+// stagione, senza shrinkage il rating home/away sarebbe quasi tutto rumore.
+const clamp = (x, lo, hi) => Math.max(lo, Math.min(hi, x));
+
+export function stimaForzeHomeAway(partite, forzeCombinate, { emivita = 180, oggi = new Date(), kShrink = 10 } = {}) {
+  const squadre = forzeCombinate.squadre;
+  const pesoDi = (p) => pesoDecadimento((oggi - p.data) / 864e5, emivita);
+
+  function fitLato(soloCasa) {
+    const att = {}, dif = {};
+    for (const s of squadre) {
+      // numeratore/denominatore diretti (non punto fisso iterato): usa i
+      // rating combinati dell'avversario come riferimento di forza, che e'
+      // gia' una buona approssimazione e evita di rifare 200 iterazioni per
+      // ogni lato a ogni checkpoint (costerebbe troppo nel walk-forward)
+      let numA = 0, denA = 0, numD = 0, denD = 0, n = 0;
+      for (const p of partite) {
+        const p_e_casa = p.casa === s;
+        const p_e_ospite = p.ospite === s;
+        if (soloCasa && !p_e_casa) continue;
+        if (!soloCasa && !p_e_ospite) continue;
+        const w = pesoDi(p);
+        if (p_e_casa) {
+          numA += w * p.xgCasa; denA += w * forzeCombinate.golMedi * (forzeCombinate.dif[p.ospite] ?? 1) * forzeCombinate.casa;
+          numD += w * p.xgOspite; denD += w * forzeCombinate.golMedi * (forzeCombinate.att[p.ospite] ?? 1);
+          n++;
+        } else if (p_e_ospite) {
+          numA += w * p.xgOspite; denA += w * forzeCombinate.golMedi * (forzeCombinate.dif[p.casa] ?? 1);
+          numD += w * p.xgCasa; denD += w * forzeCombinate.golMedi * (forzeCombinate.att[p.casa] ?? 1) * forzeCombinate.casa;
+          n++;
+        }
+      }
+      const attGrezzo = denA > 0 ? clamp(numA / denA, 0.25, 3.0) : forzeCombinate.att[s];
+      const difGrezzo = denD > 0 ? clamp(numD / denD, 0.25, 3.0) : forzeCombinate.dif[s];
+      att[s] = shrink(attGrezzo, forzeCombinate.att[s] ?? 1, n, kShrink);
+      dif[s] = shrink(difGrezzo, forzeCombinate.dif[s] ?? 1, n, kShrink);
+    }
+    return { att, dif };
+  }
+
+  return { casa: fitLato(true), trasferta: fitLato(false) };
+}
+
+export function lambdeHomeAway(forzeSplit, forzeCombinate, casa, ospite) {
+  if (!forzeSplit.casa.att[casa] || !forzeSplit.trasferta.att[ospite]) return { lh: 0, la: 0 };
+  return {
+    lh: forzeCombinate.golMedi * forzeSplit.casa.att[casa] * forzeSplit.trasferta.dif[ospite] * forzeCombinate.casa,
+    la: forzeCombinate.golMedi * forzeSplit.trasferta.att[ospite] * forzeSplit.casa.dif[casa]
+  };
+}
+
+// ---------------------------------------------------------------- MODEL D: opponent adjustment con shrinkage esplicito
+//
+// stimaForze gia' fa un opponent adjustment implicito (il punto fisso pesa
+// gli avversari), ma non protegge esplicitamente le squadre con poco storico:
+// il clamp [0.25,3.0] e' un tetto assoluto, non uno shrinkage proporzionale
+// al campione. Qui si tira ESPLICITAMENTE ogni rating verso 1.0 (squadra
+// media) in proporzione a quante partite quella squadra ha giocato in quello
+// storico: e' un "miglioramento" testabile, non presunto.
+export function shrinkOpponentAdjustment(forze, partite, { kShrink = 15 } = {}) {
+  const conteggio = {};
+  for (const p of partite) { conteggio[p.casa] = (conteggio[p.casa] || 0) + 1; conteggio[p.ospite] = (conteggio[p.ospite] || 0) + 1; }
+  const att = {}, dif = {};
+  for (const s of forze.squadre) {
+    const n = conteggio[s] || 0;
+    att[s] = shrink(forze.att[s], 1, n, kShrink);
+    dif[s] = shrink(forze.dif[s], 1, n, kShrink);
+  }
+  return { ...forze, att, dif };
+}
+
+// ---------------------------------------------------------------- MODEL E: Elo come correzione ai lambda
+//
+// Non sostituisce Dixon-Coles: corregge moltiplicativamente lambda_home e
+// lambda_away in base a EloDiff, con un coefficiente beta scelto su
+// VALIDATION (beta=0 ridà esattamente la baseline, quindi e' un vero
+// incremento testabile, non un modello diverso mascherato da "aggiunta").
+export function correggiConElo(lh, la, eloDiff, beta) {
+  if (!Number.isFinite(eloDiff) || beta === 0) return { lh, la };
+  const fattore = Math.exp(beta * eloDiff / 400);
+  return { lh: lh * fattore, la: la / fattore };
+}
+
 // ---------------------------------------------------------------- forma grezza vs corretta
 //
 // Distinzione richiesta esplicitamente: RAW FORM e' la media dei numeri della

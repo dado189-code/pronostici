@@ -1,667 +1,821 @@
 {
- "generato_il": "2026-08-30T11:40:22.792Z",
+ "generato_il": "2026-08-30T12:03:57.306Z",
  "split_config": {
-  "trainFino": "2024-08-14",
-  "validationFino": "2025-01-12"
+  "trainFino": "2024-08-01",
+  "validationFino": "2025-08-01"
  },
- "nota": "modelA = football-v1-baseline (xG grezzo), modelB = football-v2-understat (npxG), market = no-vig proporzionale sulle quote di chiusura del CSV football-data. RPS e Brier: piu basso e meglio. LogLoss: piu basso e meglio.",
+ "nota": "modelA=football-v1-baseline(xG), modelB=npxG, modelC=home/away split, modelD=opponent adjustment con shrinkage esplicito, modelE=Elo come correzione ai lambda (beta scelto su VALIDATION), market=no-vig su quote di chiusura. TEST=2025/26 intera, mai usata per scegliere beta/soglie.",
+ "modelE_beta_scelto": 0.12,
+ "modelE_curva_beta_validation": [
+  {
+   "beta": 0,
+   "brier": 0.583
+  },
+  {
+   "beta": 0.01,
+   "brier": 0.5829
+  },
+  {
+   "beta": 0.02,
+   "brier": 0.5828
+  },
+  {
+   "beta": 0.03,
+   "brier": 0.5827
+  },
+  {
+   "beta": 0.05,
+   "brier": 0.5825
+  },
+  {
+   "beta": 0.08,
+   "brier": 0.5823
+  },
+  {
+   "beta": 0.12,
+   "brier": 0.5821
+  },
+  {
+   "beta": 0.18,
+   "brier": 0.5821
+  },
+  {
+   "beta": 0.25,
+   "brier": 0.5825
+  }
+ ],
+ "modelF_scelto_su_validation": "C (home/away)",
  "globale": {
-  "n_totale": 4799,
-  "n_con_mercato": 4799,
+  "n_totale": 6475,
+  "n_con_mercato": 6475,
   "modelA": {
-   "n": 4799,
-   "brier": 0.5858,
-   "logLoss": 0.9831,
-   "rps": 0.1995
+   "n": 6475,
+   "brier": 0.5886,
+   "logLoss": 0.9874,
+   "rps": 0.2007
   },
   "modelB": {
-   "n": 4799,
-   "brier": 0.5853,
-   "logLoss": 0.9823,
-   "rps": 0.1994
+   "n": 6475,
+   "brier": 0.588,
+   "logLoss": 0.9864,
+   "rps": 0.2005
+  },
+  "modelC": {
+   "n": 6475,
+   "brier": 0.5897,
+   "logLoss": 0.9896,
+   "rps": 0.2012
+  },
+  "modelD": {
+   "n": 6475,
+   "brier": 0.5917,
+   "logLoss": 0.9926,
+   "rps": 0.2023
+  },
+  "modelE": {
+   "n": 6475,
+   "brier": 0.5877,
+   "logLoss": 0.986,
+   "rps": 0.2002
   },
   "market": {
-   "n": 4799,
-   "brier": 0.5725,
-   "logLoss": 0.9632,
-   "rps": 0.1936
+   "n": 6475,
+   "brier": 0.5748,
+   "logLoss": 0.9667,
+   "rps": 0.1945
+  }
+ },
+ "perSplit": {
+  "TRAIN": {
+   "n_totale": 3022,
+   "n_con_mercato": 3022,
+   "modelA": {
+    "n": 3022,
+    "brier": 0.5891,
+    "logLoss": 0.9876,
+    "rps": 0.2008
+   },
+   "modelB": {
+    "n": 3022,
+    "brier": 0.588,
+    "logLoss": 0.9863,
+    "rps": 0.2004
+   },
+   "modelC": {
+    "n": 3022,
+    "brier": 0.5905,
+    "logLoss": 0.9903,
+    "rps": 0.2015
+   },
+   "modelD": {
+    "n": 3022,
+    "brier": 0.594,
+    "logLoss": 0.9953,
+    "rps": 0.2032
+   },
+   "modelE": {
+    "n": 3022,
+    "brier": 0.588,
+    "logLoss": 0.986,
+    "rps": 0.2002
+   },
+   "market": {
+    "n": 3022,
+    "brier": 0.5728,
+    "logLoss": 0.9636,
+    "rps": 0.1934
+   }
   },
-  "modelA_su_righe_con_mercato": {
-   "n": 4799,
-   "brier": 0.5858,
-   "logLoss": 0.9831,
-   "rps": 0.1995
+  "VALIDATION": {
+   "n_totale": 1731,
+   "n_con_mercato": 1731,
+   "modelA": {
+    "n": 1731,
+    "brier": 0.583,
+    "logLoss": 0.9792,
+    "rps": 0.1988
+   },
+   "modelB": {
+    "n": 1731,
+    "brier": 0.5829,
+    "logLoss": 0.9784,
+    "rps": 0.1988
+   },
+   "modelC": {
+    "n": 1731,
+    "brier": 0.5821,
+    "logLoss": 0.9782,
+    "rps": 0.1984
+   },
+   "modelD": {
+    "n": 1731,
+    "brier": 0.5857,
+    "logLoss": 0.9834,
+    "rps": 0.2003
+   },
+   "modelE": {
+    "n": 1731,
+    "brier": 0.5821,
+    "logLoss": 0.9778,
+    "rps": 0.1983
+   },
+   "market": {
+    "n": 1731,
+    "brier": 0.5706,
+    "logLoss": 0.9605,
+    "rps": 0.1933
+   }
   },
-  "modelB_su_righe_con_mercato": {
-   "n": 4799,
-   "brier": 0.5853,
-   "logLoss": 0.9823,
-   "rps": 0.1994
+  "TEST": {
+   "n_totale": 1722,
+   "n_con_mercato": 1722,
+   "modelA": {
+    "n": 1722,
+    "brier": 0.5932,
+    "logLoss": 0.9952,
+    "rps": 0.2023
+   },
+   "modelB": {
+    "n": 1722,
+    "brier": 0.5931,
+    "logLoss": 0.9945,
+    "rps": 0.2024
+   },
+   "modelC": {
+    "n": 1722,
+    "brier": 0.5959,
+    "logLoss": 0.9998,
+    "rps": 0.2036
+   },
+   "modelD": {
+    "n": 1722,
+    "brier": 0.5938,
+    "logLoss": 0.9969,
+    "rps": 0.2026
+   },
+   "modelE": {
+    "n": 1722,
+    "brier": 0.5928,
+    "logLoss": 0.9944,
+    "rps": 0.202
+   },
+   "market": {
+    "n": 1722,
+    "brier": 0.5826,
+    "logLoss": 0.9784,
+    "rps": 0.1978
+   }
   }
  },
  "perLega": {
   "Premier League": {
    "TRAIN": {
-    "n_totale": 657,
-    "n_con_mercato": 657,
+    "n_totale": 650,
+    "n_con_mercato": 650,
     "modelA": {
-     "n": 657,
-     "brier": 0.5622,
-     "logLoss": 0.9519,
-     "rps": 0.197
+     "n": 650,
+     "brier": 0.566,
+     "logLoss": 0.9576,
+     "rps": 0.1986
     },
     "modelB": {
-     "n": 657,
-     "brier": 0.5628,
-     "logLoss": 0.9539,
-     "rps": 0.197
+     "n": 650,
+     "brier": 0.5679,
+     "logLoss": 0.9617,
+     "rps": 0.1992
+    },
+    "modelC": {
+     "n": 650,
+     "brier": 0.5651,
+     "logLoss": 0.9574,
+     "rps": 0.1984
+    },
+    "modelD": {
+     "n": 650,
+     "brier": 0.5745,
+     "logLoss": 0.9694,
+     "rps": 0.2027
+    },
+    "modelE": {
+     "n": 650,
+     "brier": 0.5655,
+     "logLoss": 0.9568,
+     "rps": 0.1983
     },
     "market": {
-     "n": 657,
-     "brier": 0.5463,
-     "logLoss": 0.9289,
-     "rps": 0.1899
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 657,
-     "brier": 0.5622,
-     "logLoss": 0.9519,
-     "rps": 0.197
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 657,
-     "brier": 0.5628,
-     "logLoss": 0.9539,
-     "rps": 0.197
+     "n": 650,
+     "brier": 0.5484,
+     "logLoss": 0.9318,
+     "rps": 0.1906
     }
    },
    "VALIDATION": {
-    "n_totale": 198,
-    "n_con_mercato": 198,
+    "n_totale": 378,
+    "n_con_mercato": 378,
     "modelA": {
-     "n": 198,
-     "brier": 0.5896,
-     "logLoss": 0.9861,
-     "rps": 0.1934
+     "n": 378,
+     "brier": 0.5811,
+     "logLoss": 0.9736,
+     "rps": 0.198
     },
     "modelB": {
-     "n": 198,
-     "brier": 0.5859,
-     "logLoss": 0.9795,
-     "rps": 0.1925
+     "n": 378,
+     "brier": 0.5789,
+     "logLoss": 0.9699,
+     "rps": 0.1973
+    },
+    "modelC": {
+     "n": 378,
+     "brier": 0.5793,
+     "logLoss": 0.9721,
+     "rps": 0.1973
+    },
+    "modelD": {
+     "n": 378,
+     "brier": 0.5849,
+     "logLoss": 0.9809,
+     "rps": 0.2003
+    },
+    "modelE": {
+     "n": 378,
+     "brier": 0.5815,
+     "logLoss": 0.9738,
+     "rps": 0.1979
     },
     "market": {
-     "n": 198,
-     "brier": 0.5897,
-     "logLoss": 0.987,
-     "rps": 0.1947
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 198,
-     "brier": 0.5896,
-     "logLoss": 0.9861,
-     "rps": 0.1934
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 198,
-     "brier": 0.5859,
-     "logLoss": 0.9795,
-     "rps": 0.1925
+     "n": 378,
+     "brier": 0.5778,
+     "logLoss": 0.9703,
+     "rps": 0.197
     }
    },
    "TEST": {
-    "n_totale": 181,
-    "n_con_mercato": 181,
+    "n_totale": 376,
+    "n_con_mercato": 376,
     "modelA": {
-     "n": 181,
-     "brier": 0.5624,
-     "logLoss": 0.9469,
-     "rps": 0.1992
+     "n": 376,
+     "brier": 0.6153,
+     "logLoss": 1.0256,
+     "rps": 0.2078
     },
     "modelB": {
-     "n": 181,
-     "brier": 0.5629,
-     "logLoss": 0.9477,
-     "rps": 0.1992
+     "n": 376,
+     "brier": 0.6146,
+     "logLoss": 1.0243,
+     "rps": 0.2078
+    },
+    "modelC": {
+     "n": 376,
+     "brier": 0.6158,
+     "logLoss": 1.0275,
+     "rps": 0.2082
+    },
+    "modelD": {
+     "n": 376,
+     "brier": 0.6147,
+     "logLoss": 1.0256,
+     "rps": 0.2074
+    },
+    "modelE": {
+     "n": 376,
+     "brier": 0.616,
+     "logLoss": 1.0259,
+     "rps": 0.2079
     },
     "market": {
-     "n": 181,
-     "brier": 0.5616,
-     "logLoss": 0.9475,
-     "rps": 0.1985
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 181,
-     "brier": 0.5624,
-     "logLoss": 0.9469,
-     "rps": 0.1992
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 181,
-     "brier": 0.5629,
-     "logLoss": 0.9477,
-     "rps": 0.1992
+     "n": 376,
+     "brier": 0.6085,
+     "logLoss": 1.0133,
+     "rps": 0.2047
     }
    }
   },
   "Liga": {
    "TRAIN": {
-    "n_totale": 656,
-    "n_con_mercato": 656,
+    "n_totale": 646,
+    "n_con_mercato": 646,
     "modelA": {
-     "n": 656,
-     "brier": 0.5845,
-     "logLoss": 0.9816,
-     "rps": 0.197
+     "n": 646,
+     "brier": 0.5886,
+     "logLoss": 0.9879,
+     "rps": 0.1984
     },
     "modelB": {
-     "n": 656,
-     "brier": 0.5832,
-     "logLoss": 0.9797,
-     "rps": 0.1969
+     "n": 646,
+     "brier": 0.586,
+     "logLoss": 0.9838,
+     "rps": 0.1975
+    },
+    "modelC": {
+     "n": 646,
+     "brier": 0.5881,
+     "logLoss": 0.9878,
+     "rps": 0.1984
+    },
+    "modelD": {
+     "n": 646,
+     "brier": 0.593,
+     "logLoss": 0.9944,
+     "rps": 0.2003
+    },
+    "modelE": {
+     "n": 646,
+     "brier": 0.5869,
+     "logLoss": 0.9852,
+     "rps": 0.1975
     },
     "market": {
-     "n": 656,
-     "brier": 0.5776,
-     "logLoss": 0.9698,
-     "rps": 0.1937
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 656,
-     "brier": 0.5845,
-     "logLoss": 0.9816,
-     "rps": 0.197
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 656,
-     "brier": 0.5832,
-     "logLoss": 0.9797,
-     "rps": 0.1969
+     "n": 646,
+     "brier": 0.5784,
+     "logLoss": 0.9709,
+     "rps": 0.1936
     }
    },
    "VALIDATION": {
-    "n_totale": 188,
-    "n_con_mercato": 188,
+    "n_totale": 378,
+    "n_con_mercato": 378,
     "modelA": {
-     "n": 188,
-     "brier": 0.5773,
-     "logLoss": 0.9769,
-     "rps": 0.1944
+     "n": 378,
+     "brier": 0.5727,
+     "logLoss": 0.9679,
+     "rps": 0.1938
     },
     "modelB": {
-     "n": 188,
-     "brier": 0.5756,
-     "logLoss": 0.973,
-     "rps": 0.1937
+     "n": 378,
+     "brier": 0.5719,
+     "logLoss": 0.9657,
+     "rps": 0.1936
+    },
+    "modelC": {
+     "n": 378,
+     "brier": 0.5719,
+     "logLoss": 0.9656,
+     "rps": 0.1931
+    },
+    "modelD": {
+     "n": 378,
+     "brier": 0.5769,
+     "logLoss": 0.9737,
+     "rps": 0.1957
+    },
+    "modelE": {
+     "n": 378,
+     "brier": 0.5707,
+     "logLoss": 0.9654,
+     "rps": 0.1929
     },
     "market": {
-     "n": 188,
-     "brier": 0.5692,
-     "logLoss": 0.9617,
-     "rps": 0.1907
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 188,
-     "brier": 0.5773,
-     "logLoss": 0.9769,
-     "rps": 0.1944
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 188,
-     "brier": 0.5756,
-     "logLoss": 0.973,
-     "rps": 0.1937
+     "n": 378,
+     "brier": 0.5587,
+     "logLoss": 0.9457,
+     "rps": 0.1875
     }
    },
    "TEST": {
-    "n_totale": 191,
-    "n_con_mercato": 191,
+    "n_totale": 371,
+    "n_con_mercato": 371,
     "modelA": {
-     "n": 191,
-     "brier": 0.5649,
-     "logLoss": 0.9539,
-     "rps": 0.1917
+     "n": 371,
+     "brier": 0.585,
+     "logLoss": 0.9842,
+     "rps": 0.2009
     },
     "modelB": {
-     "n": 191,
-     "brier": 0.5651,
-     "logLoss": 0.9538,
-     "rps": 0.192
+     "n": 371,
+     "brier": 0.5856,
+     "logLoss": 0.9848,
+     "rps": 0.201
+    },
+    "modelC": {
+     "n": 371,
+     "brier": 0.58,
+     "logLoss": 0.9764,
+     "rps": 0.1985
+    },
+    "modelD": {
+     "n": 371,
+     "brier": 0.5862,
+     "logLoss": 0.9874,
+     "rps": 0.2016
+    },
+    "modelE": {
+     "n": 371,
+     "brier": 0.5842,
+     "logLoss": 0.9829,
+     "rps": 0.2007
     },
     "market": {
-     "n": 191,
-     "brier": 0.5482,
-     "logLoss": 0.9298,
-     "rps": 0.1846
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 191,
-     "brier": 0.5649,
-     "logLoss": 0.9539,
-     "rps": 0.1917
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 191,
-     "brier": 0.5651,
-     "logLoss": 0.9538,
-     "rps": 0.192
+     "n": 371,
+     "brier": 0.5738,
+     "logLoss": 0.9678,
+     "rps": 0.1962
     }
    }
   },
   "Serie A": {
    "TRAIN": {
-    "n_totale": 655,
-    "n_con_mercato": 655,
+    "n_totale": 646,
+    "n_con_mercato": 646,
     "modelA": {
-     "n": 655,
-     "brier": 0.6054,
-     "logLoss": 1.0101,
-     "rps": 0.2016
+     "n": 646,
+     "brier": 0.6057,
+     "logLoss": 1.0103,
+     "rps": 0.2019
     },
     "modelB": {
-     "n": 655,
-     "brier": 0.6053,
-     "logLoss": 1.0094,
-     "rps": 0.202
+     "n": 646,
+     "brier": 0.6043,
+     "logLoss": 1.0074,
+     "rps": 0.2017
+    },
+    "modelC": {
+     "n": 646,
+     "brier": 0.6086,
+     "logLoss": 1.0162,
+     "rps": 0.2033
+    },
+    "modelD": {
+     "n": 646,
+     "brier": 0.6045,
+     "logLoss": 1.0092,
+     "rps": 0.2018
+    },
+    "modelE": {
+     "n": 646,
+     "brier": 0.6041,
+     "logLoss": 1.008,
+     "rps": 0.201
     },
     "market": {
-     "n": 655,
-     "brier": 0.5851,
-     "logLoss": 0.9791,
-     "rps": 0.1929
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 655,
-     "brier": 0.6054,
-     "logLoss": 1.0101,
-     "rps": 0.2016
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 655,
-     "brier": 0.6053,
-     "logLoss": 1.0094,
-     "rps": 0.202
+     "n": 646,
+     "brier": 0.5838,
+     "logLoss": 0.9772,
+     "rps": 0.1924
     }
    },
    "VALIDATION": {
-    "n_totale": 191,
-    "n_con_mercato": 191,
+    "n_totale": 372,
+    "n_con_mercato": 372,
     "modelA": {
-     "n": 191,
-     "brier": 0.591,
-     "logLoss": 0.9859,
-     "rps": 0.191
+     "n": 372,
+     "brier": 0.5818,
+     "logLoss": 0.9737,
+     "rps": 0.1903
     },
     "modelB": {
-     "n": 191,
-     "brier": 0.5905,
-     "logLoss": 0.9819,
-     "rps": 0.1909
+     "n": 372,
+     "brier": 0.5846,
+     "logLoss": 0.9758,
+     "rps": 0.1916
+    },
+    "modelC": {
+     "n": 372,
+     "brier": 0.5836,
+     "logLoss": 0.9766,
+     "rps": 0.1911
+    },
+    "modelD": {
+     "n": 372,
+     "brier": 0.5829,
+     "logLoss": 0.9765,
+     "rps": 0.1912
+    },
+    "modelE": {
+     "n": 372,
+     "brier": 0.5794,
+     "logLoss": 0.9695,
+     "rps": 0.189
     },
     "market": {
-     "n": 191,
-     "brier": 0.5792,
-     "logLoss": 0.9688,
-     "rps": 0.1873
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 191,
-     "brier": 0.591,
-     "logLoss": 0.9859,
-     "rps": 0.191
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 191,
-     "brier": 0.5905,
-     "logLoss": 0.9819,
-     "rps": 0.1909
+     "n": 372,
+     "brier": 0.5653,
+     "logLoss": 0.9491,
+     "rps": 0.1838
     }
    },
    "TEST": {
-    "n_totale": 185,
-    "n_con_mercato": 185,
+    "n_totale": 376,
+    "n_con_mercato": 376,
     "modelA": {
-     "n": 185,
-     "brier": 0.5715,
-     "logLoss": 0.9577,
-     "rps": 0.188
+     "n": 376,
+     "brier": 0.5964,
+     "logLoss": 0.9995,
+     "rps": 0.2024
     },
     "modelB": {
-     "n": 185,
-     "brier": 0.5742,
-     "logLoss": 0.9601,
-     "rps": 0.1894
+     "n": 376,
+     "brier": 0.5965,
+     "logLoss": 0.999,
+     "rps": 0.2022
+    },
+    "modelC": {
+     "n": 376,
+     "brier": 0.6053,
+     "logLoss": 1.0136,
+     "rps": 0.2066
+    },
+    "modelD": {
+     "n": 376,
+     "brier": 0.5986,
+     "logLoss": 1.0032,
+     "rps": 0.2035
+    },
+    "modelE": {
+     "n": 376,
+     "brier": 0.5952,
+     "logLoss": 0.9975,
+     "rps": 0.2018
     },
     "market": {
-     "n": 185,
-     "brier": 0.5575,
-     "logLoss": 0.9377,
-     "rps": 0.1821
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 185,
-     "brier": 0.5715,
-     "logLoss": 0.9577,
-     "rps": 0.188
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 185,
-     "brier": 0.5742,
-     "logLoss": 0.9601,
-     "rps": 0.1894
+     "n": 376,
+     "brier": 0.5828,
+     "logLoss": 0.9776,
+     "rps": 0.1961
     }
    }
   },
   "Bundesliga": {
    "TRAIN": {
-    "n_totale": 510,
-    "n_con_mercato": 510,
+    "n_totale": 506,
+    "n_con_mercato": 506,
     "modelA": {
-     "n": 510,
-     "brier": 0.5808,
-     "logLoss": 0.9761,
-     "rps": 0.1973
+     "n": 506,
+     "brier": 0.5825,
+     "logLoss": 0.977,
+     "rps": 0.1985
     },
     "modelB": {
-     "n": 510,
-     "brier": 0.5777,
-     "logLoss": 0.9723,
-     "rps": 0.196
+     "n": 506,
+     "brier": 0.5782,
+     "logLoss": 0.9718,
+     "rps": 0.1967
+    },
+    "modelC": {
+     "n": 506,
+     "brier": 0.5885,
+     "logLoss": 0.985,
+     "rps": 0.2009
+    },
+    "modelD": {
+     "n": 506,
+     "brier": 0.5881,
+     "logLoss": 0.9859,
+     "rps": 0.201
+    },
+    "modelE": {
+     "n": 506,
+     "brier": 0.5812,
+     "logLoss": 0.9752,
+     "rps": 0.1979
     },
     "market": {
-     "n": 510,
-     "brier": 0.5647,
+     "n": 506,
+     "brier": 0.5646,
      "logLoss": 0.9533,
-     "rps": 0.1901
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 510,
-     "brier": 0.5808,
-     "logLoss": 0.9761,
-     "rps": 0.1973
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 510,
-     "brier": 0.5777,
-     "logLoss": 0.9723,
-     "rps": 0.196
+     "rps": 0.1902
     }
    },
    "VALIDATION": {
-    "n_totale": 140,
-    "n_con_mercato": 140,
+    "n_totale": 299,
+    "n_con_mercato": 299,
     "modelA": {
-     "n": 140,
-     "brier": 0.5584,
-     "logLoss": 0.9439,
-     "rps": 0.1917
+     "n": 299,
+     "brier": 0.5961,
+     "logLoss": 1.0008,
+     "rps": 0.2031
     },
     "modelB": {
-     "n": 140,
-     "brier": 0.5634,
-     "logLoss": 0.9485,
-     "rps": 0.1938
+     "n": 299,
+     "brier": 0.5959,
+     "logLoss": 0.9994,
+     "rps": 0.2032
+    },
+    "modelC": {
+     "n": 299,
+     "brier": 0.5959,
+     "logLoss": 1.0015,
+     "rps": 0.2028
+    },
+    "modelD": {
+     "n": 299,
+     "brier": 0.6026,
+     "logLoss": 1.0089,
+     "rps": 0.2066
+    },
+    "modelE": {
+     "n": 299,
+     "brier": 0.5966,
+     "logLoss": 1.0024,
+     "rps": 0.2032
     },
     "market": {
-     "n": 140,
-     "brier": 0.5445,
-     "logLoss": 0.9211,
-     "rps": 0.1855
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 140,
-     "brier": 0.5584,
-     "logLoss": 0.9439,
-     "rps": 0.1917
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 140,
-     "brier": 0.5634,
-     "logLoss": 0.9485,
-     "rps": 0.1938
+     "n": 299,
+     "brier": 0.5891,
+     "logLoss": 0.9859,
+     "rps": 0.2
     }
    },
    "TEST": {
-    "n_totale": 162,
-    "n_con_mercato": 162,
+    "n_totale": 304,
+    "n_con_mercato": 304,
     "modelA": {
-     "n": 162,
-     "brier": 0.6327,
-     "logLoss": 1.0551,
-     "rps": 0.2149
+     "n": 304,
+     "brier": 0.5759,
+     "logLoss": 0.9739,
+     "rps": 0.1962
     },
     "modelB": {
-     "n": 162,
-     "brier": 0.6279,
-     "logLoss": 1.0483,
-     "rps": 0.213
+     "n": 304,
+     "brier": 0.5774,
+     "logLoss": 0.9749,
+     "rps": 0.1972
+    },
+    "modelC": {
+     "n": 304,
+     "brier": 0.5806,
+     "logLoss": 0.9817,
+     "rps": 0.1987
+    },
+    "modelD": {
+     "n": 304,
+     "brier": 0.5758,
+     "logLoss": 0.9734,
+     "rps": 0.1963
+    },
+    "modelE": {
+     "n": 304,
+     "brier": 0.574,
+     "logLoss": 0.972,
+     "rps": 0.1952
     },
     "market": {
-     "n": 162,
-     "brier": 0.6322,
-     "logLoss": 1.0486,
-     "rps": 0.2144
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 162,
-     "brier": 0.6327,
-     "logLoss": 1.0551,
-     "rps": 0.2149
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 162,
-     "brier": 0.6279,
-     "logLoss": 1.0483,
-     "rps": 0.213
+     "n": 304,
+     "brier": 0.5609,
+     "logLoss": 0.9502,
+     "rps": 0.19
     }
    }
   },
   "Ligue 1": {
    "TRAIN": {
-    "n_totale": 580,
-    "n_con_mercato": 580,
+    "n_totale": 574,
+    "n_con_mercato": 574,
     "modelA": {
-     "n": 580,
-     "brier": 0.6084,
-     "logLoss": 1.0146,
-     "rps": 0.2092
+     "n": 574,
+     "brier": 0.6031,
+     "logLoss": 1.0053,
+     "rps": 0.2067
     },
     "modelB": {
-     "n": 580,
-     "brier": 0.6094,
-     "logLoss": 1.0162,
-     "rps": 0.2094
+     "n": 574,
+     "brier": 0.6035,
+     "logLoss": 1.0061,
+     "rps": 0.2066
+    },
+    "modelC": {
+     "n": 574,
+     "brier": 0.6034,
+     "logLoss": 1.006,
+     "rps": 0.2069
+    },
+    "modelD": {
+     "n": 574,
+     "brier": 0.6105,
+     "logLoss": 1.0184,
+     "rps": 0.2107
+    },
+    "modelE": {
+     "n": 574,
+     "brier": 0.6026,
+     "logLoss": 1.0046,
+     "rps": 0.2064
     },
     "market": {
-     "n": 580,
-     "brier": 0.5919,
-     "logLoss": 0.9895,
-     "rps": 0.2013
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 580,
-     "brier": 0.6084,
-     "logLoss": 1.0146,
-     "rps": 0.2092
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 580,
-     "brier": 0.6094,
-     "logLoss": 1.0162,
-     "rps": 0.2094
+     "n": 574,
+     "brier": 0.5889,
+     "logLoss": 0.9853,
+     "rps": 0.2002
     }
    },
    "VALIDATION": {
-    "n_totale": 152,
-    "n_con_mercato": 152,
+    "n_totale": 304,
+    "n_con_mercato": 304,
     "modelA": {
-     "n": 152,
-     "brier": 0.5884,
-     "logLoss": 0.9866,
-     "rps": 0.2048
+     "n": 304,
+     "brier": 0.587,
+     "logLoss": 0.9854,
+     "rps": 0.2125
     },
     "modelB": {
-     "n": 152,
-     "brier": 0.5872,
-     "logLoss": 0.9851,
-     "rps": 0.2036
+     "n": 304,
+     "brier": 0.5866,
+     "logLoss": 0.9874,
+     "rps": 0.2118
+    },
+    "modelC": {
+     "n": 304,
+     "brier": 0.5827,
+     "logLoss": 0.9804,
+     "rps": 0.2107
+    },
+    "modelD": {
+     "n": 304,
+     "brier": 0.5845,
+     "logLoss": 0.9821,
+     "rps": 0.2109
+    },
+    "modelE": {
+     "n": 304,
+     "brier": 0.586,
+     "logLoss": 0.9843,
+     "rps": 0.212
     },
     "market": {
-     "n": 152,
-     "brier": 0.5692,
-     "logLoss": 0.9574,
-     "rps": 0.1941
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 152,
-     "brier": 0.5884,
-     "logLoss": 0.9866,
-     "rps": 0.2048
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 152,
-     "brier": 0.5872,
-     "logLoss": 0.9851,
-     "rps": 0.2036
+     "n": 304,
+     "brier": 0.5646,
+     "logLoss": 0.9554,
+     "rps": 0.2007
     }
    },
    "TEST": {
-    "n_totale": 153,
-    "n_con_mercato": 153,
+    "n_totale": 295,
+    "n_con_mercato": 295,
     "modelA": {
-     "n": 153,
-     "brier": 0.5817,
-     "logLoss": 0.9778,
-     "rps": 0.2181
+     "n": 295,
+     "brier": 0.5891,
+     "logLoss": 0.987,
+     "rps": 0.2031
     },
     "modelB": {
-     "n": 153,
-     "brier": 0.5819,
-     "logLoss": 0.981,
-     "rps": 0.2174
+     "n": 295,
+     "brier": 0.5866,
+     "logLoss": 0.9831,
+     "rps": 0.2028
+    },
+    "modelC": {
+     "n": 295,
+     "brier": 0.5945,
+     "logLoss": 0.9949,
+     "rps": 0.2054
+    },
+    "modelD": {
+     "n": 295,
+     "brier": 0.5895,
+     "logLoss": 0.9886,
+     "rps": 0.2032
+    },
+    "modelE": {
+     "n": 295,
+     "brier": 0.5901,
+     "logLoss": 0.9877,
+     "rps": 0.2036
     },
     "market": {
-     "n": 153,
-     "brier": 0.5623,
-     "logLoss": 0.9566,
-     "rps": 0.2086
-    },
-    "modelA_su_righe_con_mercato": {
-     "n": 153,
-     "brier": 0.5817,
-     "logLoss": 0.9778,
-     "rps": 0.2181
-    },
-    "modelB_su_righe_con_mercato": {
-     "n": 153,
-     "brier": 0.5819,
-     "logLoss": 0.981,
-     "rps": 0.2174
+     "n": 295,
+     "brier": 0.5827,
+     "logLoss": 0.9772,
+     "rps": 0.2013
     }
-   }
-  }
- },
- "perSplit": {
-  "TRAIN": {
-   "n_totale": 3058,
-   "n_con_mercato": 3058,
-   "modelA": {
-    "n": 3058,
-    "brier": 0.5881,
-    "logLoss": 0.9867,
-    "rps": 0.2004
-   },
-   "modelB": {
-    "n": 3058,
-    "brier": 0.5876,
-    "logLoss": 0.9862,
-    "rps": 0.2002
-   },
-   "market": {
-    "n": 3058,
-    "brier": 0.5731,
-    "logLoss": 0.964,
-    "rps": 0.1936
-   },
-   "modelA_su_righe_con_mercato": {
-    "n": 3058,
-    "brier": 0.5881,
-    "logLoss": 0.9867,
-    "rps": 0.2004
-   },
-   "modelB_su_righe_con_mercato": {
-    "n": 3058,
-    "brier": 0.5876,
-    "logLoss": 0.9862,
-    "rps": 0.2002
-   }
-  },
-  "VALIDATION": {
-   "n_totale": 869,
-   "n_con_mercato": 869,
-   "modelA": {
-    "n": 869,
-    "brier": 0.582,
-    "logLoss": 0.9774,
-    "rps": 0.1948
-   },
-   "modelB": {
-    "n": 869,
-    "brier": 0.5813,
-    "logLoss": 0.9746,
-    "rps": 0.1946
-   },
-   "market": {
-    "n": 869,
-    "brier": 0.5721,
-    "logLoss": 0.9617,
-    "rps": 0.1906
-   },
-   "modelA_su_righe_con_mercato": {
-    "n": 869,
-    "brier": 0.582,
-    "logLoss": 0.9774,
-    "rps": 0.1948
-   },
-   "modelB_su_righe_con_mercato": {
-    "n": 869,
-    "brier": 0.5813,
-    "logLoss": 0.9746,
-    "rps": 0.1946
-   }
-  },
-  "TEST": {
-   "n_totale": 872,
-   "n_con_mercato": 872,
-   "modelA": {
-    "n": 872,
-    "brier": 0.5813,
-    "logLoss": 0.9762,
-    "rps": 0.2014
-   },
-   "modelB": {
-    "n": 872,
-    "brier": 0.5812,
-    "logLoss": 0.9762,
-    "rps": 0.2013
-   },
-   "market": {
-    "n": 872,
-    "brier": 0.571,
-    "logLoss": 0.9619,
-    "rps": 0.1967
-   },
-   "modelA_su_righe_con_mercato": {
-    "n": 872,
-    "brier": 0.5813,
-    "logLoss": 0.9762,
-    "rps": 0.2014
-   },
-   "modelB_su_righe_con_mercato": {
-    "n": 872,
-    "brier": 0.5812,
-    "logLoss": 0.9762,
-    "rps": 0.2013
    }
   }
  }

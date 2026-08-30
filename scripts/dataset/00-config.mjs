@@ -21,19 +21,20 @@ export const LEGHE = [
 export const STAGIONI = [
   { understat: '2022', footballData: '2223', etichetta: '2022/23' },
   { understat: '2023', footballData: '2324', etichetta: '2023/24' },
-  { understat: '2024', footballData: '2425', etichetta: '2024/25' }
+  { understat: '2024', footballData: '2425', etichetta: '2024/25' },
+  { understat: '2025', footballData: '2526', etichetta: '2025/26' }
 ];
 
-// Split cronologico (STEP 11), deciso PRIMA di guardare qualunque metrica:
-// TRAIN sono le prime due stagioni intere. La stagione piu' recente (2024/25,
-// 15 agosto 2024 - 25 maggio 2025, mediana attorno al 12 gennaio 2025) si
-// divide a meta': la prima meta' e' VALIDATION (dove si tara tutto: rho,
-// soglie EV, eventuali pesi), la seconda meta' e' TEST e non si tocca per
-// nessun tuning, solo per la misura finale.
+// Split cronologico (STEP 11), rivisto per usare la stagione 2025/26 come
+// vero test finale fuori campione, quella su cui si gioca la produzione
+// 2026/27: TRAIN sono le prime due stagioni intere, VALIDATION e' 2024/25
+// per intero (dove si tara tutto: rho, decay, Elo, soglie EV, scelta fra le
+// varianti), TEST e' 2025/26 per intero e non si tocca per nessun tuning,
+// solo per la misura finale.
 export const SPLIT = {
-  trainFino: '2024-08-14',       // fine 2023/24
-  validationFino: '2025-01-12',  // meta' di 2024/25
-  // dopo validationFino: TEST
+  trainFino: '2024-08-01',       // fine 2023/24, inizio 2024/25
+  validationFino: '2025-08-01',  // fine 2024/25, inizio 2025/26
+  // dopo validationFino: TEST (2025/26)
 };
 
 export const RAW_UNDERSTAT_DIR = 'data/raw/understat';

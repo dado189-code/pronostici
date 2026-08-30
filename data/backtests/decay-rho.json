@@ -1,0 +1,213 @@
+{
+ "generato_il": "2026-08-30T12:04:25.753Z",
+ "nota": "Decay: stimato su TRAIN, valutato out-of-sample su VALIDATION (log-likelihood, rho fisso a -0.05 per isolare l effetto del decay). Rho: stimato su TRAIN+VALIDATION con emivita di produzione (180gg), griglia ampia [-0.4,0.4]. Il TEST 2025/26 non e mai stato usato in questo script.",
+ "decayPerLega": {
+  "Premier League": {
+   "curva": [
+    {
+     "emivita": 60,
+     "logLikelihoodOOS": -1042.47
+    },
+    {
+     "emivita": 90,
+     "logLikelihoodOOS": -1038.09
+    },
+    {
+     "emivita": 120,
+     "logLikelihoodOOS": -1035.66
+    },
+    {
+     "emivita": 150,
+     "logLikelihoodOOS": -1034.26
+    },
+    {
+     "emivita": 180,
+     "logLikelihoodOOS": -1033.46
+    },
+    {
+     "emivita": 240,
+     "logLikelihoodOOS": -1032.71
+    },
+    {
+     "emivita": 365,
+     "logLikelihoodOOS": -1032.43
+    }
+   ],
+   "migliore": {
+    "emivita": 365,
+    "logLikelihoodOOS": -1032.43
+   }
+  },
+  "Liga": {
+   "curva": [
+    {
+     "emivita": 60,
+     "logLikelihoodOOS": -965.24
+    },
+    {
+     "emivita": 90,
+     "logLikelihoodOOS": -959.24
+    },
+    {
+     "emivita": 120,
+     "logLikelihoodOOS": -956.12
+    },
+    {
+     "emivita": 150,
+     "logLikelihoodOOS": -954.24
+    },
+    {
+     "emivita": 180,
+     "logLikelihoodOOS": -953.01
+    },
+    {
+     "emivita": 240,
+     "logLikelihoodOOS": -951.51
+    },
+    {
+     "emivita": 365,
+     "logLikelihoodOOS": -950.07
+    }
+   ],
+   "migliore": {
+    "emivita": 365,
+    "logLikelihoodOOS": -950.07
+   }
+  },
+  "Serie A": {
+   "curva": [
+    {
+     "emivita": 60,
+     "logLikelihoodOOS": -758.9
+    },
+    {
+     "emivita": 90,
+     "logLikelihoodOOS": -756.73
+    },
+    {
+     "emivita": 120,
+     "logLikelihoodOOS": -755.61
+    },
+    {
+     "emivita": 150,
+     "logLikelihoodOOS": -754.9
+    },
+    {
+     "emivita": 180,
+     "logLikelihoodOOS": -754.42
+    },
+    {
+     "emivita": 240,
+     "logLikelihoodOOS": -753.84
+    },
+    {
+     "emivita": 365,
+     "logLikelihoodOOS": -753.3
+    }
+   ],
+   "migliore": {
+    "emivita": 365,
+    "logLikelihoodOOS": -753.3
+   }
+  },
+  "Bundesliga": {
+   "curva": [
+    {
+     "emivita": 60,
+     "logLikelihoodOOS": -759.27
+    },
+    {
+     "emivita": 90,
+     "logLikelihoodOOS": -757.56
+    },
+    {
+     "emivita": 120,
+     "logLikelihoodOOS": -756.34
+    },
+    {
+     "emivita": 150,
+     "logLikelihoodOOS": -755.45
+    },
+    {
+     "emivita": 180,
+     "logLikelihoodOOS": -754.8
+    },
+    {
+     "emivita": 240,
+     "logLikelihoodOOS": -753.96
+    },
+    {
+     "emivita": 365,
+     "logLikelihoodOOS": -753.13
+    }
+   ],
+   "migliore": {
+    "emivita": 365,
+    "logLikelihoodOOS": -753.13
+   }
+  },
+  "Ligue 1": {
+   "curva": [
+    {
+     "emivita": 60,
+     "logLikelihoodOOS": -815.51
+    },
+    {
+     "emivita": 90,
+     "logLikelihoodOOS": -816.2
+    },
+    {
+     "emivita": 120,
+     "logLikelihoodOOS": -816.5
+    },
+    {
+     "emivita": 150,
+     "logLikelihoodOOS": -816.55
+    },
+    {
+     "emivita": 180,
+     "logLikelihoodOOS": -816.51
+    },
+    {
+     "emivita": 240,
+     "logLikelihoodOOS": -816.35
+    },
+    {
+     "emivita": 365,
+     "logLikelihoodOOS": -816.07
+    }
+   ],
+   "migliore": {
+    "emivita": 60,
+    "logLikelihoodOOS": -815.51
+   }
+  }
+ },
+ "rhoPerLega": {
+  "Premier League": {
+   "rho_ottimo": -0.0075,
+   "log_likelihood": -3432.64,
+   "sul_bordo_griglia_ampia": false
+  },
+  "Liga": {
+   "rho_ottimo": 0.02,
+   "log_likelihood": -3181.08,
+   "sul_bordo_griglia_ampia": false
+  },
+  "Serie A": {
+   "rho_ottimo": -0.045,
+   "log_likelihood": -3134.62,
+   "sul_bordo_griglia_ampia": false
+  },
+  "Bundesliga": {
+   "rho_ottimo": -0.1225,
+   "log_likelihood": -2825.48,
+   "sul_bordo_griglia_ampia": false
+  },
+  "Ligue 1": {
+   "rho_ottimo": -0.075,
+   "log_likelihood": -2906.68,
+   "sul_bordo_griglia_ampia": false
+  }
+ }
+}

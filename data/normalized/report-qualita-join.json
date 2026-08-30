@@ -1,10 +1,10 @@
 {
- "generato_il": "2026-08-30T11:32:51.718Z",
+ "generato_il": "2026-08-30T11:53:31.396Z",
  "nota": "join esplicito su (lega, stagione, data, casa, ospite) via team-aliases.json, nessun fuzzy matching automatico",
  "globale": {
-  "totale_righe": 5338,
-  "matched": 5322,
-  "pct_matched": 99.7
+  "totale_righe": 7099,
+  "matched": 7065,
+  "pct_matched": 99.52
  },
  "perLegaStagione": [
   {
@@ -44,6 +44,18 @@
    "pct_ambiguous": 0
   },
   {
+   "league": "Premier League",
+   "season": "2025/26",
+   "totale_righe": 380,
+   "matched": 380,
+   "unmatched_understat": 0,
+   "unmatched_odds": 0,
+   "ambiguous": 0,
+   "pct_matched": 100,
+   "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  },
+  {
    "league": "Liga",
    "season": "2022/23",
    "totale_righe": 380,
@@ -77,6 +89,18 @@
    "ambiguous": 0,
    "pct_matched": 100,
    "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Liga",
+   "season": "2025/26",
+   "totale_righe": 381,
+   "matched": 379,
+   "unmatched_understat": 1,
+   "unmatched_odds": 1,
+   "ambiguous": 0,
+   "pct_matched": 99.5,
+   "pct_unmatched": 0.5,
    "pct_ambiguous": 0
   },
   {
@@ -116,6 +140,18 @@
    "pct_ambiguous": 0
   },
   {
+   "league": "Serie A",
+   "season": "2025/26",
+   "totale_righe": 380,
+   "matched": 380,
+   "unmatched_understat": 0,
+   "unmatched_odds": 0,
+   "ambiguous": 0,
+   "pct_matched": 100,
+   "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  },
+  {
    "league": "Bundesliga",
    "season": "2022/23",
    "totale_righe": 306,
@@ -152,6 +188,18 @@
    "pct_ambiguous": 0
   },
   {
+   "league": "Bundesliga",
+   "season": "2025/26",
+   "totale_righe": 306,
+   "matched": 306,
+   "unmatched_understat": 0,
+   "unmatched_odds": 0,
+   "ambiguous": 0,
+   "pct_matched": 100,
+   "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  },
+  {
    "league": "Ligue 1",
    "season": "2022/23",
    "totale_righe": 381,
@@ -185,6 +233,18 @@
    "ambiguous": 0,
    "pct_matched": 100,
    "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Ligue 1",
+   "season": "2025/26",
+   "totale_righe": 314,
+   "matched": 298,
+   "unmatched_understat": 8,
+   "unmatched_odds": 8,
+   "ambiguous": 0,
+   "pct_matched": 94.9,
+   "pct_unmatched": 5.1,
    "pct_ambiguous": 0
   }
  ]

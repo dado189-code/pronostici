@@ -1,380 +1,595 @@
 {
- "generato_il": "2026-08-30T11:40:22.796Z",
- "nota": "Calibrazione sull esito Home (il piu numeroso, quindi il piu stabile per bucket). VALIDATION e TEST separati: il TEST si guarda, non si usa per tarare nulla.",
- "VALIDATION": {
-  "modelA_home": [
-   {
-    "fascia": "0-10%",
-    "n": 5,
-    "probabilita_media_prevista": 7.5,
-    "frequenza_osservata": 20
-   },
-   {
-    "fascia": "10-20%",
-    "n": 64,
-    "probabilita_media_prevista": 16.2,
-    "frequenza_osservata": 10.9
-   },
-   {
-    "fascia": "20-30%",
-    "n": 124,
-    "probabilita_media_prevista": 25.4,
-    "frequenza_osservata": 17.7
-   },
-   {
-    "fascia": "30-40%",
-    "n": 163,
-    "probabilita_media_prevista": 35,
-    "frequenza_osservata": 31.3
-   },
-   {
-    "fascia": "40-50%",
-    "n": 174,
-    "probabilita_media_prevista": 44.8,
-    "frequenza_osservata": 43.7
-   },
-   {
-    "fascia": "50-60%",
-    "n": 148,
-    "probabilita_media_prevista": 54.5,
-    "frequenza_osservata": 52
-   },
-   {
-    "fascia": "60-70%",
-    "n": 105,
-    "probabilita_media_prevista": 65.2,
-    "frequenza_osservata": 67.6
-   },
-   {
-    "fascia": "70-80%",
-    "n": 63,
-    "probabilita_media_prevista": 73.9,
-    "frequenza_osservata": 73
-   },
-   {
-    "fascia": "80-90%",
-    "n": 20,
-    "probabilita_media_prevista": 84.7,
-    "frequenza_osservata": 80
-   },
-   {
-    "fascia": "90-100%",
-    "n": 3,
-    "probabilita_media_prevista": 93.4,
-    "frequenza_osservata": 66.7
-   }
-  ],
-  "modelB_home": [
-   {
-    "fascia": "0-10%",
-    "n": 5,
-    "probabilita_media_prevista": 8.2,
-    "frequenza_osservata": 0
-   },
-   {
-    "fascia": "10-20%",
-    "n": 70,
-    "probabilita_media_prevista": 16,
-    "frequenza_osservata": 12.9
-   },
-   {
-    "fascia": "20-30%",
-    "n": 135,
-    "probabilita_media_prevista": 25.3,
-    "frequenza_osservata": 19.3
-   },
-   {
-    "fascia": "30-40%",
-    "n": 173,
-    "probabilita_media_prevista": 35.2,
-    "frequenza_osservata": 32.4
-   },
-   {
-    "fascia": "40-50%",
-    "n": 171,
-    "probabilita_media_prevista": 45,
-    "frequenza_osservata": 45.6
-   },
-   {
-    "fascia": "50-60%",
-    "n": 148,
-    "probabilita_media_prevista": 54.6,
-    "frequenza_osservata": 54.7
-   },
-   {
-    "fascia": "60-70%",
-    "n": 100,
-    "probabilita_media_prevista": 65.2,
-    "frequenza_osservata": 65
-   },
-   {
-    "fascia": "70-80%",
-    "n": 51,
-    "probabilita_media_prevista": 74,
-    "frequenza_osservata": 84.3
-   },
-   {
-    "fascia": "80-90%",
-    "n": 15,
-    "probabilita_media_prevista": 85.1,
-    "frequenza_osservata": 66.7
-   },
-   {
-    "fascia": "90-100%",
-    "n": 1,
-    "probabilita_media_prevista": 97.8,
-    "frequenza_osservata": 100
-   }
-  ],
-  "market_home": [
-   {
-    "fascia": "0-10%",
-    "n": 11,
-    "probabilita_media_prevista": 8.5,
-    "frequenza_osservata": 0
-   },
-   {
-    "fascia": "10-20%",
-    "n": 84,
-    "probabilita_media_prevista": 15.8,
-    "frequenza_osservata": 11.9
-   },
-   {
-    "fascia": "20-30%",
-    "n": 140,
-    "probabilita_media_prevista": 25.5,
-    "frequenza_osservata": 23.6
-   },
-   {
-    "fascia": "30-40%",
-    "n": 155,
-    "probabilita_media_prevista": 35,
-    "frequenza_osservata": 34.2
-   },
-   {
-    "fascia": "40-50%",
-    "n": 157,
-    "probabilita_media_prevista": 44.5,
-    "frequenza_osservata": 40.1
-   },
-   {
-    "fascia": "50-60%",
-    "n": 143,
-    "probabilita_media_prevista": 54.8,
-    "frequenza_osservata": 55.9
-   },
-   {
-    "fascia": "60-70%",
-    "n": 81,
-    "probabilita_media_prevista": 64.9,
-    "frequenza_osservata": 64.2
-   },
-   {
-    "fascia": "70-80%",
-    "n": 72,
-    "probabilita_media_prevista": 74.2,
-    "frequenza_osservata": 77.8
-   },
-   {
-    "fascia": "80-90%",
-    "n": 26,
-    "probabilita_media_prevista": 84.3,
-    "frequenza_osservata": 84.6
-   },
-   {
-    "fascia": "90-100%",
-    "n": 0,
-    "probabilita_media_prevista": null,
-    "frequenza_osservata": null
-   }
-  ]
+ "generato_il": "2026-08-30T12:03:57.309Z",
+ "nota": "Calibrazione 1X2 completa (H, D, A separati) con Expected Calibration Error (ECE): media pesata, sui bucket, di |probabilita media prevista - frequenza osservata|.",
+ "TEST_modelA": {
+  "H": {
+   "bucket": [
+    {
+     "fascia": "0-10%",
+     "n": 10,
+     "probabilita_media_prevista": 8.2,
+     "frequenza_osservata": 0
+    },
+    {
+     "fascia": "10-20%",
+     "n": 89,
+     "probabilita_media_prevista": 16.4,
+     "frequenza_osservata": 15.7
+    },
+    {
+     "fascia": "20-30%",
+     "n": 236,
+     "probabilita_media_prevista": 25.3,
+     "frequenza_osservata": 21.6
+    },
+    {
+     "fascia": "30-40%",
+     "n": 366,
+     "probabilita_media_prevista": 35.1,
+     "frequenza_osservata": 33.6
+    },
+    {
+     "fascia": "40-50%",
+     "n": 377,
+     "probabilita_media_prevista": 45,
+     "frequenza_osservata": 44.8
+    },
+    {
+     "fascia": "50-60%",
+     "n": 299,
+     "probabilita_media_prevista": 54.5,
+     "frequenza_osservata": 52.5
+    },
+    {
+     "fascia": "60-70%",
+     "n": 223,
+     "probabilita_media_prevista": 64.4,
+     "frequenza_osservata": 64.6
+    },
+    {
+     "fascia": "70-80%",
+     "n": 86,
+     "probabilita_media_prevista": 74.2,
+     "frequenza_osservata": 77.9
+    },
+    {
+     "fascia": "80-90%",
+     "n": 34,
+     "probabilita_media_prevista": 83.1,
+     "frequenza_osservata": 88.2
+    },
+    {
+     "fascia": "90-100%",
+     "n": 2,
+     "probabilita_media_prevista": 91.1,
+     "frequenza_osservata": 50
+    }
+   ],
+   "ECE": 0.0164
+  },
+  "D": {
+   "bucket": [
+    {
+     "fascia": "0-10%",
+     "n": 13,
+     "probabilita_media_prevista": 8.6,
+     "frequenza_osservata": 7.7
+    },
+    {
+     "fascia": "10-20%",
+     "n": 301,
+     "probabilita_media_prevista": 17,
+     "frequenza_osservata": 16.6
+    },
+    {
+     "fascia": "20-30%",
+     "n": 1380,
+     "probabilita_media_prevista": 24.2,
+     "frequenza_osservata": 27.6
+    },
+    {
+     "fascia": "30-40%",
+     "n": 28,
+     "probabilita_media_prevista": 31.2,
+     "frequenza_osservata": 25
+    },
+    {
+     "fascia": "40-50%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "50-60%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "60-70%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "70-80%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "80-90%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "90-100%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    }
+   ],
+   "ECE": 0.0288
+  },
+  "A": {
+   "bucket": [
+    {
+     "fascia": "0-10%",
+     "n": 73,
+     "probabilita_media_prevista": 7.3,
+     "frequenza_osservata": 6.8
+    },
+    {
+     "fascia": "10-20%",
+     "n": 326,
+     "probabilita_media_prevista": 15.5,
+     "frequenza_osservata": 13.2
+    },
+    {
+     "fascia": "20-30%",
+     "n": 433,
+     "probabilita_media_prevista": 25,
+     "frequenza_osservata": 26.1
+    },
+    {
+     "fascia": "30-40%",
+     "n": 395,
+     "probabilita_media_prevista": 34.7,
+     "frequenza_osservata": 28.9
+    },
+    {
+     "fascia": "40-50%",
+     "n": 262,
+     "probabilita_media_prevista": 44.4,
+     "frequenza_osservata": 42.7
+    },
+    {
+     "fascia": "50-60%",
+     "n": 160,
+     "probabilita_media_prevista": 54.1,
+     "frequenza_osservata": 55
+    },
+    {
+     "fascia": "60-70%",
+     "n": 54,
+     "probabilita_media_prevista": 63.5,
+     "frequenza_osservata": 64.8
+    },
+    {
+     "fascia": "70-80%",
+     "n": 18,
+     "probabilita_media_prevista": 74.5,
+     "frequenza_osservata": 88.9
+    },
+    {
+     "fascia": "80-90%",
+     "n": 1,
+     "probabilita_media_prevista": 83.8,
+     "frequenza_osservata": 100
+    },
+    {
+     "fascia": "90-100%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    }
+   ],
+   "ECE": 0.0259
+  }
  },
- "TEST": {
-  "modelA_home": [
-   {
-    "fascia": "0-10%",
-    "n": 14,
-    "probabilita_media_prevista": 8.2,
-    "frequenza_osservata": 0
-   },
-   {
-    "fascia": "10-20%",
-    "n": 58,
-    "probabilita_media_prevista": 15.7,
-    "frequenza_osservata": 15.5
-   },
-   {
-    "fascia": "20-30%",
-    "n": 138,
-    "probabilita_media_prevista": 25.7,
-    "frequenza_osservata": 18.8
-   },
-   {
-    "fascia": "30-40%",
-    "n": 138,
-    "probabilita_media_prevista": 35.7,
-    "frequenza_osservata": 30.4
-   },
-   {
-    "fascia": "40-50%",
-    "n": 192,
-    "probabilita_media_prevista": 44.9,
-    "frequenza_osservata": 39.6
-   },
-   {
-    "fascia": "50-60%",
-    "n": 138,
-    "probabilita_media_prevista": 54.8,
-    "frequenza_osservata": 56.5
-   },
-   {
-    "fascia": "60-70%",
-    "n": 110,
-    "probabilita_media_prevista": 64.5,
-    "frequenza_osservata": 55.5
-   },
-   {
-    "fascia": "70-80%",
-    "n": 63,
-    "probabilita_media_prevista": 74.4,
-    "frequenza_osservata": 77.8
-   },
-   {
-    "fascia": "80-90%",
-    "n": 18,
-    "probabilita_media_prevista": 84.1,
-    "frequenza_osservata": 100
-   },
-   {
-    "fascia": "90-100%",
-    "n": 3,
-    "probabilita_media_prevista": 91.9,
-    "frequenza_osservata": 66.7
-   }
-  ],
-  "modelB_home": [
-   {
-    "fascia": "0-10%",
-    "n": 11,
-    "probabilita_media_prevista": 7.9,
-    "frequenza_osservata": 0
-   },
-   {
-    "fascia": "10-20%",
-    "n": 66,
-    "probabilita_media_prevista": 15.6,
-    "frequenza_osservata": 13.6
-   },
-   {
-    "fascia": "20-30%",
-    "n": 133,
-    "probabilita_media_prevista": 25.6,
-    "frequenza_osservata": 19.5
-   },
-   {
-    "fascia": "30-40%",
-    "n": 162,
-    "probabilita_media_prevista": 35.3,
-    "frequenza_osservata": 33.3
-   },
-   {
-    "fascia": "40-50%",
-    "n": 189,
-    "probabilita_media_prevista": 44.7,
-    "frequenza_osservata": 39.2
-   },
-   {
-    "fascia": "50-60%",
-    "n": 147,
-    "probabilita_media_prevista": 54.8,
-    "frequenza_osservata": 55.8
-   },
-   {
-    "fascia": "60-70%",
-    "n": 93,
-    "probabilita_media_prevista": 64.6,
-    "frequenza_osservata": 64.5
-   },
-   {
-    "fascia": "70-80%",
-    "n": 55,
-    "probabilita_media_prevista": 73.9,
-    "frequenza_osservata": 74.5
-   },
-   {
-    "fascia": "80-90%",
-    "n": 14,
-    "probabilita_media_prevista": 84.5,
-    "frequenza_osservata": 100
-   },
-   {
-    "fascia": "90-100%",
-    "n": 2,
-    "probabilita_media_prevista": 91.2,
-    "frequenza_osservata": 50
-   }
-  ],
-  "market_home": [
-   {
-    "fascia": "0-10%",
-    "n": 15,
-    "probabilita_media_prevista": 8.3,
-    "frequenza_osservata": 6.7
-   },
-   {
-    "fascia": "10-20%",
-    "n": 84,
-    "probabilita_media_prevista": 16,
-    "frequenza_osservata": 14.3
-   },
-   {
-    "fascia": "20-30%",
-    "n": 118,
-    "probabilita_media_prevista": 25.3,
-    "frequenza_osservata": 18.6
-   },
-   {
-    "fascia": "30-40%",
-    "n": 154,
-    "probabilita_media_prevista": 35.2,
-    "frequenza_osservata": 26.6
-   },
-   {
-    "fascia": "40-50%",
-    "n": 162,
-    "probabilita_media_prevista": 44.6,
-    "frequenza_osservata": 44.4
-   },
-   {
-    "fascia": "50-60%",
-    "n": 140,
-    "probabilita_media_prevista": 54.4,
-    "frequenza_osservata": 51.4
-   },
-   {
-    "fascia": "60-70%",
-    "n": 91,
-    "probabilita_media_prevista": 64.8,
-    "frequenza_osservata": 56
-   },
-   {
-    "fascia": "70-80%",
-    "n": 76,
-    "probabilita_media_prevista": 73.8,
-    "frequenza_osservata": 80.3
-   },
-   {
-    "fascia": "80-90%",
-    "n": 31,
-    "probabilita_media_prevista": 83.6,
-    "frequenza_osservata": 90.3
-   },
-   {
-    "fascia": "90-100%",
-    "n": 1,
-    "probabilita_media_prevista": 92.8,
-    "frequenza_osservata": 100
-   }
-  ]
+ "TEST_market": {
+  "H": {
+   "bucket": [
+    {
+     "fascia": "0-10%",
+     "n": 17,
+     "probabilita_media_prevista": 8.5,
+     "frequenza_osservata": 0
+    },
+    {
+     "fascia": "10-20%",
+     "n": 148,
+     "probabilita_media_prevista": 16,
+     "frequenza_osservata": 12.8
+    },
+    {
+     "fascia": "20-30%",
+     "n": 248,
+     "probabilita_media_prevista": 25.5,
+     "frequenza_osservata": 25
+    },
+    {
+     "fascia": "30-40%",
+     "n": 352,
+     "probabilita_media_prevista": 35.3,
+     "frequenza_osservata": 34.9
+    },
+    {
+     "fascia": "40-50%",
+     "n": 378,
+     "probabilita_media_prevista": 44.8,
+     "frequenza_osservata": 47.4
+    },
+    {
+     "fascia": "50-60%",
+     "n": 259,
+     "probabilita_media_prevista": 54.6,
+     "frequenza_osservata": 53.3
+    },
+    {
+     "fascia": "60-70%",
+     "n": 182,
+     "probabilita_media_prevista": 64.6,
+     "frequenza_osservata": 67.6
+    },
+    {
+     "fascia": "70-80%",
+     "n": 107,
+     "probabilita_media_prevista": 74.6,
+     "frequenza_osservata": 78.5
+    },
+    {
+     "fascia": "80-90%",
+     "n": 31,
+     "probabilita_media_prevista": 83.9,
+     "frequenza_osservata": 90.3
+    },
+    {
+     "fascia": "90-100%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    }
+   ],
+   "ECE": 0.0192
+  },
+  "D": {
+   "bucket": [
+    {
+     "fascia": "0-10%",
+     "n": 12,
+     "probabilita_media_prevista": 8.4,
+     "frequenza_osservata": 8.3
+    },
+    {
+     "fascia": "10-20%",
+     "n": 232,
+     "probabilita_media_prevista": 16.5,
+     "frequenza_osservata": 15.5
+    },
+    {
+     "fascia": "20-30%",
+     "n": 1212,
+     "probabilita_media_prevista": 25.8,
+     "frequenza_osservata": 26.7
+    },
+    {
+     "fascia": "30-40%",
+     "n": 266,
+     "probabilita_media_prevista": 31.6,
+     "frequenza_osservata": 29.7
+    },
+    {
+     "fascia": "40-50%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "50-60%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "60-70%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "70-80%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "80-90%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "90-100%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    }
+   ],
+   "ECE": 0.01
+  },
+  "A": {
+   "bucket": [
+    {
+     "fascia": "0-10%",
+     "n": 94,
+     "probabilita_media_prevista": 7.5,
+     "frequenza_osservata": 5.3
+    },
+    {
+     "fascia": "10-20%",
+     "n": 352,
+     "probabilita_media_prevista": 15.3,
+     "frequenza_osservata": 14.5
+    },
+    {
+     "fascia": "20-30%",
+     "n": 475,
+     "probabilita_media_prevista": 25,
+     "frequenza_osservata": 22.9
+    },
+    {
+     "fascia": "30-40%",
+     "n": 356,
+     "probabilita_media_prevista": 34.5,
+     "frequenza_osservata": 35.1
+    },
+    {
+     "fascia": "40-50%",
+     "n": 204,
+     "probabilita_media_prevista": 44.6,
+     "frequenza_osservata": 47.1
+    },
+    {
+     "fascia": "50-60%",
+     "n": 138,
+     "probabilita_media_prevista": 54.8,
+     "frequenza_osservata": 50
+    },
+    {
+     "fascia": "60-70%",
+     "n": 73,
+     "probabilita_media_prevista": 63.8,
+     "frequenza_osservata": 64.4
+    },
+    {
+     "fascia": "70-80%",
+     "n": 28,
+     "probabilita_media_prevista": 74,
+     "frequenza_osservata": 82.1
+    },
+    {
+     "fascia": "80-90%",
+     "n": 2,
+     "probabilita_media_prevista": 83.1,
+     "frequenza_osservata": 100
+    },
+    {
+     "fascia": "90-100%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    }
+   ],
+   "ECE": 0.0185
+  }
+ },
+ "VALIDATION_modelA": {
+  "H": {
+   "bucket": [
+    {
+     "fascia": "0-10%",
+     "n": 19,
+     "probabilita_media_prevista": 8.2,
+     "frequenza_osservata": 0
+    },
+    {
+     "fascia": "10-20%",
+     "n": 116,
+     "probabilita_media_prevista": 15.9,
+     "frequenza_osservata": 14.7
+    },
+    {
+     "fascia": "20-30%",
+     "n": 258,
+     "probabilita_media_prevista": 25.3,
+     "frequenza_osservata": 18.6
+    },
+    {
+     "fascia": "30-40%",
+     "n": 299,
+     "probabilita_media_prevista": 35.2,
+     "frequenza_osservata": 30.1
+    },
+    {
+     "fascia": "40-50%",
+     "n": 366,
+     "probabilita_media_prevista": 44.8,
+     "frequenza_osservata": 42.1
+    },
+    {
+     "fascia": "50-60%",
+     "n": 291,
+     "probabilita_media_prevista": 54.5,
+     "frequenza_osservata": 53.6
+    },
+    {
+     "fascia": "60-70%",
+     "n": 217,
+     "probabilita_media_prevista": 65,
+     "frequenza_osservata": 61.8
+    },
+    {
+     "fascia": "70-80%",
+     "n": 118,
+     "probabilita_media_prevista": 73.9,
+     "frequenza_osservata": 73.7
+    },
+    {
+     "fascia": "80-90%",
+     "n": 42,
+     "probabilita_media_prevista": 84.1,
+     "frequenza_osservata": 88.1
+    },
+    {
+     "fascia": "90-100%",
+     "n": 5,
+     "probabilita_media_prevista": 92,
+     "frequenza_osservata": 60
+    }
+   ],
+   "ECE": 0.034
+  },
+  "D": {
+   "bucket": [
+    {
+     "fascia": "0-10%",
+     "n": 21,
+     "probabilita_media_prevista": 8.2,
+     "frequenza_osservata": 4.8
+    },
+    {
+     "fascia": "10-20%",
+     "n": 288,
+     "probabilita_media_prevista": 16.8,
+     "frequenza_osservata": 16.7
+    },
+    {
+     "fascia": "20-30%",
+     "n": 1313,
+     "probabilita_media_prevista": 25,
+     "frequenza_osservata": 26.5
+    },
+    {
+     "fascia": "30-40%",
+     "n": 109,
+     "probabilita_media_prevista": 31.4,
+     "frequenza_osservata": 33
+    },
+    {
+     "fascia": "40-50%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "50-60%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "60-70%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "70-80%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "80-90%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    },
+    {
+     "fascia": "90-100%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    }
+   ],
+   "ECE": 0.0134
+  },
+  "A": {
+   "bucket": [
+    {
+     "fascia": "0-10%",
+     "n": 110,
+     "probabilita_media_prevista": 6.8,
+     "frequenza_osservata": 10
+    },
+    {
+     "fascia": "10-20%",
+     "n": 363,
+     "probabilita_media_prevista": 14.9,
+     "frequenza_osservata": 13.8
+    },
+    {
+     "fascia": "20-30%",
+     "n": 452,
+     "probabilita_media_prevista": 25,
+     "frequenza_osservata": 23.7
+    },
+    {
+     "fascia": "30-40%",
+     "n": 322,
+     "probabilita_media_prevista": 34.5,
+     "frequenza_osservata": 39.8
+    },
+    {
+     "fascia": "40-50%",
+     "n": 243,
+     "probabilita_media_prevista": 44.5,
+     "frequenza_osservata": 51
+    },
+    {
+     "fascia": "50-60%",
+     "n": 144,
+     "probabilita_media_prevista": 54.2,
+     "frequenza_osservata": 59.7
+    },
+    {
+     "fascia": "60-70%",
+     "n": 65,
+     "probabilita_media_prevista": 63.8,
+     "frequenza_osservata": 63.1
+    },
+    {
+     "fascia": "70-80%",
+     "n": 27,
+     "probabilita_media_prevista": 73.4,
+     "frequenza_osservata": 74.1
+    },
+    {
+     "fascia": "80-90%",
+     "n": 5,
+     "probabilita_media_prevista": 83.2,
+     "frequenza_osservata": 100
+    },
+    {
+     "fascia": "90-100%",
+     "n": 0,
+     "probabilita_media_prevista": null,
+     "frequenza_osservata": null
+    }
+   ],
+   "ECE": 0.032
+  }
  }
 }
