@@ -1,6 +1,6 @@
 {
  "nota": "Ogni riga e immutabile una volta scritta: non viene mai aggiornata da esecuzioni successive, nemmeno se il modello o i dati di input cambiano. Serve a verificare a posteriori cosa il modello prevedeva PRIMA del kickoff, senza il rischio che lo storico si riscriva da solo.",
- "aggiornato": "2026-08-30T11:13:15.446Z",
+ "aggiornato": "2026-08-30T14:07:29.493Z",
  "snapshot": [
   {
    "snapshot_id": "napoli-como|2026-08-30T16:30:00.000Z|standard|Multigol casa 1-2|football-v1-baseline",
@@ -3443,6 +3443,182 @@
    "src": "consenso di 17 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline",
    "generated_at": "2026-08-30T11:13:15.445Z"
+  },
+  {
+   "snapshot_id": "toulouse-lille|2026-09-03T18:45:00.000Z|standard|Under 2.5|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Toulouse - Lille",
+   "quando": "gio 03/09, 20:45",
+   "ore": 101,
+   "match": "toulouse-lille",
+   "inizio": "2026-09-03T18:45:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3277,
+     "PX": 0.3,
+     "P2": 0.3723,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3281,
+     "PX": 0.2991,
+     "P2": 0.3728,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.152,
+     "lambda_away": 1.244
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 3.23,
+     "book": "1xBet",
+     "n_book": 14,
+     "no_vig_probability": 0.304
+    },
+    "value": {
+     "fair_odds": 3.049,
+     "edge": 0.024,
+     "ev": 0.0594
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.0241,
+     "confidence": 86,
+     "data_quality": 60
+    },
+    "value_class": "VALUE",
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Toulouse\" il 32.8% contro il 30.4% del mercato. La quota fair e' 3.05 contro una quota disponibile di 3.23. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Under 2.5",
+   "prob": 0.571,
+   "why": "Gol attesi 1.15 contro 1.24, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.1%. Sul segno 1 il modello dice 32.8% contro il 30.4% del consenso di 14 bookmaker, miglior prezzo 3.23 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.328,
+    "probMercato": 0.304,
+    "prezzo": 3.23,
+    "book": "1xBet",
+    "nBook": 14,
+    "valore": 0.058
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T14:07:29.492Z"
+  },
+  {
+   "snapshot_id": "toulouse-lille|2026-09-03T18:45:00.000Z|standard|Multigol 1-4|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Toulouse - Lille",
+   "quando": "gio 03/09, 20:45",
+   "ore": 101,
+   "match": "toulouse-lille",
+   "inizio": "2026-09-03T18:45:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3277,
+     "PX": 0.3,
+     "P2": 0.3723,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3281,
+     "PX": 0.2991,
+     "P2": 0.3728,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.152,
+     "lambda_away": 1.244
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 3.23,
+     "book": "1xBet",
+     "n_book": 14,
+     "no_vig_probability": 0.304
+    },
+    "value": {
+     "fair_odds": 3.049,
+     "edge": 0.024,
+     "ev": 0.0594
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.0241,
+     "confidence": 86,
+     "data_quality": 60
+    },
+    "value_class": "VALUE",
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Toulouse\" il 32.8% contro il 30.4% del mercato. La quota fair e' 3.05 contro una quota disponibile di 3.23. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Multigol 1-4",
+   "prob": 0.802,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.15 contro 1.24, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.2%. Sul segno 1 il modello dice 32.8% contro il 30.4% del consenso di 14 bookmaker, miglior prezzo 3.23 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T14:07:29.492Z"
+  },
+  {
+   "snapshot_id": "seattle storm - los angeles sparks|2026-08-30T21:00:00.000Z|standard|Los Angeles Sparks vincente|football-v1-baseline",
+   "sport": "basket",
+   "comp": "WNBA",
+   "evento": "Seattle Storm - Los Angeles Sparks",
+   "quando": "dom 30/08, 23:00",
+   "ore": 7,
+   "match": "seattle storm - los angeles sparks",
+   "inizio": "2026-08-30T21:00:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Los Angeles Sparks vincente",
+   "prob": 0.524,
+   "why": "Nessun modello xG copre WNBA: questa e la probabilita che il mercato sta prezzando, 52.4%, ricavata togliendo il margine alle quote di 16 bookmaker e facendone la media. Miglior prezzo 1.90 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 16 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T14:07:29.492Z"
   }
  ]
 }

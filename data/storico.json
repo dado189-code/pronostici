@@ -1789,9 +1789,36 @@
     "valore": 0.055
    },
    "id": "freiburg-werder bremen|2026-08-30T13:30:00.000Z|standard|Multigol casa 1-2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Monaco - Marseille",
+   "quando": "dom 30/08, 20:45",
+   "ore": 8,
+   "match": "monaco-marseille",
+   "inizio": "2026-08-30T18:45:00.000Z",
+   "understat": "Ligue_1",
+   "tipo": "sorpresa",
+   "mercato": "Marseille vincente",
+   "prob": 0.344,
+   "prezzo": 3.3,
+   "why": "Il modello da questo esito al 34.4%, il consenso di 23 bookmaker al 30.7%. Al prezzo migliore, 3.30 su Betfair, il valore atteso e' 13.6%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.344,
+    "probMercato": 0.307,
+    "prezzo": 3.3,
+    "book": "Betfair",
+    "nBook": 23,
+    "valore": 0.136
+   },
+   "model_version": "football-v1-baseline",
+   "id": "monaco-marseille|2026-08-30T18:45:00.000Z|sorpresa|Marseille vincente"
   }
  ],
- "aggiornato": "2026-08-30T11:13:07.702Z",
+ "aggiornato": "2026-08-30T14:07:21.776Z",
  "diagnostica": [
   "132 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport"
  ],
