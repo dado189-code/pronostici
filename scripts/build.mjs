@@ -9,7 +9,7 @@ import { scaricaUnderstat, stimaForze, stimaRho, lambde, mercati, consenso }
 import { PRODUZIONE_VERSION, BASELINE_VERSION, BUILD, FUSO_ORARIO, MODELLO, DRAWCAL } from './config.mjs';
 import { salvaSnapshot } from './snapshot.mjs';
 import { costruisciCalibratore, applicaDrawCal } from './drawcal.mjs';
-import { fairOdds, ev, edge, agreement, dataQuality, confidence, classificaValore, spiegaPick } from './valore.mjs';
+import { fairOdds, ev as calcolaEV, edge, agreement, dataQuality, confidence, classificaValore, spiegaPick } from './valore.mjs';
 
 // DC-DRAW-CAL: layer sperimentale, calcolato UNA VOLTA per esecuzione, letto
 // solo dallo storico locale (nessuna chiamata di rete). Se il campione e'
@@ -351,7 +351,7 @@ for (const lega of LEGHE) {
         freschezzaOre: 0, contestoDisponibile: false,
         scartoDalMercato: Math.abs(migliore.probModello - migliore.probMercato)
       });
-      const evVal = ev(migliore.probModello, migliore.prezzo);
+      const evVal = calcolaEV(migliore.probModello, migliore.prezzo);
       const edgeVal = edge(migliore.probModello, migliore.probMercato);
       const fo = fairOdds(migliore.probModello);
       analisi = {
