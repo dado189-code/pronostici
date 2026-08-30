@@ -78,6 +78,50 @@
    "esito": "ko"
   },
   {
+   "id": "chelsea-brighton|2026-08-30T13:00:00.000Z|sorpresa|Brighton vincente",
+   "cat": "sorpresa",
+   "data": "30/08",
+   "evento": "Chelsea - Brighton",
+   "mercato": "Brighton vincente",
+   "quota": 3.26,
+   "prezzo": 4.4,
+   "risultato": "1-3",
+   "esito": "ok"
+  },
+  {
+   "id": "chelsea-brighton|2026-08-30T13:00:00.000Z|standard|Multigol 1-5",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Chelsea - Brighton",
+   "mercato": "Multigol 1-5",
+   "quota": 1.2,
+   "prezzo": null,
+   "risultato": "1-3",
+   "esito": "ok"
+  },
+  {
+   "id": "chelsea-brighton|2026-08-30T13:00:00.000Z|standard|Multigol casa 1-2",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Chelsea - Brighton",
+   "mercato": "Multigol casa 1-2",
+   "quota": 1.77,
+   "prezzo": null,
+   "risultato": "1-3",
+   "esito": "ok"
+  },
+  {
+   "id": "chelsea-brighton|2026-08-30T13:00:00.000Z|standard|X2",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Chelsea - Brighton",
+   "mercato": "X2",
+   "quota": 1.78,
+   "prezzo": null,
+   "risultato": "1-3",
+   "esito": "ok"
+  },
+  {
    "id": "cologne-hoffenheim|2026-08-29T13:30:00.000Z|sorpresa|FC Cologne vincente",
    "cat": "sorpresa",
    "data": "29/08",
@@ -188,6 +232,39 @@
    "esito": "ok"
   },
   {
+   "id": "freiburg-werder bremen|2026-08-30T13:30:00.000Z|standard|1",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Freiburg - Werder Bremen",
+   "mercato": "1",
+   "quota": 1.81,
+   "prezzo": 2.01,
+   "risultato": "1-0",
+   "esito": "ok"
+  },
+  {
+   "id": "freiburg-werder bremen|2026-08-30T13:30:00.000Z|standard|Casa segna",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Freiburg - Werder Bremen",
+   "mercato": "Casa segna",
+   "quota": 1.22,
+   "prezzo": null,
+   "risultato": "1-0",
+   "esito": "ok"
+  },
+  {
+   "id": "freiburg-werder bremen|2026-08-30T13:30:00.000Z|standard|Multigol casa 1-2",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Freiburg - Werder Bremen",
+   "mercato": "Multigol casa 1-2",
+   "quota": 1.74,
+   "prezzo": null,
+   "risultato": "1-0",
+   "esito": "ok"
+  },
+  {
    "id": "juventus-parma 1913|2026-08-29T18:45:00.000Z|sorpresa|Parma Calcio 1913 vincente",
    "cat": "sorpresa",
    "data": "29/08",
@@ -218,6 +295,39 @@
    "quota": 1.71,
    "prezzo": null,
    "risultato": "2-0",
+   "esito": "ko"
+  },
+  {
+   "id": "leeds-brentford|2026-08-30T13:00:00.000Z|standard|Casa segna",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Leeds - Brentford",
+   "mercato": "Casa segna",
+   "quota": 1.2,
+   "prezzo": null,
+   "risultato": "0-0",
+   "esito": "ko"
+  },
+  {
+   "id": "leeds-brentford|2026-08-30T13:00:00.000Z|standard|Multigol 1-5",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Leeds - Brentford",
+   "mercato": "Multigol 1-5",
+   "quota": 1.21,
+   "prezzo": null,
+   "risultato": "0-0",
+   "esito": "ko"
+  },
+  {
+   "id": "leeds-brentford|2026-08-30T13:00:00.000Z|standard|Multigol casa 1-2",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Leeds - Brentford",
+   "mercato": "Multigol casa 1-2",
+   "quota": 1.76,
+   "prezzo": null,
+   "risultato": "0-0",
    "esito": "ko"
   },
   {
@@ -339,6 +449,39 @@
    "quota": 1.22,
    "prezzo": null,
    "risultato": "2-3",
+   "esito": "ko"
+  },
+  {
+   "id": "paris-nice|2026-08-30T13:00:00.000Z|standard|Multigol 1-5",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Paris FC - Nice",
+   "mercato": "Multigol 1-5",
+   "quota": 1.19,
+   "prezzo": null,
+   "risultato": "1-0",
+   "esito": "ok"
+  },
+  {
+   "id": "paris-nice|2026-08-30T13:00:00.000Z|standard|Multigol trasferta 1-2",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Paris FC - Nice",
+   "mercato": "Multigol trasferta 1-2",
+   "quota": 1.72,
+   "prezzo": null,
+   "risultato": "1-0",
+   "esito": "ko"
+  },
+  {
+   "id": "paris-nice|2026-08-30T13:00:00.000Z|standard|Over 1.5",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Paris FC - Nice",
+   "mercato": "Over 1.5",
+   "quota": 1.19,
+   "prezzo": null,
+   "risultato": "1-0",
    "esito": "ko"
   },
   {
@@ -483,6 +626,28 @@
    "prezzo": null,
    "risultato": "1-1",
    "esito": "ok"
+  },
+  {
+   "id": "sunderland-fulham|2026-08-30T13:00:00.000Z|standard|Multigol 1-5",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Sunderland - Fulham",
+   "mercato": "Multigol 1-5",
+   "quota": 1.16,
+   "prezzo": null,
+   "risultato": "1-3",
+   "esito": "ok"
+  },
+  {
+   "id": "sunderland-fulham|2026-08-30T13:00:00.000Z|standard|Multigol trasferta 1-2",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Sunderland - Fulham",
+   "mercato": "Multigol trasferta 1-2",
+   "quota": 1.73,
+   "prezzo": null,
+   "risultato": "1-3",
+   "esito": "ko"
   },
   {
    "id": "tottenham-newcastle united|2026-08-29T16:30:00.000Z|sorpresa|Newcastle United vincente",
@@ -869,149 +1034,6 @@
   {
    "sport": "calcio",
    "comp": "Premier League",
-   "evento": "Leeds - Brentford",
-   "quando": "dom 30/08, 13:00",
-   "ore": 25,
-   "match": "leeds-brentford",
-   "inizio": "2026-08-30T13:00:00.000Z",
-   "understat": "EPL",
-   "mercato": "Multigol casa 1-2",
-   "prob": 0.567,
-   "why": "Gol attesi 1.79 contro 1.55, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.7%. Sul segno 1 il modello dice 42.2% contro il 37.1% del consenso di 25 bookmaker, miglior prezzo 2.70 su Betfair.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.422,
-    "probMercato": 0.371,
-    "prezzo": 2.7,
-    "book": "Betfair",
-    "nBook": 25,
-    "valore": 0.14
-   },
-   "id": "leeds-brentford|2026-08-30T13:00:00.000Z|standard|Multigol casa 1-2"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Leeds - Brentford",
-   "quando": "dom 30/08, 13:00",
-   "ore": 25,
-   "match": "leeds-brentford",
-   "inizio": "2026-08-30T13:00:00.000Z",
-   "understat": "EPL",
-   "mercato": "Multigol 1-5",
-   "prob": 0.829,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.79 contro 1.55, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 82.9%. Sul segno 1 il modello dice 42.2% contro il 37.1% del consenso di 25 bookmaker, miglior prezzo 2.70 su Betfair.",
-   "src": "modello xG Dixon-Coles",
-   "id": "leeds-brentford|2026-08-30T13:00:00.000Z|standard|Multigol 1-5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Chelsea - Brighton",
-   "quando": "dom 30/08, 13:00",
-   "ore": 25,
-   "match": "chelsea-brighton",
-   "inizio": "2026-08-30T13:00:00.000Z",
-   "understat": "EPL",
-   "mercato": "X2",
-   "prob": 0.562,
-   "why": "Gol attesi 1.81 contro 1.50, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.2%. Sul segno 2 il modello dice 30.7% contro il 23.3% del consenso di 25 bookmaker, miglior prezzo 4.40 su Unibet (NL).",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.307,
-    "probMercato": 0.233,
-    "prezzo": 4.4,
-    "book": "Unibet (NL)",
-    "nBook": 25,
-    "valore": 0.349
-   },
-   "id": "chelsea-brighton|2026-08-30T13:00:00.000Z|standard|X2"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Chelsea - Brighton",
-   "quando": "dom 30/08, 13:00",
-   "ore": 25,
-   "match": "chelsea-brighton",
-   "inizio": "2026-08-30T13:00:00.000Z",
-   "understat": "EPL",
-   "mercato": "Multigol 1-5",
-   "prob": 0.831,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.81 contro 1.50, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 83.1%. Sul segno 2 il modello dice 30.7% contro il 23.3% del consenso di 25 bookmaker, miglior prezzo 4.40 su Unibet (NL).",
-   "src": "modello xG Dixon-Coles",
-   "id": "chelsea-brighton|2026-08-30T13:00:00.000Z|standard|Multigol 1-5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Chelsea - Brighton",
-   "quando": "dom 30/08, 13:00",
-   "ore": 25,
-   "match": "chelsea-brighton",
-   "inizio": "2026-08-30T13:00:00.000Z",
-   "understat": "EPL",
-   "tipo": "sorpresa",
-   "mercato": "Brighton vincente",
-   "prob": 0.307,
-   "prezzo": 4.4,
-   "why": "Il modello da questo esito al 30.7%, il consenso di 25 bookmaker al 23.3%. Al prezzo migliore, 4.40 su Unibet (NL), il valore atteso e' 34.9%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.307,
-    "probMercato": 0.233,
-    "prezzo": 4.4,
-    "book": "Unibet (NL)",
-    "nBook": 25,
-    "valore": 0.349
-   },
-   "id": "chelsea-brighton|2026-08-30T13:00:00.000Z|sorpresa|Brighton vincente"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Sunderland - Fulham",
-   "quando": "dom 30/08, 13:00",
-   "ore": 25,
-   "match": "sunderland-fulham",
-   "inizio": "2026-08-30T13:00:00.000Z",
-   "understat": "EPL",
-   "mercato": "Multigol trasferta 1-2",
-   "prob": 0.579,
-   "why": "Gol attesi 1.40 contro 1.20, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.9%. Sul segno X il modello dice 29.8% contro il 29.1% del consenso di 25 bookmaker, miglior prezzo 3.40 su 1xBet.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "X",
-    "probModello": 0.298,
-    "probMercato": 0.291,
-    "prezzo": 3.4,
-    "book": "1xBet",
-    "nBook": 25,
-    "valore": 0.014
-   },
-   "id": "sunderland-fulham|2026-08-30T13:00:00.000Z|standard|Multigol trasferta 1-2"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Sunderland - Fulham",
-   "quando": "dom 30/08, 13:00",
-   "ore": 25,
-   "match": "sunderland-fulham",
-   "inizio": "2026-08-30T13:00:00.000Z",
-   "understat": "EPL",
-   "mercato": "Multigol 1-5",
-   "prob": 0.859,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.40 contro 1.20, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 85.9%. Sul segno X il modello dice 29.8% contro il 29.1% del consenso di 25 bookmaker, miglior prezzo 3.40 su 1xBet.",
-   "src": "modello xG Dixon-Coles",
-   "id": "sunderland-fulham|2026-08-30T13:00:00.000Z|standard|Multigol 1-5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
    "evento": "Manchester United - Ipswich",
    "quando": "dom 30/08, 15:30",
    "ore": 27,
@@ -1390,45 +1412,6 @@
   {
    "sport": "calcio",
    "comp": "Ligue 1",
-   "evento": "Paris FC - Nice",
-   "quando": "dom 30/08, 13:00",
-   "ore": 25,
-   "match": "paris-nice",
-   "inizio": "2026-08-30T13:00:00.000Z",
-   "understat": "Ligue_1",
-   "mercato": "Multigol trasferta 1-2",
-   "prob": 0.583,
-   "why": "Gol attesi 2.01 contro 1.27, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 58.3%. Sul segno 1 il modello dice 53.7% contro il 45.8% del consenso di 23 bookmaker, miglior prezzo 2.15 su 1xBet.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.537,
-    "probMercato": 0.458,
-    "prezzo": 2.15,
-    "book": "1xBet",
-    "nBook": 23,
-    "valore": 0.155
-   },
-   "id": "paris-nice|2026-08-30T13:00:00.000Z|standard|Multigol trasferta 1-2"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Ligue 1",
-   "evento": "Paris FC - Nice",
-   "quando": "dom 30/08, 13:00",
-   "ore": 25,
-   "match": "paris-nice",
-   "inizio": "2026-08-30T13:00:00.000Z",
-   "understat": "Ligue_1",
-   "mercato": "Multigol 1-5",
-   "prob": 0.841,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 2.01 contro 1.27, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 84.1%. Sul segno 1 il modello dice 53.7% contro il 45.8% del consenso di 23 bookmaker, miglior prezzo 2.15 su 1xBet.",
-   "src": "modello xG Dixon-Coles",
-   "id": "paris-nice|2026-08-30T13:00:00.000Z|standard|Multigol 1-5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Ligue 1",
    "evento": "Rennes - Le Mans",
    "quando": "dom 30/08, 15:15",
    "ore": 27,
@@ -1503,85 +1486,6 @@
    "why": "Versione prudente sulla stessa partita. Gol attesi 1.95 contro 1.74, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.1%. Sul segno 1 il modello dice 42.8% contro il 38.7% del consenso di 23 bookmaker, miglior prezzo 2.56 su 1xBet.",
    "src": "modello xG Dixon-Coles",
    "id": "monaco-marseille|2026-08-30T18:45:00.000Z|standard|Multigol 1-5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Bundesliga",
-   "evento": "Freiburg - Werder Bremen",
-   "quando": "dom 30/08, 13:30",
-   "ore": 25,
-   "match": "freiburg-werder bremen",
-   "inizio": "2026-08-30T13:30:00.000Z",
-   "understat": "Bundesliga",
-   "mercato": "1",
-   "prob": 0.552,
-   "prezzo": 2.01,
-   "why": "Gol attesi 1.71 contro 0.95, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.2%. Sul segno 1 il modello dice 55.2% contro il 49.3% del consenso di 23 bookmaker, miglior prezzo 2.01 su GTbets.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.552,
-    "probMercato": 0.493,
-    "prezzo": 2.01,
-    "book": "GTbets",
-    "nBook": 23,
-    "valore": 0.11
-   },
-   "id": "freiburg-werder bremen|2026-08-30T13:30:00.000Z|standard|1"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Bundesliga",
-   "evento": "Freiburg - Werder Bremen",
-   "quando": "dom 30/08, 13:30",
-   "ore": 25,
-   "match": "freiburg-werder bremen",
-   "inizio": "2026-08-30T13:30:00.000Z",
-   "understat": "Bundesliga",
-   "mercato": "Casa segna",
-   "prob": 0.82,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.71 contro 0.95, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 82.0%. Sul segno 1 il modello dice 55.2% contro il 49.3% del consenso di 23 bookmaker, miglior prezzo 2.01 su GTbets.",
-   "src": "modello xG Dixon-Coles",
-   "id": "freiburg-werder bremen|2026-08-30T13:30:00.000Z|standard|Casa segna"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Leeds - Brentford",
-   "quando": "dom 30/08, 13:00",
-   "ore": 19,
-   "match": "leeds-brentford",
-   "inizio": "2026-08-30T13:00:00.000Z",
-   "understat": "EPL",
-   "mercato": "Casa segna",
-   "prob": 0.831,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.78 contro 1.54, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 83.1%. Sul segno 1 il modello dice 42.1% contro il 36.9% del consenso di 25 bookmaker, miglior prezzo 2.72 su Betfair.",
-   "src": "modello xG Dixon-Coles",
-   "id": "leeds-brentford|2026-08-30T13:00:00.000Z|standard|Casa segna"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Chelsea - Brighton",
-   "quando": "dom 30/08, 13:00",
-   "ore": 19,
-   "match": "chelsea-brighton",
-   "inizio": "2026-08-30T13:00:00.000Z",
-   "understat": "EPL",
-   "mercato": "Multigol casa 1-2",
-   "prob": 0.565,
-   "why": "Gol attesi 1.80 contro 1.50, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.5%. Sul segno 2 il modello dice 31.0% contro il 23.2% del consenso di 25 bookmaker, miglior prezzo 4.40 su Betfair.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.31,
-    "probMercato": 0.232,
-    "prezzo": 4.4,
-    "book": "Betfair",
-    "nBook": 25,
-    "valore": 0.364
-   },
-   "id": "chelsea-brighton|2026-08-30T13:00:00.000Z|standard|Multigol casa 1-2"
   },
   {
    "sport": "calcio",
@@ -1714,21 +1618,6 @@
   {
    "sport": "calcio",
    "comp": "Ligue 1",
-   "evento": "Paris FC - Nice",
-   "quando": "dom 30/08, 13:00",
-   "ore": 5,
-   "match": "paris-nice",
-   "inizio": "2026-08-30T13:00:00.000Z",
-   "understat": "Ligue_1",
-   "mercato": "Over 1.5",
-   "prob": 0.842,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 2.01 contro 1.22, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 84.2%. Sul segno 1 il modello dice 54.6% contro il 46.2% del consenso di 23 bookmaker, miglior prezzo 2.12 su 1xBet.",
-   "src": "modello xG Dixon-Coles",
-   "id": "paris-nice|2026-08-30T13:00:00.000Z|standard|Over 1.5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Ligue 1",
    "evento": "Rennes - Le Mans",
    "quando": "dom 30/08, 15:15",
    "ore": 7,
@@ -1768,30 +1657,6 @@
   },
   {
    "sport": "calcio",
-   "comp": "Bundesliga",
-   "evento": "Freiburg - Werder Bremen",
-   "quando": "dom 30/08, 13:30",
-   "ore": 5,
-   "match": "freiburg-werder bremen",
-   "inizio": "2026-08-30T13:30:00.000Z",
-   "understat": "Bundesliga",
-   "mercato": "Multigol casa 1-2",
-   "prob": 0.574,
-   "why": "Gol attesi 1.70 contro 0.95, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.4%. Sul segno 1 il modello dice 55.0% contro il 51.3% del consenso di 23 bookmaker, miglior prezzo 1.92 su Unibet (SE).",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.55,
-    "probMercato": 0.513,
-    "prezzo": 1.92,
-    "book": "Unibet (SE)",
-    "nBook": 23,
-    "valore": 0.055
-   },
-   "id": "freiburg-werder bremen|2026-08-30T13:30:00.000Z|standard|Multigol casa 1-2"
-  },
-  {
-   "sport": "calcio",
    "comp": "Ligue 1",
    "evento": "Monaco - Marseille",
    "quando": "dom 30/08, 20:45",
@@ -1816,9 +1681,166 @@
    },
    "model_version": "football-v1-baseline",
    "id": "monaco-marseille|2026-08-30T18:45:00.000Z|sorpresa|Marseille vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Toulouse - Lille",
+   "quando": "gio 03/09, 20:45",
+   "ore": 101,
+   "match": "toulouse-lille",
+   "inizio": "2026-09-03T18:45:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3277,
+     "PX": 0.3,
+     "P2": 0.3723,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3281,
+     "PX": 0.2991,
+     "P2": 0.3728,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.152,
+     "lambda_away": 1.244
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 3.23,
+     "book": "1xBet",
+     "n_book": 14,
+     "no_vig_probability": 0.304
+    },
+    "value": {
+     "fair_odds": 3.049,
+     "edge": 0.024,
+     "ev": 0.0594
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.0241,
+     "confidence": 86,
+     "data_quality": 60
+    },
+    "value_class": "VALUE",
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Toulouse\" il 32.8% contro il 30.4% del mercato. La quota fair e' 3.05 contro una quota disponibile di 3.23. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Under 2.5",
+   "prob": 0.571,
+   "why": "Gol attesi 1.15 contro 1.24, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.1%. Sul segno 1 il modello dice 32.8% contro il 30.4% del consenso di 14 bookmaker, miglior prezzo 3.23 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.328,
+    "probMercato": 0.304,
+    "prezzo": 3.23,
+    "book": "1xBet",
+    "nBook": 14,
+    "valore": 0.058
+   },
+   "model_version": "football-v1-baseline",
+   "id": "toulouse-lille|2026-09-03T18:45:00.000Z|standard|Under 2.5"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Toulouse - Lille",
+   "quando": "gio 03/09, 20:45",
+   "ore": 101,
+   "match": "toulouse-lille",
+   "inizio": "2026-09-03T18:45:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3277,
+     "PX": 0.3,
+     "P2": 0.3723,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3281,
+     "PX": 0.2991,
+     "P2": 0.3728,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.152,
+     "lambda_away": 1.244
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 3.23,
+     "book": "1xBet",
+     "n_book": 14,
+     "no_vig_probability": 0.304
+    },
+    "value": {
+     "fair_odds": 3.049,
+     "edge": 0.024,
+     "ev": 0.0594
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.0241,
+     "confidence": 86,
+     "data_quality": 60
+    },
+    "value_class": "VALUE",
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Toulouse\" il 32.8% contro il 30.4% del mercato. La quota fair e' 3.05 contro una quota disponibile di 3.23. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Multigol 1-4",
+   "prob": 0.802,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.15 contro 1.24, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.2%. Sul segno 1 il modello dice 32.8% contro il 30.4% del consenso di 14 bookmaker, miglior prezzo 3.23 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "toulouse-lille|2026-09-03T18:45:00.000Z|standard|Multigol 1-4"
   }
  ],
- "aggiornato": "2026-08-30T14:07:21.776Z",
+ "aggiornato": "2026-08-30T16:16:40.939Z",
  "diagnostica": [
   "132 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport"
  ],
