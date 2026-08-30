@@ -128,29 +128,26 @@ jobs:
       # SOLO se tutto quanto sopra e' andato a buon fine (test, build, commit,
       # push, verifica deploy): notifica di successo. I secret sono passati
       # solo a questo step, mai stampati (lo script stesso non li logga mai).
-      - name: "Notifica WhatsApp: aggiornamento riuscito"
+      # Telegram al posto di WhatsApp Cloud API: quest'ultima richiedeva la
+      # verifica business di Meta (giorni, documenti) solo per creare un
+      # template personalizzato, dato che un numero di test non lo permette.
+      - name: "Notifica Telegram: aggiornamento riuscito"
         if: steps.gate.outputs.procedi == 'true' && success()
         continue-on-error: true   # un problema di invio non deve marcare il job come fallito: i dati sono gia' pubblicati
         env:
-          WHATSAPP_TOKEN: ${{ secrets.WHATSAPP_TOKEN }}
-          WHATSAPP_PHONE_NUMBER_ID: ${{ secrets.WHATSAPP_PHONE_NUMBER_ID }}
-          WHATSAPP_TO: ${{ secrets.WHATSAPP_TO }}
-          WHATSAPP_TEMPLATE_NAME: ${{ secrets.WHATSAPP_TEMPLATE_NAME }}
-          WHATSAPP_TEMPLATE_LANG: ${{ secrets.WHATSAPP_TEMPLATE_LANG }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           PUBLIC_URL: https://dado189-code.github.io/pronostici/
-        run: node scripts/notifica-whatsapp.mjs successo
+        run: node scripts/notifica-telegram.mjs successo
 
       # Se test, chiudi, build, commit/push o la verifica del deploy sono
       # falliti: MAI dire che e' andato tutto bene. picks.json NON viene
       # sovrascritto con dati parziali (i comandi sopra non sono arrivati a
       # git push, oppure il commit e' li' ma il deploy non si e' confermato).
-      - name: "Notifica WhatsApp: aggiornamento fallito"
+      - name: "Notifica Telegram: aggiornamento fallito"
         if: steps.gate.outputs.procedi == 'true' && failure()
         continue-on-error: true
         env:
-          WHATSAPP_TOKEN: ${{ secrets.WHATSAPP_TOKEN }}
-          WHATSAPP_PHONE_NUMBER_ID: ${{ secrets.WHATSAPP_PHONE_NUMBER_ID }}
-          WHATSAPP_TO: ${{ secrets.WHATSAPP_TO }}
-          WHATSAPP_TEMPLATE_NAME: ${{ secrets.WHATSAPP_TEMPLATE_NAME }}
-          WHATSAPP_TEMPLATE_LANG: ${{ secrets.WHATSAPP_TEMPLATE_LANG }}
-        run: node scripts/notifica-whatsapp.mjs fallimento
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node scripts/notifica-telegram.mjs fallimento
