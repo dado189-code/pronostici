@@ -103,7 +103,7 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">analisi aggiornata sabato 29 agosto</div>
+  <div class="eyebrow">analisi aggiornata domenica 30 agosto</div>
   <h1>Generatore <em>pronostici</em></h1>
   <p class="sub">Calcio: Serie A, Premier League, Liga, Ligue 1 e Bundesliga, con mercati che escono da un modello xG Dixon-Coles indipendente dalle quote, quindi multigol, gol squadra e under oltre alle doppie chance. Basket: WNBA e NBA quando sono in stagione. Tennis: i tabelloni del torneo in corso. Per basket e tennis non esiste un modello xG, quindi il pronostico e il solo consenso dei bookmaker ripulito dal margine, ed e segnalato come tale. Scegli la quota che vuoi giocare e l'app costruisce la giocata che la raggiunge con la probabilita piu alta.</p>
 </header>
@@ -173,112 +173,59 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 </div>
 
 <script>
-// Ripiego incorporato, fotografia del 29/08/2026: vale solo finche'
-// data/picks.json non e' disponibile. Quando c'e', la pipeline lo sostituisce.
+// Ripiego incorporato, analisi del 30/08/2026: nove pronostici su quattro
+// partite, scelte fra le otto col divario modello-mercato piu alto e tenute
+// solo dopo il confronto con formazioni, infortuni e meteo. Vale finche'
+// data/picks.json non e' disponibile: quando c'e', la pipeline lo sostituisce.
 // prob  = probabilita stimata dell'esito
 // book  = quota verificata sulla lavagna, presente solo dove l'ho trovata pubblicata
 // tipo  = 'sorpresa' segnala le giocate ad alta quota tenute d'occhio
 let PICKS = [
- {sport:'calcio', comp:'Serie A', evento:'Fiorentina - Frosinone', quando:'sab 29/08 18:30', ore:4, match:'fiorentina-frosinone',
-  mercato:'Multigol 1-3', prob:0.647,
-  why:"La Fiorentina viene dal 4-0 subito a Roma, il Frosinone ha perso 1-0 con la Juve: due squadre che segnano poco. Gol attesi 1.78 contro 0.92, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Serie A', evento:'Monza - Udinese', quando:'sab 29/08 18:30', ore:4, match:'monza-udinese',
-  mercato:'Trasferta segna (Over 0.5 osp.)', prob:0.654,
-  why:"Il modello mette l'Udinese leggermente avanti pur giocando fuori, 37,9% contro 31,4%. Gol attesi 0.94 contro 1.06, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Serie A', evento:'Sassuolo - Torino', quando:'sab 29/08 18:30', ore:4, match:'sassuolo-torino',
-  mercato:'Multigol casa 1-3', prob:0.665,
-  why:"Tre esiti entro tredici punti percentuali, il Sassuolo ha perso 2-1 a Bergamo giocandosela. Gol attesi 1.20 contro 0.96, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Serie A', evento:'Juventus - Parma', quando:'sab 29/08 20:45', ore:6, match:'juventus-parma',
-  mercato:'Under 3.5', prob:0.638,
-  why:"Juventus al 78% con 2,44 gol attesi, ma il Parma ha perso solo 1-0 col Cagliari: partita a senso unico senza per forza tanti gol. Gol attesi 2.44 contro 0.60, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Serie A', evento:'Napoli - Como', quando:'dom 30/08 18:30', ore:28, match:'napoli-como',
-  mercato:'Casa segna (Over 0.5 casa)', prob:0.647,
-  why:"Partita piu equilibrata di quanto sembri: 37,8% Napoli contro 31,2% Como, che ha gia pareggiato a Udine. Gol attesi 1.04 contro 0.92, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Serie A', evento:'Cagliari - Inter', quando:'dom 30/08 20:45', ore:30, match:'cagliari-inter',
-  mercato:'2', prob:0.675,
-  why:"Inter al 67,6% con 1,98 gol attesi dopo il 4-1 al Monza. Il Cagliari ha vinto a Parma ma qui il divario e ampio. Gol attesi 0.70 contro 1.98, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Serie A', evento:'Lazio - Genoa', quando:'dom 30/08 20:45', ore:30, match:'lazio-genoa',
-  mercato:'NoGol', prob:0.638,
-  why:"Lazio a 1,18 gol attesi contro 0,74 del Genoa, che a Marassi ha perso 2-0 col Napoli senza segnare. Gol attesi 1.18 contro 0.74, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Serie A', evento:'Lecce - Roma', quando:'lun 31/08 18:30', ore:52, match:'lecce-roma',
-  mercato:'Multigol 2-5', prob:0.673,
-  why:"Roma al 65,9% dopo il 4-0 alla Fiorentina, con 1,86 gol attesi in trasferta. Il Lecce ha vinto 2-0 a Venezia. Gol attesi 0.66 contro 1.86, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Serie A', evento:'Atalanta - Bologna', quando:'lun 31/08 20:45', ore:54, match:'atalanta-bologna',
-  mercato:'Over 1.5', prob:0.700,
-  why:"Atalanta a 1,50 gol attesi contro 0,94. Il Bologna ha perso 1-0 in casa con la Lazio. Gol attesi 1.50 contro 0.94, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Premier League', evento:'Liverpool - Nottingham Forest', quando:'sab 29/08 13:30', ore:0, match:'liverpool-nottingham-fores',
-  mercato:'1', prob:0.663,
-  why:"Liverpool al 66,4% con 2,24 gol attesi, ma reduce dal 2-2 di Newcastle. Il Forest ha perso in casa col Leeds. Gol attesi 2.24 contro 0.96, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Premier League', evento:'Tottenham - Newcastle', quando:'sab 29/08 18:30', ore:4, match:'tottenham-newcastle',
-  mercato:'Multigol trasferta 1-3', prob:0.661,
-  why:"Gol attesi 1,44 contro 1,18: il Tottenham arriva dal 3-0 subito a Brentford, il Newcastle dal pareggio col Liverpool. Gol attesi 1.44 contro 1.18, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Premier League', evento:'Chelsea - Brighton', quando:'dom 30/08 15:00', ore:25, match:'chelsea-brighton',
-  mercato:'Multigol 2-4', prob:0.616,
-  why:"Chelsea a 1,72 gol attesi dopo il 3-2 a Craven Cottage, Brighton reduce dal 4-0 al Villa: due squadre che segnano. Gol attesi 1.72 contro 1.06, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Premier League', evento:'Manchester United - Ipswich', quando:'dom 30/08 17:30', ore:27, match:'manchester-united-ipswich',
-  mercato:'1', prob:0.685,
-  why:"United al 68,5% con 2,26 gol attesi, ma dopo il 2-0 subito a Hull la fiducia del mercato e da verificare. Gol attesi 2.26 contro 0.88, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Premier League', evento:'Aston Villa - Arsenal', quando:'lun 31/08 21:00', ore:55, match:'aston-villa-arsenal',
-  mercato:'Multigol 1-3', prob:0.659,
-  why:"Arsenal al 62,6% con 1,84 gol attesi in trasferta. Il Villa arriva dal 4-0 preso a Brighton. Gol attesi 0.78 contro 1.84, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Liga', evento:'Levante - Real Betis', quando:'sab 29/08 17:00', ore:3, match:'levante-real-betis',
-  mercato:'X2', prob:0.712,
-  why:"Betis al 42,7% pur giocando fuori, dopo l'1-0 a Valencia. Il Levante ha perso 3-0 con l'Espanyol e pareggiato a Pamplona. Gol attesi 0.98 contro 1.26, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Liga', evento:'Real Sociedad - Espanyol', quando:'sab 29/08 19:00', ore:5, match:'real-sociedad-espanyol',
-  mercato:'Multigol 2-5', prob:0.665,
-  why:"Sociedad a 1,56 gol attesi contro 0,90, ma viene dal 4-1 preso al Bernabeu. Gol attesi 1.56 contro 0.90, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Liga', evento:'Siviglia - Atletico Madrid', quando:'sab 29/08 21:30', ore:7, match:'siviglia-atletico-madrid',
-  mercato:'Over 1.5', prob:0.655,
-  why:"Atletico al 48,8% con 1,38 gol attesi. Il Siviglia ha vinto 3-1 a Bilbao: partita da gol da entrambe le parti. Gol attesi 0.86 contro 1.38, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Liga', evento:'Real Madrid - Malaga', quando:'dom 30/08 17:00', ore:27, match:'real-madrid-malaga',
-  mercato:'Under 4.5', prob:0.633,
-  why:"Real all'87,5% con 3,34 gol attesi contro una neopromossa che ha gia perso 2-0 al Metropolitano. Gol attesi 3.34 contro 0.64, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Liga', evento:'Barcellona - Rayo Vallecano', quando:'lun 31/08 21:30', ore:55, match:'barcellona-rayo-vallecano',
-  mercato:'Multigol 1-4', prob:0.639,
-  why:"Barcellona all'83,5% con 3,10 gol attesi dopo il 5-0 a Elche e il 2-0 all'Athletic. Gol attesi 3.10 contro 0.74, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Ligue 1', evento:'Lione - Le Havre', quando:'sab 29/08 20:45', ore:6, match:'lione-le-havre',
-  mercato:'Under 3.5', prob:0.679,
-  why:"Lione al 65,7% con 2,04 gol attesi, ma reduce dall'1-2 interno col Fenerbahce in Champions. Gol attesi 2.04 contro 0.82, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Ligue 1', evento:'Rennes - Le Mans', quando:'dom 30/08 17:15', ore:27, match:'rennes-le-mans',
-  mercato:'Multigol casa 1-3', prob:0.703,
-  why:"Rennes al 67,1% dopo il 2-2 col PSG. Il Le Mans e neopromosso e ha pareggiato 2-2 col Brest. Gol attesi 2.26 contro 0.94, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'calcio', comp:'Ligue 1', evento:'Monaco - Marsiglia', quando:'dom 30/08 20:45', ore:30, match:'monaco-marsiglia',
-  mercato:'1X', prob:0.622,
-  why:"37% Monaco, 37,7% Marsiglia: la partita piu equilibrata del turno francese, con 1,38 e 1,40 gol attesi. Gol attesi 1.38 contro 1.40, stimati con Poisson dalle probabilita 1X2.",
-  src:'modello 1X2 SportRadar + Poisson'},
- {sport:'basket', comp:'WNBA', evento:'Atlanta Dream - Minnesota Lynx', quando:'dom 30/08 21:00', ore:31, match:'wnba-atl-min',
-  mercato:'Minnesota vincente', prob:0.557,
-  why:"Modello a 55,7% Minnesota pur giocando fuori. Atlanta ha appena perso 101-83 in casa con Portland, Minnesota e caduta con Golden State: entrambe in calo, margine sottile.",
-  src:'modello SportRadar'},
- {sport:'calcio', comp:'Serie A', evento:'Napoli - Como', quando:'dom 30/08 18:30', ore:28, match:'napoli-como', tipo:'sorpresa',
-  mercato:'Como vincente', prob:0.312,
-  why:"Il 31,2% al Como e alto per una trasferta a Napoli, e il modello lo mette a un solo punto dal segno 1. Il Como ha gia pareggiato a Udine. Avvertenza: la categoria sorpresa e a zero successi su otto tentativi.",
-  src:'modello SportRadar'},
- {sport:'calcio', comp:'Premier League', evento:'Tottenham - Newcastle', quando:'sab 29/08 18:30', ore:4, match:'tottenham-newcastle', tipo:'sorpresa',
-  mercato:'Newcastle vincente', prob:0.310,
-  why:"Il Tottenham ha appena perso 3-0 a Brentford, il Newcastle ha fermato il Liverpool sul 2-2. Il 31% agli ospiti sottostima lo scarto di condizione. Avvertenza: la categoria sorpresa e a zero su otto.",
-  src:'modello SportRadar'}
+ {sport:'calcio', comp:'Serie A', evento:'Napoli - Como', quando:'dom 30/08, 18:30', ore:8, match:'napoli-como',
+  inizio:'2026-08-30T16:30:00.000Z',
+  mercato:'Multigol 1-4', prob:0.814,
+  why:"Da uno a quattro gol totali, 81.4% secondo il modello xG. La notizia del giorno lo sostiene invece di contraddirlo: Sports Mole e khelnow danno Lukaku, Neres e Vergara indisponibili, oltre a Buongiorno, Mazzocchi e Marianucci, con Di Lorenzo al rientro dopo l'assenza da gennaio. Con l'attacco ridotto a Hojlund e Politano una partita da molti gol e meno probabile, ed e dove sta la fascia 1-4. Meteo: alta pressione, sereno e asciutto sul Centro-Sud (iLMeteo, MeteoLive).",
+  src:'modello xG Dixon-Coles + formazioni Sports Mole e khelnow'},
+ {sport:'calcio', comp:'Serie A', evento:'Napoli - Como', quando:'dom 30/08, 18:30', ore:8, match:'napoli-como',
+  inizio:'2026-08-30T16:30:00.000Z',
+  mercato:'Multigol casa 1-2', prob:0.581,
+  why:"Che il Napoli segni una o due volte, non di piu. Senza Lukaku e Neres (Sports Mole) il peso offensivo cade su Hojlund, e il Como ha gia mostrato solidita pareggiando a Udine. Il modello arriva al 58.1% partendo dagli xG, senza sapere delle assenze: qui le assenze spingono nella stessa direzione.",
+  src:'modello xG Dixon-Coles + formazioni Sports Mole'},
+ {sport:'calcio', comp:'Serie A', evento:'Cagliari - Inter', quando:'dom 30/08, 20:45', ore:10, match:'cagliari-inter',
+  inizio:'2026-08-30T18:45:00.000Z',
+  mercato:'12', prob:0.816,
+  why:"Segno 12, qualunque cosa tranne il pareggio, all'81.6%. Sky Sport e Tuttosport danno l'Inter di Chivu in 3-5-2 con Lautaro ed Esposito dopo il 4-1 al Monza, e il Cagliari in 4-3-2-1 dopo l'1-0 a Parma: due squadre che alla prima giornata hanno chiuso la partita, nessuna arriva da un pareggio. Avvertenza: per questa partita non ho trovato fonti che elenchino infortunati e squalificati, quindi quel controllo qui manca.",
+  src:'modello xG Dixon-Coles + formazioni Sky Sport e Tuttosport'},
+ {sport:'calcio', comp:'Serie A', evento:'Cagliari - Inter', quando:'dom 30/08, 20:45', ore:10, match:'cagliari-inter',
+  inizio:'2026-08-30T18:45:00.000Z',
+  mercato:'Multigol 1-3', prob:0.571,
+  why:"Da uno a tre gol totali, 57.1%. L'Inter ne ha fatti quattro al Monza, ma alla Unipol Domus contro un Cagliari che ha appena vinto a Parma il modello si aspetta una partita piu chiusa. Nessuna fonte trovata su infortuni e squalifiche per questo incontro: il numero resta quello del modello, non confermato dalle notizie.",
+  src:'modello xG Dixon-Coles'},
+ {sport:'calcio', comp:'Serie A', evento:'Lazio - Genoa', quando:'dom 30/08, 20:45', ore:10, match:'lazio-genoa',
+  inizio:'2026-08-30T18:45:00.000Z',
+  mercato:'Multigol 1-4', prob:0.821,
+  why:"Da uno a quattro gol all'Olimpico, 82.1%. Lazionews e FantaMaster contano sei assenti nella Lazio: Pellegrini, Marusic, Dele-Bashiru, Patric, Gigot e Cataldi, cioe due centrali e due esterni di difesa. Una retroguardia rimaneggiata alza i gol attesi, e la fascia larga 1-4 e quella che regge meglio a questa incertezza. Il Genoa di De Rossi ha quasi tutti disponibili, fuori solo Traore e Havel.",
+  src:'modello xG Dixon-Coles + formazioni Lazionews e FantaMaster'},
+ {sport:'calcio', comp:'Serie A', evento:'Lazio - Genoa', quando:'dom 30/08, 20:45', ore:10, match:'lazio-genoa',
+  inizio:'2026-08-30T18:45:00.000Z',
+  mercato:'Multigol trasferta 1-2', prob:0.558,
+  why:"Che il Genoa segni una o due volte. Il modello dice 55.8% guardando solo gli xG, ma qui la notizia rinforza il numero: con Patric e Gigot fuori al centro e Marusic e Pellegrini fuori sulle fasce (Lazionews), la difesa della Lazio e la piu rimaneggiata della giornata. Il Genoa arriva quasi al completo con Vitinha e Colombo davanti (FantaMaster).",
+  src:'modello xG Dixon-Coles + formazioni Lazionews e FantaMaster'},
+ {sport:'calcio', comp:'Serie A', evento:'Lazio - Genoa', quando:'dom 30/08, 20:45', ore:10, match:'lazio-genoa',
+  inizio:'2026-08-30T18:45:00.000Z', tipo:'sorpresa',
+  mercato:'Genoa vincente', prob:0.300, book:4.10,
+  why:"Il modello da al Genoa il 30% in trasferta all'Olimpico e il miglior prezzo trovato sulla lavagna e 4.10. Lo scarto nasce dal modello, ma la notizia va nella stessa direzione: la Lazio perde sei uomini fra cui quattro difensori, Patric, Gigot, Marusic e Pellegrini (Lazionews, FantaMaster), mentre a De Rossi mancano solo Traore e Havel. Meteo asciutto e sereno a Roma in serata (iLMeteo). Attenzione: e correlata col Multigol trasferta 1-2 sulla stessa partita, non sono due scommesse indipendenti.",
+  src:'modello xG Dixon-Coles + confronto bookmaker + formazioni Lazionews'},
+ {sport:'calcio', comp:'Premier League', evento:'Manchester United - Ipswich', quando:'dom 30/08, 17:30', ore:7, match:'manchester united-ipswich',
+  inizio:'2026-08-30T15:30:00.000Z',
+  mercato:'Multigol 1-5', prob:0.825,
+  why:"Da uno a cinque gol a Old Trafford, 82.5%. Il modello ci arriva dagli xG e le notizie non lo smentiscono: Yahoo Sports e RotoWire danno Amad fuori circa sei settimane, de Ligt fermo da novembre con rientro atteso a fine ottobre e Baleba in dubbio, mentre Mount ha ripreso ad allenarsi. L'Ipswich neopromosso ha vinto 2-1 col Sunderland all'esordio e perde Jack Taylor e Matusiwa.",
+  src:'modello xG Dixon-Coles + formazioni Yahoo Sports e RotoWire'},
+ {sport:'calcio', comp:'Premier League', evento:'Manchester United - Ipswich', quando:'dom 30/08, 17:30', ore:7, match:'manchester united-ipswich',
+  inizio:'2026-08-30T15:30:00.000Z',
+  mercato:'Under 3.5', prob:0.558,
+  why:"Meno di quattro gol, 55.8%. Qui la notizia e piu forte del solito: lo United ha perso 2-0 all'esordio senza segnare e con Amad fuori sei settimane e de Ligt indisponibile (Yahoo Sports) la squadra e corta davanti e dietro. Una partita bloccata contro una neopromossa che ha appena vinto e coerente col numero del modello.",
+  src:'modello xG Dixon-Coles + formazioni Yahoo Sports'}
 ];
 
 
@@ -465,6 +412,12 @@ function cardHTML(p, titolo, cls, badge){
 // --- Le tre card in cima parlano solo della giornata in corso: se un evento e
 // domani non c'entra niente con la schedina di oggi. Filtro la lista in
 // ingresso, la logica di composizione resta quella di componi().
+//
+// Cassaforte e quota 2 escludono anche fonte 'consenso': su tennis e basket non
+// esiste un modello indipendente, quelle giocate sono la lavagna ripulita dal
+// margine. Coi tabelloni di uno Slam aperti sono centinaia e finirebbero per
+// occupare le due card di punta, che invece devono mostrare lo scarto fra
+// modello e mercato. Restano nell'elenco completo e nel generatore, coi filtri sport.
 function diOggi(list){
   const ora = new Date();
   return list.filter(p => {
@@ -487,7 +440,7 @@ function nulla(testo){
 
 // --- Cassaforte: combinazione piu probabile che arriva almeno a 1.50
 function renderSafe(){
-  const c = componi(diOggi(PICKS.filter(p=>p.tipo!=='sorpresa')), 1.5, 3);
+  const c = componi(diOggi(PICKS.filter(p=>p.tipo!=='sorpresa' && p.fonte!=='consenso')), 1.5, 3);
   if(!c){ $('#safe').innerHTML = nulla('Fra gli eventi di oggi non esce nessuna combinazione che arrivi a 1.50.'); return; }
   $('#safe').innerHTML = `<div class="card safe">
     <div class="badge safe">Cassaforte</div>
@@ -510,7 +463,7 @@ function renderSafe(){
 // singolo non sarebbe mai possibile: i pronostici standard stanno sopra il 55%
 // di probabilita, cioe sotto quota 1.82.
 function renderQuota2(){
-  const c = componi(diOggi(PICKS), 2, 3);
+  const c = componi(diOggi(PICKS.filter(p=>p.fonte!=='consenso')), 2, 3);
   if(!c){ $('#quota2').innerHTML = nulla('Fra gli eventi di oggi non esce nessuna giocata che arrivi a 2.00.'); return; }
   const singola = c.sel.length === 1;
   $('#quota2').innerHTML = `<div class="card oro">

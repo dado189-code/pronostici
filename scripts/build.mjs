@@ -187,7 +187,7 @@ async function daConsenso(comp) {
       sport: comp.sport, comp: comp.nome,
       evento: `${ev.home_team} - ${ev.away_team}`,
       quando: inizio.toLocaleString('it-IT',
-        { weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }),
+        { timeZone: 'Europe/Rome', weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }),
       ore, match: `${ev.home_team} - ${ev.away_team}`.toLowerCase(),
       inizio: inizio.toISOString(),
       fonte: 'consenso',
@@ -285,8 +285,10 @@ for (const lega of LEGHE) {
     };
     const valore = scegli(mk, 0.55, 0.80);
     const solido = scegli(mk, 0.80, 0.93);
+    // il runner di GitHub e' in UTC: senza timeZone la pagina mostrerebbe
+    // gli orari due ore indietro rispetto all'Italia
     const quando = inizio.toLocaleString('it-IT',
-      { weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+      { timeZone: 'Europe/Rome', weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
     const idMatch = chiave(casa) + '-' + chiave(ospite);
     if (cons) rilevazioni.push({ match: idMatch, comp: lega.nome, inizio: inizio.toISOString(),
       quote: Object.entries(cons).map(([nome, d]) => ({
