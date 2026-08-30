@@ -1,6 +1,6 @@
 {
  "nota": "Ogni riga e immutabile una volta scritta: non viene mai aggiornata da esecuzioni successive, nemmeno se il modello o i dati di input cambiano. Serve a verificare a posteriori cosa il modello prevedeva PRIMA del kickoff, senza il rischio che lo storico si riscriva da solo.",
- "aggiornato": "2026-08-30T16:16:44.841Z",
+ "aggiornato": "2026-08-30T18:11:45.687Z",
  "snapshot": [
   {
    "snapshot_id": "napoli-como|2026-08-30T16:30:00.000Z|standard|Multigol casa 1-2|football-v1-baseline",
@@ -3856,6 +3856,951 @@
    "src": "consenso di 22 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline",
    "generated_at": "2026-08-30T16:16:44.839Z"
+  },
+  {
+   "snapshot_id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|standard|Under 4.5|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Barcelona - Rayo Vallecano",
+   "quando": "lun 31/08, 21:30",
+   "ore": 25,
+   "match": "barcelona-rayo vallecano",
+   "inizio": "2026-08-31T19:30:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.7824,
+     "PX": 0.1227,
+     "P2": 0.0948,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.7804,
+     "PX": 0.125,
+     "P2": 0.0946,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 3.266,
+     "lambda_away": 1.141
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 25,
+     "book": "Betfair",
+     "n_book": 21,
+     "no_vig_probability": 0.051
+    },
+    "value": {
+     "fair_odds": 10.526,
+     "edge": 0.044,
+     "ev": 1.375
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.044,
+     "confidence": 60,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.044,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "ESCLUSA",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "quota 25.00 > 8"
+    ],
+    "opportunity_score": 0.74,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.6,
+      "current_season_contribution_pct": 10.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Rayo Vallecano\" il 9.5% contro il 5.1% del mercato. La quota fair e' 10.53 contro una quota disponibile di 25.00. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Under 4.5",
+   "prob": 0.55,
+   "why": "Gol attesi 3.27 contro 1.14, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.0%. Sul segno 2 il modello dice 9.5% contro il 5.1% del consenso di 21 bookmaker, miglior prezzo 25.00 su Betfair.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.095,
+    "probMercato": 0.051,
+    "prezzo": 25,
+    "book": "Betfair",
+    "nBook": 21,
+    "valore": 1.371
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "lyon-auxerre|2026-09-04T17:00:00.000Z|standard|Multigol casa 1-2|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Lyon - Auxerre",
+   "quando": "ven 04/09, 19:00",
+   "ore": 119,
+   "match": "lyon-auxerre",
+   "inizio": "2026-09-04T17:00:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.5536,
+     "PX": 0.2393,
+     "P2": 0.207,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5296,
+     "PX": 0.2723,
+     "P2": 0.1981,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.91,
+     "lambda_away": 1.101
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 6.25,
+     "book": "Coolbet",
+     "n_book": 15,
+     "no_vig_probability": 0.179
+    },
+    "value": {
+     "fair_odds": 4.831,
+     "edge": 0.028,
+     "ev": 0.2937
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.028,
+     "confidence": 85,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.028,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.895,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Auxerre\" il 20.7% contro il 17.9% del mercato. La quota fair e' 4.83 contro una quota disponibile di 6.25. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.553,
+   "why": "Gol attesi 1.91 contro 1.10, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.3%. Sul segno 2 il modello dice 20.7% contro il 17.9% del consenso di 15 bookmaker, miglior prezzo 6.25 su Coolbet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.207,
+    "probMercato": 0.179,
+    "prezzo": 6.25,
+    "book": "Coolbet",
+    "nBook": 15,
+    "valore": 0.294
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "lyon-auxerre|2026-09-04T17:00:00.000Z|standard|Over 1.5|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Lyon - Auxerre",
+   "quando": "ven 04/09, 19:00",
+   "ore": 119,
+   "match": "lyon-auxerre",
+   "inizio": "2026-09-04T17:00:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.5536,
+     "PX": 0.2393,
+     "P2": 0.207,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5296,
+     "PX": 0.2723,
+     "P2": 0.1981,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.91,
+     "lambda_away": 1.101
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 6.25,
+     "book": "Coolbet",
+     "n_book": 15,
+     "no_vig_probability": 0.179
+    },
+    "value": {
+     "fair_odds": 4.831,
+     "edge": 0.028,
+     "ev": 0.2937
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.028,
+     "confidence": 85,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.028,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.895,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Auxerre\" il 20.7% contro il 17.9% del mercato. La quota fair e' 4.83 contro una quota disponibile di 6.25. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Over 1.5",
+   "prob": 0.811,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.91 contro 1.10, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.1%. Sul segno 2 il modello dice 20.7% contro il 17.9% del consenso di 15 bookmaker, miglior prezzo 6.25 su Coolbet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "lyon-auxerre|2026-09-04T17:00:00.000Z|sorpresa|Auxerre vincente|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Lyon - Auxerre",
+   "quando": "ven 04/09, 19:00",
+   "ore": 119,
+   "match": "lyon-auxerre",
+   "inizio": "2026-09-04T17:00:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.5536,
+     "PX": 0.2393,
+     "P2": 0.207,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5296,
+     "PX": 0.2723,
+     "P2": 0.1981,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.91,
+     "lambda_away": 1.101
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 6.25,
+     "book": "Coolbet",
+     "n_book": 15,
+     "no_vig_probability": 0.179
+    },
+    "value": {
+     "fair_odds": 4.831,
+     "edge": 0.028,
+     "ev": 0.2937
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.028,
+     "confidence": 85,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.028,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.895,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Auxerre\" il 20.7% contro il 17.9% del mercato. La quota fair e' 4.83 contro una quota disponibile di 6.25. Il modello e il mercato mostrano un accordo alto."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Auxerre vincente",
+   "prob": 0.207,
+   "prezzo": 6.25,
+   "why": "Il modello da questo esito al 20.7%, il consenso di 15 bookmaker al 17.9%. Al prezzo migliore, 6.25 su Coolbet, il valore atteso e' 29.4%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.207,
+    "probMercato": 0.179,
+    "prezzo": 6.25,
+    "book": "Coolbet",
+    "nBook": 15,
+    "valore": 0.294
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "vfb stuttgart-cologne|2026-09-04T18:30:00.000Z|standard|Multigol 2-4|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "VfB Stuttgart - FC Cologne",
+   "quando": "ven 04/09, 20:30",
+   "ore": 120,
+   "match": "vfb stuttgart-cologne",
+   "inizio": "2026-09-04T18:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6172,
+     "PX": 0.1865,
+     "P2": 0.1962,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.6248,
+     "PX": 0.1766,
+     "P2": 0.1986,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.481,
+     "lambda_away": 1.364
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 6.25,
+     "book": "Unibet (SE)",
+     "n_book": 24,
+     "no_vig_probability": 0.167
+    },
+    "value": {
+     "fair_odds": 5.102,
+     "edge": 0.029,
+     "ev": 0.225
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.0316,
+     "confidence": 69,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.029,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.729,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di FC Cologne\" il 19.6% contro il 16.7% del mercato. La quota fair e' 5.10 contro una quota disponibile di 6.25. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol 2-4",
+   "prob": 0.557,
+   "why": "Gol attesi 2.48 contro 1.36, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.7%. Sul segno 2 il modello dice 19.6% contro il 16.7% del consenso di 24 bookmaker, miglior prezzo 6.25 su Unibet (SE).",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.196,
+    "probMercato": 0.167,
+    "prezzo": 6.25,
+    "book": "Unibet (SE)",
+    "nBook": 24,
+    "valore": 0.226
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "vfb stuttgart-cologne|2026-09-04T18:30:00.000Z|standard|1X|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "VfB Stuttgart - FC Cologne",
+   "quando": "ven 04/09, 20:30",
+   "ore": 120,
+   "match": "vfb stuttgart-cologne",
+   "inizio": "2026-09-04T18:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6172,
+     "PX": 0.1865,
+     "P2": 0.1962,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.6248,
+     "PX": 0.1766,
+     "P2": 0.1986,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.481,
+     "lambda_away": 1.364
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 6.25,
+     "book": "Unibet (SE)",
+     "n_book": 24,
+     "no_vig_probability": 0.167
+    },
+    "value": {
+     "fair_odds": 5.102,
+     "edge": 0.029,
+     "ev": 0.225
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.0316,
+     "confidence": 69,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.029,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.729,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di FC Cologne\" il 19.6% contro il 16.7% del mercato. La quota fair e' 5.10 contro una quota disponibile di 6.25. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "1X",
+   "prob": 0.804,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 2.48 contro 1.36, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.4%. Sul segno 2 il modello dice 19.6% contro il 16.7% del consenso di 24 bookmaker, miglior prezzo 6.25 su Unibet (SE).",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "vfb stuttgart-cologne|2026-09-04T18:30:00.000Z|sorpresa|FC Cologne vincente|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "VfB Stuttgart - FC Cologne",
+   "quando": "ven 04/09, 20:30",
+   "ore": 120,
+   "match": "vfb stuttgart-cologne",
+   "inizio": "2026-09-04T18:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6172,
+     "PX": 0.1865,
+     "P2": 0.1962,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.6248,
+     "PX": 0.1766,
+     "P2": 0.1986,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.481,
+     "lambda_away": 1.364
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 6.25,
+     "book": "Unibet (SE)",
+     "n_book": 24,
+     "no_vig_probability": 0.167
+    },
+    "value": {
+     "fair_odds": 5.102,
+     "edge": 0.029,
+     "ev": 0.225
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.0316,
+     "confidence": 69,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.029,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.729,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di FC Cologne\" il 19.6% contro il 16.7% del mercato. La quota fair e' 5.10 contro una quota disponibile di 6.25. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "FC Cologne vincente",
+   "prob": 0.196,
+   "prezzo": 6.25,
+   "why": "Il modello da questo esito al 19.6%, il consenso di 24 bookmaker al 16.7%. Al prezzo migliore, 6.25 su Unibet (SE), il valore atteso e' 22.6%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.196,
+    "probMercato": 0.167,
+    "prezzo": 6.25,
+    "book": "Unibet (SE)",
+    "nBook": 24,
+    "valore": 0.226
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "dallas wings - connecticut sun|2026-08-31T00:30:00.000Z|standard|Dallas Wings vincente|football-v1-baseline",
+   "sport": "basket",
+   "comp": "WNBA",
+   "evento": "Dallas Wings - Connecticut Sun",
+   "quando": "lun 31/08, 02:30",
+   "ore": 6,
+   "match": "dallas wings - connecticut sun",
+   "inizio": "2026-08-31T00:30:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Dallas Wings vincente",
+   "prob": 0.891,
+   "why": "Nessun modello xG copre WNBA: questa e la probabilita che il mercato sta prezzando, 89.1%, ricavata togliendo il margine alle quote di 14 bookmaker e facendone la media. Miglior prezzo 1.10 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 14 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "elvina kalieva - lanlana tararudee|2026-08-30T17:44:51.000Z|standard|Lanlana Tararudee vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Elvina Kalieva - Lanlana Tararudee",
+   "quando": "dom 30/08, 19:44",
+   "ore": 0,
+   "match": "elvina kalieva - lanlana tararudee",
+   "inizio": "2026-08-30T17:44:51.000Z",
+   "fonte": "consenso",
+   "mercato": "Lanlana Tararudee vincente",
+   "prob": 0.683,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 68.3%, ricavata togliendo il margine alle quote di 15 bookmaker e facendone la media. Miglior prezzo 1.50 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 15 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "lucrezia stefanini - dayana yastremska|2026-08-30T18:10:00.000Z|standard|Dayana Yastremska vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Lucrezia Stefanini - Dayana Yastremska",
+   "quando": "dom 30/08, 20:10",
+   "ore": 0,
+   "match": "lucrezia stefanini - dayana yastremska",
+   "inizio": "2026-08-30T18:10:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Dayana Yastremska vincente",
+   "prob": 0.547,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 54.7%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.86 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "emiliana arango - xinyu wang|2026-08-30T18:15:00.000Z|standard|Xinyu Wang vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Emiliana Arango - Xinyu Wang",
+   "quando": "dom 30/08, 20:15",
+   "ore": 0,
+   "match": "emiliana arango - xinyu wang",
+   "inizio": "2026-08-30T18:15:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Xinyu Wang vincente",
+   "prob": 0.73,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 73.0%, ricavata togliendo il margine alle quote di 17 bookmaker e facendone la media. Miglior prezzo 1.37 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 17 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "marta kostyuk - storm hunter|2026-08-30T18:20:00.000Z|standard|Marta Kostyuk vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Marta Kostyuk - Storm Hunter",
+   "quando": "dom 30/08, 20:20",
+   "ore": 0,
+   "match": "marta kostyuk - storm hunter",
+   "inizio": "2026-08-30T18:20:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Marta Kostyuk vincente",
+   "prob": 0.875,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 87.5%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.13 su GTbets. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "mccartney kessler - ekaterina alexandrova|2026-08-30T19:00:00.000Z|standard|Ekaterina Alexandrova vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "McCartney Kessler - Ekaterina Alexandrova",
+   "quando": "dom 30/08, 21:00",
+   "ore": 1,
+   "match": "mccartney kessler - ekaterina alexandrova",
+   "inizio": "2026-08-30T19:00:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Ekaterina Alexandrova vincente",
+   "prob": 0.577,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 57.7%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.71 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "carol young suh lee - katie boulter|2026-08-30T19:40:00.000Z|standard|Katie Boulter vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Carol Young Suh Lee - Katie Boulter",
+   "quando": "dom 30/08, 21:40",
+   "ore": 1,
+   "match": "carol young suh lee - katie boulter",
+   "inizio": "2026-08-30T19:40:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Katie Boulter vincente",
+   "prob": 0.566,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 56.6%, ricavata togliendo il margine alle quote di 16 bookmaker e facendone la media. Miglior prezzo 1.76 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 16 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "kimberly birrell - petra marcinko|2026-08-30T21:00:00.000Z|standard|Kimberly Birrell vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Kimberly Birrell - Petra Marcinko",
+   "quando": "dom 30/08, 23:00",
+   "ore": 3,
+   "match": "kimberly birrell - petra marcinko",
+   "inizio": "2026-08-30T21:00:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Kimberly Birrell vincente",
+   "prob": 0.517,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 51.7%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.93 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "luca van assche - cameron norrie|2026-08-30T17:55:00.000Z|standard|Cameron Norrie vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Luca Van Assche - Cameron Norrie",
+   "quando": "dom 30/08, 19:55",
+   "ore": 0,
+   "match": "luca van assche - cameron norrie",
+   "inizio": "2026-08-30T17:55:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Cameron Norrie vincente",
+   "prob": 0.657,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 65.7%, ricavata togliendo il margine alle quote di 16 bookmaker e facendone la media. Miglior prezzo 1.50 su Coolbet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 16 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "daniil medvedev - hugo gaston|2026-08-30T17:58:29.000Z|standard|Daniil Medvedev vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Daniil Medvedev - Hugo Gaston",
+   "quando": "dom 30/08, 19:58",
+   "ore": 0,
+   "match": "daniil medvedev - hugo gaston",
+   "inizio": "2026-08-30T17:58:29.000Z",
+   "fonte": "consenso",
+   "mercato": "Daniil Medvedev vincente",
+   "prob": 0.818,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 81.8%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.20 su MyBookie.ag. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "thiago agustin tirante - adrian mannarino|2026-08-30T18:30:00.000Z|standard|Thiago Agustin Tirante vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Thiago Agustin Tirante - Adrian Mannarino",
+   "quando": "dom 30/08, 20:30",
+   "ore": 0,
+   "match": "thiago agustin tirante - adrian mannarino",
+   "inizio": "2026-08-30T18:30:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Thiago Agustin Tirante vincente",
+   "prob": 0.703,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 70.3%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.42 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "jaime faria - jenson brooksby|2026-08-30T18:35:00.000Z|standard|Jenson Brooksby vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Jaime Faria - Jenson Brooksby",
+   "quando": "dom 30/08, 20:35",
+   "ore": 0,
+   "match": "jaime faria - jenson brooksby",
+   "inizio": "2026-08-30T18:35:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Jenson Brooksby vincente",
+   "prob": 0.533,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 53.3%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.86 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 20 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "toby samuel - tomas machac|2026-08-30T18:40:00.000Z|standard|Toby Samuel vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Toby Samuel - Tomas Machac",
+   "quando": "dom 30/08, 20:40",
+   "ore": 0,
+   "match": "toby samuel - tomas machac",
+   "inizio": "2026-08-30T18:40:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Toby Samuel vincente",
+   "prob": 0.593,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 59.3%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.67 su 888sport. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "aleksandar vukic - rei sakamoto|2026-08-30T19:20:00.000Z|standard|Rei Sakamoto vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Aleksandar Vukic - Rei Sakamoto",
+   "quando": "dom 30/08, 21:20",
+   "ore": 1,
+   "match": "aleksandar vukic - rei sakamoto",
+   "inizio": "2026-08-30T19:20:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Rei Sakamoto vincente",
+   "prob": 0.587,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 58.7%, ricavata togliendo il margine alle quote di 18 bookmaker e facendone la media. Miglior prezzo 1.73 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 18 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "miomir kecmanovic - denis shapovalov|2026-08-30T19:30:00.000Z|standard|Denis Shapovalov vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Miomir Kecmanovic - Denis Shapovalov",
+   "quando": "dom 30/08, 21:30",
+   "ore": 1,
+   "match": "miomir kecmanovic - denis shapovalov",
+   "inizio": "2026-08-30T19:30:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Denis Shapovalov vincente",
+   "prob": 0.554,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 55.4%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.79 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "sebastian gorzny - raphael collignon|2026-08-30T20:10:00.000Z|standard|Raphael Collignon vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Sebastian Gorzny - Raphael Collignon",
+   "quando": "dom 30/08, 22:10",
+   "ore": 2,
+   "match": "sebastian gorzny - raphael collignon",
+   "inizio": "2026-08-30T20:10:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Raphael Collignon vincente",
+   "prob": 0.852,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 85.2%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.14 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 19 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "martin landaluce - jacob fearnley|2026-08-30T20:50:00.000Z|standard|Martin Landaluce vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Martin Landaluce - Jacob Fearnley",
+   "quando": "dom 30/08, 22:50",
+   "ore": 3,
+   "match": "martin landaluce - jacob fearnley",
+   "inizio": "2026-08-30T20:50:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Martin Landaluce vincente",
+   "prob": 0.505,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 50.5%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 2.04 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
+  },
+  {
+   "snapshot_id": "juan manuel cerundolo - arthur gea|2026-09-01T15:00:00.000Z|standard|Arthur Gea vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Juan Manuel Cerundolo - Arthur Gea",
+   "quando": "mar 01/09, 17:00",
+   "ore": 45,
+   "match": "juan manuel cerundolo - arthur gea",
+   "inizio": "2026-09-01T15:00:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Arthur Gea vincente",
+   "prob": 0.567,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 56.7%, ricavata togliendo il margine alle quote di 11 bookmaker e facendone la media. Miglior prezzo 1.69 su Pinnacle. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 11 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:11:45.685Z"
   }
  ]
 }

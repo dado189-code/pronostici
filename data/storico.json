@@ -430,6 +430,39 @@
    "esito": "ko"
   },
   {
+   "id": "manchester united-ipswich|2026-08-30T15:30:00.000Z|sorpresa|Ipswich vincente",
+   "cat": "sorpresa",
+   "data": "30/08",
+   "evento": "Manchester United - Ipswich",
+   "mercato": "Ipswich vincente",
+   "quota": 6.94,
+   "prezzo": 8.5,
+   "risultato": "5-2",
+   "esito": "ko"
+  },
+  {
+   "id": "manchester united-ipswich|2026-08-30T15:30:00.000Z|standard|Multigol 1-5",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Manchester United - Ipswich",
+   "mercato": "Multigol 1-5",
+   "quota": 1.21,
+   "prezzo": null,
+   "risultato": "5-2",
+   "esito": "ko"
+  },
+  {
+   "id": "manchester united-ipswich|2026-08-30T15:30:00.000Z|standard|Under 3.5",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Manchester United - Ipswich",
+   "mercato": "Under 3.5",
+   "quota": 1.79,
+   "prezzo": null,
+   "risultato": "5-2",
+   "esito": "ko"
+  },
+  {
    "id": "monza-udinese|2026-08-29T16:30:00.000Z|standard|Over 2.5",
    "cat": "standard",
    "data": "29/08",
@@ -507,6 +540,39 @@
    "esito": "ko"
   },
   {
+   "id": "real madrid-malaga|2026-08-30T15:00:00.000Z|sorpresa|Pareggio",
+   "cat": "sorpresa",
+   "data": "30/08",
+   "evento": "Real Madrid - Malaga",
+   "mercato": "Pareggio",
+   "quota": 7.41,
+   "prezzo": 11.5,
+   "risultato": "4-0",
+   "esito": "ko"
+  },
+  {
+   "id": "real madrid-malaga|2026-08-30T15:00:00.000Z|standard|1",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Real Madrid - Malaga",
+   "mercato": "1",
+   "quota": 1.22,
+   "prezzo": 1.14,
+   "risultato": "4-0",
+   "esito": "ok"
+  },
+  {
+   "id": "real madrid-malaga|2026-08-30T15:00:00.000Z|standard|Multigol 2-4",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Real Madrid - Malaga",
+   "mercato": "Multigol 2-4",
+   "quota": 1.63,
+   "prezzo": null,
+   "risultato": "4-0",
+   "esito": "ok"
+  },
+  {
    "id": "real sociedad-espanyol|2026-08-29T17:00:00.000Z|sorpresa|Espanyol vincente",
    "cat": "sorpresa",
    "data": "29/08",
@@ -537,6 +603,39 @@
    "quota": 1.2,
    "prezzo": null,
    "risultato": "2-2",
+   "esito": "ok"
+  },
+  {
+   "id": "rennes-le mans|2026-08-30T15:15:00.000Z|standard|1",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Rennes - Le Mans",
+   "mercato": "1",
+   "quota": 1.11,
+   "prezzo": 1.46,
+   "risultato": "3-2",
+   "esito": "ok"
+  },
+  {
+   "id": "rennes-le mans|2026-08-30T15:15:00.000Z|standard|NoGol",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Rennes - Le Mans",
+   "mercato": "NoGol",
+   "quota": 1.8,
+   "prezzo": null,
+   "risultato": "3-2",
+   "esito": "ko"
+  },
+  {
+   "id": "rennes-le mans|2026-08-30T15:15:00.000Z|standard|Over 2.5",
+   "cat": "standard",
+   "data": "30/08",
+   "evento": "Rennes - Le Mans",
+   "mercato": "Over 2.5",
+   "quota": 1.19,
+   "prezzo": null,
+   "risultato": "3-2",
    "esito": "ok"
   },
   {
@@ -1034,71 +1133,6 @@
   {
    "sport": "calcio",
    "comp": "Premier League",
-   "evento": "Manchester United - Ipswich",
-   "quando": "dom 30/08, 15:30",
-   "ore": 27,
-   "match": "manchester united-ipswich",
-   "inizio": "2026-08-30T15:30:00.000Z",
-   "understat": "EPL",
-   "mercato": "Under 3.5",
-   "prob": 0.559,
-   "why": "Gol attesi 2.34 contro 1.05, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.9%. Sul segno 2 il modello dice 14.4% contro il 13.0% del consenso di 25 bookmaker, miglior prezzo 8.50 su Unibet (NL).",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.144,
-    "probMercato": 0.13,
-    "prezzo": 8.5,
-    "book": "Unibet (NL)",
-    "nBook": 25,
-    "valore": 0.222
-   },
-   "id": "manchester united-ipswich|2026-08-30T15:30:00.000Z|standard|Under 3.5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Manchester United - Ipswich",
-   "quando": "dom 30/08, 15:30",
-   "ore": 27,
-   "match": "manchester united-ipswich",
-   "inizio": "2026-08-30T15:30:00.000Z",
-   "understat": "EPL",
-   "mercato": "Multigol 1-5",
-   "prob": 0.826,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 2.34 contro 1.05, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 82.6%. Sul segno 2 il modello dice 14.4% contro il 13.0% del consenso di 25 bookmaker, miglior prezzo 8.50 su Unibet (NL).",
-   "src": "modello xG Dixon-Coles",
-   "id": "manchester united-ipswich|2026-08-30T15:30:00.000Z|standard|Multigol 1-5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Manchester United - Ipswich",
-   "quando": "dom 30/08, 15:30",
-   "ore": 27,
-   "match": "manchester united-ipswich",
-   "inizio": "2026-08-30T15:30:00.000Z",
-   "understat": "EPL",
-   "tipo": "sorpresa",
-   "mercato": "Ipswich vincente",
-   "prob": 0.144,
-   "prezzo": 8.5,
-   "why": "Il modello da questo esito al 14.4%, il consenso di 25 bookmaker al 13.0%. Al prezzo migliore, 8.50 su Unibet (NL), il valore atteso e' 22.2%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.144,
-    "probMercato": 0.13,
-    "prezzo": 8.5,
-    "book": "Unibet (NL)",
-    "nBook": 25,
-    "valore": 0.222
-   },
-   "id": "manchester united-ipswich|2026-08-30T15:30:00.000Z|sorpresa|Ipswich vincente"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
    "evento": "Aston Villa - Arsenal",
    "quando": "lun 31/08, 19:00",
    "ore": 55,
@@ -1160,72 +1194,6 @@
     "valore": 0.303
    },
    "id": "aston villa-arsenal|2026-08-31T19:00:00.000Z|sorpresa|Aston Villa vincente"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Real Madrid - Malaga",
-   "quando": "dom 30/08, 15:00",
-   "ore": 27,
-   "match": "real madrid-malaga",
-   "inizio": "2026-08-30T15:00:00.000Z",
-   "understat": "La_liga",
-   "mercato": "Multigol 2-4",
-   "prob": 0.615,
-   "why": "Gol attesi 2.37 contro 0.36, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 61.5%. Sul segno X il modello dice 13.5% contro il 9.9% del consenso di 21 bookmaker, miglior prezzo 11.50 su Betfair.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "X",
-    "probModello": 0.135,
-    "probMercato": 0.099,
-    "prezzo": 11.5,
-    "book": "Betfair",
-    "nBook": 21,
-    "valore": 0.554
-   },
-   "id": "real madrid-malaga|2026-08-30T15:00:00.000Z|standard|Multigol 2-4"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Real Madrid - Malaga",
-   "quando": "dom 30/08, 15:00",
-   "ore": 27,
-   "match": "real madrid-malaga",
-   "inizio": "2026-08-30T15:00:00.000Z",
-   "understat": "La_liga",
-   "mercato": "1",
-   "prob": 0.823,
-   "prezzo": 1.14,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 2.37 contro 0.36, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 82.3%. Sul segno X il modello dice 13.5% contro il 9.9% del consenso di 21 bookmaker, miglior prezzo 11.50 su Betfair.",
-   "src": "modello xG Dixon-Coles",
-   "id": "real madrid-malaga|2026-08-30T15:00:00.000Z|standard|1"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Real Madrid - Malaga",
-   "quando": "dom 30/08, 15:00",
-   "ore": 27,
-   "match": "real madrid-malaga",
-   "inizio": "2026-08-30T15:00:00.000Z",
-   "understat": "La_liga",
-   "tipo": "sorpresa",
-   "mercato": "Pareggio",
-   "prob": 0.135,
-   "prezzo": 11.5,
-   "why": "Il modello da questo esito al 13.5%, il consenso di 21 bookmaker al 9.9%. Al prezzo migliore, 11.50 su Betfair, il valore atteso e' 55.4%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "X",
-    "probModello": 0.135,
-    "probMercato": 0.099,
-    "prezzo": 11.5,
-    "book": "Betfair",
-    "nBook": 21,
-    "valore": 0.554
-   },
-   "id": "real madrid-malaga|2026-08-30T15:00:00.000Z|sorpresa|Pareggio"
   },
   {
    "sport": "calcio",
@@ -1412,45 +1380,6 @@
   {
    "sport": "calcio",
    "comp": "Ligue 1",
-   "evento": "Rennes - Le Mans",
-   "quando": "dom 30/08, 15:15",
-   "ore": 27,
-   "match": "rennes-le mans",
-   "inizio": "2026-08-30T15:15:00.000Z",
-   "understat": "Ligue_1",
-   "mercato": "NoGol",
-   "prob": 0.555,
-   "why": "Gol attesi 4.05 contro 0.60, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.5%. Sul segno 1 il modello dice 92.6% contro il 66.7% del consenso di 23 bookmaker, miglior prezzo 1.47 su Betfair.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.926,
-    "probMercato": 0.667,
-    "prezzo": 1.47,
-    "book": "Betfair",
-    "nBook": 23,
-    "valore": 0.362
-   },
-   "id": "rennes-le mans|2026-08-30T15:15:00.000Z|standard|NoGol"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Ligue 1",
-   "evento": "Rennes - Le Mans",
-   "quando": "dom 30/08, 15:15",
-   "ore": 27,
-   "match": "rennes-le mans",
-   "inizio": "2026-08-30T15:15:00.000Z",
-   "understat": "Ligue_1",
-   "mercato": "Over 2.5",
-   "prob": 0.842,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 4.05 contro 0.60, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 84.2%. Sul segno 1 il modello dice 92.6% contro il 66.7% del consenso di 23 bookmaker, miglior prezzo 1.47 su Betfair.",
-   "src": "modello xG Dixon-Coles",
-   "id": "rennes-le mans|2026-08-30T15:15:00.000Z|standard|Over 2.5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Ligue 1",
    "evento": "Monaco - Marseille",
    "quando": "dom 30/08, 18:45",
    "ore": 30,
@@ -1614,22 +1543,6 @@
    "why": "Versione prudente sulla stessa partita. Gol attesi 1.80 contro 1.21, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.2%. Sul segno 1 il modello dice 51.3% contro il 44.0% del consenso di 15 bookmaker, miglior prezzo 2.28 su 1xBet.",
    "src": "modello xG Dixon-Coles",
    "id": "real sociedad-celta vigo|2026-09-03T19:00:00.000Z|standard|Over 1.5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Ligue 1",
-   "evento": "Rennes - Le Mans",
-   "quando": "dom 30/08, 15:15",
-   "ore": 7,
-   "match": "rennes-le mans",
-   "inizio": "2026-08-30T15:15:00.000Z",
-   "understat": "Ligue_1",
-   "mercato": "1",
-   "prob": 0.899,
-   "prezzo": 1.46,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 3.62 contro 0.60, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 89.9%. Sul segno 1 il modello dice 89.9% contro il 66.9% del consenso di 23 bookmaker, miglior prezzo 1.46 su 1xBet.",
-   "src": "modello xG Dixon-Coles",
-   "id": "rennes-le mans|2026-08-30T15:15:00.000Z|standard|1"
   },
   {
    "sport": "calcio",
@@ -1838,11 +1751,94 @@
    "src": "modello xG Dixon-Coles",
    "model_version": "football-v1-baseline",
    "id": "toulouse-lille|2026-09-03T18:45:00.000Z|standard|Multigol 1-4"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Aston Villa - Arsenal",
+   "quando": "lun 31/08, 21:00",
+   "ore": 27,
+   "match": "aston villa-arsenal",
+   "inizio": "2026-08-31T19:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.1827,
+     "PX": 0.2532,
+     "P2": 0.5641,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.1753,
+     "PX": 0.2833,
+     "P2": 0.5413,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.005,
+     "lambda_away": 1.884
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 7.2,
+     "book": "Betfair",
+     "n_book": 25,
+     "no_vig_probability": 0.147
+    },
+    "value": {
+     "fair_odds": 5.464,
+     "edge": 0.036,
+     "ev": 0.3176
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.036,
+     "confidence": 68,
+     "data_quality": 58
+    },
+    "value_class": "VALUE",
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 94.3,
+      "current_season_contribution_pct": 5.7
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 94.3,
+      "current_season_contribution_pct": 5.7
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Aston Villa\" il 18.3% contro il 14.7% del mercato. La quota fair e' 5.46 contro una quota disponibile di 7.20. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Over 2.5",
+   "prob": 0.551,
+   "why": "Gol attesi 1.00 contro 1.88, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.1%. Sul segno 1 il modello dice 18.3% contro il 14.7% del consenso di 25 bookmaker, miglior prezzo 7.20 su Betfair.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.183,
+    "probMercato": 0.147,
+    "prezzo": 7.2,
+    "book": "Betfair",
+    "nBook": 25,
+    "valore": 0.316
+   },
+   "model_version": "football-v1-baseline",
+   "id": "aston villa-arsenal|2026-08-31T19:00:00.000Z|standard|Over 2.5"
   }
  ],
- "aggiornato": "2026-08-30T16:16:40.939Z",
+ "aggiornato": "2026-08-30T18:11:41.237Z",
  "diagnostica": [
-  "132 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport"
+  "121 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport"
  ],
  "nota": "La quota e la quota minima 1/probabilita, non il prezzo di un bookmaker: il saldo va letto come limite superiore. La categoria cassaforte nasce dalla combinazione costruita nella pagina e non e ricavabile da qui, quindi non viene aggiornata in automatico."
 }
