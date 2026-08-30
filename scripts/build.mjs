@@ -11,6 +11,7 @@ import { salvaSnapshot } from './snapshot.mjs';
 import { costruisciCalibratore, applicaDrawCal } from './drawcal.mjs';
 import { fairOdds, ev as calcolaEV, edge, agreement, dataQuality, confidence, classificaValore, spiegaPick,
   marketGapInfo, classificaRischioQuota, idoneoBestPick, opportunityScore } from './valore.mjs';
+import { costruisciCassaforte, costruisciQuota2, costruisciSorpresa } from './selezioni.mjs';
 
 // DC-DRAW-CAL: layer sperimentale, calcolato UNA VOLTA per esecuzione, letto
 // solo dallo storico locale (nessuna chiamata di rete). Se il campione e'
@@ -106,6 +107,12 @@ const out = [];
 const diagnostica = [];
 // archivio delle quote di questo giro, per misurare i movimenti nel tempo
 const rilevazioni = [];
+// Candidati per Cassaforte/Quota2/Sorpresa: un elemento per OGNI mercato di
+// OGNI partita con analisi disponibile (quindi con confidence/dataQuality/
+// agreement/market gap calcolati) - non solo i 2-3 mercati gia' in "out".
+// Le quote qui sono fair odds del modello (1/prob), coerenti col resto del
+// sito, tranne dove esiste anche una quota bookmaker reale (segni 1X2).
+const poolSelezione = [];
 
 // --- scoperta gratuita degli eventi
 //
@@ -388,6 +395,19 @@ for (const lega of LEGHE) {
         why: spiegaPick({ evento: `${casa} - ${ospite}`, esitoLabel: migliore.esito === '1' ? `la vittoria di ${casa}` : migliore.esito === '2' ? `la vittoria di ${ospite}` : 'il pareggio',
           pModel: migliore.probModello, pMercato: migliore.probMercato, quotaBookmaker: migliore.prezzo, agreementLivello: agr.livello, marketGapLivello: gapInfo.livello })
       };
+
+      // Pool per Cassaforte/Quota2/Sorpresa: TUTTI i mercati di mk (non solo
+      // valore/solido), con la quota fair del modello. Il resto (mercato,
+      // fair odds, calibrata) resta baseline: nessun impatto sul Pure Model.
+      for (const [chiaveMercato, probMercatoModello] of Object.entries(mk)) {
+        if (!(probMercatoModello > 0)) continue;
+        poolSelezione.push({
+          match: idMatch, evento: `${casa} - ${ospite}`, comp: lega.nome, quando, inizio: inizio.toISOString(),
+          mercato: chiaveMercato, prob: probMercatoModello, quota_fair: +(1 / probMercatoModello).toFixed(3),
+          prezzo_bookmaker: ['1', 'X', '2'].includes(chiaveMercato) ? (prezzoDi(chiaveMercato) ?? null) : null,
+          analisi
+        });
+      }
     }
 
     // "inizio" e' in ISO e serve a chiudi.mjs: "quando" e' testo localizzato,
@@ -483,6 +503,53 @@ const speculativePicksToday = tutteConAnalisi
   .slice(0, 10)
   .map(p => ({ ...mappaPick(p), motivi_esclusione: p.analisi.best_pick_motivi_esclusione }));
 
+// --- CASSAFORTE / QUOTA 2 / SORPRESA: riallineate all'uso reale dichiarato
+// (singole da ~1.50, multiple intorno a 2, sorpresa occasionale). Usano
+// SEMPRE le metriche del value engine: mai una selezione High Risk in
+// Cassaforte/Quota2, mai una quota sopra soglia come Sorpresa principale.
+// Rigenerate ad ogni esecuzione di questa pipeline, dalle quote di oggi.
+const risCassaforte = costruisciCassaforte(poolSelezione);
+const risQuota2 = costruisciQuota2(poolSelezione);
+const risSorpresa = costruisciSorpresa(tutteConAnalisi);
+
+function formattaSingola(c) {
+  if (!c) return null;
+  const a = c.analisi;
+  return {
+    evento: c.evento, comp: c.comp, quando: c.quando, mercato: c.mercato,
+    quota: c.quota_fair, probabilita_modello: +c.prob.toFixed(4),
+    probabilita_calibrata: (['1', 'X', '2'].includes(c.mercato) && a.calibrated.attivo)
+      ? +a.calibrated[c.mercato === '1' ? 'P1' : c.mercato === 'X' ? 'PX' : 'P2'].toFixed(4) : null,
+    confidence: a.quality.confidence, data_quality: a.quality.data_quality,
+    market_probability: ['1', 'X', '2'].includes(c.mercato) ? a.market.no_vig_probability : null,
+    fair_odds: c.quota_fair, agreement: a.quality.agreement,
+    market_gap: a.market_gap.livello,
+    why: `${c.evento}, mercato "${c.mercato}": il modello lo stima al ${(c.prob * 100).toFixed(1)}% (quota fair ${c.quota_fair.toFixed(2)}), `
+      + `confidence ${a.quality.confidence}/100, data quality ${a.quality.data_quality}/100, accordo col mercato ${a.quality.agreement}.`
+  };
+}
+
+const cassaforte = risCassaforte.selezione ? formattaSingola(risCassaforte.selezione) : null;
+const quota2 = risQuota2.selezioni ? {
+  selezioni: risQuota2.selezioni.map(formattaSingola),
+  quota_totale: +risQuota2.quotaTotale.toFixed(3),
+  probabilita_combinata_stimata: +risQuota2.probCongiunta.toFixed(4)
+} : null;
+const sorpresa = risSorpresa.selezione ? (() => {
+  const m = risSorpresa.selezione, a = m.analisi;
+  return {
+    evento: m.evento, comp: m.comp, quando: m.quando, mercato: a.market.esito_riferimento,
+    quota_bookmaker: a.market.bookmaker_odds, probabilita_modello: a.pure_model[a.market.esito_riferimento === '1' ? 'P1' : a.market.esito_riferimento === 'X' ? 'PX' : 'P2'],
+    probabilita_mercato: a.market.no_vig_probability, ev: a.value.ev, edge: a.value.edge,
+    confidence: a.quality.confidence, data_quality: a.quality.data_quality, agreement: a.quality.agreement,
+    market_gap: a.market_gap.livello, why: a.why
+  };
+})() : null;
+
+console.log('CASSAFORTE:', cassaforte ? `${cassaforte.evento} — ${cassaforte.mercato} @ ${cassaforte.quota}` : `nessuna (${risCassaforte.motivo})`);
+console.log('QUOTA 2:', quota2 ? `${quota2.selezioni.map(s => s.evento + ' ' + s.mercato).join(' + ')} — quota ${quota2.quota_totale}` : `nessuna (${risQuota2.motivo})`);
+console.log('SORPRESA:', sorpresa ? `${sorpresa.evento} — ${sorpresa.mercato} @ ${sorpresa.quota_bookmaker}` : `nessuna (${risSorpresa.motivo})`);
+
 writeFileSync('data/picks.json', JSON.stringify({
   aggiornato: generatoAlle,
   model_version: PRODUZIONE_VERSION,
@@ -494,6 +561,9 @@ writeFileSync('data/picks.json', JSON.stringify({
     + "Layer aggiuntivo sperimentale DC-DRAW-CAL sul solo P_DRAW (calibrazione isotonic), sempre mostrato accanto al modello puro, mai al suo posto. "
     + 'Migliori opportunita: richiedono congiuntamente confidence, data quality, agreement, market gap, quota ed EV minimo sopra soglia (mai il solo EV positivo). '
     + 'Selezioni con EV positivo ma quota molto alta o forte disaccordo modello/mercato finiscono in high_risk_today, mai fra le migliori opportunita.',
+  cassaforte, cassaforte_nota: cassaforte ? null : risCassaforte.motivo,
+  quota_2: quota2, quota_2_nota: quota2 ? null : risQuota2.motivo,
+  sorpresa, sorpresa_nota: sorpresa ? null : risSorpresa.motivo,
   best_picks_today: bestPicksToday,
   best_picks_nota: bestPicksToday.length ? null : 'Nessuna opportunita con sufficiente accordo modello/mercato.',
   high_risk_today: speculativePicksToday,

@@ -202,6 +202,45 @@ export const VALORE = {
   opportunityScore: { confidence: 0.30, dataQuality: 0.15, evCappato: 0.35, agreement: 0.20 }
 };
 
+// --- SELEZIONI PRINCIPALI: Cassaforte / Quota 2 / Sorpresa -------------------
+//
+// Riallineate all'uso reale dichiarato: singole da ~1.50 in su, multiple
+// intorno a quota 2, sorpresa occasionale piu rischiosa. Usano SEMPRE le
+// metriche del value engine (confidence/dataQuality/agreement/market gap):
+// "nessuna selezione High Risk" per Cassaforte e Quota 2 vuol dire scartare
+// ogni candidato con rischio_quota ESCLUSA/HIGH_VARIANCE o market gap ESTREMA.
+// Le quote qui sono FAIR ODDS del modello (1/probabilita'), non quote di un
+// bookmaker specifico: e' lo stesso criterio gia' usato dal resto del sito
+// (index.html mostra da sempre "quota minima" = 1/prob). Solo per i segni
+// 1X2 esiste anche una quota bookmaker reale, mostrata quando disponibile.
+export const SELEZIONE = {
+  cassaforte: {
+    quotaMin: 1.45, quotaMax: 1.85,
+    quotaPreferitaMin: 1.50, quotaPreferitaMax: 1.75,
+    confidenceMinima: 55, dataQualityMinima: 45,
+    agreementAccettati: ['HIGH', 'MEDIUM'],
+    marketGapLivelloMassimo: 'SIGNIFICATIVA' // NONE < LIEVE < SIGNIFICATIVA < ESTREMA (esclusa sempre)
+  },
+  quota2: {
+    quotaTotaleMin: 1.85, quotaTotaleMax: 2.20,
+    massimeSelezioni: 3, selezioniPreferite: 2,
+    confidenceMinima: 50, dataQualityMinima: 40,
+    agreementAccettati: ['HIGH', 'MEDIUM'],
+    marketGapLivelloMassimo: 'SIGNIFICATIVA',
+    pesi: { probabilitaCongiunta: 0.40, confidenceMedia: 0.30, dataQualityMedia: 0.20, agreementMedio: 0.10 },
+    maxCandidatiPerRicerca: 25 // limite sullo spazio di ricerca coppie/terzine, per performance
+  },
+  sorpresa: {
+    // qui si usa il Value Engine vero (EV/edge), quindi serve una quota
+    // bookmaker reale: solo segni 1X2 con consenso disponibile
+    quotaMin: 2.50, quotaMax: 5.00,
+    confidenceMinimaAccettabile: 40,
+    agreementPreferiti: ['MEDIUM', 'HIGH']
+    // marketGapLivello ESTREMA e' sempre escluso, non configurabile qui:
+    // e' la stessa regola del value engine principale (mai VALUE su gap estremo)
+  }
+};
+
 // --- fuso orario -------------------------------------------------------------
 //
 // Il runner di GitHub Actions e' in UTC. Ogni orario mostrato all'utente deve

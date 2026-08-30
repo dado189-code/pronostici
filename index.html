@@ -133,19 +133,21 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   <p class="sub">Calcio: Serie A, Premier League, Liga, Ligue 1 e Bundesliga, con mercati che escono da un modello xG Dixon-Coles indipendente dalle quote, quindi multigol, gol squadra e under oltre alle doppie chance. Basket: WNBA e NBA quando sono in stagione. Tennis: i tabelloni del torneo in corso. Per basket e tennis non esiste un modello xG, quindi il pronostico e il solo consenso dei bookmaker ripulito dal margine, ed e segnalato come tale. Scegli la quota che vuoi giocare e l'app costruisce la giocata che la raggiunge con la probabilita piu alta.</p>
 </header>
 
-<div class="sec">Migliori opportunita di oggi</div>
-<p class="sub" style="margin-bottom:14px">Non sono gli esiti piu probabili: sono le partite dove confidence, data quality, accordo modello-mercato e un EV moderato sono TUTTI sopra soglia insieme. Un EV altissimo da solo non basta e non compare qui se nasce da un forte disaccordo col mercato o da una quota molto alta. <span id="modelVersionInfo"></span></p>
+<p class="sub" style="margin:6px 0 18px"><span id="modelVersionInfo"></span></p>
+
+<div class="duo tre">
+  <div id="cassaforte-box"></div>
+  <div id="quota2-box"></div>
+  <div id="sorpresa-box"></div>
+</div>
+
+<div class="sec">Migliori value bet</div>
+<p class="sub" style="margin-bottom:14px">Non sono gli esiti piu probabili: sono le partite dove confidence, data quality, accordo modello-mercato e un EV moderato sono TUTTI sopra soglia insieme. Un EV altissimo da solo non basta e non compare qui se nasce da un forte disaccordo col mercato o da una quota molto alta.</p>
 <div id="bestpicks"></div>
 
 <div class="sec">High risk &middot; model disagreement</div>
 <p class="sub" style="margin-bottom:14px">Selezioni con EV teorico positivo ma escluse dalle migliori opportunita: quota molto alta, forte disaccordo col mercato, o qualita insufficiente. I backtest storici mostrano che il mercato closing batte il Pure Model, quindi un forte disaccordo qui non e un vantaggio dimostrato: da osservare, non da giocare come le altre.</p>
 <div id="highrisk"></div>
-
-<div class="duo tre">
-  <div id="safe"></div>
-  <div id="quota2"></div>
-  <div id="wild"></div>
-</div>
 
 <div class="sec">Genera la tua schedina</div>
 
@@ -525,60 +527,72 @@ function nulla(testo){
   </div>`;
 }
 
-// --- Cassaforte: combinazione piu probabile che arriva almeno a 1.50
-function renderSafe(){
-  const c = componi(diOggi(PICKS.filter(p=>p.tipo!=='sorpresa' && p.fonte!=='consenso')), 1.5, 3);
-  if(!c){ $('#safe').innerHTML = nulla('Fra gli eventi di oggi non esce nessuna combinazione che arrivi a 1.50.'); return; }
-  $('#safe').innerHTML = `<div class="card safe">
+// --- Cassaforte / Quota 2 / Sorpresa: calcolate SERVER-SIDE da build.mjs
+// (scripts/selezioni.mjs) col value engine — confidence, data quality,
+// agreement, market gap, mai una selezione High Risk in Cassaforte/Quota2.
+// Qui solo rendering: nessuna logica di scelta lato client.
+let CASSAFORTE = null, QUOTA2 = null, SORPRESA = null;
+let CASSAFORTE_NOTA = '', QUOTA2_NOTA = '', SORPRESA_NOTA = '';
+
+function rigaQualita(s){
+  return `<div class="meta" style="margin-top:6px">
+    <span>modello ${Math.round(s.probabilita_modello*100)}%${s.probabilita_calibrata!=null?` &middot; calibrata ${Math.round(s.probabilita_calibrata*100)}%`:''}${s.market_probability!=null?` &middot; mercato ${Math.round(s.market_probability*100)}%`:''}</span>
+    <span>conf ${s.confidence}/100 &middot; DQ ${s.data_quality}/100 &middot; <span class="qtag ${esc(s.agreement)}" style="font-size:10px;padding:1px 5px">${esc(s.agreement)}</span></span>
+  </div>`;
+}
+
+function renderCassaforte(){
+  const box = $('#cassaforte-box');
+  if(!box) return;
+  if(!CASSAFORTE){ box.innerHTML = `<div class="card flat"><div class="badge safe">Cassaforte</div><div class="eyebrow">niente per oggi</div><p class="why">${esc(CASSAFORTE_NOTA||'Nessuna singola idonea al momento.')}</p></div>`; return; }
+  const c = CASSAFORTE;
+  box.innerHTML = `<div class="card safe">
     <div class="badge safe">Cassaforte</div>
-    <div class="eyebrow">oggi &middot; quota minima 1.50 &middot; ${c.sel.length} eventi</div>
-    <h3>${(c.pr*100).toFixed(1)}% di probabilita</h3>
-    ${c.sel.map(p=>`<div class="pick" style="border-bottom:0">
-      <span class="market" style="font-size:20px">${esc(p.mercato)}</span>
-      <span class="fair" style="font-size:18px">${fair(p.prob).toFixed(2)}<span>${esc(p.evento)}${etichettaFonte(p)}</span></span>
-    </div>`).join("")}
-    <div class="meta" style="margin-top:10px"><span>quota totale</span><span>${c.q.toFixed(2)}</span></div>
-    <p class="why">Nessun singolo esito davvero sicuro arriva a 1.50: una probabilita dell'80% vale 1.25. Per stare sopra 1.50 restando straprobabile serve accoppiare due esiti solidi, ed e quello che trovi qui.</p>
+    <div class="eyebrow">${esc(c.comp)} &middot; ${esc(c.quando)}</div>
+    <div class="pick" style="border-bottom:0">
+      <span class="market" style="font-size:20px">${esc(c.mercato)}</span>
+      <span class="fair" style="font-size:18px">${c.quota.toFixed(2)}<span>${esc(c.evento)}</span></span>
+    </div>
+    ${rigaQualita(c)}
+    <p class="why">${esc(c.why)}</p>
+    <p class="src">Cassaforte non significa garantita: e' la singola con probabilita, confidence e qualita dati migliori nella banda di quota che giochi di solito.</p>
   </div>`;
 }
 
-// --- Quota 2: la giocata piu probabile che arriva almeno a 2.00.
-// Stesso componi() della cassaforte, solo con obiettivo diverso: cerca il
-// prodotto di probabilita piu alto che resti sotto 1/2. Puo uscire un singolo
-// evento, se da solo paga gia 2.00, oppure una combinazione: decide il conto,
-// non una regola fissa. Qui tengo dentro anche le sorprese, altrimenti il
-// singolo non sarebbe mai possibile: i pronostici standard stanno sopra il 55%
-// di probabilita, cioe sotto quota 1.82.
-function renderQuota2(){
-  const c = componi(diOggi(PICKS.filter(p=>p.fonte!=='consenso')), 2, 3);
-  if(!c){ $('#quota2').innerHTML = nulla('Fra gli eventi di oggi non esce nessuna giocata che arrivi a 2.00.'); return; }
-  const singola = c.sel.length === 1;
-  $('#quota2').innerHTML = `<div class="card oro">
+function renderQuota2Box(){
+  const box = $('#quota2-box');
+  if(!box) return;
+  if(!QUOTA2){ box.innerHTML = `<div class="card flat"><div class="badge oro">Quota 2</div><div class="eyebrow">niente per oggi</div><p class="why">${esc(QUOTA2_NOTA||'Nessuna combinazione idonea al momento.')}</p></div>`; return; }
+  const q = QUOTA2;
+  box.innerHTML = `<div class="card oro">
     <div class="badge oro">Quota 2</div>
-    <div class="eyebrow">oggi &middot; obiettivo 2.00 &middot; ${c.sel.length} ${singola?'evento':'eventi'}</div>
-    <h3>${(c.pr*100).toFixed(1)}% di probabilita</h3>
-    ${c.sel.map(p=>`<div class="pick" style="border-bottom:0">
-      <span class="market" style="font-size:20px">${esc(p.mercato)}</span>
-      <span class="fair" style="font-size:18px">${fair(p.prob).toFixed(2)}<span>${esc(p.evento)}${etichettaFonte(p)}</span></span>
-    </div>`).join("")}
-    <div class="meta" style="margin-top:10px"><span>quota totale</span><span>${c.q.toFixed(2)}</span></div>
-    <p class="why">${singola
-      ? 'Un solo esito paga gia 2.00 da solo, ed e il piu probabile fra quelli che ci arrivano: non serve combinare niente.'
-      : `Nessun singolo esito arriva a 2.00 restando probabile, quindi la quota nasce da ${c.sel.length} eventi, scelti per massimizzare la probabilita complessiva e mai due sulla stessa partita.`}</p>
+    <div class="eyebrow">oggi &middot; ${q.selezioni.length} eventi &middot; obiettivo 1.85-2.20</div>
+    <h3>${(q.probabilita_combinata_stimata*100).toFixed(1)}% di probabilita combinata</h3>
+    ${q.selezioni.map(s=>`<div class="pick" style="border-bottom:0">
+      <span class="market" style="font-size:18px">${esc(s.mercato)}</span>
+      <span class="fair" style="font-size:16px">${s.quota.toFixed(2)}<span>${esc(s.evento)}</span></span>
+    </div>${rigaQualita(s)}`).join("")}
+    <div class="meta" style="margin-top:10px"><span>quota totale</span><span>${q.quota_totale.toFixed(2)}</span></div>
+    <p class="why">Combinazione scelta ottimizzando probabilita congiunta, confidence e data quality media — non le due quote piu basse disponibili, ed evitando eventi correlati sulla stessa partita.</p>
   </div>`;
 }
 
-// --- Sorpresa: la giocata ad alta quota con la base statistica piu solida
-function renderWild(){
-  const s = diOggi(PICKS.filter(p=>p.tipo==='sorpresa')).sort((a,b)=>a.prob-b.prob);
-  if(!s.length){ $('#wild').innerHTML = nulla('Nessuna sorpresa fra gli eventi di oggi.'); return; }
-  const top = s[0];
-  $('#wild').innerHTML = cardHTML(top, 'Alta quota', 'wild', 'La sorpresa') +
-    `<div class="card wild" style="padding:12px 16px">
-      <div class="eyebrow" style="margin-bottom:8px">altre sorprese in lista</div>
-      ${s.slice(1).map(p=>`<div class="meta" style="padding:5px 0">
-        <span>${esc(p.evento)} &middot; ${esc(p.mercato)}</span><span>${fair(p.prob).toFixed(2)}</span></div>`).join("")}
-    </div>`;
+function renderSorpresa(){
+  const box = $('#sorpresa-box');
+  if(!box) return;
+  if(!SORPRESA){ box.innerHTML = `<div class="card flat"><div class="badge wild">Sorpresa</div><div class="eyebrow">niente per oggi</div><p class="why">${esc(SORPRESA_NOTA||'Nessuna sorpresa idonea al momento.')}</p></div>`; return; }
+  const s = SORPRESA;
+  box.innerHTML = `<div class="card wild">
+    <div class="badge wild">Sorpresa</div>
+    <div class="eyebrow">${esc(s.comp)} &middot; ${esc(s.quando)}</div>
+    <div class="pick" style="border-bottom:0">
+      <span class="market" style="font-size:20px">segno ${esc(s.mercato)}</span>
+      <span class="fair" style="font-size:18px">${s.quota_bookmaker.toFixed(2)}<span>${esc(s.evento)}</span></span>
+    </div>
+    <div class="val ${s.ev>=0?'pos':'neg'}">EV ${s.ev>=0?'+':''}${(s.ev*100).toFixed(1)}% &middot; edge ${s.edge>=0?'+':''}${(s.edge*100).toFixed(1)}%</div>
+    <div class="meta" style="margin-top:6px"><span>conf ${s.confidence}/100 &middot; DQ ${s.data_quality}/100</span><span class="qtag ${esc(s.agreement)}">${esc(s.agreement)}</span></div>
+    <p class="why">${esc(s.why)}</p>
+  </div>`;
 }
 
 function genera(){
@@ -708,7 +722,7 @@ function renderHighRisk(){
   box.innerHTML = HIGH_RISK.map(p => bpCardHTML(p, true)).join('');
 }
 
-function disegnaTutto(){ renderBestPicks(); renderHighRisk(); renderSafe(); renderQuota2(); renderWild(); renderAll(); renderStorico(); genera(); }
+function disegnaTutto(){ renderCassaforte(); renderQuota2Box(); renderSorpresa(); renderBestPicks(); renderHighRisk(); renderAll(); renderStorico(); genera(); }
 
 // Carica i dati aggiornati dalla pipeline automatica.
 // Se un file non c'e ancora, resta la versione incorporata nella pagina.
@@ -723,6 +737,9 @@ const caricaPicks = fetch('data/picks.json?t=' + Date.now())
     }
     if (d && Array.isArray(d.best_picks_today)) BEST_PICKS = d.best_picks_today;
     if (d && Array.isArray(d.high_risk_today)) HIGH_RISK = d.high_risk_today;
+    if (d) { CASSAFORTE = d.cassaforte || null; CASSAFORTE_NOTA = d.cassaforte_nota || ''; }
+    if (d) { QUOTA2 = d.quota_2 || null; QUOTA2_NOTA = d.quota_2_nota || ''; }
+    if (d) { SORPRESA = d.sorpresa || null; SORPRESA_NOTA = d.sorpresa_nota || ''; }
     const info = $('#modelVersionInfo');
     if (info && d) {
       const dc = d.drawcal_status;

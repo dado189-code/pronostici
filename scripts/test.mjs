@@ -13,6 +13,7 @@ import { FUSO_ORARIO } from './config.mjs';
 import { isotonicFit, isotonicPredict, applicaDrawCal, costruisciCalibratore } from './drawcal.mjs';
 import { fairOdds, ev, edge, agreement, dataQuality, confidence, classificaValore,
   marketGapInfo, classificaRischioQuota, idoneoBestPick, opportunityScore, evCappatoPerRanking } from './valore.mjs';
+import { costruisciCassaforte, costruisciQuota2, costruisciSorpresa } from './selezioni.mjs';
 
 let ok = 0, ko = 0;
 const fail = [];
@@ -474,6 +475,82 @@ function assertVero(nome, condizione, dettaglio = '') {
   assertVicino('Baseline invariata: fallback drawcal riproduce esattamente P1 baseline', calibrato.P1, mkBase['1'], 1e-12);
   assertVicino('Baseline invariata: fallback drawcal riproduce esattamente PX baseline', calibrato.PX, mkBase['X'], 1e-12);
   assertVicino('Baseline invariata: fallback drawcal riproduce esattamente P2 baseline', calibrato.P2, mkBase['2'], 1e-12);
+}
+
+// ---------------------------------------------------------------- Cassaforte / Quota 2 / Sorpresa
+
+{
+  const finta = ({ confidence = 70, dataQuality = 60, agreement = 'HIGH', gap = 'NONE', rischio = 'NORMALE',
+    ev = 0.05, bookmakerOdds = null, noVig = null, esitoRif = '1' } = {}) => ({
+    quality: { confidence, data_quality: dataQuality, agreement },
+    market_gap: { valore: 0.01, livello: gap },
+    rischio_quota: rischio,
+    value: { ev, edge: ev != null ? ev - 0.02 : null, fair_odds: null },
+    market: { esito_riferimento: esitoRif, bookmaker_odds: bookmakerOdds, no_vig_probability: noVig },
+    calibrated: { attivo: false },
+    pure_model: { P1: 0.5, PX: 0.28, P2: 0.22 },
+    why: 'motivazione di test'
+  });
+  const candidato = (over) => ({ match: 'm', evento: 'Ev', comp: 'Serie A', quando: 'oggi', mercato: '1', prob: 0.6, quota_fair: +(1 / 0.6).toFixed(3), analisi: finta(), ...over });
+
+  // CASSAFORTE: sceglie dentro la banda, scarta High Risk e qualita bassa
+  {
+    const pool = [
+      candidato({ match: 'a', prob: 0.588, quota_fair: 1.70, analisi: finta({ confidence: 70 }) }),      // in banda, buona qualita
+      candidato({ match: 'b', prob: 0.9, quota_fair: 1.11, analisi: finta({ confidence: 90 }) }),          // fuori banda (troppo bassa)
+      candidato({ match: 'c', prob: 0.5, quota_fair: 2.00, analisi: finta({ confidence: 90 }) }),          // fuori banda (troppo alta)
+      candidato({ match: 'd', prob: 0.6, quota_fair: 1.67, analisi: finta({ rischio: 'ESCLUSA' }) }),      // in banda ma High Risk -> scartato
+      candidato({ match: 'e', prob: 0.6, quota_fair: 1.68, analisi: finta({ agreement: 'LOW' }) })         // in banda ma agreement non accettato -> scartato
+    ];
+    const r = costruisciCassaforte(pool);
+    assertVero('costruisciCassaforte: sceglie il candidato in banda con qualita buona', r.selezione && r.selezione.match === 'a', JSON.stringify(r));
+    assertVero('costruisciCassaforte: mai un candidato High Risk', r.selezione.match !== 'd');
+    assertVero('costruisciCassaforte: mai un candidato con agreement LOW', r.selezione.match !== 'e');
+  }
+  // CASSAFORTE: nessun candidato -> null con motivo esplicito, mai forzata
+  {
+    const r = costruisciCassaforte([candidato({ match: 'x', prob: 0.9, quota_fair: 1.11 })]); // fuori banda
+    assertVero('costruisciCassaforte: nessun candidato idoneo -> selezione null', r.selezione === null);
+    assertVero('costruisciCassaforte: motivo dichiarato quando null', typeof r.motivo === 'string' && r.motivo.length > 0);
+  }
+
+  // QUOTA 2: trova una coppia in banda 1.85-2.20 su partite DIVERSE
+  {
+    const pool = [
+      candidato({ match: 'a', prob: 0.68, quota_fair: 1.47 }),
+      candidato({ match: 'b', prob: 0.68, quota_fair: 1.47 }),
+      candidato({ match: 'a', mercato: 'X', prob: 0.05, quota_fair: 20 }) // stessa partita di 'a': mai scelta insieme ad 'a'
+    ];
+    const r = costruisciQuota2(pool);
+    assertVero('costruisciQuota2: trova una combinazione in banda 1.85-2.20', r.selezioni && r.quotaTotale >= 1.85 && r.quotaTotale <= 2.20, JSON.stringify(r));
+    assertVero('costruisciQuota2: le selezioni sono su partite diverse', new Set(r.selezioni.map(s => s.match)).size === r.selezioni.length);
+    assertVero('costruisciQuota2: probabilita congiunta = prodotto delle probabilita', Math.abs(r.probCongiunta - r.selezioni.reduce((p, s) => p * s.prob, 1)) < 1e-9);
+  }
+  // QUOTA 2: nessuna combinazione valida -> null con motivo
+  {
+    const r = costruisciQuota2([candidato({ match: 'a', prob: 0.95, quota_fair: 1.05 }), candidato({ match: 'b', prob: 0.95, quota_fair: 1.05 })]);
+    assertVero('costruisciQuota2: nessuna combinazione in banda -> selezioni null', r.selezioni === null);
+    assertVero('costruisciQuota2: motivo dichiarato quando null', typeof r.motivo === 'string' && r.motivo.length > 0);
+  }
+
+  // SORPRESA: solo segni 1X2 con quota bookmaker reale, EV positivo, gap non estremo
+  {
+    const partite = [
+      { match: 'a', evento: 'A - B', comp: 'Serie A', quando: 'oggi', analisi: finta({ bookmakerOdds: 3.5, noVig: 0.32, ev: 0.1, agreement: 'MEDIUM' }) },
+      { match: 'b', evento: 'C - D', comp: 'Serie A', quando: 'oggi', analisi: finta({ bookmakerOdds: 12, noVig: 0.1, ev: 1.5, gap: 'ESTREMA' }) }, // quota fuori banda E gap estremo
+      { match: 'c', evento: 'E - F', comp: 'Serie A', quando: 'oggi', analisi: finta({ bookmakerOdds: 3.2, noVig: 0.35, ev: -0.05 }) } // EV negativo
+    ];
+    const r = costruisciSorpresa(partite);
+    assertVero('costruisciSorpresa: sceglie il candidato in banda 2.5-5 con EV positivo', r.selezione && r.selezione.match === 'a', JSON.stringify(r));
+    assertVero('costruisciSorpresa: mai una quota fuori banda o gap estremo', r.selezione.match !== 'b');
+    assertVero('costruisciSorpresa: mai EV negativo', r.selezione.match !== 'c');
+  }
+  // SORPRESA: nessun candidato -> null con motivo
+  {
+    const r = costruisciSorpresa([{ match: 'a', analisi: finta({ bookmakerOdds: 1.5, ev: 0.1 }) }]); // quota troppo bassa per essere sorpresa
+    assertVero('costruisciSorpresa: nessun candidato in banda -> selezione null', r.selezione === null);
+    assertVero('costruisciSorpresa: motivo dichiarato quando null', typeof r.motivo === 'string' && r.motivo.length > 0);
+  }
 }
 
 // ---------------------------------------------------------------- riepilogo
