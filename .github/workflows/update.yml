@@ -21,6 +21,12 @@ jobs:
         with:
           node-version: '20'
 
+      # Guardia prima di toccare qualunque probabilita': se un test rompe, la
+      # pipeline si ferma qui e picks.json/storico.json restano quelli di ieri
+      # invece di pubblicare un calcolo non verificato.
+      - name: Test del motore
+        run: node scripts/test.mjs
+
       # prima di build.mjs: e' l'ultimo momento in cui data/picks.json contiene
       # ancora i pronostici del giro precedente, quelli da chiudere.
       # Non usa l'API delle quote, solo i risultati pubblici di Understat.
@@ -36,6 +42,6 @@ jobs:
         run: |
           git config user.name  "pronostici-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/picks.json data/storico.json data/quote-storico.json
+          git add data/picks.json data/storico.json data/quote-storico.json data/snapshots.json
           git diff --staged --quiet || git commit -m "Quote aggiornate $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push

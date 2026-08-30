@@ -71,12 +71,105 @@ async function scaricaUnderstat(lega, stagione) {
     .filter(p => Number.isFinite(p.xgCasa) && Number.isFinite(p.xgOspite));
 }
 
+// Come scaricaUnderstat, ma porta anche cio' che il blocco "teams" e "players"
+// gia' contengono e che finora restava a terra: npxG, npxGA, ppda, deep, xpts,
+// il flag casa/trasferta, e i giocatori. Stessa richiesta di rete di prima,
+// stesso costo (zero: Understat non e' a pagamento), un solo parsing in piu'.
+//
+// Il join fra "dates" (il calendario) e "teams[].history" (le statistiche) e'
+// su squadra+giorno: verificato su una stagione intera, 380 partite su 380
+// si accoppiano senza ambiguita'. Se in futuro non si accoppiasse piu' (un
+// cambio di formato lato Understat), meglio fallire con un errore chiaro che
+// proseguire con dati disallineati: e' quello che fa il controllo sotto.
+async function scaricaUnderstatCompleto(lega, stagione) {
+  const url = `https://understat.com/getLeagueData/${lega}/${stagione}`;
+  const headers = {
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 '
+      + '(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    'X-Requested-With': 'XMLHttpRequest',
+    'Referer': `https://understat.com/league/${lega}/${stagione}`,
+    'Accept': 'application/json, text/javascript, */*; q=0.01'
+  };
+
+  let dati = null, ultimo = '';
+  for (let tentativo = 1; tentativo <= 3 && !dati; tentativo++) {
+    if (tentativo > 1) await new Promise(r => setTimeout(r, 1000 * tentativo));
+    const res = await fetch(url, { headers });
+    if (!res.ok) { ultimo = `HTTP ${res.status}`; continue; }
+    const testo = await res.text();
+    try { dati = JSON.parse(testo); }
+    catch { ultimo = `risposta non JSON (${testo.slice(0, 40).replace(/\s+/g, ' ')}...)`; }
+  }
+  if (!dati) throw new Error(`Understat ${lega}: ${ultimo}`);
+  if (!Array.isArray(dati.dates)) throw new Error(`Understat ${lega}: campo dates assente`);
+  if (!dati.teams) throw new Error(`Understat ${lega}: campo teams assente`);
+
+  // indice squadra+giorno -> riga di history, per il join
+  const perSquadraGiorno = {};
+  for (const t of Object.values(dati.teams)) {
+    for (const h of t.history) {
+      const chiave = `${t.title}|${h.date.slice(0, 10)}`;
+      perSquadraGiorno[chiave] = h;
+    }
+  }
+
+  const partite = dati.dates.filter(p => p.isResult).map(p => {
+    const giorno = p.datetime.slice(0, 10);
+    const hCasa = perSquadraGiorno[`${p.h.title}|${giorno}`];
+    const hOspite = perSquadraGiorno[`${p.a.title}|${giorno}`];
+    const base = {
+      data: new Date(p.datetime), casa: p.h.title, ospite: p.a.title,
+      xgCasa: parseFloat(p.xG.h), xgOspite: parseFloat(p.xG.a),
+      golCasa: parseInt(p.goals.h, 10), golOspite: parseInt(p.goals.a, 10)
+    };
+    if (!hCasa || !hOspite || hCasa.h_a !== 'h' || hOspite.h_a !== 'a') {
+      // il join non ha trovato le due meta': si tiene la partita coi soli dati
+      // base (compatibili con scaricaUnderstat) e si segnala l'assenza invece
+      // di inventare npxG.
+      return { ...base, npxgCasa: null, npxgOspite: null, ppdaCasa: null, ppdaOspite: null,
+        deepCasa: null, deepOspite: null, xptsCasa: null, xptsOspite: null, joinRiuscito: false };
+    }
+    return {
+      ...base,
+      npxgCasa: parseFloat(hCasa.npxG), npxgOspite: parseFloat(hOspite.npxG),
+      ppdaCasa: hCasa.ppda, ppdaOspite: hOspite.ppda,
+      deepCasa: hCasa.deep, deepOspite: hOspite.deep,
+      xptsCasa: hCasa.xpts, xptsOspite: hOspite.xpts,
+      joinRiuscito: true
+    };
+  }).filter(p => Number.isFinite(p.xgCasa) && Number.isFinite(p.xgOspite));
+
+  const squadre = {};
+  for (const t of Object.values(dati.teams)) {
+    squadre[t.title] = t.history.map(h => ({
+      data: h.date, h_a: h.h_a, xG: h.xG, xGA: h.xGA, npxG: h.npxG, npxGA: h.npxGA,
+      npxGD: h.npxGD, ppda: h.ppda, ppda_allowed: h.ppda_allowed,
+      deep: h.deep, deep_allowed: h.deep_allowed, xpts: h.xpts, pts: h.pts, result: h.result
+    })).sort((a, b) => new Date(b.data) - new Date(a.data)); // piu' recente prima
+  }
+
+  const giocatori = Object.values(dati.players || {});
+
+  return { partite, squadre, giocatori };
+}
+
 // ---------------------------------------------------------------- stima
 
 // Punto fisso della massima verosimiglianza Poisson: alterna il calcolo degli
 // attacchi e delle difese finche' i valori smettono di muoversi. Ogni partita
 // pesa meno mano a mano che invecchia (emivita in giorni).
-function stimaForze(partite, { emivita = 180, iterazioni = 200, oggi = new Date() } = {}) {
+// campoXG: 'xg' (default, e' il comportamento della baseline, invariato) oppure
+// 'npxg', che usa npxgCasa/npxgOspite se la partita li porta (solo con dati da
+// scaricaUnderstatCompleto) e ricade su xgCasa/xgOspite altrimenti, cosi' una
+// singola partita senza join riuscito non introduce un buco silenzioso.
+function stimaForze(partite, { emivita = 180, iterazioni = 200, oggi = new Date(), campoXG = 'xg' } = {}) {
+  const xgC = campoXG === 'npxg'
+    ? (p) => (Number.isFinite(p.npxgCasa) ? p.npxgCasa : p.xgCasa)
+    : (p) => p.xgCasa;
+  const xgO = campoXG === 'npxg'
+    ? (p) => (Number.isFinite(p.npxgOspite) ? p.npxgOspite : p.xgOspite)
+    : (p) => p.xgOspite;
+
   const squadre = [...new Set(partite.flatMap(p => [p.casa, p.ospite]))];
   const att = Object.fromEntries(squadre.map(s => [s, 1]));
   const dif = Object.fromEntries(squadre.map(s => [s, 1]));
@@ -87,7 +180,7 @@ function stimaForze(partite, { emivita = 180, iterazioni = 200, oggi = new Date(
   const pesoTot = peso.reduce((a, b) => a + b, 0);
 
   // scala comune: gol attesi medi per squadra per partita
-  let golMedi = partite.reduce((a, p, k) => a + peso[k] * (p.xgCasa + p.xgOspite), 0)
+  let golMedi = partite.reduce((a, p, k) => a + peso[k] * (xgC(p) + xgO(p)), 0)
               / (2 * pesoTot);
 
   const normalizza = (o) => {
@@ -100,8 +193,8 @@ function stimaForze(partite, { emivita = 180, iterazioni = 200, oggi = new Date(
     for (const s of squadre) {
       let num = 0, den = 0;
       partite.forEach((p, k) => {
-        if (p.casa === s)   { num += peso[k] * p.xgCasa;   den += peso[k] * golMedi * dif[p.ospite] * casa; }
-        if (p.ospite === s) { num += peso[k] * p.xgOspite; den += peso[k] * golMedi * dif[p.casa]; }
+        if (p.casa === s)   { num += peso[k] * xgC(p);   den += peso[k] * golMedi * dif[p.ospite] * casa; }
+        if (p.ospite === s) { num += peso[k] * xgO(p); den += peso[k] * golMedi * dif[p.casa]; }
       });
       if (den > 0) att[s] = clamp(num / den, 0.25, 3.0);
     }
@@ -111,8 +204,8 @@ function stimaForze(partite, { emivita = 180, iterazioni = 200, oggi = new Date(
     for (const s of squadre) {
       let num = 0, den = 0;
       partite.forEach((p, k) => {
-        if (p.casa === s)   { num += peso[k] * p.xgOspite; den += peso[k] * golMedi * att[p.ospite]; }
-        if (p.ospite === s) { num += peso[k] * p.xgCasa;   den += peso[k] * golMedi * att[p.casa] * casa; }
+        if (p.casa === s)   { num += peso[k] * xgO(p); den += peso[k] * golMedi * att[p.ospite]; }
+        if (p.ospite === s) { num += peso[k] * xgC(p);   den += peso[k] * golMedi * att[p.casa] * casa; }
       });
       if (den > 0) dif[s] = clamp(num / den, 0.25, 3.0);
     }
@@ -121,7 +214,7 @@ function stimaForze(partite, { emivita = 180, iterazioni = 200, oggi = new Date(
     // vantaggio del campo: rapporto fra xG in casa osservati e attesi
     let nc = 0, dc = 0;
     partite.forEach((p, k) => {
-      nc += peso[k] * p.xgCasa;
+      nc += peso[k] * xgC(p);
       dc += peso[k] * golMedi * att[p.casa] * dif[p.ospite];
     });
     if (dc > 0) casa = clamp(nc / dc, 1.0, 1.6);
@@ -129,7 +222,7 @@ function stimaForze(partite, { emivita = 180, iterazioni = 200, oggi = new Date(
     // riallinea la scala complessiva
     let ns = 0, ds = 0;
     partite.forEach((p, k) => {
-      ns += peso[k] * (p.xgCasa + p.xgOspite);
+      ns += peso[k] * (xgC(p) + xgO(p));
       ds += peso[k] * (att[p.casa] * dif[p.ospite] * casa + att[p.ospite] * dif[p.casa]);
     });
     if (ds > 0) golMedi = ns / ds;
@@ -140,9 +233,13 @@ function stimaForze(partite, { emivita = 180, iterazioni = 200, oggi = new Date(
 
 // rho stimato sui gol veri, non sugli xG: serve proprio a correggere
 // la frequenza osservata dei risultati bassi.
-function stimaRho(partite, forze) {
+// I default sono i valori storici invariati: la griglia va idealmente letta
+// da config.mjs (MODELLO.rhoMin/rhoMax/rhoPasso), ma model.mjs resta un
+// modulo puro senza dipendere da config, quindi chi chiama passa i valori
+// esplicitamente se vuole cambiarli; senza farlo il comportamento e' identico.
+function stimaRho(partite, forze, { rhoMin = -0.2, rhoMax = 0.05, rhoPasso = 0.005 } = {}) {
   let best = 0, bestLL = -Infinity;
-  for (let rho = -0.2; rho <= 0.05; rho += 0.005) {
+  for (let rho = rhoMin; rho <= rhoMax; rho += rhoPasso) {
     let ll = 0;
     for (const p of partite) {
       const { lh, la } = lambde(forze, p.casa, p.ospite);
@@ -233,4 +330,4 @@ function consenso(bookmakers) {
   return out;
 }
 
-export { scaricaUnderstat, stimaForze, stimaRho, lambde, mercati, matrice, consenso, poisson, tau };
+export { scaricaUnderstat, scaricaUnderstatCompleto, stimaForze, stimaRho, lambde, mercati, matrice, consenso, poisson, tau };

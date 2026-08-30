@@ -1,0 +1,650 @@
+{
+ "generato_il": "2026-08-30T11:11:47.552Z",
+ "baseline_version": "football-v1-baseline",
+ "nuovo_version": "football-v2-understat",
+ "nota": "Confronto descrittivo, non un giudizio di qualita: dice quanto le probabilita si spostano, non se lo spostamento e un miglioramento. Il giudizio arriva dal backtest con risultati reali (FASE 4).",
+ "riepilogo": {
+  "nConfrontate": 20,
+  "nErrori": 0,
+  "deltaP1MedioAssoluto": 0.0205,
+  "partitaConMaggiorDelta": "Real Sociedad - Celta Vigo",
+  "maggiorDeltaP1": -0.0568
+ },
+ "partite": [
+  {
+   "match_id": "napoli-como",
+   "evento": "Napoli - Como",
+   "competizione": "Serie A",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 1.231,
+    "lambda_away": 1.2893,
+    "P1": 0.3576,
+    "PX": 0.2571,
+    "P2": 0.3853
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 1.1036,
+    "lambda_away": 1.0352,
+    "P1": 0.3754,
+    "PX": 0.2839,
+    "P2": 0.3406
+   },
+   "delta": {
+    "lambda_home": -0.1274,
+    "lambda_away": -0.2541,
+    "P1": 0.0178,
+    "PX": 0.0268,
+    "P2": -0.0447
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di -0.127: la differenza fra xG e npxG per Napoli o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "cagliari-inter",
+   "evento": "Cagliari - Inter",
+   "competizione": "Serie A",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 0.9668,
+    "lambda_away": 2.2047,
+    "P1": 0.1573,
+    "PX": 0.1839,
+    "P2": 0.6589
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 0.9359,
+    "lambda_away": 2.18,
+    "P1": 0.1539,
+    "PX": 0.1847,
+    "P2": 0.6614
+   },
+   "delta": {
+    "lambda_home": -0.0309,
+    "lambda_away": -0.0247,
+    "P1": -0.0034,
+    "PX": 0.0008,
+    "P2": 0.0025
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)"
+   ]
+  },
+  {
+   "match_id": "lazio-genoa",
+   "evento": "Lazio - Genoa",
+   "competizione": "Serie A",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 1.3111,
+    "lambda_away": 1.0345,
+    "P1": 0.4349,
+    "PX": 0.2653,
+    "P2": 0.2998
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 1.171,
+    "lambda_away": 0.8757,
+    "P1": 0.4324,
+    "PX": 0.2878,
+    "P2": 0.2798
+   },
+   "delta": {
+    "lambda_home": -0.1401,
+    "lambda_away": -0.1588,
+    "P1": -0.0025,
+    "PX": 0.0225,
+    "P2": -0.02
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di -0.140: la differenza fra xG e npxG per Lazio o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "lecce-roma",
+   "evento": "Lecce - Roma",
+   "competizione": "Serie A",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 0.8961,
+    "lambda_away": 2.0392,
+    "P1": 0.1609,
+    "PX": 0.1959,
+    "P2": 0.6432
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 0.9103,
+    "lambda_away": 1.8878,
+    "P1": 0.1813,
+    "PX": 0.2108,
+    "P2": 0.6079
+   },
+   "delta": {
+    "lambda_home": 0.0142,
+    "lambda_away": -0.1514,
+    "P1": 0.0204,
+    "PX": 0.0149,
+    "P2": -0.0353
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)"
+   ]
+  },
+  {
+   "match_id": "atalanta-bologna",
+   "evento": "Atalanta - Bologna",
+   "competizione": "Serie A",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 1.7935,
+    "lambda_away": 1.27,
+    "P1": 0.5019,
+    "PX": 0.2219,
+    "P2": 0.2762
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 1.7703,
+    "lambda_away": 1.1626,
+    "P1": 0.521,
+    "PX": 0.224,
+    "P2": 0.2549
+   },
+   "delta": {
+    "lambda_home": -0.0232,
+    "lambda_away": -0.1074,
+    "P1": 0.0191,
+    "PX": 0.0021,
+    "P2": -0.0213
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)"
+   ]
+  },
+  {
+   "match_id": "leeds-brentford",
+   "evento": "Leeds - Brentford",
+   "competizione": "Premier League",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 1.7793,
+    "lambda_away": 1.5446,
+    "P1": 0.4215,
+    "PX": 0.2555,
+    "P2": 0.3231
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 1.5352,
+    "lambda_away": 1.3333,
+    "P1": 0.405,
+    "PX": 0.2804,
+    "P2": 0.3146
+   },
+   "delta": {
+    "lambda_home": -0.2441,
+    "lambda_away": -0.2113,
+    "P1": -0.0165,
+    "PX": 0.0249,
+    "P2": -0.0085
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di -0.244: la differenza fra xG e npxG per Leeds o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "chelsea-brighton",
+   "evento": "Chelsea - Brighton",
+   "competizione": "Premier League",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 1.8026,
+    "lambda_away": 1.5043,
+    "P1": 0.435,
+    "PX": 0.2552,
+    "P2": 0.3098
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 1.6281,
+    "lambda_away": 1.4644,
+    "P1": 0.4013,
+    "PX": 0.2683,
+    "P2": 0.3304
+   },
+   "delta": {
+    "lambda_home": -0.1745,
+    "lambda_away": -0.0399,
+    "P1": -0.0337,
+    "PX": 0.0131,
+    "P2": 0.0206
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di -0.174: la differenza fra xG e npxG per Chelsea o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "sunderland-fulham",
+   "evento": "Sunderland - Fulham",
+   "competizione": "Premier League",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 1.3944,
+    "lambda_away": 1.2056,
+    "P1": 0.3954,
+    "PX": 0.2975,
+    "P2": 0.3071
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 1.3251,
+    "lambda_away": 1.1209,
+    "P1": 0.3951,
+    "PX": 0.3078,
+    "P2": 0.2971
+   },
+   "delta": {
+    "lambda_home": -0.0693,
+    "lambda_away": -0.0847,
+    "P1": -0.0003,
+    "PX": 0.0103,
+    "P2": -0.01
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di -0.069: la differenza fra xG e npxG per Sunderland o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "manchester united-ipswich",
+   "evento": "Manchester United - Ipswich",
+   "competizione": "Premier League",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 2.3241,
+    "lambda_away": 1.0784,
+    "P1": 0.6402,
+    "PX": 0.2095,
+    "P2": 0.1503
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 2.4215,
+    "lambda_away": 1.0348,
+    "P1": 0.6682,
+    "PX": 0.1984,
+    "P2": 0.1334
+   },
+   "delta": {
+    "lambda_home": 0.0974,
+    "lambda_away": -0.0436,
+    "P1": 0.028,
+    "PX": -0.0111,
+    "P2": -0.0169
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di +0.097: la differenza fra xG e npxG per Manchester United o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "aston villa-arsenal",
+   "evento": "Aston Villa - Arsenal",
+   "competizione": "Premier League",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 0.9973,
+    "lambda_away": 1.8733,
+    "P1": 0.1829,
+    "PX": 0.2532,
+    "P2": 0.5639
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 1.0693,
+    "lambda_away": 1.8821,
+    "P1": 0.1979,
+    "PX": 0.2533,
+    "P2": 0.5488
+   },
+   "delta": {
+    "lambda_home": 0.072,
+    "lambda_away": 0.0088,
+    "P1": 0.015,
+    "PX": 0.0001,
+    "P2": -0.0151
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di +0.072: la differenza fra xG e npxG per Aston Villa o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "real madrid-malaga",
+   "evento": "Real Madrid - Malaga",
+   "competizione": "Liga",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 2.367,
+    "lambda_away": 0.3624,
+    "P1": 0.8236,
+    "PX": 0.135,
+    "P2": 0.0414
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 2.1886,
+    "lambda_away": 0.2172,
+    "P1": 0.8332,
+    "PX": 0.1406,
+    "P2": 0.0262
+   },
+   "delta": {
+    "lambda_home": -0.1784,
+    "lambda_away": -0.1452,
+    "P1": 0.0096,
+    "PX": 0.0056,
+    "P2": -0.0152
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di -0.178: la differenza fra xG e npxG per Real Madrid o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "deportivo la coruna-valencia",
+   "evento": "Deportivo La Coruna - Valencia",
+   "competizione": "Liga",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 0.7044,
+    "lambda_away": 1.9758,
+    "P1": 0.1232,
+    "PX": 0.2037,
+    "P2": 0.6731
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 0.6758,
+    "lambda_away": 1.6333,
+    "P1": 0.1491,
+    "PX": 0.2487,
+    "P2": 0.6021
+   },
+   "delta": {
+    "lambda_home": -0.0286,
+    "lambda_away": -0.3425,
+    "P1": 0.0259,
+    "PX": 0.045,
+    "P2": -0.071
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)"
+   ]
+  },
+  {
+   "match_id": "celta vigo-athletic bilbao",
+   "evento": "Celta Vigo - Athletic Club",
+   "competizione": "Liga",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 1.3237,
+    "lambda_away": 1.1517,
+    "P1": 0.4053,
+    "PX": 0.2717,
+    "P2": 0.323
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 1.1763,
+    "lambda_away": 1.0012,
+    "P1": 0.395,
+    "PX": 0.2983,
+    "P2": 0.3067
+   },
+   "delta": {
+    "lambda_home": -0.1474,
+    "lambda_away": -0.1505,
+    "P1": -0.0103,
+    "PX": 0.0266,
+    "P2": -0.0163
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di -0.147: la differenza fra xG e npxG per Celta Vigo o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "osasuna-getafe",
+   "evento": "Osasuna - Getafe",
+   "competizione": "Liga",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 1.3768,
+    "lambda_away": 0.6388,
+    "P1": 0.5476,
+    "PX": 0.28,
+    "P2": 0.1724
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 1.1919,
+    "lambda_away": 0.5474,
+    "P1": 0.5167,
+    "PX": 0.3161,
+    "P2": 0.1673
+   },
+   "delta": {
+    "lambda_home": -0.1849,
+    "lambda_away": -0.0914,
+    "P1": -0.0309,
+    "PX": 0.0361,
+    "P2": -0.0051
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di -0.185: la differenza fra xG e npxG per Osasuna o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "barcelona-rayo vallecano",
+   "evento": "Barcelona - Rayo Vallecano",
+   "competizione": "Liga",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 3.2704,
+    "lambda_away": 1.1412,
+    "P1": 0.7829,
+    "PX": 0.1225,
+    "P2": 0.0946
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 2.8474,
+    "lambda_away": 1.1081,
+    "P1": 0.731,
+    "PX": 0.1507,
+    "P2": 0.1182
+   },
+   "delta": {
+    "lambda_home": -0.423,
+    "lambda_away": -0.0331,
+    "P1": -0.0519,
+    "PX": 0.0282,
+    "P2": 0.0236
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di -0.423: la differenza fra xG e npxG per Barcelona o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "real sociedad-celta vigo",
+   "evento": "Real Sociedad - Celta Vigo",
+   "competizione": "Liga",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 1.8021,
+    "lambda_away": 1.2052,
+    "P1": 0.5132,
+    "PX": 0.2323,
+    "P2": 0.2545
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 1.4973,
+    "lambda_away": 1.1177,
+    "P1": 0.4564,
+    "PX": 0.2636,
+    "P2": 0.2801
+   },
+   "delta": {
+    "lambda_home": -0.3048,
+    "lambda_away": -0.0875,
+    "P1": -0.0568,
+    "PX": 0.0313,
+    "P2": 0.0256
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di -0.305: la differenza fra xG e npxG per Real Sociedad o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "paris-nice",
+   "evento": "Paris FC - Nice",
+   "competizione": "Ligue 1",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 2.0074,
+    "lambda_away": 1.2242,
+    "P1": 0.5465,
+    "PX": 0.2327,
+    "P2": 0.2208
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 1.8053,
+    "lambda_away": 1.1017,
+    "P1": 0.5292,
+    "PX": 0.2494,
+    "P2": 0.2215
+   },
+   "delta": {
+    "lambda_home": -0.2021,
+    "lambda_away": -0.1225,
+    "P1": -0.0173,
+    "PX": 0.0167,
+    "P2": 0.0007
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di -0.202: la differenza fra xG e npxG per Paris FC o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "rennes-le mans",
+   "evento": "Rennes - Le Mans",
+   "competizione": "Ligue 1",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 3.6229,
+    "lambda_away": 0.6029,
+    "P1": 0.8993,
+    "PX": 0.0747,
+    "P2": 0.026
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 3.6481,
+    "lambda_away": 0.5934,
+    "P1": 0.9025,
+    "PX": 0.0724,
+    "P2": 0.0251
+   },
+   "delta": {
+    "lambda_home": 0.0252,
+    "lambda_away": -0.0095,
+    "P1": 0.0032,
+    "PX": -0.0023,
+    "P2": -0.0009
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)"
+   ]
+  },
+  {
+   "match_id": "monaco-marseille",
+   "evento": "Monaco - Marseille",
+   "competizione": "Ligue 1",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 1.9182,
+    "lambda_away": 1.7218,
+    "P1": 0.4232,
+    "PX": 0.2326,
+    "P2": 0.3442
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 1.7579,
+    "lambda_away": 1.6197,
+    "P1": 0.4072,
+    "PX": 0.2433,
+    "P2": 0.3496
+   },
+   "delta": {
+    "lambda_home": -0.1603,
+    "lambda_away": -0.1021,
+    "P1": -0.016,
+    "PX": 0.0107,
+    "P2": 0.0054
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di -0.160: la differenza fra xG e npxG per Monaco o i suoi avversari recenti pesa nel fit"
+   ]
+  },
+  {
+   "match_id": "freiburg-werder bremen",
+   "evento": "Freiburg - Werder Bremen",
+   "competizione": "Bundesliga",
+   "baseline": {
+    "model_version": "football-v1-baseline",
+    "lambda_home": 1.7048,
+    "lambda_away": 0.95,
+    "P1": 0.5497,
+    "PX": 0.2429,
+    "P2": 0.2074
+   },
+   "nuovo": {
+    "model_version": "football-v2-understat",
+    "lambda_home": 1.5989,
+    "lambda_away": 0.9672,
+    "P1": 0.5188,
+    "PX": 0.255,
+    "P2": 0.2262
+   },
+   "delta": {
+    "lambda_home": -0.1059,
+    "lambda_away": 0.0172,
+    "P1": -0.0309,
+    "PX": 0.0121,
+    "P2": 0.0188
+   },
+   "fattori": [
+    "fonte gol attesi: xG grezzo (baseline) -> npxG, gol da azione senza rigori (nuovo)",
+    "lambda_home cambia di -0.106: la differenza fra xG e npxG per Freiburg o i suoi avversari recenti pesa nel fit"
+   ]
+  }
+ ]
+}

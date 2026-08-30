@@ -15,16 +15,17 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { scaricaUnderstat } from './model.mjs';
 import { vinta } from './backtest.mjs';
+import { CHIUSURA } from './config.mjs';
 
 const PICKS = 'data/picks.json';
 const STORICO = 'data/storico.json';
 
 // Understat pubblica il risultato poco dopo il fischio finale, ma non subito.
 // Prima di cercarlo aspetto che la partita sia comunque finita.
-const DURATA_ORE = 2.5;
+const DURATA_ORE = CHIUSURA.attesaOreDopoInizio;
 // Oltre questa soglia un pendente non e' piu' un ritardo: e' un problema.
 // Resta in coda, ma lo segnalo invece di lasciarlo sparire nel silenzio.
-const GIORNI_ALLARME = 7;
+const GIORNI_ALLARME = CHIUSURA.giorniAllarmePendente;
 
 const leggi = (f, vuoto) => {
   if (!existsSync(f)) return vuoto;

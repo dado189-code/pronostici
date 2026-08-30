@@ -6,17 +6,18 @@
 import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { scaricaUnderstat, stimaForze, stimaRho, lambde, mercati, consenso }
   from './model.mjs';
+import { PRODUZIONE_VERSION, BUILD, FUSO_ORARIO, MODELLO } from './config.mjs';
+import { salvaSnapshot } from './snapshot.mjs';
 
 const KEY = process.env.ODDS_API_KEY;
 if (!KEY) { console.error('Manca ODDS_API_KEY'); process.exit(1); }
 
 const STAGIONE = process.env.STAGIONE || String(new Date().getFullYear() - (new Date().getMonth() < 6 ? 1 : 0));
-const GIORNI = 5;
-// Finestra usata per decidere se una chiave vale la richiesta a pagamento.
-const GIORNI_SCOPERTA = 3;
-// Tetto sui tabelloni di tennis per esecuzione: durante gli Slam le chiavi
-// aperte possono essere parecchie e ognuna costa un credito.
-const MAX_TENNIS = 2;
+// Numeri di soglia centralizzati in config.mjs (FASE 1): cambiarli qui
+// cambierebbe solo la variabile locale, non il comportamento della pipeline.
+const GIORNI = BUILD.giorniOrizzonte;
+const GIORNI_SCOPERTA = BUILD.giorniScopertaEventi;
+const MAX_TENNIS = BUILD.maxTennisPerGiro;
 
 const LEGHE = [
   { understat: 'Serie_A',    odds: 'soccer_italy_serie_a',    nome: 'Serie A' },
@@ -187,7 +188,7 @@ async function daConsenso(comp) {
       sport: comp.sport, comp: comp.nome,
       evento: `${ev.home_team} - ${ev.away_team}`,
       quando: inizio.toLocaleString('it-IT',
-        { timeZone: 'Europe/Rome', weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }),
+        { timeZone: FUSO_ORARIO, weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }),
       ore, match: `${ev.home_team} - ${ev.away_team}`.toLowerCase(),
       inizio: inizio.toISOString(),
       fonte: 'consenso',
@@ -222,8 +223,8 @@ for (const lega of LEGHE) {
     continue;
   }
 
-  const forze = stimaForze(storico, { emivita: 180 });
-  const rho = stimaRho(storico.slice(-300), forze);
+  const forze = stimaForze(storico, { emivita: MODELLO.emivitaGiorni });
+  const rho = stimaRho(storico.slice(-300), forze, MODELLO);
   const indice = Object.fromEntries(forze.squadre.map(s => [chiave(s), s]));
 
   let eventi = [];
@@ -283,12 +284,12 @@ for (const lega of LEGHE) {
       const c = confronto && confronto.find(x => x.esito === mercato);
       return c ? c.prezzo : undefined;
     };
-    const valore = scegli(mk, 0.55, 0.80);
-    const solido = scegli(mk, 0.80, 0.93);
+    const valore = scegli(mk, ...BUILD.bandaValore);
+    const solido = scegli(mk, ...BUILD.bandaSolido);
     // il runner di GitHub e' in UTC: senza timeZone la pagina mostrerebbe
     // gli orari due ore indietro rispetto all'Italia
     const quando = inizio.toLocaleString('it-IT',
-      { timeZone: 'Europe/Rome', weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+      { timeZone: FUSO_ORARIO, weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
     const idMatch = chiave(casa) + '-' + chiave(ospite);
     if (cons) rilevazioni.push({ match: idMatch, comp: lega.nome, inizio: inizio.toISOString(),
       quote: Object.entries(cons).map(([nome, d]) => ({
@@ -337,8 +338,21 @@ for (const lega of LEGHE) {
 // --- sport senza modello: basket a chiavi fisse, tennis scoperto ogni volta
 for (const comp of [...BASKET, ...await chiaviTennis()]) await daConsenso(comp);
 
+// Tracciabilita' (FASE 1): ogni pronostico porta la versione del modello che
+// l'ha davvero calcolato, e finisce in uno snapshot che nessuna esecuzione
+// successiva potra' piu' modificare. generatoAlle e' unico per questo giro:
+// e' cosi' che si distinguono, nello snapshot, previsioni fatte in momenti
+// diversi sulla stessa identica partita.
+const generatoAlle = new Date().toISOString();
+for (const p of out) p.model_version = PRODUZIONE_VERSION;
+const esitoSnapshot = salvaSnapshot('data/snapshots.json',
+  out.map(p => ({ ...p, generated_at: generatoAlle })));
+console.log(`Snapshot: ${esitoSnapshot.aggiunti} nuovi, ${esitoSnapshot.ignorati} gia' presenti `
+  + `(immutabili), ${esitoSnapshot.totale} in archivio.`);
+
 writeFileSync('data/picks.json', JSON.stringify({
-  aggiornato: new Date().toISOString(),
+  aggiornato: generatoAlle,
+  model_version: PRODUZIONE_VERSION,
   metodo: 'calcio: forze di attacco e difesa stimate dagli xG con emivita 180 giorni, Dixon-Coles per i punteggi bassi, confronto col consenso di piu bookmaker. '
     + 'Basket e tennis: nessun modello indipendente disponibile, il pronostico e il solo consenso dei bookmaker ripulito dal margine.',
   diagnostica,
