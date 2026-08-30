@@ -97,7 +97,12 @@ const adesso = Date.now();
 const candidati = [];
 const visti = new Set();
 let senzaData = 0;
+let senzaFonte = 0;
 for (const p of [...storico.pendenti, ...eventi]) {
+  // Understat copre solo il calcio: per basket e tennis non ho una fonte di
+  // risultati, quindi non posso liquidarli. Tenerli in coda li farebbe solo
+  // accumulare all'infinito, quindi li conto e lo dico.
+  if (p.sport && p.sport !== 'calcio') { senzaFonte++; continue; }
   // Senza "inizio" non so nemmeno se la partita e' stata giocata, e non e' una
   // mancanza recuperabile: i pronostici scritti da build.mjs ce l'hanno sempre.
   // Sono residui del formato vecchio, che ricompariranno datati al giro dopo:
@@ -114,6 +119,8 @@ const finiti = candidati.filter(p => adesso > Date.parse(p.inizio) + DURATA_ORE 
 
 const diagnostica = [];
 if (senzaData) diagnostica.push(`${senzaData} pronostici senza data di inizio ignorati (formato precedente)`);
+if (senzaFonte) diagnostica.push(`${senzaFonte} pronostici di basket/tennis non liquidabili: `
+  + 'Understat copre solo il calcio, serve una fonte di risultati per quegli sport');
 const stagione = String(new Date().getFullYear() - (new Date().getMonth() < 6 ? 1 : 0));
 const comps = [...new Set(finiti.map(p => p.comp))];
 const risultati = comps.length ? await indiceRisultati(comps, stagione) : {};

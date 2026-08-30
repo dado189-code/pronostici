@@ -105,7 +105,7 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 <header>
   <div class="eyebrow">analisi aggiornata sabato 29 agosto</div>
   <h1>Generatore <em>pronostici</em></h1>
-  <p class="sub">Serie A, Premier, Liga, Ligue 1, ritorni di Champions, WNBA e ATP Winston-Salem. I mercati sul calcio escono da un modello Poisson calibrato sulle probabilita 1X2, quindi multigol, gol squadra e under oltre alle doppie chance. Scegli la quota che vuoi giocare e l'app costruisce la giocata che la raggiunge con la probabilita piu alta.</p>
+  <p class="sub">Calcio: Serie A, Premier League, Liga, Ligue 1 e Bundesliga, con mercati che escono da un modello xG Dixon-Coles indipendente dalle quote, quindi multigol, gol squadra e under oltre alle doppie chance. Basket: WNBA e NBA quando sono in stagione. Tennis: i tabelloni del torneo in corso. Per basket e tennis non esiste un modello xG, quindi il pronostico e il solo consenso dei bookmaker ripulito dal margine, ed e segnalato come tale. Scegli la quota che vuoi giocare e l'app costruisce la giocata che la raggiunge con la probabilita piu alta.</p>
 </header>
 
 <div class="duo tre">
@@ -433,6 +433,12 @@ function componi(list, target, maxLegs){
   return best ? {sel:best.sel, pr:best.pr, q:1/best.pr} : null;
 }
 
+// Basket e tennis non hanno un modello indipendente: il pronostico e la lavagna
+// ripulita dal margine. Deve restare visibile che la base non e la stessa del calcio.
+function etichettaFonte(p){
+  return p.fonte === 'consenso' ? ' &middot; solo lavagna' : '';
+}
+
 function valBadge(p){
   if(!p.book) return '';
   const ev = p.prob * p.book - 1;
@@ -489,7 +495,7 @@ function renderSafe(){
     <h3>${(c.pr*100).toFixed(1)}% di probabilita</h3>
     ${c.sel.map(p=>`<div class="pick" style="border-bottom:0">
       <span class="market" style="font-size:20px">${esc(p.mercato)}</span>
-      <span class="fair" style="font-size:18px">${fair(p.prob).toFixed(2)}<span>${esc(p.evento)}</span></span>
+      <span class="fair" style="font-size:18px">${fair(p.prob).toFixed(2)}<span>${esc(p.evento)}${etichettaFonte(p)}</span></span>
     </div>`).join("")}
     <div class="meta" style="margin-top:10px"><span>quota totale</span><span>${c.q.toFixed(2)}</span></div>
     <p class="why">Nessun singolo esito davvero sicuro arriva a 1.50: una probabilita dell'80% vale 1.25. Per stare sopra 1.50 restando straprobabile serve accoppiare due esiti solidi, ed e quello che trovi qui.</p>
@@ -513,7 +519,7 @@ function renderQuota2(){
     <h3>${(c.pr*100).toFixed(1)}% di probabilita</h3>
     ${c.sel.map(p=>`<div class="pick" style="border-bottom:0">
       <span class="market" style="font-size:20px">${esc(p.mercato)}</span>
-      <span class="fair" style="font-size:18px">${fair(p.prob).toFixed(2)}<span>${esc(p.evento)}</span></span>
+      <span class="fair" style="font-size:18px">${fair(p.prob).toFixed(2)}<span>${esc(p.evento)}${etichettaFonte(p)}</span></span>
     </div>`).join("")}
     <div class="meta" style="margin-top:10px"><span>quota totale</span><span>${c.q.toFixed(2)}</span></div>
     <p class="why">${singola
@@ -574,9 +580,19 @@ function genera(){
     <p class="note">La quota mostrata e quella equa, calcolata dalle probabilita stimate. Gioca solo se il tuo bookmaker paga piu di ${combo.q.toFixed(2)}. La probabilita combinata tratta gli eventi come indipendenti, quindi va letta come indicativa.</p>`;
 }
 
+// Una sola card per partita: la pipeline produce piu mercati sullo stesso
+// incontro (di valore, prudente, sorpresa) e in elenco diventavano tre schede
+// quasi identiche. Tengo la prima, che e quella di valore, e appendo gli altri
+// mercati come righe compatte invece di buttarli via.
 function renderAll(){
-  $('#all').innerHTML = PICKS.map(p=>`<div class="card flat">
-    <div class="eyebrow">${esc(p.comp)} &middot; ${esc(p.quando)}${p.tipo==='sorpresa'?' &middot; sorpresa':''}</div>
+  const perPartita = new Map();
+  PICKS.forEach(p => {
+    const k = p.match || p.evento;
+    if(perPartita.has(k)) perPartita.get(k).altri.push(p);
+    else perPartita.set(k, {capo:p, altri:[]});
+  });
+  $('#all').innerHTML = [...perPartita.values()].map(({capo:p, altri})=>`<div class="card flat">
+    <div class="eyebrow">${esc(p.comp)} &middot; ${esc(p.quando)}${p.tipo==='sorpresa'?' &middot; sorpresa':''}${etichettaFonte(p)}</div>
     <h3>${esc(p.evento)}</h3>
     <div class="pick">
       <span class="market">${esc(p.mercato)}</span>
@@ -584,6 +600,13 @@ function renderAll(){
     </div>
     ${valBadge(p)}
     <p class="why">${esc(p.why)}</p>
+    ${altri.length?`<div style="margin-top:10px">
+      <div class="eyebrow" style="margin-bottom:6px">altri mercati su questa partita</div>
+      ${altri.map(a=>`<div class="meta" style="padding:4px 0;border-top:1px solid var(--line)">
+        <span>${esc(a.mercato)}${a.tipo==='sorpresa'?' &middot; sorpresa':''}</span>
+        <span>${fair(a.prob).toFixed(2)}</span>
+      </div>`).join("")}
+    </div>`:''}
     <div class="src">base: ${esc(p.src)}</div>
   </div>`).join("");
 }
