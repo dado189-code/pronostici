@@ -3285,9 +3285,284 @@
    },
    "model_version": "football-v1-baseline",
    "id": "real betis-real madrid|2026-09-04T19:00:00.000Z|sorpresa|Real Betis vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Paris Saint Germain - Monaco",
+   "quando": "ven 04/09, 21:05",
+   "ore": 120,
+   "match": "psg-monaco",
+   "inizio": "2026-09-04T19:05:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6289,
+     "PX": 0.2086,
+     "P2": 0.1624,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5951,
+     "PX": 0.2511,
+     "P2": 0.1537,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.228,
+     "lambda_away": 1.066
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 8.1,
+     "book": "1xBet",
+     "n_book": 15,
+     "no_vig_probability": 0.149
+    },
+    "value": {
+     "fair_odds": 6.173,
+     "edge": 0.013,
+     "ev": 0.3122
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.013,
+     "confidence": 86,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.013,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "HIGH_VARIANCE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "quota 8.10 > 8"
+    ],
+    "opportunity_score": 0.895,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 88,
+      "current_season_contribution_pct": 12
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Monaco\" il 16.2% contro il 14.9% del mercato. La quota fair e' 6.17 contro una quota disponibile di 8.10. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.563,
+   "why": "Gol attesi 2.23 contro 1.07, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.3%. Sul segno 2 il modello dice 16.2% contro il 14.9% del consenso di 15 bookmaker, miglior prezzo 8.10 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.162,
+    "probMercato": 0.149,
+    "prezzo": 8.1,
+    "book": "1xBet",
+    "nBook": 15,
+    "valore": 0.316
+   },
+   "model_version": "football-v1-baseline",
+   "id": "psg-monaco|2026-09-04T19:05:00.000Z|standard|Multigol trasferta 1-2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Paris Saint Germain - Monaco",
+   "quando": "ven 04/09, 21:05",
+   "ore": 120,
+   "match": "psg-monaco",
+   "inizio": "2026-09-04T19:05:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6289,
+     "PX": 0.2086,
+     "P2": 0.1624,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5951,
+     "PX": 0.2511,
+     "P2": 0.1537,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.228,
+     "lambda_away": 1.066
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 8.1,
+     "book": "1xBet",
+     "n_book": 15,
+     "no_vig_probability": 0.149
+    },
+    "value": {
+     "fair_odds": 6.173,
+     "edge": 0.013,
+     "ev": 0.3122
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.013,
+     "confidence": 86,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.013,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "HIGH_VARIANCE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "quota 8.10 > 8"
+    ],
+    "opportunity_score": 0.895,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 88,
+      "current_season_contribution_pct": 12
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Monaco\" il 16.2% contro il 14.9% del mercato. La quota fair e' 6.17 contro una quota disponibile di 8.10. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "1X",
+   "prob": 0.838,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 2.23 contro 1.07, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 83.8%. Sul segno 2 il modello dice 16.2% contro il 14.9% del consenso di 15 bookmaker, miglior prezzo 8.10 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "psg-monaco|2026-09-04T19:05:00.000Z|standard|1X"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Paris Saint Germain - Monaco",
+   "quando": "ven 04/09, 21:05",
+   "ore": 120,
+   "match": "psg-monaco",
+   "inizio": "2026-09-04T19:05:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6289,
+     "PX": 0.2086,
+     "P2": 0.1624,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5951,
+     "PX": 0.2511,
+     "P2": 0.1537,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.228,
+     "lambda_away": 1.066
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 8.1,
+     "book": "1xBet",
+     "n_book": 15,
+     "no_vig_probability": 0.149
+    },
+    "value": {
+     "fair_odds": 6.173,
+     "edge": 0.013,
+     "ev": 0.3122
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.013,
+     "confidence": 86,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.013,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "HIGH_VARIANCE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "quota 8.10 > 8"
+    ],
+    "opportunity_score": 0.895,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 88,
+      "current_season_contribution_pct": 12
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Monaco\" il 16.2% contro il 14.9% del mercato. La quota fair e' 6.17 contro una quota disponibile di 8.10. Il modello e il mercato mostrano un accordo alto."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Monaco vincente",
+   "prob": 0.162,
+   "prezzo": 8.1,
+   "why": "Il modello da questo esito al 16.2%, il consenso di 15 bookmaker al 14.9%. Al prezzo migliore, 8.10 su 1xBet, il valore atteso e' 31.6%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.162,
+    "probMercato": 0.149,
+    "prezzo": 8.1,
+    "book": "1xBet",
+    "nBook": 15,
+    "valore": 0.316
+   },
+   "model_version": "football-v1-baseline",
+   "id": "psg-monaco|2026-09-04T19:05:00.000Z|sorpresa|Monaco vincente"
   }
  ],
- "aggiornato": "2026-08-30T18:40:38.715Z",
+ "aggiornato": "2026-08-30T18:53:22.348Z",
  "diagnostica": [
   "114 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport"
  ],

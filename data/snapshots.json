@@ -1,6 +1,6 @@
 {
  "nota": "Ogni riga e immutabile una volta scritta: non viene mai aggiornata da esecuzioni successive, nemmeno se il modello o i dati di input cambiano. Serve a verificare a posteriori cosa il modello prevedeva PRIMA del kickoff, senza il rischio che lo storico si riscriva da solo.",
- "aggiornato": "2026-08-30T18:40:45.303Z",
+ "aggiornato": "2026-08-30T18:53:28.064Z",
  "snapshot": [
   {
    "snapshot_id": "napoli-como|2026-08-30T16:30:00.000Z|standard|Multigol casa 1-2|football-v1-baseline",
@@ -6094,6 +6094,270 @@
    "src": "consenso di 19 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline",
    "generated_at": "2026-08-30T18:40:45.301Z"
+  },
+  {
+   "snapshot_id": "genoa-como|2026-09-04T18:45:00.000Z|standard|Multigol 1-4|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Genoa - Como",
+   "quando": "ven 04/09, 20:45",
+   "ore": 120,
+   "match": "genoa-como",
+   "inizio": "2026-09-04T18:45:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.2326,
+     "PX": 0.2308,
+     "P2": 0.5366,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.2247,
+     "PX": 0.2569,
+     "P2": 0.5183,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.018,
+     "lambda_away": 1.691
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 5.8,
+     "book": "Pinnacle",
+     "n_book": 18,
+     "no_vig_probability": 0.188
+    },
+    "value": {
+     "fair_odds": 4.292,
+     "edge": 0.045,
+     "ev": 0.3514
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.045,
+     "confidence": 59,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.045,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.734,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 94.4,
+      "current_season_contribution_pct": 5.6
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Genoa\" il 23.3% contro il 18.8% del mercato. La quota fair e' 4.29 contro una quota disponibile di 5.80. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol 1-4",
+   "prob": 0.8,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.02 contro 1.69, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.0%. Sul segno 1 il modello dice 23.3% contro il 18.8% del consenso di 18 bookmaker, miglior prezzo 5.80 su Pinnacle.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:53:28.062Z"
+  },
+  {
+   "snapshot_id": "toulouse-lille|2026-09-03T18:45:00.000Z|sorpresa|Toulouse vincente|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Toulouse - Lille",
+   "quando": "gio 03/09, 20:45",
+   "ore": 96,
+   "match": "toulouse-lille",
+   "inizio": "2026-09-03T18:45:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3281,
+     "PX": 0.2986,
+     "P2": 0.3733,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3352,
+     "PX": 0.2833,
+     "P2": 0.3814,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.152,
+     "lambda_away": 1.245
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 3.58,
+     "book": "1xBet",
+     "n_book": 15,
+     "no_vig_probability": 0.288
+    },
+    "value": {
+     "fair_odds": 3.049,
+     "edge": 0.04,
+     "ev": 0.1742
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.0472,
+     "confidence": 60,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.04,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6339,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Toulouse\" il 32.8% contro il 28.8% del mercato. La quota fair e' 3.05 contro una quota disponibile di 3.58. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Toulouse vincente",
+   "prob": 0.328,
+   "prezzo": 3.58,
+   "why": "Il modello da questo esito al 32.8%, il consenso di 15 bookmaker al 28.8%. Al prezzo migliore, 3.58 su 1xBet, il valore atteso e' 17.5%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.328,
+    "probMercato": 0.288,
+    "prezzo": 3.58,
+    "book": "1xBet",
+    "nBook": 15,
+    "valore": 0.175
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:53:28.062Z"
+  },
+  {
+   "snapshot_id": "emiliana arango - xinyu wang|2026-08-30T18:50:30.000Z|standard|Xinyu Wang vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Emiliana Arango - Xinyu Wang",
+   "quando": "dom 30/08, 20:50",
+   "ore": 0,
+   "match": "emiliana arango - xinyu wang",
+   "inizio": "2026-08-30T18:50:30.000Z",
+   "fonte": "consenso",
+   "mercato": "Xinyu Wang vincente",
+   "prob": 0.726,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 72.6%, ricavata togliendo il margine alle quote di 18 bookmaker e facendone la media. Miglior prezzo 1.37 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 18 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:53:28.062Z"
+  },
+  {
+   "snapshot_id": "toby samuel - tomas machac|2026-08-30T18:55:00.000Z|standard|Toby Samuel vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Toby Samuel - Tomas Machac",
+   "quando": "dom 30/08, 20:55",
+   "ore": 0,
+   "match": "toby samuel - tomas machac",
+   "inizio": "2026-08-30T18:55:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Toby Samuel vincente",
+   "prob": 0.592,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 59.2%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.67 su 888sport. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 19 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:53:28.062Z"
+  },
+  {
+   "snapshot_id": "jaime faria - jenson brooksby|2026-08-30T19:00:00.000Z|standard|Jenson Brooksby vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Jaime Faria - Jenson Brooksby",
+   "quando": "dom 30/08, 21:00",
+   "ore": 0,
+   "match": "jaime faria - jenson brooksby",
+   "inizio": "2026-08-30T19:00:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Jenson Brooksby vincente",
+   "prob": 0.53,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 53.0%, ricavata togliendo il margine alle quote di 20 bookmaker e facendone la media. Miglior prezzo 1.90 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 20 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:53:28.062Z"
+  },
+  {
+   "snapshot_id": "thiago agustin tirante - adrian mannarino|2026-08-30T20:00:00.000Z|standard|Thiago Agustin Tirante vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Thiago Agustin Tirante - Adrian Mannarino",
+   "quando": "dom 30/08, 22:00",
+   "ore": 1,
+   "match": "thiago agustin tirante - adrian mannarino",
+   "inizio": "2026-08-30T20:00:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Thiago Agustin Tirante vincente",
+   "prob": 0.703,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 70.3%, ricavata togliendo il margine alle quote di 19 bookmaker e facendone la media. Miglior prezzo 1.41 su Matchbook. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 19 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:53:28.062Z"
+  },
+  {
+   "snapshot_id": "tomas martin etcheverry - vit kopriva|2026-08-30T22:00:00.000Z|standard|Tomas Martin Etcheverry vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "ATP US Open",
+   "evento": "Tomas Martin Etcheverry - Vit Kopriva",
+   "quando": "lun 31/08, 00:00",
+   "ore": 3,
+   "match": "tomas martin etcheverry - vit kopriva",
+   "inizio": "2026-08-30T22:00:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Tomas Martin Etcheverry vincente",
+   "prob": 0.621,
+   "why": "Nessun modello xG copre ATP US Open: questa e la probabilita che il mercato sta prezzando, 62.1%, ricavata togliendo il margine alle quote di 21 bookmaker e facendone la media. Miglior prezzo 1.58 su 1xBet. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 21 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-08-30T18:53:28.062Z"
   }
  ]
 }
