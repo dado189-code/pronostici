@@ -155,13 +155,51 @@ export const CONFIDENCE = {
 // Soglie configurabili, mai punteggi fissi nel codice del sito. Nessuna
 // etichetta implica certezza: sono classi di processo (EV/edge/qualita'),
 // non previsioni di esito.
+//
+// I backtest precedenti (Fase 4-8) hanno mostrato che il mercato closing
+// batte il Pure Model e che il CLV storico e' negativo: un forte disaccordo
+// modello/mercato non e' un vantaggio dimostrato, e' piu' spesso model error.
+// MARKET_GAP: penalizza esattamente questo, indipendentemente da quanto alto
+// sia l'EV teorico.
 export const VALORE = {
   confidenceMinimaWatch: 40,   // sotto: EV positivo ma qualita' troppo bassa -> WATCH, mai VALUE
   dataQualityMinimaWatch: 35,
   evSogliaForte: 0.08,
   edgeSogliaForte: 0.05,
   confidenceMinimaForte: 65,
-  dataQualityMinimaForte: 55
+  dataQualityMinimaForte: 55,
+
+  // MARKET GAP (|P_model - P_market|, punto 1): soglie in probabilita' (0-1)
+  marketGap: {
+    sogliaLieve: 0.03,          // < 3pp: nessuna penalita'
+    sogliaSignificativa: 0.05,  // 3-5pp: lieve penalita' confidence
+    sogliaEstrema: 0.10,        // 5-10pp: penalita' significativa; >=10pp: mai VALUE/STRONG_VALUE
+    penalitaConfidenceLieve: 8,        // punti confidence tolti, 3-5pp
+    penalitaConfidenceSignificativa: 20 // punti confidence tolti, 5-10pp
+  },
+
+  // EXTREME ODDS FILTER (punto 2): soglie sulla quota bookmaker del segno di riferimento
+  quota: {
+    sogliaNormale: 5,      // <= 5: nessun rischio aggiuntivo segnalato
+    sogliaCautela: 8,      // 5-8: CAUTION
+    sogliaAltaVarianza: 12 // 8-12: HIGH VARIANCE; >=12: esclusa dai Best Picks principali (va nelle speculative)
+  },
+
+  // EV CAP FOR RANKING (punto 3): satura l'EV usato SOLO nel punteggio di
+  // ranking, mai l'EV mostrato all'utente (quello resta quello vero).
+  evCapRanking: 0.25,
+
+  // BEST PICKS: condizioni congiunte, non basta EV positivo (punto 4)
+  bestPicks: {
+    confidenceMinima: 55,
+    dataQualityMinima: 45,
+    marketGapMassimo: 0.05,  // oltre la soglia "significativa": mai nei Best Picks principali
+    quotaMassima: 8,         // oltre CAUTION: va nelle speculative, non nei Best Picks
+    evMinimo: 0.02
+  },
+
+  // Pesi dell'OpportunityScore (punto 7): premia qualita'/accordo, non EV puro
+  opportunityScore: { confidence: 0.30, dataQuality: 0.15, evCappato: 0.35, agreement: 0.20 }
 };
 
 // --- fuso orario -------------------------------------------------------------

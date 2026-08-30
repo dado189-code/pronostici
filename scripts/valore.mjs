@@ -66,10 +66,47 @@ export function confidence({ agreementLivello, nStorico, currentSeasonMatches, f
   return Math.round(Math.max(0, Math.min(1, punteggio)) * 100);
 }
 
+// --- MARKET GAP (punto 1) ----------------------------------------------------
+// I backtest precedenti mostrano che il mercato closing batte il Pure Model
+// e che il CLV storico e' negativo: un forte disaccordo NON e' un vantaggio
+// dimostrato. Piu' e' grande lo scarto, piu' la confidence viene penalizzata,
+// e oltre la soglia estrema la classificazione non puo' MAI essere
+// VALUE/STRONG_VALUE, qualunque sia l'EV teorico.
+export function marketGapInfo(marketGap) {
+  const g = Math.abs(marketGap);
+  if (!(g >= 0)) return { livello: 'N/D', penalitaConfidence: 0, bloccaValueClass: false };
+  const { sogliaLieve, sogliaSignificativa, sogliaEstrema, penalitaConfidenceLieve, penalitaConfidenceSignificativa } = VALORE.marketGap;
+  if (g < sogliaLieve) return { livello: 'NONE', penalitaConfidence: 0, bloccaValueClass: false };
+  if (g < sogliaSignificativa) return { livello: 'LIEVE', penalitaConfidence: penalitaConfidenceLieve, bloccaValueClass: false };
+  if (g < sogliaEstrema) return { livello: 'SIGNIFICATIVA', penalitaConfidence: penalitaConfidenceSignificativa, bloccaValueClass: false };
+  return { livello: 'ESTREMA', penalitaConfidence: penalitaConfidenceSignificativa, bloccaValueClass: true, etichetta: 'HIGH MODEL/MARKET DISAGREEMENT' };
+}
+
+// --- EXTREME ODDS FILTER (punto 2) -------------------------------------------
+export function classificaRischioQuota(quota) {
+  if (!(quota > 0)) return 'N/D';
+  const { sogliaNormale, sogliaCautela, sogliaAltaVarianza } = VALORE.quota;
+  if (quota <= sogliaNormale) return 'NORMALE';
+  if (quota <= sogliaCautela) return 'CAUTION';
+  if (quota <= sogliaAltaVarianza) return 'HIGH_VARIANCE';
+  return 'ESCLUSA'; // non entra nei Best Picks principali, resta visibile in partita
+}
+
+// --- EV CAP FOR RANKING (punto 3) --------------------------------------------
+// Satura SOLO il contributo dell'EV nel punteggio di ranking: l'EV mostrato
+// all'utente (value.ev) resta quello vero, mai alterato.
+export function evCappatoPerRanking(evValue) {
+  if (!Number.isFinite(evValue)) return 0;
+  return Math.max(0, Math.min(evValue, VALORE.evCapRanking));
+}
+
 // --- VALUE CLASSIFICATION ----------------------------------------------------
 // Mai "sicura/certa/garantita": solo etichette di processo, mai di esito.
-export function classificaValore({ evValue, edgeValue, confidenceScore, dataQualityScore, agreementLivello }) {
+// marketGapLivello (da marketGapInfo) puo' azzerare la classe a WATCH anche
+// con EV/edge/confidence altissimi: e' la regola esplicita del punto 1.
+export function classificaValore({ evValue, edgeValue, confidenceScore, dataQualityScore, agreementLivello, marketGapLivello }) {
   if (!(evValue > 0) || !(edgeValue > 0)) return 'NO_BET';
+  if (marketGapLivello === 'ESTREMA') return 'WATCH'; // disaccordo estremo: mai VALUE/STRONG_VALUE, qualunque sia l'EV
   const qualitaBassa = confidenceScore < VALORE.confidenceMinimaWatch || dataQualityScore < VALORE.dataQualityMinimaWatch;
   if (qualitaBassa) return 'WATCH'; // EV/edge positivi ma sostenuti da poca qualita' -> osservare, non giocare
   if (agreementLivello === 'LOW') return 'WATCH'; // modello e mercato in forte disaccordo: prudenza anche con EV alto
@@ -79,8 +116,36 @@ export function classificaValore({ evValue, edgeValue, confidenceScore, dataQual
   return forte ? 'STRONG_VALUE' : 'VALUE';
 }
 
+// --- BEST PICKS: condizioni congiunte (punto 4) ------------------------------
+// Ritorna { idoneo, motiviEsclusione[] }: mai un booleano muto, cosi' si puo'
+// sempre spiegare perche' una selezione con EV positivo non e' nei Best Picks.
+export function idoneoBestPick({ confidenceScore, dataQualityScore, agreementLivello, marketGap, quota, evValue }) {
+  const bp = VALORE.bestPicks;
+  const motivi = [];
+  if (!(confidenceScore >= bp.confidenceMinima)) motivi.push(`confidence ${confidenceScore} < ${bp.confidenceMinima}`);
+  if (!(dataQualityScore >= bp.dataQualityMinima)) motivi.push(`data quality ${dataQualityScore} < ${bp.dataQualityMinima}`);
+  if (agreementLivello === 'LOW') motivi.push('agreement LOW');
+  if (!(Math.abs(marketGap) <= bp.marketGapMassimo)) motivi.push(`market gap ${(Math.abs(marketGap) * 100).toFixed(1)}pp > ${(bp.marketGapMassimo * 100).toFixed(0)}pp`);
+  if (!(quota <= bp.quotaMassima)) motivi.push(`quota ${quota?.toFixed(2)} > ${bp.quotaMassima}`);
+  if (!(evValue >= bp.evMinimo)) motivi.push(`EV ${evValue!=null?(evValue*100).toFixed(1)+'%':'n/d'} < ${(bp.evMinimo*100).toFixed(0)}%`);
+  return { idoneo: motivi.length === 0, motiviEsclusione: motivi };
+}
+
+// --- OPPORTUNITY SCORE (punto 7) ---------------------------------------------
+// NON e' una funzione crescente dell'EV: premia confidence/dataQuality/
+// agreement, e l'EV entra gia' saturato (evCappatoPerRanking) cosi' un +100%
+// teorico non puo' dominare un +8% molto piu' credibile.
+export function opportunityScore({ confidenceScore, dataQualityScore, evValue, agreementLivello }) {
+  const puntiAgreement = agreementLivello === 'HIGH' ? 1 : agreementLivello === 'MEDIUM' ? 0.6 : agreementLivello === 'LOW' ? 0.15 : 0.4;
+  const w = VALORE.opportunityScore;
+  return (confidenceScore / 100) * w.confidence
+    + (dataQualityScore / 100) * w.dataQuality
+    + (evCappatoPerRanking(evValue) / VALORE.evCapRanking) * w.evCappato
+    + puntiAgreement * w.agreement;
+}
+
 // --- WHY THIS PICK: template deterministico, solo dati realmente presenti ---
-export function spiegaPick({ evento, esitoLabel, pModel, pMercato, quotaBookmaker, agreementLivello }) {
+export function spiegaPick({ evento, esitoLabel, pModel, pMercato, quotaBookmaker, agreementLivello, marketGapLivello }) {
   const fo = fairOdds(pModel);
   let frase = `Il modello assegna a "${esitoLabel}" il ${(pModel * 100).toFixed(1)}%`;
   if (typeof pMercato === 'number') frase += ` contro il ${(pMercato * 100).toFixed(1)}% del mercato`;
@@ -91,6 +156,9 @@ export function spiegaPick({ evento, esitoLabel, pModel, pMercato, quotaBookmake
   if (agreementLivello) {
     const desc = agreementLivello === 'HIGH' ? 'un accordo alto' : agreementLivello === 'MEDIUM' ? 'un disaccordo moderato' : agreementLivello === 'LOW' ? 'un forte disaccordo' : 'un confronto non disponibile';
     frase += ` Il modello e il mercato mostrano ${desc}.`;
+  }
+  if (marketGapLivello === 'ESTREMA') {
+    frase += ' Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato.';
   }
   return frase;
 }

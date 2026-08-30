@@ -9,7 +9,8 @@ import { scaricaUnderstat, stimaForze, stimaRho, lambde, mercati, consenso }
 import { PRODUZIONE_VERSION, BASELINE_VERSION, BUILD, FUSO_ORARIO, MODELLO, DRAWCAL } from './config.mjs';
 import { salvaSnapshot } from './snapshot.mjs';
 import { costruisciCalibratore, applicaDrawCal } from './drawcal.mjs';
-import { fairOdds, ev as calcolaEV, edge, agreement, dataQuality, confidence, classificaValore, spiegaPick } from './valore.mjs';
+import { fairOdds, ev as calcolaEV, edge, agreement, dataQuality, confidence, classificaValore, spiegaPick,
+  marketGapInfo, classificaRischioQuota, idoneoBestPick, opportunityScore } from './valore.mjs';
 
 // DC-DRAW-CAL: layer sperimentale, calcolato UNA VOLTA per esecuzione, letto
 // solo dallo storico locale (nessuna chiamata di rete). Se il campione e'
@@ -346,14 +347,26 @@ for (const lega of LEGHE) {
       const agr = agreement([migliore.probModello, pCal, migliore.probMercato]);
       const matchesRif = Math.min(contribCasa.matches_current_season, contribOspite.matches_current_season);
       const dq = dataQuality({ nStorico: storico.length, currentSeasonMatches: matchesRif, contestoDisponibile: false });
-      const conf = confidence({
+
+      // MARKET GAP (punto 1): i backtest precedenti mostrano che il mercato
+      // closing batte il Pure Model e che il CLV storico e' negativo, quindi
+      // un forte disaccordo penalizza la confidence invece di essere trattato
+      // come un vantaggio. gapInfo.bloccaValueClass forza il tetto a WATCH.
+      const marketGap = migliore.probModello - migliore.probMercato;
+      const gapInfo = marketGapInfo(marketGap);
+      const confGrezza = confidence({
         agreementLivello: agr.livello, nStorico: storico.length, currentSeasonMatches: matchesRif,
-        freschezzaOre: 0, contestoDisponibile: false,
-        scartoDalMercato: Math.abs(migliore.probModello - migliore.probMercato)
+        freschezzaOre: 0, contestoDisponibile: false, scartoDalMercato: Math.abs(marketGap)
       });
+      const conf = Math.max(0, confGrezza - gapInfo.penalitaConfidence);
+
       const evVal = calcolaEV(migliore.probModello, migliore.prezzo);
       const edgeVal = edge(migliore.probModello, migliore.probMercato);
       const fo = fairOdds(migliore.probModello);
+      const rischioQuota = classificaRischioQuota(migliore.prezzo);
+      const valueClass = classificaValore({ evValue: evVal, edgeValue: edgeVal, confidenceScore: conf, dataQualityScore: dq, agreementLivello: agr.livello, marketGapLivello: gapInfo.livello });
+      const idoneita = idoneoBestPick({ confidenceScore: conf, dataQualityScore: dq, agreementLivello: agr.livello, marketGap, quota: migliore.prezzo, evValue: evVal });
+
       analisi = {
         pure_model: { P1: +mk['1'].toFixed(4), PX: +mk['X'].toFixed(4), P2: +mk['2'].toFixed(4), model_version: BASELINE_VERSION },
         calibrated: { P1: +calibrato.P1.toFixed(4), PX: +calibrato.PX.toFixed(4), P2: +calibrato.P2.toFixed(4),
@@ -363,12 +376,17 @@ for (const lega of LEGHE) {
           n_book: migliore.nBook, no_vig_probability: migliore.probMercato },
         value: { fair_odds: fo !== null ? +fo.toFixed(3) : null, edge: edgeVal !== null ? +edgeVal.toFixed(4) : null, ev: evVal !== null ? +evVal.toFixed(4) : null },
         quality: { agreement: agr.livello, agreement_scarto: agr.scartoMassimo, confidence: conf, data_quality: dq },
-        value_class: classificaValore({ evValue: evVal, edgeValue: edgeVal, confidenceScore: conf, dataQualityScore: dq, agreementLivello: agr.livello }),
+        market_gap: { valore: +Math.abs(marketGap).toFixed(4), livello: gapInfo.livello, etichetta: gapInfo.etichetta || null },
+        rischio_quota: rischioQuota,
+        value_class: valueClass,
+        best_pick_idoneo: idoneita.idoneo,
+        best_pick_motivi_esclusione: idoneita.motiviEsclusione,
+        opportunity_score: +opportunityScore({ confidenceScore: conf, dataQualityScore: dq, evValue: evVal, agreementLivello: agr.livello }).toFixed(4),
         contesto: { lineup_injury_disponibile: false, peso_predittivo: 0,
           nota: "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'." },
         stagione: { casa: contribCasa, ospite: contribOspite },
         why: spiegaPick({ evento: `${casa} - ${ospite}`, esitoLabel: migliore.esito === '1' ? `la vittoria di ${casa}` : migliore.esito === '2' ? `la vittoria di ${ospite}` : 'il pareggio',
-          pModel: migliore.probModello, pMercato: migliore.probMercato, quotaBookmaker: migliore.prezzo, agreementLivello: agr.livello })
+          pModel: migliore.probModello, pMercato: migliore.probMercato, quotaBookmaker: migliore.prezzo, agreementLivello: agr.livello, marketGapLivello: gapInfo.livello })
       };
     }
 
@@ -427,33 +445,43 @@ const esitoSnapshot = salvaSnapshot('data/snapshots.json',
 console.log(`Snapshot: ${esitoSnapshot.aggiunti} nuovi, ${esitoSnapshot.ignorati} gia' presenti `
   + `(immutabili), ${esitoSnapshot.totale} in archivio.`);
 
-// --- Best Picks Today (punto 8): una riga per PARTITA (non per mercato), solo
-// quelle con analisi disponibile (quote 1X2 presenti) e classificazione
-// VALUE/STRONG_VALUE. Ordinate per una combinazione di EV, confidence,
-// agreement e data quality, mai per la sola probabilita' dell'esito.
-const puntiAgreement = { HIGH: 1, MEDIUM: 0.6, LOW: 0.2, 'N/D': 0.4 };
+// --- Best Picks Today (punto 8) vs High Risk / Model Disagreement (punto 5)
+// Una riga per PARTITA. "Migliori opportunita" richiede TUTTE le condizioni
+// congiunte di best_pick_idoneo (confidence, data quality, agreement!=LOW,
+// market gap, quota, EV minimo: punto 4) — non basta EV positivo. Il ranking
+// (opportunity_score) e' gia' calcolato con EV saturato e pesi che premiano
+// qualita'/accordo, non l'EV puro (punto 7). Le selezioni con EV positivo ma
+// che NON passano i criteri robusti (quota alta o forte disaccordo) finiscono
+// nella sezione separata "speculative", mai mischiate alle principali.
 const perPartitaAnalisi = new Map();
 for (const p of out) {
   if (p.sport === 'calcio' && p.analisi && !perPartitaAnalisi.has(p.match)) perPartitaAnalisi.set(p.match, p);
 }
-const candidatiBestPicks = [...perPartitaAnalisi.values()]
-  .filter(p => p.analisi.value_class === 'VALUE' || p.analisi.value_class === 'STRONG_VALUE');
-for (const p of candidatiBestPicks) {
-  const a = p.analisi;
-  p._punteggioBestPick = (a.value.ev ?? 0) * 0.4 + (a.quality.confidence / 100) * 0.3
-    + puntiAgreement[a.quality.agreement] * 0.2 + (a.quality.data_quality / 100) * 0.1;
-}
-const bestPicksToday = candidatiBestPicks
-  .sort((a, b) => b._punteggioBestPick - a._punteggioBestPick)
+const tutteConAnalisi = [...perPartitaAnalisi.values()];
+
+const mappaPick = (p) => ({
+  evento: p.evento, comp: p.comp, quando: p.quando, match: p.match,
+  esito_riferimento: p.analisi.market.esito_riferimento,
+  pure_model: p.analisi.pure_model, calibrated: p.analisi.calibrated,
+  market: p.analisi.market, value: p.analisi.value, quality: p.analisi.quality,
+  market_gap: p.analisi.market_gap, rischio_quota: p.analisi.rischio_quota,
+  value_class: p.analisi.value_class, opportunity_score: p.analisi.opportunity_score, why: p.analisi.why
+});
+
+const bestPicksToday = tutteConAnalisi
+  .filter(p => p.analisi.best_pick_idoneo)
+  .sort((a, b) => b.analisi.opportunity_score - a.analisi.opportunity_score)
   .slice(0, 10)
-  .map(p => ({
-    evento: p.evento, comp: p.comp, quando: p.quando, match: p.match,
-    esito_riferimento: p.analisi.market.esito_riferimento,
-    pure_model: p.analisi.pure_model, calibrated: p.analisi.calibrated,
-    market: p.analisi.market, value: p.analisi.value, quality: p.analisi.quality,
-    value_class: p.analisi.value_class, why: p.analisi.why
-  }));
-for (const p of out) delete p._punteggioBestPick;
+  .map(mappaPick);
+
+// speculative: EV positivo ma escluso dai Best Picks (quota alta e/o forte
+// disaccordo modello/mercato e/o qualita' insufficiente) — resta visibile,
+// mai promosso come "migliore opportunita'".
+const speculativePicksToday = tutteConAnalisi
+  .filter(p => !p.analisi.best_pick_idoneo && p.analisi.value.ev > 0)
+  .sort((a, b) => b.analisi.opportunity_score - a.analisi.opportunity_score)
+  .slice(0, 10)
+  .map(p => ({ ...mappaPick(p), motivi_esclusione: p.analisi.best_pick_motivi_esclusione }));
 
 writeFileSync('data/picks.json', JSON.stringify({
   aggiornato: generatoAlle,
@@ -463,9 +491,12 @@ writeFileSync('data/picks.json', JSON.stringify({
     : { attivo: false, motivo: calibratoreDrawCal.motivo },
   metodo: 'calcio: forze di attacco e difesa stimate dagli xG con emivita 180 giorni, Dixon-Coles per i punteggi bassi, confronto col consenso di piu bookmaker. '
     + 'Basket e tennis: nessun modello indipendente disponibile, il pronostico e il solo consenso dei bookmaker ripulito dal margine. '
-    + "Layer aggiuntivo sperimentale DC-DRAW-CAL sul solo P_DRAW (calibrazione isotonic), sempre mostrato accanto al modello puro, mai al suo posto.",
+    + "Layer aggiuntivo sperimentale DC-DRAW-CAL sul solo P_DRAW (calibrazione isotonic), sempre mostrato accanto al modello puro, mai al suo posto. "
+    + 'Migliori opportunita: richiedono congiuntamente confidence, data quality, agreement, market gap, quota ed EV minimo sopra soglia (mai il solo EV positivo). '
+    + 'Selezioni con EV positivo ma quota molto alta o forte disaccordo modello/mercato finiscono in high_risk_today, mai fra le migliori opportunita.',
   best_picks_today: bestPicksToday,
-  best_picks_nota: bestPicksToday.length ? null : 'Nessuna opportunita con valore sufficiente al momento.',
+  best_picks_nota: bestPicksToday.length ? null : 'Nessuna opportunita con sufficiente accordo modello/mercato.',
+  high_risk_today: speculativePicksToday,
   diagnostica,
   eventi: out
 }, null, 1));

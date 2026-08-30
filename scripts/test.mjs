@@ -11,7 +11,8 @@ import { shrink, pesoDecadimento, aggiornaElo, calcolaEloStorico, npxGDFinestre,
   formaCasaTrasferta, xPointsDelta } from './features.mjs';
 import { FUSO_ORARIO } from './config.mjs';
 import { isotonicFit, isotonicPredict, applicaDrawCal, costruisciCalibratore } from './drawcal.mjs';
-import { fairOdds, ev, edge, agreement, dataQuality, confidence, classificaValore } from './valore.mjs';
+import { fairOdds, ev, edge, agreement, dataQuality, confidence, classificaValore,
+  marketGapInfo, classificaRischioQuota, idoneoBestPick, opportunityScore, evCappatoPerRanking } from './valore.mjs';
 
 let ok = 0, ko = 0;
 const fail = [];
@@ -373,6 +374,75 @@ function assertVero(nome, condizione, dettaglio = '') {
   const vietate = ['SICURA', 'CERTA', 'GARANTITA'];
   assertVero('classificaValore: nessuna etichetta e una parola vietata',
     ![c1, c2, c3].some(v => vietate.includes(v)));
+}
+
+// ---------------------------------------------------------------- value engine v2: market gap, quota, best picks (richiesta di irrobustimento)
+
+{
+  // punto 1: soglie del market gap
+  assertVero('marketGapInfo: gap 2pp -> NONE, nessuna penalita', marketGapInfo(0.02).livello === 'NONE' && marketGapInfo(0.02).penalitaConfidence === 0);
+  assertVero('marketGapInfo: gap 4pp -> LIEVE', marketGapInfo(0.04).livello === 'LIEVE');
+  assertVero('marketGapInfo: gap 7pp -> SIGNIFICATIVA', marketGapInfo(0.07).livello === 'SIGNIFICATIVA');
+  const estremo = marketGapInfo(0.15);
+  assertVero('marketGapInfo: gap 15pp -> ESTREMA e bloccaValueClass', estremo.livello === 'ESTREMA' && estremo.bloccaValueClass === true);
+  assertVero('marketGapInfo: etichetta HIGH MODEL/MARKET DISAGREEMENT su gap estremo', estremo.etichetta === 'HIGH MODEL/MARKET DISAGREEMENT');
+
+  // caso reale segnalato: gap estremo con EV altissimo NON deve mai dare VALUE/STRONG_VALUE
+  const cEstremo = classificaValore({ evValue: 1.09, edgeValue: 0.15, confidenceScore: 90, dataQualityScore: 90, agreementLivello: 'MEDIUM', marketGapLivello: 'ESTREMA' });
+  assertVero('classificaValore: gap estremo -> mai VALUE/STRONG_VALUE anche con EV/confidence/dataQuality altissimi', cEstremo === 'WATCH', cEstremo);
+}
+
+{
+  // punto 2: soglie di rischio sulla quota
+  assertVero('classificaRischioQuota: 3.5 -> NORMALE', classificaRischioQuota(3.5) === 'NORMALE');
+  assertVero('classificaRischioQuota: 6 -> CAUTION', classificaRischioQuota(6) === 'CAUTION');
+  assertVero('classificaRischioQuota: 10 -> HIGH_VARIANCE', classificaRischioQuota(10) === 'HIGH_VARIANCE');
+  assertVero('classificaRischioQuota: 22 -> ESCLUSA', classificaRischioQuota(22) === 'ESCLUSA');
+}
+
+{
+  // punto 3: EV cap per il ranking, mai per l'EV mostrato
+  assertVicino('evCappatoPerRanking: EV sotto soglia passa invariato', evCappatoPerRanking(0.08), 0.08, 1e-9);
+  assertVicino('evCappatoPerRanking: EV 1.09 saturato a evCapRanking (0.25)', evCappatoPerRanking(1.09), 0.25, 1e-9);
+}
+
+{
+  // punto 4: idoneoBestPick richiede TUTTE le condizioni insieme
+  const buono = idoneoBestPick({ confidenceScore: 70, dataQualityScore: 60, agreementLivello: 'HIGH', marketGap: 0.02, quota: 2.1, evValue: 0.05 });
+  assertVero('idoneoBestPick: scenario solido -> idoneo, nessun motivo di esclusione', buono.idoneo === true && buono.motiviEsclusione.length === 0);
+
+  // caso reale segnalato 1: Barcelona-Rayo 2 @22, EV altissimo ma quota estrema e gap enorme
+  const barcaRayo = idoneoBestPick({ confidenceScore: 68, dataQualityScore: 60, agreementLivello: 'MEDIUM', marketGap: 0.038, quota: 22, evValue: 1.09 });
+  assertVero('idoneoBestPick: Barcelona-Rayo 2 @22 NON idoneo (quota estrema)', barcaRayo.idoneo === false);
+  assertVero('idoneoBestPick: motivo include la quota', barcaRayo.motiviEsclusione.some(m => m.includes('quota')));
+
+  // caso reale segnalato 2: Real Madrid-Malaga X @14, EV alto ma quota sopra soglia Best Picks
+  const madridMalaga = idoneoBestPick({ confidenceScore: 67, dataQualityScore: 60, agreementLivello: 'MEDIUM', marketGap: 0.051, quota: 14, evValue: 0.89 });
+  assertVero('idoneoBestPick: Real Madrid-Malaga X @14 NON idoneo (quota + gap sopra soglia)', madridMalaga.idoneo === false);
+
+  // qualita bassa da sola basta a escludere, anche con EV/quota/gap perfetti
+  const qualitaBassa = idoneoBestPick({ confidenceScore: 20, dataQualityScore: 20, agreementLivello: 'HIGH', marketGap: 0.01, quota: 1.8, evValue: 0.1 });
+  assertVero('idoneoBestPick: qualita bassa da sola esclude', qualitaBassa.idoneo === false);
+}
+
+{
+  // punto 7: OpportunityScore NON e' una funzione crescente dell'EV oltre il cap:
+  // due EV molto diversi ma entrambi oltre la soglia (evCapRanking=0.25) devono
+  // produrre lo STESSO contributo di EV al punteggio, quindi lo stesso punteggio
+  // a parita' di confidence/dataQuality/agreement — un 109% teorico non deve
+  // "battere" un 30% credibile solo perche' e' piu' alto.
+  const ev30 = opportunityScore({ confidenceScore: 70, dataQualityScore: 60, evValue: 0.30, agreementLivello: 'HIGH' });
+  const ev109 = opportunityScore({ confidenceScore: 70, dataQualityScore: 60, evValue: 1.09, agreementLivello: 'HIGH' });
+  assertVicino('opportunityScore: EV oltre il cap non aumenta ulteriormente il punteggio', ev30, ev109, 1e-9);
+
+  // fra due casi ENTRAMBI con EV oltre il cap (quindi stesso contributo EV),
+  // deve vincere quello con confidence/dataQuality/agreement migliori: e'
+  // esattamente il caso Barcelona-Rayo (EV 109%, qualita media) confrontato
+  // con un ipotetico pick altrettanto sopra soglia ma piu solido.
+  const capSaturatoQualitaAlta = opportunityScore({ confidenceScore: 80, dataQualityScore: 75, evValue: 1.09, agreementLivello: 'HIGH' });
+  const capSaturatoQualitaBassa = opportunityScore({ confidenceScore: 68, dataQualityScore: 60, evValue: 1.09, agreementLivello: 'MEDIUM' });
+  assertVero('opportunityScore: a parita di EV (sopra cap), la qualita migliore vince, non l\'EV',
+    capSaturatoQualitaAlta > capSaturatoQualitaBassa, `${capSaturatoQualitaAlta} vs ${capSaturatoQualitaBassa}`);
 }
 
 // ---------------------------------------------------------------- invarianza baseline (punto 14)

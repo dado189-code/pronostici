@@ -134,8 +134,12 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 </header>
 
 <div class="sec">Migliori opportunita di oggi</div>
-<p class="sub" style="margin-bottom:14px">Non sono gli esiti piu probabili: sono le partite dove il modello e il mercato si scostano abbastanza, con qualita e accordo sufficienti, da meritare attenzione. <span id="modelVersionInfo"></span></p>
+<p class="sub" style="margin-bottom:14px">Non sono gli esiti piu probabili: sono le partite dove confidence, data quality, accordo modello-mercato e un EV moderato sono TUTTI sopra soglia insieme. Un EV altissimo da solo non basta e non compare qui se nasce da un forte disaccordo col mercato o da una quota molto alta. <span id="modelVersionInfo"></span></p>
 <div id="bestpicks"></div>
+
+<div class="sec">High risk &middot; model disagreement</div>
+<p class="sub" style="margin-bottom:14px">Selezioni con EV teorico positivo ma escluse dalle migliori opportunita: quota molto alta, forte disaccordo col mercato, o qualita insufficiente. I backtest storici mostrano che il mercato closing batte il Pure Model, quindi un forte disaccordo qui non e un vantaggio dimostrato: da osservare, non da giocare come le altre.</p>
+<div id="highrisk"></div>
 
 <div class="duo tre">
   <div id="safe"></div>
@@ -460,9 +464,15 @@ function analisiHTML(p){
         <div class="row"><span>Confidence</span><span>${q.confidence}/100</span></div>
         <div class="row"><span>Data quality</span><span>${q.data_quality}/100</span></div>
         <div class="row"><span>Agreement</span><span class="qtag ${esc(q.agreement)}">${esc(q.agreement)}</span></div>
+        ${a.market_gap ? `<div class="row"><span>Market gap</span><span>${(a.market_gap.valore*100).toFixed(1)}pp</span></div>` : ''}
       </div>
     </div>
-    <div class="bp-tags" style="margin-top:8px"><span class="qtag ${esc(a.value_class)}">${esc((a.value_class||'').replace('_',' '))}</span></div>
+    <div class="bp-tags" style="margin-top:8px">
+      <span class="qtag ${esc(a.value_class)}">${esc((a.value_class||'').replace('_',' '))}</span>
+      ${a.market_gap && a.market_gap.livello==='ESTREMA' ? `<span class="qtag LOW">HIGH MODEL/MARKET DISAGREEMENT</span>` : ''}
+      ${a.rischio_quota==='HIGH_VARIANCE' ? `<span class="qtag MEDIUM">HIGH VARIANCE</span>` : ''}
+      ${a.rischio_quota==='ESCLUSA' ? `<span class="qtag LOW">QUOTA ESTREMA · ESCLUSA DAI BEST PICKS</span>` : ''}
+    </div>
     <p class="why" style="margin-top:8px">${esc(a.why)}</p>
     ${a.contesto ? `<div class="src">contesto (lineup/injury): ${a.contesto.lineup_injury_disponibile ? 'disponibile' : 'non disponibile'}, peso predittivo ${a.contesto.peso_predittivo}. ${esc(a.contesto.nota)}</div>` : ''}
   </div>`;
@@ -646,14 +656,10 @@ function renderAll(){
 // confidence, agreement e data quality migliori (ordinati gia' da build.mjs).
 // Se non ce ne sono, il messaggio esplicito richiesto, mai una lista vuota muta.
 let BEST_PICKS = [];
-function renderBestPicks(){
-  const box = $('#bestpicks');
-  if(!box) return;
-  if(!BEST_PICKS.length){
-    box.innerHTML = nulla('Nessuna opportunita con valore sufficiente al momento.');
-    return;
-  }
-  box.innerHTML = BEST_PICKS.map(p => `<div class="bp-card">
+let HIGH_RISK = [];
+
+function bpCardHTML(p, cls){
+  return `<div class="bp-card" ${cls?`style="border-left-color:var(--clay)"`:''}>
     <div class="bp-top">
       <h4>${esc(p.evento)}</h4>
       <span class="qtag ${esc(p.value_class)}">${esc((p.value_class||'').replace('_',' '))}</span>
@@ -674,13 +680,35 @@ function renderBestPicks(){
         <div class="row"><span>Confidence</span><span>${p.quality.confidence}/100</span></div>
         <div class="row"><span>Data quality</span><span>${p.quality.data_quality}/100</span></div>
         <div class="row"><span>Agreement</span><span class="qtag ${esc(p.quality.agreement)}">${esc(p.quality.agreement)}</span></div>
+        ${p.market_gap ? `<div class="row"><span>Market gap</span><span>${(p.market_gap.valore*100).toFixed(1)}pp</span></div>` : ''}
       </div>
     </div>
     <p class="why" style="margin-top:8px">${esc(p.why)}</p>
-  </div>`).join('');
+    ${p.motivi_esclusione && p.motivi_esclusione.length ? `<div class="src">escluso dai Best Picks perche': ${esc(p.motivi_esclusione.join('; '))}</div>` : ''}
+  </div>`;
 }
 
-function disegnaTutto(){ renderBestPicks(); renderSafe(); renderQuota2(); renderWild(); renderAll(); renderStorico(); genera(); }
+function renderBestPicks(){
+  const box = $('#bestpicks');
+  if(!box) return;
+  if(!BEST_PICKS.length){
+    box.innerHTML = nulla('Nessuna opportunita con sufficiente accordo modello/mercato.');
+    return;
+  }
+  box.innerHTML = BEST_PICKS.map(p => bpCardHTML(p, false)).join('');
+}
+
+// --- High Risk / Model Disagreement: EV positivo ma escluso dai Best Picks
+// (quota molto alta e/o forte disaccordo modello-mercato e/o qualita' bassa).
+// Mai mischiate alle migliori opportunita': sezione separata, sempre etichettata.
+function renderHighRisk(){
+  const box = $('#highrisk');
+  if(!box) return;
+  if(!HIGH_RISK.length){ box.innerHTML = nulla('Nessuna selezione ad alto rischio segnalata oggi.'); return; }
+  box.innerHTML = HIGH_RISK.map(p => bpCardHTML(p, true)).join('');
+}
+
+function disegnaTutto(){ renderBestPicks(); renderHighRisk(); renderSafe(); renderQuota2(); renderWild(); renderAll(); renderStorico(); genera(); }
 
 // Carica i dati aggiornati dalla pipeline automatica.
 // Se un file non c'e ancora, resta la versione incorporata nella pagina.
@@ -694,6 +722,7 @@ const caricaPicks = fetch('data/picks.json?t=' + Date.now())
         new Date(d.aggiornato).toLocaleString('it-IT', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'});
     }
     if (d && Array.isArray(d.best_picks_today)) BEST_PICKS = d.best_picks_today;
+    if (d && Array.isArray(d.high_risk_today)) HIGH_RISK = d.high_risk_today;
     const info = $('#modelVersionInfo');
     if (info && d) {
       const dc = d.drawcal_status;
