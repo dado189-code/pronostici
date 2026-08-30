@@ -1,0 +1,51 @@
+{
+ "generato_il": "2026-08-30T12:51:26.064Z",
+ "nota": "bias_attacco = gol_attesi_medi - gol_veri_medi: positivo = il modello SOVRASTIMA quanto segna la neopromossa. bias_difesa = gol_subiti_attesi - gol_subiti_veri: positivo = il modello SOVRASTIMA quanti gol subisce (cioe pensa che la difesa sia peggiore di quanto sia davvero).",
+ "per_fascia": {
+  "1-5": {
+   "n": 205,
+   "bias_attacco": 0.169,
+   "bias_difesa": 0.033,
+   "gol_attesi_medi": 1.193,
+   "gol_veri_medi": 1.024,
+   "gol_subiti_attesi_medi": 1.843,
+   "gol_subiti_veri_medi": 1.81,
+   "n_home": 99,
+   "n_away": 106,
+   "bias_attacco_home": 0.22,
+   "bias_attacco_away": 0.121,
+   "win_rate_reale_pct": 20,
+   "win_prob_media_modello_pct": 26.1
+  },
+  "6-10": {
+   "n": 205,
+   "bias_attacco": 0.11,
+   "bias_difesa": 0.221,
+   "gol_attesi_medi": 1.193,
+   "gol_veri_medi": 1.083,
+   "gol_subiti_attesi_medi": 1.86,
+   "gol_subiti_veri_medi": 1.639,
+   "n_home": 99,
+   "n_away": 106,
+   "bias_attacco_home": 0.176,
+   "bias_attacco_away": 0.049,
+   "win_rate_reale_pct": 24.4,
+   "win_prob_media_modello_pct": 26.3
+  },
+  "11-15": {
+   "n": 205,
+   "bias_attacco": 0.062,
+   "bias_difesa": 0.196,
+   "gol_attesi_medi": 1.169,
+   "gol_veri_medi": 1.107,
+   "gol_subiti_attesi_medi": 1.884,
+   "gol_subiti_veri_medi": 1.688,
+   "n_home": 105,
+   "n_away": 100,
+   "bias_attacco_home": -0.015,
+   "bias_attacco_away": 0.142,
+   "win_rate_reale_pct": 22,
+   "win_prob_media_modello_pct": 24.9
+  }
+ }
+}

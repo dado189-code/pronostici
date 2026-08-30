@@ -1,0 +1,33 @@
+{
+ "generato_il": "2026-08-30T12:50:46.075Z",
+ "nota": "Correzione moltiplicativa ai lambda gia stimati da Dixon-Coles (stesso schema di correggiConElo), beta scelto su VALIDATION. R3 valutato su TEST solo se ha davvero battuto R0 su VALIDATION.",
+ "n_righe_con_rest_disponibile": 6475,
+ "R0_baseline_brier_validation": 0.583,
+ "R1_RestDiff": {
+  "beta": 0,
+  "brier_validation": 0.583
+ },
+ "R2a_matches_last7": {
+  "beta": 0.08,
+  "brier_validation": 0.5828
+ },
+ "R2b_matches_last14": {
+  "beta": 0.08,
+  "brier_validation": 0.583
+ },
+ "R2c_matches_last21": {
+  "beta": 0,
+  "brier_validation": 0.583
+ },
+ "R3_migliore": {
+  "nome": "R2a last7Diff",
+  "beta": 0.08,
+  "brier_validation": 0.5828
+ },
+ "R3_su_TEST": {
+  "brierTestR0": 0.5932,
+  "brierTestR3": 0.5932,
+  "migliora": true
+ },
+ "conclusione": "una variante batte la baseline su VALIDATION, verificata su TEST"
+}

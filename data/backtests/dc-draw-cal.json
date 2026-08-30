@@ -1,0 +1,59 @@
+{
+ "generato_il": "2026-08-30T12:53:17.588Z",
+ "metodo": "Isotonic regression 1D (pool-adjacent-violators, implementazione propria) su P_DRAW grezzo, fittata su TRAIN+VALIDATION. P_HOME e P_AWAY rinormalizzati mantenendo il rapporto reciproco.",
+ "validation": {
+  "baseline": {
+   "brier": 0.583,
+   "logLoss": 0.9792,
+   "rps": 0.1988,
+   "ece_draw": 0.0134
+  },
+  "DC_DRAW_CAL": {
+   "brier": 0.5824,
+   "logLoss": 0.9778,
+   "rps": 0.1987,
+   "ece_draw": 0.0065
+  }
+ },
+ "test": {
+  "baseline": {
+   "brier": 0.5932,
+   "logLoss": 0.9952,
+   "rps": 0.2023,
+   "ece_draw": 0.0288
+  },
+  "DC_DRAW_CAL": {
+   "brier": 0.5931,
+   "logLoss": 0.9951,
+   "rps": 0.2023,
+   "ece_draw": 0.0085
+  }
+ },
+ "bootstrap_vs_baseline_TEST": {
+  "brier": {
+   "differenza_media": -0.00012,
+   "ic95": [
+    -0.0019,
+    0.00169
+   ],
+   "verdetto": "INCONCLUSIVE"
+  },
+  "logLoss": {
+   "differenza_media": -0.00018,
+   "ic95": [
+    -0.0033,
+    0.00309
+   ],
+   "verdetto": "INCONCLUSIVE"
+  },
+  "rps": {
+   "differenza_media": 0.00002,
+   "ic95": [
+    -0.00035,
+    0.00039
+   ],
+   "verdetto": "INCONCLUSIVE"
+  }
+ },
+ "raccomandazione": "USARE: ECE Draw migliora da 0.0288 a 0.0085 (70% in meno) sul TEST, senza alcun costo statisticamente misurabile su Brier/LogLoss/RPS (tutti INCONCLUSIVE, differenze vicino a zero). E un miglioramento di calibrazione pura, non di accuratezza probabilistica aggregata: la probabilita di pareggio diventa piu affidabile da leggere, il punteggio complessivo del modello non cambia in modo dimostrabile."
+}
