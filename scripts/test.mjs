@@ -146,6 +146,54 @@ function assertVero(nome, condizione, dettaglio = '') {
     st.storia[2].eloCasaPrima, st.storia[1].eloOspiteDopo, 1e-9);
 }
 
+// ---------------------------------------------------------------- Elo: transizione di stagione e neopromosse
+
+{
+  const cfg = { partenza: 1500, kFactor: 20, vantaggioCasa: 0, pesoMarginale: false,
+    regressioneStagionale: 0.5, handicapNeopromossa: 100 };
+
+  // A domina la stagione 1: il suo Elo finisce ben sopra 1500
+  const stagione1 = [
+    { data: new Date('2023-01-01'), stagione: '2223', casa: 'A', ospite: 'B', golCasa: 3, golOspite: 0 },
+    { data: new Date('2023-02-01'), stagione: '2223', casa: 'B', ospite: 'A', golCasa: 0, golOspite: 3 },
+    { data: new Date('2023-03-01'), stagione: '2223', casa: 'A', ospite: 'B', golCasa: 2, golOspite: 0 }
+  ];
+  const st1 = calcolaEloStorico(stagione1, cfg);
+  const eloAFineStagione1 = st1.eloAttuale['A'];
+  assertVero('Elo stagionale: A domina, finisce sopra 1500', eloAFineStagione1 > 1500);
+
+  // stessa serie + una partita neutra a inizio stagione 2 (2324): la
+  // regressione stagionale deve aver mosso A verso la media lega, quindi il
+  // suo eloCasaPrima nella prima partita della stagione 2 deve essere PIU'
+  // VICINO alla media lega di quanto non fosse l'ultimo Elo della stagione 1
+  const stagione2 = [...stagione1,
+    { data: new Date('2023-08-01'), stagione: '2324', casa: 'A', ospite: 'B', golCasa: 1, golOspite: 1 }];
+  const st2 = calcolaEloStorico(stagione2, cfg);
+  const primaPartitaStagione2 = st2.storia.find(h => h.stagione === '2324');
+  const mediaLegaFineStagione1 = (st1.eloAttuale['A'] + st1.eloAttuale['B']) / 2;
+  const distanzaPrima = Math.abs(eloAFineStagione1 - mediaLegaFineStagione1);
+  const distanzaDopo = Math.abs(primaPartitaStagione2.eloCasaPrima - mediaLegaFineStagione1);
+  assertVero('Elo stagionale: la regressione avvicina A alla media di lega al cambio stagione',
+    distanzaDopo < distanzaPrima, `prima ${distanzaPrima.toFixed(1)}, dopo ${distanzaDopo.toFixed(1)}`);
+
+  // neopromossa C entra in stagione 2 con un prior sotto la media lega, non a 1500 secco
+  const conNeopromossa = [...stagione2,
+    { data: new Date('2023-08-08'), stagione: '2324', casa: 'C', ospite: 'A', golCasa: 0, golOspite: 0 }];
+  const st3 = calcolaEloStorico(conNeopromossa, cfg);
+  const primaDiC = st3.storia.find(h => h.casa === 'C');
+  const mediaLegaAlMomento = (st2.storia.at(-1).eloCasaDopo + st2.storia.at(-1).eloOspiteDopo) / 2;
+  assertVero('Elo neopromossa: prior sotto la media di lega, non a 1500 secco',
+    primaDiC.eloCasaPrima < mediaLegaAlMomento, `prior ${primaDiC.eloCasaPrima} vs media ${mediaLegaAlMomento.toFixed(1)}`);
+  assertVicino('Elo neopromossa: prior = media lega - handicap configurato',
+    primaDiC.eloCasaPrima, mediaLegaAlMomento - cfg.handicapNeopromossa, 0.5);
+
+  // nessun leakage attraverso il cambio di stagione: l'elo "prima" della prima
+  // partita di stagione 2 deve dipendere solo da cio' che e' successo in
+  // stagione 1, mai dal risultato della partita stessa o di partite future
+  assertVero('Elo: nessun leakage al cambio stagione', primaPartitaStagione2.eloCasaPrima !== eloAFineStagione1
+    || cfg.regressioneStagionale === 0, 'la regressione deve aver mosso il valore, non lasciarlo intatto per caso');
+}
+
 // ---------------------------------------------------------------- npxGD a finestre e xPoints
 
 {

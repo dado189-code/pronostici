@@ -1,0 +1,191 @@
+{
+ "generato_il": "2026-08-30T11:32:51.718Z",
+ "nota": "join esplicito su (lega, stagione, data, casa, ospite) via team-aliases.json, nessun fuzzy matching automatico",
+ "globale": {
+  "totale_righe": 5338,
+  "matched": 5322,
+  "pct_matched": 99.7
+ },
+ "perLegaStagione": [
+  {
+   "league": "Premier League",
+   "season": "2022/23",
+   "totale_righe": 380,
+   "matched": 380,
+   "unmatched_understat": 0,
+   "unmatched_odds": 0,
+   "ambiguous": 0,
+   "pct_matched": 100,
+   "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Premier League",
+   "season": "2023/24",
+   "totale_righe": 380,
+   "matched": 380,
+   "unmatched_understat": 0,
+   "unmatched_odds": 0,
+   "ambiguous": 0,
+   "pct_matched": 100,
+   "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Premier League",
+   "season": "2024/25",
+   "totale_righe": 380,
+   "matched": 380,
+   "unmatched_understat": 0,
+   "unmatched_odds": 0,
+   "ambiguous": 0,
+   "pct_matched": 100,
+   "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Liga",
+   "season": "2022/23",
+   "totale_righe": 380,
+   "matched": 380,
+   "unmatched_understat": 0,
+   "unmatched_odds": 0,
+   "ambiguous": 0,
+   "pct_matched": 100,
+   "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Liga",
+   "season": "2023/24",
+   "totale_righe": 381,
+   "matched": 379,
+   "unmatched_understat": 1,
+   "unmatched_odds": 1,
+   "ambiguous": 0,
+   "pct_matched": 99.5,
+   "pct_unmatched": 0.5,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Liga",
+   "season": "2024/25",
+   "totale_righe": 380,
+   "matched": 380,
+   "unmatched_understat": 0,
+   "unmatched_odds": 0,
+   "ambiguous": 0,
+   "pct_matched": 100,
+   "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Serie A",
+   "season": "2022/23",
+   "totale_righe": 380,
+   "matched": 380,
+   "unmatched_understat": 0,
+   "unmatched_odds": 0,
+   "ambiguous": 0,
+   "pct_matched": 100,
+   "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Serie A",
+   "season": "2023/24",
+   "totale_righe": 382,
+   "matched": 378,
+   "unmatched_understat": 2,
+   "unmatched_odds": 2,
+   "ambiguous": 0,
+   "pct_matched": 99,
+   "pct_unmatched": 1,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Serie A",
+   "season": "2024/25",
+   "totale_righe": 381,
+   "matched": 379,
+   "unmatched_understat": 1,
+   "unmatched_odds": 1,
+   "ambiguous": 0,
+   "pct_matched": 99.5,
+   "pct_unmatched": 0.5,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Bundesliga",
+   "season": "2022/23",
+   "totale_righe": 306,
+   "matched": 306,
+   "unmatched_understat": 0,
+   "unmatched_odds": 0,
+   "ambiguous": 0,
+   "pct_matched": 100,
+   "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Bundesliga",
+   "season": "2023/24",
+   "totale_righe": 306,
+   "matched": 306,
+   "unmatched_understat": 0,
+   "unmatched_odds": 0,
+   "ambiguous": 0,
+   "pct_matched": 100,
+   "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Bundesliga",
+   "season": "2024/25",
+   "totale_righe": 307,
+   "matched": 305,
+   "unmatched_understat": 1,
+   "unmatched_odds": 1,
+   "ambiguous": 0,
+   "pct_matched": 99.3,
+   "pct_unmatched": 0.7,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Ligue 1",
+   "season": "2022/23",
+   "totale_righe": 381,
+   "matched": 379,
+   "unmatched_understat": 1,
+   "unmatched_odds": 1,
+   "ambiguous": 0,
+   "pct_matched": 99.5,
+   "pct_unmatched": 0.5,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Ligue 1",
+   "season": "2023/24",
+   "totale_righe": 308,
+   "matched": 304,
+   "unmatched_understat": 2,
+   "unmatched_odds": 2,
+   "ambiguous": 0,
+   "pct_matched": 98.7,
+   "pct_unmatched": 1.3,
+   "pct_ambiguous": 0
+  },
+  {
+   "league": "Ligue 1",
+   "season": "2024/25",
+   "totale_righe": 306,
+   "matched": 306,
+   "unmatched_understat": 0,
+   "unmatched_odds": 0,
+   "ambiguous": 0,
+   "pct_matched": 100,
+   "pct_unmatched": 0,
+   "pct_ambiguous": 0
+  }
+ ]
+}

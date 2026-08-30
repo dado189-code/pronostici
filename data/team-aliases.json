@@ -1,0 +1,39 @@
+{
+  "versione": 1,
+  "nota": "Mappa esplicita, non fuzzy: chiave = nome football-data.co.uk, valore = nome Understat (usato come canonico, e' gia' l'identificatore interno del modello). Costruita confrontando gli elenchi squadra REALI delle due fonti su Premier League, Liga, Serie A, Bundesliga e Ligue 1, stagioni 2022/23-2024/25 (script scripts/dataset/02-normalizza-join.mjs). Auditabile: ogni riga qui e' una decisione esplicita, non un punteggio di similarita'.",
+  "mappa": {
+    "Man City": "Manchester City",
+    "Man United": "Manchester United",
+    "Newcastle": "Newcastle United",
+    "Nott'm Forest": "Nottingham Forest",
+    "Wolves": "Wolverhampton Wanderers",
+
+    "Ath Bilbao": "Athletic Club",
+    "Ath Madrid": "Atletico Madrid",
+    "Betis": "Real Betis",
+    "Celta": "Celta Vigo",
+    "Espanol": "Espanyol",
+    "Sociedad": "Real Sociedad",
+    "Valladolid": "Real Valladolid",
+    "Vallecano": "Rayo Vallecano",
+
+    "Milan": "AC Milan",
+    "Parma": "Parma Calcio 1913",
+
+    "Dortmund": "Borussia Dortmund",
+    "Ein Frankfurt": "Eintracht Frankfurt",
+    "FC Koln": "FC Cologne",
+    "Hertha": "Hertha Berlin",
+    "Leverkusen": "Bayer Leverkusen",
+    "M'gladbach": "Borussia M.Gladbach",
+    "Mainz": "Mainz 05",
+    "RB Leipzig": "RasenBallsport Leipzig",
+    "St Pauli": "St. Pauli",
+    "Heidenheim": "FC Heidenheim",
+    "Stuttgart": "VfB Stuttgart",
+
+    "Clermont": "Clermont Foot",
+    "Paris SG": "Paris Saint Germain",
+    "St Etienne": "Saint-Etienne"
+  }
+}

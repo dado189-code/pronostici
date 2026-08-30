@@ -1,0 +1,240 @@
+{
+ "generato_il": "2026-08-30T11:43:50.101Z",
+ "nota": "Strategia: si gioca il segno con EV piu alto secondo il modello, quota di CHIUSURA. Le soglie sono testate su VALIDATION e TEST separatamente, MAI scelte guardando il TEST. ROI/yield su stake unitario per giocata.",
+ "modelA": {
+  "VALIDATION": {
+   "EV>=0.0%": {
+    "bets": 817,
+    "win_rate": 31,
+    "average_odds": 4.32,
+    "average_predicted_prob": 36.3,
+    "profit_loss": -63.97,
+    "roi_pct": -7.83,
+    "yield_pct": -7.83,
+    "max_drawdown": 93.07
+   },
+   "EV>=2.0%": {
+    "bets": 760,
+    "win_rate": 30,
+    "average_odds": 4.43,
+    "average_predicted_prob": 35.7,
+    "profit_loss": -61.43,
+    "roi_pct": -8.08,
+    "yield_pct": -8.08,
+    "max_drawdown": 90.83
+   },
+   "EV>=5.0%": {
+    "bets": 672,
+    "win_rate": 28.9,
+    "average_odds": 4.57,
+    "average_predicted_prob": 35.2,
+    "profit_loss": -58.71,
+    "roi_pct": -8.74,
+    "yield_pct": -8.74,
+    "max_drawdown": 88.12
+   },
+   "EV>=7.5%": {
+    "bets": 590,
+    "win_rate": 28,
+    "average_odds": 4.68,
+    "average_predicted_prob": 35,
+    "profit_loss": -51.99,
+    "roi_pct": -8.81,
+    "yield_pct": -8.81,
+    "max_drawdown": 80.75
+   },
+   "EV>=10.0%": {
+    "bets": 498,
+    "win_rate": 27.3,
+    "average_odds": 4.9,
+    "average_predicted_prob": 34.2,
+    "profit_loss": -43.3,
+    "roi_pct": -8.69,
+    "yield_pct": -8.69,
+    "max_drawdown": 68.95
+   }
+  },
+  "TEST": {
+   "EV>=0.0%": {
+    "bets": 817,
+    "win_rate": 31,
+    "average_odds": 4.46,
+    "average_predicted_prob": 36,
+    "profit_loss": 2.9,
+    "roi_pct": 0.35,
+    "yield_pct": 0.35,
+    "max_drawdown": 63.84
+   },
+   "EV>=2.0%": {
+    "bets": 769,
+    "win_rate": 30,
+    "average_odds": 4.51,
+    "average_predicted_prob": 35.6,
+    "profit_loss": -0.47,
+    "roi_pct": -0.06,
+    "yield_pct": -0.06,
+    "max_drawdown": 67.86
+   },
+   "EV>=5.0%": {
+    "bets": 676,
+    "win_rate": 29.1,
+    "average_odds": 4.68,
+    "average_predicted_prob": 34.7,
+    "profit_loss": 14.01,
+    "roi_pct": 2.07,
+    "yield_pct": 2.07,
+    "max_drawdown": 63.17
+   },
+   "EV>=7.5%": {
+    "bets": 577,
+    "win_rate": 26.3,
+    "average_odds": 4.93,
+    "average_predicted_prob": 33.8,
+    "profit_loss": -11.03,
+    "roi_pct": -1.91,
+    "yield_pct": -1.91,
+    "max_drawdown": 68.62
+   },
+   "EV>=10.0%": {
+    "bets": 482,
+    "win_rate": 24.7,
+    "average_odds": 5.24,
+    "average_predicted_prob": 32.3,
+    "profit_loss": -9.36,
+    "roi_pct": -1.94,
+    "yield_pct": -1.94,
+    "max_drawdown": 66.14
+   }
+  },
+  "CLV_VALIDATION": {
+   "disponibile": true,
+   "n": 817,
+   "clv_medio_pct": -4.19,
+   "pct_selezioni_che_battono_la_chiusura": 30.5
+  },
+  "CLV_TEST": {
+   "disponibile": true,
+   "n": 817,
+   "clv_medio_pct": -4.83,
+   "pct_selezioni_che_battono_la_chiusura": 28.8
+  }
+ },
+ "modelB": {
+  "VALIDATION": {
+   "EV>=0.0%": {
+    "bets": 822,
+    "win_rate": 30.2,
+    "average_odds": 4.3,
+    "average_predicted_prob": 34.9,
+    "profit_loss": -10.22,
+    "roi_pct": -1.24,
+    "yield_pct": -1.24,
+    "max_drawdown": 69.42
+   },
+   "EV>=2.0%": {
+    "bets": 770,
+    "win_rate": 29.7,
+    "average_odds": 4.39,
+    "average_predicted_prob": 34.6,
+    "profit_loss": -6.92,
+    "roi_pct": -0.9,
+    "yield_pct": -0.9,
+    "max_drawdown": 60.94
+   },
+   "EV>=5.0%": {
+    "bets": 674,
+    "win_rate": 28.8,
+    "average_odds": 4.57,
+    "average_predicted_prob": 33.9,
+    "profit_loss": -0.82,
+    "roi_pct": -0.12,
+    "yield_pct": -0.12,
+    "max_drawdown": 54.14
+   },
+   "EV>=7.5%": {
+    "bets": 569,
+    "win_rate": 26.2,
+    "average_odds": 4.84,
+    "average_predicted_prob": 32.8,
+    "profit_loss": -19.49,
+    "roi_pct": -3.43,
+    "yield_pct": -3.43,
+    "max_drawdown": 67.84
+   },
+   "EV>=10.0%": {
+    "bets": 486,
+    "win_rate": 24.3,
+    "average_odds": 5.04,
+    "average_predicted_prob": 32.4,
+    "profit_loss": -25.72,
+    "roi_pct": -5.29,
+    "yield_pct": -5.29,
+    "max_drawdown": 66.73
+   }
+  },
+  "TEST": {
+   "EV>=0.0%": {
+    "bets": 819,
+    "win_rate": 29.7,
+    "average_odds": 4.53,
+    "average_predicted_prob": 33.8,
+    "profit_loss": 10.95,
+    "roi_pct": 1.34,
+    "yield_pct": 1.34,
+    "max_drawdown": 62.68
+   },
+   "EV>=2.0%": {
+    "bets": 769,
+    "win_rate": 29.1,
+    "average_odds": 4.65,
+    "average_predicted_prob": 33.2,
+    "profit_loss": 15,
+    "roi_pct": 1.95,
+    "yield_pct": 1.95,
+    "max_drawdown": 56.87
+   },
+   "EV>=5.0%": {
+    "bets": 650,
+    "win_rate": 27.2,
+    "average_odds": 4.96,
+    "average_predicted_prob": 31.9,
+    "profit_loss": 11.66,
+    "roi_pct": 1.79,
+    "yield_pct": 1.79,
+    "max_drawdown": 55.06
+   },
+   "EV>=7.5%": {
+    "bets": 561,
+    "win_rate": 24.4,
+    "average_odds": 5.2,
+    "average_predicted_prob": 31,
+    "profit_loss": -14.65,
+    "roi_pct": -2.61,
+    "yield_pct": -2.61,
+    "max_drawdown": 60.96
+   },
+   "EV>=10.0%": {
+    "bets": 476,
+    "win_rate": 22.5,
+    "average_odds": 5.49,
+    "average_predicted_prob": 29.7,
+    "profit_loss": -19.91,
+    "roi_pct": -4.18,
+    "yield_pct": -4.18,
+    "max_drawdown": 77.6
+   }
+  },
+  "CLV_VALIDATION": {
+   "disponibile": true,
+   "n": 822,
+   "clv_medio_pct": -3.49,
+   "pct_selezioni_che_battono_la_chiusura": 34.4
+  },
+  "CLV_TEST": {
+   "disponibile": true,
+   "n": 819,
+   "clv_medio_pct": -4.13,
+   "pct_selezioni_che_battono_la_chiusura": 32.2
+  }
+ }
+}

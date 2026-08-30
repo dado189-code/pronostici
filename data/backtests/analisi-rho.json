@@ -1,0 +1,545 @@
+{
+ "generato_il": "2026-08-30T11:42:13.653Z",
+ "nota": "Stima SOLO su TRAIN+VALIDATION (mai TEST), griglia ampliata rispetto alla produzione ([-0.4, 0.4] passo 0.0025 contro [-0.2, 0.05] passo 0.005 in produzione). Questo NON cambia la produzione: e solo la verifica se il bordo della griglia attuale limita artificialmente rho.",
+ "conclusione": "Per ogni lega presa singolarmente (il modo in cui rho viene davvero usato) l ottimo su griglia ampia resta ben dentro [-0.4, 0.4], il piu estremo e 0.1275 (Bundesliga): la griglia di produzione [-0.2, 0.05] non taglia artificialmente l ottimo di nessuna lega. Nessun ottimo per-lega e sul bordo della griglia ampia.",
+ "perLega": {
+  "Premier League": {
+   "n_partite_train_validation": 959,
+   "rho_ottimo": -0.02,
+   "log_likelihood_ottimo": -2912.01,
+   "rho_produzione_attuale": {
+    "min": -0.2,
+    "max": 0.05
+   },
+   "ottimo_sul_bordo_griglia_ampia": false,
+   "curva_campionata": [
+    {
+     "rho": -0.4,
+     "logLikelihood": null
+    },
+    {
+     "rho": -0.35,
+     "logLikelihood": null
+    },
+    {
+     "rho": -0.3,
+     "logLikelihood": null
+    },
+    {
+     "rho": -0.25,
+     "logLikelihood": -2932.23
+    },
+    {
+     "rho": -0.2,
+     "logLikelihood": -2923.45
+    },
+    {
+     "rho": -0.15,
+     "logLikelihood": -2917.67
+    },
+    {
+     "rho": -0.1,
+     "logLikelihood": -2914.04
+    },
+    {
+     "rho": -0.05,
+     "logLikelihood": -2912.25
+    },
+    {
+     "rho": 0,
+     "logLikelihood": -2912.19
+    },
+    {
+     "rho": 0.05,
+     "logLikelihood": -2913.88
+    },
+    {
+     "rho": 0.1,
+     "logLikelihood": -2917.46
+    },
+    {
+     "rho": 0.15,
+     "logLikelihood": -2923.25
+    },
+    {
+     "rho": 0.2,
+     "logLikelihood": -2932.03
+    },
+    {
+     "rho": 0.25,
+     "logLikelihood": -2946.15
+    },
+    {
+     "rho": 0.3,
+     "logLikelihood": null
+    },
+    {
+     "rho": 0.35,
+     "logLikelihood": null
+    },
+    {
+     "rho": 0.4,
+     "logLikelihood": null
+    }
+   ]
+  },
+  "Liga": {
+   "n_partite_train_validation": 948,
+   "rho_ottimo": 0.0075,
+   "log_likelihood_ottimo": -2638.98,
+   "rho_produzione_attuale": {
+    "min": -0.2,
+    "max": 0.05
+   },
+   "ottimo_sul_bordo_griglia_ampia": false,
+   "curva_campionata": [
+    {
+     "rho": -0.4,
+     "logLikelihood": null
+    },
+    {
+     "rho": -0.35,
+     "logLikelihood": null
+    },
+    {
+     "rho": -0.3,
+     "logLikelihood": null
+    },
+    {
+     "rho": -0.25,
+     "logLikelihood": -2663.14
+    },
+    {
+     "rho": -0.2,
+     "logLikelihood": -2654.18
+    },
+    {
+     "rho": -0.15,
+     "logLikelihood": -2647.62
+    },
+    {
+     "rho": -0.1,
+     "logLikelihood": -2643.02
+    },
+    {
+     "rho": -0.05,
+     "logLikelihood": -2640.19
+    },
+    {
+     "rho": 0,
+     "logLikelihood": -2639.02
+    },
+    {
+     "rho": 0.05,
+     "logLikelihood": -2639.49
+    },
+    {
+     "rho": 0.1,
+     "logLikelihood": -2641.64
+    },
+    {
+     "rho": 0.15,
+     "logLikelihood": -2645.6
+    },
+    {
+     "rho": 0.2,
+     "logLikelihood": -2651.62
+    },
+    {
+     "rho": 0.25,
+     "logLikelihood": -2660.2
+    },
+    {
+     "rho": 0.3,
+     "logLikelihood": -2673.5
+    },
+    {
+     "rho": 0.35,
+     "logLikelihood": null
+    },
+    {
+     "rho": 0.4,
+     "logLikelihood": null
+    }
+   ]
+  },
+  "Serie A": {
+   "n_partite_train_validation": 952,
+   "rho_ottimo": -0.05,
+   "log_likelihood_ottimo": -2638.99,
+   "rho_produzione_attuale": {
+    "min": -0.2,
+    "max": 0.05
+   },
+   "ottimo_sul_bordo_griglia_ampia": false,
+   "curva_campionata": [
+    {
+     "rho": -0.4,
+     "logLikelihood": null
+    },
+    {
+     "rho": -0.35,
+     "logLikelihood": -2671.97
+    },
+    {
+     "rho": -0.3,
+     "logLikelihood": -2659.88
+    },
+    {
+     "rho": -0.25,
+     "logLikelihood": -2651.69
+    },
+    {
+     "rho": -0.2,
+     "logLikelihood": -2645.9
+    },
+    {
+     "rho": -0.15,
+     "logLikelihood": -2642
+    },
+    {
+     "rho": -0.1,
+     "logLikelihood": -2639.74
+    },
+    {
+     "rho": -0.05,
+     "logLikelihood": -2638.99
+    },
+    {
+     "rho": 0,
+     "logLikelihood": -2639.67
+    },
+    {
+     "rho": 0.05,
+     "logLikelihood": -2641.77
+    },
+    {
+     "rho": 0.1,
+     "logLikelihood": -2645.33
+    },
+    {
+     "rho": 0.15,
+     "logLikelihood": -2650.45
+    },
+    {
+     "rho": 0.2,
+     "logLikelihood": -2657.29
+    },
+    {
+     "rho": 0.25,
+     "logLikelihood": -2666.14
+    },
+    {
+     "rho": 0.3,
+     "logLikelihood": -2677.57
+    },
+    {
+     "rho": 0.35,
+     "logLikelihood": -2693.51
+    },
+    {
+     "rho": 0.4,
+     "logLikelihood": null
+    }
+   ]
+  },
+  "Bundesliga": {
+   "n_partite_train_validation": 755,
+   "rho_ottimo": -0.1275,
+   "log_likelihood_ottimo": -2324.82,
+   "rho_produzione_attuale": {
+    "min": -0.2,
+    "max": 0.05
+   },
+   "ottimo_sul_bordo_griglia_ampia": false,
+   "curva_campionata": [
+    {
+     "rho": -0.4,
+     "logLikelihood": null
+    },
+    {
+     "rho": -0.35,
+     "logLikelihood": null
+    },
+    {
+     "rho": -0.3,
+     "logLikelihood": -2334.92
+    },
+    {
+     "rho": -0.25,
+     "logLikelihood": -2329.1
+    },
+    {
+     "rho": -0.2,
+     "logLikelihood": -2326.16
+    },
+    {
+     "rho": -0.15,
+     "logLikelihood": -2324.92
+    },
+    {
+     "rho": -0.1,
+     "logLikelihood": -2325.06
+    },
+    {
+     "rho": -0.05,
+     "logLikelihood": -2326.45
+    },
+    {
+     "rho": 0,
+     "logLikelihood": -2329.05
+    },
+    {
+     "rho": 0.05,
+     "logLikelihood": -2332.9
+    },
+    {
+     "rho": 0.1,
+     "logLikelihood": -2338.13
+    },
+    {
+     "rho": 0.15,
+     "logLikelihood": -2345.01
+    },
+    {
+     "rho": 0.2,
+     "logLikelihood": -2354.01
+    },
+    {
+     "rho": 0.25,
+     "logLikelihood": -2366.25
+    },
+    {
+     "rho": 0.3,
+     "logLikelihood": -2386.02
+    },
+    {
+     "rho": 0.35,
+     "logLikelihood": null
+    },
+    {
+     "rho": 0.4,
+     "logLikelihood": null
+    }
+   ]
+  },
+  "Ligue 1": {
+   "n_partite_train_validation": 836,
+   "rho_ottimo": -0.0975,
+   "log_likelihood_ottimo": -2444.77,
+   "rho_produzione_attuale": {
+    "min": -0.2,
+    "max": 0.05
+   },
+   "ottimo_sul_bordo_griglia_ampia": false,
+   "curva_campionata": [
+    {
+     "rho": -0.4,
+     "logLikelihood": null
+    },
+    {
+     "rho": -0.35,
+     "logLikelihood": -2470.71
+    },
+    {
+     "rho": -0.3,
+     "logLikelihood": -2459.79
+    },
+    {
+     "rho": -0.25,
+     "logLikelihood": -2452.79
+    },
+    {
+     "rho": -0.2,
+     "logLikelihood": -2448.26
+    },
+    {
+     "rho": -0.15,
+     "logLikelihood": -2445.67
+    },
+    {
+     "rho": -0.1,
+     "logLikelihood": -2444.78
+    },
+    {
+     "rho": -0.05,
+     "logLikelihood": -2445.45
+    },
+    {
+     "rho": 0,
+     "logLikelihood": -2447.67
+    },
+    {
+     "rho": 0.05,
+     "logLikelihood": -2451.5
+    },
+    {
+     "rho": 0.1,
+     "logLikelihood": -2457.08
+    },
+    {
+     "rho": 0.15,
+     "logLikelihood": -2464.74
+    },
+    {
+     "rho": 0.2,
+     "logLikelihood": -2475.08
+    },
+    {
+     "rho": 0.25,
+     "logLikelihood": -2489.62
+    },
+    {
+     "rho": 0.3,
+     "logLikelihood": null
+    },
+    {
+     "rho": 0.35,
+     "logLikelihood": null
+    },
+    {
+     "rho": 0.4,
+     "logLikelihood": null
+    }
+   ]
+  }
+ },
+ "attenzione_aggregato_globale": {
+  "valore": -0.4,
+  "motivo_inaffidabilita": "somma naive di log-likelihood fra leghe con lambda (e quindi domini di validita di tau) diversi: non e un confronto statisticamente valido, riportato solo per trasparenza, da NON usare per decidere rho"
+ },
+ "curva_globale_campionata_NON_AFFIDABILE": [
+  {
+   "rho": -0.4,
+   "logLikelihoodSommata": 0
+  },
+  {
+   "rho": -0.375,
+   "logLikelihoodSommata": 0
+  },
+  {
+   "rho": -0.35,
+   "logLikelihoodSommata": -5142.7
+  },
+  {
+   "rho": -0.325,
+   "logLikelihoodSommata": -5129.8
+  },
+  {
+   "rho": -0.3,
+   "logLikelihoodSommata": -7454.6
+  },
+  {
+   "rho": -0.275,
+   "logLikelihoodSommata": -13052.4
+  },
+  {
+   "rho": -0.25,
+   "logLikelihoodSommata": -13028.9
+  },
+  {
+   "rho": -0.225,
+   "logLikelihoodSommata": -13011.8
+  },
+  {
+   "rho": -0.2,
+   "logLikelihoodSommata": -12997.9
+  },
+  {
+   "rho": -0.175,
+   "logLikelihoodSommata": -12986.7
+  },
+  {
+   "rho": -0.15,
+   "logLikelihoodSommata": -12977.9
+  },
+  {
+   "rho": -0.125,
+   "logLikelihoodSommata": -12971.2
+  },
+  {
+   "rho": -0.1,
+   "logLikelihoodSommata": -12966.6
+  },
+  {
+   "rho": -0.075,
+   "logLikelihoodSommata": -12964
+  },
+  {
+   "rho": -0.05,
+   "logLikelihoodSommata": -12963.3
+  },
+  {
+   "rho": -0.025,
+   "logLikelihoodSommata": -12964.5
+  },
+  {
+   "rho": 0,
+   "logLikelihoodSommata": -12967.6
+  },
+  {
+   "rho": 0.025,
+   "logLikelihoodSommata": -12972.6
+  },
+  {
+   "rho": 0.05,
+   "logLikelihoodSommata": -12979.5
+  },
+  {
+   "rho": 0.075,
+   "logLikelihoodSommata": -12988.5
+  },
+  {
+   "rho": 0.1,
+   "logLikelihoodSommata": -12999.6
+  },
+  {
+   "rho": 0.125,
+   "logLikelihoodSommata": -13013.1
+  },
+  {
+   "rho": 0.15,
+   "logLikelihoodSommata": -13029
+  },
+  {
+   "rho": 0.175,
+   "logLikelihoodSommata": -13047.9
+  },
+  {
+   "rho": 0.2,
+   "logLikelihoodSommata": -13070
+  },
+  {
+   "rho": 0.225,
+   "logLikelihoodSommata": -13096.3
+  },
+  {
+   "rho": 0.25,
+   "logLikelihoodSommata": -13128.4
+  },
+  {
+   "rho": 0.275,
+   "logLikelihoodSommata": -10212.1
+  },
+  {
+   "rho": 0.3,
+   "logLikelihoodSommata": -7737.1
+  },
+  {
+   "rho": 0.325,
+   "logLikelihoodSommata": -2684.6
+  },
+  {
+   "rho": 0.35,
+   "logLikelihoodSommata": -2693.5
+  },
+  {
+   "rho": 0.375,
+   "logLikelihoodSommata": 0
+  },
+  {
+   "rho": 0.4,
+   "logLikelihoodSommata": 0
+  }
+ ]
+}

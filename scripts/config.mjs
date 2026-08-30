@@ -59,7 +59,8 @@ export const MODELLO = {
 
 // --- Elo ---------------------------------------------------------------------
 export const ELO = {
-  // punto di partenza per una squadra mai vista prima
+  // punto di partenza assoluto: usato solo per la primissima stagione del
+  // dataset, quando non esiste ancora una media di lega da cui partire.
   partenza: 1500,
   // quanto pesa un singolo risultato: piu' alto, piu' reattivo e piu' rumoroso
   kFactor: 20,
@@ -67,7 +68,18 @@ export const ELO = {
   vantaggioCasa: 60,
   // margine di vittoria: moltiplica il K in base allo scarto gol, attenuato
   // in log per non dare troppo peso ai tennis-score. Disattivabile a 0.
-  pesoMarginale: true
+  pesoMarginale: true,
+  // regressione parziale a ogni cambio di stagione: una squadra non e' la
+  // stessa a inizio stagione (rosa, allenatore), ma non e' nemmeno ripartita
+  // da zero. 0.25 = un quarto della distanza dalla media di lega viene
+  // "dimenticato" a ogni nuova stagione. 0 disattiva la regressione.
+  regressioneStagionale: 0.25,
+  // handicap di partenza per una squadra mai vista nel dataset (neopromossa
+  // o esordiente): parte sotto la media di lega di quella stagione, non alla
+  // pari, perche' storicamente le neopromosse arrivano da un livello piu'
+  // basso. Lo shrinkage in calcolaEloStorico la porta verso il vero valore
+  // man mano che accumula partite.
+  handicapNeopromossa: 60
 };
 
 // --- shrinkage -----------------------------------------------------------

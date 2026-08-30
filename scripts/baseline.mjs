@@ -58,7 +58,9 @@ async function forzeDiLega(comp) {
   // ESATTAMENTE la chiamata di build.mjs: emivita di default, nessun campoXG
   const forze = stimaForze(storico, { emivita: MODELLO.emivitaGiorni });
   const rho = stimaRho(storico.slice(-300), forze, MODELLO);
-  cacheForze[comp] = { forze, rho, nStorico: storico.length };
+  const date = storico.map(p => p.data.getTime());
+  cacheForze[comp] = { forze, rho, nStorico: storico.length,
+    trainingWindow: { da: new Date(Math.min(...date)).toISOString(), a: new Date(Math.max(...date)).toISOString() } };
   return cacheForze[comp];
 }
 
@@ -90,6 +92,7 @@ for (const p of perPartita.values()) {
     mercati: Object.fromEntries(Object.entries(mk).map(([k, v]) => [k, +v.toFixed(4)])),
     rho: +ctx.rho.toFixed(4),
     n_storico: ctx.nStorico,
+    training_window: ctx.trainingWindow,
     timestamp_previsione: generatoAlle
   });
 }

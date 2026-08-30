@@ -1,0 +1,62 @@
+{
+ "generato_il": "2026-08-30T11:40:50.436Z",
+ "nota": "Bootstrap 2000 iterazioni, seed fisso (riproducibile). Differenza = Brier(modelB) - Brier(modelA). Negativa = npxG migliora rispetto a xG grezzo. Se intervallo_include_zero e vero, la differenza non e distinguibile dal rumore statistico su questo campione.",
+ "VALIDATION": {
+  "n_match": 869,
+  "differenza_media_osservata": -0.00072,
+  "ic95_basso": -0.00401,
+  "ic95_alto": 0.00247,
+  "intervallo_include_zero": true
+ },
+ "TEST": {
+  "n_match": 872,
+  "differenza_media_osservata": -0.00013,
+  "ic95_basso": -0.00271,
+  "ic95_alto": 0.00247,
+  "intervallo_include_zero": true
+ },
+ "VALIDATION_e_TEST_insieme": {
+  "n_match": 1741,
+  "differenza_media_osservata": -0.00042,
+  "ic95_basso": -0.00243,
+  "ic95_alto": 0.00154,
+  "intervallo_include_zero": true
+ },
+ "perLega": {
+  "Premier League": {
+   "n_match": 379,
+   "differenza_media_osservata": -0.00167,
+   "ic95_basso": -0.00522,
+   "ic95_alto": 0.0017,
+   "intervallo_include_zero": true
+  },
+  "Liga": {
+   "n_match": 379,
+   "differenza_media_osservata": -0.00074,
+   "ic95_basso": -0.00469,
+   "ic95_alto": 0.00307,
+   "intervallo_include_zero": true
+  },
+  "Serie A": {
+   "n_match": 376,
+   "differenza_media_osservata": 0.00104,
+   "ic95_basso": -0.00455,
+   "ic95_alto": 0.00667,
+   "intervallo_include_zero": true
+  },
+  "Bundesliga": {
+   "n_match": 302,
+   "differenza_media_osservata": -0.00022,
+   "ic95_basso": -0.00483,
+   "ic95_alto": 0.00381,
+   "intervallo_include_zero": true
+  },
+  "Ligue 1": {
+   "n_match": 305,
+   "differenza_media_osservata": -0.00048,
+   "ic95_basso": -0.00642,
+   "ic95_alto": 0.00505,
+   "intervallo_include_zero": true
+  }
+ }
+}

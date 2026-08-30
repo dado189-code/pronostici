@@ -144,18 +144,51 @@ export function aggiornaElo(eloCasa, eloOspite, golCasa, golOspite, config = ELO
   };
 }
 
-// Passata sequenziale su una lega intera: costruisce l'Elo squadra per
-// squadra, partita per partita, in ordine cronologico. Ritorna sia l'Elo
-// finale di ogni squadra sia la storia completa (prima/dopo/trend per ogni
-// partita), che e' cio' che va nello snapshot per la tracciabilita' richiesta.
+// Passata sequenziale su un dataset MULTI-STAGIONE, in ordine cronologico
+// stretto: ogni partita aggiorna l'Elo usando solo cio' che e' successo prima,
+// mai dopo (nessun leakage). Ogni riga porta anche "stagione", perche' al
+// cambio di stagione si applicano due correzioni che l'Elo puro non fa da solo:
+//
+//  - regressione parziale verso la media di lega (le squadre non sono la
+//    stessa cosa da un anno all'altro: cambiano rosa e allenatore, ma non
+//    ripartono da zero);
+//  - un prior piu' basso della media per chi non ha un Elo precedente in
+//    questo dataset (neopromossa o esordiente), invece di farla partire alla
+//    pari con le altre.
+//
+// E' persistente nel senso che opera sull'intero storico multi-stagione in
+// una sola passata e il risultato (storia completa + elo finale) si scrive
+// su file da chi chiama questa funzione: qui dentro non si tocca il disco,
+// cosi' la funzione resta pura e testabile.
 export function calcolaEloStorico(partiteOrdinateCronologico, config = ELO) {
   const elo = {};
   const storia = [];
   const contaPartite = {};
+  let stagioneCorrente = null;
+
+  const mediaLega = () => {
+    const valori = Object.values(elo);
+    return valori.length ? valori.reduce((a, b) => a + b, 0) / valori.length : config.partenza;
+  };
 
   for (const p of partiteOrdinateCronologico) {
-    if (elo[p.casa] === undefined) elo[p.casa] = config.partenza;
-    if (elo[p.ospite] === undefined) elo[p.ospite] = config.partenza;
+    if (p.stagione !== stagioneCorrente) {
+      if (stagioneCorrente !== null && config.regressioneStagionale > 0) {
+        // cambio di stagione: ogni squadra nota regredisce di una quota
+        // configurabile verso la media di lega del momento
+        const media = mediaLega();
+        for (const s of Object.keys(elo))
+          elo[s] = elo[s] + config.regressioneStagionale * (media - elo[s]);
+      }
+      stagioneCorrente = p.stagione;
+    }
+
+    // prior per chi non ha Elo pregresso: media di lega meno l'handicap da
+    // neopromossa, non il valore assoluto di partenza (che avrebbe senso solo
+    // per la primissima stagione mai vista, quando non esiste ancora una media)
+    const prior = Object.keys(elo).length ? mediaLega() - config.handicapNeopromossa : config.partenza;
+    if (elo[p.casa] === undefined) elo[p.casa] = prior;
+    if (elo[p.ospite] === undefined) elo[p.ospite] = prior;
     contaPartite[p.casa] = (contaPartite[p.casa] || 0) + 1;
     contaPartite[p.ospite] = (contaPartite[p.ospite] || 0) + 1;
 
@@ -165,7 +198,7 @@ export function calcolaEloStorico(partiteOrdinateCronologico, config = ELO) {
     elo[p.ospite] = r.eloOspiteDopo;
 
     storia.push({
-      data: p.data, casa: p.casa, ospite: p.ospite,
+      data: p.data, stagione: p.stagione, lega: p.lega ?? null, casa: p.casa, ospite: p.ospite,
       eloCasaPrima: +eloCasaPrima.toFixed(1), eloOspitePrima: +eloOspitePrima.toFixed(1),
       eloCasaDopo: +elo[p.casa].toFixed(1), eloOspiteDopo: +elo[p.ospite].toFixed(1),
       eloDiffPrima: +r.eloDiffPrima.toFixed(1)
@@ -181,8 +214,9 @@ export function calcolaEloStorico(partiteOrdinateCronologico, config = ELO) {
   }
 
   // squadre con poche partite: l'Elo e' inaffidabile finche' non ne ha viste
-  // abbastanza. Non lo si tira verso una media (non avrebbe senso su una scala
-  // relativa), lo si segnala con un flag di confidenza bassa.
+  // abbastanza. Non lo si tira verso una media qui dentro (lo shrinkage
+  // stagionale gia' lo fa in parte al cambio di stagione), lo si segnala con
+  // un flag di confidenza bassa per chi lo consuma.
   const confidenzaBassa = Object.fromEntries(
     Object.keys(elo).map(s => [s, (contaPartite[s] || 0) < SHRINKAGE.eloEsordiente.k]));
 

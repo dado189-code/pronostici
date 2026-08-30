@@ -873,5 +873,35 @@
    "timestamp_previsione": "2026-08-30T11:08:06.913Z"
   }
  ],
- "saltate": []
+ "saltate": [],
+ "provenance": {
+  "git_commit_sha": "49b0a8b96e1ad106355547fc155e52f553add484",
+  "provider_dati": "Understat (endpoint understat.com/getLeagueData/{lega}/{stagione})",
+  "formula_dixon_coles": {
+   "descrizione": "Correzione ai quattro punteggi piu bassi rispetto a Poisson indipendente",
+   "tau_0_0": "1 - lambda_home * lambda_away * rho",
+   "tau_0_1": "1 + lambda_home * rho",
+   "tau_1_0": "1 + lambda_away * rho",
+   "tau_1_1": "1 - rho",
+   "altri_punteggi": "1 (nessuna correzione)"
+  },
+  "decay": {
+   "tipo": "esponenziale",
+   "formula": "peso = 0.5 ^ (eta_giorni / emivitaGiorni)",
+   "emivitaGiorni": 180
+  },
+  "rho": {
+   "metodo": "massima verosimiglianza a griglia sui gol veri (non sugli xG)",
+   "rhoMin": -0.2,
+   "rhoMax": 0.05,
+   "rhoPasso": 0.005,
+   "nota": "per-lega, valore in partite[].rho"
+  },
+  "training_window": {
+   "disponibile": false,
+   "motivo": "non registrato al momento della generazione; ricostruirlo oggi rischierebbe di descrivere uno storico diverso da quello realmente usato, perche Understat puo aver aggiunto partite alla stessa stagione nel frattempo. Riportato solo n_storico (conteggio) per ogni lega in partite[].n_storico. Corretto per le baseline generate da questa versione in poi."
+  },
+  "corretto_il": "2026-08-30T11:28:48.922Z",
+  "nota_immutabilita": "Questo arricchimento aggiunge solo metadati di tracciabilita. Nessun valore numerico gia presente (lambda, P1/PX/P2, mercati, rho) e stato ricalcolato."
+ }
 }
