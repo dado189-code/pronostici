@@ -1,0 +1,134 @@
+{
+ "generato_il": "2026-08-30T12:20:09.198Z",
+ "formula_v2": "football-v2-candidate = Dixon-Coles su xG grezzo, emivita 365gg (era 180gg), rho per lega (MLE su gol veri, invariato), corretto moltiplicativamente da Elo: lambda_home *= exp(beta*eloDiff/400), lambda_away /= exp(beta*eloDiff/400), con beta=0.18. Elo: partenza 1500, K=10, vantaggio casa=30 punti, regressione di stagione 10%, prior neopromossa = media lega - 100, margine di vittoria attivo.",
+ "parametri_v2": {
+  "emivita": 365,
+  "elo": {
+   "partenza": 1500,
+   "kFactor": 10,
+   "vantaggioCasa": 30,
+   "regressioneStagionale": 0.1,
+   "handicapNeopromossa": 100,
+   "pesoMarginale": true
+  },
+  "betaElo": 0.18,
+  "checkpoint": 40,
+  "minimoStorico": 100
+ },
+ "n_righe_confrontabili": 6475,
+ "tabellaFinale": {
+  "VALIDATION": {
+   "football-v1-baseline": {
+    "n": 1731,
+    "brier": 0.583,
+    "logLoss": 0.9792,
+    "rps": 0.1988,
+    "ece_home": 0.034,
+    "ece_draw": 0.0134,
+    "ece_away": 0.032
+   },
+   "football-v2-candidate": {
+    "n": 1731,
+    "brier": 0.5838,
+    "logLoss": 0.9806,
+    "rps": 0.1991,
+    "ece_home": 0.0362,
+    "ece_draw": 0.017,
+    "ece_away": 0.0264
+   },
+   "market-closing-no-vig": {
+    "n": 1731,
+    "brier": 0.5706,
+    "logLoss": 0.9605,
+    "rps": 0.1933,
+    "ece_home": 0.0334,
+    "ece_draw": 0.0112,
+    "ece_away": 0.0243
+   }
+  },
+  "TEST": {
+   "football-v1-baseline": {
+    "n": 1722,
+    "brier": 0.5932,
+    "logLoss": 0.9952,
+    "rps": 0.2023,
+    "ece_home": 0.0164,
+    "ece_draw": 0.0288,
+    "ece_away": 0.0259
+   },
+   "football-v2-candidate": {
+    "n": 1722,
+    "brier": 0.5918,
+    "logLoss": 0.9929,
+    "rps": 0.2016,
+    "ece_home": 0.0267,
+    "ece_draw": 0.0344,
+    "ece_away": 0.0301
+   },
+   "market-closing-no-vig": {
+    "n": 1722,
+    "brier": 0.5826,
+    "logLoss": 0.9784,
+    "rps": 0.1978,
+    "ece_home": 0.0192,
+    "ece_draw": 0.01,
+    "ece_away": 0.0185
+   }
+  }
+ },
+ "bootstrap_v2_vs_v1_TEST": {
+  "brier": {
+   "n_match": 1722,
+   "differenza_media": -0.00141,
+   "ic95": [
+    -0.00403,
+    0.00117
+   ],
+   "verdetto": "INCONCLUSIVE"
+  },
+  "logLoss": {
+   "n_match": 1722,
+   "differenza_media": -0.00238,
+   "ic95": [
+    -0.00621,
+    0.00139
+   ],
+   "verdetto": "INCONCLUSIVE"
+  },
+  "rps": {
+   "n_match": 1722,
+   "differenza_media": -0.00071,
+   "ic95": [
+    -0.00189,
+    0.00047
+   ],
+   "verdetto": "INCONCLUSIVE"
+  }
+ },
+ "ev_clv_comparativo_TEST": {
+  "v1": {
+   "performance": {
+    "bets": 1608,
+    "hit_rate_pct": 30.9,
+    "roi_pct": -7.08
+   },
+   "clv": {
+    "n": 1608,
+    "clv_medio_pct": -3.05,
+    "pct_batte_chiusura": 27.8
+   }
+  },
+  "v2": {
+   "performance": {
+    "bets": 1602,
+    "hit_rate_pct": 35.9,
+    "roi_pct": -3.12
+   },
+   "clv": {
+    "n": 1602,
+    "clv_medio_pct": -3.18,
+    "pct_batte_chiusura": 27
+   }
+  }
+ }
+}

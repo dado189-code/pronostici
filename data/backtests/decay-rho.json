@@ -1,186 +1,338 @@
 {
- "generato_il": "2026-08-30T12:04:25.753Z",
+ "confronto_globale_vs_per_lega": {
+  "decay_globale_ottimo": 100000,
+  "log_likelihood_per_partita_globale_sommata": -12.3316,
+  "log_likelihood_per_partita_per_lega_sommata": -12.3277,
+  "guadagno_per_lega_vs_globale": 0.0039,
+  "raccomandazione": "guadagno trascurabile: preferire un decay GLOBALE unico, piu semplice e meno rischio di overfitting per lega"
+ },
+ "generato_il": "2026-08-30T12:16:46.919Z",
  "nota": "Decay: stimato su TRAIN, valutato out-of-sample su VALIDATION (log-likelihood, rho fisso a -0.05 per isolare l effetto del decay). Rho: stimato su TRAIN+VALIDATION con emivita di produzione (180gg), griglia ampia [-0.4,0.4]. Il TEST 2025/26 non e mai stato usato in questo script.",
  "decayPerLega": {
   "Premier League": {
    "curva": [
     {
      "emivita": 60,
-     "logLikelihoodOOS": -1042.47
+     "logLikelihoodOOS": -1042.47,
+     "perPartita": -2.7433
     },
     {
      "emivita": 90,
-     "logLikelihoodOOS": -1038.09
+     "logLikelihoodOOS": -1038.09,
+     "perPartita": -2.7318
     },
     {
      "emivita": 120,
-     "logLikelihoodOOS": -1035.66
+     "logLikelihoodOOS": -1035.66,
+     "perPartita": -2.7254
     },
     {
      "emivita": 150,
-     "logLikelihoodOOS": -1034.26
+     "logLikelihoodOOS": -1034.26,
+     "perPartita": -2.7217
     },
     {
      "emivita": 180,
-     "logLikelihoodOOS": -1033.46
+     "logLikelihoodOOS": -1033.46,
+     "perPartita": -2.7196
     },
     {
      "emivita": 240,
-     "logLikelihoodOOS": -1032.71
+     "logLikelihoodOOS": -1032.71,
+     "perPartita": -2.7177
     },
     {
      "emivita": 365,
-     "logLikelihoodOOS": -1032.43
+     "logLikelihoodOOS": -1032.43,
+     "perPartita": -2.7169
+    },
+    {
+     "emivita": 540,
+     "logLikelihoodOOS": -1032.59,
+     "perPartita": -2.7173
+    },
+    {
+     "emivita": 730,
+     "logLikelihoodOOS": -1032.8,
+     "perPartita": -2.7179
+    },
+    {
+     "emivita": 1000,
+     "logLikelihoodOOS": -1033.02,
+     "perPartita": -2.7185
+    },
+    {
+     "emivita": 100000,
+     "logLikelihoodOOS": -1033.89,
+     "perPartita": -2.7208
     }
    ],
    "migliore": {
     "emivita": 365,
-    "logLikelihoodOOS": -1032.43
-   }
+    "logLikelihoodOOS": -1032.43,
+    "perPartita": -2.7169
+   },
+   "n_validation": 380
   },
   "Liga": {
    "curva": [
     {
      "emivita": 60,
-     "logLikelihoodOOS": -965.24
+     "logLikelihoodOOS": -965.24,
+     "perPartita": -2.5401
     },
     {
      "emivita": 90,
-     "logLikelihoodOOS": -959.24
+     "logLikelihoodOOS": -959.24,
+     "perPartita": -2.5243
     },
     {
      "emivita": 120,
-     "logLikelihoodOOS": -956.12
+     "logLikelihoodOOS": -956.12,
+     "perPartita": -2.5161
     },
     {
      "emivita": 150,
-     "logLikelihoodOOS": -954.24
+     "logLikelihoodOOS": -954.24,
+     "perPartita": -2.5112
     },
     {
      "emivita": 180,
-     "logLikelihoodOOS": -953.01
+     "logLikelihoodOOS": -953.01,
+     "perPartita": -2.5079
     },
     {
      "emivita": 240,
-     "logLikelihoodOOS": -951.51
+     "logLikelihoodOOS": -951.51,
+     "perPartita": -2.504
     },
     {
      "emivita": 365,
-     "logLikelihoodOOS": -950.07
+     "logLikelihoodOOS": -950.07,
+     "perPartita": -2.5002
+    },
+    {
+     "emivita": 540,
+     "logLikelihoodOOS": -949.24,
+     "perPartita": -2.498
+    },
+    {
+     "emivita": 730,
+     "logLikelihoodOOS": -948.83,
+     "perPartita": -2.4969
+    },
+    {
+     "emivita": 1000,
+     "logLikelihoodOOS": -948.53,
+     "perPartita": -2.4961
+    },
+    {
+     "emivita": 100000,
+     "logLikelihoodOOS": -947.81,
+     "perPartita": -2.4942
     }
    ],
    "migliore": {
-    "emivita": 365,
-    "logLikelihoodOOS": -950.07
-   }
+    "emivita": 100000,
+    "logLikelihoodOOS": -947.81,
+    "perPartita": -2.4942
+   },
+   "n_validation": 380
   },
   "Serie A": {
    "curva": [
     {
      "emivita": 60,
-     "logLikelihoodOOS": -758.9
+     "logLikelihoodOOS": -758.9,
+     "perPartita": -2.0024
     },
     {
      "emivita": 90,
-     "logLikelihoodOOS": -756.73
+     "logLikelihoodOOS": -756.73,
+     "perPartita": -1.9967
     },
     {
      "emivita": 120,
-     "logLikelihoodOOS": -755.61
+     "logLikelihoodOOS": -755.61,
+     "perPartita": -1.9937
     },
     {
      "emivita": 150,
-     "logLikelihoodOOS": -754.9
+     "logLikelihoodOOS": -754.9,
+     "perPartita": -1.9918
     },
     {
      "emivita": 180,
-     "logLikelihoodOOS": -754.42
+     "logLikelihoodOOS": -754.42,
+     "perPartita": -1.9906
     },
     {
      "emivita": 240,
-     "logLikelihoodOOS": -753.84
+     "logLikelihoodOOS": -753.84,
+     "perPartita": -1.989
     },
     {
      "emivita": 365,
-     "logLikelihoodOOS": -753.3
+     "logLikelihoodOOS": -753.3,
+     "perPartita": -1.9876
+    },
+    {
+     "emivita": 540,
+     "logLikelihoodOOS": -753.03,
+     "perPartita": -1.9869
+    },
+    {
+     "emivita": 730,
+     "logLikelihoodOOS": -752.92,
+     "perPartita": -1.9866
+    },
+    {
+     "emivita": 1000,
+     "logLikelihoodOOS": -752.84,
+     "perPartita": -1.9864
+    },
+    {
+     "emivita": 100000,
+     "logLikelihoodOOS": -752.72,
+     "perPartita": -1.9861
     }
    ],
    "migliore": {
-    "emivita": 365,
-    "logLikelihoodOOS": -753.3
-   }
+    "emivita": 100000,
+    "logLikelihoodOOS": -752.72,
+    "perPartita": -1.9861
+   },
+   "n_validation": 379
   },
   "Bundesliga": {
    "curva": [
     {
      "emivita": 60,
-     "logLikelihoodOOS": -759.27
+     "logLikelihoodOOS": -759.27,
+     "perPartita": -2.4894
     },
     {
      "emivita": 90,
-     "logLikelihoodOOS": -757.56
+     "logLikelihoodOOS": -757.56,
+     "perPartita": -2.4838
     },
     {
      "emivita": 120,
-     "logLikelihoodOOS": -756.34
+     "logLikelihoodOOS": -756.34,
+     "perPartita": -2.4798
     },
     {
      "emivita": 150,
-     "logLikelihoodOOS": -755.45
+     "logLikelihoodOOS": -755.45,
+     "perPartita": -2.4769
     },
     {
      "emivita": 180,
-     "logLikelihoodOOS": -754.8
+     "logLikelihoodOOS": -754.8,
+     "perPartita": -2.4748
     },
     {
      "emivita": 240,
-     "logLikelihoodOOS": -753.96
+     "logLikelihoodOOS": -753.96,
+     "perPartita": -2.472
     },
     {
      "emivita": 365,
-     "logLikelihoodOOS": -753.13
+     "logLikelihoodOOS": -753.13,
+     "perPartita": -2.4693
+    },
+    {
+     "emivita": 540,
+     "logLikelihoodOOS": -752.69,
+     "perPartita": -2.4678
+    },
+    {
+     "emivita": 730,
+     "logLikelihoodOOS": -752.49,
+     "perPartita": -2.4672
+    },
+    {
+     "emivita": 1000,
+     "logLikelihoodOOS": -752.36,
+     "perPartita": -2.4667
+    },
+    {
+     "emivita": 100000,
+     "logLikelihoodOOS": -752.11,
+     "perPartita": -2.4659
     }
    ],
    "migliore": {
-    "emivita": 365,
-    "logLikelihoodOOS": -753.13
-   }
+    "emivita": 100000,
+    "logLikelihoodOOS": -752.11,
+    "perPartita": -2.4659
+   },
+   "n_validation": 305
   },
   "Ligue 1": {
    "curva": [
     {
      "emivita": 60,
-     "logLikelihoodOOS": -815.51
+     "logLikelihoodOOS": -815.51,
+     "perPartita": -2.6651
     },
     {
      "emivita": 90,
-     "logLikelihoodOOS": -816.2
+     "logLikelihoodOOS": -816.2,
+     "perPartita": -2.6673
     },
     {
      "emivita": 120,
-     "logLikelihoodOOS": -816.5
+     "logLikelihoodOOS": -816.5,
+     "perPartita": -2.6683
     },
     {
      "emivita": 150,
-     "logLikelihoodOOS": -816.55
+     "logLikelihoodOOS": -816.55,
+     "perPartita": -2.6685
     },
     {
      "emivita": 180,
-     "logLikelihoodOOS": -816.51
+     "logLikelihoodOOS": -816.51,
+     "perPartita": -2.6683
     },
     {
      "emivita": 240,
-     "logLikelihoodOOS": -816.35
+     "logLikelihoodOOS": -816.35,
+     "perPartita": -2.6678
     },
     {
      "emivita": 365,
-     "logLikelihoodOOS": -816.07
+     "logLikelihoodOOS": -816.07,
+     "perPartita": -2.6669
+    },
+    {
+     "emivita": 540,
+     "logLikelihoodOOS": -815.86,
+     "perPartita": -2.6662
+    },
+    {
+     "emivita": 730,
+     "logLikelihoodOOS": -815.73,
+     "perPartita": -2.6658
+    },
+    {
+     "emivita": 1000,
+     "logLikelihoodOOS": -815.63,
+     "perPartita": -2.6655
+    },
+    {
+     "emivita": 100000,
+     "logLikelihoodOOS": -815.38,
+     "perPartita": -2.6646
     }
    ],
    "migliore": {
-    "emivita": 60,
-    "logLikelihoodOOS": -815.51
-   }
+    "emivita": 100000,
+    "logLikelihoodOOS": -815.38,
+    "perPartita": -2.6646
+   },
+   "n_validation": 306
   }
  },
  "rhoPerLega": {

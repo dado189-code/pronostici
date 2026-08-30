@@ -1,0 +1,166 @@
+{
+ "generato_il": "2026-08-30T12:18:21.245Z",
+ "nota": "Coordinate search (non griglia completa, per contenere il costo): un parametro alla volta, partendo dai default attuali, tenendo il migliore trovato prima di passare al successivo. Tutto scelto SOLO su VALIDATION. Elo ricalcolato da zero per ogni combinazione (economico, nessun nuovo walk-forward Dixon-Coles): i lambda_A riusati sono quelli gia salvati (emivita 180gg).",
+ "combinazioniTestate": 84,
+ "dettaglioGridSearch": [
+  {
+   "param": "kFactor",
+   "valore": 10,
+   "beta": 0.25,
+   "brier": 0.5818939718028117
+  },
+  {
+   "param": "kFactor",
+   "valore": 20,
+   "beta": 0.18,
+   "brier": 0.581992543029344
+  },
+  {
+   "param": "kFactor",
+   "valore": 30,
+   "beta": 0.12,
+   "brier": 0.581956828485297
+  },
+  {
+   "param": "vantaggioCasa",
+   "valore": 30,
+   "beta": 0.25,
+   "brier": 0.5818825156725366
+  },
+  {
+   "param": "vantaggioCasa",
+   "valore": 60,
+   "beta": 0.25,
+   "brier": 0.5818939718028117
+  },
+  {
+   "param": "vantaggioCasa",
+   "valore": 90,
+   "beta": 0.18,
+   "brier": 0.5818974832626086
+  },
+  {
+   "param": "regressioneStagionale",
+   "valore": 0.1,
+   "beta": 0.18,
+   "brier": 0.5817789074295988
+  },
+  {
+   "param": "regressioneStagionale",
+   "valore": 0.25,
+   "beta": 0.25,
+   "brier": 0.5818825156725366
+  },
+  {
+   "param": "regressioneStagionale",
+   "valore": 0.4,
+   "beta": 0.25,
+   "brier": 0.5819630418595272
+  },
+  {
+   "param": "handicapNeopromossa",
+   "valore": 30,
+   "beta": 0.18,
+   "brier": 0.5819324871326724
+  },
+  {
+   "param": "handicapNeopromossa",
+   "valore": 60,
+   "beta": 0.18,
+   "brier": 0.5817789074295988
+  },
+  {
+   "param": "handicapNeopromossa",
+   "valore": 100,
+   "beta": 0.18,
+   "brier": 0.5816497639098539
+  }
+ ],
+ "configurazioneOttimale": {
+  "partenza": 1500,
+  "pesoMarginale": true,
+  "kFactor": 10,
+  "vantaggioCasa": 30,
+  "regressioneStagionale": 0.1,
+  "handicapNeopromossa": 100
+ },
+ "betaOttimale": 0.18,
+ "brierValidationOttimo": 0.5816,
+ "brierValidationBaseline": 0.583,
+ "significance_A_vs_E_ottimizzato_TEST": {
+  "brier": {
+   "n_match": 1722,
+   "differenza_media": 0.00007,
+   "ic95": [
+    -0.00184,
+    0.00206
+   ],
+   "include_zero": true
+  },
+  "logLoss": {
+   "n_match": 1722,
+   "differenza_media": -0.00029,
+   "ic95": [
+    -0.00321,
+    0.00278
+   ],
+   "include_zero": true
+  },
+  "rps": {
+   "n_match": 1722,
+   "differenza_media": -0.00007,
+   "ic95": [
+    -0.00093,
+    0.00088
+   ],
+   "include_zero": true
+  },
+  "perLega": {
+   "Premier League": {
+    "n_match": 376,
+    "differenza_media": 0.00212,
+    "ic95": [
+     -0.00196,
+     0.00621
+    ],
+    "include_zero": true
+   },
+   "Liga": {
+    "n_match": 371,
+    "differenza_media": -0.00084,
+    "ic95": [
+     -0.0049,
+     0.00384
+    ],
+    "include_zero": true
+   },
+   "Serie A": {
+    "n_match": 376,
+    "differenza_media": -0.00115,
+    "ic95": [
+     -0.00559,
+     0.00332
+    ],
+    "include_zero": true
+   },
+   "Bundesliga": {
+    "n_match": 304,
+    "differenza_media": -0.00215,
+    "ic95": [
+     -0.00673,
+     0.00275
+    ],
+    "include_zero": true
+   },
+   "Ligue 1": {
+    "n_match": 295,
+    "differenza_media": 0.00244,
+    "ic95": [
+     -0.00247,
+     0.00746
+    ],
+    "include_zero": true
+   }
+  }
+ }
+}
