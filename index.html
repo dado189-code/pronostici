@@ -638,6 +638,19 @@ function genera(){
 // incontro (di valore, prudente, sorpresa) e in elenco diventavano tre schede
 // quasi identiche. Tengo la prima, che e quella di valore, e appendo gli altri
 // mercati come righe compatte invece di buttarli via.
+//
+// Elenco limitato alle 10 partite migliori (non tutte quelle analizzate):
+// con basket/tennis a consenso e piu mercati per partita di calcio, la lista
+// completa arrivava a centinaia di righe senza filtro di qualita'. Punteggio:
+// opportunity_score dove disponibile (calcio con analisi del value engine),
+// altrimenti la sola probabilita' pesata verso il basso — un pronostico non
+// verificato dal value engine non deve scavalcare uno che lo e'. Le partite
+// escluse restano comunque nel generatore di schedina sotto, solo non hanno
+// una card dedicata qui.
+const MAX_TUTTI_EVENTI = 10;
+function punteggioLista(p){
+  return p.analisi ? p.analisi.opportunity_score : p.prob * 0.3;
+}
 function renderAll(){
   const perPartita = new Map();
   PICKS.forEach(p => {
@@ -645,7 +658,12 @@ function renderAll(){
     if(perPartita.has(k)) perPartita.get(k).altri.push(p);
     else perPartita.set(k, {capo:p, altri:[]});
   });
-  $('#all').innerHTML = [...perPartita.values()].map(({capo:p, altri})=>`<div class="card flat">
+  const tutte = [...perPartita.values()];
+  tutte.sort((a,b) => punteggioLista(b.capo) - punteggioLista(a.capo));
+  const mostrate = tutte.slice(0, MAX_TUTTI_EVENTI);
+  const nascoste = tutte.length - mostrate.length;
+
+  $('#all').innerHTML = mostrate.map(({capo:p, altri})=>`<div class="card flat">
     <div class="eyebrow">${esc(p.comp)} &middot; ${esc(p.quando)}${p.tipo==='sorpresa'?' &middot; sorpresa':''}${etichettaFonte(p)}</div>
     <h3>${esc(p.evento)}</h3>
     <div class="pick">
@@ -663,7 +681,9 @@ function renderAll(){
     </div>`:''}
     <div class="src">base: ${esc(p.src)}</div>
     ${analisiHTML(p)}
-  </div>`).join("");
+  </div>`).join("") + (nascoste > 0
+    ? `<p class="hint" style="margin-top:6px">+${nascoste} altre partite analizzate ma non mostrate qui (fuori dalle prime ${MAX_TUTTI_EVENTI} per punteggio) — restano comunque disponibili nel generatore di schedina sopra.</p>`
+    : '');
 }
 
 // --- Migliori opportunita di oggi: NON i piu probabili, quelli con EV,
