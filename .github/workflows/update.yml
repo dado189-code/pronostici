@@ -5,13 +5,20 @@ on:
     # GitHub Actions schedula sempre in UTC, ma Europe/Rome cambia offset con
     # l'ora legale (CET=UTC+1 d'inverno, CEST=UTC+2 d'estate). Un solo cron
     # fisso sarebbe corretto solo per meta' dell'anno. Soluzione robusta:
-    # si schedula sia alle 12:00 sia alle 13:00 UTC, e il primo step del job
+    # si schedula sia alle 12:xx sia alle 13:xx UTC, e il primo step del job
     # (vedi sotto) calcola l'ora locale reale in Europe/Rome e lascia
     # proseguire la pipeline SOLO se sono le 14:00 li'. In ogni momento
     # dell'anno uno solo dei due trigger corrisponde davvero alle 14:00
     # locali; l'altro viene scartato subito, senza toccare nessun dato.
-    - cron: '0 12 * * *'
-    - cron: '0 13 * * *'
+    #
+    # Minuto 7, non 0: GitHub documenta che gli orari esatti (xx:00) sono i
+    # piu' congestionati (migliaia di workflow schedulati li') e possono
+    # subire ritardi o, di rado, essere saltati del tutto sotto carico alto.
+    # Osservato in produzione il 31/08/2026: nessuno dei due trigger a xx:00
+    # e' scattato quel giorno. Il controllo sull'ora locale (qualunque sia
+    # il minuto entro l'ora 14) resta identico, non e' un cambio di logica.
+    - cron: '7 12 * * *'
+    - cron: '7 13 * * *'
   workflow_dispatch:             # pulsante per lanciarlo a mano, anche per test
     inputs:
       force:
