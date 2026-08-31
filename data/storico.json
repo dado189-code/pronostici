@@ -3533,11 +3533,4114 @@
    },
    "model_version": "football-v1-baseline",
    "id": "toulouse-lille|2026-09-03T18:45:00.000Z|sorpresa|Toulouse vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Genoa - Como",
+   "quando": "ven 04/09, 20:45",
+   "ore": 97,
+   "match": "genoa-como",
+   "inizio": "2026-09-04T18:45:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.2217,
+     "PX": 0.2262,
+     "P2": 0.5521,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.2129,
+     "PX": 0.2569,
+     "P2": 0.5302,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.002,
+     "lambda_away": 1.74
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 5.8,
+     "book": "Betfair",
+     "n_book": 24,
+     "no_vig_probability": 0.188
+    },
+    "value": {
+     "fair_odds": 4.505,
+     "edge": 0.034,
+     "ev": 0.2876
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.034,
+     "confidence": 61,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.034,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.743,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Genoa\" il 22.2% contro il 18.8% del mercato. La quota fair e' 4.50 contro una quota disponibile di 5.80. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "2",
+   "prob": 0.552,
+   "prezzo": 1.88,
+   "why": "Gol attesi 1.00 contro 1.74, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.2%. Sul segno 1 il modello dice 22.2% contro il 18.8% del consenso di 24 bookmaker, miglior prezzo 5.80 su Betfair.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.222,
+    "probMercato": 0.188,
+    "prezzo": 5.8,
+    "book": "Betfair",
+    "nBook": 24,
+    "valore": 0.286
+   },
+   "model_version": "football-v1-baseline",
+   "id": "genoa-como|2026-09-04T18:45:00.000Z|standard|2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Fiorentina - Torino",
+   "quando": "sab 05/09, 15:00",
+   "ore": 115,
+   "match": "fiorentina-torino",
+   "inizio": "2026-09-05T13:00:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.4203,
+     "PX": 0.2304,
+     "P2": 0.3493,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.4058,
+     "PX": 0.2569,
+     "P2": 0.3373,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.601,
+     "lambda_away": 1.439
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 4.9,
+     "book": "Pinnacle",
+     "n_book": 24,
+     "no_vig_probability": 0.212
+    },
+    "value": {
+     "fair_odds": 2.865,
+     "edge": 0.137,
+     "ev": 0.7101
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.137,
+     "confidence": 26,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.137,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 26 < 55",
+     "agreement LOW",
+     "market gap 13.7pp > 5pp"
+    ],
+    "opportunity_score": 0.548,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Torino\" il 34.9% contro il 21.2% del mercato. La quota fair e' 2.87 contro una quota disponibile di 4.90. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "mercato": "X2",
+   "prob": 0.58,
+   "why": "Gol attesi 1.60 contro 1.44, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 58.0%. Sul segno 2 il modello dice 34.9% contro il 21.2% del consenso di 24 bookmaker, miglior prezzo 4.90 su Pinnacle.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.349,
+    "probMercato": 0.212,
+    "prezzo": 4.9,
+    "book": "Pinnacle",
+    "nBook": 24,
+    "valore": 0.712
+   },
+   "model_version": "football-v1-baseline",
+   "id": "fiorentina-torino|2026-09-05T13:00:00.000Z|standard|X2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Fiorentina - Torino",
+   "quando": "sab 05/09, 15:00",
+   "ore": 115,
+   "match": "fiorentina-torino",
+   "inizio": "2026-09-05T13:00:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.4203,
+     "PX": 0.2304,
+     "P2": 0.3493,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.4058,
+     "PX": 0.2569,
+     "P2": 0.3373,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.601,
+     "lambda_away": 1.439
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 4.9,
+     "book": "Pinnacle",
+     "n_book": 24,
+     "no_vig_probability": 0.212
+    },
+    "value": {
+     "fair_odds": 2.865,
+     "edge": 0.137,
+     "ev": 0.7101
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.137,
+     "confidence": 26,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.137,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 26 < 55",
+     "agreement LOW",
+     "market gap 13.7pp > 5pp"
+    ],
+    "opportunity_score": 0.548,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Torino\" il 34.9% contro il 21.2% del mercato. La quota fair e' 2.87 contro una quota disponibile di 4.90. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "mercato": "Over 1.5",
+   "prob": 0.802,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.60 contro 1.44, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.2%. Sul segno 2 il modello dice 34.9% contro il 21.2% del consenso di 24 bookmaker, miglior prezzo 4.90 su Pinnacle.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "fiorentina-torino|2026-09-05T13:00:00.000Z|standard|Over 1.5"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Fiorentina - Torino",
+   "quando": "sab 05/09, 15:00",
+   "ore": 115,
+   "match": "fiorentina-torino",
+   "inizio": "2026-09-05T13:00:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.4203,
+     "PX": 0.2304,
+     "P2": 0.3493,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.4058,
+     "PX": 0.2569,
+     "P2": 0.3373,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.601,
+     "lambda_away": 1.439
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 4.9,
+     "book": "Pinnacle",
+     "n_book": 24,
+     "no_vig_probability": 0.212
+    },
+    "value": {
+     "fair_odds": 2.865,
+     "edge": 0.137,
+     "ev": 0.7101
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.137,
+     "confidence": 26,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.137,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 26 < 55",
+     "agreement LOW",
+     "market gap 13.7pp > 5pp"
+    ],
+    "opportunity_score": 0.548,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Torino\" il 34.9% contro il 21.2% del mercato. La quota fair e' 2.87 contro una quota disponibile di 4.90. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Torino vincente",
+   "prob": 0.349,
+   "prezzo": 4.9,
+   "why": "Il modello da questo esito al 34.9%, il consenso di 24 bookmaker al 21.2%. Al prezzo migliore, 4.90 su Pinnacle, il valore atteso e' 71.2%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.349,
+    "probMercato": 0.212,
+    "prezzo": 4.9,
+    "book": "Pinnacle",
+    "nBook": 24,
+    "valore": 0.712
+   },
+   "model_version": "football-v1-baseline",
+   "id": "fiorentina-torino|2026-09-05T13:00:00.000Z|sorpresa|Torino vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Inter - Napoli",
+   "quando": "sab 05/09, 18:00",
+   "ore": 118,
+   "match": "inter-napoli",
+   "inizio": "2026-09-05T16:00:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6043,
+     "PX": 0.211,
+     "P2": 0.1847,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5736,
+     "PX": 0.2511,
+     "P2": 0.1753,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.889,
+     "lambda_away": 0.926
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 5.8,
+     "book": "Betfair",
+     "n_book": 24,
+     "no_vig_probability": 0.183
+    },
+    "value": {
+     "fair_odds": 5.405,
+     "edge": 0.002,
+     "ev": 0.073
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.0097,
+     "confidence": 88,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.002,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6562,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Napoli\" il 18.5% contro il 18.3% del mercato. La quota fair e' 5.41 contro una quota disponibile di 5.80. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.555,
+   "why": "Gol attesi 1.89 contro 0.93, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.5%. Sul segno 2 il modello dice 18.5% contro il 18.3% del consenso di 24 bookmaker, miglior prezzo 5.80 su Betfair.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.185,
+    "probMercato": 0.183,
+    "prezzo": 5.8,
+    "book": "Betfair",
+    "nBook": 24,
+    "valore": 0.071
+   },
+   "model_version": "football-v1-baseline",
+   "id": "inter-napoli|2026-09-05T16:00:00.000Z|standard|Multigol casa 1-2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Inter - Napoli",
+   "quando": "sab 05/09, 18:00",
+   "ore": 118,
+   "match": "inter-napoli",
+   "inizio": "2026-09-05T16:00:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6043,
+     "PX": 0.211,
+     "P2": 0.1847,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5736,
+     "PX": 0.2511,
+     "P2": 0.1753,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.889,
+     "lambda_away": 0.926
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 5.8,
+     "book": "Betfair",
+     "n_book": 24,
+     "no_vig_probability": 0.183
+    },
+    "value": {
+     "fair_odds": 5.405,
+     "edge": 0.002,
+     "ev": 0.073
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.0097,
+     "confidence": 88,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.002,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6562,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.2,
+      "current_season_contribution_pct": 10.8
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Napoli\" il 18.5% contro il 18.3% del mercato. La quota fair e' 5.41 contro una quota disponibile di 5.80. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "1X",
+   "prob": 0.815,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.89 contro 0.93, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.5%. Sul segno 2 il modello dice 18.5% contro il 18.3% del consenso di 24 bookmaker, miglior prezzo 5.80 su Betfair.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "inter-napoli|2026-09-05T16:00:00.000Z|standard|1X"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Newcastle United - Bournemouth",
+   "quando": "sab 05/09, 13:30",
+   "ore": 114,
+   "match": "newcastle united-bournemouth",
+   "inizio": "2026-09-05T11:30:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3844,
+     "PX": 0.2524,
+     "P2": 0.3632,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3685,
+     "PX": 0.2833,
+     "P2": 0.3482,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.746,
+     "lambda_away": 1.695
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 3.2,
+     "book": "Betfair",
+     "n_book": 25,
+     "no_vig_probability": 0.315
+    },
+    "value": {
+     "fair_odds": 2.755,
+     "edge": 0.048,
+     "ev": 0.1616
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.048,
+     "confidence": 59,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.048,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6132,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Bournemouth\" il 36.3% contro il 31.5% del mercato. La quota fair e' 2.75 contro una quota disponibile di 3.20. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.571,
+   "why": "Gol attesi 1.75 contro 1.69, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.1%. Sul segno 2 il modello dice 36.3% contro il 31.5% del consenso di 25 bookmaker, miglior prezzo 3.20 su Betfair.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.363,
+    "probMercato": 0.315,
+    "prezzo": 3.2,
+    "book": "Betfair",
+    "nBook": 25,
+    "valore": 0.162
+   },
+   "model_version": "football-v1-baseline",
+   "id": "newcastle united-bournemouth|2026-09-05T11:30:00.000Z|standard|Multigol casa 1-2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Newcastle United - Bournemouth",
+   "quando": "sab 05/09, 13:30",
+   "ore": 114,
+   "match": "newcastle united-bournemouth",
+   "inizio": "2026-09-05T11:30:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3844,
+     "PX": 0.2524,
+     "P2": 0.3632,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3685,
+     "PX": 0.2833,
+     "P2": 0.3482,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.746,
+     "lambda_away": 1.695
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 3.2,
+     "book": "Betfair",
+     "n_book": 25,
+     "no_vig_probability": 0.315
+    },
+    "value": {
+     "fair_odds": 2.755,
+     "edge": 0.048,
+     "ev": 0.1616
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.048,
+     "confidence": 59,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.048,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6132,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Bournemouth\" il 36.3% contro il 31.5% del mercato. La quota fair e' 2.75 contro una quota disponibile di 3.20. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Trasferta segna",
+   "prob": 0.816,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.75 contro 1.69, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.6%. Sul segno 2 il modello dice 36.3% contro il 31.5% del consenso di 25 bookmaker, miglior prezzo 3.20 su Betfair.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "newcastle united-bournemouth|2026-09-05T11:30:00.000Z|standard|Trasferta segna"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Newcastle United - Bournemouth",
+   "quando": "sab 05/09, 13:30",
+   "ore": 114,
+   "match": "newcastle united-bournemouth",
+   "inizio": "2026-09-05T11:30:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3844,
+     "PX": 0.2524,
+     "P2": 0.3632,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3685,
+     "PX": 0.2833,
+     "P2": 0.3482,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.746,
+     "lambda_away": 1.695
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 3.2,
+     "book": "Betfair",
+     "n_book": 25,
+     "no_vig_probability": 0.315
+    },
+    "value": {
+     "fair_odds": 2.755,
+     "edge": 0.048,
+     "ev": 0.1616
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.048,
+     "confidence": 59,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.048,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6132,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Bournemouth\" il 36.3% contro il 31.5% del mercato. La quota fair e' 2.75 contro una quota disponibile di 3.20. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Bournemouth vincente",
+   "prob": 0.363,
+   "prezzo": 3.2,
+   "why": "Il modello da questo esito al 36.3%, il consenso di 25 bookmaker al 31.5%. Al prezzo migliore, 3.20 su Betfair, il valore atteso e' 16.2%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.363,
+    "probMercato": 0.315,
+    "prezzo": 3.2,
+    "book": "Betfair",
+    "nBook": 25,
+    "valore": 0.162
+   },
+   "model_version": "football-v1-baseline",
+   "id": "newcastle united-bournemouth|2026-09-05T11:30:00.000Z|sorpresa|Bournemouth vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Brentford - Sunderland",
+   "quando": "sab 05/09, 16:00",
+   "ore": 116,
+   "match": "brentford-sunderland",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.5942,
+     "PX": 0.2367,
+     "P2": 0.1691,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5665,
+     "PX": 0.2723,
+     "P2": 0.1612,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.044,
+     "lambda_away": 1.028
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 6.2,
+     "book": "Betfair",
+     "n_book": 25,
+     "no_vig_probability": 0.167
+    },
+    "value": {
+     "fair_odds": 5.917,
+     "edge": 0.002,
+     "ev": 0.0478
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.0078,
+     "confidence": 88,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.002,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6209,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Sunderland\" il 16.9% contro il 16.7% del mercato. La quota fair e' 5.92 contro una quota disponibile di 6.20. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.557,
+   "why": "Gol attesi 2.04 contro 1.03, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.7%. Sul segno 2 il modello dice 16.9% contro il 16.7% del consenso di 25 bookmaker, miglior prezzo 6.20 su Betfair.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.169,
+    "probMercato": 0.167,
+    "prezzo": 6.2,
+    "book": "Betfair",
+    "nBook": 25,
+    "valore": 0.048
+   },
+   "model_version": "football-v1-baseline",
+   "id": "brentford-sunderland|2026-09-05T14:00:00.000Z|standard|Multigol trasferta 1-2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Brentford - Sunderland",
+   "quando": "sab 05/09, 16:00",
+   "ore": 116,
+   "match": "brentford-sunderland",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.5942,
+     "PX": 0.2367,
+     "P2": 0.1691,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5665,
+     "PX": 0.2723,
+     "P2": 0.1612,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.044,
+     "lambda_away": 1.028
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 6.2,
+     "book": "Betfair",
+     "n_book": 25,
+     "no_vig_probability": 0.167
+    },
+    "value": {
+     "fair_odds": 5.917,
+     "edge": 0.002,
+     "ev": 0.0478
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.0078,
+     "confidence": 88,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.002,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "CAUTION",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6209,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Sunderland\" il 16.9% contro il 16.7% del mercato. La quota fair e' 5.92 contro una quota disponibile di 6.20. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Under 4.5",
+   "prob": 0.803,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 2.04 contro 1.03, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.3%. Sul segno 2 il modello dice 16.9% contro il 16.7% del consenso di 25 bookmaker, miglior prezzo 6.20 su Betfair.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "brentford-sunderland|2026-09-05T14:00:00.000Z|standard|Under 4.5"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Brighton - Leeds",
+   "quando": "sab 05/09, 16:00",
+   "ore": 116,
+   "match": "brighton-leeds",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.4739,
+     "PX": 0.267,
+     "P2": 0.259,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.4634,
+     "PX": 0.2833,
+     "P2": 0.2533,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.744,
+     "lambda_away": 1.251
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 4.5,
+     "book": "Betfair",
+     "n_book": 25,
+     "no_vig_probability": 0.225
+    },
+    "value": {
+     "fair_odds": 3.861,
+     "edge": 0.034,
+     "ev": 0.1655
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.034,
+     "confidence": 61,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.034,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6247,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Leeds\" il 25.9% contro il 22.5% del mercato. La quota fair e' 3.86 contro una quota disponibile di 4.50. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.571,
+   "why": "Gol attesi 1.74 contro 1.25, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.1%. Sul segno 2 il modello dice 25.9% contro il 22.5% del consenso di 25 bookmaker, miglior prezzo 4.50 su Betfair.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.259,
+    "probMercato": 0.225,
+    "prezzo": 4.5,
+    "book": "Betfair",
+    "nBook": 25,
+    "valore": 0.166
+   },
+   "model_version": "football-v1-baseline",
+   "id": "brighton-leeds|2026-09-05T14:00:00.000Z|standard|Multigol casa 1-2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Brighton - Leeds",
+   "quando": "sab 05/09, 16:00",
+   "ore": 116,
+   "match": "brighton-leeds",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.4739,
+     "PX": 0.267,
+     "P2": 0.259,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.4634,
+     "PX": 0.2833,
+     "P2": 0.2533,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.744,
+     "lambda_away": 1.251
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 4.5,
+     "book": "Betfair",
+     "n_book": 25,
+     "no_vig_probability": 0.225
+    },
+    "value": {
+     "fair_odds": 3.861,
+     "edge": 0.034,
+     "ev": 0.1655
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.034,
+     "confidence": 61,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.034,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6247,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Leeds\" il 25.9% contro il 22.5% del mercato. La quota fair e' 3.86 contro una quota disponibile di 4.50. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Over 1.5",
+   "prob": 0.816,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.74 contro 1.25, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.6%. Sul segno 2 il modello dice 25.9% contro il 22.5% del consenso di 25 bookmaker, miglior prezzo 4.50 su Betfair.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "brighton-leeds|2026-09-05T14:00:00.000Z|standard|Over 1.5"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Brighton - Leeds",
+   "quando": "sab 05/09, 16:00",
+   "ore": 116,
+   "match": "brighton-leeds",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.4739,
+     "PX": 0.267,
+     "P2": 0.259,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.4634,
+     "PX": 0.2833,
+     "P2": 0.2533,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.744,
+     "lambda_away": 1.251
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 4.5,
+     "book": "Betfair",
+     "n_book": 25,
+     "no_vig_probability": 0.225
+    },
+    "value": {
+     "fair_odds": 3.861,
+     "edge": 0.034,
+     "ev": 0.1655
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.034,
+     "confidence": 61,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.034,
+     "livello": "LIEVE",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6247,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Leeds\" il 25.9% contro il 22.5% del mercato. La quota fair e' 3.86 contro una quota disponibile di 4.50. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Leeds vincente",
+   "prob": 0.259,
+   "prezzo": 4.5,
+   "why": "Il modello da questo esito al 25.9%, il consenso di 25 bookmaker al 22.5%. Al prezzo migliore, 4.50 su Betfair, il valore atteso e' 16.6%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.259,
+    "probMercato": 0.225,
+    "prezzo": 4.5,
+    "book": "Betfair",
+    "nBook": 25,
+    "valore": 0.166
+   },
+   "model_version": "football-v1-baseline",
+   "id": "brighton-leeds|2026-09-05T14:00:00.000Z|sorpresa|Leeds vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Manchester City - Coventry",
+   "quando": "sab 05/09, 16:00",
+   "ore": 116,
+   "match": "manchester city-coventry",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.5777,
+     "PX": 0.2769,
+     "P2": 0.1454,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5726,
+     "PX": 0.2833,
+     "P2": 0.1441,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.631,
+     "lambda_away": 0.714
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 16,
+     "book": "1xBet",
+     "n_book": 25,
+     "no_vig_probability": 0.073
+    },
+    "value": {
+     "fair_odds": 6.897,
+     "edge": 0.072,
+     "ev": 1.32
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.072,
+     "confidence": 45,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.072,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "ESCLUSA",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 45 < 55",
+     "market gap 7.2pp > 5pp",
+     "quota 16.00 > 8"
+    ],
+    "opportunity_score": 0.695,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.1,
+      "current_season_contribution_pct": 10.9
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Coventry\" il 14.5% contro il 7.3% del mercato. La quota fair e' 6.90 contro una quota disponibile di 16.00. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "NoGol",
+   "prob": 0.573,
+   "why": "Gol attesi 1.63 contro 0.71, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.3%. Sul segno 2 il modello dice 14.5% contro il 7.3% del consenso di 25 bookmaker, miglior prezzo 16.00 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.145,
+    "probMercato": 0.073,
+    "prezzo": 16,
+    "book": "1xBet",
+    "nBook": 25,
+    "valore": 1.326
+   },
+   "model_version": "football-v1-baseline",
+   "id": "manchester city-coventry|2026-09-05T14:00:00.000Z|standard|NoGol"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Manchester City - Coventry",
+   "quando": "sab 05/09, 16:00",
+   "ore": 116,
+   "match": "manchester city-coventry",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.5777,
+     "PX": 0.2769,
+     "P2": 0.1454,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5726,
+     "PX": 0.2833,
+     "P2": 0.1441,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.631,
+     "lambda_away": 0.714
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 16,
+     "book": "1xBet",
+     "n_book": 25,
+     "no_vig_probability": 0.073
+    },
+    "value": {
+     "fair_odds": 6.897,
+     "edge": 0.072,
+     "ev": 1.32
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.072,
+     "confidence": 45,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.072,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "ESCLUSA",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 45 < 55",
+     "market gap 7.2pp > 5pp",
+     "quota 16.00 > 8"
+    ],
+    "opportunity_score": 0.695,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.1,
+      "current_season_contribution_pct": 10.9
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Coventry\" il 14.5% contro il 7.3% del mercato. La quota fair e' 6.90 contro una quota disponibile di 16.00. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Casa segna",
+   "prob": 0.804,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.63 contro 0.71, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.4%. Sul segno 2 il modello dice 14.5% contro il 7.3% del consenso di 25 bookmaker, miglior prezzo 16.00 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "manchester city-coventry|2026-09-05T14:00:00.000Z|standard|Casa segna"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Manchester City - Coventry",
+   "quando": "sab 05/09, 16:00",
+   "ore": 116,
+   "match": "manchester city-coventry",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.5777,
+     "PX": 0.2769,
+     "P2": 0.1454,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5726,
+     "PX": 0.2833,
+     "P2": 0.1441,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.631,
+     "lambda_away": 0.714
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 16,
+     "book": "1xBet",
+     "n_book": 25,
+     "no_vig_probability": 0.073
+    },
+    "value": {
+     "fair_odds": 6.897,
+     "edge": 0.072,
+     "ev": 1.32
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.072,
+     "confidence": 45,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.072,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "ESCLUSA",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 45 < 55",
+     "market gap 7.2pp > 5pp",
+     "quota 16.00 > 8"
+    ],
+    "opportunity_score": 0.695,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.1,
+      "current_season_contribution_pct": 10.9
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Coventry\" il 14.5% contro il 7.3% del mercato. La quota fair e' 6.90 contro una quota disponibile di 16.00. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Coventry vincente",
+   "prob": 0.145,
+   "prezzo": 16,
+   "why": "Il modello da questo esito al 14.5%, il consenso di 25 bookmaker al 7.3%. Al prezzo migliore, 16.00 su 1xBet, il valore atteso e' 132.6%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.145,
+    "probMercato": 0.073,
+    "prezzo": 16,
+    "book": "1xBet",
+    "nBook": 25,
+    "valore": 1.326
+   },
+   "model_version": "football-v1-baseline",
+   "id": "manchester city-coventry|2026-09-05T14:00:00.000Z|sorpresa|Coventry vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Fulham - Crystal Palace",
+   "quando": "sab 05/09, 16:00",
+   "ore": 116,
+   "match": "fulham-crystal palace",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.367,
+     "PX": 0.27,
+     "P2": 0.363,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3603,
+     "PX": 0.2833,
+     "P2": 0.3564,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.553,
+     "lambda_away": 1.544
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 3.23,
+     "book": "1xBet",
+     "n_book": 25,
+     "no_vig_probability": 0.307
+    },
+    "value": {
+     "fair_odds": 2.755,
+     "edge": 0.056,
+     "ev": 0.1725
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.056,
+     "confidence": 47,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.056,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 47 < 55",
+     "market gap 5.6pp > 5pp"
+    ],
+    "opportunity_score": 0.5925,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.1,
+      "current_season_contribution_pct": 10.9
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Crystal Palace\" il 36.3% contro il 30.7% del mercato. La quota fair e' 2.75 contro una quota disponibile di 3.23. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol 1-3",
+   "prob": 0.564,
+   "why": "Gol attesi 1.55 contro 1.54, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.4%. Sul segno 2 il modello dice 36.3% contro il 30.7% del consenso di 25 bookmaker, miglior prezzo 3.23 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.363,
+    "probMercato": 0.307,
+    "prezzo": 3.23,
+    "book": "1xBet",
+    "nBook": 25,
+    "valore": 0.173
+   },
+   "model_version": "football-v1-baseline",
+   "id": "fulham-crystal palace|2026-09-05T14:00:00.000Z|standard|Multigol 1-3"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Fulham - Crystal Palace",
+   "quando": "sab 05/09, 16:00",
+   "ore": 116,
+   "match": "fulham-crystal palace",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.367,
+     "PX": 0.27,
+     "P2": 0.363,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3603,
+     "PX": 0.2833,
+     "P2": 0.3564,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.553,
+     "lambda_away": 1.544
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 3.23,
+     "book": "1xBet",
+     "n_book": 25,
+     "no_vig_probability": 0.307
+    },
+    "value": {
+     "fair_odds": 2.755,
+     "edge": 0.056,
+     "ev": 0.1725
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.056,
+     "confidence": 47,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.056,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 47 < 55",
+     "market gap 5.6pp > 5pp"
+    ],
+    "opportunity_score": 0.5925,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.1,
+      "current_season_contribution_pct": 10.9
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Crystal Palace\" il 36.3% contro il 30.7% del mercato. La quota fair e' 2.75 contro una quota disponibile di 3.23. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Over 1.5",
+   "prob": 0.831,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.55 contro 1.54, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 83.1%. Sul segno 2 il modello dice 36.3% contro il 30.7% del consenso di 25 bookmaker, miglior prezzo 3.23 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "fulham-crystal palace|2026-09-05T14:00:00.000Z|standard|Over 1.5"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Fulham - Crystal Palace",
+   "quando": "sab 05/09, 16:00",
+   "ore": 116,
+   "match": "fulham-crystal palace",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.367,
+     "PX": 0.27,
+     "P2": 0.363,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3603,
+     "PX": 0.2833,
+     "P2": 0.3564,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.553,
+     "lambda_away": 1.544
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 3.23,
+     "book": "1xBet",
+     "n_book": 25,
+     "no_vig_probability": 0.307
+    },
+    "value": {
+     "fair_odds": 2.755,
+     "edge": 0.056,
+     "ev": 0.1725
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.056,
+     "confidence": 47,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.056,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 47 < 55",
+     "market gap 5.6pp > 5pp"
+    ],
+    "opportunity_score": 0.5925,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.1,
+      "current_season_contribution_pct": 10.9
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Crystal Palace\" il 36.3% contro il 30.7% del mercato. La quota fair e' 2.75 contro una quota disponibile di 3.23. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Crystal Palace vincente",
+   "prob": 0.363,
+   "prezzo": 3.23,
+   "why": "Il modello da questo esito al 36.3%, il consenso di 25 bookmaker al 30.7%. Al prezzo migliore, 3.23 su 1xBet, il valore atteso e' 17.3%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.363,
+    "probMercato": 0.307,
+    "prezzo": 3.23,
+    "book": "1xBet",
+    "nBook": 25,
+    "valore": 0.173
+   },
+   "model_version": "football-v1-baseline",
+   "id": "fulham-crystal palace|2026-09-05T14:00:00.000Z|sorpresa|Crystal Palace vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Nottingham Forest - Tottenham",
+   "quando": "sab 05/09, 16:00",
+   "ore": 116,
+   "match": "nottm forest-tottenham",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.4531,
+     "PX": 0.2894,
+     "P2": 0.2575,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.457,
+     "PX": 0.2833,
+     "P2": 0.2597,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.536,
+     "lambda_away": 1.112
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 2.62,
+     "book": "Betfair",
+     "n_book": 25,
+     "no_vig_probability": 0.377
+    },
+    "value": {
+     "fair_odds": 2.208,
+     "edge": 0.076,
+     "ev": 0.1869
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.08,
+     "confidence": 45,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.076,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 45 < 55",
+     "market gap 7.6pp > 5pp"
+    ],
+    "opportunity_score": 0.6066,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Nottingham Forest\" il 45.3% contro il 37.7% del mercato. La quota fair e' 2.21 contro una quota disponibile di 2.62. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.569,
+   "why": "Gol attesi 1.54 contro 1.11, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.9%. Sul segno 1 il modello dice 45.3% contro il 37.7% del consenso di 25 bookmaker, miglior prezzo 2.62 su Betfair.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.453,
+    "probMercato": 0.377,
+    "prezzo": 2.62,
+    "book": "Betfair",
+    "nBook": 25,
+    "valore": 0.187
+   },
+   "model_version": "football-v1-baseline",
+   "id": "nottm forest-tottenham|2026-09-05T14:00:00.000Z|standard|Multigol trasferta 1-2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Nottingham Forest - Tottenham",
+   "quando": "sab 05/09, 16:00",
+   "ore": 116,
+   "match": "nottm forest-tottenham",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.4531,
+     "PX": 0.2894,
+     "P2": 0.2575,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.457,
+     "PX": 0.2833,
+     "P2": 0.2597,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.536,
+     "lambda_away": 1.112
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 2.62,
+     "book": "Betfair",
+     "n_book": 25,
+     "no_vig_probability": 0.377
+    },
+    "value": {
+     "fair_odds": 2.208,
+     "edge": 0.076,
+     "ev": 0.1869
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.08,
+     "confidence": 45,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.076,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 45 < 55",
+     "market gap 7.6pp > 5pp"
+    ],
+    "opportunity_score": 0.6066,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89,
+      "current_season_contribution_pct": 11
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Nottingham Forest\" il 45.3% contro il 37.7% del mercato. La quota fair e' 2.21 contro una quota disponibile di 2.62. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol 1-5",
+   "prob": 0.859,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.54 contro 1.11, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 85.9%. Sul segno 1 il modello dice 45.3% contro il 37.7% del consenso di 25 bookmaker, miglior prezzo 2.62 su Betfair.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "nottm forest-tottenham|2026-09-05T14:00:00.000Z|standard|Multigol 1-5"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Hull - Aston Villa",
+   "quando": "sab 05/09, 18:30",
+   "ore": 119,
+   "match": "hull-aston villa",
+   "inizio": "2026-09-05T16:30:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3609,
+     "PX": 0.2882,
+     "P2": 0.3509,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3634,
+     "PX": 0.2833,
+     "P2": 0.3533,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.404,
+     "lambda_away": 1.382
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 4.42,
+     "book": "1xBet",
+     "n_book": 25,
+     "no_vig_probability": 0.228
+    },
+    "value": {
+     "fair_odds": 2.77,
+     "edge": 0.133,
+     "ev": 0.5956
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.1354,
+     "confidence": 26,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.133,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 26 < 55",
+     "agreement LOW",
+     "market gap 13.3pp > 5pp"
+    ],
+    "opportunity_score": 0.545,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 94.3,
+      "current_season_contribution_pct": 5.7
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Hull\" il 36.1% contro il 22.8% del mercato. La quota fair e' 2.77 contro una quota disponibile di 4.42. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "mercato": "Gol",
+   "prob": 0.582,
+   "why": "Gol attesi 1.40 contro 1.38, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 58.2%. Sul segno 1 il modello dice 36.1% contro il 22.8% del consenso di 25 bookmaker, miglior prezzo 4.42 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.361,
+    "probMercato": 0.228,
+    "prezzo": 4.42,
+    "book": "1xBet",
+    "nBook": 25,
+    "valore": 0.595
+   },
+   "model_version": "football-v1-baseline",
+   "id": "hull-aston villa|2026-09-05T16:30:00.000Z|standard|Gol"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Hull - Aston Villa",
+   "quando": "sab 05/09, 18:30",
+   "ore": 119,
+   "match": "hull-aston villa",
+   "inizio": "2026-09-05T16:30:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3609,
+     "PX": 0.2882,
+     "P2": 0.3509,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3634,
+     "PX": 0.2833,
+     "P2": 0.3533,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.404,
+     "lambda_away": 1.382
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 4.42,
+     "book": "1xBet",
+     "n_book": 25,
+     "no_vig_probability": 0.228
+    },
+    "value": {
+     "fair_odds": 2.77,
+     "edge": 0.133,
+     "ev": 0.5956
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.1354,
+     "confidence": 26,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.133,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 26 < 55",
+     "agreement LOW",
+     "market gap 13.3pp > 5pp"
+    ],
+    "opportunity_score": 0.545,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 94.3,
+      "current_season_contribution_pct": 5.7
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Hull\" il 36.1% contro il 22.8% del mercato. La quota fair e' 2.77 contro una quota disponibile di 4.42. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "mercato": "Under 4.5",
+   "prob": 0.85,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.40 contro 1.38, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 85.0%. Sul segno 1 il modello dice 36.1% contro il 22.8% del consenso di 25 bookmaker, miglior prezzo 4.42 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "hull-aston villa|2026-09-05T16:30:00.000Z|standard|Under 4.5"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Premier League",
+   "evento": "Hull - Aston Villa",
+   "quando": "sab 05/09, 18:30",
+   "ore": 119,
+   "match": "hull-aston villa",
+   "inizio": "2026-09-05T16:30:00.000Z",
+   "understat": "EPL",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3609,
+     "PX": 0.2882,
+     "P2": 0.3509,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3634,
+     "PX": 0.2833,
+     "P2": 0.3533,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.404,
+     "lambda_away": 1.382
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 4.42,
+     "book": "1xBet",
+     "n_book": 25,
+     "no_vig_probability": 0.228
+    },
+    "value": {
+     "fair_odds": 2.77,
+     "edge": 0.133,
+     "ev": 0.5956
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.1354,
+     "confidence": 26,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.133,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 26 < 55",
+     "agreement LOW",
+     "market gap 13.3pp > 5pp"
+    ],
+    "opportunity_score": 0.545,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 94.3,
+      "current_season_contribution_pct": 5.7
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Hull\" il 36.1% contro il 22.8% del mercato. La quota fair e' 2.77 contro una quota disponibile di 4.42. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Hull vincente",
+   "prob": 0.361,
+   "prezzo": 4.42,
+   "why": "Il modello da questo esito al 36.1%, il consenso di 25 bookmaker al 22.8%. Al prezzo migliore, 4.42 su 1xBet, il valore atteso e' 59.5%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.361,
+    "probMercato": 0.228,
+    "prezzo": 4.42,
+    "book": "1xBet",
+    "nBook": 25,
+    "valore": 0.595
+   },
+   "model_version": "football-v1-baseline",
+   "id": "hull-aston villa|2026-09-05T16:30:00.000Z|sorpresa|Hull vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Athletic Club - Atletico Madrid",
+   "quando": "sab 05/09, 16:15",
+   "ore": 117,
+   "match": "athletic bilbao-atletico madrid",
+   "inizio": "2026-09-05T14:15:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.502,
+     "PX": 0.2313,
+     "P2": 0.2667,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.4853,
+     "PX": 0.2569,
+     "P2": 0.2578,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.811,
+     "lambda_away": 1.264
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 2.95,
+     "book": "1xBet",
+     "n_book": 20,
+     "no_vig_probability": 0.334
+    },
+    "value": {
+     "fair_odds": 1.992,
+     "edge": 0.168,
+     "ev": 0.4809
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.168,
+     "confidence": 24,
+     "data_quality": 63
+    },
+    "market_gap": {
+     "valore": 0.168,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 24 < 55",
+     "agreement LOW",
+     "market gap 16.8pp > 5pp"
+    ],
+    "opportunity_score": 0.5465,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.6,
+      "current_season_contribution_pct": 15.4
+     },
+     "ospite": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.7,
+      "current_season_contribution_pct": 15.3
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Athletic Club\" il 50.2% contro il 33.4% del mercato. La quota fair e' 1.99 contro una quota disponibile di 2.95. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.564,
+   "why": "Gol attesi 1.81 contro 1.26, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.4%. Sul segno 1 il modello dice 50.2% contro il 33.4% del consenso di 20 bookmaker, miglior prezzo 2.95 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.502,
+    "probMercato": 0.334,
+    "prezzo": 2.95,
+    "book": "1xBet",
+    "nBook": 20,
+    "valore": 0.481
+   },
+   "model_version": "football-v1-baseline",
+   "id": "athletic bilbao-atletico madrid|2026-09-05T14:15:00.000Z|standard|Multigol casa 1-2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Athletic Club - Atletico Madrid",
+   "quando": "sab 05/09, 16:15",
+   "ore": 117,
+   "match": "athletic bilbao-atletico madrid",
+   "inizio": "2026-09-05T14:15:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.502,
+     "PX": 0.2313,
+     "P2": 0.2667,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.4853,
+     "PX": 0.2569,
+     "P2": 0.2578,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.811,
+     "lambda_away": 1.264
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 2.95,
+     "book": "1xBet",
+     "n_book": 20,
+     "no_vig_probability": 0.334
+    },
+    "value": {
+     "fair_odds": 1.992,
+     "edge": 0.168,
+     "ev": 0.4809
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.168,
+     "confidence": 24,
+     "data_quality": 63
+    },
+    "market_gap": {
+     "valore": 0.168,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 24 < 55",
+     "agreement LOW",
+     "market gap 16.8pp > 5pp"
+    ],
+    "opportunity_score": 0.5465,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.6,
+      "current_season_contribution_pct": 15.4
+     },
+     "ospite": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.7,
+      "current_season_contribution_pct": 15.3
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Athletic Club\" il 50.2% contro il 33.4% del mercato. La quota fair e' 1.99 contro una quota disponibile di 2.95. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "mercato": "Under 4.5",
+   "prob": 0.802,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.81 contro 1.26, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.2%. Sul segno 1 il modello dice 50.2% contro il 33.4% del consenso di 20 bookmaker, miglior prezzo 2.95 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "athletic bilbao-atletico madrid|2026-09-05T14:15:00.000Z|standard|Under 4.5"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Rayo Vallecano - Real Oviedo",
+   "quando": "sab 05/09, 18:30",
+   "ore": 119,
+   "match": "rayo vallecano-real oviedo",
+   "inizio": "2026-09-05T16:30:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6322,
+     "PX": 0.2005,
+     "P2": 0.1673,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.6196,
+     "PX": 0.2165,
+     "P2": 0.164,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.135,
+     "lambda_away": 1.003
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 2.36,
+     "book": "1xBet",
+     "n_book": 21,
+     "no_vig_probability": 0.419
+    },
+    "value": {
+     "fair_odds": 1.582,
+     "edge": 0.213,
+     "ev": 0.4915
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.213,
+     "confidence": 19,
+     "data_quality": 55
+    },
+    "market_gap": {
+     "valore": 0.213,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 19 < 55",
+     "agreement LOW",
+     "market gap 21.3pp > 5pp"
+    ],
+    "opportunity_score": 0.5195,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.6,
+      "current_season_contribution_pct": 10.4
+     },
+     "ospite": {
+      "matches_current_season": 0,
+      "previous_season_contribution_pct": 100,
+      "current_season_contribution_pct": 0
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Rayo Vallecano\" il 63.2% contro il 41.9% del mercato. La quota fair e' 1.58 contro una quota disponibile di 2.36. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.552,
+   "why": "Gol attesi 2.13 contro 1.00, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.2%. Sul segno 1 il modello dice 63.2% contro il 41.9% del consenso di 21 bookmaker, miglior prezzo 2.36 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.632,
+    "probMercato": 0.419,
+    "prezzo": 2.36,
+    "book": "1xBet",
+    "nBook": 21,
+    "valore": 0.492
+   },
+   "model_version": "football-v1-baseline",
+   "id": "rayo vallecano-real oviedo|2026-09-05T16:30:00.000Z|standard|Multigol trasferta 1-2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Rayo Vallecano - Real Oviedo",
+   "quando": "sab 05/09, 18:30",
+   "ore": 119,
+   "match": "rayo vallecano-real oviedo",
+   "inizio": "2026-09-05T16:30:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6322,
+     "PX": 0.2005,
+     "P2": 0.1673,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.6196,
+     "PX": 0.2165,
+     "P2": 0.164,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.135,
+     "lambda_away": 1.003
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 2.36,
+     "book": "1xBet",
+     "n_book": 21,
+     "no_vig_probability": 0.419
+    },
+    "value": {
+     "fair_odds": 1.582,
+     "edge": 0.213,
+     "ev": 0.4915
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.213,
+     "confidence": 19,
+     "data_quality": 55
+    },
+    "market_gap": {
+     "valore": 0.213,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 19 < 55",
+     "agreement LOW",
+     "market gap 21.3pp > 5pp"
+    ],
+    "opportunity_score": 0.5195,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 89.6,
+      "current_season_contribution_pct": 10.4
+     },
+     "ospite": {
+      "matches_current_season": 0,
+      "previous_season_contribution_pct": 100,
+      "current_season_contribution_pct": 0
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Rayo Vallecano\" il 63.2% contro il 41.9% del mercato. La quota fair e' 1.58 contro una quota disponibile di 2.36. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "mercato": "Over 1.5",
+   "prob": 0.821,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 2.13 contro 1.00, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 82.1%. Sul segno 1 il modello dice 63.2% contro il 41.9% del consenso di 21 bookmaker, miglior prezzo 2.36 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "rayo vallecano-real oviedo|2026-09-05T16:30:00.000Z|standard|Over 1.5"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Lens - Lorient",
+   "quando": "sab 05/09, 17:15",
+   "ore": 118,
+   "match": "lens-lorient",
+   "inizio": "2026-09-05T15:15:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.7066,
+     "PX": 0.1675,
+     "P2": 0.1259,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.7174,
+     "PX": 0.1548,
+     "P2": 0.1278,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.736,
+     "lambda_away": 1.126
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 1.5,
+     "book": "1xBet",
+     "n_book": 23,
+     "no_vig_probability": 0.65
+    },
+    "value": {
+     "fair_odds": 1.414,
+     "edge": 0.057,
+     "ev": 0.0605
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.0674,
+     "confidence": 47,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.057,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 47 < 55",
+     "market gap 5.7pp > 5pp"
+    ],
+    "opportunity_score": 0.4357,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Lens\" il 70.7% contro il 65.0% del mercato. La quota fair e' 1.41 contro una quota disponibile di 1.50. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol 2-4",
+   "prob": 0.559,
+   "why": "Gol attesi 2.74 contro 1.13, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.9%. Sul segno 1 il modello dice 70.7% contro il 65.0% del consenso di 23 bookmaker, miglior prezzo 1.50 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.707,
+    "probMercato": 0.65,
+    "prezzo": 1.5,
+    "book": "1xBet",
+    "nBook": 23,
+    "valore": 0.06
+   },
+   "model_version": "football-v1-baseline",
+   "id": "lens-lorient|2026-09-05T15:15:00.000Z|standard|Multigol 2-4"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Lens - Lorient",
+   "quando": "sab 05/09, 17:15",
+   "ore": 118,
+   "match": "lens-lorient",
+   "inizio": "2026-09-05T15:15:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.7066,
+     "PX": 0.1675,
+     "P2": 0.1259,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.7174,
+     "PX": 0.1548,
+     "P2": 0.1278,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.736,
+     "lambda_away": 1.126
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 1.5,
+     "book": "1xBet",
+     "n_book": 23,
+     "no_vig_probability": 0.65
+    },
+    "value": {
+     "fair_odds": 1.414,
+     "edge": 0.057,
+     "ev": 0.0605
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.0674,
+     "confidence": 47,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.057,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 47 < 55",
+     "market gap 5.7pp > 5pp"
+    ],
+    "opportunity_score": 0.4357,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     },
+     "ospite": {
+      "matches_current_season": 2,
+      "previous_season_contribution_pct": 87.9,
+      "current_season_contribution_pct": 12.1
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Lens\" il 70.7% contro il 65.0% del mercato. La quota fair e' 1.41 contro una quota disponibile di 1.50. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "12",
+   "prob": 0.833,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 2.74 contro 1.13, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 83.3%. Sul segno 1 il modello dice 70.7% contro il 65.0% del consenso di 23 bookmaker, miglior prezzo 1.50 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "lens-lorient|2026-09-05T15:15:00.000Z|standard|12"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Bayer Leverkusen - Union Berlin",
+   "quando": "sab 05/09, 15:30",
+   "ore": 116,
+   "match": "leverkusen-union berlin",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6779,
+     "PX": 0.1733,
+     "P2": 0.1488,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.693,
+     "PX": 0.1548,
+     "P2": 0.1521,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.558,
+     "lambda_away": 1.143
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 1.51,
+     "book": "GTbets",
+     "n_book": 24,
+     "no_vig_probability": 0.653
+    },
+    "value": {
+     "fair_odds": 1.475,
+     "edge": 0.025,
+     "ev": 0.0238
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.04,
+     "confidence": 69,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.025,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.4473,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Bayer Leverkusen\" il 67.8% contro il 65.3% del mercato. La quota fair e' 1.47 contro una quota disponibile di 1.51. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol 2-4",
+   "prob": 0.572,
+   "why": "Gol attesi 2.56 contro 1.14, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.2%. Sul segno 1 il modello dice 67.8% contro il 65.3% del consenso di 24 bookmaker, miglior prezzo 1.51 su GTbets.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.678,
+    "probMercato": 0.653,
+    "prezzo": 1.51,
+    "book": "GTbets",
+    "nBook": 24,
+    "valore": 0.024
+   },
+   "model_version": "football-v1-baseline",
+   "id": "leverkusen-union berlin|2026-09-05T13:30:00.000Z|standard|Multigol 2-4"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Bayer Leverkusen - Union Berlin",
+   "quando": "sab 05/09, 15:30",
+   "ore": 116,
+   "match": "leverkusen-union berlin",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.6779,
+     "PX": 0.1733,
+     "P2": 0.1488,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.693,
+     "PX": 0.1548,
+     "P2": 0.1521,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.558,
+     "lambda_away": 1.143
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 1.51,
+     "book": "GTbets",
+     "n_book": 24,
+     "no_vig_probability": 0.653
+    },
+    "value": {
+     "fair_odds": 1.475,
+     "edge": 0.025,
+     "ev": 0.0238
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.04,
+     "confidence": 69,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.025,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.4473,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Bayer Leverkusen\" il 67.8% contro il 65.3% del mercato. La quota fair e' 1.47 contro una quota disponibile di 1.51. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol 1-5",
+   "prob": 0.804,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 2.56 contro 1.14, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.4%. Sul segno 1 il modello dice 67.8% contro il 65.3% del consenso di 24 bookmaker, miglior prezzo 1.51 su GTbets.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "leverkusen-union berlin|2026-09-05T13:30:00.000Z|standard|Multigol 1-5"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Hoffenheim - Borussia Dortmund",
+   "quando": "sab 05/09, 15:30",
+   "ore": 116,
+   "match": "hoffenheim-dortmund",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3932,
+     "PX": 0.2377,
+     "P2": 0.3691,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3753,
+     "PX": 0.2723,
+     "P2": 0.3523,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.636,
+     "lambda_away": 1.58
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 3.02,
+     "book": "Pinnacle",
+     "n_book": 24,
+     "no_vig_probability": 0.331
+    },
+    "value": {
+     "fair_odds": 2.545,
+     "edge": 0.062,
+     "ev": 0.1869
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.062,
+     "confidence": 45,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.062,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 45 < 55",
+     "market gap 6.2pp > 5pp"
+    ],
+    "opportunity_score": 0.6036,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Hoffenheim\" il 39.3% contro il 33.1% del mercato. La quota fair e' 2.54 contro una quota disponibile di 3.02. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol 1-3",
+   "prob": 0.557,
+   "why": "Gol attesi 1.64 contro 1.58, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.7%. Sul segno 1 il modello dice 39.3% contro il 33.1% del consenso di 24 bookmaker, miglior prezzo 3.02 su Pinnacle.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.393,
+    "probMercato": 0.331,
+    "prezzo": 3.02,
+    "book": "Pinnacle",
+    "nBook": 24,
+    "valore": 0.187
+   },
+   "model_version": "football-v1-baseline",
+   "id": "hoffenheim-dortmund|2026-09-05T13:30:00.000Z|standard|Multigol 1-3"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Hoffenheim - Borussia Dortmund",
+   "quando": "sab 05/09, 15:30",
+   "ore": 116,
+   "match": "hoffenheim-dortmund",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3932,
+     "PX": 0.2377,
+     "P2": 0.3691,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3753,
+     "PX": 0.2723,
+     "P2": 0.3523,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.636,
+     "lambda_away": 1.58
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 3.02,
+     "book": "Pinnacle",
+     "n_book": 24,
+     "no_vig_probability": 0.331
+    },
+    "value": {
+     "fair_odds": 2.545,
+     "edge": 0.062,
+     "ev": 0.1869
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.062,
+     "confidence": 45,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.062,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 45 < 55",
+     "market gap 6.2pp > 5pp"
+    ],
+    "opportunity_score": 0.6036,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Hoffenheim\" il 39.3% contro il 33.1% del mercato. La quota fair e' 2.54 contro una quota disponibile di 3.02. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Casa segna",
+   "prob": 0.805,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.64 contro 1.58, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.5%. Sul segno 1 il modello dice 39.3% contro il 33.1% del consenso di 24 bookmaker, miglior prezzo 3.02 su Pinnacle.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "hoffenheim-dortmund|2026-09-05T13:30:00.000Z|standard|Casa segna"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Hoffenheim - Borussia Dortmund",
+   "quando": "sab 05/09, 15:30",
+   "ore": 116,
+   "match": "hoffenheim-dortmund",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3932,
+     "PX": 0.2377,
+     "P2": 0.3691,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3753,
+     "PX": 0.2723,
+     "P2": 0.3523,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.636,
+     "lambda_away": 1.58
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 3.02,
+     "book": "Pinnacle",
+     "n_book": 24,
+     "no_vig_probability": 0.331
+    },
+    "value": {
+     "fair_odds": 2.545,
+     "edge": 0.062,
+     "ev": 0.1869
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.062,
+     "confidence": 45,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.062,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 45 < 55",
+     "market gap 6.2pp > 5pp"
+    ],
+    "opportunity_score": 0.6036,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Hoffenheim\" il 39.3% contro il 33.1% del mercato. La quota fair e' 2.54 contro una quota disponibile di 3.02. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Hoffenheim vincente",
+   "prob": 0.393,
+   "prezzo": 3.02,
+   "why": "Il modello da questo esito al 39.3%, il consenso di 24 bookmaker al 33.1%. Al prezzo migliore, 3.02 su Pinnacle, il valore atteso e' 18.7%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.393,
+    "probMercato": 0.331,
+    "prezzo": 3.02,
+    "book": "Pinnacle",
+    "nBook": 24,
+    "valore": 0.187
+   },
+   "model_version": "football-v1-baseline",
+   "id": "hoffenheim-dortmund|2026-09-05T13:30:00.000Z|sorpresa|Hoffenheim vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Borussia M.Gladbach - Elversberg",
+   "quando": "sab 05/09, 15:30",
+   "ore": 116,
+   "match": "borussia m gladbach-elversberg",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.5981,
+     "PX": 0.209,
+     "P2": 0.1929,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5663,
+     "PX": 0.2511,
+     "P2": 0.1826,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.109,
+     "lambda_away": 1.121
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 1.88,
+     "book": "1xBet",
+     "n_book": 24,
+     "no_vig_probability": 0.522
+    },
+    "value": {
+     "fair_odds": 1.672,
+     "edge": 0.076,
+     "ev": 0.1242
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.076,
+     "confidence": 44,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.076,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 44 < 55",
+     "market gap 7.6pp > 5pp"
+    ],
+    "opportunity_score": 0.5129,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Borussia M.Gladbach\" il 59.8% contro il 52.2% del mercato. La quota fair e' 1.67 contro una quota disponibile di 1.88. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol 1-3",
+   "prob": 0.554,
+   "why": "Gol attesi 2.11 contro 1.12, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.4%. Sul segno 1 il modello dice 59.8% contro il 52.2% del consenso di 24 bookmaker, miglior prezzo 1.88 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.598,
+    "probMercato": 0.522,
+    "prezzo": 1.88,
+    "book": "1xBet",
+    "nBook": 24,
+    "valore": 0.124
+   },
+   "model_version": "football-v1-baseline",
+   "id": "borussia m gladbach-elversberg|2026-09-05T13:30:00.000Z|standard|Multigol 1-3"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Borussia M.Gladbach - Elversberg",
+   "quando": "sab 05/09, 15:30",
+   "ore": 116,
+   "match": "borussia m gladbach-elversberg",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.5981,
+     "PX": 0.209,
+     "P2": 0.1929,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5663,
+     "PX": 0.2511,
+     "P2": 0.1826,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.109,
+     "lambda_away": 1.121
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 1.88,
+     "book": "1xBet",
+     "n_book": 24,
+     "no_vig_probability": 0.522
+    },
+    "value": {
+     "fair_odds": 1.672,
+     "edge": 0.076,
+     "ev": 0.1242
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.076,
+     "confidence": 44,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.076,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 44 < 55",
+     "market gap 7.6pp > 5pp"
+    ],
+    "opportunity_score": 0.5129,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Borussia M.Gladbach\" il 59.8% contro il 52.2% del mercato. La quota fair e' 1.67 contro una quota disponibile di 1.88. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "1X",
+   "prob": 0.807,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 2.11 contro 1.12, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.7%. Sul segno 1 il modello dice 59.8% contro il 52.2% del consenso di 24 bookmaker, miglior prezzo 1.88 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "borussia m gladbach-elversberg|2026-09-05T13:30:00.000Z|standard|1X"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Werder Bremen - RasenBallsport Leipzig",
+   "quando": "sab 05/09, 15:30",
+   "ore": 116,
+   "match": "werder bremen-rasenballsport leipzig",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.2487,
+     "PX": 0.2152,
+     "P2": 0.5361,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.2373,
+     "PX": 0.2511,
+     "P2": 0.5116,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.366,
+     "lambda_away": 2.074
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 1.96,
+     "book": "GTbets",
+     "n_book": 24,
+     "no_vig_probability": 0.511
+    },
+    "value": {
+     "fair_odds": 1.866,
+     "edge": 0.025,
+     "ev": 0.0506
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.025,
+     "confidence": 85,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.025,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6128,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di RasenBallsport Leipzig\" il 53.6% contro il 51.1% del mercato. La quota fair e' 1.87 contro una quota disponibile di 1.96. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.587,
+   "why": "Gol attesi 1.37 contro 2.07, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 58.7%. Sul segno 2 il modello dice 53.6% contro il 51.1% del consenso di 24 bookmaker, miglior prezzo 1.96 su GTbets.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.536,
+    "probMercato": 0.511,
+    "prezzo": 1.96,
+    "book": "GTbets",
+    "nBook": 24,
+    "valore": 0.051
+   },
+   "model_version": "football-v1-baseline",
+   "id": "werder bremen-rasenballsport leipzig|2026-09-05T13:30:00.000Z|standard|Multigol casa 1-2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Werder Bremen - RasenBallsport Leipzig",
+   "quando": "sab 05/09, 15:30",
+   "ore": 116,
+   "match": "werder bremen-rasenballsport leipzig",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.2487,
+     "PX": 0.2152,
+     "P2": 0.5361,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.2373,
+     "PX": 0.2511,
+     "P2": 0.5116,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.366,
+     "lambda_away": 2.074
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 1.96,
+     "book": "GTbets",
+     "n_book": 24,
+     "no_vig_probability": 0.511
+    },
+    "value": {
+     "fair_odds": 1.866,
+     "edge": 0.025,
+     "ev": 0.0506
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.025,
+     "confidence": 85,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.025,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": true,
+    "best_pick_motivi_esclusione": [],
+    "opportunity_score": 0.6128,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di RasenBallsport Leipzig\" il 53.6% contro il 51.1% del mercato. La quota fair e' 1.87 contro una quota disponibile di 1.96. Il modello e il mercato mostrano un accordo alto."
+   },
+   "mercato": "Multigol 1-5",
+   "prob": 0.832,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.37 contro 2.07, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 83.2%. Sul segno 2 il modello dice 53.6% contro il 51.1% del consenso di 24 bookmaker, miglior prezzo 1.96 su GTbets.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "werder bremen-rasenballsport leipzig|2026-09-05T13:30:00.000Z|standard|Multigol 1-5"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Paderborn - Freiburg",
+   "quando": "sab 05/09, 15:30",
+   "ore": 116,
+   "match": "paderborn-freiburg",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3107,
+     "PX": 0.35,
+     "P2": 0.3393,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3327,
+     "PX": 0.3039,
+     "P2": 0.3634,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 0.807,
+     "lambda_away": 0.858
+    },
+    "market": {
+     "esito_riferimento": "X",
+     "bookmaker_odds": 3.85,
+     "book": "Coolbet",
+     "n_book": 24,
+     "no_vig_probability": 0.261
+    },
+    "value": {
+     "fair_odds": 2.857,
+     "edge": 0.089,
+     "ev": 0.3475
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.089,
+     "confidence": 31,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.089,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 31 < 55",
+     "agreement LOW",
+     "market gap 8.9pp > 5pp"
+    ],
+    "opportunity_score": 0.56,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"il pareggio\" il 35.0% contro il 26.1% del mercato. La quota fair e' 2.86 contro una quota disponibile di 3.85. Il modello e il mercato mostrano un forte disaccordo."
+   },
+   "mercato": "Casa segna",
+   "prob": 0.554,
+   "why": "Gol attesi 0.81 contro 0.86, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.4%. Sul segno X il modello dice 35.0% contro il 26.1% del consenso di 24 bookmaker, miglior prezzo 3.85 su Coolbet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "X",
+    "probModello": 0.35,
+    "probMercato": 0.261,
+    "prezzo": 3.85,
+    "book": "Coolbet",
+    "nBook": 24,
+    "valore": 0.348
+   },
+   "model_version": "football-v1-baseline",
+   "id": "paderborn-freiburg|2026-09-05T13:30:00.000Z|standard|Casa segna"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Paderborn - Freiburg",
+   "quando": "sab 05/09, 15:30",
+   "ore": 116,
+   "match": "paderborn-freiburg",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3107,
+     "PX": 0.35,
+     "P2": 0.3393,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3327,
+     "PX": 0.3039,
+     "P2": 0.3634,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 0.807,
+     "lambda_away": 0.858
+    },
+    "market": {
+     "esito_riferimento": "X",
+     "bookmaker_odds": 3.85,
+     "book": "Coolbet",
+     "n_book": 24,
+     "no_vig_probability": 0.261
+    },
+    "value": {
+     "fair_odds": 2.857,
+     "edge": 0.089,
+     "ev": 0.3475
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.089,
+     "confidence": 31,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.089,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 31 < 55",
+     "agreement LOW",
+     "market gap 8.9pp > 5pp"
+    ],
+    "opportunity_score": 0.56,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"il pareggio\" il 35.0% contro il 26.1% del mercato. La quota fair e' 2.86 contro una quota disponibile di 3.85. Il modello e il mercato mostrano un forte disaccordo."
+   },
+   "mercato": "Multigol 1-5",
+   "prob": 0.801,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 0.81 contro 0.86, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.1%. Sul segno X il modello dice 35.0% contro il 26.1% del consenso di 24 bookmaker, miglior prezzo 3.85 su Coolbet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "paderborn-freiburg|2026-09-05T13:30:00.000Z|standard|Multigol 1-5"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Paderborn - Freiburg",
+   "quando": "sab 05/09, 15:30",
+   "ore": 116,
+   "match": "paderborn-freiburg",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3107,
+     "PX": 0.35,
+     "P2": 0.3393,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3327,
+     "PX": 0.3039,
+     "P2": 0.3634,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 0.807,
+     "lambda_away": 0.858
+    },
+    "market": {
+     "esito_riferimento": "X",
+     "bookmaker_odds": 3.85,
+     "book": "Coolbet",
+     "n_book": 24,
+     "no_vig_probability": 0.261
+    },
+    "value": {
+     "fair_odds": 2.857,
+     "edge": 0.089,
+     "ev": 0.3475
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.089,
+     "confidence": 31,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.089,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 31 < 55",
+     "agreement LOW",
+     "market gap 8.9pp > 5pp"
+    ],
+    "opportunity_score": 0.56,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"il pareggio\" il 35.0% contro il 26.1% del mercato. La quota fair e' 2.86 contro una quota disponibile di 3.85. Il modello e il mercato mostrano un forte disaccordo."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Pareggio",
+   "prob": 0.35,
+   "prezzo": 3.85,
+   "why": "Il modello da questo esito al 35.0%, il consenso di 24 bookmaker al 26.1%. Al prezzo migliore, 3.85 su Coolbet, il valore atteso e' 34.8%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "X",
+    "probModello": 0.35,
+    "probMercato": 0.261,
+    "prezzo": 3.85,
+    "book": "Coolbet",
+    "nBook": 24,
+    "valore": 0.348
+   },
+   "model_version": "football-v1-baseline",
+   "id": "paderborn-freiburg|2026-09-05T13:30:00.000Z|sorpresa|Pareggio"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Schalke 04 - Bayern Munich",
+   "quando": "sab 05/09, 18:30",
+   "ore": 119,
+   "match": "schalke 04-bayern munchen",
+   "inizio": "2026-09-05T16:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.0186,
+     "PX": 0.0249,
+     "P2": 0.9564,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.0191,
+     "PX": 0,
+     "P2": 0.9809,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.93,
+     "lambda_away": 7.748
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 1.23,
+     "book": "GTbets",
+     "n_book": 24,
+     "no_vig_probability": 0.809
+    },
+    "value": {
+     "fair_odds": 1.046,
+     "edge": 0.147,
+     "ev": 0.1759
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.1719,
+     "confidence": 25,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.147,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 25 < 55",
+     "agreement LOW",
+     "market gap 14.7pp > 5pp"
+    ],
+    "opportunity_score": 0.4382,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Bayern Munich\" il 95.6% contro il 80.9% del mercato. La quota fair e' 1.05 contro una quota disponibile di 1.23. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.55,
+   "why": "Gol attesi 1.93 contro 7.75, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.0%. Sul segno 2 il modello dice 95.6% contro il 80.9% del consenso di 24 bookmaker, miglior prezzo 1.23 su GTbets.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.956,
+    "probMercato": 0.809,
+    "prezzo": 1.23,
+    "book": "GTbets",
+    "nBook": 24,
+    "valore": 0.176
+   },
+   "model_version": "football-v1-baseline",
+   "id": "schalke 04-bayern munchen|2026-09-05T16:30:00.000Z|standard|Multigol casa 1-2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Schalke 04 - Bayern Munich",
+   "quando": "sab 05/09, 18:30",
+   "ore": 119,
+   "match": "schalke 04-bayern munchen",
+   "inizio": "2026-09-05T16:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.0186,
+     "PX": 0.0249,
+     "P2": 0.9564,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.0191,
+     "PX": 0,
+     "P2": 0.9809,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.93,
+     "lambda_away": 7.748
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 1.23,
+     "book": "GTbets",
+     "n_book": 24,
+     "no_vig_probability": 0.809
+    },
+    "value": {
+     "fair_odds": 1.046,
+     "edge": 0.147,
+     "ev": 0.1759
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.1719,
+     "confidence": 25,
+     "data_quality": 58
+    },
+    "market_gap": {
+     "valore": 0.147,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 25 < 55",
+     "agreement LOW",
+     "market gap 14.7pp > 5pp"
+    ],
+    "opportunity_score": 0.4382,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 1,
+      "previous_season_contribution_pct": 93.6,
+      "current_season_contribution_pct": 6.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Bayern Munich\" il 95.6% contro il 80.9% del mercato. La quota fair e' 1.05 contro una quota disponibile di 1.23. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
+   },
+   "mercato": "Gol",
+   "prob": 0.854,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.93 contro 7.75, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 85.4%. Sul segno 2 il modello dice 95.6% contro il 80.9% del consenso di 24 bookmaker, miglior prezzo 1.23 su GTbets.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "schalke 04-bayern munchen|2026-09-05T16:30:00.000Z|standard|Gol"
   }
  ],
- "aggiornato": "2026-08-31T17:32:42.207Z",
+ "aggiornato": "2026-08-31T18:55:03.548Z",
  "diagnostica": [
-  "107 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport"
+  "82 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport"
  ],
  "nota": "La quota e la quota minima 1/probabilita, non il prezzo di un bookmaker: il saldo va letto come limite superiore. La categoria cassaforte nasce dalla combinazione costruita nella pagina e non e ricavabile da qui, quindi non viene aggiornata in automatico."
 }
