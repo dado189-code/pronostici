@@ -1,6 +1,94 @@
 {
  "chiusi": [
   {
+   "id": "aston villa-arsenal|2026-08-31T19:00:00.000Z|sorpresa|Aston Villa vincente",
+   "cat": "sorpresa",
+   "data": "31/08",
+   "evento": "Aston Villa - Arsenal",
+   "mercato": "Aston Villa vincente",
+   "quota": 5.38,
+   "prezzo": 7,
+   "risultato": "2-1",
+   "esito": "ok"
+  },
+  {
+   "id": "aston villa-arsenal|2026-08-31T19:00:00.000Z|standard|Multigol casa 1-2",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Aston Villa - Arsenal",
+   "mercato": "Multigol casa 1-2",
+   "quota": 1.81,
+   "prezzo": null,
+   "risultato": "2-1",
+   "esito": "ok"
+  },
+  {
+   "id": "aston villa-arsenal|2026-08-31T19:00:00.000Z|standard|Over 2.5",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Aston Villa - Arsenal",
+   "mercato": "Over 2.5",
+   "quota": 1.81,
+   "prezzo": null,
+   "risultato": "2-1",
+   "esito": "ok"
+  },
+  {
+   "id": "aston villa-arsenal|2026-08-31T19:00:00.000Z|standard|X2",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Aston Villa - Arsenal",
+   "mercato": "X2",
+   "quota": 1.23,
+   "prezzo": null,
+   "risultato": "2-1",
+   "esito": "ko"
+  },
+  {
+   "id": "atalanta-bologna|2026-08-31T18:45:00.000Z|sorpresa|Bologna vincente",
+   "cat": "sorpresa",
+   "data": "31/08",
+   "evento": "Atalanta - Bologna",
+   "mercato": "Bologna vincente",
+   "quota": 3.66,
+   "prezzo": 4.35,
+   "risultato": "0-1",
+   "esito": "ok"
+  },
+  {
+   "id": "atalanta-bologna|2026-08-31T18:45:00.000Z|standard|Multigol casa 1-2",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Atalanta - Bologna",
+   "mercato": "Multigol casa 1-2",
+   "quota": 1.77,
+   "prezzo": null,
+   "risultato": "0-1",
+   "esito": "ko"
+  },
+  {
+   "id": "atalanta-bologna|2026-08-31T18:45:00.000Z|standard|Over 1.5",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Atalanta - Bologna",
+   "mercato": "Over 1.5",
+   "quota": 1.24,
+   "prezzo": null,
+   "risultato": "0-1",
+   "esito": "ko"
+  },
+  {
+   "id": "atalanta-bologna|2026-08-31T18:45:00.000Z|standard|Under 4.5",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Atalanta - Bologna",
+   "mercato": "Under 4.5",
+   "quota": 1.24,
+   "prezzo": null,
+   "risultato": "0-1",
+   "esito": "ok"
+  },
+  {
    "id": "auxerre-angers|2026-08-29T18:45:00.000Z|standard|Multigol 1-5",
    "cat": "standard",
    "data": "29/08",
@@ -20,6 +108,61 @@
    "quota": 1.81,
    "prezzo": null,
    "risultato": "3-1",
+   "esito": "ok"
+  },
+  {
+   "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|sorpresa|Rayo Vallecano vincente",
+   "cat": "sorpresa",
+   "data": "31/08",
+   "evento": "Barcelona - Rayo Vallecano",
+   "mercato": "Rayo Vallecano vincente",
+   "quota": 10.53,
+   "prezzo": 19.5,
+   "risultato": "1-0",
+   "esito": "ko"
+  },
+  {
+   "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|standard|Multigol casa 1-3",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Barcelona - Rayo Vallecano",
+   "mercato": "Multigol casa 1-3",
+   "quota": 1.82,
+   "prezzo": null,
+   "risultato": "1-0",
+   "esito": "ok"
+  },
+  {
+   "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|standard|Multigol trasferta 1-2",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Barcelona - Rayo Vallecano",
+   "mercato": "Multigol trasferta 1-2",
+   "quota": 1.75,
+   "prezzo": null,
+   "risultato": "1-0",
+   "esito": "ko"
+  },
+  {
+   "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|standard|Over 2.5",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Barcelona - Rayo Vallecano",
+   "mercato": "Over 2.5",
+   "quota": 1.22,
+   "prezzo": null,
+   "risultato": "1-0",
+   "esito": "ko"
+  },
+  {
+   "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|standard|Under 4.5",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Barcelona - Rayo Vallecano",
+   "mercato": "Under 4.5",
+   "quota": 1.82,
+   "prezzo": null,
+   "risultato": "1-0",
    "esito": "ok"
   },
   {
@@ -430,6 +573,39 @@
    "esito": "ok"
   },
   {
+   "id": "lecce-roma|2026-08-31T16:30:00.000Z|sorpresa|Lecce vincente",
+   "cat": "sorpresa",
+   "data": "31/08",
+   "evento": "Lecce - Roma",
+   "mercato": "Lecce vincente",
+   "quota": 6.13,
+   "prezzo": 8.6,
+   "risultato": "0-2",
+   "esito": "ko"
+  },
+  {
+   "id": "lecce-roma|2026-08-31T16:30:00.000Z|standard|12",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Lecce - Roma",
+   "mercato": "12",
+   "quota": 1.25,
+   "prezzo": null,
+   "risultato": "0-2",
+   "esito": "ok"
+  },
+  {
+   "id": "lecce-roma|2026-08-31T16:30:00.000Z|standard|Over 2.5",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Lecce - Roma",
+   "mercato": "Over 2.5",
+   "quota": 1.79,
+   "prezzo": null,
+   "risultato": "0-2",
+   "esito": "ko"
+  },
+  {
    "id": "leeds-brentford|2026-08-30T13:00:00.000Z|standard|Casa segna",
    "cat": "standard",
    "data": "30/08",
@@ -692,6 +868,28 @@
    "prezzo": null,
    "risultato": "0-0",
    "esito": "ko"
+  },
+  {
+   "id": "osasuna-getafe|2026-08-31T17:30:00.000Z|standard|Multigol 1-4",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Osasuna - Getafe",
+   "mercato": "Multigol 1-4",
+   "quota": 1.23,
+   "prezzo": null,
+   "risultato": "2-1",
+   "esito": "ok"
+  },
+  {
+   "id": "osasuna-getafe|2026-08-31T17:30:00.000Z|standard|Multigol 2-5",
+   "cat": "standard",
+   "data": "31/08",
+   "evento": "Osasuna - Getafe",
+   "mercato": "Multigol 2-5",
+   "quota": 1.71,
+   "prezzo": null,
+   "risultato": "2-1",
+   "esito": "ok"
   },
   {
    "id": "paris-nice|2026-08-30T13:00:00.000Z|standard|Multigol 1-5",
@@ -1016,344 +1214,6 @@
  "pendenti": [
   {
    "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Lecce - Roma",
-   "quando": "lun 31/08, 16:30",
-   "ore": 52,
-   "match": "lecce-roma",
-   "inizio": "2026-08-31T16:30:00.000Z",
-   "understat": "Serie_A",
-   "mercato": "Over 2.5",
-   "prob": 0.559,
-   "why": "Gol attesi 0.90 contro 2.02, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.9%. Sul segno 1 il modello dice 16.3% contro il 12.9% del consenso di 24 bookmaker, miglior prezzo 8.60 su Betfair.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.163,
-    "probMercato": 0.129,
-    "prezzo": 8.6,
-    "book": "Betfair",
-    "nBook": 24,
-    "valore": 0.402
-   },
-   "id": "lecce-roma|2026-08-31T16:30:00.000Z|standard|Over 2.5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Lecce - Roma",
-   "quando": "lun 31/08, 16:30",
-   "ore": 52,
-   "match": "lecce-roma",
-   "inizio": "2026-08-31T16:30:00.000Z",
-   "understat": "Serie_A",
-   "mercato": "12",
-   "prob": 0.803,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 0.90 contro 2.02, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.3%. Sul segno 1 il modello dice 16.3% contro il 12.9% del consenso di 24 bookmaker, miglior prezzo 8.60 su Betfair.",
-   "src": "modello xG Dixon-Coles",
-   "id": "lecce-roma|2026-08-31T16:30:00.000Z|standard|12"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Lecce - Roma",
-   "quando": "lun 31/08, 16:30",
-   "ore": 52,
-   "match": "lecce-roma",
-   "inizio": "2026-08-31T16:30:00.000Z",
-   "understat": "Serie_A",
-   "tipo": "sorpresa",
-   "mercato": "Lecce vincente",
-   "prob": 0.163,
-   "prezzo": 8.6,
-   "why": "Il modello da questo esito al 16.3%, il consenso di 24 bookmaker al 12.9%. Al prezzo migliore, 8.60 su Betfair, il valore atteso e' 40.2%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.163,
-    "probMercato": 0.129,
-    "prezzo": 8.6,
-    "book": "Betfair",
-    "nBook": 24,
-    "valore": 0.402
-   },
-   "id": "lecce-roma|2026-08-31T16:30:00.000Z|sorpresa|Lecce vincente"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Atalanta - Bologna",
-   "quando": "lun 31/08, 18:45",
-   "ore": 54,
-   "match": "atalanta-bologna",
-   "inizio": "2026-08-31T18:45:00.000Z",
-   "understat": "Serie_A",
-   "mercato": "Multigol casa 1-2",
-   "prob": 0.565,
-   "why": "Gol attesi 1.80 contro 1.26, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.5%. Sul segno 2 il modello dice 27.3% contro il 23.4% del consenso di 24 bookmaker, miglior prezzo 4.35 su Unibet (SE).",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.273,
-    "probMercato": 0.234,
-    "prezzo": 4.35,
-    "book": "Unibet (SE)",
-    "nBook": 24,
-    "valore": 0.187
-   },
-   "id": "atalanta-bologna|2026-08-31T18:45:00.000Z|standard|Multigol casa 1-2"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Atalanta - Bologna",
-   "quando": "lun 31/08, 18:45",
-   "ore": 54,
-   "match": "atalanta-bologna",
-   "inizio": "2026-08-31T18:45:00.000Z",
-   "understat": "Serie_A",
-   "mercato": "Over 1.5",
-   "prob": 0.805,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.80 contro 1.26, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.5%. Sul segno 2 il modello dice 27.3% contro il 23.4% del consenso di 24 bookmaker, miglior prezzo 4.35 su Unibet (SE).",
-   "src": "modello xG Dixon-Coles",
-   "id": "atalanta-bologna|2026-08-31T18:45:00.000Z|standard|Over 1.5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Atalanta - Bologna",
-   "quando": "lun 31/08, 18:45",
-   "ore": 54,
-   "match": "atalanta-bologna",
-   "inizio": "2026-08-31T18:45:00.000Z",
-   "understat": "Serie_A",
-   "tipo": "sorpresa",
-   "mercato": "Bologna vincente",
-   "prob": 0.273,
-   "prezzo": 4.35,
-   "why": "Il modello da questo esito al 27.3%, il consenso di 24 bookmaker al 23.4%. Al prezzo migliore, 4.35 su Unibet (SE), il valore atteso e' 18.7%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.273,
-    "probMercato": 0.234,
-    "prezzo": 4.35,
-    "book": "Unibet (SE)",
-    "nBook": 24,
-    "valore": 0.187
-   },
-   "id": "atalanta-bologna|2026-08-31T18:45:00.000Z|sorpresa|Bologna vincente"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Aston Villa - Arsenal",
-   "quando": "lun 31/08, 19:00",
-   "ore": 55,
-   "match": "aston villa-arsenal",
-   "inizio": "2026-08-31T19:00:00.000Z",
-   "understat": "EPL",
-   "mercato": "Multigol casa 1-2",
-   "prob": 0.552,
-   "why": "Gol attesi 1.00 contro 1.85, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.2%. Sul segno 1 il modello dice 18.6% contro il 15.2% del consenso di 25 bookmaker, miglior prezzo 7.00 su Unibet (SE).",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.186,
-    "probMercato": 0.152,
-    "prezzo": 7,
-    "book": "Unibet (SE)",
-    "nBook": 25,
-    "valore": 0.303
-   },
-   "id": "aston villa-arsenal|2026-08-31T19:00:00.000Z|standard|Multigol casa 1-2"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Aston Villa - Arsenal",
-   "quando": "lun 31/08, 19:00",
-   "ore": 55,
-   "match": "aston villa-arsenal",
-   "inizio": "2026-08-31T19:00:00.000Z",
-   "understat": "EPL",
-   "mercato": "X2",
-   "prob": 0.814,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.00 contro 1.85, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.4%. Sul segno 1 il modello dice 18.6% contro il 15.2% del consenso di 25 bookmaker, miglior prezzo 7.00 su Unibet (SE).",
-   "src": "modello xG Dixon-Coles",
-   "id": "aston villa-arsenal|2026-08-31T19:00:00.000Z|standard|X2"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Aston Villa - Arsenal",
-   "quando": "lun 31/08, 19:00",
-   "ore": 55,
-   "match": "aston villa-arsenal",
-   "inizio": "2026-08-31T19:00:00.000Z",
-   "understat": "EPL",
-   "tipo": "sorpresa",
-   "mercato": "Aston Villa vincente",
-   "prob": 0.186,
-   "prezzo": 7,
-   "why": "Il modello da questo esito al 18.6%, il consenso di 25 bookmaker al 15.2%. Al prezzo migliore, 7.00 su Unibet (SE), il valore atteso e' 30.3%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.186,
-    "probMercato": 0.152,
-    "prezzo": 7,
-    "book": "Unibet (SE)",
-    "nBook": 25,
-    "valore": 0.303
-   },
-   "id": "aston villa-arsenal|2026-08-31T19:00:00.000Z|sorpresa|Aston Villa vincente"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Osasuna - Getafe",
-   "quando": "lun 31/08, 17:30",
-   "ore": 53,
-   "match": "osasuna-getafe",
-   "inizio": "2026-08-31T17:30:00.000Z",
-   "understat": "La_liga",
-   "mercato": "Multigol 2-5",
-   "prob": 0.584,
-   "why": "Gol attesi 1.38 contro 0.65, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 58.4%. Sul segno 1 il modello dice 54.7% contro il 43.8% del consenso di 21 bookmaker, miglior prezzo 2.27 su 1xBet.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.547,
-    "probMercato": 0.438,
-    "prezzo": 2.27,
-    "book": "1xBet",
-    "nBook": 21,
-    "valore": 0.241
-   },
-   "id": "osasuna-getafe|2026-08-31T17:30:00.000Z|standard|Multigol 2-5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Osasuna - Getafe",
-   "quando": "lun 31/08, 17:30",
-   "ore": 53,
-   "match": "osasuna-getafe",
-   "inizio": "2026-08-31T17:30:00.000Z",
-   "understat": "La_liga",
-   "mercato": "Multigol 1-4",
-   "prob": 0.813,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.38 contro 0.65, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.3%. Sul segno 1 il modello dice 54.7% contro il 43.8% del consenso di 21 bookmaker, miglior prezzo 2.27 su 1xBet.",
-   "src": "modello xG Dixon-Coles",
-   "id": "osasuna-getafe|2026-08-31T17:30:00.000Z|standard|Multigol 1-4"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Barcelona - Rayo Vallecano",
-   "quando": "lun 31/08, 19:30",
-   "ore": 55,
-   "match": "barcelona-rayo vallecano",
-   "inizio": "2026-08-31T19:30:00.000Z",
-   "understat": "La_liga",
-   "mercato": "Multigol trasferta 1-2",
-   "prob": 0.573,
-   "why": "Gol attesi 3.27 contro 1.15, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.3%. Sul segno 2 il modello dice 9.5% contro il 6.1% del consenso di 21 bookmaker, miglior prezzo 19.50 su Betfair.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.095,
-    "probMercato": 0.061,
-    "prezzo": 19.5,
-    "book": "Betfair",
-    "nBook": 21,
-    "valore": 0.86
-   },
-   "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|standard|Multigol trasferta 1-2"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Barcelona - Rayo Vallecano",
-   "quando": "lun 31/08, 19:30",
-   "ore": 55,
-   "match": "barcelona-rayo vallecano",
-   "inizio": "2026-08-31T19:30:00.000Z",
-   "understat": "La_liga",
-   "mercato": "Over 2.5",
-   "prob": 0.817,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 3.27 contro 1.15, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.7%. Sul segno 2 il modello dice 9.5% contro il 6.1% del consenso di 21 bookmaker, miglior prezzo 19.50 su Betfair.",
-   "src": "modello xG Dixon-Coles",
-   "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|standard|Over 2.5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Barcelona - Rayo Vallecano",
-   "quando": "lun 31/08, 19:30",
-   "ore": 55,
-   "match": "barcelona-rayo vallecano",
-   "inizio": "2026-08-31T19:30:00.000Z",
-   "understat": "La_liga",
-   "tipo": "sorpresa",
-   "mercato": "Rayo Vallecano vincente",
-   "prob": 0.095,
-   "prezzo": 19.5,
-   "why": "Il modello da questo esito al 9.5%, il consenso di 21 bookmaker al 6.1%. Al prezzo migliore, 19.50 su Betfair, il valore atteso e' 86.0%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.095,
-    "probMercato": 0.061,
-    "prezzo": 19.5,
-    "book": "Betfair",
-    "nBook": 21,
-    "valore": 0.86
-   },
-   "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|sorpresa|Rayo Vallecano vincente"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Barcelona - Rayo Vallecano",
-   "quando": "lun 31/08, 19:30",
-   "ore": 49,
-   "match": "barcelona-rayo vallecano",
-   "inizio": "2026-08-31T19:30:00.000Z",
-   "understat": "La_liga",
-   "mercato": "Multigol casa 1-3",
-   "prob": 0.55,
-   "why": "Gol attesi 3.27 contro 1.14, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.0%. Sul segno 2 il modello dice 9.5% contro il 6.1% del consenso di 21 bookmaker, miglior prezzo 19.50 su Betfair.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.095,
-    "probMercato": 0.061,
-    "prezzo": 19.5,
-    "book": "Betfair",
-    "nBook": 21,
-    "valore": 0.858
-   },
-   "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|standard|Multigol casa 1-3"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Atalanta - Bologna",
-   "quando": "lun 31/08, 18:45",
-   "ore": 34,
-   "match": "atalanta-bologna",
-   "inizio": "2026-08-31T18:45:00.000Z",
-   "understat": "Serie_A",
-   "mercato": "Under 4.5",
-   "prob": 0.804,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.79 contro 1.27, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.4%. Sul segno 2 il modello dice 27.6% contro il 23.3% del consenso di 24 bookmaker, miglior prezzo 4.30 su Betfair.",
-   "src": "modello xG Dixon-Coles",
-   "id": "atalanta-bologna|2026-08-31T18:45:00.000Z|standard|Under 4.5"
-  },
-  {
-   "sport": "calcio",
    "comp": "Liga",
    "evento": "Real Sociedad - Celta Vigo",
    "quando": "gio 03/09, 19:00",
@@ -1547,183 +1407,6 @@
    "src": "modello xG Dixon-Coles",
    "model_version": "football-v1-baseline",
    "id": "toulouse-lille|2026-09-03T18:45:00.000Z|standard|Multigol 1-4"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Premier League",
-   "evento": "Aston Villa - Arsenal",
-   "quando": "lun 31/08, 21:00",
-   "ore": 27,
-   "match": "aston villa-arsenal",
-   "inizio": "2026-08-31T19:00:00.000Z",
-   "understat": "EPL",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.1827,
-     "PX": 0.2532,
-     "P2": 0.5641,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.1753,
-     "PX": 0.2833,
-     "P2": 0.5413,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 1.005,
-     "lambda_away": 1.884
-    },
-    "market": {
-     "esito_riferimento": "1",
-     "bookmaker_odds": 7.2,
-     "book": "Betfair",
-     "n_book": 25,
-     "no_vig_probability": 0.147
-    },
-    "value": {
-     "fair_odds": 5.464,
-     "edge": 0.036,
-     "ev": 0.3176
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.036,
-     "confidence": 68,
-     "data_quality": 58
-    },
-    "value_class": "VALUE",
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 1,
-      "previous_season_contribution_pct": 94.3,
-      "current_season_contribution_pct": 5.7
-     },
-     "ospite": {
-      "matches_current_season": 1,
-      "previous_season_contribution_pct": 94.3,
-      "current_season_contribution_pct": 5.7
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Aston Villa\" il 18.3% contro il 14.7% del mercato. La quota fair e' 5.46 contro una quota disponibile di 7.20. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "mercato": "Over 2.5",
-   "prob": 0.551,
-   "why": "Gol attesi 1.00 contro 1.88, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.1%. Sul segno 1 il modello dice 18.3% contro il 14.7% del consenso di 25 bookmaker, miglior prezzo 7.20 su Betfair.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.183,
-    "probMercato": 0.147,
-    "prezzo": 7.2,
-    "book": "Betfair",
-    "nBook": 25,
-    "valore": 0.316
-   },
-   "model_version": "football-v1-baseline",
-   "id": "aston villa-arsenal|2026-08-31T19:00:00.000Z|standard|Over 2.5"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Barcelona - Rayo Vallecano",
-   "quando": "lun 31/08, 21:30",
-   "ore": 25,
-   "match": "barcelona-rayo vallecano",
-   "inizio": "2026-08-31T19:30:00.000Z",
-   "understat": "La_liga",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.7824,
-     "PX": 0.1227,
-     "P2": 0.0948,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.7804,
-     "PX": 0.125,
-     "P2": 0.0946,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 3.266,
-     "lambda_away": 1.141
-    },
-    "market": {
-     "esito_riferimento": "2",
-     "bookmaker_odds": 25,
-     "book": "Betfair",
-     "n_book": 21,
-     "no_vig_probability": 0.051
-    },
-    "value": {
-     "fair_odds": 10.526,
-     "edge": 0.044,
-     "ev": 1.375
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.044,
-     "confidence": 60,
-     "data_quality": 60
-    },
-    "market_gap": {
-     "valore": 0.044,
-     "livello": "LIEVE",
-     "etichetta": null
-    },
-    "rischio_quota": "ESCLUSA",
-    "value_class": "VALUE",
-    "best_pick_idoneo": false,
-    "best_pick_motivi_esclusione": [
-     "quota 25.00 > 8"
-    ],
-    "opportunity_score": 0.74,
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
-     },
-     "ospite": {
-      "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.6,
-      "current_season_contribution_pct": 10.4
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Rayo Vallecano\" il 9.5% contro il 5.1% del mercato. La quota fair e' 10.53 contro una quota disponibile di 25.00. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "mercato": "Under 4.5",
-   "prob": 0.55,
-   "why": "Gol attesi 3.27 contro 1.14, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.0%. Sul segno 2 il modello dice 9.5% contro il 5.1% del consenso di 21 bookmaker, miglior prezzo 25.00 su Betfair.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.095,
-    "probMercato": 0.051,
-    "prezzo": 25,
-    "book": "Betfair",
-    "nBook": 21,
-    "valore": 1.371
-   },
-   "model_version": "football-v1-baseline",
-   "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|standard|Under 4.5"
   },
   {
    "sport": "calcio",
@@ -7638,7 +7321,7 @@
    "id": "schalke 04-bayern munchen|2026-09-05T16:30:00.000Z|standard|Gol"
   }
  ],
- "aggiornato": "2026-08-31T18:55:03.548Z",
+ "aggiornato": "2026-09-01T11:30:37.618Z",
  "diagnostica": [
   "82 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport"
  ],
