@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-09-01T11:30:42.839Z",
+ "aggiornato": "2026-09-04T18:29:41.301Z",
  "nota": "Una rilevazione per evento a ogni esecuzione: prob e la probabilita del consenso ripulita dal margine, prezzo il miglior prezzo trovato. Serve a misurare come si muove la lavagna prima del via.",
  "rilevazioni": [
   {
@@ -30237,6 +30237,1702 @@
     }
    ],
    "quando": "2026-09-01T11:30:42.839Z"
+  },
+  {
+   "match": "genoa-como",
+   "comp": "Serie A",
+   "inizio": "2026-09-04T18:45:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.5657,
+     "prezzo": 1.73,
+     "nBook": 24
+    },
+    {
+     "esito": "1",
+     "prob": 0.1682,
+     "prezzo": 6.2,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2661,
+     "prezzo": 3.75,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "fiorentina-torino",
+   "comp": "Serie A",
+   "inizio": "2026-09-05T13:00:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.4901,
+     "prezzo": 2.04,
+     "nBook": 24
+    },
+    {
+     "esito": "2",
+     "prob": 0.2234,
+     "prezzo": 4.63,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2865,
+     "prezzo": 3.5,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "inter-napoli",
+   "comp": "Serie A",
+   "inizio": "2026-09-05T16:00:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.5806,
+     "prezzo": 1.7,
+     "nBook": 24
+    },
+    {
+     "esito": "2",
+     "prob": 0.1704,
+     "prezzo": 6.2,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.249,
+     "prezzo": 4,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "roma-atalanta",
+   "comp": "Serie A",
+   "inizio": "2026-09-05T18:45:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.552,
+     "prezzo": 1.78,
+     "nBook": 24
+    },
+    {
+     "esito": "2",
+     "prob": 0.1957,
+     "prezzo": 5.3,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2522,
+     "prezzo": 3.95,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "frosinone-venezia",
+   "comp": "Serie A",
+   "inizio": "2026-09-06T13:00:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.3457,
+     "prezzo": 2.87,
+     "nBook": 24
+    },
+    {
+     "esito": "2",
+     "prob": 0.372,
+     "prezzo": 2.72,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2824,
+     "prezzo": 3.5,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "parma 1913-monza",
+   "comp": "Serie A",
+   "inizio": "2026-09-06T13:00:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.3122,
+     "prezzo": 3.2,
+     "nBook": 24
+    },
+    {
+     "esito": "1",
+     "prob": 0.3794,
+     "prezzo": 2.66,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.3084,
+     "prezzo": 3.2,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "bologna-sassuolo",
+   "comp": "Serie A",
+   "inizio": "2026-09-06T16:00:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.4738,
+     "prezzo": 2.1,
+     "nBook": 24
+    },
+    {
+     "esito": "2",
+     "prob": 0.2463,
+     "prezzo": 4.1,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2799,
+     "prezzo": 3.55,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "juventus-milan",
+   "comp": "Serie A",
+   "inizio": "2026-09-06T18:45:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.2581,
+     "prezzo": 3.95,
+     "nBook": 24
+    },
+    {
+     "esito": "1",
+     "prob": 0.4536,
+     "prezzo": 2.17,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2884,
+     "prezzo": 3.45,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "cagliari-lecce",
+   "comp": "Serie A",
+   "inizio": "2026-09-07T16:30:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.477,
+     "prezzo": 2.06,
+     "nBook": 24
+    },
+    {
+     "esito": "2",
+     "prob": 0.2275,
+     "prezzo": 4.6,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2955,
+     "prezzo": 3.35,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "udinese-lazio",
+   "comp": "Serie A",
+   "inizio": "2026-09-07T18:45:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.3707,
+     "prezzo": 2.74,
+     "nBook": 24
+    },
+    {
+     "esito": "1",
+     "prob": 0.3252,
+     "prezzo": 3.1,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.3041,
+     "prezzo": 3.25,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "ipswich-liverpool",
+   "comp": "Premier League",
+   "inizio": "2026-09-04T19:00:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.1862,
+     "prezzo": 5.5,
+     "nBook": 25
+    },
+    {
+     "esito": "2",
+     "prob": 0.6004,
+     "prezzo": 1.66,
+     "nBook": 25
+    },
+    {
+     "esito": "X",
+     "prob": 0.2134,
+     "prezzo": 4.7,
+     "nBook": 25
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "newcastle united-bournemouth",
+   "comp": "Premier League",
+   "inizio": "2026-09-05T11:30:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.2926,
+     "prezzo": 3.45,
+     "nBook": 25
+    },
+    {
+     "esito": "1",
+     "prob": 0.4473,
+     "prezzo": 2.23,
+     "nBook": 25
+    },
+    {
+     "esito": "X",
+     "prob": 0.2601,
+     "prezzo": 3.85,
+     "nBook": 25
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "brentford-sunderland",
+   "comp": "Premier League",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.5779,
+     "prezzo": 1.7,
+     "nBook": 25
+    },
+    {
+     "esito": "2",
+     "prob": 0.1789,
+     "prezzo": 5.8,
+     "nBook": 25
+    },
+    {
+     "esito": "X",
+     "prob": 0.2432,
+     "prezzo": 4.16,
+     "nBook": 25
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "brighton-leeds",
+   "comp": "Premier League",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.4816,
+     "prezzo": 2.08,
+     "nBook": 25
+    },
+    {
+     "esito": "2",
+     "prob": 0.2488,
+     "prezzo": 4,
+     "nBook": 25
+    },
+    {
+     "esito": "X",
+     "prob": 0.2695,
+     "prezzo": 3.7,
+     "nBook": 25
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "manchester city-coventry",
+   "comp": "Premier League",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.061,
+     "prezzo": 20,
+     "nBook": 25
+    },
+    {
+     "esito": "1",
+     "prob": 0.8276,
+     "prezzo": 1.21,
+     "nBook": 25
+    },
+    {
+     "esito": "X",
+     "prob": 0.1114,
+     "prezzo": 9.6,
+     "nBook": 25
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "fulham-crystal palace",
+   "comp": "Premier League",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.3015,
+     "prezzo": 3.3,
+     "nBook": 25
+    },
+    {
+     "esito": "1",
+     "prob": 0.4164,
+     "prezzo": 2.38,
+     "nBook": 25
+    },
+    {
+     "esito": "X",
+     "prob": 0.2821,
+     "prezzo": 3.55,
+     "nBook": 25
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "nottm forest-tottenham",
+   "comp": "Premier League",
+   "inizio": "2026-09-05T14:00:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.395,
+     "prezzo": 2.5,
+     "nBook": 25
+    },
+    {
+     "esito": "2",
+     "prob": 0.3272,
+     "prezzo": 3.1,
+     "nBook": 25
+    },
+    {
+     "esito": "X",
+     "prob": 0.2778,
+     "prezzo": 3.6,
+     "nBook": 25
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "hull-aston villa",
+   "comp": "Premier League",
+   "inizio": "2026-09-05T16:30:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.5067,
+     "prezzo": 1.94,
+     "nBook": 25
+    },
+    {
+     "esito": "1",
+     "prob": 0.2329,
+     "prezzo": 4.4,
+     "nBook": 25
+    },
+    {
+     "esito": "X",
+     "prob": 0.2605,
+     "prezzo": 3.9,
+     "nBook": 25
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "everton-manchester united",
+   "comp": "Premier League",
+   "inizio": "2026-09-06T13:00:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.2864,
+     "prezzo": 3.55,
+     "nBook": 25
+    },
+    {
+     "esito": "2",
+     "prob": 0.4471,
+     "prezzo": 2.23,
+     "nBook": 25
+    },
+    {
+     "esito": "X",
+     "prob": 0.2665,
+     "prezzo": 3.75,
+     "nBook": 25
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "arsenal-chelsea",
+   "comp": "Premier League",
+   "inizio": "2026-09-06T15:30:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.5611,
+     "prezzo": 1.76,
+     "nBook": 25
+    },
+    {
+     "esito": "2",
+     "prob": 0.1918,
+     "prezzo": 5.3,
+     "nBook": 25
+    },
+    {
+     "esito": "X",
+     "prob": 0.2471,
+     "prezzo": 4.1,
+     "nBook": 25
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "real betis-real madrid",
+   "comp": "Liga",
+   "inizio": "2026-09-04T19:00:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.1542,
+     "prezzo": 7,
+     "nBook": 20
+    },
+    {
+     "esito": "2",
+     "prob": 0.6573,
+     "prezzo": 1.5,
+     "nBook": 20
+    },
+    {
+     "esito": "X",
+     "prob": 0.1885,
+     "prezzo": 5.4,
+     "nBook": 20
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "athletic bilbao-atletico madrid",
+   "comp": "Liga",
+   "inizio": "2026-09-05T14:15:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.3108,
+     "prezzo": 3.2,
+     "nBook": 20
+    },
+    {
+     "esito": "2",
+     "prob": 0.4104,
+     "prezzo": 2.46,
+     "nBook": 20
+    },
+    {
+     "esito": "X",
+     "prob": 0.2789,
+     "prezzo": 3.55,
+     "nBook": 20
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "rayo vallecano-real oviedo",
+   "comp": "Liga",
+   "inizio": "2026-09-05T16:30:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.4278,
+     "prezzo": 2.33,
+     "nBook": 21
+    },
+    {
+     "esito": "2",
+     "prob": 0.2917,
+     "prezzo": 3.5,
+     "nBook": 21
+    },
+    {
+     "esito": "X",
+     "prob": 0.2805,
+     "prezzo": 3.5,
+     "nBook": 21
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "villarreal-deportivo la coruna",
+   "comp": "Liga",
+   "inizio": "2026-09-05T19:00:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.1509,
+     "prezzo": 7,
+     "nBook": 20
+    },
+    {
+     "esito": "1",
+     "prob": 0.6376,
+     "prezzo": 1.57,
+     "nBook": 20
+    },
+    {
+     "esito": "X",
+     "prob": 0.2115,
+     "prezzo": 4.8,
+     "nBook": 20
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "valencia-barcelona",
+   "comp": "Liga",
+   "inizio": "2026-09-06T14:15:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.7471,
+     "prezzo": 1.32,
+     "nBook": 21
+    },
+    {
+     "esito": "1",
+     "prob": 0.0999,
+     "prezzo": 11,
+     "nBook": 21
+    },
+    {
+     "esito": "X",
+     "prob": 0.153,
+     "prezzo": 6.8,
+     "nBook": 21
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "alaves-osasuna",
+   "comp": "Liga",
+   "inizio": "2026-09-06T16:30:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.4181,
+     "prezzo": 2.38,
+     "nBook": 21
+    },
+    {
+     "esito": "2",
+     "prob": 0.2712,
+     "prezzo": 3.7,
+     "nBook": 21
+    },
+    {
+     "esito": "X",
+     "prob": 0.3107,
+     "prezzo": 3.19,
+     "nBook": 21
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "malaga-levante",
+   "comp": "Liga",
+   "inizio": "2026-09-06T16:30:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.3088,
+     "prezzo": 3.25,
+     "nBook": 21
+    },
+    {
+     "esito": "1",
+     "prob": 0.4017,
+     "prezzo": 2.46,
+     "nBook": 21
+    },
+    {
+     "esito": "X",
+     "prob": 0.2895,
+     "prezzo": 3.45,
+     "nBook": 21
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "espanyol-sevilla",
+   "comp": "Liga",
+   "inizio": "2026-09-06T19:00:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.4179,
+     "prezzo": 2.36,
+     "nBook": 21
+    },
+    {
+     "esito": "2",
+     "prob": 0.2831,
+     "prezzo": 3.55,
+     "nBook": 21
+    },
+    {
+     "esito": "X",
+     "prob": 0.2991,
+     "prezzo": 3.33,
+     "nBook": 21
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "getafe-celta vigo",
+   "comp": "Liga",
+   "inizio": "2026-09-07T17:00:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.2781,
+     "prezzo": 3.65,
+     "nBook": 21
+    },
+    {
+     "esito": "1",
+     "prob": 0.3914,
+     "prezzo": 2.52,
+     "nBook": 21
+    },
+    {
+     "esito": "X",
+     "prob": 0.3304,
+     "prezzo": 2.99,
+     "nBook": 21
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "elche-real sociedad",
+   "comp": "Liga",
+   "inizio": "2026-09-07T19:30:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.3236,
+     "prezzo": 3.1,
+     "nBook": 21
+    },
+    {
+     "esito": "2",
+     "prob": 0.4019,
+     "prezzo": 2.47,
+     "nBook": 21
+    },
+    {
+     "esito": "X",
+     "prob": 0.2745,
+     "prezzo": 3.65,
+     "nBook": 21
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "psg-monaco",
+   "comp": "Ligue 1",
+   "inizio": "2026-09-04T19:05:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.1198,
+     "prezzo": 9,
+     "nBook": 23
+    },
+    {
+     "esito": "1",
+     "prob": 0.7137,
+     "prezzo": 1.37,
+     "nBook": 23
+    },
+    {
+     "esito": "X",
+     "prob": 0.1665,
+     "prezzo": 6.25,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "lens-lorient",
+   "comp": "Ligue 1",
+   "inizio": "2026-09-05T15:15:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.1462,
+     "prezzo": 7.2,
+     "nBook": 23
+    },
+    {
+     "esito": "1",
+     "prob": 0.6478,
+     "prezzo": 1.52,
+     "nBook": 23
+    },
+    {
+     "esito": "X",
+     "prob": 0.206,
+     "prezzo": 4.9,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "le havre-brest",
+   "comp": "Ligue 1",
+   "inizio": "2026-09-05T18:45:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.3472,
+     "prezzo": 2.86,
+     "nBook": 23
+    },
+    {
+     "esito": "1",
+     "prob": 0.3618,
+     "prezzo": 2.78,
+     "nBook": 23
+    },
+    {
+     "esito": "X",
+     "prob": 0.291,
+     "prezzo": 3.4,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "nice-le mans",
+   "comp": "Ligue 1",
+   "inizio": "2026-09-05T18:45:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.2252,
+     "prezzo": 4.5,
+     "nBook": 23
+    },
+    {
+     "esito": "1",
+     "prob": 0.5164,
+     "prezzo": 1.91,
+     "nBook": 23
+    },
+    {
+     "esito": "X",
+     "prob": 0.2584,
+     "prezzo": 3.85,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "troyes-strasbourg",
+   "comp": "Ligue 1",
+   "inizio": "2026-09-06T13:00:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.4121,
+     "prezzo": 2.4,
+     "nBook": 23
+    },
+    {
+     "esito": "1",
+     "prob": 0.3085,
+     "prezzo": 3.3,
+     "nBook": 23
+    },
+    {
+     "esito": "X",
+     "prob": 0.2794,
+     "prezzo": 3.52,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "angers-rennes",
+   "comp": "Ligue 1",
+   "inizio": "2026-09-06T15:15:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.2442,
+     "prezzo": 4.1,
+     "nBook": 23
+    },
+    {
+     "esito": "2",
+     "prob": 0.5063,
+     "prezzo": 1.93,
+     "nBook": 23
+    },
+    {
+     "esito": "X",
+     "prob": 0.2494,
+     "prezzo": 4.08,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "marseille-paris",
+   "comp": "Ligue 1",
+   "inizio": "2026-09-06T18:45:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.5346,
+     "prezzo": 1.84,
+     "nBook": 23
+    },
+    {
+     "esito": "2",
+     "prob": 0.2241,
+     "prezzo": 4.62,
+     "nBook": 23
+    },
+    {
+     "esito": "X",
+     "prob": 0.2413,
+     "prezzo": 4.1,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "vfb stuttgart-cologne",
+   "comp": "Bundesliga",
+   "inizio": "2026-09-04T18:30:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.154,
+     "prezzo": 6.8,
+     "nBook": 24
+    },
+    {
+     "esito": "1",
+     "prob": 0.6587,
+     "prezzo": 1.5,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.1872,
+     "prezzo": 5.33,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "leverkusen-union berlin",
+   "comp": "Bundesliga",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.6535,
+     "prezzo": 1.5,
+     "nBook": 24
+    },
+    {
+     "esito": "2",
+     "prob": 0.1536,
+     "prezzo": 7,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.1929,
+     "prezzo": 5.3,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "hoffenheim-dortmund",
+   "comp": "Bundesliga",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.4244,
+     "prezzo": 2.36,
+     "nBook": 24
+    },
+    {
+     "esito": "1",
+     "prob": 0.3262,
+     "prezzo": 3.05,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2495,
+     "prezzo": 4,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "borussia m gladbach-elversberg",
+   "comp": "Bundesliga",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.5086,
+     "prezzo": 1.97,
+     "nBook": 24
+    },
+    {
+     "esito": "2",
+     "prob": 0.2433,
+     "prezzo": 4.2,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2481,
+     "prezzo": 4,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "werder bremen-rasenballsport leipzig",
+   "comp": "Bundesliga",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.5445,
+     "prezzo": 1.8,
+     "nBook": 24
+    },
+    {
+     "esito": "1",
+     "prob": 0.2243,
+     "prezzo": 4.6,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2312,
+     "prezzo": 4.4,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "paderborn-freiburg",
+   "comp": "Bundesliga",
+   "inizio": "2026-09-05T13:30:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.4737,
+     "prezzo": 2.08,
+     "nBook": 24
+    },
+    {
+     "esito": "1",
+     "prob": 0.2705,
+     "prezzo": 3.75,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2557,
+     "prezzo": 3.87,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "schalke 04-bayern munchen",
+   "comp": "Bundesliga",
+   "inizio": "2026-09-05T16:30:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.8178,
+     "prezzo": 1.2,
+     "nBook": 24
+    },
+    {
+     "esito": "1",
+     "prob": 0.0711,
+     "prezzo": 16.5,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.1111,
+     "prezzo": 10,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "hamburger sv-mainz 05",
+   "comp": "Bundesliga",
+   "inizio": "2026-09-06T13:30:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.3935,
+     "prezzo": 2.52,
+     "nBook": 24
+    },
+    {
+     "esito": "1",
+     "prob": 0.3389,
+     "prezzo": 2.95,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2675,
+     "prezzo": 3.75,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "frankfurt-augsburg",
+   "comp": "Bundesliga",
+   "inizio": "2026-09-06T15:30:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.2764,
+     "prezzo": 3.65,
+     "nBook": 24
+    },
+    {
+     "esito": "1",
+     "prob": 0.4847,
+     "prezzo": 2.02,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2389,
+     "prezzo": 4.2,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Wu Yibing - Carlos Alcaraz",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-04T18:16:44.000Z",
+   "quote": [
+    {
+     "esito": "Carlos Alcaraz",
+     "prob": 0.9202,
+     "prezzo": 1.08,
+     "nBook": 18
+    },
+    {
+     "esito": "Wu Yibing",
+     "prob": 0.0798,
+     "prezzo": 20,
+     "nBook": 18
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Tomas Martin Etcheverry - Mariano Navone",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-04T20:20:00.000Z",
+   "quote": [
+    {
+     "esito": "Tomas Martin Etcheverry",
+     "prob": 0.5201,
+     "prezzo": 1.94,
+     "nBook": 23
+    },
+    {
+     "esito": "Mariano Navone",
+     "prob": 0.4799,
+     "prezzo": 2.04,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Alex Michelsen - Daniel Merida Aguilar",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-04T20:30:00.000Z",
+   "quote": [
+    {
+     "esito": "Alex Michelsen",
+     "prob": 0.6289,
+     "prezzo": 1.56,
+     "nBook": 23
+    },
+    {
+     "esito": "Daniel Merida Aguilar",
+     "prob": 0.3711,
+     "prezzo": 2.74,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Jiri Lehecka - Stefanos Tsitsipas",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-04T21:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Jiri Lehecka",
+     "prob": 0.616,
+     "prezzo": 1.61,
+     "nBook": 23
+    },
+    {
+     "esito": "Stefanos Tsitsipas",
+     "prob": 0.384,
+     "prezzo": 2.6,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Valentin Vacherot - Frances Tiafoe",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-04T23:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Frances Tiafoe",
+     "prob": 0.6202,
+     "prezzo": 1.58,
+     "nBook": 23
+    },
+    {
+     "esito": "Valentin Vacherot",
+     "prob": 0.3798,
+     "prezzo": 2.72,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Ben Shelton - Denis Shapovalov",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-05T00:10:00.000Z",
+   "quote": [
+    {
+     "esito": "Ben Shelton",
+     "prob": 0.7614,
+     "prezzo": 1.29,
+     "nBook": 23
+    },
+    {
+     "esito": "Denis Shapovalov",
+     "prob": 0.2386,
+     "prezzo": 4.5,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Karen Khachanov - Benjamin Bonzi",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-05T15:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Karen Khachanov",
+     "prob": 0.6396,
+     "prezzo": 1.54,
+     "nBook": 23
+    },
+    {
+     "esito": "Benjamin Bonzi",
+     "prob": 0.3604,
+     "prezzo": 2.8,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Zizou Bergs - Botic van de Zandschulp",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-05T15:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Botic van de Zandschulp",
+     "prob": 0.6515,
+     "prezzo": 1.53,
+     "nBook": 23
+    },
+    {
+     "esito": "Zizou Bergs",
+     "prob": 0.3485,
+     "prezzo": 2.86,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Luciano Darderi - Dane Sweeny",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-05T15:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Luciano Darderi",
+     "prob": 0.7545,
+     "prezzo": 1.32,
+     "nBook": 23
+    },
+    {
+     "esito": "Dane Sweeny",
+     "prob": 0.2455,
+     "prezzo": 4.41,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Taylor Fritz - Francisco Cerundolo",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-05T15:30:00.000Z",
+   "quote": [
+    {
+     "esito": "Taylor Fritz",
+     "prob": 0.8356,
+     "prezzo": 1.17,
+     "nBook": 23
+    },
+    {
+     "esito": "Francisco Cerundolo",
+     "prob": 0.1644,
+     "prezzo": 6.4,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Alexander Blockx - Flavio Cobolli",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-05T16:10:00.000Z",
+   "quote": [
+    {
+     "esito": "Flavio Cobolli",
+     "prob": 0.5094,
+     "prezzo": 1.96,
+     "nBook": 23
+    },
+    {
+     "esito": "Alexander Blockx",
+     "prob": 0.4906,
+     "prezzo": 2.02,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Michael Zheng - Arthur Gea",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-05T17:20:00.000Z",
+   "quote": [
+    {
+     "esito": "Michael Zheng",
+     "prob": 0.5721,
+     "prezzo": 1.75,
+     "nBook": 23
+    },
+    {
+     "esito": "Arthur Gea",
+     "prob": 0.4279,
+     "prezzo": 2.33,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Alexander Zverev - Alejandro Tabilo",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-06T00:10:00.000Z",
+   "quote": [
+    {
+     "esito": "Alexander Zverev",
+     "prob": 0.8366,
+     "prezzo": 1.16,
+     "nBook": 23
+    },
+    {
+     "esito": "Alejandro Tabilo",
+     "prob": 0.1634,
+     "prezzo": 6.6,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Jakub Mensik - Learner Tien",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-06T00:10:00.000Z",
+   "quote": [
+    {
+     "esito": "Learner Tien",
+     "prob": 0.554,
+     "prezzo": 1.79,
+     "nBook": 23
+    },
+    {
+     "esito": "Jakub Mensik",
+     "prob": 0.446,
+     "prezzo": 2.22,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Ann Li - Linda Noskova",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-04T18:40:00.000Z",
+   "quote": [
+    {
+     "esito": "Linda Noskova",
+     "prob": 0.7398,
+     "prezzo": 1.33,
+     "nBook": 23
+    },
+    {
+     "esito": "Ann Li",
+     "prob": 0.2602,
+     "prezzo": 3.9,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Emma Navarro - Karolina Muchova",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-04T18:55:00.000Z",
+   "quote": [
+    {
+     "esito": "Karolina Muchova",
+     "prob": 0.7802,
+     "prezzo": 1.26,
+     "nBook": 20
+    },
+    {
+     "esito": "Emma Navarro",
+     "prob": 0.2198,
+     "prezzo": 4.9,
+     "nBook": 20
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Elina Svitolina - Anna Kalinskaya",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-05T00:40:00.000Z",
+   "quote": [
+    {
+     "esito": "Elina Svitolina",
+     "prob": 0.6986,
+     "prezzo": 1.41,
+     "nBook": 23
+    },
+    {
+     "esito": "Anna Kalinskaya",
+     "prob": 0.3014,
+     "prezzo": 3.4,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Anastasia Potapova - Amanda Anisimova",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-05T15:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Amanda Anisimova",
+     "prob": 0.8181,
+     "prezzo": 1.19,
+     "nBook": 23
+    },
+    {
+     "esito": "Anastasia Potapova",
+     "prob": 0.1819,
+     "prezzo": 6,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Madison Keys - Qinwen Zheng",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-05T15:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Madison Keys",
+     "prob": 0.6006,
+     "prezzo": 1.67,
+     "nBook": 23
+    },
+    {
+     "esito": "Qinwen Zheng",
+     "prob": 0.3994,
+     "prezzo": 2.48,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Mirra Andreeva - Nikola Bartunkova",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-05T15:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Mirra Andreeva",
+     "prob": 0.7794,
+     "prezzo": 1.27,
+     "nBook": 23
+    },
+    {
+     "esito": "Nikola Bartunkova",
+     "prob": 0.2206,
+     "prezzo": 4.8,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Iga Swiatek - Marie Bouzkova",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-05T16:10:00.000Z",
+   "quote": [
+    {
+     "esito": "Iga Swiatek",
+     "prob": 0.8234,
+     "prezzo": 1.21,
+     "nBook": 23
+    },
+    {
+     "esito": "Marie Bouzkova",
+     "prob": 0.1766,
+     "prezzo": 6.4,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Cristina Bucsa - Coco Gauff",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-05T17:30:00.000Z",
+   "quote": [
+    {
+     "esito": "Coco Gauff",
+     "prob": 0.929,
+     "prezzo": 1.04,
+     "nBook": 22
+    },
+    {
+     "esito": "Cristina Bucsa",
+     "prob": 0.071,
+     "prezzo": 22,
+     "nBook": 22
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Yuliia Starodubtseva - Elena Rybakina",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-05T21:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Elena Rybakina",
+     "prob": 0.8819,
+     "prezzo": 1.14,
+     "nBook": 22
+    },
+    {
+     "esito": "Yuliia Starodubtseva",
+     "prob": 0.1181,
+     "prezzo": 11,
+     "nBook": 22
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Iva Jović - Alexandra Eala",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-05T23:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Iva Jović",
+     "prob": 0.5438,
+     "prezzo": 1.86,
+     "nBook": 23
+    },
+    {
+     "esito": "Alexandra Eala",
+     "prob": 0.4562,
+     "prezzo": 2.14,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
+  },
+  {
+   "match": "Naomi Osaka - Elise Mertens",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-05T23:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Naomi Osaka",
+     "prob": 0.7111,
+     "prezzo": 1.37,
+     "nBook": 23
+    },
+    {
+     "esito": "Elise Mertens",
+     "prob": 0.2889,
+     "prezzo": 3.5,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-04T18:29:41.301Z"
   }
  ]
 }
