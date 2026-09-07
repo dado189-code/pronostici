@@ -15,6 +15,7 @@ import { fairOdds, ev, edge, agreement, dataQuality, confidence, classificaValor
   marketGapInfo, classificaRischioQuota, idoneoBestPick, opportunityScore, evCappatoPerRanking } from './valore.mjs';
 import { costruisciCassaforte, costruisciQuota2, costruisciSorpresa } from './selezioni.mjs';
 import { dataLocale, oggiLocale, eDiOggi } from './tempo.mjs';
+import { partitaPiuVicina, raggruppaPerSquadre } from './risultati.mjs';
 
 let ok = 0, ko = 0;
 const fail = [];
@@ -621,6 +622,63 @@ function assertVero(nome, condizione, dettaglio = '') {
     const best = partiteOggiTest.filter(p => p.analisi.best_pick_idoneo).sort((a, b) => b.analisi.opportunity_score - a.analisi.opportunity_score);
     assertVero('best_picks_today: nessun evento futuro anche con opportunity_score migliore', best.every(p => p.match !== 'settProssZ') && best.length === 1 && best[0].match === 'oggiZ');
   }
+}
+
+// ---------------------------------------------------------------- risultati.mjs (chiusura pronostici, bug 07/09/2026)
+//
+// Bug reale trovato in produzione: Hoffenheim-Dortmund giocata sia il
+// 18/04/2026 (stagione 2025/26, 2-1) sia il 05/09/2026 (stagione 2026/27,
+// 2-3). L'indicizzazione per sola coppia "Casa - Ospite" sovrascriveva la
+// partita giusta con quella vecchia. 176/239 pronostici chiusi in archivio
+// avevano il risultato sbagliato per questo motivo. Questi test bloccano
+// una regressione futura sulla stessa classe di bug.
+
+{
+  const d = (iso) => ({ data: new Date(iso) });
+  // due partite della stessa coppia, stagioni diverse: partitaPiuVicina deve
+  // scegliere quella vicina al kickoff del pronostico, non la prima/ultima
+  // dell'array (che era il comportamento implicito del vecchio oggetto piatto)
+  const vecchia = { ...d('2026-04-18T13:30:00Z'), golCasa: 2, golOspite: 1 };
+  const nuova = { ...d('2026-09-05T13:30:00Z'), golCasa: 2, golOspite: 3 };
+
+  assertVero('partitaPiuVicina: sceglie la partita vicina al kickoff, non la prima in ordine di scaricamento (caso Hoffenheim-Dortmund)',
+    partitaPiuVicina([nuova, vecchia], '2026-09-05T13:30:00Z') === nuova);
+  assertVero('partitaPiuVicina: funziona anche con l ordine invertito nell array',
+    partitaPiuVicina([vecchia, nuova], '2026-09-05T13:30:00Z') === nuova);
+  assertVero('partitaPiuVicina: sceglie la vecchia se il pronostico e di quella data',
+    partitaPiuVicina([nuova, vecchia], '2026-04-18T13:30:00Z') === vecchia);
+
+  // oltre la tolleranza (default 3 giorni): nessuna corrispondenza affidabile,
+  // meglio null (pronostico irrisolvibile) che un risultato inventato
+  const lontana = { ...d('2025-12-06T15:00:00Z'), golCasa: 2, golOspite: 1 };
+  assertVero('partitaPiuVicina: oltre la tolleranza di default (3 giorni) restituisce null, non la piu vicina comunque',
+    partitaPiuVicina([lontana], '2026-08-31T15:00:00Z') === null);
+
+  // tolleranza esplicita configurabile
+  assertVero('partitaPiuVicina: tolleranza esplicita piu ampia accetta un candidato altrimenti fuori soglia',
+    partitaPiuVicina([lontana], '2026-08-31T15:00:00Z', 300 * 864e5) === lontana);
+
+  assertVero('partitaPiuVicina: nessun candidato -> null', partitaPiuVicina([], '2026-09-05T13:30:00Z') === null);
+  assertVero('partitaPiuVicina: candidati null -> null', partitaPiuVicina(null, '2026-09-05T13:30:00Z') === null);
+}
+
+{
+  // raggruppaPerSquadre: MAI sovrascrivere, sempre accumulare in un array
+  const partite = [
+    { casa: 'Hoffenheim', ospite: 'Borussia Dortmund', golCasa: 2, golOspite: 1, data: new Date('2026-04-18') },
+    { casa: 'Hoffenheim', ospite: 'Borussia Dortmund', golCasa: 2, golOspite: 3, data: new Date('2026-09-05') },
+    { casa: 'Arsenal', ospite: 'Chelsea', golCasa: 2, golOspite: 1, data: new Date('2026-09-06') }
+  ];
+  const g = raggruppaPerSquadre(partite);
+  assertVero('raggruppaPerSquadre: entrambe le partite della stessa coppia sono conservate, nessuna sovrascritta',
+    g['Hoffenheim - Borussia Dortmund'].length === 2);
+  assertVero('raggruppaPerSquadre: coppie diverse restano separate', g['Arsenal - Chelsea'].length === 1);
+
+  // partita senza gol finiti (in corso o dato mancante): scartata, non deve
+  // comparire come un falso candidato senza punteggio
+  const conIncompleta = [...partite, { casa: 'Hoffenheim', ospite: 'Borussia Dortmund', golCasa: null, golOspite: undefined, data: new Date() }];
+  const g2 = raggruppaPerSquadre(conIncompleta);
+  assertVero('raggruppaPerSquadre: scarta le partite senza risultato finito', g2['Hoffenheim - Borussia Dortmund'].length === 2);
 }
 
 // ---------------------------------------------------------------- riepilogo

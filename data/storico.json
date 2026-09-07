@@ -8,8 +8,8 @@
    "mercato": "Multigol 1-4",
    "quota": 1.24,
    "prezzo": null,
-   "risultato": "2-2",
-   "esito": "ok"
+   "risultato": "5-2",
+   "esito": "ko"
   },
   {
    "id": "alaves-osasuna|2026-09-06T16:30:00.000Z|standard|Multigol trasferta 1-2",
@@ -19,7 +19,7 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.79,
    "prezzo": null,
-   "risultato": "2-2",
+   "risultato": "5-2",
    "esito": "ok"
   },
   {
@@ -30,7 +30,7 @@
    "mercato": "Angers vincente",
    "quota": 3.23,
    "prezzo": 4.1,
-   "risultato": "1-1",
+   "risultato": "1-2",
    "esito": "ko"
   },
   {
@@ -41,8 +41,8 @@
    "mercato": "1X",
    "quota": 1.77,
    "prezzo": null,
-   "risultato": "1-1",
-   "esito": "ok"
+   "risultato": "1-2",
+   "esito": "ko"
   },
   {
    "id": "angers-rennes|2026-09-06T15:15:00.000Z|standard|Trasferta segna",
@@ -52,7 +52,7 @@
    "mercato": "Trasferta segna",
    "quota": 1.22,
    "prezzo": null,
-   "risultato": "1-1",
+   "risultato": "1-2",
    "esito": "ok"
   },
   {
@@ -63,7 +63,7 @@
    "mercato": "Under 4.5",
    "quota": 1.24,
    "prezzo": null,
-   "risultato": "1-1",
+   "risultato": "1-2",
    "esito": "ok"
   },
   {
@@ -96,8 +96,8 @@
    "mercato": "Aston Villa vincente",
    "quota": 5.38,
    "prezzo": 7,
-   "risultato": "2-1",
-   "esito": "ok"
+   "risultato": "0-1",
+   "esito": "ko"
   },
   {
    "id": "aston villa-arsenal|2026-08-31T19:00:00.000Z|standard|Multigol casa 1-2",
@@ -107,8 +107,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.81,
    "prezzo": null,
-   "risultato": "2-1",
-   "esito": "ok"
+   "risultato": "0-1",
+   "esito": "ko"
   },
   {
    "id": "aston villa-arsenal|2026-08-31T19:00:00.000Z|standard|Over 2.5",
@@ -118,8 +118,8 @@
    "mercato": "Over 2.5",
    "quota": 1.81,
    "prezzo": null,
-   "risultato": "2-1",
-   "esito": "ok"
+   "risultato": "0-1",
+   "esito": "ko"
   },
   {
    "id": "aston villa-arsenal|2026-08-31T19:00:00.000Z|standard|X2",
@@ -129,8 +129,8 @@
    "mercato": "X2",
    "quota": 1.23,
    "prezzo": null,
-   "risultato": "2-1",
-   "esito": "ko"
+   "risultato": "0-1",
+   "esito": "ok"
   },
   {
    "id": "atalanta-bologna|2026-08-31T18:45:00.000Z|sorpresa|Bologna vincente",
@@ -140,8 +140,8 @@
    "mercato": "Bologna vincente",
    "quota": 3.66,
    "prezzo": 4.35,
-   "risultato": "0-1",
-   "esito": "ok"
+   "risultato": "1-0",
+   "esito": "ko"
   },
   {
    "id": "atalanta-bologna|2026-08-31T18:45:00.000Z|standard|Multigol casa 1-2",
@@ -151,8 +151,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.77,
    "prezzo": null,
-   "risultato": "0-1",
-   "esito": "ko"
+   "risultato": "1-0",
+   "esito": "ok"
   },
   {
    "id": "atalanta-bologna|2026-08-31T18:45:00.000Z|standard|Over 1.5",
@@ -162,7 +162,7 @@
    "mercato": "Over 1.5",
    "quota": 1.24,
    "prezzo": null,
-   "risultato": "0-1",
+   "risultato": "1-0",
    "esito": "ko"
   },
   {
@@ -173,7 +173,7 @@
    "mercato": "Under 4.5",
    "quota": 1.24,
    "prezzo": null,
-   "risultato": "0-1",
+   "risultato": "1-0",
    "esito": "ok"
   },
   {
@@ -184,8 +184,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.77,
    "prezzo": null,
-   "risultato": "1-0",
-   "esito": "ok"
+   "risultato": "3-0",
+   "esito": "ko"
   },
   {
    "id": "athletic bilbao-atletico madrid|2026-09-05T14:15:00.000Z|standard|Under 4.5",
@@ -195,7 +195,7 @@
    "mercato": "Under 4.5",
    "quota": 1.25,
    "prezzo": null,
-   "risultato": "1-0",
+   "risultato": "3-0",
    "esito": "ok"
   },
   {
@@ -206,7 +206,7 @@
    "mercato": "Multigol 1-5",
    "quota": 1.15,
    "prezzo": null,
-   "risultato": "3-1",
+   "risultato": "1-3",
    "esito": "ok"
   },
   {
@@ -217,8 +217,8 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.81,
    "prezzo": null,
-   "risultato": "3-1",
-   "esito": "ok"
+   "risultato": "1-3",
+   "esito": "ko"
   },
   {
    "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|sorpresa|Rayo Vallecano vincente",
@@ -228,7 +228,7 @@
    "mercato": "Rayo Vallecano vincente",
    "quota": 10.53,
    "prezzo": 19.5,
-   "risultato": "1-0",
+   "risultato": "5-2",
    "esito": "ko"
   },
   {
@@ -239,8 +239,8 @@
    "mercato": "Multigol casa 1-3",
    "quota": 1.82,
    "prezzo": null,
-   "risultato": "1-0",
-   "esito": "ok"
+   "risultato": "5-2",
+   "esito": "ko"
   },
   {
    "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|standard|Multigol trasferta 1-2",
@@ -250,8 +250,8 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.75,
    "prezzo": null,
-   "risultato": "1-0",
-   "esito": "ko"
+   "risultato": "5-2",
+   "esito": "ok"
   },
   {
    "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|standard|Over 2.5",
@@ -261,8 +261,8 @@
    "mercato": "Over 2.5",
    "quota": 1.22,
    "prezzo": null,
-   "risultato": "1-0",
-   "esito": "ko"
+   "risultato": "5-2",
+   "esito": "ok"
   },
   {
    "id": "barcelona-rayo vallecano|2026-08-31T19:30:00.000Z|standard|Under 4.5",
@@ -272,8 +272,8 @@
    "mercato": "Under 4.5",
    "quota": 1.82,
    "prezzo": null,
-   "risultato": "1-0",
-   "esito": "ok"
+   "risultato": "5-2",
+   "esito": "ko"
   },
   {
    "id": "bologna-sassuolo|2026-09-06T16:00:00.000Z|standard|Multigol 1-4",
@@ -283,7 +283,7 @@
    "mercato": "Multigol 1-4",
    "quota": 1.25,
    "prezzo": null,
-   "risultato": "1-1",
+   "risultato": "2-2",
    "esito": "ok"
   },
   {
@@ -294,7 +294,7 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.77,
    "prezzo": null,
-   "risultato": "1-1",
+   "risultato": "2-2",
    "esito": "ok"
   },
   {
@@ -327,7 +327,7 @@
    "mercato": "1",
    "quota": 1.76,
    "prezzo": 2.16,
-   "risultato": "0-1",
+   "risultato": "1-1",
    "esito": "ko"
   },
   {
@@ -338,8 +338,8 @@
    "mercato": "1X",
    "quota": 1.24,
    "prezzo": null,
-   "risultato": "0-1",
-   "esito": "ko"
+   "risultato": "1-1",
+   "esito": "ok"
   },
   {
    "id": "brentford-sunderland|2026-09-05T14:00:00.000Z|standard|Multigol trasferta 1-2",
@@ -349,8 +349,8 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.8,
    "prezzo": null,
-   "risultato": "3-0",
-   "esito": "ko"
+   "risultato": "1-1",
+   "esito": "ok"
   },
   {
    "id": "brentford-sunderland|2026-09-05T14:00:00.000Z|standard|Under 4.5",
@@ -360,7 +360,7 @@
    "mercato": "Under 4.5",
    "quota": 1.25,
    "prezzo": null,
-   "risultato": "3-0",
+   "risultato": "1-1",
    "esito": "ok"
   },
   {
@@ -371,8 +371,8 @@
    "mercato": "Toulouse vincente",
    "quota": 2.57,
    "prezzo": 2.94,
-   "risultato": "0-2",
-   "esito": "ok"
+   "risultato": "2-2",
+   "esito": "ko"
   },
   {
    "id": "brest-toulouse|2026-08-29T18:45:00.000Z|standard|Multigol 1-5",
@@ -382,7 +382,7 @@
    "mercato": "Multigol 1-5",
    "quota": 1.15,
    "prezzo": null,
-   "risultato": "0-2",
+   "risultato": "2-2",
    "esito": "ok"
   },
   {
@@ -393,8 +393,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.72,
    "prezzo": null,
-   "risultato": "0-2",
-   "esito": "ko"
+   "risultato": "2-2",
+   "esito": "ok"
   },
   {
    "id": "brighton-leeds|2026-09-05T14:00:00.000Z|sorpresa|Leeds vincente",
@@ -404,7 +404,7 @@
    "mercato": "Leeds vincente",
    "quota": 3.86,
    "prezzo": 4.5,
-   "risultato": "3-0",
+   "risultato": "1-1",
    "esito": "ko"
   },
   {
@@ -415,8 +415,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.75,
    "prezzo": null,
-   "risultato": "3-0",
-   "esito": "ko"
+   "risultato": "1-1",
+   "esito": "ok"
   },
   {
    "id": "brighton-leeds|2026-09-05T14:00:00.000Z|standard|Over 1.5",
@@ -426,7 +426,7 @@
    "mercato": "Over 1.5",
    "quota": 1.23,
    "prezzo": null,
-   "risultato": "3-0",
+   "risultato": "1-1",
    "esito": "ok"
   },
   {
@@ -437,7 +437,7 @@
    "mercato": "Under 4.5",
    "quota": 1.23,
    "prezzo": null,
-   "risultato": "3-0",
+   "risultato": "1-1",
    "esito": "ok"
   },
   {
@@ -448,7 +448,7 @@
    "mercato": "Cagliari vincente",
    "quota": 6.37,
    "prezzo": 9,
-   "risultato": "0-2",
+   "risultato": "0-1",
    "esito": "ko"
   },
   {
@@ -459,7 +459,7 @@
    "mercato": "12",
    "quota": 1.23,
    "prezzo": null,
-   "risultato": "0-2",
+   "risultato": "0-1",
    "esito": "ok"
   },
   {
@@ -470,7 +470,7 @@
    "mercato": "Multigol 1-3",
    "quota": 1.75,
    "prezzo": null,
-   "risultato": "0-2",
+   "risultato": "0-1",
    "esito": "ok"
   },
   {
@@ -481,8 +481,8 @@
    "mercato": "Celta Vigo vincente",
    "quota": 2.47,
    "prezzo": 2.8,
-   "risultato": "2-0",
-   "esito": "ok"
+   "risultato": "0-2",
+   "esito": "ko"
   },
   {
    "id": "celta vigo-athletic bilbao|2026-08-30T19:30:00.000Z|standard|Multigol 1-4",
@@ -492,7 +492,7 @@
    "mercato": "Multigol 1-4",
    "quota": 1.24,
    "prezzo": null,
-   "risultato": "2-0",
+   "risultato": "0-2",
    "esito": "ok"
   },
   {
@@ -503,8 +503,8 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.74,
    "prezzo": null,
-   "risultato": "2-0",
-   "esito": "ko"
+   "risultato": "0-2",
+   "esito": "ok"
   },
   {
    "id": "celta vigo-athletic bilbao|2026-08-30T19:30:00.000Z|standard|Under 2.5",
@@ -514,7 +514,7 @@
    "mercato": "Under 2.5",
    "quota": 1.82,
    "prezzo": null,
-   "risultato": "2-0",
+   "risultato": "0-2",
    "esito": "ok"
   },
   {
@@ -525,8 +525,8 @@
    "mercato": "Brighton vincente",
    "quota": 3.26,
    "prezzo": 4.4,
-   "risultato": "1-3",
-   "esito": "ok"
+   "risultato": "4-3",
+   "esito": "ko"
   },
   {
    "id": "chelsea-brighton|2026-08-30T13:00:00.000Z|standard|Multigol 1-5",
@@ -536,8 +536,8 @@
    "mercato": "Multigol 1-5",
    "quota": 1.2,
    "prezzo": null,
-   "risultato": "1-3",
-   "esito": "ok"
+   "risultato": "4-3",
+   "esito": "ko"
   },
   {
    "id": "chelsea-brighton|2026-08-30T13:00:00.000Z|standard|Multigol casa 1-2",
@@ -547,8 +547,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.77,
    "prezzo": null,
-   "risultato": "1-3",
-   "esito": "ok"
+   "risultato": "4-3",
+   "esito": "ko"
   },
   {
    "id": "chelsea-brighton|2026-08-30T13:00:00.000Z|standard|X2",
@@ -558,8 +558,8 @@
    "mercato": "X2",
    "quota": 1.78,
    "prezzo": null,
-   "risultato": "1-3",
-   "esito": "ok"
+   "risultato": "4-3",
+   "esito": "ko"
   },
   {
    "id": "cologne-hoffenheim|2026-08-29T13:30:00.000Z|sorpresa|FC Cologne vincente",
@@ -569,8 +569,8 @@
    "mercato": "FC Cologne vincente",
    "quota": 2.5,
    "prezzo": 3.15,
-   "risultato": "2-2",
-   "esito": "ko"
+   "risultato": "3-2",
+   "esito": "ok"
   },
   {
    "id": "cologne-hoffenheim|2026-08-29T13:30:00.000Z|standard|Trasferta segna",
@@ -580,7 +580,7 @@
    "mercato": "Trasferta segna",
    "quota": 1.23,
    "prezzo": null,
-   "risultato": "2-2",
+   "risultato": "3-2",
    "esito": "ok"
   },
   {
@@ -591,7 +591,7 @@
    "mercato": "Under 3.5",
    "quota": 1.79,
    "prezzo": null,
-   "risultato": "2-2",
+   "risultato": "3-2",
    "esito": "ko"
   },
   {
@@ -657,7 +657,7 @@
    "mercato": "Multigol 1-5",
    "quota": 1.21,
    "prezzo": null,
-   "risultato": "3-2",
+   "risultato": "2-0",
    "esito": "ok"
   },
   {
@@ -668,8 +668,8 @@
    "mercato": "Multigol trasferta 1-3",
    "quota": 1.79,
    "prezzo": null,
-   "risultato": "3-2",
-   "esito": "ok"
+   "risultato": "2-0",
+   "esito": "ko"
   },
   {
    "id": "espanyol-sevilla|2026-09-06T19:00:00.000Z|standard|Multigol 1-4",
@@ -679,7 +679,7 @@
    "mercato": "Multigol 1-4",
    "quota": 1.24,
    "prezzo": null,
-   "risultato": "2-1",
+   "risultato": "1-1",
    "esito": "ok"
   },
   {
@@ -690,7 +690,7 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.81,
    "prezzo": null,
-   "risultato": "2-1",
+   "risultato": "1-1",
    "esito": "ok"
   },
   {
@@ -701,8 +701,8 @@
    "mercato": "Multigol 1-3",
    "quota": 1.77,
    "prezzo": null,
-   "risultato": "0-1",
-   "esito": "ok"
+   "risultato": "2-2",
+   "esito": "ko"
   },
   {
    "id": "everton-manchester united|2026-09-06T13:00:00.000Z|standard|Multigol 1-5",
@@ -712,7 +712,7 @@
    "mercato": "Multigol 1-5",
    "quota": 1.19,
    "prezzo": null,
-   "risultato": "0-1",
+   "risultato": "2-2",
    "esito": "ok"
   },
   {
@@ -723,7 +723,7 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.79,
    "prezzo": null,
-   "risultato": "0-1",
+   "risultato": "2-2",
    "esito": "ok"
   },
   {
@@ -734,8 +734,8 @@
    "mercato": "Over 1.5",
    "quota": 1.2,
    "prezzo": null,
-   "risultato": "0-1",
-   "esito": "ko"
+   "risultato": "2-2",
+   "esito": "ok"
   },
   {
    "id": "fiorentina-frosinone|2026-08-29T16:30:00.000Z|standard|Multigol 1-4",
@@ -767,8 +767,8 @@
    "mercato": "Torino vincente",
    "quota": 2.87,
    "prezzo": 4.9,
-   "risultato": "2-2",
-   "esito": "ko"
+   "risultato": "1-2",
+   "esito": "ok"
   },
   {
    "id": "fiorentina-torino|2026-09-05T13:00:00.000Z|standard|Multigol casa 1-2",
@@ -778,7 +778,7 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.72,
    "prezzo": null,
-   "risultato": "2-2",
+   "risultato": "1-2",
    "esito": "ok"
   },
   {
@@ -789,7 +789,7 @@
    "mercato": "Over 1.5",
    "quota": 1.25,
    "prezzo": null,
-   "risultato": "2-2",
+   "risultato": "1-2",
    "esito": "ok"
   },
   {
@@ -800,7 +800,7 @@
    "mercato": "X2",
    "quota": 1.72,
    "prezzo": null,
-   "risultato": "2-2",
+   "risultato": "1-2",
    "esito": "ok"
   },
   {
@@ -811,7 +811,7 @@
    "mercato": "Multigol 1-5",
    "quota": 1.2,
    "prezzo": null,
-   "risultato": "1-0",
+   "risultato": "1-4",
    "esito": "ok"
   },
   {
@@ -822,7 +822,7 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.81,
    "prezzo": null,
-   "risultato": "1-0",
+   "risultato": "1-4",
    "esito": "ok"
   },
   {
@@ -833,7 +833,7 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.71,
    "prezzo": null,
-   "risultato": "1-0",
+   "risultato": "1-4",
    "esito": "ko"
   },
   {
@@ -844,8 +844,8 @@
    "mercato": "Over 1.5",
    "quota": 1.19,
    "prezzo": null,
-   "risultato": "1-0",
-   "esito": "ko"
+   "risultato": "1-4",
+   "esito": "ok"
   },
   {
    "id": "freiburg-werder bremen|2026-08-30T13:30:00.000Z|standard|1",
@@ -855,7 +855,7 @@
    "mercato": "1",
    "quota": 1.81,
    "prezzo": 2.01,
-   "risultato": "1-0",
+   "risultato": "4-1",
    "esito": "ok"
   },
   {
@@ -866,7 +866,7 @@
    "mercato": "Casa segna",
    "quota": 1.22,
    "prezzo": null,
-   "risultato": "1-0",
+   "risultato": "4-1",
    "esito": "ok"
   },
   {
@@ -877,8 +877,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.74,
    "prezzo": null,
-   "risultato": "1-0",
-   "esito": "ok"
+   "risultato": "4-1",
+   "esito": "ko"
   },
   {
    "id": "frosinone-venezia|2026-09-06T13:00:00.000Z|standard|1",
@@ -932,7 +932,7 @@
    "mercato": "Crystal Palace vincente",
    "quota": 2.75,
    "prezzo": 3.23,
-   "risultato": "1-2",
+   "risultato": "2-3",
    "esito": "ok"
   },
   {
@@ -943,8 +943,8 @@
    "mercato": "Multigol 1-3",
    "quota": 1.77,
    "prezzo": null,
-   "risultato": "1-2",
-   "esito": "ok"
+   "risultato": "2-3",
+   "esito": "ko"
   },
   {
    "id": "fulham-crystal palace|2026-09-05T14:00:00.000Z|standard|Over 1.5",
@@ -954,7 +954,7 @@
    "mercato": "Over 1.5",
    "quota": 1.2,
    "prezzo": null,
-   "risultato": "1-2",
+   "risultato": "2-3",
    "esito": "ok"
   },
   {
@@ -965,7 +965,7 @@
    "mercato": "Genoa vincente",
    "quota": 4.27,
    "prezzo": 5.8,
-   "risultato": "0-2",
+   "risultato": "1-4",
    "esito": "ko"
   },
   {
@@ -976,7 +976,7 @@
    "mercato": "2",
    "quota": 1.81,
    "prezzo": 1.88,
-   "risultato": "0-2",
+   "risultato": "1-4",
    "esito": "ok"
   },
   {
@@ -987,8 +987,8 @@
    "mercato": "Multigol 1-4",
    "quota": 1.25,
    "prezzo": null,
-   "risultato": "0-2",
-   "esito": "ok"
+   "risultato": "1-4",
+   "esito": "ko"
   },
   {
    "id": "genoa-como|2026-09-04T18:45:00.000Z|standard|Multigol casa 1-2",
@@ -998,8 +998,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.8,
    "prezzo": null,
-   "risultato": "0-2",
-   "esito": "ko"
+   "risultato": "1-4",
+   "esito": "ok"
   },
   {
    "id": "genoa-como|2026-09-04T18:45:00.000Z|standard|Trasferta segna",
@@ -1009,7 +1009,7 @@
    "mercato": "Trasferta segna",
    "quota": 1.22,
    "prezzo": null,
-   "risultato": "0-2",
+   "risultato": "1-4",
    "esito": "ok"
   },
   {
@@ -1020,8 +1020,8 @@
    "mercato": "1X",
    "quota": 1.8,
    "prezzo": null,
-   "risultato": "4-0",
-   "esito": "ok"
+   "risultato": "0-5",
+   "esito": "ko"
   },
   {
    "id": "hamburger sv-mainz 05|2026-09-06T13:30:00.000Z|standard|Multigol 1-5",
@@ -1031,7 +1031,7 @@
    "mercato": "Multigol 1-5",
    "quota": 1.2,
    "prezzo": null,
-   "risultato": "4-0",
+   "risultato": "0-5",
    "esito": "ok"
   },
   {
@@ -1042,7 +1042,7 @@
    "mercato": "Under 3.5",
    "quota": 1.81,
    "prezzo": null,
-   "risultato": "4-0",
+   "risultato": "0-5",
    "esito": "ko"
   },
   {
@@ -1053,8 +1053,8 @@
    "mercato": "Hoffenheim vincente",
    "quota": 2.54,
    "prezzo": 3.02,
-   "risultato": "2-1",
-   "esito": "ok"
+   "risultato": "2-3",
+   "esito": "ko"
   },
   {
    "id": "hoffenheim-dortmund|2026-09-05T13:30:00.000Z|standard|Casa segna",
@@ -1064,7 +1064,7 @@
    "mercato": "Casa segna",
    "quota": 1.24,
    "prezzo": null,
-   "risultato": "2-1",
+   "risultato": "2-3",
    "esito": "ok"
   },
   {
@@ -1075,8 +1075,8 @@
    "mercato": "Multigol 1-3",
    "quota": 1.8,
    "prezzo": null,
-   "risultato": "2-1",
-   "esito": "ok"
+   "risultato": "2-3",
+   "esito": "ko"
   },
   {
    "id": "hull-aston villa|2026-09-05T16:30:00.000Z|sorpresa|Hull vincente",
@@ -1130,7 +1130,7 @@
    "mercato": "Napoli vincente",
    "quota": 5.32,
    "prezzo": 6.2,
-   "risultato": "2-2",
+   "risultato": "3-2",
    "esito": "ko"
   },
   {
@@ -1141,7 +1141,7 @@
    "mercato": "1X",
    "quota": 1.23,
    "prezzo": null,
-   "risultato": "2-2",
+   "risultato": "3-2",
    "esito": "ok"
   },
   {
@@ -1152,8 +1152,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.8,
    "prezzo": null,
-   "risultato": "2-2",
-   "esito": "ok"
+   "risultato": "3-2",
+   "esito": "ko"
   },
   {
    "id": "ipswich-liverpool|2026-09-04T19:00:00.000Z|sorpresa|Ipswich vincente",
@@ -1196,7 +1196,7 @@
    "mercato": "1X",
    "quota": 1.25,
    "prezzo": null,
-   "risultato": "0-0",
+   "risultato": "1-1",
    "esito": "ok"
   },
   {
@@ -1207,8 +1207,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.79,
    "prezzo": null,
-   "risultato": "0-0",
-   "esito": "ko"
+   "risultato": "1-1",
+   "esito": "ok"
   },
   {
    "id": "juventus-parma 1913|2026-08-29T18:45:00.000Z|sorpresa|Parma Calcio 1913 vincente",
@@ -1251,7 +1251,7 @@
    "mercato": "Genoa vincente",
    "quota": 3.37,
    "prezzo": 4.4,
-   "risultato": "3-2",
+   "risultato": "1-0",
    "esito": "ko"
   },
   {
@@ -1262,8 +1262,8 @@
    "mercato": "Multigol 1-4",
    "quota": 1.22,
    "prezzo": null,
-   "risultato": "3-2",
-   "esito": "ko"
+   "risultato": "1-0",
+   "esito": "ok"
   },
   {
    "id": "lazio-genoa|2026-08-30T18:45:00.000Z|standard|Multigol trasferta 1-2",
@@ -1273,8 +1273,8 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.8,
    "prezzo": null,
-   "risultato": "3-2",
-   "esito": "ok"
+   "risultato": "1-0",
+   "esito": "ko"
   },
   {
    "id": "le havre-brest|2026-09-05T18:45:00.000Z|sorpresa|Brest vincente",
@@ -1284,8 +1284,8 @@
    "mercato": "Brest vincente",
    "quota": 2.52,
    "prezzo": 2.89,
-   "risultato": "1-0",
-   "esito": "ko"
+   "risultato": "1-2",
+   "esito": "ok"
   },
   {
    "id": "le havre-brest|2026-09-05T18:45:00.000Z|standard|Gol",
@@ -1295,8 +1295,8 @@
    "mercato": "Gol",
    "quota": 1.75,
    "prezzo": null,
-   "risultato": "1-0",
-   "esito": "ko"
+   "risultato": "1-2",
+   "esito": "ok"
   },
   {
    "id": "le havre-brest|2026-09-05T18:45:00.000Z|standard|Under 4.5",
@@ -1306,7 +1306,7 @@
    "mercato": "Under 4.5",
    "quota": 1.17,
    "prezzo": null,
-   "risultato": "1-0",
+   "risultato": "1-2",
    "esito": "ok"
   },
   {
@@ -1317,7 +1317,7 @@
    "mercato": "Lecce vincente",
    "quota": 6.13,
    "prezzo": 8.6,
-   "risultato": "0-2",
+   "risultato": "0-4",
    "esito": "ko"
   },
   {
@@ -1328,7 +1328,7 @@
    "mercato": "12",
    "quota": 1.25,
    "prezzo": null,
-   "risultato": "0-2",
+   "risultato": "0-4",
    "esito": "ok"
   },
   {
@@ -1339,8 +1339,8 @@
    "mercato": "Over 2.5",
    "quota": 1.79,
    "prezzo": null,
-   "risultato": "0-2",
-   "esito": "ko"
+   "risultato": "0-4",
+   "esito": "ok"
   },
   {
    "id": "leeds-brentford|2026-08-30T13:00:00.000Z|standard|Casa segna",
@@ -1350,8 +1350,8 @@
    "mercato": "Casa segna",
    "quota": 1.2,
    "prezzo": null,
-   "risultato": "0-0",
-   "esito": "ko"
+   "risultato": "1-1",
+   "esito": "ok"
   },
   {
    "id": "leeds-brentford|2026-08-30T13:00:00.000Z|standard|Multigol 1-5",
@@ -1361,8 +1361,8 @@
    "mercato": "Multigol 1-5",
    "quota": 1.21,
    "prezzo": null,
-   "risultato": "0-0",
-   "esito": "ko"
+   "risultato": "1-1",
+   "esito": "ok"
   },
   {
    "id": "leeds-brentford|2026-08-30T13:00:00.000Z|standard|Multigol casa 1-2",
@@ -1372,8 +1372,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.76,
    "prezzo": null,
-   "risultato": "0-0",
-   "esito": "ko"
+   "risultato": "1-1",
+   "esito": "ok"
   },
   {
    "id": "lens-lorient|2026-09-05T15:15:00.000Z|standard|12",
@@ -1383,7 +1383,7 @@
    "mercato": "12",
    "quota": 1.2,
    "prezzo": null,
-   "risultato": "3-0",
+   "risultato": "0-1",
    "esito": "ok"
   },
   {
@@ -1394,8 +1394,8 @@
    "mercato": "Multigol 2-4",
    "quota": 1.79,
    "prezzo": null,
-   "risultato": "3-0",
-   "esito": "ok"
+   "risultato": "0-1",
+   "esito": "ko"
   },
   {
    "id": "levante-real betis|2026-08-29T15:00:00.000Z|sorpresa|Levante vincente",
@@ -1405,8 +1405,8 @@
    "mercato": "Levante vincente",
    "quota": 2.44,
    "prezzo": 3.48,
-   "risultato": "2-2",
-   "esito": "ko"
+   "risultato": "5-2",
+   "esito": "ok"
   },
   {
    "id": "levante-real betis|2026-08-29T15:00:00.000Z|standard|Multigol casa 1-2",
@@ -1416,8 +1416,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.72,
    "prezzo": null,
-   "risultato": "2-2",
-   "esito": "ok"
+   "risultato": "5-2",
+   "esito": "ko"
   },
   {
    "id": "levante-real betis|2026-08-29T15:00:00.000Z|standard|Over 1.5",
@@ -1427,7 +1427,7 @@
    "mercato": "Over 1.5",
    "quota": 1.24,
    "prezzo": null,
-   "risultato": "2-2",
+   "risultato": "5-2",
    "esito": "ok"
   },
   {
@@ -1438,7 +1438,7 @@
    "mercato": "Multigol 1-5",
    "quota": 1.24,
    "prezzo": null,
-   "risultato": "2-0",
+   "risultato": "4-0",
    "esito": "ok"
   },
   {
@@ -1449,7 +1449,7 @@
    "mercato": "Multigol 2-4",
    "quota": 1.75,
    "prezzo": null,
-   "risultato": "2-0",
+   "risultato": "4-0",
    "esito": "ok"
   },
   {
@@ -1482,7 +1482,7 @@
    "mercato": "Auxerre vincente",
    "quota": 4.83,
    "prezzo": 6.25,
-   "risultato": "3-2",
+   "risultato": "3-1",
    "esito": "ko"
   },
   {
@@ -1493,7 +1493,7 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.81,
    "prezzo": null,
-   "risultato": "3-2",
+   "risultato": "3-1",
    "esito": "ko"
   },
   {
@@ -1504,7 +1504,7 @@
    "mercato": "Over 1.5",
    "quota": 1.23,
    "prezzo": null,
-   "risultato": "3-2",
+   "risultato": "3-1",
    "esito": "ok"
   },
   {
@@ -1515,7 +1515,7 @@
    "mercato": "Le Havre vincente",
    "quota": 5.56,
    "prezzo": 7.5,
-   "risultato": "1-0",
+   "risultato": "1-1",
    "esito": "ko"
   },
   {
@@ -1526,7 +1526,7 @@
    "mercato": "1X",
    "quota": 1.22,
    "prezzo": null,
-   "risultato": "1-0",
+   "risultato": "1-1",
    "esito": "ok"
   },
   {
@@ -1537,7 +1537,7 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.81,
    "prezzo": null,
-   "risultato": "1-0",
+   "risultato": "1-1",
    "esito": "ok"
   },
   {
@@ -1548,7 +1548,7 @@
    "mercato": "Over 2.5",
    "quota": 1.79,
    "prezzo": null,
-   "risultato": "1-0",
+   "risultato": "1-1",
    "esito": "ko"
   },
   {
@@ -1658,8 +1658,8 @@
    "mercato": "1",
    "quota": 1.77,
    "prezzo": 1.84,
-   "risultato": "5-2",
-   "esito": "ok"
+   "risultato": "2-3",
+   "esito": "ko"
   },
   {
    "id": "marseille-paris|2026-09-06T18:45:00.000Z|standard|Multigol 1-5",
@@ -1669,8 +1669,8 @@
    "mercato": "Multigol 1-5",
    "quota": 1.23,
    "prezzo": null,
-   "risultato": "5-2",
-   "esito": "ko"
+   "risultato": "2-3",
+   "esito": "ok"
   },
   {
    "id": "monaco-marseille|2026-08-30T18:45:00.000Z|sorpresa|Marseille vincente",
@@ -1680,7 +1680,7 @@
    "mercato": "Marseille vincente",
    "quota": 2.91,
    "prezzo": 3.3,
-   "risultato": "2-1",
+   "risultato": "2-0",
    "esito": "ko"
   },
   {
@@ -1691,7 +1691,7 @@
    "mercato": "Multigol 1-5",
    "quota": 1.25,
    "prezzo": null,
-   "risultato": "2-1",
+   "risultato": "2-0",
    "esito": "ok"
   },
   {
@@ -1702,7 +1702,7 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.81,
    "prezzo": null,
-   "risultato": "2-1",
+   "risultato": "2-0",
    "esito": "ok"
   },
   {
@@ -1713,8 +1713,8 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.75,
    "prezzo": null,
-   "risultato": "2-1",
-   "esito": "ok"
+   "risultato": "2-0",
+   "esito": "ko"
   },
   {
    "id": "monza-udinese|2026-08-29T16:30:00.000Z|standard|Over 2.5",
@@ -1746,8 +1746,8 @@
    "mercato": "Como vincente",
    "quota": 2.62,
    "prezzo": 3.23,
-   "risultato": "0-0",
-   "esito": "ko"
+   "risultato": "1-2",
+   "esito": "ok"
   },
   {
    "id": "napoli-como|2026-08-30T16:30:00.000Z|standard|Multigol 1-4",
@@ -1757,8 +1757,8 @@
    "mercato": "Multigol 1-4",
    "quota": 1.23,
    "prezzo": null,
-   "risultato": "0-0",
-   "esito": "ko"
+   "risultato": "1-2",
+   "esito": "ok"
   },
   {
    "id": "napoli-como|2026-08-30T16:30:00.000Z|standard|Multigol casa 1-2",
@@ -1768,8 +1768,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.72,
    "prezzo": null,
-   "risultato": "0-0",
-   "esito": "ko"
+   "risultato": "1-2",
+   "esito": "ok"
   },
   {
    "id": "newcastle united-bournemouth|2026-09-05T11:30:00.000Z|sorpresa|Bournemouth vincente",
@@ -1779,8 +1779,8 @@
    "mercato": "Bournemouth vincente",
    "quota": 2.75,
    "prezzo": 3.2,
-   "risultato": "1-2",
-   "esito": "ok"
+   "risultato": "2-2",
+   "esito": "ko"
   },
   {
    "id": "newcastle united-bournemouth|2026-09-05T11:30:00.000Z|standard|Multigol casa 1-2",
@@ -1790,7 +1790,7 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.75,
    "prezzo": null,
-   "risultato": "1-2",
+   "risultato": "2-2",
    "esito": "ok"
   },
   {
@@ -1801,7 +1801,7 @@
    "mercato": "Trasferta segna",
    "quota": 1.23,
    "prezzo": null,
-   "risultato": "1-2",
+   "risultato": "2-2",
    "esito": "ok"
   },
   {
@@ -1845,8 +1845,8 @@
    "mercato": "Multigol 1-5",
    "quota": 1.16,
    "prezzo": null,
-   "risultato": "3-0",
-   "esito": "ok"
+   "risultato": "0-0",
+   "esito": "ko"
   },
   {
    "id": "nottm forest-tottenham|2026-09-05T14:00:00.000Z|standard|Multigol trasferta 1-2",
@@ -1856,7 +1856,7 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.76,
    "prezzo": null,
-   "risultato": "3-0",
+   "risultato": "0-0",
    "esito": "ko"
   },
   {
@@ -1867,7 +1867,7 @@
    "mercato": "Multigol 1-4",
    "quota": 1.23,
    "prezzo": null,
-   "risultato": "2-1",
+   "risultato": "1-0",
    "esito": "ok"
   },
   {
@@ -1878,8 +1878,8 @@
    "mercato": "Multigol 2-5",
    "quota": 1.71,
    "prezzo": null,
-   "risultato": "2-1",
-   "esito": "ok"
+   "risultato": "1-0",
+   "esito": "ko"
   },
   {
    "id": "paderborn-freiburg|2026-09-05T13:30:00.000Z|sorpresa|Pareggio",
@@ -1922,7 +1922,7 @@
    "mercato": "Multigol 1-5",
    "quota": 1.19,
    "prezzo": null,
-   "risultato": "1-0",
+   "risultato": "3-0",
    "esito": "ok"
   },
   {
@@ -1933,7 +1933,7 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.72,
    "prezzo": null,
-   "risultato": "1-0",
+   "risultato": "3-0",
    "esito": "ko"
   },
   {
@@ -1944,8 +1944,8 @@
    "mercato": "Over 1.5",
    "quota": 1.19,
    "prezzo": null,
-   "risultato": "1-0",
-   "esito": "ko"
+   "risultato": "3-0",
+   "esito": "ok"
   },
   {
    "id": "parma 1913-monza|2026-09-06T13:00:00.000Z|standard|Multigol 1-4",
@@ -1999,7 +1999,7 @@
    "mercato": "Monaco vincente",
    "quota": 6.17,
    "prezzo": 8.1,
-   "risultato": "1-3",
+   "risultato": "1-2",
    "esito": "ok"
   },
   {
@@ -2010,7 +2010,7 @@
    "mercato": "1X",
    "quota": 1.19,
    "prezzo": null,
-   "risultato": "1-3",
+   "risultato": "1-2",
    "esito": "ko"
   },
   {
@@ -2021,8 +2021,8 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.78,
    "prezzo": null,
-   "risultato": "1-3",
-   "esito": "ko"
+   "risultato": "1-2",
+   "esito": "ok"
   },
   {
    "id": "rasenballsport leipzig-borussia m gladbach|2026-08-29T13:30:00.000Z|standard|12",
@@ -2032,7 +2032,7 @@
    "mercato": "12",
    "quota": 1.22,
    "prezzo": null,
-   "risultato": "1-0",
+   "risultato": "3-0",
    "esito": "ok"
   },
   {
@@ -2043,7 +2043,7 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.75,
    "prezzo": null,
-   "risultato": "1-0",
+   "risultato": "3-0",
    "esito": "ko"
   },
   {
@@ -2087,8 +2087,8 @@
    "mercato": "Real Betis vincente",
    "quota": 3.02,
    "prezzo": 6,
-   "risultato": "1-1",
-   "esito": "ko"
+   "risultato": "1-0",
+   "esito": "ok"
   },
   {
    "id": "real betis-real madrid|2026-09-04T19:00:00.000Z|standard|1X",
@@ -2098,7 +2098,7 @@
    "mercato": "1X",
    "quota": 1.75,
    "prezzo": null,
-   "risultato": "1-1",
+   "risultato": "1-0",
    "esito": "ok"
   },
   {
@@ -2109,7 +2109,7 @@
    "mercato": "Under 4.5",
    "quota": 1.25,
    "prezzo": null,
-   "risultato": "1-1",
+   "risultato": "1-0",
    "esito": "ok"
   },
   {
@@ -2153,7 +2153,7 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.77,
    "prezzo": null,
-   "risultato": "3-1",
+   "risultato": "0-0",
    "esito": "ko"
   },
   {
@@ -2164,8 +2164,8 @@
    "mercato": "Over 1.5",
    "quota": 1.25,
    "prezzo": null,
-   "risultato": "3-1",
-   "esito": "ok"
+   "risultato": "0-0",
+   "esito": "ko"
   },
   {
    "id": "real sociedad-espanyol|2026-08-29T17:00:00.000Z|sorpresa|Espanyol vincente",
@@ -2175,7 +2175,7 @@
    "mercato": "Espanyol vincente",
    "quota": 4.1,
    "prezzo": 4.62,
-   "risultato": "2-2",
+   "risultato": "2-1",
    "esito": "ko"
   },
   {
@@ -2186,8 +2186,8 @@
    "mercato": "Multigol 1-3",
    "quota": 1.79,
    "prezzo": null,
-   "risultato": "2-2",
-   "esito": "ko"
+   "risultato": "2-1",
+   "esito": "ok"
   },
   {
    "id": "real sociedad-espanyol|2026-08-29T17:00:00.000Z|standard|Over 1.5",
@@ -2197,7 +2197,7 @@
    "mercato": "Over 1.5",
    "quota": 1.2,
    "prezzo": null,
-   "risultato": "2-2",
+   "risultato": "2-1",
    "esito": "ok"
   },
   {
@@ -2241,8 +2241,8 @@
    "mercato": "12",
    "quota": 1.24,
    "prezzo": null,
-   "risultato": "1-1",
-   "esito": "ko"
+   "risultato": "2-1",
+   "esito": "ok"
   },
   {
    "id": "roma-atalanta|2026-09-05T18:45:00.000Z|standard|Under 3.5",
@@ -2252,7 +2252,7 @@
    "mercato": "Under 3.5",
    "quota": 1.76,
    "prezzo": null,
-   "risultato": "1-1",
+   "risultato": "2-1",
    "esito": "ok"
   },
   {
@@ -2263,8 +2263,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.75,
    "prezzo": null,
-   "risultato": "0-1",
-   "esito": "ko"
+   "risultato": "2-1",
+   "esito": "ok"
   },
   {
    "id": "sassuolo-torino|2026-08-29T16:30:00.000Z|standard|Over 1.5",
@@ -2274,8 +2274,8 @@
    "mercato": "Over 1.5",
    "quota": 1.23,
    "prezzo": null,
-   "risultato": "0-1",
-   "esito": "ko"
+   "risultato": "2-1",
+   "esito": "ok"
   },
   {
    "id": "schalke 04-bayern munchen|2026-09-05T16:30:00.000Z|standard|Gol",
@@ -2307,8 +2307,8 @@
    "mercato": "Sevilla vincente",
    "quota": 2.93,
    "prezzo": 4.5,
-   "risultato": "2-1",
-   "esito": "ok"
+   "risultato": "1-3",
+   "esito": "ko"
   },
   {
    "id": "sevilla-atletico madrid|2026-08-29T19:30:00.000Z|standard|Gol",
@@ -2318,7 +2318,7 @@
    "mercato": "Gol",
    "quota": 1.77,
    "prezzo": null,
-   "risultato": "2-1",
+   "risultato": "1-3",
    "esito": "ok"
   },
   {
@@ -2329,7 +2329,7 @@
    "mercato": "Under 4.5",
    "quota": 1.18,
    "prezzo": null,
-   "risultato": "2-1",
+   "risultato": "1-3",
    "esito": "ok"
   },
   {
@@ -2340,8 +2340,8 @@
    "mercato": "Strasbourg vincente",
    "quota": 3.46,
    "prezzo": 4.2,
-   "risultato": "1-1",
-   "esito": "ko"
+   "risultato": "2-1",
+   "esito": "ok"
   },
   {
    "id": "strasbourg-lens|2026-08-29T15:15:00.000Z|standard|Multigol 1-5",
@@ -2351,7 +2351,7 @@
    "mercato": "Multigol 1-5",
    "quota": 1.23,
    "prezzo": null,
-   "risultato": "1-1",
+   "risultato": "2-1",
    "esito": "ok"
   },
   {
@@ -2362,7 +2362,7 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.71,
    "prezzo": null,
-   "risultato": "1-1",
+   "risultato": "2-1",
    "esito": "ok"
   },
   {
@@ -2373,7 +2373,7 @@
    "mercato": "Multigol 1-5",
    "quota": 1.16,
    "prezzo": null,
-   "risultato": "1-3",
+   "risultato": "1-0",
    "esito": "ok"
   },
   {
@@ -2384,7 +2384,7 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.73,
    "prezzo": null,
-   "risultato": "1-3",
+   "risultato": "1-0",
    "esito": "ko"
   },
   {
@@ -2395,7 +2395,7 @@
    "mercato": "Newcastle United vincente",
    "quota": 2.9,
    "prezzo": 3.3,
-   "risultato": "1-2",
+   "risultato": "0-2",
    "esito": "ok"
   },
   {
@@ -2406,7 +2406,7 @@
    "mercato": "Over 1.5",
    "quota": 1.24,
    "prezzo": null,
-   "risultato": "1-2",
+   "risultato": "0-2",
    "esito": "ok"
   },
   {
@@ -2417,8 +2417,8 @@
    "mercato": "Over 2.5",
    "quota": 1.77,
    "prezzo": null,
-   "risultato": "1-2",
-   "esito": "ok"
+   "risultato": "0-2",
+   "esito": "ko"
   },
   {
    "id": "toulouse-lille|2026-09-03T18:45:00.000Z|sorpresa|Toulouse vincente",
@@ -2428,7 +2428,7 @@
    "mercato": "Toulouse vincente",
    "quota": 3.05,
    "prezzo": 3.58,
-   "risultato": "0-4",
+   "risultato": "0-1",
    "esito": "ko"
   },
   {
@@ -2439,7 +2439,7 @@
    "mercato": "Multigol 1-4",
    "quota": 1.25,
    "prezzo": null,
-   "risultato": "0-4",
+   "risultato": "0-1",
    "esito": "ok"
   },
   {
@@ -2450,8 +2450,8 @@
    "mercato": "Under 2.5",
    "quota": 1.75,
    "prezzo": null,
-   "risultato": "0-4",
-   "esito": "ko"
+   "risultato": "0-1",
+   "esito": "ok"
   },
   {
    "id": "troyes-strasbourg|2026-09-06T13:00:00.000Z|standard|Multigol 1-4",
@@ -2483,8 +2483,8 @@
    "mercato": "Multigol trasferta 1-2",
    "quota": 1.73,
    "prezzo": null,
-   "risultato": "1-1",
-   "esito": "ok"
+   "risultato": "3-3",
+   "esito": "ko"
   },
   {
    "id": "union berlin-frankfurt|2026-08-29T13:30:00.000Z|standard|Under 4.5",
@@ -2494,8 +2494,8 @@
    "mercato": "Under 4.5",
    "quota": 1.17,
    "prezzo": null,
-   "risultato": "1-1",
-   "esito": "ok"
+   "risultato": "3-3",
+   "esito": "ko"
   },
   {
    "id": "valencia-barcelona|2026-09-06T14:15:00.000Z|sorpresa|Valencia vincente",
@@ -2505,8 +2505,8 @@
    "mercato": "Valencia vincente",
    "quota": 4.26,
    "prezzo": 11,
-   "risultato": "3-1",
-   "esito": "ok"
+   "risultato": "0-5",
+   "esito": "ko"
   },
   {
    "id": "valencia-barcelona|2026-09-06T14:15:00.000Z|standard|2",
@@ -2516,8 +2516,8 @@
    "mercato": "2",
    "quota": 1.79,
    "prezzo": 1.32,
-   "risultato": "3-1",
-   "esito": "ko"
+   "risultato": "0-5",
+   "esito": "ok"
   },
   {
    "id": "valencia-barcelona|2026-09-06T14:15:00.000Z|standard|Multigol 1-5",
@@ -2527,7 +2527,7 @@
    "mercato": "Multigol 1-5",
    "quota": 1.2,
    "prezzo": null,
-   "risultato": "3-1",
+   "risultato": "0-5",
    "esito": "ok"
   },
   {
@@ -2538,7 +2538,7 @@
    "mercato": "Under 3.5",
    "quota": 1.8,
    "prezzo": null,
-   "risultato": "3-1",
+   "risultato": "0-5",
    "esito": "ko"
   },
   {
@@ -2549,7 +2549,7 @@
    "mercato": "FC Cologne vincente",
    "quota": 5.1,
    "prezzo": 6.25,
-   "risultato": "3-1",
+   "risultato": "4-1",
    "esito": "ko"
   },
   {
@@ -2560,7 +2560,7 @@
    "mercato": "1X",
    "quota": 1.24,
    "prezzo": null,
-   "risultato": "3-1",
+   "risultato": "4-1",
    "esito": "ok"
   },
   {
@@ -2571,8 +2571,8 @@
    "mercato": "Multigol 2-4",
    "quota": 1.8,
    "prezzo": null,
-   "risultato": "3-1",
-   "esito": "ok"
+   "risultato": "4-1",
+   "esito": "ko"
   },
   {
    "id": "villarreal-deportivo la coruna|2026-09-05T19:00:00.000Z|standard|1",
@@ -2604,8 +2604,8 @@
    "mercato": "Werder Bremen vincente",
    "quota": 4.02,
    "prezzo": 4.6,
-   "risultato": "1-2",
-   "esito": "ko"
+   "risultato": "3-1",
+   "esito": "ok"
   },
   {
    "id": "werder bremen-rasenballsport leipzig|2026-09-05T13:30:00.000Z|standard|Multigol 1-5",
@@ -2615,7 +2615,7 @@
    "mercato": "Multigol 1-5",
    "quota": 1.2,
    "prezzo": null,
-   "risultato": "1-2",
+   "risultato": "3-1",
    "esito": "ok"
   },
   {
@@ -2626,8 +2626,8 @@
    "mercato": "Multigol casa 1-2",
    "quota": 1.7,
    "prezzo": null,
-   "risultato": "1-2",
-   "esito": "ok"
+   "risultato": "3-1",
+   "esito": "ko"
   }
  ],
  "pendenti": [
@@ -3913,9 +3913,10 @@
    "id": "elche-real sociedad|2026-09-07T19:30:00.000Z|standard|Multigol 1-3"
   }
  ],
- "aggiornato": "2026-09-07T11:20:15.915Z",
+ "aggiornato": "2026-09-07T11:43:00.440Z",
  "diagnostica": [
-  "16 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport"
+  "16 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport",
+  "CORREZIONE 07/09/2026: bug in chiudi.mjs, indicizzazione dei risultati Understat solo per nomi squadra senza data, sovrascritta dalla stagione precedente quando due squadre si incontrano piu volte. 176/239 pronostici chiusi avevano il risultato di una partita SBAGLIATA (stagione precedente) invece di quella vera. Corretti tutti usando la partita Understat con data piu vicina al kickoff reale (entro 3 giorni). 3 pronostici su Rayo Vallecano-Real Oviedo restano irrisolti: nessuna partita Understat trovata entro 3 giorni dal kickoff, lasciati con il vecchio dato ma segnalati come da verificare a mano."
  ],
  "nota": "La quota e la quota minima 1/probabilita, non il prezzo di un bookmaker: il saldo va letto come limite superiore. La categoria cassaforte nasce dalla combinazione costruita nella pagina e non e ricavabile da qui, quindi non viene aggiornata in automatico."
 }

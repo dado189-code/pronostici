@@ -16,6 +16,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { scaricaUnderstat } from './model.mjs';
 import { vinta } from './backtest.mjs';
 import { CHIUSURA } from './config.mjs';
+import { partitaPiuVicina, raggruppaPerSquadre } from './risultati.mjs';
 
 const PICKS = 'data/picks.json';
 const STORICO = 'data/storico.json';
@@ -58,9 +59,15 @@ const LEGHE = {
   'Ligue 1': 'Ligue_1', 'Bundesliga': 'Bundesliga'
 };
 
-// Scarica una stagione per lega, una volta sola, e la indicizza per
-// "Casa - Ospite": sono gli stessi nomi Understat che build.mjs ha gia' risolto
-// quando ha scritto il pronostico, quindi il confronto e' esatto, non fuzzy.
+// Scarica una stagione per lega (piu' la precedente, per le partite a
+// ridosso del cambio stagione) e raggruppa per "Casa - Ospite". BUG TROVATO
+// E CORRETTO: due squadre possono incontrarsi piu' di una volta in stagioni
+// vicine (es. Hoffenheim-Dortmund giocata sia il 18/04/2026 in 2025/26 sia
+// il 05/09/2026 in 2026/27) - indicizzare per sola coppia di nomi, come
+// faceva la versione precedente, fa sovrascrivere silenziosamente la
+// partita giusta con quella sbagliata (l'ultima stagione scaricata vince).
+// Qui si tengono TUTTE le partite di quella coppia, e chi cerca sceglie
+// quella con la data piu' vicina al pronostico da liquidare.
 async function indiceRisultati(compA, stagione) {
   const out = {};
   for (const comp of compA) {
@@ -71,12 +78,7 @@ async function indiceRisultati(compA, stagione) {
       try { partite.push(...await scaricaUnderstat(lega, st)); }
       catch (e) { console.warn(`${comp} ${st}: ${e.message}`); }
     }
-    const idx = {};
-    for (const p of partite) {
-      if (!Number.isFinite(p.golCasa) || !Number.isFinite(p.golOspite)) continue;
-      idx[`${p.casa} - ${p.ospite}`] = p;
-    }
-    out[comp] = idx;
+    out[comp] = raggruppaPerSquadre(partite);
   }
   return out;
 }
@@ -132,7 +134,8 @@ const restanoPendenti = [];
 for (const p of candidati) {
   if (!finiti.includes(p)) { restanoPendenti.push(p); continue; }
 
-  const partita = (risultati[p.comp] || {})[p.evento];
+  const candidateRisultato = (risultati[p.comp] || {})[p.evento];
+  const partita = partitaPiuVicina(candidateRisultato, p.inizio);
   if (!partita) { restanoPendenti.push(p); continue; }   // risultato non ancora pubblicato
 
   const mercato = mercatoLiquidabile(p);
