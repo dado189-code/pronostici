@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-09-05T22:58:48.686Z",
+ "aggiornato": "2026-09-07T11:20:22.173Z",
  "nota": "Una rilevazione per evento a ogni esecuzione: prob e la probabilita del consenso ripulita dal margine, prezzo il miglior prezzo trovato. Serve a misurare come si muove la lavagna prima del via.",
  "rilevazioni": [
   {
@@ -32747,6 +32747,454 @@
     }
    ],
    "quando": "2026-09-05T22:58:48.686Z"
+  },
+  {
+   "match": "cagliari-lecce",
+   "comp": "Serie A",
+   "inizio": "2026-09-07T16:30:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.4559,
+     "prezzo": 2.18,
+     "nBook": 24
+    },
+    {
+     "esito": "2",
+     "prob": 0.2409,
+     "prezzo": 4.28,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.3033,
+     "prezzo": 3.29,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "udinese-lazio",
+   "comp": "Serie A",
+   "inizio": "2026-09-07T18:45:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.3449,
+     "prezzo": 2.94,
+     "nBook": 24
+    },
+    {
+     "esito": "1",
+     "prob": 0.343,
+     "prezzo": 2.86,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.3121,
+     "prezzo": 3.17,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "venezia-fiorentina",
+   "comp": "Serie A",
+   "inizio": "2026-09-11T18:45:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.3973,
+     "prezzo": 2.55,
+     "nBook": 23
+    },
+    {
+     "esito": "1",
+     "prob": 0.3264,
+     "prezzo": 3.15,
+     "nBook": 23
+    },
+    {
+     "esito": "X",
+     "prob": 0.2763,
+     "prezzo": 3.6,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "getafe-celta vigo",
+   "comp": "Liga",
+   "inizio": "2026-09-07T17:00:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.2868,
+     "prezzo": 3.45,
+     "nBook": 21
+    },
+    {
+     "esito": "1",
+     "prob": 0.3783,
+     "prezzo": 2.68,
+     "nBook": 21
+    },
+    {
+     "esito": "X",
+     "prob": 0.3349,
+     "prezzo": 2.94,
+     "nBook": 21
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "elche-real sociedad",
+   "comp": "Liga",
+   "inizio": "2026-09-07T19:30:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.2839,
+     "prezzo": 3.55,
+     "nBook": 21
+    },
+    {
+     "esito": "2",
+     "prob": 0.4401,
+     "prezzo": 2.26,
+     "nBook": 21
+    },
+    {
+     "esito": "X",
+     "prob": 0.2761,
+     "prezzo": 3.62,
+     "nBook": 21
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "sevilla-valencia",
+   "comp": "Liga",
+   "inizio": "2026-09-11T19:00:00.000Z",
+   "quote": [
+    {
+     "esito": "1",
+     "prob": 0.4165,
+     "prezzo": 2.38,
+     "nBook": 20
+    },
+    {
+     "esito": "2",
+     "prob": 0.2818,
+     "prezzo": 3.65,
+     "nBook": 20
+    },
+    {
+     "esito": "X",
+     "prob": 0.3017,
+     "prezzo": 3.25,
+     "nBook": 20
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "rennes-marseille",
+   "comp": "Ligue 1",
+   "inizio": "2026-09-11T18:45:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.314,
+     "prezzo": 3.2,
+     "nBook": 23
+    },
+    {
+     "esito": "1",
+     "prob": 0.4358,
+     "prezzo": 2.33,
+     "nBook": 23
+    },
+    {
+     "esito": "X",
+     "prob": 0.2502,
+     "prezzo": 4,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "union berlin-schalke 04",
+   "comp": "Bundesliga",
+   "inizio": "2026-09-11T18:30:00.000Z",
+   "quote": [
+    {
+     "esito": "2",
+     "prob": 0.309,
+     "prezzo": 3.25,
+     "nBook": 24
+    },
+    {
+     "esito": "1",
+     "prob": 0.4332,
+     "prezzo": 2.31,
+     "nBook": 24
+    },
+    {
+     "esito": "X",
+     "prob": 0.2578,
+     "prezzo": 3.95,
+     "nBook": 24
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "Arthur Gea - Botic van de Zandschulp",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-07T15:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Botic van de Zandschulp",
+     "prob": 0.6014,
+     "prezzo": 1.63,
+     "nBook": 22
+    },
+    {
+     "esito": "Arthur Gea",
+     "prob": 0.3986,
+     "prezzo": 2.58,
+     "nBook": 22
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "Francisco Cerundolo - Alexander Blockx",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-07T17:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Alexander Blockx",
+     "prob": 0.5946,
+     "prezzo": 1.67,
+     "nBook": 23
+    },
+    {
+     "esito": "Francisco Cerundolo",
+     "prob": 0.4054,
+     "prezzo": 2.46,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "Karen Khachanov - Learner Tien",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-07T20:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Learner Tien",
+     "prob": 0.6152,
+     "prezzo": 1.6,
+     "nBook": 23
+    },
+    {
+     "esito": "Karen Khachanov",
+     "prob": 0.3848,
+     "prezzo": 2.62,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "Alexander Zverev - Luciano Darderi",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-08T00:10:00.000Z",
+   "quote": [
+    {
+     "esito": "Alexander Zverev",
+     "prob": 0.8859,
+     "prezzo": 1.11,
+     "nBook": 23
+    },
+    {
+     "esito": "Luciano Darderi",
+     "prob": 0.1141,
+     "prezzo": 9.4,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "Frances Tiafoe - Alex Michelsen",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-08T15:30:00.000Z",
+   "quote": [
+    {
+     "esito": "Frances Tiafoe",
+     "prob": 0.5779,
+     "prezzo": 1.74,
+     "nBook": 22
+    },
+    {
+     "esito": "Alex Michelsen",
+     "prob": 0.4221,
+     "prezzo": 2.33,
+     "nBook": 22
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "Ben Shelton - Carlos Alcaraz",
+   "comp": "ATP US Open",
+   "inizio": "2026-09-08T15:30:00.000Z",
+   "quote": [
+    {
+     "esito": "Carlos Alcaraz",
+     "prob": 0.7548,
+     "prezzo": 1.3,
+     "nBook": 22
+    },
+    {
+     "esito": "Ben Shelton",
+     "prob": 0.2452,
+     "prezzo": 4.3,
+     "nBook": 22
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "Mirra Andreeva - Anastasia Potapova",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-07T15:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Mirra Andreeva",
+     "prob": 0.8265,
+     "prezzo": 1.19,
+     "nBook": 23
+    },
+    {
+     "esito": "Anastasia Potapova",
+     "prob": 0.1735,
+     "prezzo": 6.2,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "Iga Swiatek - Qinwen Zheng",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-07T15:30:00.000Z",
+   "quote": [
+    {
+     "esito": "Iga Swiatek",
+     "prob": 0.7897,
+     "prezzo": 1.25,
+     "nBook": 23
+    },
+    {
+     "esito": "Qinwen Zheng",
+     "prob": 0.2103,
+     "prezzo": 5,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "Naomi Osaka - Elena Rybakina",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-07T19:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Elena Rybakina",
+     "prob": 0.5551,
+     "prezzo": 1.78,
+     "nBook": 23
+    },
+    {
+     "esito": "Naomi Osaka",
+     "prob": 0.4449,
+     "prezzo": 2.26,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "Iva Jović - Coco Gauff",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-07T23:00:00.000Z",
+   "quote": [
+    {
+     "esito": "Coco Gauff",
+     "prob": 0.7063,
+     "prezzo": 1.39,
+     "nBook": 23
+    },
+    {
+     "esito": "Iva Jović",
+     "prob": 0.2937,
+     "prezzo": 3.55,
+     "nBook": 23
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "Aryna Sabalenka - Linda Noskova",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-08T15:30:00.000Z",
+   "quote": [
+    {
+     "esito": "Aryna Sabalenka",
+     "prob": 0.6908,
+     "prezzo": 1.43,
+     "nBook": 22
+    },
+    {
+     "esito": "Linda Noskova",
+     "prob": 0.3092,
+     "prezzo": 3.25,
+     "nBook": 22
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
+  },
+  {
+   "match": "Jessica Pegula - Emma Navarro",
+   "comp": "WTA US Open",
+   "inizio": "2026-09-08T15:30:00.000Z",
+   "quote": [
+    {
+     "esito": "Jessica Pegula",
+     "prob": 0.7734,
+     "prezzo": 1.26,
+     "nBook": 19
+    },
+    {
+     "esito": "Emma Navarro",
+     "prob": 0.2266,
+     "prezzo": 4.5,
+     "nBook": 19
+    }
+   ],
+   "quando": "2026-09-07T11:20:22.173Z"
   }
  ]
 }
