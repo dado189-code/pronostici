@@ -51,6 +51,19 @@ const BASKET = [
   { odds: 'basketball_nba',  nome: 'NBA',   sport: 'basket' }
 ];
 
+// Competizioni di CALCIO senza modello indipendente: Understat copre solo le
+// 5 leghe nazionali sopra, non le coppe europee. Il Dixon-Coles di questo
+// progetto stima le forze DENTRO una singola lega (rating normalizzati a
+// media 1 in quel campionato): non esiste una calibrazione cross-lega per
+// confrontare col metro giusto due squadre di campionati diversi, quindi
+// niente lambda/gol attesi per queste partite, solo consenso bookmaker come
+// per basket/tennis. sport resta 'calcio' (lo e' davvero) ma fonte:'consenso'
+// lo etichetta gia' in pagina come "solo lavagna", stesso trattamento di
+// basket/tennis: mai spacciato per una stima indipendente.
+const CALCIO_CONSENSO = [
+  { odds: 'soccer_uefa_champs_league', nome: 'Champions League', sport: 'calcio' }
+];
+
 const API = 'https://api.the-odds-api.com/v4';
 const QUOTE = 'data/quote-storico.json';
 const isoSecondi = (d) => d.toISOString().slice(0, 19) + 'Z';
@@ -451,8 +464,9 @@ for (const lega of LEGHE) {
   }
 }
 
-// --- sport senza modello: basket a chiavi fisse, tennis scoperto ogni volta
-for (const comp of [...BASKET, ...await chiaviTennis()]) await daConsenso(comp);
+// --- sport/competizioni senza modello: basket e Champions League a chiavi
+// fisse, tennis scoperto ogni volta
+for (const comp of [...BASKET, ...CALCIO_CONSENSO, ...await chiaviTennis()]) await daConsenso(comp);
 
 // Tracciabilita' (FASE 1): ogni pronostico porta la versione del modello che
 // l'ha davvero calcolato, e finisce in uno snapshot che nessuna esecuzione
