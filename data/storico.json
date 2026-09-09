@@ -474,6 +474,50 @@
    "esito": "ok"
   },
   {
+   "id": "cagliari-lecce|2026-09-07T16:30:00.000Z|sorpresa|Lecce vincente",
+   "cat": "sorpresa",
+   "data": "07/09",
+   "evento": "Cagliari - Lecce",
+   "mercato": "Lecce vincente",
+   "quota": 3.79,
+   "prezzo": 4.6,
+   "risultato": "1-0",
+   "esito": "ko"
+  },
+  {
+   "id": "cagliari-lecce|2026-09-07T16:30:00.000Z|standard|Casa segna",
+   "cat": "standard",
+   "data": "07/09",
+   "evento": "Cagliari - Lecce",
+   "mercato": "Casa segna",
+   "quota": 1.22,
+   "prezzo": null,
+   "risultato": "1-0",
+   "esito": "ok"
+  },
+  {
+   "id": "cagliari-lecce|2026-09-07T16:30:00.000Z|standard|Gol",
+   "cat": "standard",
+   "data": "07/09",
+   "evento": "Cagliari - Lecce",
+   "mercato": "Gol",
+   "quota": 1.8,
+   "prezzo": null,
+   "risultato": "1-0",
+   "esito": "ko"
+  },
+  {
+   "id": "cagliari-lecce|2026-09-07T16:30:00.000Z|standard|Multigol trasferta 1-2",
+   "cat": "standard",
+   "data": "07/09",
+   "evento": "Cagliari - Lecce",
+   "mercato": "Multigol trasferta 1-2",
+   "quota": 1.75,
+   "prezzo": null,
+   "risultato": "1-0",
+   "esito": "ko"
+  },
+  {
    "id": "celta vigo-athletic bilbao|2026-08-30T19:30:00.000Z|sorpresa|Celta Vigo vincente",
    "cat": "sorpresa",
    "data": "30/08",
@@ -670,6 +714,50 @@
    "prezzo": null,
    "risultato": "2-0",
    "esito": "ko"
+  },
+  {
+   "id": "elche-real sociedad|2026-09-07T19:30:00.000Z|sorpresa|Elche vincente",
+   "cat": "sorpresa",
+   "data": "07/09",
+   "evento": "Elche - Real Sociedad",
+   "mercato": "Elche vincente",
+   "quota": 2.53,
+   "prezzo": 3.1,
+   "risultato": "2-3",
+   "esito": "ko"
+  },
+  {
+   "id": "elche-real sociedad|2026-09-07T19:30:00.000Z|standard|Casa segna",
+   "cat": "standard",
+   "data": "07/09",
+   "evento": "Elche - Real Sociedad",
+   "mercato": "Casa segna",
+   "quota": 1.23,
+   "prezzo": null,
+   "risultato": "2-3",
+   "esito": "ok"
+  },
+  {
+   "id": "elche-real sociedad|2026-09-07T19:30:00.000Z|standard|Multigol 1-3",
+   "cat": "standard",
+   "data": "07/09",
+   "evento": "Elche - Real Sociedad",
+   "mercato": "Multigol 1-3",
+   "quota": 1.8,
+   "prezzo": null,
+   "risultato": "2-3",
+   "esito": "ko"
+  },
+  {
+   "id": "elche-real sociedad|2026-09-07T19:30:00.000Z|standard|Multigol casa 1-2",
+   "cat": "standard",
+   "data": "07/09",
+   "evento": "Elche - Real Sociedad",
+   "mercato": "Multigol casa 1-2",
+   "quota": 1.73,
+   "prezzo": null,
+   "risultato": "2-3",
+   "esito": "ok"
   },
   {
    "id": "espanyol-sevilla|2026-09-06T19:00:00.000Z|standard|Multigol 1-4",
@@ -1010,6 +1098,39 @@
    "quota": 1.22,
    "prezzo": null,
    "risultato": "1-4",
+   "esito": "ok"
+  },
+  {
+   "id": "getafe-celta vigo|2026-09-07T17:00:00.000Z|sorpresa|Celta Vigo vincente",
+   "cat": "sorpresa",
+   "data": "07/09",
+   "evento": "Getafe - Celta Vigo",
+   "mercato": "Celta Vigo vincente",
+   "quota": 3.24,
+   "prezzo": 3.65,
+   "risultato": "1-1",
+   "esito": "ko"
+  },
+  {
+   "id": "getafe-celta vigo|2026-09-07T17:00:00.000Z|standard|Multigol 1-4",
+   "cat": "standard",
+   "data": "07/09",
+   "evento": "Getafe - Celta Vigo",
+   "mercato": "Multigol 1-4",
+   "quota": 1.23,
+   "prezzo": null,
+   "risultato": "1-1",
+   "esito": "ok"
+  },
+  {
+   "id": "getafe-celta vigo|2026-09-07T17:00:00.000Z|standard|Multigol casa 1-2",
+   "cat": "standard",
+   "data": "07/09",
+   "evento": "Getafe - Celta Vigo",
+   "mercato": "Multigol casa 1-2",
+   "quota": 1.78,
+   "prezzo": null,
+   "risultato": "1-1",
    "esito": "ok"
   },
   {
@@ -2476,6 +2597,39 @@
    "esito": "ok"
   },
   {
+   "id": "udinese-lazio|2026-09-07T18:45:00.000Z|sorpresa|Udinese vincente",
+   "cat": "sorpresa",
+   "data": "07/09",
+   "evento": "Udinese - Lazio",
+   "mercato": "Udinese vincente",
+   "quota": 2.53,
+   "prezzo": 3.1,
+   "risultato": "1-2",
+   "esito": "ko"
+  },
+  {
+   "id": "udinese-lazio|2026-09-07T18:45:00.000Z|standard|Multigol 1-4",
+   "cat": "standard",
+   "data": "07/09",
+   "evento": "Udinese - Lazio",
+   "mercato": "Multigol 1-4",
+   "quota": 1.23,
+   "prezzo": null,
+   "risultato": "1-2",
+   "esito": "ok"
+  },
+  {
+   "id": "udinese-lazio|2026-09-07T18:45:00.000Z|standard|Multigol trasferta 1-2",
+   "cat": "standard",
+   "data": "07/09",
+   "evento": "Udinese - Lazio",
+   "mercato": "Multigol trasferta 1-2",
+   "quota": 1.72,
+   "prezzo": null,
+   "risultato": "1-2",
+   "esito": "ok"
+  },
+  {
    "id": "union berlin-frankfurt|2026-08-29T13:30:00.000Z|standard|Multigol trasferta 1-2",
    "cat": "standard",
    "data": "29/08",
@@ -2634,60 +2788,901 @@
   {
    "sport": "calcio",
    "comp": "Serie A",
-   "evento": "Cagliari - Lecce",
-   "quando": "lun 07/09, 18:30",
-   "ore": 70,
-   "match": "cagliari-lecce",
-   "inizio": "2026-09-07T16:30:00.000Z",
+   "evento": "Venezia - Fiorentina",
+   "quando": "ven 11/09, 20:45",
+   "ore": 103,
+   "match": "venezia-fiorentina",
+   "inizio": "2026-09-11T18:45:00.000Z",
    "understat": "Serie_A",
    "analisi": {
     "pure_model": {
-     "P1": 0.5062,
-     "PX": 0.2295,
-     "P2": 0.2642,
+     "P1": 0.3871,
+     "PX": 0.1941,
+     "P2": 0.4189,
      "model_version": "football-v1-baseline"
     },
     "calibrated": {
-     "P1": 0.4882,
-     "PX": 0.2569,
-     "P2": 0.2548,
+     "P1": 0.3955,
+     "PX": 0.1766,
+     "P2": 0.4279,
      "attivo": true,
      "motivo": null,
      "model_version": "football-v1.1-drawcal-candidate",
      "badge": "EXPERIMENTAL CALIBRATION"
     },
     "expected_goals": {
-     "lambda_home": 1.701,
-     "lambda_away": 1.156
+     "lambda_home": 2.089,
+     "lambda_away": 2.174
     },
     "market": {
-     "esito_riferimento": "2",
-     "bookmaker_odds": 4.6,
-     "book": "Unibet (NL)",
-     "n_book": 24,
-     "no_vig_probability": 0.227
+     "esito_riferimento": "1",
+     "bookmaker_odds": 3.15,
+     "book": "Betfair",
+     "n_book": 23,
+     "no_vig_probability": 0.326
     },
     "value": {
-     "fair_odds": 3.788,
-     "edge": 0.037,
-     "ev": 0.2144
+     "fair_odds": 2.584,
+     "edge": 0.061,
+     "ev": 0.219
     },
     "quality": {
      "agreement": "MEDIUM",
-     "agreement_scarto": 0.037,
-     "confidence": 61,
-     "data_quality": 60
+     "agreement_scarto": 0.0695,
+     "confidence": 47,
+     "data_quality": 63
     },
     "market_gap": {
-     "valore": 0.037,
-     "livello": "LIEVE",
+     "valore": 0.061,
+     "livello": "SIGNIFICATIVA",
      "etichetta": null
     },
     "rischio_quota": "NORMALE",
     "value_class": "VALUE",
-    "best_pick_idoneo": true,
-    "best_pick_motivi_esclusione": [],
-    "opportunity_score": 0.6932,
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 47 < 55",
+     "market gap 6.1pp > 5pp"
+    ],
+    "opportunity_score": 0.6622,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.5,
+      "current_season_contribution_pct": 15.5
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Venezia\" il 38.7% contro il 32.6% del mercato. La quota fair e' 2.58 contro una quota disponibile di 3.15. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol 1-4",
+   "prob": 0.566,
+   "why": "Gol attesi 2.09 contro 2.17, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.6%. Sul segno 1 il modello dice 38.7% contro il 32.6% del consenso di 23 bookmaker, miglior prezzo 3.15 su Betfair.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.387,
+    "probMercato": 0.326,
+    "prezzo": 3.15,
+    "book": "Betfair",
+    "nBook": 23,
+    "valore": 0.219
+   },
+   "model_version": "football-v1-baseline",
+   "id": "venezia-fiorentina|2026-09-11T18:45:00.000Z|standard|Multigol 1-4"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Venezia - Fiorentina",
+   "quando": "ven 11/09, 20:45",
+   "ore": 103,
+   "match": "venezia-fiorentina",
+   "inizio": "2026-09-11T18:45:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3871,
+     "PX": 0.1941,
+     "P2": 0.4189,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3955,
+     "PX": 0.1766,
+     "P2": 0.4279,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.089,
+     "lambda_away": 2.174
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 3.15,
+     "book": "Betfair",
+     "n_book": 23,
+     "no_vig_probability": 0.326
+    },
+    "value": {
+     "fair_odds": 2.584,
+     "edge": 0.061,
+     "ev": 0.219
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.0695,
+     "confidence": 47,
+     "data_quality": 63
+    },
+    "market_gap": {
+     "valore": 0.061,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 47 < 55",
+     "market gap 6.1pp > 5pp"
+    ],
+    "opportunity_score": 0.6622,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.5,
+      "current_season_contribution_pct": 15.5
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Venezia\" il 38.7% contro il 32.6% del mercato. La quota fair e' 2.58 contro una quota disponibile di 3.15. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "12",
+   "prob": 0.806,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 2.09 contro 2.17, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.6%. Sul segno 1 il modello dice 38.7% contro il 32.6% del consenso di 23 bookmaker, miglior prezzo 3.15 su Betfair.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "venezia-fiorentina|2026-09-11T18:45:00.000Z|standard|12"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Venezia - Fiorentina",
+   "quando": "ven 11/09, 20:45",
+   "ore": 103,
+   "match": "venezia-fiorentina",
+   "inizio": "2026-09-11T18:45:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3871,
+     "PX": 0.1941,
+     "P2": 0.4189,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3955,
+     "PX": 0.1766,
+     "P2": 0.4279,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.089,
+     "lambda_away": 2.174
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 3.15,
+     "book": "Betfair",
+     "n_book": 23,
+     "no_vig_probability": 0.326
+    },
+    "value": {
+     "fair_odds": 2.584,
+     "edge": 0.061,
+     "ev": 0.219
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.0695,
+     "confidence": 47,
+     "data_quality": 63
+    },
+    "market_gap": {
+     "valore": 0.061,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 47 < 55",
+     "market gap 6.1pp > 5pp"
+    ],
+    "opportunity_score": 0.6622,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
+     },
+     "ospite": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.5,
+      "current_season_contribution_pct": 15.5
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Venezia\" il 38.7% contro il 32.6% del mercato. La quota fair e' 2.58 contro una quota disponibile di 3.15. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Venezia vincente",
+   "prob": 0.387,
+   "prezzo": 3.15,
+   "why": "Il modello da questo esito al 38.7%, il consenso di 23 bookmaker al 32.6%. Al prezzo migliore, 3.15 su Betfair, il valore atteso e' 21.9%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.387,
+    "probMercato": 0.326,
+    "prezzo": 3.15,
+    "book": "Betfair",
+    "nBook": 23,
+    "valore": 0.219
+   },
+   "model_version": "football-v1-baseline",
+   "id": "venezia-fiorentina|2026-09-11T18:45:00.000Z|sorpresa|Venezia vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Sevilla - Valencia",
+   "quando": "ven 11/09, 21:00",
+   "ore": 104,
+   "match": "sevilla-valencia",
+   "inizio": "2026-09-11T19:00:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3728,
+     "PX": 0.2828,
+     "P2": 0.3444,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3725,
+     "PX": 0.2833,
+     "P2": 0.3442,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.193,
+     "lambda_away": 1.135
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 3.65,
+     "book": "Betfair",
+     "n_book": 20,
+     "no_vig_probability": 0.282
+    },
+    "value": {
+     "fair_odds": 2.907,
+     "edge": 0.062,
+     "ev": 0.2556
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.0622,
+     "confidence": 48,
+     "data_quality": 65
+    },
+    "market_gap": {
+     "valore": 0.062,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 48 < 55",
+     "market gap 6.2pp > 5pp"
+    ],
+    "opportunity_score": 0.7115,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.6,
+      "current_season_contribution_pct": 19.4
+     },
+     "ospite": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.4,
+      "current_season_contribution_pct": 19.6
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Valencia\" il 34.4% contro il 28.2% del mercato. La quota fair e' 2.91 contro una quota disponibile di 3.65. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol trasferta 1-2",
+   "prob": 0.572,
+   "why": "Gol attesi 1.19 contro 1.14, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.2%. Sul segno 2 il modello dice 34.4% contro il 28.2% del consenso di 20 bookmaker, miglior prezzo 3.65 su Betfair.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.344,
+    "probMercato": 0.282,
+    "prezzo": 3.65,
+    "book": "Betfair",
+    "nBook": 20,
+    "valore": 0.257
+   },
+   "model_version": "football-v1-baseline",
+   "id": "sevilla-valencia|2026-09-11T19:00:00.000Z|standard|Multigol trasferta 1-2"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Sevilla - Valencia",
+   "quando": "ven 11/09, 21:00",
+   "ore": 104,
+   "match": "sevilla-valencia",
+   "inizio": "2026-09-11T19:00:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3728,
+     "PX": 0.2828,
+     "P2": 0.3444,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3725,
+     "PX": 0.2833,
+     "P2": 0.3442,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.193,
+     "lambda_away": 1.135
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 3.65,
+     "book": "Betfair",
+     "n_book": 20,
+     "no_vig_probability": 0.282
+    },
+    "value": {
+     "fair_odds": 2.907,
+     "edge": 0.062,
+     "ev": 0.2556
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.0622,
+     "confidence": 48,
+     "data_quality": 65
+    },
+    "market_gap": {
+     "valore": 0.062,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 48 < 55",
+     "market gap 6.2pp > 5pp"
+    ],
+    "opportunity_score": 0.7115,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.6,
+      "current_season_contribution_pct": 19.4
+     },
+     "ospite": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.4,
+      "current_season_contribution_pct": 19.6
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Valencia\" il 34.4% contro il 28.2% del mercato. La quota fair e' 2.91 contro una quota disponibile di 3.65. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "mercato": "Multigol 1-4",
+   "prob": 0.815,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.19 contro 1.14, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.5%. Sul segno 2 il modello dice 34.4% contro il 28.2% del consenso di 20 bookmaker, miglior prezzo 3.65 su Betfair.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "sevilla-valencia|2026-09-11T19:00:00.000Z|standard|Multigol 1-4"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Sevilla - Valencia",
+   "quando": "ven 11/09, 21:00",
+   "ore": 104,
+   "match": "sevilla-valencia",
+   "inizio": "2026-09-11T19:00:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3728,
+     "PX": 0.2828,
+     "P2": 0.3444,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3725,
+     "PX": 0.2833,
+     "P2": 0.3442,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.193,
+     "lambda_away": 1.135
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 3.65,
+     "book": "Betfair",
+     "n_book": 20,
+     "no_vig_probability": 0.282
+    },
+    "value": {
+     "fair_odds": 2.907,
+     "edge": 0.062,
+     "ev": 0.2556
+    },
+    "quality": {
+     "agreement": "MEDIUM",
+     "agreement_scarto": 0.0622,
+     "confidence": 48,
+     "data_quality": 65
+    },
+    "market_gap": {
+     "valore": 0.062,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 48 < 55",
+     "market gap 6.2pp > 5pp"
+    ],
+    "opportunity_score": 0.7115,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.6,
+      "current_season_contribution_pct": 19.4
+     },
+     "ospite": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.4,
+      "current_season_contribution_pct": 19.6
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Valencia\" il 34.4% contro il 28.2% del mercato. La quota fair e' 2.91 contro una quota disponibile di 3.65. Il modello e il mercato mostrano un disaccordo moderato."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Valencia vincente",
+   "prob": 0.344,
+   "prezzo": 3.65,
+   "why": "Il modello da questo esito al 34.4%, il consenso di 20 bookmaker al 28.2%. Al prezzo migliore, 3.65 su Betfair, il valore atteso e' 25.7%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.344,
+    "probMercato": 0.282,
+    "prezzo": 3.65,
+    "book": "Betfair",
+    "nBook": 20,
+    "valore": 0.257
+   },
+   "model_version": "football-v1-baseline",
+   "id": "sevilla-valencia|2026-09-11T19:00:00.000Z|sorpresa|Valencia vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Rennes - Marseille",
+   "quando": "ven 11/09, 20:45",
+   "ore": 103,
+   "match": "rennes-marseille",
+   "inizio": "2026-09-11T18:45:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3802,
+     "PX": 0.2187,
+     "P2": 0.4011,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3616,
+     "PX": 0.2569,
+     "P2": 0.3815,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.972,
+     "lambda_away": 2.026
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 3.2,
+     "book": "Nordic Bet",
+     "n_book": 23,
+     "no_vig_probability": 0.314
+    },
+    "value": {
+     "fair_odds": 2.494,
+     "edge": 0.087,
+     "ev": 0.2832
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.087,
+     "confidence": 32,
+     "data_quality": 63
+    },
+    "market_gap": {
+     "valore": 0.087,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 32 < 55",
+     "agreement LOW",
+     "market gap 8.7pp > 5pp"
+    ],
+    "opportunity_score": 0.5705,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 82.6,
+      "current_season_contribution_pct": 17.4
+     },
+     "ospite": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 82.6,
+      "current_season_contribution_pct": 17.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Marseille\" il 40.1% contro il 31.4% del mercato. La quota fair e' 2.49 contro una quota disponibile di 3.20. Il modello e il mercato mostrano un forte disaccordo."
+   },
+   "mercato": "1X",
+   "prob": 0.599,
+   "why": "Gol attesi 1.97 contro 2.03, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 59.9%. Sul segno 2 il modello dice 40.1% contro il 31.4% del consenso di 23 bookmaker, miglior prezzo 3.20 su Nordic Bet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.401,
+    "probMercato": 0.314,
+    "prezzo": 3.2,
+    "book": "Nordic Bet",
+    "nBook": 23,
+    "valore": 0.283
+   },
+   "model_version": "football-v1-baseline",
+   "id": "rennes-marseille|2026-09-11T18:45:00.000Z|standard|1X"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Rennes - Marseille",
+   "quando": "ven 11/09, 20:45",
+   "ore": 103,
+   "match": "rennes-marseille",
+   "inizio": "2026-09-11T18:45:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3802,
+     "PX": 0.2187,
+     "P2": 0.4011,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3616,
+     "PX": 0.2569,
+     "P2": 0.3815,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.972,
+     "lambda_away": 2.026
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 3.2,
+     "book": "Nordic Bet",
+     "n_book": 23,
+     "no_vig_probability": 0.314
+    },
+    "value": {
+     "fair_odds": 2.494,
+     "edge": 0.087,
+     "ev": 0.2832
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.087,
+     "confidence": 32,
+     "data_quality": 63
+    },
+    "market_gap": {
+     "valore": 0.087,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 32 < 55",
+     "agreement LOW",
+     "market gap 8.7pp > 5pp"
+    ],
+    "opportunity_score": 0.5705,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 82.6,
+      "current_season_contribution_pct": 17.4
+     },
+     "ospite": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 82.6,
+      "current_season_contribution_pct": 17.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Marseille\" il 40.1% contro il 31.4% del mercato. La quota fair e' 2.49 contro una quota disponibile di 3.20. Il modello e il mercato mostrano un forte disaccordo."
+   },
+   "mercato": "Casa segna",
+   "prob": 0.861,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.97 contro 2.03, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 86.1%. Sul segno 2 il modello dice 40.1% contro il 31.4% del consenso di 23 bookmaker, miglior prezzo 3.20 su Nordic Bet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "id": "rennes-marseille|2026-09-11T18:45:00.000Z|standard|Casa segna"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Ligue 1",
+   "evento": "Rennes - Marseille",
+   "quando": "ven 11/09, 20:45",
+   "ore": 103,
+   "match": "rennes-marseille",
+   "inizio": "2026-09-11T18:45:00.000Z",
+   "understat": "Ligue_1",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.3802,
+     "PX": 0.2187,
+     "P2": 0.4011,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.3616,
+     "PX": 0.2569,
+     "P2": 0.3815,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.972,
+     "lambda_away": 2.026
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 3.2,
+     "book": "Nordic Bet",
+     "n_book": 23,
+     "no_vig_probability": 0.314
+    },
+    "value": {
+     "fair_odds": 2.494,
+     "edge": 0.087,
+     "ev": 0.2832
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.087,
+     "confidence": 32,
+     "data_quality": 63
+    },
+    "market_gap": {
+     "valore": 0.087,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 32 < 55",
+     "agreement LOW",
+     "market gap 8.7pp > 5pp"
+    ],
+    "opportunity_score": 0.5705,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 82.6,
+      "current_season_contribution_pct": 17.4
+     },
+     "ospite": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 82.6,
+      "current_season_contribution_pct": 17.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Marseille\" il 40.1% contro il 31.4% del mercato. La quota fair e' 2.49 contro una quota disponibile di 3.20. Il modello e il mercato mostrano un forte disaccordo."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Marseille vincente",
+   "prob": 0.401,
+   "prezzo": 3.2,
+   "why": "Il modello da questo esito al 40.1%, il consenso di 23 bookmaker al 31.4%. Al prezzo migliore, 3.20 su Nordic Bet, il valore atteso e' 28.3%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.401,
+    "probMercato": 0.314,
+    "prezzo": 3.2,
+    "book": "Nordic Bet",
+    "nBook": 23,
+    "valore": 0.283
+   },
+   "model_version": "football-v1-baseline",
+   "id": "rennes-marseille|2026-09-11T18:45:00.000Z|sorpresa|Marseille vincente"
+  },
+  {
+   "sport": "calcio",
+   "comp": "Bundesliga",
+   "evento": "Union Berlin - Schalke 04",
+   "quando": "ven 11/09, 20:30",
+   "ore": 103,
+   "match": "union berlin-schalke 04",
+   "inizio": "2026-09-11T18:30:00.000Z",
+   "understat": "Bundesliga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.7447,
+     "PX": 0.154,
+     "P2": 0.1014,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.7439,
+     "PX": 0.1548,
+     "P2": 0.1013,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.697,
+     "lambda_away": 0.926
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 2.31,
+     "book": "1xBet",
+     "n_book": 24,
+     "no_vig_probability": 0.433
+    },
+    "value": {
+     "fair_odds": 1.342,
+     "edge": 0.312,
+     "ev": 0.7209
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.312,
+     "confidence": 20,
+     "data_quality": 60
+    },
+    "market_gap": {
+     "valore": 0.312,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 20 < 55",
+     "agreement LOW",
+     "market gap 31.2pp > 5pp"
+    ],
+    "opportunity_score": 0.53,
     "contesto": {
      "lineup_injury_disponibile": false,
      "peso_predittivo": 0,
@@ -2696,365 +3691,94 @@
     "stagione": {
      "casa": {
       "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
+      "previous_season_contribution_pct": 87.8,
+      "current_season_contribution_pct": 12.2
      },
      "ospite": {
       "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Lecce\" il 26.4% contro il 22.7% del mercato. La quota fair e' 3.79 contro una quota disponibile di 4.60. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Union Berlin\" il 74.5% contro il 43.3% del mercato. La quota fair e' 1.34 contro una quota disponibile di 2.31. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
    },
    "mercato": "Gol",
-   "prob": 0.555,
-   "why": "Gol attesi 1.70 contro 1.16, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.5%. Sul segno 2 il modello dice 26.4% contro il 22.7% del consenso di 24 bookmaker, miglior prezzo 4.60 su Unibet (NL).",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.264,
-    "probMercato": 0.227,
-    "prezzo": 4.6,
-    "book": "Unibet (NL)",
-    "nBook": 24,
-    "valore": 0.215
-   },
-   "model_version": "football-v1-baseline",
-   "id": "cagliari-lecce|2026-09-07T16:30:00.000Z|standard|Gol"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Cagliari - Lecce",
-   "quando": "lun 07/09, 18:30",
-   "ore": 70,
-   "match": "cagliari-lecce",
-   "inizio": "2026-09-07T16:30:00.000Z",
-   "understat": "Serie_A",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.5062,
-     "PX": 0.2295,
-     "P2": 0.2642,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.4882,
-     "PX": 0.2569,
-     "P2": 0.2548,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 1.701,
-     "lambda_away": 1.156
-    },
-    "market": {
-     "esito_riferimento": "2",
-     "bookmaker_odds": 4.6,
-     "book": "Unibet (NL)",
-     "n_book": 24,
-     "no_vig_probability": 0.227
-    },
-    "value": {
-     "fair_odds": 3.788,
-     "edge": 0.037,
-     "ev": 0.2144
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.037,
-     "confidence": 61,
-     "data_quality": 60
-    },
-    "market_gap": {
-     "valore": 0.037,
-     "livello": "LIEVE",
-     "etichetta": null
-    },
-    "rischio_quota": "NORMALE",
-    "value_class": "VALUE",
-    "best_pick_idoneo": true,
-    "best_pick_motivi_esclusione": [],
-    "opportunity_score": 0.6932,
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
-     },
-     "ospite": {
-      "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Lecce\" il 26.4% contro il 22.7% del mercato. La quota fair e' 3.79 contro una quota disponibile di 4.60. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "mercato": "Casa segna",
-   "prob": 0.817,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.70 contro 1.16, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.7%. Sul segno 2 il modello dice 26.4% contro il 22.7% del consenso di 24 bookmaker, miglior prezzo 4.60 su Unibet (NL).",
-   "src": "modello xG Dixon-Coles",
-   "model_version": "football-v1-baseline",
-   "id": "cagliari-lecce|2026-09-07T16:30:00.000Z|standard|Casa segna"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Cagliari - Lecce",
-   "quando": "lun 07/09, 18:30",
-   "ore": 70,
-   "match": "cagliari-lecce",
-   "inizio": "2026-09-07T16:30:00.000Z",
-   "understat": "Serie_A",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.5062,
-     "PX": 0.2295,
-     "P2": 0.2642,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.4882,
-     "PX": 0.2569,
-     "P2": 0.2548,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 1.701,
-     "lambda_away": 1.156
-    },
-    "market": {
-     "esito_riferimento": "2",
-     "bookmaker_odds": 4.6,
-     "book": "Unibet (NL)",
-     "n_book": 24,
-     "no_vig_probability": 0.227
-    },
-    "value": {
-     "fair_odds": 3.788,
-     "edge": 0.037,
-     "ev": 0.2144
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.037,
-     "confidence": 61,
-     "data_quality": 60
-    },
-    "market_gap": {
-     "valore": 0.037,
-     "livello": "LIEVE",
-     "etichetta": null
-    },
-    "rischio_quota": "NORMALE",
-    "value_class": "VALUE",
-    "best_pick_idoneo": true,
-    "best_pick_motivi_esclusione": [],
-    "opportunity_score": 0.6932,
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
-     },
-     "ospite": {
-      "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Lecce\" il 26.4% contro il 22.7% del mercato. La quota fair e' 3.79 contro una quota disponibile di 4.60. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "tipo": "sorpresa",
-   "mercato": "Lecce vincente",
-   "prob": 0.264,
-   "prezzo": 4.6,
-   "why": "Il modello da questo esito al 26.4%, il consenso di 24 bookmaker al 22.7%. Al prezzo migliore, 4.60 su Unibet (NL), il valore atteso e' 21.5%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.264,
-    "probMercato": 0.227,
-    "prezzo": 4.6,
-    "book": "Unibet (NL)",
-    "nBook": 24,
-    "valore": 0.215
-   },
-   "model_version": "football-v1-baseline",
-   "id": "cagliari-lecce|2026-09-07T16:30:00.000Z|sorpresa|Lecce vincente"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Udinese - Lazio",
-   "quando": "lun 07/09, 20:45",
-   "ore": 72,
-   "match": "udinese-lazio",
-   "inizio": "2026-09-07T18:45:00.000Z",
-   "understat": "Serie_A",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.3957,
-     "PX": 0.2547,
-     "P2": 0.3496,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.3805,
-     "PX": 0.2833,
-     "P2": 0.3362,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 1.327,
-     "lambda_away": 1.23
-    },
-    "market": {
-     "esito_riferimento": "1",
-     "bookmaker_odds": 3.1,
-     "book": "Unibet (NL)",
-     "n_book": 24,
-     "no_vig_probability": 0.325
-    },
-    "value": {
-     "fair_odds": 2.525,
-     "edge": 0.071,
-     "ev": 0.2276
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.071,
-     "confidence": 45,
-     "data_quality": 60
-    },
-    "market_gap": {
-     "valore": 0.071,
-     "livello": "SIGNIFICATIVA",
-     "etichetta": null
-    },
-    "rischio_quota": "NORMALE",
-    "value_class": "VALUE",
-    "best_pick_idoneo": false,
-    "best_pick_motivi_esclusione": [
-     "confidence 45 < 55",
-     "market gap 7.1pp > 5pp"
-    ],
-    "opportunity_score": 0.6636,
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
-     },
-     "ospite": {
-      "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Udinese\" il 39.6% contro il 32.5% del mercato. La quota fair e' 2.53 contro una quota disponibile di 3.10. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "mercato": "Multigol trasferta 1-2",
-   "prob": 0.581,
-   "why": "Gol attesi 1.33 contro 1.23, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 58.1%. Sul segno 1 il modello dice 39.6% contro il 32.5% del consenso di 24 bookmaker, miglior prezzo 3.10 su Unibet (NL).",
+   "prob": 0.566,
+   "why": "Gol attesi 2.70 contro 0.93, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.6%. Sul segno 1 il modello dice 74.5% contro il 43.3% del consenso di 24 bookmaker, miglior prezzo 2.31 su 1xBet.",
    "src": "modello xG Dixon-Coles + confronto bookmaker",
    "confronto": {
     "esito": "1",
-    "probModello": 0.396,
-    "probMercato": 0.325,
-    "prezzo": 3.1,
-    "book": "Unibet (NL)",
+    "probModello": 0.745,
+    "probMercato": 0.433,
+    "prezzo": 2.31,
+    "book": "1xBet",
     "nBook": 24,
-    "valore": 0.227
+    "valore": 0.72
    },
    "model_version": "football-v1-baseline",
-   "id": "udinese-lazio|2026-09-07T18:45:00.000Z|standard|Multigol trasferta 1-2"
+   "id": "union berlin-schalke 04|2026-09-11T18:30:00.000Z|standard|Gol"
   },
   {
    "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Udinese - Lazio",
-   "quando": "lun 07/09, 20:45",
-   "ore": 72,
-   "match": "udinese-lazio",
-   "inizio": "2026-09-07T18:45:00.000Z",
-   "understat": "Serie_A",
+   "comp": "Bundesliga",
+   "evento": "Union Berlin - Schalke 04",
+   "quando": "ven 11/09, 20:30",
+   "ore": 103,
+   "match": "union berlin-schalke 04",
+   "inizio": "2026-09-11T18:30:00.000Z",
+   "understat": "Bundesliga",
    "analisi": {
     "pure_model": {
-     "P1": 0.3957,
-     "PX": 0.2547,
-     "P2": 0.3496,
+     "P1": 0.7447,
+     "PX": 0.154,
+     "P2": 0.1014,
      "model_version": "football-v1-baseline"
     },
     "calibrated": {
-     "P1": 0.3805,
-     "PX": 0.2833,
-     "P2": 0.3362,
+     "P1": 0.7439,
+     "PX": 0.1548,
+     "P2": 0.1013,
      "attivo": true,
      "motivo": null,
      "model_version": "football-v1.1-drawcal-candidate",
      "badge": "EXPERIMENTAL CALIBRATION"
     },
     "expected_goals": {
-     "lambda_home": 1.327,
-     "lambda_away": 1.23
+     "lambda_home": 2.697,
+     "lambda_away": 0.926
     },
     "market": {
      "esito_riferimento": "1",
-     "bookmaker_odds": 3.1,
-     "book": "Unibet (NL)",
+     "bookmaker_odds": 2.31,
+     "book": "1xBet",
      "n_book": 24,
-     "no_vig_probability": 0.325
+     "no_vig_probability": 0.433
     },
     "value": {
-     "fair_odds": 2.525,
-     "edge": 0.071,
-     "ev": 0.2276
+     "fair_odds": 1.342,
+     "edge": 0.312,
+     "ev": 0.7209
     },
     "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.071,
-     "confidence": 45,
+     "agreement": "LOW",
+     "agreement_scarto": 0.312,
+     "confidence": 20,
      "data_quality": 60
     },
     "market_gap": {
-     "valore": 0.071,
-     "livello": "SIGNIFICATIVA",
-     "etichetta": null
+     "valore": 0.312,
+     "livello": "ESTREMA",
+     "etichetta": "HIGH MODEL/MARKET DISAGREEMENT"
     },
     "rischio_quota": "NORMALE",
-    "value_class": "VALUE",
+    "value_class": "WATCH",
     "best_pick_idoneo": false,
     "best_pick_motivi_esclusione": [
-     "confidence 45 < 55",
-     "market gap 7.1pp > 5pp"
+     "confidence 20 < 55",
+     "agreement LOW",
+     "market gap 31.2pp > 5pp"
     ],
-    "opportunity_score": 0.6636,
+    "opportunity_score": 0.53,
     "contesto": {
      "lineup_injury_disponibile": false,
      "peso_predittivo": 0,
@@ -3063,860 +3787,28 @@
     "stagione": {
      "casa": {
       "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
+      "previous_season_contribution_pct": 87.8,
+      "current_season_contribution_pct": 12.2
      },
      "ospite": {
       "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
+      "previous_season_contribution_pct": 0,
+      "current_season_contribution_pct": 100
      }
     },
-    "why": "Il modello assegna a \"la vittoria di Udinese\" il 39.6% contro il 32.5% del mercato. La quota fair e' 2.53 contro una quota disponibile di 3.10. Il modello e il mercato mostrano un disaccordo moderato."
+    "why": "Il modello assegna a \"la vittoria di Union Berlin\" il 74.5% contro il 43.3% del mercato. La quota fair e' 1.34 contro una quota disponibile di 2.31. Il modello e il mercato mostrano un forte disaccordo. Lo scarto modello-mercato qui e molto ampio: i backtest storici mostrano che il mercato closing batte il Pure Model in questi casi, quindi questo numero va trattato come osservazione, non come vantaggio dimostrato."
    },
-   "mercato": "Multigol 1-4",
+   "mercato": "Multigol 1-5",
    "prob": 0.812,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.33 contro 1.23, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.2%. Sul segno 1 il modello dice 39.6% contro il 32.5% del consenso di 24 bookmaker, miglior prezzo 3.10 su Unibet (NL).",
+   "why": "Versione prudente sulla stessa partita. Gol attesi 2.70 contro 0.93, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.2%. Sul segno 1 il modello dice 74.5% contro il 43.3% del consenso di 24 bookmaker, miglior prezzo 2.31 su 1xBet.",
    "src": "modello xG Dixon-Coles",
    "model_version": "football-v1-baseline",
-   "id": "udinese-lazio|2026-09-07T18:45:00.000Z|standard|Multigol 1-4"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Udinese - Lazio",
-   "quando": "lun 07/09, 20:45",
-   "ore": 72,
-   "match": "udinese-lazio",
-   "inizio": "2026-09-07T18:45:00.000Z",
-   "understat": "Serie_A",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.3957,
-     "PX": 0.2547,
-     "P2": 0.3496,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.3805,
-     "PX": 0.2833,
-     "P2": 0.3362,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 1.327,
-     "lambda_away": 1.23
-    },
-    "market": {
-     "esito_riferimento": "1",
-     "bookmaker_odds": 3.1,
-     "book": "Unibet (NL)",
-     "n_book": 24,
-     "no_vig_probability": 0.325
-    },
-    "value": {
-     "fair_odds": 2.525,
-     "edge": 0.071,
-     "ev": 0.2276
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.071,
-     "confidence": 45,
-     "data_quality": 60
-    },
-    "market_gap": {
-     "valore": 0.071,
-     "livello": "SIGNIFICATIVA",
-     "etichetta": null
-    },
-    "rischio_quota": "NORMALE",
-    "value_class": "VALUE",
-    "best_pick_idoneo": false,
-    "best_pick_motivi_esclusione": [
-     "confidence 45 < 55",
-     "market gap 7.1pp > 5pp"
-    ],
-    "opportunity_score": 0.6636,
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
-     },
-     "ospite": {
-      "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Udinese\" il 39.6% contro il 32.5% del mercato. La quota fair e' 2.53 contro una quota disponibile di 3.10. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "tipo": "sorpresa",
-   "mercato": "Udinese vincente",
-   "prob": 0.396,
-   "prezzo": 3.1,
-   "why": "Il modello da questo esito al 39.6%, il consenso di 24 bookmaker al 32.5%. Al prezzo migliore, 3.10 su Unibet (NL), il valore atteso e' 22.7%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.396,
-    "probMercato": 0.325,
-    "prezzo": 3.1,
-    "book": "Unibet (NL)",
-    "nBook": 24,
-    "valore": 0.227
-   },
-   "model_version": "football-v1-baseline",
-   "id": "udinese-lazio|2026-09-07T18:45:00.000Z|sorpresa|Udinese vincente"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Getafe - Celta Vigo",
-   "quando": "lun 07/09, 19:00",
-   "ore": 71,
-   "match": "getafe-celta vigo",
-   "inizio": "2026-09-07T17:00:00.000Z",
-   "understat": "La_liga",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.3829,
-     "PX": 0.3085,
-     "P2": 0.3086,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.3881,
-     "PX": 0.2991,
-     "P2": 0.3128,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 1.058,
-     "lambda_away": 0.916
-    },
-    "market": {
-     "esito_riferimento": "2",
-     "bookmaker_odds": 3.65,
-     "book": "Betfair",
-     "n_book": 21,
-     "no_vig_probability": 0.278
-    },
-    "value": {
-     "fair_odds": 3.236,
-     "edge": 0.031,
-     "ev": 0.1279
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.0348,
-     "confidence": 62,
-     "data_quality": 63
-    },
-    "market_gap": {
-     "valore": 0.031,
-     "livello": "LIEVE",
-     "etichetta": null
-    },
-    "rischio_quota": "NORMALE",
-    "value_class": "VALUE",
-    "best_pick_idoneo": true,
-    "best_pick_motivi_esclusione": [],
-    "opportunity_score": 0.5795,
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 3,
-      "previous_season_contribution_pct": 84.8,
-      "current_season_contribution_pct": 15.2
-     },
-     "ospite": {
-      "matches_current_season": 4,
-      "previous_season_contribution_pct": 80.4,
-      "current_season_contribution_pct": 19.6
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Celta Vigo\" il 30.9% contro il 27.8% del mercato. La quota fair e' 3.24 contro una quota disponibile di 3.65. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "mercato": "Multigol casa 1-2",
-   "prob": 0.562,
-   "why": "Gol attesi 1.06 contro 0.92, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.2%. Sul segno 2 il modello dice 30.9% contro il 27.8% del consenso di 21 bookmaker, miglior prezzo 3.65 su Betfair.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.309,
-    "probMercato": 0.278,
-    "prezzo": 3.65,
-    "book": "Betfair",
-    "nBook": 21,
-    "valore": 0.126
-   },
-   "model_version": "football-v1-baseline",
-   "id": "getafe-celta vigo|2026-09-07T17:00:00.000Z|standard|Multigol casa 1-2"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Getafe - Celta Vigo",
-   "quando": "lun 07/09, 19:00",
-   "ore": 71,
-   "match": "getafe-celta vigo",
-   "inizio": "2026-09-07T17:00:00.000Z",
-   "understat": "La_liga",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.3829,
-     "PX": 0.3085,
-     "P2": 0.3086,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.3881,
-     "PX": 0.2991,
-     "P2": 0.3128,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 1.058,
-     "lambda_away": 0.916
-    },
-    "market": {
-     "esito_riferimento": "2",
-     "bookmaker_odds": 3.65,
-     "book": "Betfair",
-     "n_book": 21,
-     "no_vig_probability": 0.278
-    },
-    "value": {
-     "fair_odds": 3.236,
-     "edge": 0.031,
-     "ev": 0.1279
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.0348,
-     "confidence": 62,
-     "data_quality": 63
-    },
-    "market_gap": {
-     "valore": 0.031,
-     "livello": "LIEVE",
-     "etichetta": null
-    },
-    "rischio_quota": "NORMALE",
-    "value_class": "VALUE",
-    "best_pick_idoneo": true,
-    "best_pick_motivi_esclusione": [],
-    "opportunity_score": 0.5795,
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 3,
-      "previous_season_contribution_pct": 84.8,
-      "current_season_contribution_pct": 15.2
-     },
-     "ospite": {
-      "matches_current_season": 4,
-      "previous_season_contribution_pct": 80.4,
-      "current_season_contribution_pct": 19.6
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Celta Vigo\" il 30.9% contro il 27.8% del mercato. La quota fair e' 3.24 contro una quota disponibile di 3.65. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "mercato": "Multigol 1-4",
-   "prob": 0.811,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.06 contro 0.92, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.1%. Sul segno 2 il modello dice 30.9% contro il 27.8% del consenso di 21 bookmaker, miglior prezzo 3.65 su Betfair.",
-   "src": "modello xG Dixon-Coles",
-   "model_version": "football-v1-baseline",
-   "id": "getafe-celta vigo|2026-09-07T17:00:00.000Z|standard|Multigol 1-4"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Getafe - Celta Vigo",
-   "quando": "lun 07/09, 19:00",
-   "ore": 71,
-   "match": "getafe-celta vigo",
-   "inizio": "2026-09-07T17:00:00.000Z",
-   "understat": "La_liga",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.3829,
-     "PX": 0.3085,
-     "P2": 0.3086,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.3881,
-     "PX": 0.2991,
-     "P2": 0.3128,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 1.058,
-     "lambda_away": 0.916
-    },
-    "market": {
-     "esito_riferimento": "2",
-     "bookmaker_odds": 3.65,
-     "book": "Betfair",
-     "n_book": 21,
-     "no_vig_probability": 0.278
-    },
-    "value": {
-     "fair_odds": 3.236,
-     "edge": 0.031,
-     "ev": 0.1279
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.0348,
-     "confidence": 62,
-     "data_quality": 63
-    },
-    "market_gap": {
-     "valore": 0.031,
-     "livello": "LIEVE",
-     "etichetta": null
-    },
-    "rischio_quota": "NORMALE",
-    "value_class": "VALUE",
-    "best_pick_idoneo": true,
-    "best_pick_motivi_esclusione": [],
-    "opportunity_score": 0.5795,
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 3,
-      "previous_season_contribution_pct": 84.8,
-      "current_season_contribution_pct": 15.2
-     },
-     "ospite": {
-      "matches_current_season": 4,
-      "previous_season_contribution_pct": 80.4,
-      "current_season_contribution_pct": 19.6
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Celta Vigo\" il 30.9% contro il 27.8% del mercato. La quota fair e' 3.24 contro una quota disponibile di 3.65. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "tipo": "sorpresa",
-   "mercato": "Celta Vigo vincente",
-   "prob": 0.309,
-   "prezzo": 3.65,
-   "why": "Il modello da questo esito al 30.9%, il consenso di 21 bookmaker al 27.8%. Al prezzo migliore, 3.65 su Betfair, il valore atteso e' 12.6%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.309,
-    "probMercato": 0.278,
-    "prezzo": 3.65,
-    "book": "Betfair",
-    "nBook": 21,
-    "valore": 0.126
-   },
-   "model_version": "football-v1-baseline",
-   "id": "getafe-celta vigo|2026-09-07T17:00:00.000Z|sorpresa|Celta Vigo vincente"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Elche - Real Sociedad",
-   "quando": "lun 07/09, 21:30",
-   "ore": 73,
-   "match": "elche-real sociedad",
-   "inizio": "2026-09-07T19:30:00.000Z",
-   "understat": "La_liga",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.3956,
-     "PX": 0.2304,
-     "P2": 0.374,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.382,
-     "PX": 0.2569,
-     "P2": 0.3611,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 1.66,
-     "lambda_away": 1.609
-    },
-    "market": {
-     "esito_riferimento": "1",
-     "bookmaker_odds": 3.1,
-     "book": "Betfair",
-     "n_book": 21,
-     "no_vig_probability": 0.324
-    },
-    "value": {
-     "fair_odds": 2.525,
-     "edge": 0.072,
-     "ev": 0.2276
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.072,
-     "confidence": 46,
-     "data_quality": 63
-    },
-    "market_gap": {
-     "valore": 0.072,
-     "livello": "SIGNIFICATIVA",
-     "etichetta": null
-    },
-    "rischio_quota": "NORMALE",
-    "value_class": "VALUE",
-    "best_pick_idoneo": false,
-    "best_pick_motivi_esclusione": [
-     "confidence 46 < 55",
-     "market gap 7.2pp > 5pp"
-    ],
-    "opportunity_score": 0.6711,
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 3,
-      "previous_season_contribution_pct": 84.8,
-      "current_season_contribution_pct": 15.2
-     },
-     "ospite": {
-      "matches_current_season": 4,
-      "previous_season_contribution_pct": 80.5,
-      "current_season_contribution_pct": 19.5
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Elche\" il 39.6% contro il 32.4% del mercato. La quota fair e' 2.53 contro una quota disponibile di 3.10. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "mercato": "Multigol casa 1-2",
-   "prob": 0.578,
-   "why": "Gol attesi 1.66 contro 1.61, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.8%. Sul segno 1 il modello dice 39.6% contro il 32.4% del consenso di 21 bookmaker, miglior prezzo 3.10 su Betfair.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.396,
-    "probMercato": 0.324,
-    "prezzo": 3.1,
-    "book": "Betfair",
-    "nBook": 21,
-    "valore": 0.226
-   },
-   "model_version": "football-v1-baseline",
-   "id": "elche-real sociedad|2026-09-07T19:30:00.000Z|standard|Multigol casa 1-2"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Elche - Real Sociedad",
-   "quando": "lun 07/09, 21:30",
-   "ore": 73,
-   "match": "elche-real sociedad",
-   "inizio": "2026-09-07T19:30:00.000Z",
-   "understat": "La_liga",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.3956,
-     "PX": 0.2304,
-     "P2": 0.374,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.382,
-     "PX": 0.2569,
-     "P2": 0.3611,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 1.66,
-     "lambda_away": 1.609
-    },
-    "market": {
-     "esito_riferimento": "1",
-     "bookmaker_odds": 3.1,
-     "book": "Betfair",
-     "n_book": 21,
-     "no_vig_probability": 0.324
-    },
-    "value": {
-     "fair_odds": 2.525,
-     "edge": 0.072,
-     "ev": 0.2276
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.072,
-     "confidence": 46,
-     "data_quality": 63
-    },
-    "market_gap": {
-     "valore": 0.072,
-     "livello": "SIGNIFICATIVA",
-     "etichetta": null
-    },
-    "rischio_quota": "NORMALE",
-    "value_class": "VALUE",
-    "best_pick_idoneo": false,
-    "best_pick_motivi_esclusione": [
-     "confidence 46 < 55",
-     "market gap 7.2pp > 5pp"
-    ],
-    "opportunity_score": 0.6711,
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 3,
-      "previous_season_contribution_pct": 84.8,
-      "current_season_contribution_pct": 15.2
-     },
-     "ospite": {
-      "matches_current_season": 4,
-      "previous_season_contribution_pct": 80.5,
-      "current_season_contribution_pct": 19.5
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Elche\" il 39.6% contro il 32.4% del mercato. La quota fair e' 2.53 contro una quota disponibile di 3.10. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "mercato": "Casa segna",
-   "prob": 0.81,
-   "why": "Versione prudente sulla stessa partita. Gol attesi 1.66 contro 1.61, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 81.0%. Sul segno 1 il modello dice 39.6% contro il 32.4% del consenso di 21 bookmaker, miglior prezzo 3.10 su Betfair.",
-   "src": "modello xG Dixon-Coles",
-   "model_version": "football-v1-baseline",
-   "id": "elche-real sociedad|2026-09-07T19:30:00.000Z|standard|Casa segna"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Elche - Real Sociedad",
-   "quando": "lun 07/09, 21:30",
-   "ore": 73,
-   "match": "elche-real sociedad",
-   "inizio": "2026-09-07T19:30:00.000Z",
-   "understat": "La_liga",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.3956,
-     "PX": 0.2304,
-     "P2": 0.374,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.382,
-     "PX": 0.2569,
-     "P2": 0.3611,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 1.66,
-     "lambda_away": 1.609
-    },
-    "market": {
-     "esito_riferimento": "1",
-     "bookmaker_odds": 3.1,
-     "book": "Betfair",
-     "n_book": 21,
-     "no_vig_probability": 0.324
-    },
-    "value": {
-     "fair_odds": 2.525,
-     "edge": 0.072,
-     "ev": 0.2276
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.072,
-     "confidence": 46,
-     "data_quality": 63
-    },
-    "market_gap": {
-     "valore": 0.072,
-     "livello": "SIGNIFICATIVA",
-     "etichetta": null
-    },
-    "rischio_quota": "NORMALE",
-    "value_class": "VALUE",
-    "best_pick_idoneo": false,
-    "best_pick_motivi_esclusione": [
-     "confidence 46 < 55",
-     "market gap 7.2pp > 5pp"
-    ],
-    "opportunity_score": 0.6711,
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 3,
-      "previous_season_contribution_pct": 84.8,
-      "current_season_contribution_pct": 15.2
-     },
-     "ospite": {
-      "matches_current_season": 4,
-      "previous_season_contribution_pct": 80.5,
-      "current_season_contribution_pct": 19.5
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Elche\" il 39.6% contro il 32.4% del mercato. La quota fair e' 2.53 contro una quota disponibile di 3.10. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "tipo": "sorpresa",
-   "mercato": "Elche vincente",
-   "prob": 0.396,
-   "prezzo": 3.1,
-   "why": "Il modello da questo esito al 39.6%, il consenso di 21 bookmaker al 32.4%. Al prezzo migliore, 3.10 su Betfair, il valore atteso e' 22.6%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.396,
-    "probMercato": 0.324,
-    "prezzo": 3.1,
-    "book": "Betfair",
-    "nBook": 21,
-    "valore": 0.226
-   },
-   "model_version": "football-v1-baseline",
-   "id": "elche-real sociedad|2026-09-07T19:30:00.000Z|sorpresa|Elche vincente"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Serie A",
-   "evento": "Cagliari - Lecce",
-   "quando": "lun 07/09, 18:30",
-   "ore": 42,
-   "match": "cagliari-lecce",
-   "inizio": "2026-09-07T16:30:00.000Z",
-   "understat": "Serie_A",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.506,
-     "PX": 0.2308,
-     "P2": 0.2632,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.4888,
-     "PX": 0.2569,
-     "P2": 0.2543,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 1.686,
-     "lambda_away": 1.142
-    },
-    "market": {
-     "esito_riferimento": "2",
-     "bookmaker_odds": 4.4,
-     "book": "Betfair",
-     "n_book": 24,
-     "no_vig_probability": 0.227
-    },
-    "value": {
-     "fair_odds": 3.802,
-     "edge": 0.036,
-     "ev": 0.1572
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.036,
-     "confidence": 61,
-     "data_quality": 60
-    },
-    "market_gap": {
-     "valore": 0.036,
-     "livello": "LIEVE",
-     "etichetta": null
-    },
-    "rischio_quota": "NORMALE",
-    "value_class": "VALUE",
-    "best_pick_idoneo": true,
-    "best_pick_motivi_esclusione": [],
-    "opportunity_score": 0.6131,
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
-     },
-     "ospite": {
-      "matches_current_season": 2,
-      "previous_season_contribution_pct": 89.2,
-      "current_season_contribution_pct": 10.8
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Lecce\" il 26.3% contro il 22.7% del mercato. La quota fair e' 3.80 contro una quota disponibile di 4.40. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "mercato": "Multigol trasferta 1-2",
-   "prob": 0.573,
-   "why": "Gol attesi 1.69 contro 1.14, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.3%. Sul segno 2 il modello dice 26.3% contro il 22.7% del consenso di 24 bookmaker, miglior prezzo 4.40 su Betfair.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "2",
-    "probModello": 0.263,
-    "probMercato": 0.227,
-    "prezzo": 4.4,
-    "book": "Betfair",
-    "nBook": 24,
-    "valore": 0.158
-   },
-   "model_version": "football-v1-baseline",
-   "id": "cagliari-lecce|2026-09-07T16:30:00.000Z|standard|Multigol trasferta 1-2"
-  },
-  {
-   "sport": "calcio",
-   "comp": "Liga",
-   "evento": "Elche - Real Sociedad",
-   "quando": "lun 07/09, 21:30",
-   "ore": 45,
-   "match": "elche-real sociedad",
-   "inizio": "2026-09-07T19:30:00.000Z",
-   "understat": "La_liga",
-   "analisi": {
-    "pure_model": {
-     "P1": 0.3916,
-     "PX": 0.2329,
-     "P2": 0.3755,
-     "model_version": "football-v1-baseline"
-    },
-    "calibrated": {
-     "P1": 0.3793,
-     "PX": 0.2569,
-     "P2": 0.3637,
-     "attivo": true,
-     "motivo": null,
-     "model_version": "football-v1.1-drawcal-candidate",
-     "badge": "EXPERIMENTAL CALIBRATION"
-    },
-    "expected_goals": {
-     "lambda_home": 1.635,
-     "lambda_away": 1.597
-    },
-    "market": {
-     "esito_riferimento": "1",
-     "bookmaker_odds": 3.1,
-     "book": "Betfair",
-     "n_book": 21,
-     "no_vig_probability": 0.323
-    },
-    "value": {
-     "fair_odds": 2.551,
-     "edge": 0.069,
-     "ev": 0.2152
-    },
-    "quality": {
-     "agreement": "MEDIUM",
-     "agreement_scarto": 0.069,
-     "confidence": 46,
-     "data_quality": 63
-    },
-    "market_gap": {
-     "valore": 0.069,
-     "livello": "SIGNIFICATIVA",
-     "etichetta": null
-    },
-    "rischio_quota": "NORMALE",
-    "value_class": "VALUE",
-    "best_pick_idoneo": false,
-    "best_pick_motivi_esclusione": [
-     "confidence 46 < 55",
-     "market gap 6.9pp > 5pp"
-    ],
-    "opportunity_score": 0.6538,
-    "contesto": {
-     "lineup_injury_disponibile": false,
-     "peso_predittivo": 0,
-     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
-    },
-    "stagione": {
-     "casa": {
-      "matches_current_season": 3,
-      "previous_season_contribution_pct": 84.8,
-      "current_season_contribution_pct": 15.2
-     },
-     "ospite": {
-      "matches_current_season": 4,
-      "previous_season_contribution_pct": 80.5,
-      "current_season_contribution_pct": 19.5
-     }
-    },
-    "why": "Il modello assegna a \"la vittoria di Elche\" il 39.2% contro il 32.3% del mercato. La quota fair e' 2.55 contro una quota disponibile di 3.10. Il modello e il mercato mostrano un disaccordo moderato."
-   },
-   "mercato": "Multigol 1-3",
-   "prob": 0.556,
-   "why": "Gol attesi 1.64 contro 1.60, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.6%. Sul segno 1 il modello dice 39.2% contro il 32.3% del consenso di 21 bookmaker, miglior prezzo 3.10 su Betfair.",
-   "src": "modello xG Dixon-Coles + confronto bookmaker",
-   "confronto": {
-    "esito": "1",
-    "probModello": 0.392,
-    "probMercato": 0.323,
-    "prezzo": 3.1,
-    "book": "Betfair",
-    "nBook": 21,
-    "valore": 0.214
-   },
-   "model_version": "football-v1-baseline",
-   "id": "elche-real sociedad|2026-09-07T19:30:00.000Z|standard|Multigol 1-3"
+   "id": "union berlin-schalke 04|2026-09-11T18:30:00.000Z|standard|Multigol 1-5"
   }
  ],
- "aggiornato": "2026-09-07T11:43:00.440Z",
+ "aggiornato": "2026-09-09T14:49:40.498Z",
  "diagnostica": [
-  "16 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport",
-  "CORREZIONE 07/09/2026: bug in chiudi.mjs, indicizzazione dei risultati Understat solo per nomi squadra senza data, sovrascritta dalla stagione precedente quando due squadre si incontrano piu volte. 176/239 pronostici chiusi avevano il risultato di una partita SBAGLIATA (stagione precedente) invece di quella vera. Corretti tutti usando la partita Understat con data piu vicina al kickoff reale (entro 3 giorni). 3 pronostici su Rayo Vallecano-Real Oviedo restano irrisolti: nessuna partita Understat trovata entro 3 giorni dal kickoff, lasciati con il vecchio dato ma segnalati come da verificare a mano."
+  "12 pronostici di basket/tennis non liquidabili: Understat copre solo il calcio, serve una fonte di risultati per quegli sport"
  ],
  "nota": "La quota e la quota minima 1/probabilita, non il prezzo di un bookmaker: il saldo va letto come limite superiore. La categoria cassaforte nasce dalla combinazione costruita nella pagina e non e ricavabile da qui, quindi non viene aggiornata in automatico."
 }
