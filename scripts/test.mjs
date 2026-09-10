@@ -13,7 +13,7 @@ import { FUSO_ORARIO } from './config.mjs';
 import { isotonicFit, isotonicPredict, applicaDrawCal, costruisciCalibratore } from './drawcal.mjs';
 import { fairOdds, ev, edge, agreement, dataQuality, confidence, classificaValore,
   marketGapInfo, classificaRischioQuota, idoneoBestPick, opportunityScore, evCappatoPerRanking } from './valore.mjs';
-import { costruisciCassaforte, costruisciQuota2, costruisciSorpresa } from './selezioni.mjs';
+import { costruisciCassaforte, costruisciQuota2, costruisciSorpresa, costruisciSorpresaConsenso } from './selezioni.mjs';
 import { dataLocale, oggiLocale, eDiOggi } from './tempo.mjs';
 import { partitaPiuVicina, raggruppaPerSquadre } from './risultati.mjs';
 
@@ -493,7 +493,7 @@ function assertVero(nome, condizione, dettaglio = '') {
     pure_model: { P1: 0.5, PX: 0.28, P2: 0.22 },
     why: 'motivazione di test'
   });
-  const candidato = (over) => ({ match: 'm', evento: 'Ev', comp: 'Serie A', quando: 'oggi', mercato: '1', prob: 0.6, quota_fair: +(1 / 0.6).toFixed(3), analisi: finta(), ...over });
+  const candidato = (over) => ({ tipo: 'modello', match: 'm', evento: 'Ev', comp: 'Serie A', quando: 'oggi', mercato: '1', prob: 0.6, quota_fair: +(1 / 0.6).toFixed(3), analisi: finta(), ...over });
 
   // CASSAFORTE: sceglie dentro la banda, scarta High Risk e qualita bassa
   {
@@ -552,6 +552,57 @@ function assertVero(nome, condizione, dettaglio = '') {
     const r = costruisciSorpresa([{ match: 'a', analisi: finta({ bookmakerOdds: 1.5, ev: 0.1 }) }]); // quota troppo bassa per essere sorpresa
     assertVero('costruisciSorpresa: nessun candidato in banda -> selezione null', r.selezione === null);
     assertVero('costruisciSorpresa: motivo dichiarato quando null', typeof r.motivo === 'string' && r.motivo.length > 0);
+  }
+
+  // ---------------- CANDIDATI 'consenso' (Champions League, 10/09/2026) ---
+  // Nessun modello indipendente: solo probabilita'/quota di mercato e numero
+  // di bookmaker come unica garanzia di qualita' (CONSENSO.nBookMinimo).
+  const consensoCand = (match, over) => ({ tipo: 'consenso', match, evento: `Ev ${match}`, comp: 'Champions League',
+    quando: 'x', mercato: 'Squadra vincente', prob: 0.65, quota_fair: +(1 / 0.65).toFixed(3), nBook: 20, ...over });
+
+  {
+    // CASSAFORTE: un candidato 'consenso' con abbastanza bookmaker e' ammesso
+    const pool = [consensoCand('a', { prob: 0.588, quota_fair: 1.70, nBook: 20 })];
+    const r = costruisciCassaforte(pool);
+    assertVero('costruisciCassaforte: ammette un candidato consenso con abbastanza bookmaker', r.selezione && r.selezione.tipo === 'consenso');
+  }
+  {
+    // CASSAFORTE: sotto la soglia di bookmaker, scartato anche se la quota e' in banda
+    const pool = [consensoCand('a', { prob: 0.588, quota_fair: 1.70, nBook: 5 })];
+    const r = costruisciCassaforte(pool);
+    assertVero('costruisciCassaforte: candidato consenso con pochi bookmaker -> scartato', r.selezione === null);
+  }
+  {
+    // QUOTA 2: puo' combinare un candidato modello e uno consenso nella stessa schedina
+    const misto = [
+      candidato({ match: 'm', prob: 0.68, quota_fair: 1.47, analisi: finta({ confidence: 70, dataQuality: 60 }) }),
+      consensoCand('c', { prob: 0.68, quota_fair: 1.47, nBook: 20 })
+    ];
+    const r = costruisciQuota2(misto);
+    assertVero('costruisciQuota2: puo combinare modello + consenso', r.selezioni && r.selezioni.length === 2
+      && r.selezioni.some(s => s.tipo === 'modello') && r.selezioni.some(s => s.tipo === 'consenso'), JSON.stringify(r));
+  }
+  {
+    // SORPRESA CONSENSO: sceglie la MENO probabile (quota piu alta) in banda, non la piu probabile
+    const partite = [
+      consensoCand('a', { prob: 0.35, quota_fair: 2.86, nBook: 23 }),
+      consensoCand('b', { prob: 0.18, quota_fair: 5.56, nBook: 20 }),  // fuori banda (SELEZIONE.sorpresa.quotaMax = 5.00): deve essere ignorato anche se meno probabile di 'c'
+      consensoCand('c', { prob: 0.25, quota_fair: 4.0, nBook: 22 })
+    ];
+    const r = costruisciSorpresaConsenso(partite);
+    assertVero('costruisciSorpresaConsenso: sceglie il candidato meno probabile in banda', r.selezione && r.selezione.match === 'c', JSON.stringify(r));
+  }
+  {
+    // SORPRESA CONSENSO: pochi bookmaker -> escluso anche se la quota e' perfetta
+    const r = costruisciSorpresaConsenso([consensoCand('a', { prob: 0.3, quota_fair: 3.33, nBook: 3 })]);
+    assertVero('costruisciSorpresaConsenso: pochi bookmaker -> selezione null', r.selezione === null);
+    assertVero('costruisciSorpresaConsenso: motivo dichiarato quando null', typeof r.motivo === 'string' && r.motivo.length > 0);
+  }
+  {
+    // SORPRESA CONSENSO: mai un candidato 'modello' infilato per errore nel pool consenso
+    const misto = [candidato({ match: 'm', prob: 0.3, quota_fair: 3.33 }), consensoCand('c', { prob: 0.35, quota_fair: 2.86 })];
+    const r = costruisciSorpresaConsenso(misto);
+    assertVero('costruisciSorpresaConsenso: ignora candidati non-consenso nello stesso pool', r.selezione && r.selezione.match === 'c');
   }
 
   // ---------------- FILTRO "SOLO OGGI" (Europe/Rome) ----------------------

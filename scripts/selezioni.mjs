@@ -1,11 +1,18 @@
 // scripts/selezioni.mjs
 // Cassaforte / Quota 2 / Sorpresa, riallineate all'uso reale dichiarato
 // dall'utente. Funzioni pure: prendono un pool di candidati gia' calcolato
-// da build.mjs (probabilita' del Pure Model, quota fair, e le metriche del
-// value engine su quella partita) e restituiscono una selezione o null.
-// Nessuna di queste tocca lambda/rho/mercati()/DC-DRAW-CAL.
+// da build.mjs e restituiscono una selezione o null. Nessuna di queste tocca
+// lambda/rho/mercati()/DC-DRAW-CAL.
+//
+// Due tipi di candidato nel pool, sempre distinti da c.tipo:
+//  - 'modello': le 5 leghe nazionali, Pure Model + value engine (c.analisi
+//    con confidence/dataQuality/agreement/market gap).
+//  - 'consenso': competizioni senza modello indipendente (es. Champions
+//    League, su richiesta esplicita dell'utente il 10/09/2026). Niente
+//    analisi: l'unica garanzia di qualita' e' il numero di bookmaker
+//    d'accordo sul prezzo (c.nBook, soglia in CONSENSO.nBookMinimo).
 
-import { SELEZIONE } from './config.mjs';
+import { SELEZIONE, CONSENSO } from './config.mjs';
 
 const ORDINE_GAP = ['NONE', 'LIEVE', 'SIGNIFICATIVA', 'ESTREMA'];
 
@@ -24,11 +31,14 @@ function rangoVolatilita(mercato) {
   return i === -1 ? ORDINE_VOLATILITA.length : i;
 }
 
-// Un candidato passa i filtri di qualita' comuni a Cassaforte/Quota2: NESSUNA
-// selezione High Risk (rischio_quota ESCLUSA/HIGH_VARIANCE mai ammesso), gap
-// non oltre la soglia data, agreement solo fra quelli accettati, confidence e
-// dataQuality sopra soglia.
-function passaFiltriQualita(analisi, soglie) {
+// Un candidato passa i filtri di qualita' comuni a Cassaforte/Quota2. Per
+// 'modello': NESSUNA selezione High Risk (rischio_quota ESCLUSA/HIGH_VARIANCE
+// mai ammesso), gap non oltre la soglia, agreement fra quelli accettati,
+// confidence/dataQuality sopra soglia. Per 'consenso': solo il numero minimo
+// di bookmaker, non esistendo nessuno degli altri controlli senza un modello.
+function passaFiltriQualita(c, soglie) {
+  if (c.tipo === 'consenso') return c.nBook >= CONSENSO.nBookMinimo;
+  const analisi = c.analisi;
   if (!analisi) return false;
   if (analisi.rischio_quota === 'ESCLUSA' || analisi.rischio_quota === 'HIGH_VARIANCE') return false;
   if (analisi.quality.confidence < soglie.confidenceMinima) return false;
@@ -40,22 +50,32 @@ function passaFiltriQualita(analisi, soglie) {
   return true;
 }
 
+// Punteggio di qualita' 0-1 comparabile fra i due tipi, usato SOLO per
+// ordinare fra candidati gia' passati da passaFiltriQualita (mai per
+// deciderne l'ammissibilita', quella resta in passaFiltriQualita).
+function qualita01(c) {
+  return c.tipo === 'consenso'
+    ? Math.min(1, c.nBook / (CONSENSO.nBookMinimo * 2))
+    : (c.analisi.quality.confidence / 100) * 0.6 + (c.analisi.quality.data_quality / 100) * 0.4;
+}
+
 // --- CASSAFORTE --------------------------------------------------------------
 // pool: array di { match, evento, comp, quando, inizio, mercato, prob,
-// quota_fair, analisi }. Sceglie la singola con miglior rapporto
-// probabilita'/quota DENTRO la banda richiesta, non necessariamente 1X2.
+// quota_fair, tipo, analisi? | nBook? }. Sceglie la singola con miglior
+// rapporto probabilita'/quota DENTRO la banda richiesta, non necessariamente 1X2.
 export function costruisciCassaforte(pool) {
   const cfg = SELEZIONE.cassaforte;
   const candidati = pool.filter(c => c.quota_fair >= cfg.quotaMin && c.quota_fair <= cfg.quotaMax
-    && passaFiltriQualita(c.analisi, cfg));
+    && passaFiltriQualita(c, cfg));
   if (!candidati.length) return { selezione: null, motivo: `Nessun candidato in banda ${cfg.quotaMin}-${cfg.quotaMax} con qualita sufficiente e nessun rischio elevato.` };
 
   const preferiti = candidati.filter(c => c.quota_fair >= cfg.quotaPreferitaMin && c.quota_fair <= cfg.quotaPreferitaMax);
   const bacino = preferiti.length ? preferiti : candidati;
 
   // punteggio: probabilita' (il criterio principale, "probabilita' elevata"),
-  // poi qualita', poi il meno volatile a parita' di tutto il resto
-  const punteggio = (c) => c.prob * 0.55 + (c.analisi.quality.confidence / 100) * 0.25 + (c.analisi.quality.data_quality / 100) * 0.20;
+  // poi qualita' (confidence+dataQuality per il modello, n. bookmaker per il
+  // consenso), poi il meno volatile a parita' di tutto il resto
+  const punteggio = (c) => c.prob * 0.55 + qualita01(c) * 0.45;
   bacino.sort((a, b) => punteggio(b) - punteggio(a) || rangoVolatilita(a.mercato) - rangoVolatilita(b.mercato));
   return { selezione: bacino[0], banda_preferita_usata: preferiti.length > 0, motivo: null };
 }
@@ -63,21 +83,25 @@ export function costruisciCassaforte(pool) {
 // --- QUOTA 2 -------------------------------------------------------------
 // Cerca la combinazione (2, o 3 solo se necessario) di eventi DIVERSI la cui
 // quota fair combinata cade in [quotaTotaleMin, quotaTotaleMax], ottimizzando
-// probabilita' congiunta e qualita' media — non le due quote piu' basse.
-function punteggioAgreement(livello) {
-  return livello === 'HIGH' ? 1 : livello === 'MEDIUM' ? 0.6 : livello === 'LOW' ? 0.15 : 0.4;
+// probabilita' congiunta e qualita' media — non le due quote piu' basse. Puo'
+// combinare candidati 'modello' e 'consenso' nella stessa schedina: ognuno
+// porta il proprio punteggio di qualita', comparabile ma non identico.
+function punteggioAgreement(c) {
+  if (c.tipo === 'consenso') return 0.5; // neutro: nessun modello da confrontare col mercato
+  const l = c.analisi.quality.agreement;
+  return l === 'HIGH' ? 1 : l === 'MEDIUM' ? 0.6 : l === 'LOW' ? 0.15 : 0.4;
 }
 function punteggioCombo(selezioni, probCongiunta, pesi) {
-  const confMedia = selezioni.reduce((s, c) => s + c.analisi.quality.confidence, 0) / selezioni.length / 100;
-  const dqMedia = selezioni.reduce((s, c) => s + c.analisi.quality.data_quality, 0) / selezioni.length / 100;
-  const agrMedio = selezioni.reduce((s, c) => s + punteggioAgreement(c.analisi.quality.agreement), 0) / selezioni.length;
-  return probCongiunta * pesi.probabilitaCongiunta + confMedia * pesi.confidenceMedia
-    + dqMedia * pesi.dataQualityMedia + agrMedio * pesi.agreementMedio;
+  const qualitaMedia = selezioni.reduce((s, c) => s + qualita01(c), 0) / selezioni.length;
+  const agrMedio = selezioni.reduce((s, c) => s + punteggioAgreement(c), 0) / selezioni.length;
+  return probCongiunta * pesi.probabilitaCongiunta
+    + qualitaMedia * (pesi.confidenceMedia + pesi.dataQualityMedia)
+    + agrMedio * pesi.agreementMedio;
 }
 
 export function costruisciQuota2(pool) {
   const cfg = SELEZIONE.quota2;
-  const candidatiGrezzi = pool.filter(c => passaFiltriQualita(c.analisi, cfg));
+  const candidatiGrezzi = pool.filter(c => passaFiltriQualita(c, cfg));
   if (!candidatiGrezzi.length) return { selezioni: null, motivo: 'Nessun candidato con qualita sufficiente oggi.' };
 
   // un solo candidato per partita (il migliore), per evitare eventi
@@ -116,7 +140,7 @@ export function costruisciQuota2(pool) {
   return { ...migliore, motivo: null };
 }
 
-// --- SORPRESA ------------------------------------------------------------
+// --- SORPRESA (modello) ---------------------------------------------------
 // Usa il Value Engine vero (serve una quota bookmaker reale, quindi solo
 // segni 1X2 con consenso di mercato disponibile). Quote sopra la soglia
 // restano SOLO in High Risk, mai proposte come Sorpresa principale.
@@ -137,5 +161,24 @@ export function costruisciSorpresa(partiteConAnalisi) {
     if (py !== px) return py - px;
     return y.analisi.value.ev - x.analisi.value.ev;
   });
+  return { selezione: candidati[0], motivo: null };
+}
+
+// --- SORPRESA (consenso) ---------------------------------------------------
+// Senza un modello non esiste un EV/edge da misurare: inventarlo sarebbe un
+// numero finto. Qui la "sorpresa" e' solo probabilita'/quota di mercato:
+// fra i candidati in banda alta con abbastanza bookmaker, si sceglie il MENO
+// probabile (la quota piu' alta ancora dentro banda) — e' il criterio piu'
+// onesto disponibile quando l'unico dato e' il consenso di mercato stesso.
+// Usata da build.mjs SOLO come ripiego, quando costruisciSorpresa (modello)
+// non trova nulla: mai al posto di una sorpresa verificata quando esiste.
+export function costruisciSorpresaConsenso(poolConsenso) {
+  const cfg = SELEZIONE.sorpresa;
+  const candidati = poolConsenso.filter(c => c.tipo === 'consenso'
+    && c.quota_fair >= cfg.quotaMin && c.quota_fair <= cfg.quotaMax
+    && c.nBook >= CONSENSO.nBookMinimo);
+  if (!candidati.length) return { selezione: null, motivo: `Nessun evento a consenso in banda quota ${cfg.quotaMin}-${cfg.quotaMax} con abbastanza bookmaker d'accordo.` };
+
+  candidati.sort((a, b) => a.prob - b.prob || b.nBook - a.nBook);
   return { selezione: candidati[0], motivo: null };
 }

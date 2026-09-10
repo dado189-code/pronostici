@@ -11,7 +11,7 @@ import { salvaSnapshot } from './snapshot.mjs';
 import { costruisciCalibratore, applicaDrawCal } from './drawcal.mjs';
 import { fairOdds, ev as calcolaEV, edge, agreement, dataQuality, confidence, classificaValore, spiegaPick,
   marketGapInfo, classificaRischioQuota, idoneoBestPick, opportunityScore } from './valore.mjs';
-import { costruisciCassaforte, costruisciQuota2, costruisciSorpresa } from './selezioni.mjs';
+import { costruisciCassaforte, costruisciQuota2, costruisciSorpresa, costruisciSorpresaConsenso } from './selezioni.mjs';
 import { dataLocale, oggiLocale, eDiOggi } from './tempo.mjs';
 
 // DC-DRAW-CAL: layer sperimentale, calcolato UNA VOLTA per esecuzione, letto
@@ -235,6 +235,23 @@ async function daConsenso(comp) {
          + `su ${favorito.book}. Non e un pronostico indipendente: e la lavagna, ripulita.`,
       src: `consenso di ${favorito.nBook} bookmaker, nessun modello indipendente`
     });
+
+    // Pool per Cassaforte/Quota2/Sorpresa: solo calcio (su richiesta esplicita
+    // per la Champions League). Nessun campo "analisi": qui non esiste un
+    // modello con cui confrontare il mercato, quindi niente confidence/
+    // agreement/market gap - la qualita' si misura solo sul numero di
+    // bookmaker che concordano (vedi CONSENSO.nBookMinimo in config.mjs).
+    if (comp.sport === 'calcio') {
+      poolSelezione.push({
+        tipo: 'consenso',
+        match: `${ev.home_team} - ${ev.away_team}`.toLowerCase(), evento: `${ev.home_team} - ${ev.away_team}`,
+        comp: comp.nome, quando: inizio.toLocaleString('it-IT',
+          { timeZone: FUSO_ORARIO, weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }),
+        inizio: inizio.toISOString(),
+        mercato: `${favorito.nome} vincente`, prob: favorito.prob, quota_fair: +(1 / favorito.prob).toFixed(3),
+        nBook: favorito.nBook
+      });
+    }
   }
 }
 
@@ -416,6 +433,7 @@ for (const lega of LEGHE) {
       for (const [chiaveMercato, probMercatoModello] of Object.entries(mk)) {
         if (!(probMercatoModello > 0)) continue;
         poolSelezione.push({
+          tipo: 'modello',
           match: idMatch, evento: `${casa} - ${ospite}`, comp: lega.nome, quando, inizio: inizio.toISOString(),
           mercato: chiaveMercato, prob: probMercatoModello, quota_fair: +(1 / probMercatoModello).toFixed(3),
           prezzo_bookmaker: ['1', 'X', '2'].includes(chiaveMercato) ? (prezzoDi(chiaveMercato) ?? null) : null,
@@ -544,13 +562,33 @@ const speculativePicksToday = partiteOggi
 // Rigenerate ad ogni esecuzione di questa pipeline, dalle quote di oggi.
 const risCassaforte = costruisciCassaforte(poolSelezioneOggi);
 const risQuota2 = costruisciQuota2(poolSelezioneOggi);
-const risSorpresa = costruisciSorpresa(partiteOggi);
+const risSorpresaModello = costruisciSorpresa(partiteOggi);
+// Ripiego a consenso SOLO se il modello non trova nulla: mai al posto di una
+// sorpresa verificata quando esiste (su richiesta esplicita del 10/09/2026,
+// per le sere con solo competizioni senza modello indipendente in calendario).
+const poolConsensoOggi = poolSelezioneOggi.filter(c => c.tipo === 'consenso');
+const risSorpresa = risSorpresaModello.selezione ? risSorpresaModello : costruisciSorpresaConsenso(poolConsensoOggi);
+const sorpresaDaConsenso = !risSorpresaModello.selezione && !!risSorpresa.selezione;
 
+// Formatta una singola gamba di Cassaforte/Quota2: i campi che richiedono un
+// modello (calibrata/market_probability/confidence/agreement/market_gap)
+// restano null per i candidati 'consenso', mai inventati.
 function formattaSingola(c) {
   if (!c) return null;
+  if (c.tipo === 'consenso') {
+    return {
+      tipo: 'consenso', evento: c.evento, comp: c.comp, quando: c.quando, mercato: c.mercato,
+      quota: c.quota_fair, probabilita_modello: null, probabilita_calibrata: null,
+      confidence: null, data_quality: null, market_probability: +c.prob.toFixed(4),
+      fair_odds: c.quota_fair, agreement: null, market_gap: null, n_book: c.nBook,
+      why: `${c.evento}, mercato "${c.mercato}": nessun modello indipendente per questa competizione. `
+        + `Probabilita' di mercato ${(c.prob * 100).toFixed(1)}% (quota fair ${c.quota_fair.toFixed(2)}), `
+        + `consenso di ${c.nBook} bookmaker.`
+    };
+  }
   const a = c.analisi;
   return {
-    evento: c.evento, comp: c.comp, quando: c.quando, mercato: c.mercato,
+    tipo: 'modello', evento: c.evento, comp: c.comp, quando: c.quando, mercato: c.mercato,
     quota: c.quota_fair, probabilita_modello: +c.prob.toFixed(4),
     probabilita_calibrata: (['1', 'X', '2'].includes(c.mercato) && a.calibrated.attivo)
       ? +a.calibrated[c.mercato === '1' ? 'P1' : c.mercato === 'X' ? 'PX' : 'P2'].toFixed(4) : null,
@@ -569,20 +607,31 @@ const quota2 = risQuota2.selezioni ? {
   quota_totale: +risQuota2.quotaTotale.toFixed(3),
   probabilita_combinata_stimata: +risQuota2.probCongiunta.toFixed(4)
 } : null;
-const sorpresa = risSorpresa.selezione ? (() => {
+const sorpresa = risSorpresa.selezione ? (sorpresaDaConsenso ? (() => {
+  const c = risSorpresa.selezione;
+  return {
+    tipo: 'consenso', evento: c.evento, comp: c.comp, quando: c.quando, mercato: c.mercato,
+    quota_bookmaker: null, quota_fair: c.quota_fair, probabilita_modello: null,
+    probabilita_mercato: +c.prob.toFixed(4), ev: null, edge: null,
+    confidence: null, data_quality: null, agreement: null, market_gap: null, n_book: c.nBook,
+    why: `${c.evento}, mercato "${c.mercato}": nessun modello indipendente per questa competizione, quindi nessun EV misurabile. `
+      + `E' la selezione con probabilita' di mercato piu' bassa (quota fair ${c.quota_fair.toFixed(2)}) fra quelle con abbastanza `
+      + `bookmaker d'accordo (${c.nBook}).`
+  };
+})() : (() => {
   const m = risSorpresa.selezione, a = m.analisi;
   return {
-    evento: m.evento, comp: m.comp, quando: m.quando, mercato: a.market.esito_riferimento,
+    tipo: 'modello', evento: m.evento, comp: m.comp, quando: m.quando, mercato: a.market.esito_riferimento,
     quota_bookmaker: a.market.bookmaker_odds, probabilita_modello: a.pure_model[a.market.esito_riferimento === '1' ? 'P1' : a.market.esito_riferimento === 'X' ? 'PX' : 'P2'],
     probabilita_mercato: a.market.no_vig_probability, ev: a.value.ev, edge: a.value.edge,
     confidence: a.quality.confidence, data_quality: a.quality.data_quality, agreement: a.quality.agreement,
     market_gap: a.market_gap.livello, why: a.why
   };
-})() : null;
+})()) : null;
 
-console.log('CASSAFORTE:', cassaforte ? `${cassaforte.evento} — ${cassaforte.mercato} @ ${cassaforte.quota}` : `nessuna (${risCassaforte.motivo})`);
-console.log('QUOTA 2:', quota2 ? `${quota2.selezioni.map(s => s.evento + ' ' + s.mercato).join(' + ')} — quota ${quota2.quota_totale}` : `nessuna (${risQuota2.motivo})`);
-console.log('SORPRESA:', sorpresa ? `${sorpresa.evento} — ${sorpresa.mercato} @ ${sorpresa.quota_bookmaker}` : `nessuna (${risSorpresa.motivo})`);
+console.log('CASSAFORTE:', cassaforte ? `${cassaforte.evento} — ${cassaforte.mercato} @ ${cassaforte.quota} [${cassaforte.tipo}]` : `nessuna (${risCassaforte.motivo})`);
+console.log('QUOTA 2:', quota2 ? `${quota2.selezioni.map(s => s.evento + ' ' + s.mercato + ' [' + s.tipo + ']').join(' + ')} — quota ${quota2.quota_totale}` : `nessuna (${risQuota2.motivo})`);
+console.log('SORPRESA:', sorpresa ? `${sorpresa.evento} — ${sorpresa.mercato} [${sorpresa.tipo}]` : `nessuna (${risSorpresa.motivo})`);
 
 writeFileSync('data/picks.json', JSON.stringify({
   aggiornato: generatoAlle,

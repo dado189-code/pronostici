@@ -534,7 +534,20 @@ function nulla(testo){
 let CASSAFORTE = null, QUOTA2 = null, SORPRESA = null;
 let CASSAFORTE_NOTA = '', QUOTA2_NOTA = '', SORPRESA_NOTA = '';
 
+// Badge visibile su ogni selezione senza modello indipendente (es. Champions
+// League a solo consenso bookmaker, 10/09/2026): mai spacciata per una stima
+// verificata come quelle delle 5 leghe nazionali.
+function badgeConsenso(){
+  return `<span class="exp-badge" style="border-color:var(--dim);color:var(--dim)">solo consenso</span>`;
+}
+
 function rigaQualita(s){
+  if(s.tipo === 'consenso'){
+    return `<div class="meta" style="margin-top:6px">
+      <span>mercato ${Math.round(s.market_probability*100)}% ${badgeConsenso()}</span>
+      <span>${s.n_book} bookmaker</span>
+    </div>`;
+  }
   return `<div class="meta" style="margin-top:6px">
     <span>modello ${Math.round(s.probabilita_modello*100)}%${s.probabilita_calibrata!=null?` &middot; calibrata ${Math.round(s.probabilita_calibrata*100)}%`:''}${s.market_probability!=null?` &middot; mercato ${Math.round(s.market_probability*100)}%`:''}</span>
     <span>conf ${s.confidence}/100 &middot; DQ ${s.data_quality}/100 &middot; <span class="qtag ${esc(s.agreement)}" style="font-size:10px;padding:1px 5px">${esc(s.agreement)}</span></span>
@@ -582,6 +595,19 @@ function renderSorpresa(){
   if(!box) return;
   if(!SORPRESA){ box.innerHTML = `<div class="card flat"><div class="badge wild">Sorpresa</div><div class="eyebrow">niente per oggi</div><p class="why">${esc(SORPRESA_NOTA||'Nessuna sorpresa idonea al momento.')}</p></div>`; return; }
   const s = SORPRESA;
+  if(s.tipo === 'consenso'){
+    box.innerHTML = `<div class="card wild">
+      <div class="badge wild">Sorpresa</div>
+      <div class="eyebrow">${esc(s.comp)} &middot; ${esc(s.quando)}</div>
+      <div class="pick" style="border-bottom:0">
+        <span class="market" style="font-size:20px">${esc(s.mercato)}</span>
+        <span class="fair" style="font-size:18px">${s.quota_fair.toFixed(2)}<span>${esc(s.evento)}</span></span>
+      </div>
+      <div class="meta" style="margin-top:6px"><span>mercato ${Math.round(s.probabilita_mercato*100)}% ${badgeConsenso()}</span><span>${s.n_book} bookmaker</span></div>
+      <p class="why">${esc(s.why)}</p>
+    </div>`;
+    return;
+  }
   box.innerHTML = `<div class="card wild">
     <div class="badge wild">Sorpresa</div>
     <div class="eyebrow">${esc(s.comp)} &middot; ${esc(s.quando)}</div>

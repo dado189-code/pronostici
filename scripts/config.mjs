@@ -213,6 +213,15 @@ export const VALORE = {
 // bookmaker specifico: e' lo stesso criterio gia' usato dal resto del sito
 // (index.html mostra da sempre "quota minima" = 1/prob). Solo per i segni
 // 1X2 esiste anche una quota bookmaker reale, mostrata quando disponibile.
+// Competizioni senza modello indipendente (es. Champions League): niente
+// confidence/dataQuality/agreement/market gap, perche' non esiste un modello
+// con cui confrontare il mercato. L'unica garanzia di qualita' disponibile e'
+// quanti bookmaker concordano sul prezzo: sotto questa soglia il consenso e'
+// considerato troppo debole per Cassaforte/Quota2/Sorpresa.
+export const CONSENSO = {
+  nBookMinimo: 15
+};
+
 export const SELEZIONE = {
   cassaforte: {
     quotaMin: 1.45, quotaMax: 1.85,
