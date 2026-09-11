@@ -1,6 +1,6 @@
 {
  "nota": "Ogni riga e immutabile una volta scritta: non viene mai aggiornata da esecuzioni successive, nemmeno se il modello o i dati di input cambiano. Serve a verificare a posteriori cosa il modello prevedeva PRIMA del kickoff, senza il rischio che lo storico si riscriva da solo.",
- "aggiornato": "2026-09-10T08:51:11.200Z",
+ "aggiornato": "2026-09-11T09:24:45.952Z",
  "snapshot": [
   {
    "snapshot_id": "napoli-como|2026-08-30T16:30:00.000Z|standard|Multigol casa 1-2|football-v1-baseline",
@@ -31830,6 +31830,778 @@
    "src": "consenso di 22 bookmaker, nessun modello indipendente",
    "model_version": "football-v1-baseline",
    "generated_at": "2026-09-10T08:39:40.285Z"
+  },
+  {
+   "snapshot_id": "inter-udinese|2026-09-14T18:45:00.000Z|sorpresa|Udinese vincente|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Serie A",
+   "evento": "Inter - Udinese",
+   "quando": "lun 14/09, 20:45",
+   "ore": 81,
+   "match": "inter-udinese",
+   "inizio": "2026-09-14T18:45:00.000Z",
+   "understat": "Serie_A",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.7812,
+     "PX": 0.1283,
+     "P2": 0.0905,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.7574,
+     "PX": 0.1548,
+     "P2": 0.0877,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 2.868,
+     "lambda_away": 0.892
+    },
+    "market": {
+     "esito_riferimento": "2",
+     "bookmaker_odds": 14.5,
+     "book": "Betfair",
+     "n_book": 23,
+     "no_vig_probability": 0.085
+    },
+    "value": {
+     "fair_odds": 11.111,
+     "edge": 0.005,
+     "ev": 0.305
+    },
+    "quality": {
+     "agreement": "HIGH",
+     "agreement_scarto": 0.005,
+     "confidence": 88,
+     "data_quality": 63
+    },
+    "market_gap": {
+     "valore": 0.005,
+     "livello": "NONE",
+     "etichetta": null
+    },
+    "rischio_quota": "ESCLUSA",
+    "value_class": "VALUE",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "quota 14.50 > 8"
+    ],
+    "opportunity_score": 0.9085,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.5,
+      "current_season_contribution_pct": 15.5
+     },
+     "ospite": {
+      "matches_current_season": 3,
+      "previous_season_contribution_pct": 84.5,
+      "current_season_contribution_pct": 15.5
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Udinese\" il 9.0% contro il 8.5% del mercato. La quota fair e' 11.11 contro una quota disponibile di 14.50. Il modello e il mercato mostrano un accordo alto."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Udinese vincente",
+   "prob": 0.09,
+   "prezzo": 14.5,
+   "why": "Il modello da questo esito al 9.0%, il consenso di 23 bookmaker al 8.5%. Al prezzo migliore, 14.50 su Betfair, il valore atteso e' 31.2%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "2",
+    "probModello": 0.09,
+    "probMercato": 0.085,
+    "prezzo": 14.5,
+    "book": "Betfair",
+    "nBook": 23,
+    "valore": 0.312
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-09-11T09:24:45.945Z"
+  },
+  {
+   "snapshot_id": "rayo vallecano-espanyol|2026-09-15T17:00:00.000Z|standard|1|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Rayo Vallecano - Espanyol",
+   "quando": "mar 15/09, 19:00",
+   "ore": 104,
+   "match": "rayo vallecano-espanyol",
+   "inizio": "2026-09-15T17:00:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.5641,
+     "PX": 0.2216,
+     "P2": 0.2143,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5385,
+     "PX": 0.2569,
+     "P2": 0.2046,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.951,
+     "lambda_away": 1.126
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 2.1,
+     "book": "Betfair",
+     "n_book": 19,
+     "no_vig_probability": 0.475
+    },
+    "value": {
+     "fair_odds": 1.773,
+     "edge": 0.089,
+     "ev": 0.1844
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.089,
+     "confidence": 33,
+     "data_quality": 65
+    },
+    "market_gap": {
+     "valore": 0.089,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 33 < 55",
+     "agreement LOW",
+     "market gap 8.9pp > 5pp"
+    ],
+    "opportunity_score": 0.4847,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.7,
+      "current_season_contribution_pct": 19.3
+     },
+     "ospite": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.6,
+      "current_season_contribution_pct": 19.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Rayo Vallecano\" il 56.4% contro il 47.5% del mercato. La quota fair e' 1.77 contro una quota disponibile di 2.10. Il modello e il mercato mostrano un forte disaccordo."
+   },
+   "mercato": "1",
+   "prob": 0.564,
+   "prezzo": 2.1,
+   "why": "Gol attesi 1.95 contro 1.13, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 56.4%. Sul segno 1 il modello dice 56.4% contro il 47.5% del consenso di 19 bookmaker, miglior prezzo 2.10 su Betfair.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.564,
+    "probMercato": 0.475,
+    "prezzo": 2.1,
+    "book": "Betfair",
+    "nBook": 19,
+    "valore": 0.185
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-09-11T09:24:45.945Z"
+  },
+  {
+   "snapshot_id": "rayo vallecano-espanyol|2026-09-15T17:00:00.000Z|standard|Under 4.5|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Rayo Vallecano - Espanyol",
+   "quando": "mar 15/09, 19:00",
+   "ore": 104,
+   "match": "rayo vallecano-espanyol",
+   "inizio": "2026-09-15T17:00:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.5641,
+     "PX": 0.2216,
+     "P2": 0.2143,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5385,
+     "PX": 0.2569,
+     "P2": 0.2046,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.951,
+     "lambda_away": 1.126
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 2.1,
+     "book": "Betfair",
+     "n_book": 19,
+     "no_vig_probability": 0.475
+    },
+    "value": {
+     "fair_odds": 1.773,
+     "edge": 0.089,
+     "ev": 0.1844
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.089,
+     "confidence": 33,
+     "data_quality": 65
+    },
+    "market_gap": {
+     "valore": 0.089,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 33 < 55",
+     "agreement LOW",
+     "market gap 8.9pp > 5pp"
+    ],
+    "opportunity_score": 0.4847,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.7,
+      "current_season_contribution_pct": 19.3
+     },
+     "ospite": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.6,
+      "current_season_contribution_pct": 19.4
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Rayo Vallecano\" il 56.4% contro il 47.5% del mercato. La quota fair e' 1.77 contro una quota disponibile di 2.10. Il modello e il mercato mostrano un forte disaccordo."
+   },
+   "mercato": "Under 4.5",
+   "prob": 0.802,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.95 contro 1.13, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.2%. Sul segno 1 il modello dice 56.4% contro il 47.5% del consenso di 19 bookmaker, miglior prezzo 2.10 su Betfair.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-09-11T09:24:45.945Z"
+  },
+  {
+   "snapshot_id": "alaves-valencia|2026-09-15T18:00:00.000Z|standard|Multigol casa 1-2|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Alaves - Valencia",
+   "quando": "mar 15/09, 20:00",
+   "ore": 105,
+   "match": "alaves-valencia",
+   "inizio": "2026-09-15T18:00:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.544,
+     "PX": 0.2419,
+     "P2": 0.2141,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5222,
+     "PX": 0.2723,
+     "P2": 0.2055,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.717,
+     "lambda_away": 0.985
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 2.22,
+     "book": "1xBet",
+     "n_book": 19,
+     "no_vig_probability": 0.445
+    },
+    "value": {
+     "fair_odds": 1.838,
+     "edge": 0.099,
+     "ev": 0.2077
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.099,
+     "confidence": 32,
+     "data_quality": 65
+    },
+    "market_gap": {
+     "valore": 0.099,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 32 < 55",
+     "agreement LOW",
+     "market gap 9.9pp > 5pp"
+    ],
+    "opportunity_score": 0.5143,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.6,
+      "current_season_contribution_pct": 19.4
+     },
+     "ospite": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.4,
+      "current_season_contribution_pct": 19.6
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Alaves\" il 54.4% contro il 44.5% del mercato. La quota fair e' 1.84 contro una quota disponibile di 2.22. Il modello e il mercato mostrano un forte disaccordo."
+   },
+   "mercato": "Multigol casa 1-2",
+   "prob": 0.573,
+   "why": "Gol attesi 1.72 contro 0.98, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 57.3%. Sul segno 1 il modello dice 54.4% contro il 44.5% del consenso di 19 bookmaker, miglior prezzo 2.22 su 1xBet.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.544,
+    "probMercato": 0.445,
+    "prezzo": 2.22,
+    "book": "1xBet",
+    "nBook": 19,
+    "valore": 0.208
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-09-11T09:24:45.945Z"
+  },
+  {
+   "snapshot_id": "alaves-valencia|2026-09-15T18:00:00.000Z|standard|Casa segna|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Alaves - Valencia",
+   "quando": "mar 15/09, 20:00",
+   "ore": 105,
+   "match": "alaves-valencia",
+   "inizio": "2026-09-15T18:00:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.544,
+     "PX": 0.2419,
+     "P2": 0.2141,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.5222,
+     "PX": 0.2723,
+     "P2": 0.2055,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.717,
+     "lambda_away": 0.985
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 2.22,
+     "book": "1xBet",
+     "n_book": 19,
+     "no_vig_probability": 0.445
+    },
+    "value": {
+     "fair_odds": 1.838,
+     "edge": 0.099,
+     "ev": 0.2077
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.099,
+     "confidence": 32,
+     "data_quality": 65
+    },
+    "market_gap": {
+     "valore": 0.099,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "NORMALE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 32 < 55",
+     "agreement LOW",
+     "market gap 9.9pp > 5pp"
+    ],
+    "opportunity_score": 0.5143,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.6,
+      "current_season_contribution_pct": 19.4
+     },
+     "ospite": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.4,
+      "current_season_contribution_pct": 19.6
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Alaves\" il 54.4% contro il 44.5% del mercato. La quota fair e' 1.84 contro una quota disponibile di 2.22. Il modello e il mercato mostrano un forte disaccordo."
+   },
+   "mercato": "Casa segna",
+   "prob": 0.82,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.72 contro 0.98, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 82.0%. Sul segno 1 il modello dice 54.4% contro il 44.5% del consenso di 19 bookmaker, miglior prezzo 2.22 su 1xBet.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-09-11T09:24:45.945Z"
+  },
+  {
+   "snapshot_id": "elche-real madrid|2026-09-15T19:30:00.000Z|standard|Under 3.5|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Elche - Real Madrid",
+   "quando": "mar 15/09, 21:30",
+   "ore": 106,
+   "match": "elche-real madrid",
+   "inizio": "2026-09-15T19:30:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.1945,
+     "PX": 0.2006,
+     "P2": 0.6049,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.1907,
+     "PX": 0.2165,
+     "P2": 0.5929,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.195,
+     "lambda_away": 2.222
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 11,
+     "book": "Betfair",
+     "n_book": 19,
+     "no_vig_probability": 0.103
+    },
+    "value": {
+     "fair_odds": 5.128,
+     "edge": 0.092,
+     "ev": 1.145
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.092,
+     "confidence": 32,
+     "data_quality": 65
+    },
+    "market_gap": {
+     "valore": 0.092,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "HIGH_VARIANCE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 32 < 55",
+     "agreement LOW",
+     "market gap 9.2pp > 5pp",
+     "quota 11.00 > 8"
+    ],
+    "opportunity_score": 0.5735,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.5,
+      "current_season_contribution_pct": 19.5
+     },
+     "ospite": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.4,
+      "current_season_contribution_pct": 19.6
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Elche\" il 19.5% contro il 10.3% del mercato. La quota fair e' 5.13 contro una quota disponibile di 11.00. Il modello e il mercato mostrano un forte disaccordo."
+   },
+   "mercato": "Under 3.5",
+   "prob": 0.555,
+   "why": "Gol attesi 1.19 contro 2.22, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 55.5%. Sul segno 1 il modello dice 19.5% contro il 10.3% del consenso di 19 bookmaker, miglior prezzo 11.00 su Betfair.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.195,
+    "probMercato": 0.103,
+    "prezzo": 11,
+    "book": "Betfair",
+    "nBook": 19,
+    "valore": 1.14
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-09-11T09:24:45.945Z"
+  },
+  {
+   "snapshot_id": "elche-real madrid|2026-09-15T19:30:00.000Z|standard|X2|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Elche - Real Madrid",
+   "quando": "mar 15/09, 21:30",
+   "ore": 106,
+   "match": "elche-real madrid",
+   "inizio": "2026-09-15T19:30:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.1945,
+     "PX": 0.2006,
+     "P2": 0.6049,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.1907,
+     "PX": 0.2165,
+     "P2": 0.5929,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.195,
+     "lambda_away": 2.222
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 11,
+     "book": "Betfair",
+     "n_book": 19,
+     "no_vig_probability": 0.103
+    },
+    "value": {
+     "fair_odds": 5.128,
+     "edge": 0.092,
+     "ev": 1.145
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.092,
+     "confidence": 32,
+     "data_quality": 65
+    },
+    "market_gap": {
+     "valore": 0.092,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "HIGH_VARIANCE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 32 < 55",
+     "agreement LOW",
+     "market gap 9.2pp > 5pp",
+     "quota 11.00 > 8"
+    ],
+    "opportunity_score": 0.5735,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.5,
+      "current_season_contribution_pct": 19.5
+     },
+     "ospite": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.4,
+      "current_season_contribution_pct": 19.6
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Elche\" il 19.5% contro il 10.3% del mercato. La quota fair e' 5.13 contro una quota disponibile di 11.00. Il modello e il mercato mostrano un forte disaccordo."
+   },
+   "mercato": "X2",
+   "prob": 0.805,
+   "why": "Versione prudente sulla stessa partita. Gol attesi 1.19 contro 2.22, stimati dagli xG delle ultime partite con emivita di sei mesi, senza guardare le quote. Il modello da questo mercato al 80.5%. Sul segno 1 il modello dice 19.5% contro il 10.3% del consenso di 19 bookmaker, miglior prezzo 11.00 su Betfair.",
+   "src": "modello xG Dixon-Coles",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-09-11T09:24:45.945Z"
+  },
+  {
+   "snapshot_id": "elche-real madrid|2026-09-15T19:30:00.000Z|sorpresa|Elche vincente|football-v1-baseline",
+   "sport": "calcio",
+   "comp": "Liga",
+   "evento": "Elche - Real Madrid",
+   "quando": "mar 15/09, 21:30",
+   "ore": 106,
+   "match": "elche-real madrid",
+   "inizio": "2026-09-15T19:30:00.000Z",
+   "understat": "La_liga",
+   "analisi": {
+    "pure_model": {
+     "P1": 0.1945,
+     "PX": 0.2006,
+     "P2": 0.6049,
+     "model_version": "football-v1-baseline"
+    },
+    "calibrated": {
+     "P1": 0.1907,
+     "PX": 0.2165,
+     "P2": 0.5929,
+     "attivo": true,
+     "motivo": null,
+     "model_version": "football-v1.1-drawcal-candidate",
+     "badge": "EXPERIMENTAL CALIBRATION"
+    },
+    "expected_goals": {
+     "lambda_home": 1.195,
+     "lambda_away": 2.222
+    },
+    "market": {
+     "esito_riferimento": "1",
+     "bookmaker_odds": 11,
+     "book": "Betfair",
+     "n_book": 19,
+     "no_vig_probability": 0.103
+    },
+    "value": {
+     "fair_odds": 5.128,
+     "edge": 0.092,
+     "ev": 1.145
+    },
+    "quality": {
+     "agreement": "LOW",
+     "agreement_scarto": 0.092,
+     "confidence": 32,
+     "data_quality": 65
+    },
+    "market_gap": {
+     "valore": 0.092,
+     "livello": "SIGNIFICATIVA",
+     "etichetta": null
+    },
+    "rischio_quota": "HIGH_VARIANCE",
+    "value_class": "WATCH",
+    "best_pick_idoneo": false,
+    "best_pick_motivi_esclusione": [
+     "confidence 32 < 55",
+     "agreement LOW",
+     "market gap 9.2pp > 5pp",
+     "quota 11.00 > 8"
+    ],
+    "opportunity_score": 0.5735,
+    "contesto": {
+     "lineup_injury_disponibile": false,
+     "peso_predittivo": 0,
+     "nota": "API-Football non ancora integrata in produzione (Fase 10 in corso): nessun aggiustamento sulle probabilita'."
+    },
+    "stagione": {
+     "casa": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.5,
+      "current_season_contribution_pct": 19.5
+     },
+     "ospite": {
+      "matches_current_season": 4,
+      "previous_season_contribution_pct": 80.4,
+      "current_season_contribution_pct": 19.6
+     }
+    },
+    "why": "Il modello assegna a \"la vittoria di Elche\" il 19.5% contro il 10.3% del mercato. La quota fair e' 5.13 contro una quota disponibile di 11.00. Il modello e il mercato mostrano un forte disaccordo."
+   },
+   "tipo": "sorpresa",
+   "mercato": "Elche vincente",
+   "prob": 0.195,
+   "prezzo": 11,
+   "why": "Il modello da questo esito al 19.5%, il consenso di 19 bookmaker al 10.3%. Al prezzo migliore, 11.00 su Betfair, il valore atteso e' 114.0%. Nasce dallo scarto fra modello e lavagna, non da una sensazione.",
+   "src": "modello xG Dixon-Coles + confronto bookmaker",
+   "confronto": {
+    "esito": "1",
+    "probModello": 0.195,
+    "probMercato": 0.103,
+    "prezzo": 11,
+    "book": "Betfair",
+    "nBook": 19,
+    "valore": 1.14
+   },
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-09-11T09:24:45.945Z"
+  },
+  {
+   "snapshot_id": "aryna sabalenka - elena rybakina|2026-09-12T20:00:00.000Z|standard|Aryna Sabalenka vincente|football-v1-baseline",
+   "sport": "tennis",
+   "comp": "WTA US Open",
+   "evento": "Aryna Sabalenka - Elena Rybakina",
+   "quando": "sab 12/09, 22:00",
+   "ore": 35,
+   "match": "aryna sabalenka - elena rybakina",
+   "inizio": "2026-09-12T20:00:00.000Z",
+   "fonte": "consenso",
+   "mercato": "Aryna Sabalenka vincente",
+   "prob": 0.571,
+   "why": "Nessun modello xG copre WTA US Open: questa e la probabilita che il mercato sta prezzando, 57.1%, ricavata togliendo il margine alle quote di 22 bookmaker e facendone la media. Miglior prezzo 1.75 su Betfair. Non e un pronostico indipendente: e la lavagna, ripulita.",
+   "src": "consenso di 22 bookmaker, nessun modello indipendente",
+   "model_version": "football-v1-baseline",
+   "generated_at": "2026-09-11T09:24:45.945Z"
   }
  ]
 }
