@@ -1,0 +1,108 @@
+{
+  "version": "dc-xg-180-audited-1",
+  "generatedAt": "2026-09-11T10:20:54.843Z",
+  "engineHash": "c83958bac81872651024ecea182473053911154c272225eb846983b47c93730a",
+  "method": "Dixon-Coles xG, emivita 180 giorni; rifit giornaliero a mezzanotte UTC, solo partite dei giorni precedenti. Warm-up 2022/23, train 2023/24, validation 2024/25, test 2025/26. Nessun tuning effettuato.",
+  "limitations": [
+    "Dati storici scaricati retrospettivamente: revisioni xG e orari originari di disponibilità non ricostruibili.",
+    "Il test 2025/26 era già stato esplorato nel repository precedente: non è un nuovo holdout incontaminato. Nessun miglioramento viene promosso.",
+    "Il confronto closing storico è Pinnacle, non un consenso di almeno tre bookmaker. Non dimostra profitti eseguibili."
+  ],
+  "improvements": {
+    "promoted": [],
+    "decision": "Nessuna feature, calibrazione o ensemble promossi. Draw-cal disattivato: evidenza precedente non conforme a test finale isolato."
+  },
+  "coverage": [
+    {
+      "league": "Serie A",
+      "n": 1133,
+      "skipped": 7
+    },
+    {
+      "league": "Premier League",
+      "n": 1135,
+      "skipped": 5
+    },
+    {
+      "league": "Liga",
+      "n": 1134,
+      "skipped": 6
+    },
+    {
+      "league": "Bundesliga",
+      "n": 912,
+      "skipped": 6
+    },
+    {
+      "league": "Ligue 1",
+      "n": 914,
+      "skipped": 4
+    }
+  ],
+  "splits": {
+    "train": {
+      "n": 1738,
+      "brier": 0.5832803227611357,
+      "logLoss": 0.9794083445015588,
+      "rps": 0.1949916558278447
+    },
+    "validation": {
+      "n": 1744,
+      "brier": 0.5812253168079984,
+      "logLoss": 0.97597403055265,
+      "rps": 0.19802588026316034
+    },
+    "test": {
+      "n": 1746,
+      "brier": 0.5926412144854257,
+      "logLoss": 0.9946987803523214,
+      "rps": 0.2020579500426109
+    }
+  },
+  "marketComparison": {
+    "n": 1737,
+    "model": {
+      "brier": 0.5920124368042529,
+      "logLoss": 0.9938222511301262,
+      "rps": 0.20191288015350872
+    },
+    "closing": {
+      "brier": 0.5815908058744083,
+      "logLoss": 0.976945375487321,
+      "rps": 0.1975624931309024
+    },
+    "bootstrap": {
+      "brier": {
+        "difference": 0.01042163092984293,
+        "ci95": [
+          0.0038840444576459013,
+          0.016764518427731908
+        ],
+        "blocks": 37,
+        "replicates": 3000,
+        "seed": 71923
+      },
+      "logLoss": {
+        "difference": 0.01687687564280381,
+        "ci95": [
+          0.007067269128032049,
+          0.026452380568172725
+        ],
+        "blocks": 37,
+        "replicates": 3000,
+        "seed": 71923
+      },
+      "rps": {
+        "difference": 0.0043503870226068225,
+        "ci95": [
+          0.0014306670335359577,
+          0.007053795981623043
+        ],
+        "blocks": 37,
+        "replicates": 3000,
+        "seed": 71923
+      }
+    }
+  },
+  "provenanceVerifiedAt": "2026-09-11T10:22:55.687Z"
+}

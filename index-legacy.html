@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pronostici — generatore schedina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --board:#0E3B34; --board2:#092A25; --line:#1C554B;
+  --paper:#F1EDE0; --paper2:#E3DDCB; --ink:#16211D;
+  --gold:#D9A441; --mint:#5FBF9B; --clay:#C4553A; --dim:#8FB3AA;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:linear-gradient(180deg,var(--board) 0%,var(--board2) 100%);background-attachment:fixed;
+  color:var(--paper);font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:20px 16px 70px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+h1{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:44px;line-height:.95;margin:6px 0 6px}
+h1 em{font-style:normal;color:var(--gold)}
+.sub{color:var(--dim);font-size:14px;max-width:58ch;margin:0}
+header{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}
+
+label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.field{display:flex;flex-direction:column;gap:5px}
+input{background:rgba(0,0,0,.22);border:1px solid var(--line);color:var(--paper);
+  font-family:'IBM Plex Mono',monospace;font-size:15px;padding:9px 11px;border-radius:2px;outline:none;width:110px}
+input:focus{border-color:var(--gold);box-shadow:0 0 0 2px rgba(217,164,65,.22)}
+.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:transparent;border:1px solid var(--line);color:var(--dim);border-radius:2px;cursor:pointer;
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:15px;padding:8px 13px}
+.chip[aria-pressed=true]{background:var(--gold);color:var(--board2);border-color:var(--gold)}
+.btn{background:var(--gold);color:var(--board2);border:0;border-radius:2px;cursor:pointer;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+  font-size:20px;padding:14px 28px;width:100%;margin-top:18px}
+.btn:hover{background:#E8B75C}
+button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:26px}
+@media(max-width:760px){.duo{grid-template-columns:1fr}}
+.duo.tre{grid-template-columns:1fr 1fr 1fr}
+@media(max-width:760px){.duo.tre{grid-template-columns:1fr}}
+.out{margin-top:28px;display:grid;grid-template-columns:1fr 330px;gap:24px;align-items:start}
+@media(max-width:840px){.out{grid-template-columns:1fr}}
+
+.card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-left:3px solid var(--gold);
+  padding:16px;border-radius:2px;margin-bottom:14px;animation:rise .3s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.card.flat{border-left-color:var(--line)}
+.card.safe{border-left-color:var(--mint)}
+.card.wild{border-left-color:var(--clay)}
+.card.oro{border-left-color:var(--gold)}
+.card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:22px;margin:4px 0 8px}
+.badge{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;font-size:14px;padding:3px 9px;border-radius:2px;margin-bottom:6px}
+.badge.safe{background:rgba(95,191,155,.18);color:var(--mint)}
+.badge.wild{background:rgba(196,85,58,.2);color:#E58467}
+.badge.oro{background:rgba(217,164,65,.18);color:var(--gold)}
+.pick{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  padding:10px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.market{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:25px;text-transform:uppercase;line-height:1}
+.fair{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:22px;color:var(--gold);text-align:right}
+.fair span{display:block;font-size:10px;letter-spacing:.13em;color:var(--dim);text-transform:uppercase}
+.bar{height:4px;background:rgba(255,255,255,.1);margin:12px 0 6px;position:relative}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--mint)}
+.meta{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);gap:8px;flex-wrap:wrap}
+.why{font-size:14px;color:#DCE9E4;margin:12px 0 0}
+.src{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--dim);margin-top:8px}
+.val{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 7px;border-radius:2px;margin-top:8px;display:inline-block}
+.val.pos{background:rgba(95,191,155,.16);color:var(--mint)}
+.val.neg{background:rgba(196,85,58,.16);color:#E58467}
+.sec{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:17px;letter-spacing:.06em;
+  color:var(--dim);border-bottom:1px solid var(--line);padding-bottom:6px;margin:26px 0 14px}
+
+.ticket{background:var(--paper);color:var(--ink);border-radius:2px;padding:18px 16px 22px;
+  box-shadow:0 18px 40px rgba(0,0,0,.35);position:sticky;top:16px}
+.ticket::before,.ticket::after{content:"";position:absolute;left:0;right:0;height:9px;
+  background-image:radial-gradient(circle at 5px 0, transparent 5px, var(--paper) 5.5px);
+  background-size:10px 9px;background-repeat:repeat-x}
+.ticket::before{top:-9px;transform:rotate(180deg)}
+.ticket::after{bottom:-9px}
+.ticket .stamp{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#6C7A74;text-transform:uppercase}
+.ticket h2{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:22px;margin:2px 0 10px;letter-spacing:.03em}
+.tk-line{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed var(--paper2);font-size:13px}
+.tk-line b{display:block;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:16px}
+.tk-line small{color:#6C7A74;font-size:11px}
+.tk-line .n{font-family:'IBM Plex Mono',monospace;font-weight:600;text-align:right;white-space:nowrap}
+.totals{margin-top:14px;padding-top:12px;border-top:2px solid var(--ink)}
+.trow{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:13px;padding:3px 0}
+.trow.big{font-size:28px;font-weight:600;align-items:baseline;padding-top:6px}
+.trow .k{font-family:'IBM Plex Sans',sans-serif;font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:#6C7A74;align-self:center}
+.note{color:#6C7A74;font-size:11px;line-height:1.45;margin-top:14px;border-top:1px solid var(--paper2);padding-top:10px}
+.empty{color:#6C7A74;font-size:13px;padding:20px 0;text-align:center}
+.warn{border-left:3px solid var(--clay);background:rgba(196,85,58,.1);padding:12px 14px;font-size:13px;margin-bottom:14px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+/* --- modalita' avanzata: pure/calibrated/market/value/quality --- */
+.exp-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--clay);border:1px solid var(--clay);border-radius:2px;padding:1px 6px;margin-left:6px;vertical-align:middle}
+.analisi{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+.analisi-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+@media(max-width:520px){.analisi-grid{grid-template-columns:1fr}}
+.analisi-blk{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--dim);line-height:1.6}
+.analisi-blk b{color:var(--paper);font-family:'IBM Plex Sans',sans-serif;font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;display:block;margin-bottom:3px;font-weight:600}
+.analisi-blk .row{display:flex;justify-content:space-between;gap:8px}
+.qtag{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em;font-size:12px;padding:2px 8px;border-radius:2px}
+.qtag.NO_BET{background:rgba(255,255,255,.08);color:var(--dim)}
+.qtag.WATCH{background:rgba(217,164,65,.16);color:var(--gold)}
+.qtag.VALUE{background:rgba(95,191,155,.16);color:var(--mint)}
+.qtag.STRONG_VALUE{background:rgba(95,191,155,.28);color:var(--mint)}
+.qtag.HIGH{background:rgba(95,191,155,.16);color:var(--mint)}
+.qtag.MEDIUM{background:rgba(217,164,65,.16);color:var(--gold)}
+.qtag.LOW{background:rgba(196,85,58,.18);color:#E58467}
+.bp-card{background:rgba(255,255,255,.045);border:1px solid var(--line);border-left:3px solid var(--mint);
+  border-radius:2px;padding:13px 15px;margin-bottom:10px}
+.bp-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.bp-top h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:19px;margin:0}
+.bp-tags{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">analisi aggiornata domenica 30 agosto</div>
+  <h1>Generatore <em>pronostici</em></h1>
+  <p class="sub">Calcio: Serie A, Premier League, Liga, Ligue 1 e Bundesliga, con mercati che escono da un modello xG Dixon-Coles indipendente dalle quote, quindi multigol, gol squadra e under oltre alle doppie chance. Basket: WNBA e NBA quando sono in stagione. Tennis: i tabelloni del torneo in corso. Per basket e tennis non esiste un modello xG, quindi il pronostico e il solo consenso dei bookmaker ripulito dal margine, ed e segnalato come tale. Scegli la quota che vuoi giocare e l'app costruisce la giocata che la raggiunge con la probabilita piu alta.</p>
+</header>
+
+<p class="sub" style="margin:6px 0 18px"><span id="modelVersionInfo"></span></p>
+
+<div class="duo tre">
+  <div id="cassaforte-box"></div>
+  <div id="quota2-box"></div>
+  <div id="sorpresa-box"></div>
+</div>
+
+<div class="sec">Migliori value bet</div>
+<p class="sub" style="margin-bottom:14px">Non sono gli esiti piu probabili: sono le partite dove confidence, data quality, accordo modello-mercato e un EV moderato sono TUTTI sopra soglia insieme. Un EV altissimo da solo non basta e non compare qui se nasce da un forte disaccordo col mercato o da una quota molto alta.</p>
+<div id="bestpicks"></div>
+
+<div class="sec">High risk &middot; model disagreement</div>
+<p class="sub" style="margin-bottom:14px">Selezioni con EV teorico positivo ma escluse dalle migliori opportunita: quota molto alta, forte disaccordo col mercato, o qualita insufficiente. I backtest storici mostrano che il mercato closing batte il Pure Model, quindi un forte disaccordo qui non e un vantaggio dimostrato: da osservare, non da giocare come le altre.</p>
+<div id="highrisk"></div>
+
+<div class="sec">Genera la tua schedina</div>
+
+<div class="controls">
+  <div class="field">
+    <label>Quota obiettivo</label>
+    <input type="number" id="target" value="3.00" min="1.05" step="0.05">
+  </div>
+  <div class="field">
+    <label>Scorciatoie</label>
+    <div class="chips" id="presets">
+      <button class="chip" data-q="1.5">1.50</button>
+      <button class="chip" data-q="2">2.00</button>
+      <button class="chip" data-q="3">3.00</button>
+      <button class="chip" data-q="5">5.00</button>
+      <button class="chip" data-q="10">10.00</button>
+    </div>
+  </div>
+</div>
+
+<div class="controls" style="margin-top:14px">
+  <div class="field">
+    <label>Sport</label>
+    <div class="chips" id="fSport">
+      <button class="chip" data-c="tutti" aria-pressed="true">Tutti</button>
+      <button class="chip" data-c="calcio" aria-pressed="false">Calcio</button>
+      <button class="chip" data-c="tennis" aria-pressed="false">Tennis</button>
+      <button class="chip" data-c="basket" aria-pressed="false">Basket</button>
+    </div>
+  </div>
+  <div class="field">
+    <label>Finestra</label>
+    <div class="chips" id="fWin">
+      <button class="chip" data-w="tutto" aria-pressed="true">Tutti</button>
+      <button class="chip" data-w="24" aria-pressed="false">Entro 24h</button>
+      <button class="chip" data-w="72" aria-pressed="false">Entro 72h</button>
+    </div>
+  </div>
+  <div class="field">
+    <label>Max eventi</label>
+    <input type="number" id="maxLegs" value="4" min="1" max="6">
+  </div>
+</div>
+
+<button class="btn" id="go">Genera il pronostico</button>
+
+<div class="out">
+  <main id="res"></main>
+  <aside><div class="ticket" id="ticket"></div></aside>
+</div>
+
+<div class="sec">Rendimento dei pronostici</div>
+<div id="storico"></div>
+
+<div class="sec">Tutti gli eventi analizzati</div>
+<div id="all"></div>
+
+</div>
+
+<script>
+// Ripiego incorporato, analisi del 30/08/2026: nove pronostici su quattro
+// partite, scelte fra le otto col divario modello-mercato piu alto e tenute
+// solo dopo il confronto con formazioni, infortuni e meteo. Vale finche'
+// data/picks.json non e' disponibile: quando c'e', la pipeline lo sostituisce.
+// prob  = probabilita stimata dell'esito
+// book  = quota verificata sulla lavagna, presente solo dove l'ho trovata pubblicata
+// tipo  = 'sorpresa' segnala le giocate ad alta quota tenute d'occhio
+let PICKS = [
+ {sport:'calcio', comp:'Serie A', evento:'Napoli - Como', quando:'dom 30/08, 18:30', ore:8, match:'napoli-como',
+  inizio:'2026-08-30T16:30:00.000Z',
+  mercato:'Multigol 1-4', prob:0.814,
+  why:"Da uno a quattro gol totali, 81.4% secondo il modello xG. La notizia del giorno lo sostiene invece di contraddirlo: Sports Mole e khelnow danno Lukaku, Neres e Vergara indisponibili, oltre a Buongiorno, Mazzocchi e Marianucci, con Di Lorenzo al rientro dopo l'assenza da gennaio. Con l'attacco ridotto a Hojlund e Politano una partita da molti gol e meno probabile, ed e dove sta la fascia 1-4. Meteo: alta pressione, sereno e asciutto sul Centro-Sud (iLMeteo, MeteoLive).",
+  src:'modello xG Dixon-Coles + formazioni Sports Mole e khelnow'},
+ {sport:'calcio', comp:'Serie A', evento:'Napoli - Como', quando:'dom 30/08, 18:30', ore:8, match:'napoli-como',
+  inizio:'2026-08-30T16:30:00.000Z',
+  mercato:'Multigol casa 1-2', prob:0.581,
+  why:"Che il Napoli segni una o due volte, non di piu. Senza Lukaku e Neres (Sports Mole) il peso offensivo cade su Hojlund, e il Como ha gia mostrato solidita pareggiando a Udine. Il modello arriva al 58.1% partendo dagli xG, senza sapere delle assenze: qui le assenze spingono nella stessa direzione.",
+  src:'modello xG Dixon-Coles + formazioni Sports Mole'},
+ {sport:'calcio', comp:'Serie A', evento:'Cagliari - Inter', quando:'dom 30/08, 20:45', ore:10, match:'cagliari-inter',
+  inizio:'2026-08-30T18:45:00.000Z',
+  mercato:'12', prob:0.816,
+  why:"Segno 12, qualunque cosa tranne il pareggio, all'81.6%. Sky Sport e Tuttosport danno l'Inter di Chivu in 3-5-2 con Lautaro ed Esposito dopo il 4-1 al Monza, e il Cagliari in 4-3-2-1 dopo l'1-0 a Parma: due squadre che alla prima giornata hanno chiuso la partita, nessuna arriva da un pareggio. Avvertenza: per questa partita non ho trovato fonti che elenchino infortunati e squalificati, quindi quel controllo qui manca.",
+  src:'modello xG Dixon-Coles + formazioni Sky Sport e Tuttosport'},
+ {sport:'calcio', comp:'Serie A', evento:'Cagliari - Inter', quando:'dom 30/08, 20:45', ore:10, match:'cagliari-inter',
+  inizio:'2026-08-30T18:45:00.000Z',
+  mercato:'Multigol 1-3', prob:0.571,
+  why:"Da uno a tre gol totali, 57.1%. L'Inter ne ha fatti quattro al Monza, ma alla Unipol Domus contro un Cagliari che ha appena vinto a Parma il modello si aspetta una partita piu chiusa. Nessuna fonte trovata su infortuni e squalifiche per questo incontro: il numero resta quello del modello, non confermato dalle notizie.",
+  src:'modello xG Dixon-Coles'},
+ {sport:'calcio', comp:'Serie A', evento:'Lazio - Genoa', quando:'dom 30/08, 20:45', ore:10, match:'lazio-genoa',
+  inizio:'2026-08-30T18:45:00.000Z',
+  mercato:'Multigol 1-4', prob:0.821,
+  why:"Da uno a quattro gol all'Olimpico, 82.1%. Lazionews e FantaMaster contano sei assenti nella Lazio: Pellegrini, Marusic, Dele-Bashiru, Patric, Gigot e Cataldi, cioe due centrali e due esterni di difesa. Una retroguardia rimaneggiata alza i gol attesi, e la fascia larga 1-4 e quella che regge meglio a questa incertezza. Il Genoa di De Rossi ha quasi tutti disponibili, fuori solo Traore e Havel.",
+  src:'modello xG Dixon-Coles + formazioni Lazionews e FantaMaster'},
+ {sport:'calcio', comp:'Serie A', evento:'Lazio - Genoa', quando:'dom 30/08, 20:45', ore:10, match:'lazio-genoa',
+  inizio:'2026-08-30T18:45:00.000Z',
+  mercato:'Multigol trasferta 1-2', prob:0.558,
+  why:"Che il Genoa segni una o due volte. Il modello dice 55.8% guardando solo gli xG, ma qui la notizia rinforza il numero: con Patric e Gigot fuori al centro e Marusic e Pellegrini fuori sulle fasce (Lazionews), la difesa della Lazio e la piu rimaneggiata della giornata. Il Genoa arriva quasi al completo con Vitinha e Colombo davanti (FantaMaster).",
+  src:'modello xG Dixon-Coles + formazioni Lazionews e FantaMaster'},
+ {sport:'calcio', comp:'Serie A', evento:'Lazio - Genoa', quando:'dom 30/08, 20:45', ore:10, match:'lazio-genoa',
+  inizio:'2026-08-30T18:45:00.000Z', tipo:'sorpresa',
+  mercato:'Genoa vincente', prob:0.300, book:4.10,
+  why:"Il modello da al Genoa il 30% in trasferta all'Olimpico e il miglior prezzo trovato sulla lavagna e 4.10. Lo scarto nasce dal modello, ma la notizia va nella stessa direzione: la Lazio perde sei uomini fra cui quattro difensori, Patric, Gigot, Marusic e Pellegrini (Lazionews, FantaMaster), mentre a De Rossi mancano solo Traore e Havel. Meteo asciutto e sereno a Roma in serata (iLMeteo). Attenzione: e correlata col Multigol trasferta 1-2 sulla stessa partita, non sono due scommesse indipendenti.",
+  src:'modello xG Dixon-Coles + confronto bookmaker + formazioni Lazionews'},
+ {sport:'calcio', comp:'Premier League', evento:'Manchester United - Ipswich', quando:'dom 30/08, 17:30', ore:7, match:'manchester united-ipswich',
+  inizio:'2026-08-30T15:30:00.000Z',
+  mercato:'Multigol 1-5', prob:0.825,
+  why:"Da uno a cinque gol a Old Trafford, 82.5%. Il modello ci arriva dagli xG e le notizie non lo smentiscono: Yahoo Sports e RotoWire danno Amad fuori circa sei settimane, de Ligt fermo da novembre con rientro atteso a fine ottobre e Baleba in dubbio, mentre Mount ha ripreso ad allenarsi. L'Ipswich neopromosso ha vinto 2-1 col Sunderland all'esordio e perde Jack Taylor e Matusiwa.",
+  src:'modello xG Dixon-Coles + formazioni Yahoo Sports e RotoWire'},
+ {sport:'calcio', comp:'Premier League', evento:'Manchester United - Ipswich', quando:'dom 30/08, 17:30', ore:7, match:'manchester united-ipswich',
+  inizio:'2026-08-30T15:30:00.000Z',
+  mercato:'Under 3.5', prob:0.558,
+  why:"Meno di quattro gol, 55.8%. Qui la notizia e piu forte del solito: lo United ha perso 2-0 all'esordio senza segnare e con Amad fuori sei settimane e de Ligt indisponibile (Yahoo Sports) la squadra e corta davanti e dietro. Una partita bloccata contro una neopromossa che ha appena vinto e coerente col numero del modello.",
+  src:'modello xG Dixon-Coles + formazioni Yahoo Sports'}
+];
+
+
+// ---- Storico dei pronostici chiusi. esito: 'ok' | 'ko'
+// Ripiego incorporato: se c'e' data/storico.json, chiudi.mjs lo tiene aggiornato
+// e questo array viene sostituito.
+let STORICO = [
+ {cat:'standard', data:'18/08', evento:'Fenerbahce - Lione', mercato:'1X', quota:1.37, risultato:'1-1', esito:'ok'},
+ {cat:'standard', data:'18/08', evento:'Dinamo Zagabria - Viking', mercato:'1X', quota:1.27, risultato:'2-2', esito:'ok'},
+ {cat:'standard', data:'18/08', evento:'Levski - AEK', mercato:'X2', quota:1.39, risultato:'0-0', esito:'ok'},
+ {cat:'standard', data:'19/08', evento:'Celtic - LASK', mercato:'1X', quota:1.22, risultato:'3-0', esito:'ok'},
+ {cat:'standard', data:'19/08', evento:'Slovan - Celje', mercato:'1X', quota:1.25, risultato:'1-1', esito:'ok'},
+ {cat:'standard', data:'19/08', evento:'Atletico Madrid - Malaga', mercato:'1', quota:1.37, risultato:'2-0', esito:'ok'},
+ {cat:'standard', data:'20/08', evento:'Rayo Vallecano - Alaves', mercato:'1X', quota:1.37, risultato:'1-1', esito:'ok'},
+ {cat:'standard', data:'21/08', evento:'Las Vegas - Connecticut', mercato:'1', quota:1.11, risultato:'101-78', esito:'ok'},
+ {cat:'standard', data:'21/08', evento:'LA Sparks - Atlanta', mercato:'2', quota:1.30, risultato:'88-124', esito:'ok'},
+ {cat:'standard', data:'21/08', evento:'Dallas - Indiana', mercato:'2', quota:1.68, risultato:'91-85', esito:'ko'},
+ {cat:'standard', data:'21/08', evento:'Arsenal - Coventry', mercato:'1 + Over 1.5', quota:1.39, risultato:'3-0', esito:'ok'},
+ {cat:'standard', data:'21/08', evento:'Marsiglia - Strasburgo', mercato:'1X', quota:1.28, risultato:'4-0', esito:'ok'},
+ {cat:'standard', data:'22/08', evento:'Chicago - Golden State', mercato:'2', quota:1.45, risultato:'73-70', esito:'ko'},
+ {cat:'standard', data:'22/08', evento:'Washington - Minnesota', mercato:'2', quota:1.49, risultato:'84-94', esito:'ok'},
+ {cat:'standard', data:'22/08', evento:'Toronto - Portland', mercato:'2', quota:1.88, risultato:'82-79', esito:'ko'},
+ {cat:'standard', data:'22/08', evento:'Inter - Monza', mercato:'1 + Over 1.5', quota:1.43, risultato:'4-1', esito:'ok'},
+ {cat:'standard', data:'22/08', evento:'Genoa - Napoli', mercato:'X2', quota:1.35, risultato:'0-2', esito:'ok'},
+ {cat:'standard', data:'22/08', evento:'Hull City - Manchester United', mercato:'X2', quota:1.13, risultato:'2-0', esito:'ko'},
+ {cat:'standard', data:'22/08', evento:'Athletic Bilbao - Siviglia', mercato:'1X', quota:1.22, risultato:'1-3', esito:'ko'},
+ {cat:'standard', data:'22/08', evento:'Espanyol - Real Madrid', mercato:'X2', quota:1.16, risultato:'1-2', esito:'ok'},
+ {cat:'standard', data:'22/08', evento:'Lens - Auxerre', mercato:'1X', quota:1.22, risultato:'5-2', esito:'ok'},
+ {cat:'standard', data:'23/08', evento:'Angers - Lille', mercato:'X2', quota:1.24, risultato:'0-2', esito:'ok'},
+ {cat:'standard', data:'23/08', evento:'Manchester City - Bournemouth', mercato:'1X', quota:1.18, risultato:'2-1', esito:'ok'},
+ {cat:'cassaforte', data:'18/08', evento:'City 1X + Dinamo 1X', mercato:'doppia', quota:1.50, risultato:'entrambi ok', esito:'ok'},
+ {cat:'cassaforte', data:'20/08', evento:'Rayo 1X + Las Vegas 1', mercato:'doppia', quota:1.52, risultato:'entrambi ok', esito:'ok'},
+ {cat:'sorpresa', data:'19/08', evento:'Hapoel Beer Sheva - Sabah', mercato:'2', quota:3.28, risultato:'2-1', esito:'ko'},
+ {cat:'sorpresa', data:'20/08', evento:'Rayo Vallecano - Alaves', mercato:'2', quota:3.73, risultato:'1-1', esito:'ko'},
+ {cat:'sorpresa', data:'22/08', evento:'Ipswich - Sunderland', mercato:'X', quota:3.51, risultato:'2-1', esito:'ko'},
+ {cat:'sorpresa', data:'23/08', evento:'Newcastle - Liverpool', mercato:'1', quota:3.77, risultato:'2-2', esito:'ko'},
+ {cat:'standard', data:'23/08', evento:'Frosinone - Juventus', mercato:'Multigol 1-3', quota:1.66, risultato:'0-1', esito:'ok'},
+ {cat:'standard', data:'23/08', evento:'Venezia - Lecce', mercato:'NoGol', quota:1.71, risultato:'0-2', esito:'ok'},
+ {cat:'standard', data:'23/08', evento:'Atalanta - Sassuolo', mercato:'Multigol 2-4', quota:1.63, risultato:'2-1', esito:'ok'},
+ {cat:'standard', data:'23/08', evento:'Torino - Milan', mercato:'NoGol', quota:1.71, risultato:'1-2', esito:'ko'},
+ {cat:'standard', data:'23/08', evento:'Getafe - Racing Santander', mercato:'Over 1.5', quota:1.72, risultato:'1-0', esito:'ko'},
+ {cat:'standard', data:'23/08', evento:'Elche - Barcellona', mercato:'Multigol 2-4', quota:1.69, risultato:'0-5', esito:'ko'},
+ {cat:'standard', data:'23/08', evento:'Rennes - PSG', mercato:'Under 3.5', quota:1.71, risultato:'2-2', esito:'ko'},
+ {cat:'standard', data:'23/08', evento:'Dallas - Seattle', mercato:'1', quota:1.34, risultato:'92-70', esito:'ok'},
+ {cat:'standard', data:'24/08', evento:'Toronto - Las Vegas', mercato:'2', quota:1.11, risultato:'78-88', esito:'ok'},
+ {cat:'standard', data:'24/08', evento:'Portland - Washington', mercato:'2', quota:1.52, risultato:'100-105', esito:'ok'},
+ {cat:'cassaforte', data:'23/08', evento:'Las Vegas 1 + Getafe 1X', mercato:'doppia', quota:1.51, risultato:'entrambi ok', esito:'ok'},
+ {cat:'sorpresa', data:'23/08', evento:'Getafe - Racing Santander', mercato:'2', quota:3.79, risultato:'1-0', esito:'ko'},
+ {cat:'sorpresa', data:'24/08', evento:'Chicago - Indiana', mercato:'1', quota:2.48, risultato:'90-113', esito:'ko'},
+ {cat:'standard', data:'24/08', evento:'Roma - Fiorentina', mercato:'Multigol 2-5', quota:1.52, risultato:'4-0', esito:'ok'},
+ {cat:'standard', data:'24/08', evento:'Fulham - Chelsea', mercato:'Casa segna', quota:1.51, risultato:'2-3', esito:'ok'},
+ {cat:'standard', data:'24/08', evento:'Malaga - Deportivo', mercato:'Multigol casa 1-3', quota:1.55, risultato:'1-1', esito:'ok'},
+ {cat:'standard', data:'25/08', evento:'Sabah - Hapoel Beer Sheva', mercato:'Trasferta segna', quota:1.51, risultato:'5-2', esito:'ok'},
+ {cat:'standard', data:'25/08', evento:'Bodo/Glimt - NEC', mercato:'Multigol trasferta 1-3', quota:1.52, risultato:'3-0', esito:'ko'},
+ {cat:'standard', data:'25/08', evento:'Minnesota - Golden State', mercato:'1', quota:1.54, risultato:'66-80', esito:'ko'},
+ {cat:'standard', data:'25/08', evento:'LA Sparks - Atlanta', mercato:'2', quota:1.20, risultato:'71-78', esito:'ok'},
+ {cat:'standard', data:'26/08', evento:'AEK Atene - Levski', mercato:'Multigol 1-3', quota:1.45, risultato:'4-0', esito:'ko'},
+ {cat:'standard', data:'26/08', evento:'Celje - Slovan', mercato:'Over 1.5', quota:1.50, risultato:'1-2', esito:'ok'},
+ {cat:'standard', data:'26/08', evento:'Lione - Fenerbahce', mercato:'Multigol 2-4', quota:1.67, risultato:'1-2', esito:'ok'},
+ {cat:'cassaforte', data:'26/08', evento:'Over 1.5 Celje - Slovan', mercato:'singola', quota:1.50, risultato:'1-2', esito:'ok'},
+ {cat:'sorpresa', data:'24/08', evento:'Malaga - Deportivo', mercato:'2', quota:3.53, risultato:'1-1', esito:'ko'},
+ {cat:'sorpresa', data:'26/08', evento:'Viking - Dinamo Zagabria', mercato:'2', quota:2.99, risultato:'3-1', esito:'ko'}
+];
+
+function renderStorico(){
+  const cats = [
+    {k:'standard',   t:'Pronostici standard'},
+    {k:'cassaforte', t:'Cassaforte'},
+    {k:'sorpresa',   t:'Sorpresa'}
+  ];
+  const box = document.getElementById('storico');
+  if(!box) return;
+  let tot = {ok:0, n:0, ritorno:0};
+  const blocchi = cats.map(c => {
+    const r = STORICO.filter(x => x.cat === c.k);
+    const ok = r.filter(x => x.esito === 'ok').length;
+    const ritorno = r.reduce((a,x) => a + (x.esito === 'ok' ? x.quota - 1 : -1), 0);
+    tot.ok += ok; tot.n += r.length; tot.ritorno += ritorno;
+    const perc = r.length ? (ok / r.length * 100).toFixed(0) : '0';
+    return `<div class="card flat" style="border-left-color:${ok/Math.max(1,r.length) >= 0.5 ? 'var(--mint)' : 'var(--clay)'}">
+      <div class="eyebrow">${c.t}</div>
+      <div class="pick" style="border-bottom:0">
+        <span class="market">${ok} su ${r.length}</span>
+        <span class="fair">${perc}%<span>colpiti</span></span>
+      </div>
+      <div class="meta" style="margin-top:8px">
+        <span>saldo a stake fisso</span>
+        <span style="color:${ritorno >= 0 ? 'var(--mint)' : 'var(--clay)'}">${ritorno >= 0 ? '+' : ''}${ritorno.toFixed(2)} unita</span>
+      </div>
+      <div style="margin-top:12px">
+        ${r.map(x => `<div class="meta" style="padding:4px 0;border-top:1px solid var(--line)">
+          <span>${x.data} &middot; ${esc(x.evento)} &middot; ${esc(x.mercato)}</span>
+          <span style="color:${x.esito === 'ok' ? 'var(--mint)' : 'var(--clay)'}">${x.risultato} ${x.esito === 'ok' ? '\u2713' : '\u2717'}</span>
+        </div>`).join('')}
+      </div>
+    </div>`;
+  }).join('');
+  box.innerHTML = `<div class="meta" style="margin-bottom:12px;font-size:13px">
+      <span>totale complessivo</span>
+      <span>${tot.ok} su ${tot.n} &middot; saldo ${tot.ritorno >= 0 ? '+' : ''}${tot.ritorno.toFixed(2)} unita</span>
+    </div>
+    <div class="duo" style="grid-template-columns:1fr 1fr 1fr">${blocchi}</div>
+    <p class="hint">Saldo calcolato con una unita puntata su ogni pronostico, alla quota minima indicata. Le quote reali della lavagna sono in genere piu basse, quindi il saldo va letto come limite superiore, non come guadagno effettivo.</p>`;
+}
+
+const $ = s => document.querySelector(s);
+const state = {sport:'tutti', win:'tutto'};
+const fair = p => 1/p;
+const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+document.querySelectorAll('#presets .chip').forEach(b=>{
+  b.onclick = () => { $('#target').value = Number(b.dataset.q).toFixed(2); genera(); };
+});
+document.querySelectorAll('#fSport .chip').forEach(b=>{
+  b.onclick = () => { state.sport = b.dataset.c;
+    document.querySelectorAll('#fSport .chip').forEach(x=>x.setAttribute('aria-pressed', x===b)); genera(); };
+});
+document.querySelectorAll('#fWin .chip').forEach(b=>{
+  b.onclick = () => { state.win = b.dataset.w;
+    document.querySelectorAll('#fWin .chip').forEach(x=>x.setAttribute('aria-pressed', x===b)); genera(); };
+});
+$('#go').onclick = genera;
+
+function pool(){
+  const lim = state.win==='tutto' ? 1e9 : parseInt(state.win);
+  return PICKS.filter(p => p.tipo !== 'sorpresa' &&
+    (state.sport==='tutti' || p.sport===state.sport) && p.ore <= lim);
+}
+
+// Q combinata = 1/prodotto(prob). Cerchiamo il prodotto piu alto che resta sotto 1/target.
+function componi(list, target, maxLegs){
+  const soglia = 1/target;
+  const arr = list.slice().sort((a,b)=>b.prob-a.prob);
+  let best = null;
+  const sel = [];
+  const usati = new Set();
+  (function rec(i, prod){
+    if(sel.length && prod <= soglia){
+      // ogni evento in piu abbassa la probabilita: qui siamo al massimo, non si estende
+      if(!best || prod > best.pr) best = {sel:sel.slice(), pr:prod};
+      return;
+    }
+    if(sel.length === maxLegs) return;
+    for(let j=i; j<arr.length; j++){
+      const m = arr[j].match;
+      if(m && usati.has(m)) continue;   // mai due mercati della stessa partita
+      sel.push(arr[j]); if(m) usati.add(m);
+      rec(j+1, prod * arr[j].prob);
+      sel.pop(); if(m) usati.delete(m);
+    }
+  })(0, 1);
+  return best ? {sel:best.sel, pr:best.pr, q:1/best.pr} : null;
+}
+
+// Basket e tennis non hanno un modello indipendente: il pronostico e la lavagna
+// ripulita dal margine. Deve restare visibile che la base non e la stessa del calcio.
+function etichettaFonte(p){
+  return p.fonte === 'consenso' ? ' &middot; solo lavagna' : '';
+}
+
+function valBadge(p){
+  if(!p.book) return '';
+  const ev = p.prob * p.book - 1;
+  return `<div class="val ${ev>0?'pos':'neg'}">lavagna ${p.book.toFixed(2)} · valore ${ev>0?'+':''}${(ev*100).toFixed(1)}%</div>`;
+}
+
+// Pannello Pure Model / Calibrated (sperimentale) / Market / Value / Quality.
+// Presente solo se build.mjs ha calcolato p.analisi (partite di calcio con
+// quote 1X2 reali). Nessun dato qui e' inventato: se un pezzo manca, non compare.
+function analisiHTML(p){
+  const a = p.analisi;
+  if(!a) return '';
+  const pm = a.pure_model, cal = a.calibrated, mkt = a.market, val = a.value, q = a.quality;
+  const pct = x => x==null ? '—' : Math.round(x*100)+'%';
+  return `<div class="analisi">
+    <div class="analisi-grid">
+      <div class="analisi-blk"><b>Pure model &middot; ${esc(pm.model_version)}</b>
+        <div class="row"><span>1</span><span>${pct(pm.P1)}</span></div>
+        <div class="row"><span>X</span><span>${pct(pm.PX)}</span></div>
+        <div class="row"><span>2</span><span>${pct(pm.P2)}</span></div>
+      </div>
+      <div class="analisi-blk"><b>Calibrated ${cal.attivo?'<span class="exp-badge">experimental calibration</span>':''}</b>
+        ${cal.attivo ? `
+        <div class="row"><span>1</span><span>${pct(cal.P1)}</span></div>
+        <div class="row"><span>X</span><span>${pct(cal.PX)}</span></div>
+        <div class="row"><span>2</span><span>${pct(cal.P2)}</span></div>`
+        : `<div class="row"><span colspan="2">Non attivo: ${esc(cal.motivo||'campione insufficiente')}, uso la baseline.</span></div>`}
+      </div>
+      <div class="analisi-blk"><b>Expected goals</b>
+        <div class="row"><span>Casa</span><span>${a.expected_goals.lambda_home}</span></div>
+        <div class="row"><span>Trasferta</span><span>${a.expected_goals.lambda_away}</span></div>
+      </div>
+      <div class="analisi-blk"><b>Market &middot; segno ${esc(mkt.esito_riferimento)}</b>
+        <div class="row"><span>Quota bookmaker</span><span>${mkt.bookmaker_odds?.toFixed(2)} (${esc(mkt.book)})</span></div>
+        <div class="row"><span>No-vig probability</span><span>${pct(mkt.no_vig_probability)}</span></div>
+      </div>
+      <div class="analisi-blk"><b>Value</b>
+        <div class="row"><span>Fair odds</span><span>${val.fair_odds ?? '—'}</span></div>
+        <div class="row"><span>Edge</span><span>${val.edge!=null ? (val.edge>=0?'+':'')+(val.edge*100).toFixed(1)+'%' : '—'}</span></div>
+        <div class="row"><span>EV</span><span>${val.ev!=null ? (val.ev>=0?'+':'')+(val.ev*100).toFixed(1)+'%' : '—'}</span></div>
+      </div>
+      <div class="analisi-blk"><b>Quality</b>
+        <div class="row"><span>Confidence</span><span>${q.confidence}/100</span></div>
+        <div class="row"><span>Data quality</span><span>${q.data_quality}/100</span></div>
+        <div class="row"><span>Agreement</span><span class="qtag ${esc(q.agreement)}">${esc(q.agreement)}</span></div>
+        ${a.market_gap ? `<div class="row"><span>Market gap</span><span>${(a.market_gap.valore*100).toFixed(1)}pp</span></div>` : ''}
+      </div>
+    </div>
+    <div class="bp-tags" style="margin-top:8px">
+      <span class="qtag ${esc(a.value_class)}">${esc((a.value_class||'').replace('_',' '))}</span>
+      ${a.market_gap && a.market_gap.livello==='ESTREMA' ? `<span class="qtag LOW">HIGH MODEL/MARKET DISAGREEMENT</span>` : ''}
+      ${a.rischio_quota==='HIGH_VARIANCE' ? `<span class="qtag MEDIUM">HIGH VARIANCE</span>` : ''}
+      ${a.rischio_quota==='ESCLUSA' ? `<span class="qtag LOW">QUOTA ESTREMA · ESCLUSA DAI BEST PICKS</span>` : ''}
+    </div>
+    <p class="why" style="margin-top:8px">${esc(a.why)}</p>
+    ${a.contesto ? `<div class="src">contesto (lineup/injury): ${a.contesto.lineup_injury_disponibile ? 'disponibile' : 'non disponibile'}, peso predittivo ${a.contesto.peso_predittivo}. ${esc(a.contesto.nota)}</div>` : ''}
+  </div>`;
+}
+
+function cardHTML(p, titolo, cls, badge){
+  return `<div class="card ${cls||''}">
+    ${badge?`<div class="badge ${cls}">${esc(badge)}</div>`:''}
+    <div class="eyebrow">${esc(titolo)} &middot; ${esc(p.comp)}</div>
+    <h3>${esc(p.evento)}</h3>
+    <div class="pick">
+      <span class="market">${esc(p.mercato)}</span>
+      <span class="fair">${fair(p.prob).toFixed(2)}<span>quota minima</span></span>
+    </div>
+    <div class="bar"><i style="width:${Math.round(p.prob*100)}%"></i></div>
+    <div class="meta"><span>${esc(p.quando)}</span><span>probabilita ${Math.round(p.prob*100)}%</span></div>
+    ${valBadge(p)}
+    <p class="why">${esc(p.why)}</p>
+    <div class="src">base: ${esc(p.src)}</div>
+    ${analisiHTML(p)}
+  </div>`;
+}
+
+// --- Le tre card in cima parlano solo della giornata in corso: se un evento e
+// domani non c'entra niente con la schedina di oggi. Filtro la lista in
+// ingresso, la logica di composizione resta quella di componi().
+//
+// Cassaforte e quota 2 escludono anche fonte 'consenso': su tennis e basket non
+// esiste un modello indipendente, quelle giocate sono la lavagna ripulita dal
+// margine. Coi tabelloni di uno Slam aperti sono centinaia e finirebbero per
+// occupare le due card di punta, che invece devono mostrare lo scarto fra
+// modello e mercato. Restano nell'elenco completo e nel generatore, coi filtri sport.
+function diOggi(list){
+  const ora = new Date();
+  return list.filter(p => {
+    const t = Date.parse(p.inizio || '');
+    if(Number.isFinite(t)){
+      const d = new Date(t);
+      return d.getFullYear()===ora.getFullYear() && d.getMonth()===ora.getMonth() && d.getDate()===ora.getDate();
+    }
+    // ripiego per i dati incorporati, che hanno solo le ore mancanti al via
+    return typeof p.ore === 'number' && p.ore >= 0 && p.ore <= 24;
+  });
+}
+
+function nulla(testo){
+  return `<div class="card flat">
+    <div class="eyebrow">niente per oggi</div>
+    <p class="why">${testo}</p>
+  </div>`;
+}
+
+// --- Cassaforte / Quota 2 / Sorpresa: calcolate SERVER-SIDE da build.mjs
+// (scripts/selezioni.mjs) col value engine — confidence, data quality,
+// agreement, market gap, mai una selezione High Risk in Cassaforte/Quota2.
+// Qui solo rendering: nessuna logica di scelta lato client.
+let CASSAFORTE = null, QUOTA2 = null, SORPRESA = null;
+let CASSAFORTE_NOTA = '', QUOTA2_NOTA = '', SORPRESA_NOTA = '';
+
+// Badge visibile su ogni selezione senza modello indipendente (es. Champions
+// League a solo consenso bookmaker, 10/09/2026): mai spacciata per una stima
+// verificata come quelle delle 5 leghe nazionali.
+function badgeConsenso(){
+  return `<span class="exp-badge" style="border-color:var(--dim);color:var(--dim)">solo consenso</span>`;
+}
+
+function rigaQualita(s){
+  if(s.tipo === 'consenso'){
+    return `<div class="meta" style="margin-top:6px">
+      <span>mercato ${Math.round(s.market_probability*100)}% ${badgeConsenso()}</span>
+      <span>${s.n_book} bookmaker</span>
+    </div>`;
+  }
+  return `<div class="meta" style="margin-top:6px">
+    <span>modello ${Math.round(s.probabilita_modello*100)}%${s.probabilita_calibrata!=null?` &middot; calibrata ${Math.round(s.probabilita_calibrata*100)}%`:''}${s.market_probability!=null?` &middot; mercato ${Math.round(s.market_probability*100)}%`:''}</span>
+    <span>conf ${s.confidence}/100 &middot; DQ ${s.data_quality}/100 &middot; <span class="qtag ${esc(s.agreement)}" style="font-size:10px;padding:1px 5px">${esc(s.agreement)}</span></span>
+  </div>`;
+}
+
+function renderCassaforte(){
+  const box = $('#cassaforte-box');
+  if(!box) return;
+  if(!CASSAFORTE){ box.innerHTML = `<div class="card flat"><div class="badge safe">Cassaforte</div><div class="eyebrow">niente per oggi</div><p class="why">${esc(CASSAFORTE_NOTA||'Nessuna singola idonea al momento.')}</p></div>`; return; }
+  const c = CASSAFORTE;
+  box.innerHTML = `<div class="card safe">
+    <div class="badge safe">Cassaforte</div>
+    <div class="eyebrow">${esc(c.comp)} &middot; ${esc(c.quando)}</div>
+    <div class="pick" style="border-bottom:0">
+      <span class="market" style="font-size:20px">${esc(c.mercato)}</span>
+      <span class="fair" style="font-size:18px">${c.quota.toFixed(2)}<span>${esc(c.evento)}</span></span>
+    </div>
+    ${rigaQualita(c)}
+    <p class="why">${esc(c.why)}</p>
+    <p class="src">Cassaforte non significa garantita: e' la singola con probabilita, confidence e qualita dati migliori nella banda di quota che giochi di solito.</p>
+  </div>`;
+}
+
+function renderQuota2Box(){
+  const box = $('#quota2-box');
+  if(!box) return;
+  if(!QUOTA2){ box.innerHTML = `<div class="card flat"><div class="badge oro">Quota 2</div><div class="eyebrow">niente per oggi</div><p class="why">${esc(QUOTA2_NOTA||'Nessuna combinazione idonea al momento.')}</p></div>`; return; }
+  const q = QUOTA2;
+  box.innerHTML = `<div class="card oro">
+    <div class="badge oro">Quota 2</div>
+    <div class="eyebrow">oggi &middot; ${q.selezioni.length} eventi &middot; obiettivo 1.85-2.20</div>
+    <h3>${(q.probabilita_combinata_stimata*100).toFixed(1)}% di probabilita combinata</h3>
+    ${q.selezioni.map(s=>`<div class="pick" style="border-bottom:0">
+      <span class="market" style="font-size:18px">${esc(s.mercato)}</span>
+      <span class="fair" style="font-size:16px">${s.quota.toFixed(2)}<span>${esc(s.evento)}</span></span>
+    </div>${rigaQualita(s)}`).join("")}
+    <div class="meta" style="margin-top:10px"><span>quota totale</span><span>${q.quota_totale.toFixed(2)}</span></div>
+    <p class="why">Combinazione scelta ottimizzando probabilita congiunta, confidence e data quality media — non le due quote piu basse disponibili, ed evitando eventi correlati sulla stessa partita.</p>
+  </div>`;
+}
+
+function renderSorpresa(){
+  const box = $('#sorpresa-box');
+  if(!box) return;
+  if(!SORPRESA){ box.innerHTML = `<div class="card flat"><div class="badge wild">Sorpresa</div><div class="eyebrow">niente per oggi</div><p class="why">${esc(SORPRESA_NOTA||'Nessuna sorpresa idonea al momento.')}</p></div>`; return; }
+  const s = SORPRESA;
+  if(s.tipo === 'consenso'){
+    box.innerHTML = `<div class="card wild">
+      <div class="badge wild">Sorpresa</div>
+      <div class="eyebrow">${esc(s.comp)} &middot; ${esc(s.quando)}</div>
+      <div class="pick" style="border-bottom:0">
+        <span class="market" style="font-size:20px">${esc(s.mercato)}</span>
+        <span class="fair" style="font-size:18px">${s.quota_fair.toFixed(2)}<span>${esc(s.evento)}</span></span>
+      </div>
+      <div class="meta" style="margin-top:6px"><span>mercato ${Math.round(s.probabilita_mercato*100)}% ${badgeConsenso()}</span><span>${s.n_book} bookmaker</span></div>
+      <p class="why">${esc(s.why)}</p>
+    </div>`;
+    return;
+  }
+  box.innerHTML = `<div class="card wild">
+    <div class="badge wild">Sorpresa</div>
+    <div class="eyebrow">${esc(s.comp)} &middot; ${esc(s.quando)}</div>
+    <div class="pick" style="border-bottom:0">
+      <span class="market" style="font-size:20px">segno ${esc(s.mercato)}</span>
+      <span class="fair" style="font-size:18px">${s.quota_bookmaker.toFixed(2)}<span>${esc(s.evento)}</span></span>
+    </div>
+    <div class="val ${s.ev>=0?'pos':'neg'}">EV ${s.ev>=0?'+':''}${(s.ev*100).toFixed(1)}% &middot; edge ${s.edge>=0?'+':''}${(s.edge*100).toFixed(1)}%</div>
+    <div class="meta" style="margin-top:6px"><span>conf ${s.confidence}/100 &middot; DQ ${s.data_quality}/100</span><span class="qtag ${esc(s.agreement)}">${esc(s.agreement)}</span></div>
+    <p class="why">${esc(s.why)}</p>
+  </div>`;
+}
+
+function genera(){
+  const target = parseFloat($('#target').value)||1.5;
+  const maxLegs = Math.min(6, Math.max(1, parseInt($('#maxLegs').value)||4));
+  const list = pool();
+  const res = $('#res'), tk = $('#ticket');
+
+  if(!list.length){
+    res.innerHTML = '<div class="warn">Nessun evento con questi filtri. Allarga la finestra temporale.</div>';
+    tk.innerHTML = '<div class="stamp">schedina</div><div class="empty">Nessuna giocata.</div>';
+    return;
+  }
+
+  const ok = list.filter(p => fair(p.prob) >= target).sort((a,b)=>b.prob-a.prob);
+  const singola = ok[0] || list.slice().sort((a,b)=>fair(b.prob)-fair(a.prob))[0];
+  let html = '';
+  if(!ok.length){
+    html += `<div class="warn">Nessuna singola arriva a ${target.toFixed(2)} con un margine difendibile. Sotto trovi la quota piu alta disponibile, poi guarda la schedina.</div>`;
+  }
+  res.innerHTML = html + cardHTML(singola, 'La singola migliore');
+
+  const combo = componi(list, target, maxLegs);
+  if(!combo){
+    tk.innerHTML = `<div class="stamp">schedina</div><h2>Non raggiungibile</h2>
+      <div class="empty">Con al massimo ${maxLegs} eventi non si arriva a ${target.toFixed(2)}. Alza il numero di eventi o abbassa l'obiettivo.</div>`;
+    return;
+  }
+  tk.innerHTML = `<div class="stamp">schedina generata</div><h2>Obiettivo ${target.toFixed(2)}</h2>` +
+    combo.sel.map(p=>`<div class="tk-line">
+      <div><b>${esc(p.mercato)}</b><small>${esc(p.evento)} &middot; ${esc(p.quando)}</small></div>
+      <div class="n">${fair(p.prob).toFixed(2)}<br><small>${Math.round(p.prob*100)}%</small></div>
+    </div>`).join("") +
+    `<div class="totals">
+      <div class="trow"><span class="k">Eventi</span><span>${combo.sel.length}</span></div>
+      <div class="trow"><span class="k">Probabilita</span><span>${(combo.pr*100).toFixed(1)}%</span></div>
+      <div class="trow big"><span class="k">Quota minima</span><span>${combo.q.toFixed(2)}</span></div>
+    </div>
+    <p class="note">La quota mostrata e quella equa, calcolata dalle probabilita stimate. Gioca solo se il tuo bookmaker paga piu di ${combo.q.toFixed(2)}. La probabilita combinata tratta gli eventi come indipendenti, quindi va letta come indicativa.</p>`;
+}
+
+// Una sola card per partita: la pipeline produce piu mercati sullo stesso
+// incontro (di valore, prudente, sorpresa) e in elenco diventavano tre schede
+// quasi identiche. Tengo la prima, che e quella di valore, e appendo gli altri
+// mercati come righe compatte invece di buttarli via.
+//
+// Elenco limitato alle 10 partite migliori (non tutte quelle analizzate):
+// con basket/tennis a consenso e piu mercati per partita di calcio, la lista
+// completa arrivava a centinaia di righe senza filtro di qualita'. Punteggio:
+// opportunity_score dove disponibile (calcio con analisi del value engine),
+// altrimenti la sola probabilita' pesata verso il basso — un pronostico non
+// verificato dal value engine non deve scavalcare uno che lo e'. Le partite
+// escluse restano comunque nel generatore di schedina sotto, solo non hanno
+// una card dedicata qui.
+const MAX_TUTTI_EVENTI = 10;
+function punteggioLista(p){
+  return p.analisi ? p.analisi.opportunity_score : p.prob * 0.3;
+}
+function renderAll(){
+  const perPartita = new Map();
+  PICKS.forEach(p => {
+    const k = p.match || p.evento;
+    if(perPartita.has(k)) perPartita.get(k).altri.push(p);
+    else perPartita.set(k, {capo:p, altri:[]});
+  });
+  const tutte = [...perPartita.values()];
+  tutte.sort((a,b) => punteggioLista(b.capo) - punteggioLista(a.capo));
+  const mostrate = tutte.slice(0, MAX_TUTTI_EVENTI);
+  const nascoste = tutte.length - mostrate.length;
+
+  $('#all').innerHTML = mostrate.map(({capo:p, altri})=>`<div class="card flat">
+    <div class="eyebrow">${esc(p.comp)} &middot; ${esc(p.quando)}${p.tipo==='sorpresa'?' &middot; sorpresa':''}${etichettaFonte(p)}</div>
+    <h3>${esc(p.evento)}</h3>
+    <div class="pick">
+      <span class="market">${esc(p.mercato)}</span>
+      <span class="fair">${fair(p.prob).toFixed(2)}<span>quota minima</span></span>
+    </div>
+    ${valBadge(p)}
+    <p class="why">${esc(p.why)}</p>
+    ${altri.length?`<div style="margin-top:10px">
+      <div class="eyebrow" style="margin-bottom:6px">altri mercati su questa partita</div>
+      ${altri.map(a=>`<div class="meta" style="padding:4px 0;border-top:1px solid var(--line)">
+        <span>${esc(a.mercato)}${a.tipo==='sorpresa'?' &middot; sorpresa':''}</span>
+        <span>${fair(a.prob).toFixed(2)}</span>
+      </div>`).join("")}
+    </div>`:''}
+    <div class="src">base: ${esc(p.src)}</div>
+    ${analisiHTML(p)}
+  </div>`).join("") + (nascoste > 0
+    ? `<p class="hint" style="margin-top:6px">+${nascoste} altre partite analizzate ma non mostrate qui (fuori dalle prime ${MAX_TUTTI_EVENTI} per punteggio) — restano comunque disponibili nel generatore di schedina sopra.</p>`
+    : '');
+}
+
+// --- Migliori opportunita di oggi: NON i piu probabili, quelli con EV,
+// confidence, agreement e data quality migliori (ordinati gia' da build.mjs).
+// Se non ce ne sono, il messaggio esplicito richiesto, mai una lista vuota muta.
+let BEST_PICKS = [];
+let HIGH_RISK = [];
+
+function bpCardHTML(p, cls){
+  return `<div class="bp-card" ${cls?`style="border-left-color:var(--clay)"`:''}>
+    <div class="bp-top">
+      <h4>${esc(p.evento)}</h4>
+      <span class="qtag ${esc(p.value_class)}">${esc((p.value_class||'').replace('_',' '))}</span>
+    </div>
+    <div class="eyebrow">${esc(p.comp)} &middot; ${esc(p.quando)} &middot; segno ${esc(p.esito_riferimento)}</div>
+    <div class="analisi-grid" style="margin-top:8px">
+      <div class="analisi-blk"><b>Pure &rarr; Calibrated</b>
+        <div class="row"><span>1</span><span>${Math.round(p.pure_model.P1*100)}% &rarr; ${p.calibrated.attivo?Math.round(p.calibrated.P1*100)+'%':'—'}</span></div>
+        <div class="row"><span>X</span><span>${Math.round(p.pure_model.PX*100)}% &rarr; ${p.calibrated.attivo?Math.round(p.calibrated.PX*100)+'%':'—'}</span></div>
+        <div class="row"><span>2</span><span>${Math.round(p.pure_model.P2*100)}% &rarr; ${p.calibrated.attivo?Math.round(p.calibrated.P2*100)+'%':'—'}</span></div>
+      </div>
+      <div class="analisi-blk"><b>Market &middot; value</b>
+        <div class="row"><span>Bookmaker</span><span>${p.market.bookmaker_odds?.toFixed(2)}</span></div>
+        <div class="row"><span>Fair odds</span><span>${p.value.fair_odds}</span></div>
+        <div class="row"><span>EV</span><span>${p.value.ev>=0?'+':''}${(p.value.ev*100).toFixed(1)}%</span></div>
+      </div>
+      <div class="analisi-blk"><b>Quality</b>
+        <div class="row"><span>Confidence</span><span>${p.quality.confidence}/100</span></div>
+        <div class="row"><span>Data quality</span><span>${p.quality.data_quality}/100</span></div>
+        <div class="row"><span>Agreement</span><span class="qtag ${esc(p.quality.agreement)}">${esc(p.quality.agreement)}</span></div>
+        ${p.market_gap ? `<div class="row"><span>Market gap</span><span>${(p.market_gap.valore*100).toFixed(1)}pp</span></div>` : ''}
+      </div>
+    </div>
+    <p class="why" style="margin-top:8px">${esc(p.why)}</p>
+    ${p.motivi_esclusione && p.motivi_esclusione.length ? `<div class="src">escluso dai Best Picks perche': ${esc(p.motivi_esclusione.join('; '))}</div>` : ''}
+  </div>`;
+}
+
+function renderBestPicks(){
+  const box = $('#bestpicks');
+  if(!box) return;
+  if(!BEST_PICKS.length){
+    box.innerHTML = nulla('Nessuna opportunita con sufficiente accordo modello/mercato.');
+    return;
+  }
+  box.innerHTML = BEST_PICKS.map(p => bpCardHTML(p, false)).join('');
+}
+
+// --- High Risk / Model Disagreement: EV positivo ma escluso dai Best Picks
+// (quota molto alta e/o forte disaccordo modello-mercato e/o qualita' bassa).
+// Mai mischiate alle migliori opportunita': sezione separata, sempre etichettata.
+function renderHighRisk(){
+  const box = $('#highrisk');
+  if(!box) return;
+  if(!HIGH_RISK.length){ box.innerHTML = nulla('Nessuna selezione ad alto rischio segnalata oggi.'); return; }
+  box.innerHTML = HIGH_RISK.map(p => bpCardHTML(p, true)).join('');
+}
+
+function disegnaTutto(){ renderCassaforte(); renderQuota2Box(); renderSorpresa(); renderBestPicks(); renderHighRisk(); renderAll(); renderStorico(); genera(); }
+
+// Carica i dati aggiornati dalla pipeline automatica.
+// Se un file non c'e ancora, resta la versione incorporata nella pagina.
+const caricaPicks = fetch('data/picks.json?t=' + Date.now())
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(d => {
+    if (d && Array.isArray(d.eventi) && d.eventi.length) {
+      PICKS = d.eventi.map(p => Object.assign({}, p, {book: p.prezzo}));
+      const q = document.querySelector('header .eyebrow');
+      if (q) q.textContent = 'quote aggiornate il ' +
+        new Date(d.aggiornato).toLocaleString('it-IT', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'});
+    }
+    if (d && Array.isArray(d.best_picks_today)) BEST_PICKS = d.best_picks_today;
+    if (d && Array.isArray(d.high_risk_today)) HIGH_RISK = d.high_risk_today;
+    if (d) { CASSAFORTE = d.cassaforte || null; CASSAFORTE_NOTA = d.cassaforte_nota || ''; }
+    if (d) { QUOTA2 = d.quota_2 || null; QUOTA2_NOTA = d.quota_2_nota || ''; }
+    if (d) { SORPRESA = d.sorpresa || null; SORPRESA_NOTA = d.sorpresa_nota || ''; }
+    const info = $('#modelVersionInfo');
+    if (info && d) {
+      const dc = d.drawcal_status;
+      const dcTesto = dc && dc.attivo
+        ? `Layer sperimentale DC-DRAW-CAL attivo (${dc.n_campione} partite storiche).`
+        : `Layer sperimentale DC-DRAW-CAL non attivo${dc && dc.motivo ? ': ' + dc.motivo : ''}.`;
+      info.textContent = `Modello: ${d.model_version || 'football-v1-baseline'}. ${dcTesto} Aggiornato ${d.aggiornato ? new Date(d.aggiornato).toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) : '—'}.`;
+    }
+  })
+  .catch(() => {});
+
+// Storico chiuso in automatico da scripts/chiudi.mjs.
+const caricaStorico = fetch('data/storico.json?t=' + Date.now())
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(d => {
+    if (d && Array.isArray(d.chiusi) && d.chiusi.length) STORICO = d.chiusi;
+  })
+  .catch(() => {});
+
+// disegno una volta sola, quando entrambi hanno risposto o fallito
+Promise.all([caricaPicks, caricaStorico]).finally(disegnaTutto);
+</script>
+</body>
+</html>

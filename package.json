@@ -1,0 +1,1 @@
+{"name":"prono","private":true,"type":"module","scripts":{"test":"node scripts/test.mjs && node --test tests/*.test.mjs","backtest":"node scripts/audit-backtest.mjs","build":"node scripts/release.mjs","verify":"node scripts/check-release.mjs"},"engines":{"node":">=22"}}

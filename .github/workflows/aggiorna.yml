@@ -1,0 +1,83 @@
+name: Prono · verifica e pubblica
+on:
+  schedule:
+    # UTC triggers + Intl Europe/Rome gate. Later triggers recover delayed/missed runs.
+    - cron: '7 12-21 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['index.html', 'app.js', 'style.css', 'scripts/**', 'tests/**', 'package.json', '.github/workflows/aggiorna.yml', 'data/audit/report.json']
+concurrency:
+  group: prono-production
+  cancel-in-progress: false
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Orario locale e controllo duplicati
+        id: gate
+        run: node scripts/deployment.mjs gate
+      - name: Suite completa prima del calcolo
+        if: steps.gate.outputs.proceed == 'true'
+        run: npm test
+      - name: Integrità e riproducibilità del backtest
+        if: steps.gate.outputs.proceed == 'true'
+        run: node scripts/verify-backtest.mjs
+      - name: Scarica tutte le fonti e prepara snapshot
+        if: steps.gate.outputs.proceed == 'true'
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: npm run build
+      - name: Verifica integrità e selezioni dello snapshot
+        if: steps.gate.outputs.proceed == 'true'
+        run: npm run verify
+      - name: Versiona snapshot completo e registro
+        if: steps.gate.outputs.proceed == 'true'
+        run: |
+          git config user.name prono-bot
+          git config user.email bot@users.noreply.github.com
+          git add data/release.json data/ledger.json data/xg-history.json
+          git diff --staged --quiet || git commit -m "Snapshot completo e verificato"
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.gate.outputs.proceed == 'true'
+        with:
+          path: dist
+      - uses: actions/deploy-pages@v4
+        id: deployment
+        if: steps.gate.outputs.proceed == 'true'
+      - name: Verifica online contenuto e asset
+        if: steps.gate.outputs.proceed == 'true'
+        run: node scripts/deployment.mjs verify
+      - name: Conferma giornaliera solo dopo verifica online
+        if: steps.gate.outputs.proceed == 'true'
+        run: |
+          git add data/published.json
+          git diff --staged --quiet || git commit -m "Pubblicazione verificata online"
+          git push
+      - name: Notifica Telegram con conferma di consegna
+        if: steps.gate.outputs.proceed == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node scripts/deployment.mjs notify
+      - name: Avviso di errore
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node scripts/deployment.mjs failure
