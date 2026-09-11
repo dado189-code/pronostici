@@ -3403,6 +3403,14 @@
     "Le categorie VALORE non dimostrano che il modello batta il mercato. Nessun miglioramento promosso.",
     "Storico precedente conservato in data/storico.json; escluso dal nuovo rendimento perché non ha identità verificabile per tutte le righe."
   ],
+  "clvSummary": {
+    "tracked": 4,
+    "closed": 0,
+    "pending": 4,
+    "missing": 0,
+    "mean": null,
+    "definition": "Entry / ultima quota osservata dello stesso bookmaker nei 20 minuti prima del via − 1. Media per segnalazione, non prova di profitto."
+  },
   "fixtureInfo": {
     "kind": "last-successful-snapshot",
     "capturedAt": "2026-09-11T16:10:14.186Z",
