@@ -1,12 +1,13 @@
-name: Prono · verifica e pubblica
+name: Prono · aggiorna dati e pubblica
 on:
   schedule:
-    # UTC triggers + Intl Europe/Rome gate. Later triggers recover delayed/missed runs.
-    - cron: '7 12-21 * * *'
+    # 06:17 UTC = 08:17 Europe/Rome in estate, 07:17 in inverno.
+    # 07:17 e 08:17 UTC recuperano un eventuale errore; saltano se già pubblicato.
+    - cron: '17 6,7,8 * * *'
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['index.html', 'app.js', 'data-layer.js', 'data/fixtures.json', 'ticket.js', 'style.css', 'scripts/**', 'tests/**', 'package.json', '.github/workflows/aggiorna.yml', 'data/audit/report.json']
+    paths: ['index.html', 'app.js', 'data-layer.js', 'data/fixtures.json', 'ticket.js', 'style.css', 'scripts/**', 'tests/**', 'package.json', '.github/workflows/update-data.yml', 'data/audit/report.json']
 concurrency:
   group: prono-production
   cancel-in-progress: false
@@ -41,7 +42,7 @@ jobs:
         if: steps.gate.outputs.proceed == 'true'
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-        run: npm run build
+        run: node scripts/update-data.mjs
       - name: Verifica integrità e selezioni dello snapshot
         if: steps.gate.outputs.proceed == 'true'
         run: npm run verify
@@ -50,7 +51,7 @@ jobs:
         run: |
           git config user.name prono-bot
           git config user.email bot@users.noreply.github.com
-          git add data/release.json data/ledger.json data/xg-history.json
+          git add data/release.json data/fixtures.json data/ledger.json data/xg-history.json
           git diff --staged --quiet || git commit -m "Snapshot completo e verificato"
           git push
       - uses: actions/upload-pages-artifact@v3

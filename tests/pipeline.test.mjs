@@ -12,7 +12,7 @@ function setup(){
   const dates=Array.from({length:110},(_,i)=>({id:String(i),isResult:true,datetime:new Date(Date.UTC(2026,4,i+1)).toISOString().slice(0,19).replace('T',' '),h:{title:i%2?'A':'B'},a:{title:i%2?'B':'A'},xG:{h:'1.4',a:'1.1'},goals:{h:'1',a:'1'}}));
   for(const key of ['Serie_A','EPL','La_liga','Bundesliga','Ligue_1'])for(const year of [2022,2023,2024,2025])writeFileSync(join(dir,`data/raw/understat/${key}-${year}.json`),JSON.stringify({data:{dates}}));
   const engineHash=createHash('sha256').update(readFileSync(join(root,'scripts/model.mjs'),'utf8').replace(/\r\n/g,'\n')).update(readFileSync(join(root,'scripts/engine.mjs'),'utf8').replace(/\r\n/g,'\n')).digest('hex');
-  writeFileSync(join(dir,'data/audit/report.json'),JSON.stringify({engineHash,splits:{test:{n:1000}},fixture:true}));
+  writeFileSync(join(dir,'data/audit/report.json'),JSON.stringify({engineHash,splits:{test:{n:1000}},marketComparison:{bootstrap:{}},fixture:true}));
   writeFileSync(join(dir,'mock.mjs'),`
 const OriginalDate=Date;globalThis.Date=class extends OriginalDate{constructor(...args){super(...(args.length?args:['2026-09-11T12:07:00.000Z']));}static now(){return +new OriginalDate('2026-09-11T12:07:00.000Z');}};
 globalThis.fetch=async (url)=>{
@@ -29,7 +29,7 @@ function run(dir,script,extra={}){return spawnSync(process.execPath,['--import',
 test('pipeline builds complete valid snapshot and resumes without duplicate ledger entries',()=>{
   const dir=setup();try{
     const first=run(dir,'scripts/release.mjs');assert.equal(first.status,0,first.stderr);
-    const result=JSON.parse(readFileSync(join(dir,'data/release.json')));assert.equal(result.coverage.length,5);assert.equal(result.picks.length,22);
+    const result=JSON.parse(readFileSync(join(dir,'data/release.json')));assert.equal(result.coverage.length,5);assert.equal(result.picks.length,22);assert.equal(JSON.parse(readFileSync(join(dir,'data/fixtures.json'))).generation,result.generation);
     const check=run(dir,'scripts/check-release.mjs');assert.equal(check.status,0,check.stderr);
     const before=readFileSync(join(dir,'data/ledger.json'),'utf8');const second=run(dir,'scripts/release.mjs');assert.equal(second.status,0,second.stderr);assert.equal(readFileSync(join(dir,'data/ledger.json'),'utf8'),before);
     assert.equal(JSON.parse(readFileSync(join(dir,'data/release.json'))).generation,result.generation);

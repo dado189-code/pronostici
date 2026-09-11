@@ -1,3 +1,4 @@
+import {transformEvent,transformFixtures} from './transform-data.mjs';
 import {PUBLIC_ASSETS} from './assets.mjs';
 import {dirname} from 'node:path';
 import {readFileSync,writeFileSync,existsSync,mkdirSync,copyFileSync} from 'node:fs';
@@ -14,8 +15,8 @@ const key=process.env.ODDS_API_KEY;if(!key)throw Error('Manca ODDS_API_KEY');
 const old=existsSync('data/release.json')?read('data/release.json'):null;
 const ledger=existsSync('data/ledger.json')?read('data/ledger.json'):[];
 const marker=existsSync('data/published.json')?read('data/published.json'):null;
-if(old?.schema===2&&old?.day===day&&marker?.day!==day){console.log('Riprendo lo stesso snapshot non ancora confermato:',old.generation);stage();process.exit(0);}
-if(old?.schema===2&&marker?.day===day){console.log('Giornata già pubblicata: nessuna nuova esecuzione.');stage();process.exit(0);}
+if(old?.dataPipelineVersion===1&&old?.day===day&&marker?.generation!==old?.generation){console.log('Riprendo lo stesso snapshot non ancora confermato:',old.generation);stage();process.exit(0);}
+if(process.env.FORCE_REFRESH!=='1'&&old?.schema===2&&marker?.day===day){console.log('Giornata già pubblicata: nessuna nuova esecuzione.');stage();process.exit(0);}
 const diagnostics=[],coverage=[],picks=[],live=new Map();
 const persistentHistory=existsSync('data/xg-history.json')?read('data/xg-history.json'):{};
 for(const [under,sport,name] of LEAGUES){
@@ -54,11 +55,8 @@ for(const sport of sports){
   const events=await json(`https://api.the-odds-api.com/v4/sports/${sport.key}/odds/?apiKey=${encodeURIComponent(key)}&regions=eu&markets=h2h&oddsFormat=decimal&dateFormat=iso`);
   if(!Array.isArray(events))throw Error(`${sport.name}: schema quote invalido`);
   for(const e of events){
-    if(typeof e.id!=='string'||!e.id||typeof e.home_team!=='string'||typeof e.away_team!=='string'||e.home_team===e.away_team)throw Error('Identità evento incompleta');
-    if(localDay(e.commence_time)!==day||utc(e.commence_time)<=utc(now))continue;
-    const outcomes=sport.key.startsWith('soccer_')?['1','X','2']:['1','2'];
-    const names=outcomes.length===3?[e.home_team,'Draw',e.away_team]:[e.home_team,e.away_team];
-    const market=consensus(e.bookmakers,{names},now);
+    const mapped=transformEvent(e,sport.key,now);if(!mapped)continue;
+    const {outcomes,market}=mapped;
     if(!market){diagnostics.push(`${e.home_team} – ${e.away_team}: meno di 3 bookmaker completi e freschi.`);continue;}
     const data=live.get(sport.key);let pred=null,context=null;
     if(data){
@@ -84,7 +82,7 @@ for(const sport of sports){
 }
 const ids=new Set(settled.map(p=>p.id));for(const p of picks)if(!ids.has(p.id)){settled.push(p);ids.add(p.id);}
 const selected=selections(picks,now);
-const bundle={schema:2,generation:randomUUID(),generatedAt:now,day,zone:POLICY.zone,version:VERSION,policy:POLICY,
+const bundle={schema:2,dataPipelineVersion:1,generation:randomUUID(),generatedAt:now,day,zone:POLICY.zone,version:VERSION,policy:POLICY,
   picks,quantInputs:Object.fromEntries(picks.filter(p=>p.rates).map(p=>[p.eventId,{kind:"football",rates:p.rates}])),selections:selected,coverage,diagnostics,report,performance:performance(settled),
   pendingOld:settled.filter(p=>p.status==='pending'&&utc(now)-utc(p.kickoff)>3*864e5).length,
   history:settled.filter(p=>p.status==='closed').slice(-300),
@@ -99,4 +97,4 @@ const bundle={schema:2,generation:randomUUID(),generatedAt:now,day,zone:POLICY.z
 // No public writes until all providers and calculations have completed.
 writeFileSync('data/ledger.json',JSON.stringify(settled));writeFileSync('data/xg-history.json',JSON.stringify(persistentHistory));writeFileSync('data/release.json',JSON.stringify(bundle,null,2));stage();
 console.log(JSON.stringify({generation:bundle.generation,day,picks:picks.length,selected,diagnostics},null,2));
-function stage(){mkdirSync('dist',{recursive:true});for(const name of PUBLIC_ASSETS){mkdirSync(dirname(`dist/${name}`),{recursive:true});copyFileSync(name,`dist/${name}`);}copyFileSync('data/release.json','dist/release.json');writeFileSync('dist/.nojekyll','');}
+function stage(){const snapshot=read('data/release.json');writeFileSync('data/fixtures.json',JSON.stringify(transformFixtures(snapshot),null,2));mkdirSync('dist',{recursive:true});for(const name of PUBLIC_ASSETS){mkdirSync(dirname(`dist/${name}`),{recursive:true});copyFileSync(name,`dist/${name}`);}copyFileSync('data/release.json','dist/release.json');writeFileSync('dist/.nojekyll','');}

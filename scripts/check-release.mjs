@@ -1,3 +1,4 @@
+import {transformFixtures} from './transform-data.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {localDay,utc,assess,selections,performance} from './engine.mjs';
@@ -14,3 +15,5 @@ assert.deepEqual(d.selections,selections(d.picks,d.generatedAt));
 const ledger=JSON.parse(readFileSync('data/ledger.json','utf8'));assert.deepEqual(d.performance,performance(ledger));
 assert.equal(new Set(ledger.map(p=>p.id)).size,ledger.length);
 console.log('Snapshot verificato:',d.generation);
+
+const fallback=JSON.parse(readFileSync('data/fixtures.json','utf8'));assert.deepEqual(fallback,transformFixtures(d));

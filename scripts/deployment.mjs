@@ -6,7 +6,8 @@ const mode=process.argv[2],read=p=>JSON.parse(readFileSync(p,'utf8'));
 const publicURL='https://dado189-code.github.io/pronostici/';
 if(mode==='gate'){
   const marker=existsSync('data/published.json')?read('data/published.json'):null;
-  const proceed=process.env.GITHUB_EVENT_NAME==='push'||due(new Date().toISOString(),marker?.day,process.env.GITHUB_EVENT_NAME==='workflow_dispatch');
+  const now=new Date();const morningUTC=now.getUTCHours()*60+now.getUTCMinutes()>=6*60+17;
+  const proceed=['push','workflow_dispatch'].includes(process.env.GITHUB_EVENT_NAME)||(morningUTC&&marker?.day!==localDay(now.toISOString()));
   appendFileSync(process.env.GITHUB_OUTPUT,`proceed=${proceed}\n`);console.log('Esecuzione richiesta:',proceed);
 }else if(mode==='verify'){
   const expected=read('data/release.json');let verified=false;
