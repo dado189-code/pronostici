@@ -1,3 +1,4 @@
+import {timeWeight,weightedProfile} from './decay.mjs';
 import {finite, timestamp, solve, normalCDF} from './math.mjs';
 const KEYS=['efg','tov','orb','ftRate'];
 function factors(x) {
@@ -26,7 +27,7 @@ function features(own,allowed,isHome) {
   if(typeof isHome!=='boolean')throw new Error('isHome deve essere booleano');
   return [...factors(own),...factors(allowed),isHome?1:0];
 }
-export function fitBasketball(rows,{asOf,ridge=1,minSamples=30}={}) {
+export function fitBasketball(rows,{asOf,ridge=1,minSamples=30,halfLifeDays=60}={}) {
   const cutoff=timestamp(asOf);finite(ridge,'ridge',0.000001);finite(minSamples,'campione minimo',30);
   if(!Array.isArray(rows))throw new Error('Storico basket richiesto');
   const ids=new Set(),past=[];
@@ -36,21 +37,21 @@ export function fitBasketball(rows,{asOf,ridge=1,minSamples=30}={}) {
     if(f>=k||o<=k)throw new Error('Leakage: fattori devono precedere la partita e risultato deve seguirla');
     finite(r.points,'punti',0);finite(r.possessions,'possessi',1);
     const x=features(r.own,r.opponentAllowed,r.isHome);
-    if(o<cutoff)past.push({x,y:100*r.points/r.possessions,observedAt:r.observedAt});
+    if(o<cutoff)past.push({weight:timeWeight(r.kickoff,asOf,halfLifeDays),x,y:100*r.points/r.possessions,observedAt:r.observedAt});
   }
   if(past.length<minSamples)throw new Error('Campione basket insufficiente');
-  const n=past.length,d=9,mean=Array(d).fill(0),scale=Array(d).fill(0);
+  const weightSum=past.reduce((s,r)=>s+r.weight,0);if(!weightSum)throw new Error("Peso storico nullo");const n=past.length,d=9,mean=Array(d).fill(0),scale=Array(d).fill(0);
   for(let j=0;j<d;j++) {
-    mean[j]=past.reduce((s,r)=>s+r.x[j],0)/n;
-    scale[j]=Math.sqrt(past.reduce((s,r)=>s+(r.x[j]-mean[j])**2,0)/n)||1;
+    mean[j]=past.reduce((s,r)=>s+r.weight*r.x[j],0)/weightSum;
+    scale[j]=Math.sqrt(past.reduce((s,r)=>s+r.weight*(r.x[j]-mean[j])**2,0)/weightSum)||1;
   }
   const gram=Array.from({length:d+1},()=>Array(d+1).fill(0)),rhs=Array(d+1).fill(0);
   for(const row of past) {
     const x=[1,...row.x.map((v,j)=>(v-mean[j])/scale[j])];
-    for(let i=0;i<=d;i++){rhs[i]+=x[i]*row.y;for(let j=0;j<=d;j++)gram[i][j]+=x[i]*x[j];}
+    for(let i=0;i<=d;i++){rhs[i]+=row.weight*n/weightSum*x[i]*row.y;for(let j=0;j<=d;j++)gram[i][j]+=row.weight*n/weightSum*x[i]*x[j];}
   }
   for(let i=1;i<=d;i++)gram[i][i]+=ridge;
-  return {version:'four-factors-ridge-1',coefficients:solve(gram,rhs),mean,scale,ridge,n,asOf,
+  return {version:'four-factors-ridge-1',coefficients:solve(gram,rhs),mean,scale,ridge,n,asOf,halfLifeDays,weightSum,
     trainingEnd:past.reduce((m,r)=>timestamp(r.observedAt)>timestamp(m)?r.observedAt:m,past[0].observedAt),
     features:['own eFG','own TOV','own ORB','own FT/FGA','allowed eFG','allowed TOV','allowed ORB','allowed FT/FGA','home']};
 }
@@ -109,3 +110,5 @@ export function basketballTotals(prediction,line) {
   const {mean,sd}=prediction.distribution.total;
   const under=normalCDF((line-mean)/sd);return {under,over:1-under,line};
 }
+
+export function basketballProfile(rows,options){return weightedProfile(rows,{...options,fields:['efg','tov','orb','ftRate','pace']});}

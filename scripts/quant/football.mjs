@@ -1,5 +1,5 @@
-import {fit} from '../engine.mjs';
-import {lambde, tau} from '../model.mjs';
+import {fit,validMatch} from '../engine.mjs';
+import {stimaForze,stimaRho,lambde, tau} from '../model.mjs';
 import {finite, timestamp} from './math.mjs';
 export function footballFromRates({homeXG, awayXG, rho = 0, tolerance = 1e-12}) {
   finite(homeXG, 'homeXG', 0.000001, 20); finite(awayXG, 'awayXG', 0.000001, 20);
@@ -23,7 +23,7 @@ export function footballFromRates({homeXG, awayXG, rho = 0, tolerance = 1e-12}) 
   }));
   return {version:'dc-xg-adaptive-1', homeXG, awayXG, rho, matrix, markets, omittedMass:Math.max(0,1-mass)};
 }
-export function fitFootball(history, asOf) {
+export function fitFootball(history, asOf, {halfLifeDays=60}={}) {
   timestamp(asOf);
   if (!Array.isArray(history)) throw new TypeError('Storico JSON richiesto');
   const ids = new Set();
@@ -33,7 +33,11 @@ export function fitFootball(history, asOf) {
     if (timestamp(r.observedAt) < timestamp(r.kickoff)) throw new Error('Risultato osservato prima della partita');
     return {...r, data:new Date(r.kickoff), casa:r.home, ospite:r.away, xgCasa:r.homeXG, xgOspite:r.awayXG, golCasa:r.homeGoals, golOspite:r.awayGoals};
   }).filter(r => timestamp(r.observedAt) < timestamp(asOf));
-  const model = fit(rows, asOf);
+  finite(halfLifeDays,'halfLifeDays',.001,36500);
+  if(rows.some(r=>!validMatch(r)))throw new Error('Storico invalido');rows.sort((a,b)=>a.data-b.data);
+  if(rows.length<100)throw new Error('Almeno 100 partite richieste');
+  const forces=stimaForze(rows,{oggi:new Date(asOf),emivita:halfLifeDays,iterazioni:200});
+  const model={forces,rho:stimaRho(rows.slice(-300),forces),trainingMax:rows.at(-1).data.toISOString(),n:rows.length,halfLifeDays};
   if (!model) throw new Error('Almeno 100 partite pregresse richieste');
   return {...model, asOf, observationsMax:rows.reduce((m,r)=>r.observedAt>m?r.observedAt:m,'')};
 }

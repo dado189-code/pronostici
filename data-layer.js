@@ -1,4 +1,4 @@
-import {footballFromRates,predictTennis,predictBasketball,evaluateValue} from './scripts/quant/index.mjs';
+import {footballFromRates,fitFootball,predictFootball,tennisSurfaceStats,predictTennis,predictBasketball,evaluateValue} from './scripts/quant/index.mjs';
 export function validateSnapshot(d) {
   if(d?.schema!==2||!Number.isFinite(Date.parse(d.generatedAt))||!Array.isArray(d.picks)||!d.report?.marketComparison?.bootstrap||!Array.isArray(d.coverage)||!d.selections)throw new Error('Snapshot incompleto');
   const ids=new Set();
@@ -18,11 +18,13 @@ export function enrichSnapshot(snapshot) {
     try {
       let prediction,prob;
       if(input.kind==='football'){
-        prediction=footballFromRates(input.rates);prob=prediction.markets[p.outcome];
+        prediction=input.history?predictFootball(fitFootball(input.history,input.asOf,{halfLifeDays:input.halfLifeDays}),p.home,p.away):footballFromRates(input.rates);prob=prediction.markets[p.outcome];
+        if(input.history){if(Date.parse(input.asOf)>=Date.parse(p.kickoff))throw new Error("Cutoff calcio invalido");p.model=prob??null;}
         // Preserve audited 1X2 in published picks; extended markets use the adaptive matrix.
         if(p.model===null) p.model=prob??null;
       }else if(input.kind==='tennis'){
-        prediction=predictTennis(input.playerA,input.playerB,input.format);
+        const stats=x=>Array.isArray(x)?tennisSurfaceStats(x,{surface:input.surface,asOf:input.asOf,halfLifeDays:input.halfLifeDays}):x;
+        prediction=predictTennis(stats(input.playerA),stats(input.playerB),input.format);
         if(Date.parse(prediction.asOf)>=Date.parse(p.kickoff))throw new Error('Cutoff tennis invalido');
         prob=p.outcome==='1'?prediction.pA:p.outcome==='2'?prediction.pB:null;p.model=prob;
       }else if(input.kind==='basketball'){

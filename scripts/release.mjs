@@ -1,3 +1,4 @@
+import {registerValueEntries,clvSummary} from './quant/clv.mjs';
 import {transformEvent,transformFixtures} from './transform-data.mjs';
 import {PUBLIC_ASSETS} from './assets.mjs';
 import {dirname} from 'node:path';
@@ -97,4 +98,4 @@ const bundle={schema:2,dataPipelineVersion:1,generation:randomUUID(),generatedAt
 // No public writes until all providers and calculations have completed.
 writeFileSync('data/ledger.json',JSON.stringify(settled));writeFileSync('data/xg-history.json',JSON.stringify(persistentHistory));writeFileSync('data/release.json',JSON.stringify(bundle,null,2));stage();
 console.log(JSON.stringify({generation:bundle.generation,day,picks:picks.length,selected,diagnostics},null,2));
-function stage(){const snapshot=read('data/release.json');writeFileSync('data/fixtures.json',JSON.stringify(transformFixtures(snapshot),null,2));mkdirSync('dist',{recursive:true});for(const name of PUBLIC_ASSETS){mkdirSync(dirname(`dist/${name}`),{recursive:true});copyFileSync(name,`dist/${name}`);}copyFileSync('data/release.json','dist/release.json');writeFileSync('dist/.nojekyll','');}
+function stage(){const snapshot=read('data/release.json');const records=registerValueEntries(existsSync('data/clv.json')?read('data/clv.json'):[],snapshot.picks);snapshot.clvSummary=clvSummary(records);writeFileSync('data/clv.json',JSON.stringify(records,null,2));writeFileSync('data/release.json',JSON.stringify(snapshot,null,2));writeFileSync('data/fixtures.json',JSON.stringify(transformFixtures(snapshot),null,2));mkdirSync('dist',{recursive:true});for(const name of PUBLIC_ASSETS){mkdirSync(dirname(`dist/${name}`),{recursive:true});copyFileSync(name,`dist/${name}`);}copyFileSync('data/release.json','dist/release.json');writeFileSync('dist/.nojekyll','');}

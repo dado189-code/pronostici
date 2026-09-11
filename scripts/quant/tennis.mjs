@@ -1,7 +1,8 @@
+import {timeWeight} from './decay.mjs';
 import {finite, probability, timestamp, solve} from './math.mjs';
 const SURFACES = ['clay','hard','grass'];
 const COUNTS = ['servePoints','firstIn','firstWon','secondWon','bpFaced','bpSaved','bpChances','bpConverted'];
-export function tennisSurfaceStats(rows, {surface, asOf}) {
+export function tennisSurfaceStats(rows, {surface, asOf, halfLifeDays=45}) {
   if (!SURFACES.includes(surface) || !Array.isArray(rows)) throw new Error('Superficie o storico invalido');
   const cutoff = timestamp(asOf), ids = new Set(), sum = Object.fromEntries(COUNTS.map(k=>[k,0]));
   let n = 0;
@@ -13,10 +14,10 @@ export function tennisSurfaceStats(rows, {surface, asOf}) {
     for (const key of COUNTS) {finite(r[key],key,0); if (!Number.isInteger(r[key])) throw new Error('Conteggi interi richiesti');}
     if (r.firstIn>r.servePoints || r.firstWon>r.firstIn || r.secondWon>r.servePoints-r.firstIn || r.bpSaved>r.bpFaced || r.bpConverted>r.bpChances || r.bpFaced>r.servePoints) throw new Error('Conteggi tennis incoerenti');
     if (r.surface!==surface || timestamp(r.observedAt)>=cutoff) continue;
-    COUNTS.forEach(k=>sum[k]+=r[k]); n++;
+    const weight=timeWeight(r.kickoff,asOf,halfLifeDays);COUNTS.forEach(k=>sum[k]+=weight*r[k]); n++;
   }
   if (!n || !sum.firstIn || sum.servePoints===sum.firstIn) throw new Error('Campione servizio per superficie insufficiente');
-  return {...sum, surface, asOf, matches:n, firstInRate:sum.firstIn/sum.servePoints,
+  return {...sum, surface, asOf, halfLifeDays, matches:n, firstInRate:sum.firstIn/sum.servePoints,
     firstWinRate:sum.firstWon/sum.firstIn, secondWinRate:sum.secondWon/(sum.servePoints-sum.firstIn),
     breakSavedRate:sum.bpFaced?sum.bpSaved/sum.bpFaced:null,
     breakConvertedRate:sum.bpChances?sum.bpConverted/sum.bpChances:null};

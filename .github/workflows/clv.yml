@@ -1,0 +1,55 @@
+name: Prono · osserva closing
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+concurrency:
+  group: prono-production
+  cancel-in-progress: false
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  closing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Controlla rilevazioni pendenti
+        id: gate
+        run: |
+          node --input-type=module -e "import fs from 'node:fs';const r=JSON.parse(fs.readFileSync('data/clv.json'));fs.appendFileSync(process.env.GITHUB_OUTPUT,'due='+r.some(x=>x.status==='pending'&&Date.parse(x.kickoff)-Date.now()<=1200000)+'\n');"
+      - name: Raccogli solo quote vicine al via
+        if: steps.gate.outputs.due == 'true'
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          node scripts/collect-clv.mjs
+          npm run verify
+      - name: Conserva osservazioni
+        if: steps.gate.outputs.due == 'true'
+        run: |
+          git config user.name prono-bot
+          git config user.email bot@users.noreply.github.com
+          git add data/clv.json data/release.json data/fixtures.json
+          git diff --staged --quiet || git commit -m "Osservazioni closing e metriche CLV"
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.gate.outputs.due == 'true'
+        with:
+          path: dist
+      - uses: actions/deploy-pages@v4
+        id: deployment
+        if: steps.gate.outputs.due == 'true'
+      - name: Verifica pubblicazione
+        if: steps.gate.outputs.due == 'true'
+        run: node scripts/deployment.mjs verify

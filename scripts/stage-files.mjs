@@ -1,0 +1,2 @@
+import {mkdirSync,copyFileSync,writeFileSync}from 'node:fs';import {dirname}from 'node:path';import {PUBLIC_ASSETS}from './assets.mjs';
+export function stageFiles(){mkdirSync('dist',{recursive:true});for(const name of PUBLIC_ASSETS){mkdirSync(dirname(`dist/${name}`),{recursive:true});copyFileSync(name,`dist/${name}`);}copyFileSync('data/release.json','dist/release.json');writeFileSync('dist/.nojekyll','');}

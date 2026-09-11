@@ -51,7 +51,7 @@ jobs:
         run: |
           git config user.name prono-bot
           git config user.email bot@users.noreply.github.com
-          git add data/release.json data/fixtures.json data/ledger.json data/xg-history.json
+          git add data/clv.json data/release.json data/fixtures.json data/ledger.json data/xg-history.json
           git diff --staged --quiet || git commit -m "Snapshot completo e verificato"
           git push
       - uses: actions/upload-pages-artifact@v3
