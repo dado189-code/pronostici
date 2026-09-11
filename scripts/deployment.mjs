@@ -15,7 +15,7 @@ if(mode==='gate'){
       const r=await fetch(publicURL+'release.json?generation='+expected.generation,{cache:'no-store',signal:AbortSignal.timeout(15000)});
       if(!r.ok)throw Error('HTTP '+r.status);const text=await r.text();
       if(digest(text)!==digest(readFileSync('data/release.json')))throw Error('Snapshot non corrispondente');
-      for(const name of ['index.html','app.js','style.css']){
+      for(const name of ['index.html','app.js','style.css','ticket.js']){
         const asset=await fetch(publicURL+(name==='index.html'?'':name)+'?generation='+expected.generation,{cache:'no-store',signal:AbortSignal.timeout(15000)});
         if(!asset.ok||digest(await asset.text())!==digest(readFileSync(name)))throw Error('Asset non corrispondente');
       }

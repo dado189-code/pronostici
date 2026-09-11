@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['index.html', 'app.js', 'style.css', 'scripts/**', 'tests/**', 'package.json', '.github/workflows/aggiorna.yml', 'data/audit/report.json']
+    paths: ['index.html', 'app.js', 'ticket.js', 'style.css', 'scripts/**', 'tests/**', 'package.json', '.github/workflows/aggiorna.yml', 'data/audit/report.json']
 concurrency:
   group: prono-production
   cancel-in-progress: false

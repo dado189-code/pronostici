@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {localDay,utc,assess,selections,performance} from './engine.mjs';
 const d=JSON.parse(readFileSync('data/release.json','utf8'));
-assert.equal(d.schema,1);assert.equal(d.coverage.length,5);assert.ok(d.generation);assert.ok(d.report.splits.test.n>=1000);
+assert.equal(d.schema,2);assert.equal(d.coverage.length,5);assert.ok(d.generation);assert.ok(d.report.splits.test.n>=1000);
 assert.equal(new Set(d.picks.map(p=>p.id)).size,d.picks.length);
 for(const p of d.picks){
   assert.equal(localDay(p.kickoff),d.day);assert.ok(utc(p.kickoff)>utc(d.generatedAt));assert.ok(p.market.n>=3);

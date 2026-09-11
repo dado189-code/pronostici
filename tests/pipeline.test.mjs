@@ -8,7 +8,7 @@ function cleanup(dir){assert.ok(resolve(dir).startsWith(join(resolve(tmpdir()),'
 function setup(){
   const dir=mkdtempSync(join(tmpdir(),'prono-test-'));
   mkdirSync(join(dir,'data/raw/understat'),{recursive:true});mkdirSync(join(dir,'data/audit'),{recursive:true});
-  cpSync(join(root,'scripts'),join(dir,'scripts'),{recursive:true});for(const f of ['index.html','app.js','style.css'])cpSync(join(root,f),join(dir,f));
+  cpSync(join(root,'scripts'),join(dir,'scripts'),{recursive:true});for(const f of ['index.html','app.js','style.css','ticket.js'])cpSync(join(root,f),join(dir,f));
   const dates=Array.from({length:110},(_,i)=>({id:String(i),isResult:true,datetime:new Date(Date.UTC(2026,4,i+1)).toISOString().slice(0,19).replace('T',' '),h:{title:i%2?'A':'B'},a:{title:i%2?'B':'A'},xG:{h:'1.4',a:'1.1'},goals:{h:'1',a:'1'}}));
   for(const key of ['Serie_A','EPL','La_liga','Bundesliga','Ligue_1'])for(const year of [2022,2023,2024,2025])writeFileSync(join(dir,`data/raw/understat/${key}-${year}.json`),JSON.stringify({data:{dates}}));
   const engineHash=createHash('sha256').update(readFileSync(join(root,'scripts/model.mjs'),'utf8').replace(/\r\n/g,'\n')).update(readFileSync(join(root,'scripts/engine.mjs'),'utf8').replace(/\r\n/g,'\n')).digest('hex');
@@ -17,9 +17,10 @@ function setup(){
 const OriginalDate=Date;globalThis.Date=class extends OriginalDate{constructor(...args){super(...(args.length?args:['2026-09-11T12:07:00.000Z']));}static now(){return +new OriginalDate('2026-09-11T12:07:00.000Z');}};
 globalThis.fetch=async (url)=>{
  const u=new URL(url);if(process.env.FAIL_SOURCE==='yes'&&u.hostname==='understat.com')return {ok:false,status:503};
+ if(u.pathname==='/v4/sports/')return {ok:true,json:async()=>[{key:'tennis_atp_test',title:'ATP test',active:true},{key:'basketball_wnba',title:'WNBA',active:true}]};
  const sport=u.pathname.split('/')[3];
  const event={id:sport,home_team:'A',away_team:'B',commence_time:'2026-09-11T18:00:00Z'};
- const books=['a','b','c'].map(key=>({key,title:key,last_update:'2026-09-11T12:00:00Z',markets:[{key:'h2h',outcomes:[{name:'A',price:2.6},{name:'Draw',price:3.4},{name:'B',price:2.8}]}]}));
+ const books=['a','b','c'].map(key=>({key,title:key,last_update:'2026-09-11T12:00:00Z',markets:[{key:'h2h',outcomes:[{name:'A',price:2.6},...(sport.startsWith('soccer_')?[{name:'Draw',price:3.4}]:[]),{name:'B',price:2.8}]}]}));
  return {ok:true,json:async()=>u.hostname==='understat.com'?{dates:[]}:u.pathname.endsWith('/events')?[event]:[{...event,bookmakers:books}]};
 };`);
   return dir;
@@ -28,7 +29,7 @@ function run(dir,script,extra={}){return spawnSync(process.execPath,['--import',
 test('pipeline builds complete valid snapshot and resumes without duplicate ledger entries',()=>{
   const dir=setup();try{
     const first=run(dir,'scripts/release.mjs');assert.equal(first.status,0,first.stderr);
-    const result=JSON.parse(readFileSync(join(dir,'data/release.json')));assert.equal(result.coverage.length,5);assert.equal(result.picks.length,18);
+    const result=JSON.parse(readFileSync(join(dir,'data/release.json')));assert.equal(result.coverage.length,5);assert.equal(result.picks.length,22);
     const check=run(dir,'scripts/check-release.mjs');assert.equal(check.status,0,check.stderr);
     const before=readFileSync(join(dir,'data/ledger.json'),'utf8');const second=run(dir,'scripts/release.mjs');assert.equal(second.status,0,second.stderr);assert.equal(readFileSync(join(dir,'data/ledger.json'),'utf8'),before);
     assert.equal(JSON.parse(readFileSync(join(dir,'data/release.json'))).generation,result.generation);
