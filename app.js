@@ -1,4 +1,4 @@
-import {generateTicket,sportGroup} from './ticket.js';
+import {generateTicket,sportGroup} from './ticket.js?v=2';
 'use strict';
 const $=id=>document.getElementById(id),esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pct=x=>x==null?'—':(100*x).toFixed(1)+'%',num=x=>x==null?'—':x.toFixed(2),signed=x=>x==null?'—':(x>=0?'+':'')+num(x);
