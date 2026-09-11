@@ -8,7 +8,10 @@ for(const r of rows){assert.ok(r.trainingMax<r.date+'T00:00:00Z');assert.deepEqu
 for(const [key,,league] of LEAGUES){
   const r=rows.find(r=>r.league===league&&r.split==='test');assert.ok(r);
   const history=archive(key),match=history.find(p=>key+':'+p.id===r.id);
-  const model=fit(history,r.date+'T00:00:00Z');assert.deepEqual(predict(model,match.casa,match.ospite).p,r.p);
+  const model=fit(history,r.date+'T00:00:00Z');
+  // V8/libm can differ by a few ULP between Windows and Linux. This tolerance
+  // is far below stored/displayed precision and still rejects material drift.
+  predict(model,match.casa,match.ospite).p.forEach((p,i)=>assert.ok(Math.abs(p-r.p[i])<1e-12,'Deriva numerica del modello'));
 }
 for(const split of ['train','validation','test']){
   const sample=rows.filter(p=>p.split===split);assert.equal(report.splits[split].n,sample.length);
