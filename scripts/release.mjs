@@ -1,3 +1,5 @@
+import {PUBLIC_ASSETS} from './assets.mjs';
+import {dirname} from 'node:path';
 import {readFileSync,writeFileSync,existsSync,mkdirSync,copyFileSync} from 'node:fs';
 import {createHash,randomUUID} from 'node:crypto';
 import {POLICY,VERSION,localDay,utc,fit,predict,noVig,assess,explain,selections,settle,performance} from './engine.mjs';
@@ -75,6 +77,7 @@ for(const sport of sports){
         kickoff:new Date(e.commence_time).toISOString(),outcome,model:pred?.p[i]??null,market:market[i],analysis,context,
         status:'pending',generatedAt:now,version:pred?VERSION:'market-only',trainingMax:data?.model?.trainingMax??null,
         marketQuality:pred?null:(market[i].dispersion<=0.08?'CONSENSO COERENTE':'BOOKMAKER DISCORDI')};
+      if(pred)p.rates={homeXG:pred.lh,awayXG:pred.la,rho:pred.rho};
       p.movement=movement(p,old?.picks?.find(q=>q.id===p.id));p.why=explain(p);picks.push(p);
     }
   }
@@ -82,7 +85,7 @@ for(const sport of sports){
 const ids=new Set(settled.map(p=>p.id));for(const p of picks)if(!ids.has(p.id)){settled.push(p);ids.add(p.id);}
 const selected=selections(picks,now);
 const bundle={schema:2,generation:randomUUID(),generatedAt:now,day,zone:POLICY.zone,version:VERSION,policy:POLICY,
-  picks,selections:selected,coverage,diagnostics,report,performance:performance(settled),
+  picks,quantInputs:Object.fromEntries(picks.filter(p=>p.rates).map(p=>[p.eventId,{kind:"football",rates:p.rates}])),selections:selected,coverage,diagnostics,report,performance:performance(settled),
   pendingOld:settled.filter(p=>p.status==='pending'&&utc(now)-utc(p.kickoff)>3*864e5).length,
   history:settled.filter(p=>p.status==='closed').slice(-300),
   limits:['Nessun esito è certo. Confidence misura la qualità della stima, non la probabilità di vincita.',
@@ -96,4 +99,4 @@ const bundle={schema:2,generation:randomUUID(),generatedAt:now,day,zone:POLICY.z
 // No public writes until all providers and calculations have completed.
 writeFileSync('data/ledger.json',JSON.stringify(settled));writeFileSync('data/xg-history.json',JSON.stringify(persistentHistory));writeFileSync('data/release.json',JSON.stringify(bundle,null,2));stage();
 console.log(JSON.stringify({generation:bundle.generation,day,picks:picks.length,selected,diagnostics},null,2));
-function stage(){mkdirSync('dist',{recursive:true});for(const name of ['index.html','app.js','style.css','ticket.js'])copyFileSync(name,`dist/${name}`);copyFileSync('data/release.json','dist/release.json');writeFileSync('dist/.nojekyll','');}
+function stage(){mkdirSync('dist',{recursive:true});for(const name of PUBLIC_ASSETS){mkdirSync(dirname(`dist/${name}`),{recursive:true});copyFileSync(name,`dist/${name}`);}copyFileSync('data/release.json','dist/release.json');writeFileSync('dist/.nojekyll','');}

@@ -8,7 +8,7 @@ function cleanup(dir){assert.ok(resolve(dir).startsWith(join(resolve(tmpdir()),'
 function setup(){
   const dir=mkdtempSync(join(tmpdir(),'prono-test-'));
   mkdirSync(join(dir,'data/raw/understat'),{recursive:true});mkdirSync(join(dir,'data/audit'),{recursive:true});
-  cpSync(join(root,'scripts'),join(dir,'scripts'),{recursive:true});for(const f of ['index.html','app.js','style.css','ticket.js'])cpSync(join(root,f),join(dir,f));
+  cpSync(join(root,'scripts'),join(dir,'scripts'),{recursive:true});for(const f of ['index.html','app.js','style.css','ticket.js','data-layer.js','data/fixtures.json'])cpSync(join(root,f),join(dir,f));
   const dates=Array.from({length:110},(_,i)=>({id:String(i),isResult:true,datetime:new Date(Date.UTC(2026,4,i+1)).toISOString().slice(0,19).replace('T',' '),h:{title:i%2?'A':'B'},a:{title:i%2?'B':'A'},xG:{h:'1.4',a:'1.1'},goals:{h:'1',a:'1'}}));
   for(const key of ['Serie_A','EPL','La_liga','Bundesliga','Ligue_1'])for(const year of [2022,2023,2024,2025])writeFileSync(join(dir,`data/raw/understat/${key}-${year}.json`),JSON.stringify({data:{dates}}));
   const engineHash=createHash('sha256').update(readFileSync(join(root,'scripts/model.mjs'),'utf8').replace(/\r\n/g,'\n')).update(readFileSync(join(root,'scripts/engine.mjs'),'utf8').replace(/\r\n/g,'\n')).digest('hex');

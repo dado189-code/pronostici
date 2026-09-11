@@ -56,3 +56,8 @@ npm run verify
 ```
 
 Il report lega il backtest al contenuto del motore mediante hash (fine riga normalizzato). Cambiare il motore richiede rigenerare il report. Nessuna dipendenza npm necessaria.
+
+
+## Motore quantitativo e UI
+
+Il pannello bankroll usa `scripts/quant/index.mjs` attraverso `data-layer.js`. EV >=3% e Kelly al 25% vengono calcolati sul modello, mai dal solo consenso quote. Il bankroll viene salvato solo in localStorage. `data/fixtures.json` è uno snapshot reale archiviato, con provenienza e data, usato solo se il fetch principale fallisce o non supera la validazione. In fallback gli eventi sono consultabili ma schedina operativa e stake sono sospesi. Gli input modello sono per evento in `quantInputs`: calcio (`kind`, `rates`), tennis (`kind`, `playerA`, `playerB`, `format`), basket (`kind`, `model`, `match`, `residualModel`). I contratti completi sono in `scripts/quant/README.md`. Metriche mancanti producono astensione. Servire la cartella via HTTP, non file://. Per riprodurre il fallback dalle fonti già archiviate: `node scripts/make-fixtures.mjs`; nessuna chiamata API o credenziale.

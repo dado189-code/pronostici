@@ -6,7 +6,7 @@ export function eligibleTickets(rows,{now=new Date().toISOString(),zone='Europe/
     const age=p.market?.age+(Date.parse(now)-Date.parse(p.generatedAt))/36e5;
     return day(p.kickoff,zone)===day(now,zone)&&Date.parse(p.kickoff)>Date.parse(now)&&Number.isFinite(age)&&age>=0&&age<=6&&
       (sport==='all'||sportGroup(p)===sport)&&p.market.n>=3&&p.market.dispersion<=.08&&p.market.p>0&&p.market.p<1&&
-      (mode!=='value'||(p.analysis?.eligible&&['VALORE','VALORE FORTE'].includes(p.analysis.category)));
+      (mode!=='value'||(p.analysis?.eligible&&p.analysis.ev>=.03-1e-12&&['VALORE','VALORE FORTE'].includes(p.analysis.category)));
   });
 }
 export function ticketFor(legs,{book='',mode='market',stake=0}={}){
