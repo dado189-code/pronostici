@@ -94,7 +94,7 @@
     "entryOdds": 2.34,
     "modelProbability": 0.5444604760196781,
     "modelVersion": "dc-xg-180-audited-1",
-    "status": "pending",
+    "status": "missing",
     "closingOdds": null,
     "closingAt": null,
     "clv": null
@@ -134,7 +134,7 @@
     "entryOdds": 2.32,
     "modelProbability": 0.4730917189622412,
     "modelVersion": "dc-xg-180-audited-1",
-    "status": "pending",
+    "status": "missing",
     "closingOdds": null,
     "closingAt": null,
     "clv": null
@@ -154,7 +154,7 @@
     "entryOdds": 2.59,
     "modelProbability": 0.4700847025148864,
     "modelVersion": "dc-xg-180-audited-1",
-    "status": "pending",
+    "status": "missing",
     "closingOdds": null,
     "closingAt": null,
     "clv": null
@@ -174,7 +174,7 @@
     "entryOdds": 4.9,
     "modelProbability": 0.22930852446315958,
     "modelVersion": "dc-xg-180-audited-1",
-    "status": "pending",
+    "status": "missing",
     "closingOdds": null,
     "closingAt": null,
     "clv": null
@@ -194,7 +194,7 @@
     "entryOdds": 6.6,
     "modelProbability": 0.1885770216733814,
     "modelVersion": "dc-xg-180-audited-1",
-    "status": "pending",
+    "status": "missing",
     "closingOdds": null,
     "closingAt": null,
     "clv": null
@@ -314,7 +314,7 @@
     "entryOdds": 3.9,
     "modelProbability": 0.2891152724412292,
     "modelVersion": "dc-xg-180-audited-1",
-    "status": "pending",
+    "status": "missing",
     "closingOdds": null,
     "closingAt": null,
     "clv": null
@@ -334,7 +334,7 @@
     "entryOdds": 2.96,
     "modelProbability": 0.3481857893475744,
     "modelVersion": "dc-xg-180-audited-1",
-    "status": "pending",
+    "status": "missing",
     "closingOdds": null,
     "closingAt": null,
     "clv": null
