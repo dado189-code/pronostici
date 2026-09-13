@@ -614,10 +614,10 @@
     "entryOdds": 3.5,
     "modelProbability": 0.3979280173007045,
     "modelVersion": "dc-xg-180-audited-1",
-    "status": "pending",
+    "status": "closed",
     "closingOdds": 3.6,
     "closingAt": "2026-09-13T18:57:29Z",
-    "clv": null,
+    "clv": -0.02777777777777779,
     "observedAt": "2026-09-13T18:57:44.349Z"
   },
   {
