@@ -15096,8 +15096,8 @@
   "clvSummary": {
     "tracked": 41,
     "closed": 1,
-    "pending": 5,
-    "missing": 35,
+    "pending": 1,
+    "missing": 39,
     "mean": -0.02777777777777779,
     "definition": "Entry / ultima quota osservata dello stesso bookmaker nei 20 minuti prima del via − 1. Media per segnalazione, non prova di profitto."
   }
