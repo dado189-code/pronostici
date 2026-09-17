@@ -920,5 +920,25 @@
     "closingOdds": null,
     "closingAt": null,
     "clv": null
+  },
+  {
+    "id": "7f644eca099054612d9a7e7e5d8787da:2|matchbook|dc-xg-180-audited-1",
+    "eventId": "7f644eca099054612d9a7e7e5d8787da",
+    "sport": "soccer_spain_la_liga",
+    "home": "Real Betis",
+    "away": "Getafe",
+    "kickoff": "2026-09-17T17:00:00.000Z",
+    "market": "h2h",
+    "outcome": "2",
+    "book": "matchbook",
+    "bookTitle": "Matchbook",
+    "entryAt": "2026-09-17T11:40:57.318Z",
+    "entryOdds": 6.6,
+    "modelProbability": 0.1619157118187699,
+    "modelVersion": "dc-xg-180-audited-1",
+    "status": "pending",
+    "closingOdds": null,
+    "closingAt": null,
+    "clv": null
   }
 ]
