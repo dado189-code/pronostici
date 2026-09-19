@@ -1,3 +1,4 @@
+import {selections,assess,POLICY} from './scripts/engine.mjs';
 import {footballFromRates,fitFootball,predictFootball,tennisSurfaceStats,predictTennis,predictBasketball,evaluateValue} from './scripts/quant/index.mjs';
 export function validateSnapshot(d) {
   if(d?.schema!==2||!Number.isFinite(Date.parse(d.generatedAt))||!Array.isArray(d.picks)||!d.report?.marketComparison?.bootstrap||!Array.isArray(d.coverage)||!d.selections)throw new Error('Snapshot incompleto');
@@ -49,4 +50,11 @@ export function staking(p,bankroll,{now=Date.now(),fallback=false}={}) {
   const age=p.market.age+(now-Date.parse(p.generatedAt))/36e5;
   const actionable=!fallback&&Date.parse(p.kickoff)>now&&age>=0&&age<=6;
   return {...v,actionable,suggestedFraction:actionable?v.suggestedFraction:0,suggestedStake:actionable?v.suggestedStake:0};
+}
+
+export function currentSelections(d,now=new Date().toISOString(),zone='Europe/Rome'){
+ if(d.sourceMode==='fallback')return {single:null,combo:null,high:null};
+ const policy={...POLICY,minEV:.03};
+ const rows=d.picks.filter(p=>p.model!==null&&p.context).map(p=>{const market={...p.market,age:p.market.age+(Date.parse(now)-Date.parse(p.generatedAt))/36e5};return {...p,market,analysis:assess(p.model,market,p.context,policy)};});
+ return selections(rows,now,zone,policy);
 }

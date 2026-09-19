@@ -1,9 +1,9 @@
 name: Prono · aggiorna dati e pubblica
 on:
   schedule:
-    # 06:17 UTC = 08:17 Europe/Rome in estate, 07:17 in inverno.
-    # 07:17 e 08:17 UTC recuperano un eventuale errore; saltano se già pubblicato.
-    - cron: '17 6,7,8 * * *'
+    # Aggiornamenti ogni quattro ore durante la giornata.
+    # Gli orari UTC non dipendono dal cambio ora legale.
+    - cron: '17 6,10,14,18 * * *'
   workflow_dispatch:
   push:
     branches: [main]

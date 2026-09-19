@@ -1,0 +1,4 @@
+import {currentSelections} from '../data-layer.js';
+import test from 'node:test';import assert from 'node:assert/strict';
+const row=(id,kickoff)=>({id,eventId:id,sport:'soccer_test',kickoff,generatedAt:'2026-09-19T08:00:00Z',outcome:'1',model:.6,context:{teamN:100,seasonN:20,historyAgeDays:1},market:{p:.55,odds:1.8,n:8,age:0,dispersion:.01,prices:[{key:'b',title:'B',odds:1.8}]}});
+test('cards choose another eligible match after previous kickoff and suppress expired quotes',()=>{const d={sourceMode:'live',picks:[row('early','2026-09-19T09:00:00Z'),row('later','2026-09-19T18:00:00Z')]};assert.equal(currentSelections(d,'2026-09-19T08:30:00Z').single,'early');assert.equal(currentSelections(d,'2026-09-19T10:00:00Z').single,'later');assert.equal(currentSelections(d,'2026-09-19T15:00:00Z').single,null);assert.equal(currentSelections({...d,sourceMode:'fallback'},'2026-09-19T08:30:00Z').single,null);});
