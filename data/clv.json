@@ -1723,9 +1723,10 @@
     "modelProbability": 0.5371436268942013,
     "modelVersion": "dc-xg-180-audited-1",
     "status": "pending",
-    "closingOdds": null,
-    "closingAt": null,
-    "clv": null
+    "closingOdds": 1.98,
+    "closingAt": "2026-09-20T11:40:10Z",
+    "clv": null,
+    "observedAt": "2026-09-20T11:41:25.686Z"
   },
   {
     "id": "5866dae1e72b96ab74508039cd3dcca7:1|betfair_ex_eu|dc-xg-180-audited-1",
