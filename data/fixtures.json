@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "dataPipelineVersion": 1,
-  "generation": "39743b5b-65ca-4560-b07d-7065fc3d6aaf",
-  "generatedAt": "2026-09-21T12:47:09.070Z",
+  "generation": "5bfddf5d-1806-4f75-b2bb-d770463cce51",
+  "generatedAt": "2026-09-21T19:27:25.115Z",
   "day": "2026-09-21",
   "zone": "Europe/Rome",
   "version": "dc-xg-180-audited-1",
@@ -39,228 +39,7 @@
     ],
     "consensusBooks": 3
   },
-  "picks": [
-    {
-      "id": "8758473ffbcbf274282fd5d6d333b16c:1",
-      "eventId": "8758473ffbcbf274282fd5d6d333b16c",
-      "sport": "tennis_wta_singapore_open",
-      "league": "WTA Singapore Open",
-      "home": "Storm Hunter",
-      "away": "Joanna Garland",
-      "kickoff": "2026-09-21T12:50:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.4554494747551576,
-        "n": 16,
-        "odds": 2.2,
-        "book": "Betfair",
-        "age": 0.020019444444444444,
-        "dispersion": 0.01765312435553723,
-        "prices": [
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 2.2
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2.1
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 2.05
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 2.05
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 2.1
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 2
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 2.05
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 2.1
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 2.08
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 2.06
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 2.1
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.06
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.12
-          },
-          {
-            "key": "tipico_de",
-            "title": "Tipico",
-            "odds": 2.05
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 2.13
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 2.16
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-09-21T12:47:09.070Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 45.5% da 16 bookmaker; quota disponibile 2.20 (Betfair)."
-    },
-    {
-      "id": "8758473ffbcbf274282fd5d6d333b16c:2",
-      "eventId": "8758473ffbcbf274282fd5d6d333b16c",
-      "sport": "tennis_wta_singapore_open",
-      "league": "WTA Singapore Open",
-      "home": "Storm Hunter",
-      "away": "Joanna Garland",
-      "kickoff": "2026-09-21T12:50:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.5445505252448424,
-        "n": 16,
-        "odds": 1.81,
-        "book": "Betfair",
-        "age": 0.020019444444444444,
-        "dispersion": 0.01765312435553723,
-        "prices": [
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.81
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.73
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 1.77
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.72
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.78
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.73
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.77
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 1.73
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 1.69
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.74
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.76
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.74
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.74
-          },
-          {
-            "key": "tipico_de",
-            "title": "Tipico",
-            "odds": 1.7
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.79
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.74
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-09-21T12:47:09.070Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 54.5% da 16 bookmaker; quota disponibile 1.81 (Betfair)."
-    }
-  ],
+  "picks": [],
   "quantInputs": {},
   "selections": {
     "single": null,
@@ -272,31 +51,31 @@
       "league": "Serie A",
       "matches": 1570,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-09-21T12:47:10.739Z"
+      "downloadedAt": "2026-09-21T19:27:27.955Z"
     },
     {
       "league": "Premier League",
       "matches": 1570,
       "lastMatch": "2026-09-20T15:30:00.000Z",
-      "downloadedAt": "2026-09-21T12:47:11.598Z"
+      "downloadedAt": "2026-09-21T19:27:28.872Z"
     },
     {
       "league": "Liga",
       "matches": 1589,
       "lastMatch": "2026-09-20T19:00:00.000Z",
-      "downloadedAt": "2026-09-21T12:47:12.452Z"
+      "downloadedAt": "2026-09-21T19:27:29.555Z"
     },
     {
       "league": "Bundesliga",
       "matches": 1260,
       "lastMatch": "2026-09-20T17:30:00.000Z",
-      "downloadedAt": "2026-09-21T12:47:13.176Z"
+      "downloadedAt": "2026-09-21T19:27:30.165Z"
     },
     {
       "league": "Ligue 1",
       "matches": 1343,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-09-21T12:47:13.866Z"
+      "downloadedAt": "2026-09-21T19:27:30.769Z"
     }
   ],
   "diagnostics": [
@@ -308,7 +87,8 @@
     "Champions League: nessun evento ancora da iniziare oggi.",
     "Basketball Euroleague: nessun evento ancora da iniziare oggi.",
     "NBA: nessun evento ancora da iniziare oggi.",
-    "WNBA: nessun evento ancora da iniziare oggi."
+    "WNBA: nessun evento ancora da iniziare oggi.",
+    "WTA Singapore Open: nessun evento ancora da iniziare oggi."
   ],
   "report": {
     "version": "dc-xg-180-audited-1",
@@ -28295,8 +28075,8 @@
   },
   "fixtureInfo": {
     "kind": "last-successful-snapshot",
-    "capturedAt": "2026-09-21T12:47:09.070Z",
-    "generation": "39743b5b-65ca-4560-b07d-7065fc3d6aaf",
+    "capturedAt": "2026-09-21T19:27:25.115Z",
+    "generation": "5bfddf5d-1806-4f75-b2bb-d770463cce51",
     "sources": [
       "The Odds API v4: eventi e quote h2h",
       "Understat: xG storici"
