@@ -1,9 +1,9 @@
 {
   "schema": 2,
   "dataPipelineVersion": 1,
-  "generation": "5bfddf5d-1806-4f75-b2bb-d770463cce51",
-  "generatedAt": "2026-09-21T19:27:25.115Z",
-  "day": "2026-09-21",
+  "generation": "2ea8eee2-d69e-486c-abec-af8034dfc168",
+  "generatedAt": "2026-09-22T11:37:11.764Z",
+  "day": "2026-09-22",
   "zone": "Europe/Rome",
   "version": "dc-xg-180-audited-1",
   "policy": {
@@ -39,7 +39,218 @@
     ],
     "consensusBooks": 3
   },
-  "picks": [],
+  "picks": [
+    {
+      "id": "fbe5690f3bb5d61e742c6172bf96afd1:1",
+      "eventId": "fbe5690f3bb5d61e742c6172bf96afd1",
+      "sport": "tennis_wta_singapore_open",
+      "league": "WTA Singapore Open",
+      "home": "Maria Sakkari",
+      "away": "Linda Fruhvirtova",
+      "kickoff": "2026-09-22T11:50:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.7681365022222496,
+        "n": 15,
+        "odds": 1.26,
+        "book": "BetOnline.ag",
+        "age": 0.01160111111111111,
+        "dispersion": 0.04235962316770403,
+        "prices": [
+          {
+            "key": "sport888",
+            "title": "888sport",
+            "odds": 1.25
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 1.25
+          },
+          {
+            "key": "williamhill",
+            "title": "William Hill",
+            "odds": 1.25
+          },
+          {
+            "key": "betfair_ex_eu",
+            "title": "Betfair",
+            "odds": 1.25
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 1.25
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.23
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 1.26
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 1.24
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.21
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 1.22
+          },
+          {
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
+            "odds": 1.22
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.24
+          },
+          {
+            "key": "pinnacle",
+            "title": "Pinnacle",
+            "odds": 1.26
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 1.26
+          },
+          {
+            "key": "betanysports",
+            "title": "BetAnything",
+            "odds": 1.24
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "pending",
+      "generatedAt": "2026-09-22T11:37:11.764Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 76.8% da 15 bookmaker; quota disponibile 1.26 (BetOnline.ag)."
+    },
+    {
+      "id": "fbe5690f3bb5d61e742c6172bf96afd1:2",
+      "eventId": "fbe5690f3bb5d61e742c6172bf96afd1",
+      "sport": "tennis_wta_singapore_open",
+      "league": "WTA Singapore Open",
+      "home": "Maria Sakkari",
+      "away": "Linda Fruhvirtova",
+      "kickoff": "2026-09-22T11:50:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.23186349777775028,
+        "n": 15,
+        "odds": 4.8,
+        "book": "Betfair",
+        "age": 0.01160111111111111,
+        "dispersion": 0.04235962316770392,
+        "prices": [
+          {
+            "key": "sport888",
+            "title": "888sport",
+            "odds": 4
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 3.9
+          },
+          {
+            "key": "williamhill",
+            "title": "William Hill",
+            "odds": 4
+          },
+          {
+            "key": "betfair_ex_eu",
+            "title": "Betfair",
+            "odds": 4.8
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 3.9
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 4.1
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 4.13
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 4.3
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 3.65
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 4.1
+          },
+          {
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
+            "odds": 4.35
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 4.13
+          },
+          {
+            "key": "pinnacle",
+            "title": "Pinnacle",
+            "odds": 4.28
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 4.04
+          },
+          {
+            "key": "betanysports",
+            "title": "BetAnything",
+            "odds": 4.2
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "pending",
+      "generatedAt": "2026-09-22T11:37:11.764Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 23.2% da 15 bookmaker; quota disponibile 4.80 (Betfair)."
+    }
+  ],
   "quantInputs": {},
   "selections": {
     "single": null,
@@ -51,31 +262,31 @@
       "league": "Serie A",
       "matches": 1570,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-09-21T19:27:27.955Z"
+      "downloadedAt": "2026-09-22T11:37:13.668Z"
     },
     {
       "league": "Premier League",
       "matches": 1570,
       "lastMatch": "2026-09-20T15:30:00.000Z",
-      "downloadedAt": "2026-09-21T19:27:28.872Z"
+      "downloadedAt": "2026-09-22T11:37:14.516Z"
     },
     {
       "league": "Liga",
       "matches": 1589,
       "lastMatch": "2026-09-20T19:00:00.000Z",
-      "downloadedAt": "2026-09-21T19:27:29.555Z"
+      "downloadedAt": "2026-09-22T11:37:15.387Z"
     },
     {
       "league": "Bundesliga",
       "matches": 1260,
       "lastMatch": "2026-09-20T17:30:00.000Z",
-      "downloadedAt": "2026-09-21T19:27:30.165Z"
+      "downloadedAt": "2026-09-22T11:37:16.027Z"
     },
     {
       "league": "Ligue 1",
       "matches": 1343,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-09-21T19:27:30.769Z"
+      "downloadedAt": "2026-09-22T11:37:16.762Z"
     }
   ],
   "diagnostics": [
@@ -87,8 +298,7 @@
     "Champions League: nessun evento ancora da iniziare oggi.",
     "Basketball Euroleague: nessun evento ancora da iniziare oggi.",
     "NBA: nessun evento ancora da iniziare oggi.",
-    "WNBA: nessun evento ancora da iniziare oggi.",
-    "WTA Singapore Open: nessun evento ancora da iniziare oggi."
+    "WNBA: nessun evento ancora da iniziare oggi."
   ],
   "report": {
     "version": "dc-xg-180-audited-1",
@@ -28075,8 +28285,8 @@
   },
   "fixtureInfo": {
     "kind": "last-successful-snapshot",
-    "capturedAt": "2026-09-21T19:27:25.115Z",
-    "generation": "5bfddf5d-1806-4f75-b2bb-d770463cce51",
+    "capturedAt": "2026-09-22T11:37:11.764Z",
+    "generation": "2ea8eee2-d69e-486c-abec-af8034dfc168",
     "sources": [
       "The Odds API v4: eventi e quote h2h",
       "Understat: xG storici"
