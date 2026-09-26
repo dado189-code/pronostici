@@ -1,9 +1,9 @@
 {
   "schema": 2,
   "dataPipelineVersion": 1,
-  "generation": "10a97b88-aedd-4fc6-ba92-c1e0420d57c1",
-  "generatedAt": "2026-09-25T18:36:17.479Z",
-  "day": "2026-09-25",
+  "generation": "7da45618-2c59-4ec5-aa7c-9ecd4b3c0c40",
+  "generatedAt": "2026-09-26T11:24:04.379Z",
+  "day": "2026-09-26",
   "zone": "Europe/Rome",
   "version": "dc-xg-180-audited-1",
   "policy": {
@@ -39,440 +39,7 @@
     ],
     "consensusBooks": 3
   },
-  "picks": [
-    {
-      "id": "ae931f9c9c05e29991820c51e65e968a:1",
-      "eventId": "ae931f9c9c05e29991820c51e65e968a",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "KK Partizan NIS",
-      "away": "Pallacanestro Olimpia Milano",
-      "kickoff": "2026-09-25T18:45:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.5625659525748451,
-        "n": 15,
-        "odds": 1.79,
-        "book": "Betfair",
-        "age": 0.05124416666666667,
-        "dispersion": 0.04699818071558515,
-        "prices": [
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.68
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.68
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.7
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.7
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.69
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 1.68
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.68
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.61
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.61
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.78
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 1.66
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.74
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.79
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 1.74
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.66
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-09-25T18:36:17.479Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": {
-        "from": "2026-09-25T11:50:01.300Z",
-        "to": "2026-09-25T18:36:17.479Z",
-        "books": [
-          {
-            "book": "Marathon Bet",
-            "key": "marathonbet",
-            "from": 1.61,
-            "to": 1.68,
-            "change": 0.04347826086956519
-          },
-          {
-            "book": "Coolbet",
-            "key": "coolbet",
-            "from": 1.6,
-            "to": 1.68,
-            "change": 0.04999999999999982
-          },
-          {
-            "book": "Nordic Bet",
-            "key": "nordicbet",
-            "from": 1.62,
-            "to": 1.7,
-            "change": 0.04938271604938271
-          },
-          {
-            "book": "Betsson",
-            "key": "betsson",
-            "from": 1.62,
-            "to": 1.7,
-            "change": 0.04938271604938271
-          },
-          {
-            "book": "1xBet",
-            "key": "onexbet",
-            "from": 1.62,
-            "to": 1.69,
-            "change": 0.043209876543209846
-          },
-          {
-            "book": "Unibet (NL)",
-            "key": "unibet_nl",
-            "from": 1.56,
-            "to": 1.68,
-            "change": 0.07692307692307687
-          },
-          {
-            "book": "LeoVegas (SE)",
-            "key": "leovegas_se",
-            "from": 1.56,
-            "to": 1.68,
-            "change": 0.07692307692307687
-          },
-          {
-            "book": "GTbets",
-            "key": "gtbets",
-            "from": 1.56,
-            "to": 1.61,
-            "change": 0.03205128205128216
-          },
-          {
-            "book": "888sport",
-            "key": "sport888",
-            "from": 1.61,
-            "to": 1.61,
-            "change": 0
-          },
-          {
-            "book": "Pinnacle",
-            "key": "pinnacle",
-            "from": 1.62,
-            "to": 1.78,
-            "change": 0.09876543209876543
-          },
-          {
-            "book": "Codere (IT)",
-            "key": "codere_it",
-            "from": 1.58,
-            "to": 1.66,
-            "change": 0.05063291139240489
-          },
-          {
-            "book": "BetOnline.ag",
-            "key": "betonlineag",
-            "from": 1.62,
-            "to": 1.74,
-            "change": 0.07407407407407396
-          },
-          {
-            "book": "Betfair",
-            "key": "betfair_ex_eu",
-            "from": 1.68,
-            "to": 1.79,
-            "change": 0.06547619047619047
-          },
-          {
-            "book": "Matchbook",
-            "key": "matchbook",
-            "from": 1.67,
-            "to": 1.74,
-            "change": 0.041916167664670656
-          },
-          {
-            "book": "MyBookie.ag",
-            "key": "mybookieag",
-            "from": 1.57,
-            "to": 1.66,
-            "change": 0.0573248407643312
-          }
-        ],
-        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
-      },
-      "why": "Nessun modello indipendente. Consenso no-vig 56.3% da 15 bookmaker; quota disponibile 1.79 (Betfair)."
-    },
-    {
-      "id": "ae931f9c9c05e29991820c51e65e968a:2",
-      "eventId": "ae931f9c9c05e29991820c51e65e968a",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "KK Partizan NIS",
-      "away": "Pallacanestro Olimpia Milano",
-      "kickoff": "2026-09-25T18:45:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.4374340474251548,
-        "n": 15,
-        "odds": 2.3,
-        "book": "888sport",
-        "age": 0.05124416666666667,
-        "dispersion": 0.04699818071558509,
-        "prices": [
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 2.23
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 2.2
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.15
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 2.15
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.25
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 2.16
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 2.16
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 2.28
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2.3
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 2.1
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 2.09
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 2.15
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 2.18
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 2.18
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 2.09
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-09-25T18:36:17.479Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": {
-        "from": "2026-09-25T11:50:01.300Z",
-        "to": "2026-09-25T18:36:17.479Z",
-        "books": [
-          {
-            "book": "Marathon Bet",
-            "key": "marathonbet",
-            "from": 2.36,
-            "to": 2.23,
-            "change": -0.05508474576271183
-          },
-          {
-            "book": "Coolbet",
-            "key": "coolbet",
-            "from": 2.35,
-            "to": 2.2,
-            "change": -0.06382978723404253
-          },
-          {
-            "book": "Nordic Bet",
-            "key": "nordicbet",
-            "from": 2.3,
-            "to": 2.15,
-            "change": -0.06521739130434778
-          },
-          {
-            "book": "Betsson",
-            "key": "betsson",
-            "from": 2.3,
-            "to": 2.15,
-            "change": -0.06521739130434778
-          },
-          {
-            "book": "1xBet",
-            "key": "onexbet",
-            "from": 2.38,
-            "to": 2.25,
-            "change": -0.054621848739495715
-          },
-          {
-            "book": "Unibet (NL)",
-            "key": "unibet_nl",
-            "from": 2.4,
-            "to": 2.16,
-            "change": -0.09999999999999987
-          },
-          {
-            "book": "LeoVegas (SE)",
-            "key": "leovegas_se",
-            "from": 2.4,
-            "to": 2.16,
-            "change": -0.09999999999999987
-          },
-          {
-            "book": "GTbets",
-            "key": "gtbets",
-            "from": 2.36,
-            "to": 2.28,
-            "change": -0.03389830508474578
-          },
-          {
-            "book": "888sport",
-            "key": "sport888",
-            "from": 2.3,
-            "to": 2.3,
-            "change": 0
-          },
-          {
-            "book": "Pinnacle",
-            "key": "pinnacle",
-            "from": 2.37,
-            "to": 2.1,
-            "change": -0.11392405063291144
-          },
-          {
-            "book": "Codere (IT)",
-            "key": "codere_it",
-            "from": 2.25,
-            "to": 2.09,
-            "change": -0.07111111111111112
-          },
-          {
-            "book": "BetOnline.ag",
-            "key": "betonlineag",
-            "from": 2.4,
-            "to": 2.15,
-            "change": -0.10416666666666663
-          },
-          {
-            "book": "Betfair",
-            "key": "betfair_ex_eu",
-            "from": 2.38,
-            "to": 2.18,
-            "change": -0.08403361344537807
-          },
-          {
-            "book": "Matchbook",
-            "key": "matchbook",
-            "from": 2.3,
-            "to": 2.18,
-            "change": -0.05217391304347807
-          },
-          {
-            "book": "MyBookie.ag",
-            "key": "mybookieag",
-            "from": 2.25,
-            "to": 2.09,
-            "change": -0.07111111111111112
-          }
-        ],
-        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
-      },
-      "why": "Nessun modello indipendente. Consenso no-vig 43.7% da 15 bookmaker; quota disponibile 2.30 (888sport)."
-    }
-  ],
+  "picks": [],
   "quantInputs": {},
   "selections": {
     "single": null,
@@ -484,31 +51,31 @@
       "league": "Serie A",
       "matches": 1570,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-09-25T18:36:19.817Z"
+      "downloadedAt": "2026-09-26T11:24:05.868Z"
     },
     {
       "league": "Premier League",
       "matches": 1570,
       "lastMatch": "2026-09-20T15:30:00.000Z",
-      "downloadedAt": "2026-09-25T18:36:20.771Z"
+      "downloadedAt": "2026-09-26T11:24:06.635Z"
     },
     {
       "league": "Liga",
       "matches": 1589,
       "lastMatch": "2026-09-20T19:00:00.000Z",
-      "downloadedAt": "2026-09-25T18:36:21.788Z"
+      "downloadedAt": "2026-09-26T11:24:07.470Z"
     },
     {
       "league": "Bundesliga",
       "matches": 1260,
       "lastMatch": "2026-09-20T17:30:00.000Z",
-      "downloadedAt": "2026-09-25T18:36:22.648Z"
+      "downloadedAt": "2026-09-26T11:24:08.152Z"
     },
     {
       "league": "Ligue 1",
       "matches": 1343,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-09-25T18:36:23.494Z"
+      "downloadedAt": "2026-09-26T11:24:08.794Z"
     }
   ],
   "diagnostics": [
@@ -518,6 +85,7 @@
     "Bundesliga: nessun evento ancora da iniziare oggi.",
     "Ligue 1: nessun evento ancora da iniziare oggi.",
     "Champions League: nessun evento ancora da iniziare oggi.",
+    "Basketball Euroleague: nessun evento ancora da iniziare oggi.",
     "NBA: nessun evento ancora da iniziare oggi.",
     "WNBA: nessun evento ancora da iniziare oggi.",
     "WTA Singapore Open: nessun evento ancora da iniziare oggi."
@@ -656,9 +224,9 @@
       "fairPnl": 1.1402581330280668
     },
     "CONSENSO": {
-      "n": 8,
-      "wins": 4,
-      "pnl": 1.2000000000000002,
+      "n": 12,
+      "wins": 6,
+      "pnl": 1.0300000000000002,
       "fairPnl": 0
     }
   },
@@ -29243,6 +28811,462 @@
       "won": false,
       "pnl": -1,
       "fairPnl": null
+    },
+    {
+      "id": "480d5455c08225b7b288ab3b993dbaa6:1",
+      "eventId": "480d5455c08225b7b288ab3b993dbaa6",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Beşiktaş J.K.",
+      "away": "Valencia Basket",
+      "kickoff": "2026-09-25T17:00:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.5350671678980726,
+        "n": 17,
+        "odds": 1.84,
+        "book": "Betfair",
+        "age": 0.02925,
+        "dispersion": 0.0329723895407541,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.79
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 1.8
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 1.78
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 1.8
+          },
+          {
+            "key": "marathonbet",
+            "title": "Marathon Bet",
+            "odds": 1.78
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.78
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 1.8
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.77
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.78
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 1.72
+          },
+          {
+            "key": "sport888",
+            "title": "888sport",
+            "odds": 1.7
+          },
+          {
+            "key": "pinnacle",
+            "title": "Pinnacle",
+            "odds": 1.83
+          },
+          {
+            "key": "codere_it",
+            "title": "Codere (IT)",
+            "odds": 1.74
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 1.8
+          },
+          {
+            "key": "betfair_ex_eu",
+            "title": "Betfair",
+            "odds": 1.84
+          },
+          {
+            "key": "matchbook",
+            "title": "Matchbook",
+            "odds": 1.75
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.74
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-09-25T11:50:01.300Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 53.5% da 17 bookmaker; quota disponibile 1.84 (Betfair).",
+      "result": "94-96",
+      "won": false,
+      "pnl": -1,
+      "fairPnl": null
+    },
+    {
+      "id": "480d5455c08225b7b288ab3b993dbaa6:2",
+      "eventId": "480d5455c08225b7b288ab3b993dbaa6",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Beşiktaş J.K.",
+      "away": "Valencia Basket",
+      "kickoff": "2026-09-25T17:00:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.4649328321019274,
+        "n": 17,
+        "odds": 2.15,
+        "book": "888sport",
+        "age": 0.02925,
+        "dispersion": 0.032972389540754155,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 2.09
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 2
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 2.04
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 2
+          },
+          {
+            "key": "marathonbet",
+            "title": "Marathon Bet",
+            "odds": 2.07
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 2.05
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 2.05
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.96
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 2.04
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 2.07
+          },
+          {
+            "key": "sport888",
+            "title": "888sport",
+            "odds": 2.15
+          },
+          {
+            "key": "pinnacle",
+            "title": "Pinnacle",
+            "odds": 2.03
+          },
+          {
+            "key": "codere_it",
+            "title": "Codere (IT)",
+            "odds": 1.98
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 2.05
+          },
+          {
+            "key": "betfair_ex_eu",
+            "title": "Betfair",
+            "odds": 2.12
+          },
+          {
+            "key": "matchbook",
+            "title": "Matchbook",
+            "odds": 2.08
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.98
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-09-25T11:50:01.300Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 46.5% da 17 bookmaker; quota disponibile 2.15 (888sport).",
+      "result": "94-96",
+      "won": true,
+      "pnl": 1.15,
+      "fairPnl": null
+    },
+    {
+      "id": "ae931f9c9c05e29991820c51e65e968a:1",
+      "eventId": "ae931f9c9c05e29991820c51e65e968a",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "KK Partizan NIS",
+      "away": "Pallacanestro Olimpia Milano",
+      "kickoff": "2026-09-25T18:45:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.5928857552324576,
+        "n": 15,
+        "odds": 1.68,
+        "book": "Betfair",
+        "age": 0.02925,
+        "dispersion": 0.026715517899396857,
+        "prices": [
+          {
+            "key": "marathonbet",
+            "title": "Marathon Bet",
+            "odds": 1.61
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.6
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.62
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 1.62
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.62
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 1.56
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 1.56
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 1.56
+          },
+          {
+            "key": "sport888",
+            "title": "888sport",
+            "odds": 1.61
+          },
+          {
+            "key": "pinnacle",
+            "title": "Pinnacle",
+            "odds": 1.62
+          },
+          {
+            "key": "codere_it",
+            "title": "Codere (IT)",
+            "odds": 1.58
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 1.62
+          },
+          {
+            "key": "betfair_ex_eu",
+            "title": "Betfair",
+            "odds": 1.68
+          },
+          {
+            "key": "matchbook",
+            "title": "Matchbook",
+            "odds": 1.67
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.57
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-09-25T11:50:01.300Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 59.3% da 15 bookmaker; quota disponibile 1.68 (Betfair).",
+      "result": "92-76",
+      "won": true,
+      "pnl": 0.6799999999999999,
+      "fairPnl": null
+    },
+    {
+      "id": "ae931f9c9c05e29991820c51e65e968a:2",
+      "eventId": "ae931f9c9c05e29991820c51e65e968a",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "KK Partizan NIS",
+      "away": "Pallacanestro Olimpia Milano",
+      "kickoff": "2026-09-25T18:45:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.40711424476754243,
+        "n": 15,
+        "odds": 2.4,
+        "book": "BetOnline.ag",
+        "age": 0.02925,
+        "dispersion": 0.026715517899397023,
+        "prices": [
+          {
+            "key": "marathonbet",
+            "title": "Marathon Bet",
+            "odds": 2.36
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 2.35
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 2.3
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 2.3
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 2.38
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 2.4
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 2.4
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 2.36
+          },
+          {
+            "key": "sport888",
+            "title": "888sport",
+            "odds": 2.3
+          },
+          {
+            "key": "pinnacle",
+            "title": "Pinnacle",
+            "odds": 2.37
+          },
+          {
+            "key": "codere_it",
+            "title": "Codere (IT)",
+            "odds": 2.25
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 2.4
+          },
+          {
+            "key": "betfair_ex_eu",
+            "title": "Betfair",
+            "odds": 2.38
+          },
+          {
+            "key": "matchbook",
+            "title": "Matchbook",
+            "odds": 2.3
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 2.25
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-09-25T11:50:01.300Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 40.7% da 15 bookmaker; quota disponibile 2.40 (BetOnline.ag).",
+      "result": "92-76",
+      "won": false,
+      "pnl": -1,
+      "fairPnl": null
     }
   ],
   "limits": [
@@ -29265,8 +29289,8 @@
   },
   "fixtureInfo": {
     "kind": "last-successful-snapshot",
-    "capturedAt": "2026-09-25T18:36:17.479Z",
-    "generation": "10a97b88-aedd-4fc6-ba92-c1e0420d57c1",
+    "capturedAt": "2026-09-26T11:24:04.379Z",
+    "generation": "7da45618-2c59-4ec5-aa7c-9ecd4b3c0c40",
     "sources": [
       "The Odds API v4: eventi e quote h2h",
       "Understat: xG storici"
