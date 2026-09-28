@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "dataPipelineVersion": 1,
-  "generation": "14777519-dbf1-49e9-ac3b-039ab005a528",
-  "generatedAt": "2026-09-28T13:53:16.479Z",
+  "generation": "5831d01c-f3c0-4567-b4bf-85afb4c7e3f9",
+  "generatedAt": "2026-09-28T20:33:30.418Z",
   "day": "2026-09-28",
   "zone": "Europe/Rome",
   "version": "dc-xg-180-audited-1",
@@ -51,31 +51,31 @@
       "league": "Serie A",
       "matches": 1570,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-09-28T13:53:18.053Z"
+      "downloadedAt": "2026-09-28T20:33:32.414Z"
     },
     {
       "league": "Premier League",
       "matches": 1570,
       "lastMatch": "2026-09-20T15:30:00.000Z",
-      "downloadedAt": "2026-09-28T13:53:18.881Z"
+      "downloadedAt": "2026-09-28T20:33:33.244Z"
     },
     {
       "league": "Liga",
       "matches": 1589,
       "lastMatch": "2026-09-20T19:00:00.000Z",
-      "downloadedAt": "2026-09-28T13:53:19.722Z"
+      "downloadedAt": "2026-09-28T20:33:34.068Z"
     },
     {
       "league": "Bundesliga",
       "matches": 1260,
       "lastMatch": "2026-09-20T17:30:00.000Z",
-      "downloadedAt": "2026-09-28T13:53:20.305Z"
+      "downloadedAt": "2026-09-28T20:33:34.671Z"
     },
     {
       "league": "Ligue 1",
       "matches": 1343,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-09-28T13:53:20.981Z"
+      "downloadedAt": "2026-09-28T20:33:35.399Z"
     }
   ],
   "diagnostics": [
@@ -87,7 +87,9 @@
     "Champions League: nessun evento ancora da iniziare oggi.",
     "Basketball Euroleague: nessun evento ancora da iniziare oggi.",
     "NBA: nessun evento ancora da iniziare oggi.",
-    "WNBA: nessun evento ancora da iniziare oggi."
+    "WNBA: nessun evento ancora da iniziare oggi.",
+    "ATP China Open: nessun evento ancora da iniziare oggi.",
+    "WTA China Open: nessun evento ancora da iniziare oggi."
   ],
   "report": {
     "version": "dc-xg-180-audited-1",
@@ -229,7 +231,7 @@
       "fairPnl": 0
     }
   },
-  "pendingOld": 91,
+  "pendingOld": 93,
   "history": [
     {
       "id": "a9656d25ca6b06be9e477a098333bd70:1",
