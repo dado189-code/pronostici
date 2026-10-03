@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "dataPipelineVersion": 1,
-  "generation": "473ce251-d901-49c0-bbaa-8b7c0c914e24",
-  "generatedAt": "2026-10-03T17:56:52.337Z",
+  "generation": "87c341cb-986c-4824-a87e-43df80b06594",
+  "generatedAt": "2026-10-03T21:13:33.541Z",
   "day": "2026-10-03",
   "zone": "Europe/Rome",
   "version": "dc-xg-180-audited-1",
@@ -51,31 +51,31 @@
       "league": "Serie A",
       "matches": 1570,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-10-03T17:56:53.838Z"
+      "downloadedAt": "2026-10-03T21:13:35.540Z"
     },
     {
       "league": "Premier League",
       "matches": 1570,
       "lastMatch": "2026-09-20T15:30:00.000Z",
-      "downloadedAt": "2026-10-03T17:56:54.553Z"
+      "downloadedAt": "2026-10-03T21:13:36.498Z"
     },
     {
       "league": "Liga",
       "matches": 1589,
       "lastMatch": "2026-09-20T19:00:00.000Z",
-      "downloadedAt": "2026-10-03T17:56:55.289Z"
+      "downloadedAt": "2026-10-03T21:13:37.487Z"
     },
     {
       "league": "Bundesliga",
       "matches": 1260,
       "lastMatch": "2026-09-20T17:30:00.000Z",
-      "downloadedAt": "2026-10-03T17:56:55.805Z"
+      "downloadedAt": "2026-10-03T21:13:38.339Z"
     },
     {
       "league": "Ligue 1",
       "matches": 1343,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-10-03T17:56:56.421Z"
+      "downloadedAt": "2026-10-03T21:13:39.159Z"
     }
   ],
   "diagnostics": [
@@ -232,7 +232,7 @@
       "fairPnl": 0
     }
   },
-  "pendingOld": 109,
+  "pendingOld": 111,
   "history": [
     {
       "id": "a9656d25ca6b06be9e477a098333bd70:1",
@@ -31483,8 +31483,8 @@
   },
   "fixtureInfo": {
     "kind": "last-successful-snapshot",
-    "capturedAt": "2026-10-03T17:56:52.337Z",
-    "generation": "473ce251-d901-49c0-bbaa-8b7c0c914e24",
+    "capturedAt": "2026-10-03T21:13:33.541Z",
+    "generation": "87c341cb-986c-4824-a87e-43df80b06594",
     "sources": [
       "The Odds API v4: eventi e quote h2h",
       "Understat: xG storici"
