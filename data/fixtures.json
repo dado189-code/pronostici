@@ -1,9 +1,9 @@
 {
   "schema": 2,
   "dataPipelineVersion": 1,
-  "generation": "e647b9ed-de08-45bb-87d4-85592ac250d5",
-  "generatedAt": "2026-10-02T19:17:44.774Z",
-  "day": "2026-10-02",
+  "generation": "2c1496c4-c677-4658-8a75-fbd6a59b9744",
+  "generatedAt": "2026-10-03T11:38:30.471Z",
+  "day": "2026-10-03",
   "zone": "Europe/Rome",
   "version": "dc-xg-180-audited-1",
   "policy": {
@@ -39,7 +39,558 @@
     ],
     "consensusBooks": 3
   },
-  "picks": [],
+  "picks": [
+    {
+      "id": "33518edfa1e26f2c0e3ae617afe0ab1b:1",
+      "eventId": "33518edfa1e26f2c0e3ae617afe0ab1b",
+      "sport": "tennis_atp_china_open",
+      "league": "ATP China Open",
+      "home": "Francisco Cerundolo",
+      "away": "Jakub Mensik",
+      "kickoff": "2026-10-03T11:50:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.3536235475317653,
+        "n": 13,
+        "odds": 2.78,
+        "book": "Betfair",
+        "age": 0.1292975,
+        "dispersion": 0.020192266817273596,
+        "prices": [
+          {
+            "key": "betfair_ex_eu",
+            "title": "Betfair",
+            "odds": 2.78
+          },
+          {
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
+            "odds": 2.65
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 2.67
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 2.65
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 2.5
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 2.65
+          },
+          {
+            "key": "marathonbet",
+            "title": "Marathon Bet",
+            "odds": 2.69
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 2.74
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 2.6
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 2.75
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 2.75
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 2.6
+          },
+          {
+            "key": "tipico_de",
+            "title": "Tipico",
+            "odds": 2.65
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "pending",
+      "generatedAt": "2026-10-03T11:38:30.471Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 35.4% da 13 bookmaker; quota disponibile 2.78 (Betfair)."
+    },
+    {
+      "id": "33518edfa1e26f2c0e3ae617afe0ab1b:2",
+      "eventId": "33518edfa1e26f2c0e3ae617afe0ab1b",
+      "sport": "tennis_atp_china_open",
+      "league": "ATP China Open",
+      "home": "Francisco Cerundolo",
+      "away": "Jakub Mensik",
+      "kickoff": "2026-10-03T11:50:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.6463764524682347,
+        "n": 13,
+        "odds": 1.54,
+        "book": "Betfair",
+        "age": 0.1292975,
+        "dispersion": 0.02019226681727382,
+        "prices": [
+          {
+            "key": "betfair_ex_eu",
+            "title": "Betfair",
+            "odds": 1.54
+          },
+          {
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
+            "odds": 1.42
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.48
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.47
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 1.43
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 1.47
+          },
+          {
+            "key": "marathonbet",
+            "title": "Marathon Bet",
+            "odds": 1.46
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.49
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 1.46
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 1.49
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 1.44
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.4
+          },
+          {
+            "key": "tipico_de",
+            "title": "Tipico",
+            "odds": 1.42
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "pending",
+      "generatedAt": "2026-10-03T11:38:30.471Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 64.6% da 13 bookmaker; quota disponibile 1.54 (Betfair)."
+    },
+    {
+      "id": "98247d9182513d3430cff642b77bbca1:1",
+      "eventId": "98247d9182513d3430cff642b77bbca1",
+      "sport": "tennis_wta_china_open",
+      "league": "WTA China Open",
+      "home": "Sonay Kartal",
+      "away": "Xinyu Wang",
+      "kickoff": "2026-10-03T11:50:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.5087759146016558,
+        "n": 12,
+        "odds": 1.92,
+        "book": "Unibet (NL)",
+        "age": 0.06374194444444445,
+        "dispersion": 0.03157894736842104,
+        "prices": [
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.89
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.87
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 1.83
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 1.86
+          },
+          {
+            "key": "tipico_de",
+            "title": "Tipico",
+            "odds": 1.8
+          },
+          {
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
+            "odds": 1.8
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 1.89
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.83
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 1.92
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 1.92
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 1.9
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 1.88
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "pending",
+      "generatedAt": "2026-10-03T11:38:30.471Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 50.9% da 12 bookmaker; quota disponibile 1.92 (Unibet (NL))."
+    },
+    {
+      "id": "98247d9182513d3430cff642b77bbca1:2",
+      "eventId": "98247d9182513d3430cff642b77bbca1",
+      "sport": "tennis_wta_china_open",
+      "league": "WTA China Open",
+      "home": "Sonay Kartal",
+      "away": "Xinyu Wang",
+      "kickoff": "2026-10-03T11:50:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.4912240853983442,
+        "n": 12,
+        "odds": 2,
+        "book": "Betclic (FR)",
+        "age": 0.06374194444444445,
+        "dispersion": 0.031578947368420984,
+        "prices": [
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.92
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.92
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 1.99
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 1.9
+          },
+          {
+            "key": "tipico_de",
+            "title": "Tipico",
+            "odds": 1.9
+          },
+          {
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
+            "odds": 2
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 1.92
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.99
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 1.88
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 1.88
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 1.96
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 1.93
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "pending",
+      "generatedAt": "2026-10-03T11:38:30.471Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 49.1% da 12 bookmaker; quota disponibile 2.00 (Betclic (FR))."
+    },
+    {
+      "id": "3a1b590508385c6acada556aec2f0676:1",
+      "eventId": "3a1b590508385c6acada556aec2f0676",
+      "sport": "tennis_wta_china_open",
+      "league": "WTA China Open",
+      "home": "Elena Rybakina",
+      "away": "Alina Charaeva",
+      "kickoff": "2026-10-03T12:30:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.9160823409582167,
+        "n": 12,
+        "odds": 1.05,
+        "book": "GTbets",
+        "age": 0.06374194444444445,
+        "dispersion": 0.013650728922418032,
+        "prices": [
+          {
+            "key": "marathonbet",
+            "title": "Marathon Bet",
+            "odds": 1.04
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.04
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.04
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 1.03
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 1.04
+          },
+          {
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
+            "odds": 1.02
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 1.05
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.03
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 1.04
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 1.04
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 1.04
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 1.04
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "pending",
+      "generatedAt": "2026-10-03T11:38:30.471Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 91.6% da 12 bookmaker; quota disponibile 1.05 (GTbets)."
+    },
+    {
+      "id": "3a1b590508385c6acada556aec2f0676:2",
+      "eventId": "3a1b590508385c6acada556aec2f0676",
+      "sport": "tennis_wta_china_open",
+      "league": "WTA China Open",
+      "home": "Elena Rybakina",
+      "away": "Alina Charaeva",
+      "kickoff": "2026-10-03T12:30:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.08391765904178337,
+        "n": 12,
+        "odds": 12.56,
+        "book": "BetOnline.ag",
+        "age": 0.06374194444444445,
+        "dispersion": 0.013650728922418212,
+        "prices": [
+          {
+            "key": "marathonbet",
+            "title": "Marathon Bet",
+            "odds": 10.5
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 11.3
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 10.5
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 12
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 11
+          },
+          {
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
+            "odds": 12
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 11.44
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 12
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 11
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 11
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 11
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 12.56
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "pending",
+      "generatedAt": "2026-10-03T11:38:30.471Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 8.4% da 12 bookmaker; quota disponibile 12.56 (BetOnline.ag)."
+    }
+  ],
   "quantInputs": {},
   "selections": {
     "single": null,
@@ -51,31 +602,31 @@
       "league": "Serie A",
       "matches": 1570,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-10-02T19:17:46.662Z"
+      "downloadedAt": "2026-10-03T11:38:32.211Z"
     },
     {
       "league": "Premier League",
       "matches": 1570,
       "lastMatch": "2026-09-20T15:30:00.000Z",
-      "downloadedAt": "2026-10-02T19:17:47.569Z"
+      "downloadedAt": "2026-10-03T11:38:33.047Z"
     },
     {
       "league": "Liga",
       "matches": 1589,
       "lastMatch": "2026-09-20T19:00:00.000Z",
-      "downloadedAt": "2026-10-02T19:17:48.478Z"
+      "downloadedAt": "2026-10-03T11:38:33.907Z"
     },
     {
       "league": "Bundesliga",
       "matches": 1260,
       "lastMatch": "2026-09-20T17:30:00.000Z",
-      "downloadedAt": "2026-10-02T19:17:49.280Z"
+      "downloadedAt": "2026-10-03T11:38:34.668Z"
     },
     {
       "league": "Ligue 1",
       "matches": 1343,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-10-02T19:17:50.070Z"
+      "downloadedAt": "2026-10-03T11:38:35.366Z"
     }
   ],
   "diagnostics": [
@@ -88,9 +639,7 @@
     "Basketball Euroleague: nessun evento ancora da iniziare oggi.",
     "NBA: nessun evento ancora da iniziare oggi.",
     "WNBA: nessun evento ancora da iniziare oggi.",
-    "ATP China Open: nessun evento ancora da iniziare oggi.",
-    "ATP Japan Open: nessun evento ancora da iniziare oggi.",
-    "WTA China Open: nessun evento ancora da iniziare oggi."
+    "ATP Japan Open: nessun evento ancora da iniziare oggi."
   ],
   "report": {
     "version": "dc-xg-180-audited-1",
@@ -226,9 +775,9 @@
       "fairPnl": 1.1402581330280668
     },
     "CONSENSO": {
-      "n": 28,
-      "wins": 14,
-      "pnl": 3.0200000000000014,
+      "n": 30,
+      "wins": 15,
+      "pnl": 2.990000000000001,
       "fairPnl": 0
     }
   },
@@ -31203,6 +31752,264 @@
       "won": false,
       "pnl": -1,
       "fairPnl": null
+    },
+    {
+      "id": "fc6da8af368783abc0b42a3997ff4f9c:1",
+      "eventId": "fc6da8af368783abc0b42a3997ff4f9c",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Saski Baskonia",
+      "away": "Pallacanestro Olimpia Milano",
+      "kickoff": "2026-10-02T18:30:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.4974628873248488,
+        "n": 19,
+        "odds": 1.97,
+        "book": "Unibet (NL)",
+        "age": 0.028386666666666668,
+        "dispersion": 0.0313512330366264,
+        "prices": [
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.91
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 1.92
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.91
+          },
+          {
+            "key": "sport888",
+            "title": "888sport",
+            "odds": 1.91
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.9
+          },
+          {
+            "key": "marathonbet",
+            "title": "Marathon Bet",
+            "odds": 1.89
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 1.9
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 1.92
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 1.86
+          },
+          {
+            "key": "codere_it",
+            "title": "Codere (IT)",
+            "odds": 1.86
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 1.96
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 1.97
+          },
+          {
+            "key": "pinnacle",
+            "title": "Pinnacle",
+            "odds": 1.92
+          },
+          {
+            "key": "betfair_ex_eu",
+            "title": "Betfair",
+            "odds": 1.96
+          },
+          {
+            "key": "matchbook",
+            "title": "Matchbook",
+            "odds": 1.88
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.86
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 1.92
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.85
+          },
+          {
+            "key": "williamhill",
+            "title": "William Hill",
+            "odds": 1.91
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-10-02T12:33:35.192Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 49.7% da 19 bookmaker; quota disponibile 1.97 (Unibet (NL)).",
+      "result": "87-76",
+      "won": true,
+      "pnl": 0.97,
+      "fairPnl": null
+    },
+    {
+      "id": "fc6da8af368783abc0b42a3997ff4f9c:2",
+      "eventId": "fc6da8af368783abc0b42a3997ff4f9c",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Saski Baskonia",
+      "away": "Pallacanestro Olimpia Milano",
+      "kickoff": "2026-10-02T18:30:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.5025371126751513,
+        "n": 19,
+        "odds": 2,
+        "book": "Betfair",
+        "age": 0.028386666666666668,
+        "dispersion": 0.03135123303662629,
+        "prices": [
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.91
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 1.85
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.96
+          },
+          {
+            "key": "sport888",
+            "title": "888sport",
+            "odds": 1.91
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.9
+          },
+          {
+            "key": "marathonbet",
+            "title": "Marathon Bet",
+            "odds": 1.94
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 1.9
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 1.9
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 1.84
+          },
+          {
+            "key": "codere_it",
+            "title": "Codere (IT)",
+            "odds": 1.84
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 1.82
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 1.83
+          },
+          {
+            "key": "pinnacle",
+            "title": "Pinnacle",
+            "odds": 1.93
+          },
+          {
+            "key": "betfair_ex_eu",
+            "title": "Betfair",
+            "odds": 2
+          },
+          {
+            "key": "matchbook",
+            "title": "Matchbook",
+            "odds": 1.97
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.84
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 1.9
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.71
+          },
+          {
+            "key": "williamhill",
+            "title": "William Hill",
+            "odds": 1.91
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-10-02T12:33:35.192Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 50.3% da 19 bookmaker; quota disponibile 2.00 (Betfair).",
+      "result": "87-76",
+      "won": false,
+      "pnl": -1,
+      "fairPnl": null
     }
   ],
   "limits": [
@@ -31225,8 +32032,8 @@
   },
   "fixtureInfo": {
     "kind": "last-successful-snapshot",
-    "capturedAt": "2026-10-02T19:17:44.774Z",
-    "generation": "e647b9ed-de08-45bb-87d4-85592ac250d5",
+    "capturedAt": "2026-10-03T11:38:30.471Z",
+    "generation": "2c1496c4-c677-4658-8a75-fbd6a59b9744",
     "sources": [
       "The Odds API v4: eventi e quote h2h",
       "Understat: xG storici"
