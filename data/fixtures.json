@@ -1,9 +1,9 @@
 {
   "schema": 2,
   "dataPipelineVersion": 1,
-  "generation": "8e5a0264-10ae-4e21-bfcf-35176cc6d765",
-  "generatedAt": "2026-10-04T21:23:45.598Z",
-  "day": "2026-10-04",
+  "generation": "4b38596a-f92d-4875-bb7c-fa85b2b06cab",
+  "generatedAt": "2026-10-05T14:36:24.976Z",
+  "day": "2026-10-05",
   "zone": "Europe/Rome",
   "version": "dc-xg-180-audited-1",
   "policy": {
@@ -51,31 +51,31 @@
       "league": "Serie A",
       "matches": 1570,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-10-04T21:23:47.667Z"
+      "downloadedAt": "2026-10-05T14:36:26.529Z"
     },
     {
       "league": "Premier League",
       "matches": 1570,
       "lastMatch": "2026-09-20T15:30:00.000Z",
-      "downloadedAt": "2026-10-04T21:23:48.570Z"
+      "downloadedAt": "2026-10-05T14:36:27.301Z"
     },
     {
       "league": "Liga",
       "matches": 1589,
       "lastMatch": "2026-09-20T19:00:00.000Z",
-      "downloadedAt": "2026-10-04T21:23:49.310Z"
+      "downloadedAt": "2026-10-05T14:36:28.112Z"
     },
     {
       "league": "Bundesliga",
       "matches": 1260,
       "lastMatch": "2026-09-20T17:30:00.000Z",
-      "downloadedAt": "2026-10-04T21:23:49.964Z"
+      "downloadedAt": "2026-10-05T14:36:28.694Z"
     },
     {
       "league": "Ligue 1",
       "matches": 1343,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-10-04T21:23:50.784Z"
+      "downloadedAt": "2026-10-05T14:36:29.352Z"
     }
   ],
   "diagnostics": [
@@ -88,7 +88,6 @@
     "Basketball Euroleague: nessun evento ancora da iniziare oggi.",
     "NBA: nessun evento ancora da iniziare oggi.",
     "WNBA: nessun evento ancora da iniziare oggi.",
-    "ATP China Open: nessun evento ancora da iniziare oggi.",
     "ATP Japan Open: nessun evento ancora da iniziare oggi.",
     "WTA China Open: nessun evento ancora da iniziare oggi."
   ],
@@ -31483,8 +31482,8 @@
   },
   "fixtureInfo": {
     "kind": "last-successful-snapshot",
-    "capturedAt": "2026-10-04T21:23:45.598Z",
-    "generation": "8e5a0264-10ae-4e21-bfcf-35176cc6d765",
+    "capturedAt": "2026-10-05T14:36:24.976Z",
+    "generation": "4b38596a-f92d-4875-bb7c-fa85b2b06cab",
     "sources": [
       "The Odds API v4: eventi e quote h2h",
       "Understat: xG storici"
