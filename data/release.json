@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "dataPipelineVersion": 1,
-  "generation": "adc04b18-4ebf-41e8-9f45-70aa874b629b",
-  "generatedAt": "2026-10-06T13:17:31.302Z",
+  "generation": "493c024b-b99f-4db9-bdce-c64782fa6568",
+  "generatedAt": "2026-10-06T19:32:13.259Z",
   "day": "2026-10-06",
   "zone": "Europe/Rome",
   "version": "dc-xg-180-audited-1",
@@ -51,31 +51,31 @@
       "league": "Serie A",
       "matches": 1570,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-10-06T13:17:33.106Z"
+      "downloadedAt": "2026-10-06T19:32:15.217Z"
     },
     {
       "league": "Premier League",
       "matches": 1570,
       "lastMatch": "2026-09-20T15:30:00.000Z",
-      "downloadedAt": "2026-10-06T13:17:33.855Z"
+      "downloadedAt": "2026-10-06T19:32:16.151Z"
     },
     {
       "league": "Liga",
       "matches": 1589,
       "lastMatch": "2026-09-20T19:00:00.000Z",
-      "downloadedAt": "2026-10-06T13:17:34.628Z"
+      "downloadedAt": "2026-10-06T19:32:17.111Z"
     },
     {
       "league": "Bundesliga",
       "matches": 1260,
       "lastMatch": "2026-09-20T17:30:00.000Z",
-      "downloadedAt": "2026-10-06T13:17:35.156Z"
+      "downloadedAt": "2026-10-06T19:32:17.971Z"
     },
     {
       "league": "Ligue 1",
       "matches": 1343,
       "lastMatch": "2026-09-20T18:45:00.000Z",
-      "downloadedAt": "2026-10-06T13:17:35.654Z"
+      "downloadedAt": "2026-10-06T19:32:18.795Z"
     }
   ],
   "diagnostics": [
