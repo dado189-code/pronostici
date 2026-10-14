@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "dataPipelineVersion": 1,
-  "generation": "0045e40d-c84c-4fe4-b033-65efe810a7a4",
-  "generatedAt": "2026-10-14T11:50:49.703Z",
+  "generation": "14854db0-4976-43c8-b639-b6ca5ecdd1ee",
+  "generatedAt": "2026-10-14T18:37:30.148Z",
   "day": "2026-10-14",
   "zone": "Europe/Rome",
   "version": "dc-xg-180-audited-1",
@@ -41,726 +41,6 @@
   },
   "picks": [
     {
-      "id": "5d6f9accd6f79ae4216dfd29ccc342b2:1",
-      "eventId": "5d6f9accd6f79ae4216dfd29ccc342b2",
-      "sport": "soccer_uefa_champs_league",
-      "league": "Champions League",
-      "home": "Feyenoord",
-      "away": "Como",
-      "kickoff": "2026-10-14T16:45:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.3010487263276294,
-        "n": 18,
-        "odds": 3.35,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.01986638776384514,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.27
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 3.35
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 3.27
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 3.1
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 3.1
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 3.2
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 3.15
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.2
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 3
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 3.27
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 3
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 2.95
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.1
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 3.05
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 3.35
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 3.23
-          },
-          {
-            "key": "betanysports",
-            "title": "BetAnything",
-            "odds": 3.23
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 30.1% da 18 bookmaker; quota disponibile 3.35 (Matchbook)."
-    },
-    {
-      "id": "5d6f9accd6f79ae4216dfd29ccc342b2:X",
-      "eventId": "5d6f9accd6f79ae4216dfd29ccc342b2",
-      "sport": "soccer_uefa_champs_league",
-      "league": "Champions League",
-      "home": "Feyenoord",
-      "away": "Como",
-      "kickoff": "2026-10-14T16:45:00.000Z",
-      "outcome": "X",
-      "model": null,
-      "market": {
-        "p": 0.25026108485046505,
-        "n": 18,
-        "odds": 3.96,
-        "book": "1xBet",
-        "age": 0.01963972222222222,
-        "dispersion": 0.021278690079203577,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.96
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 3.95
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 3.86
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 3.6
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 3.8
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 3.75
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 3.7
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.75
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.6
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 3.6
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 3.88
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 3.95
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 3.85
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.55
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 3.9
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 3.95
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 3.85
-          },
-          {
-            "key": "betanysports",
-            "title": "BetAnything",
-            "odds": 3.85
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 25.0% da 18 bookmaker; quota disponibile 3.96 (1xBet)."
-    },
-    {
-      "id": "5d6f9accd6f79ae4216dfd29ccc342b2:2",
-      "eventId": "5d6f9accd6f79ae4216dfd29ccc342b2",
-      "sport": "soccer_uefa_champs_league",
-      "league": "Champions League",
-      "home": "Feyenoord",
-      "away": "Como",
-      "kickoff": "2026-10-14T16:45:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.4486901888219056,
-        "n": 18,
-        "odds": 2.2,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.019230194325076666,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.19
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 2.2
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 2.16
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 2
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 2.16
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 2.05
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 2.15
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.18
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2.1
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 2.1
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 2.17
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 2.05
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 2.05
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 2
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 2.05
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 2.2
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 2.15
-          },
-          {
-            "key": "betanysports",
-            "title": "BetAnything",
-            "odds": 2.15
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 44.9% da 18 bookmaker; quota disponibile 2.20 (Matchbook)."
-    },
-    {
-      "id": "2903ee092f7e08c549b130a3d394ac3c:1",
-      "eventId": "2903ee092f7e08c549b130a3d394ac3c",
-      "sport": "soccer_uefa_champs_league",
-      "league": "Champions League",
-      "home": "LASK",
-      "away": "Liverpool",
-      "kickoff": "2026-10-14T16:45:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.12698702584041782,
-        "n": 18,
-        "odds": 9,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.029866913049235347,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 7.7
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 8.8
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 7.59
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 7.25
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 6.8
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 7.2
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 6.75
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 7
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 7
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 7.5
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 7.9
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 8.1
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 6.5
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 6.5
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 8.2
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 9
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 7.7
-          },
-          {
-            "key": "betanysports",
-            "title": "BetAnything",
-            "odds": 7.7
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 12.7% da 18 bookmaker; quota disponibile 9.00 (Matchbook)."
-    },
-    {
-      "id": "2903ee092f7e08c549b130a3d394ac3c:X",
-      "eventId": "2903ee092f7e08c549b130a3d394ac3c",
-      "sport": "soccer_uefa_champs_league",
-      "league": "Champions League",
-      "home": "LASK",
-      "away": "Liverpool",
-      "kickoff": "2026-10-14T16:45:00.000Z",
-      "outcome": "X",
-      "model": null,
-      "market": {
-        "p": 0.18390945373996376,
-        "n": 18,
-        "odds": 5.5,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.01765346044460528,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 5.33
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 5.5
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 5.3
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 5.1
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 5
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 5.2
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 5.2
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 5.4
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 4.75
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 5
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 4.95
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 5
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 4.8
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 4.8
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 5.35
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 5.5
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 5.35
-          },
-          {
-            "key": "betanysports",
-            "title": "BetAnything",
-            "odds": 5.35
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 18.4% da 18 bookmaker; quota disponibile 5.50 (Matchbook)."
-    },
-    {
-      "id": "2903ee092f7e08c549b130a3d394ac3c:2",
-      "eventId": "2903ee092f7e08c549b130a3d394ac3c",
-      "sport": "soccer_uefa_champs_league",
-      "league": "Champions League",
-      "home": "LASK",
-      "away": "Liverpool",
-      "kickoff": "2026-10-14T16:45:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.6891035204196184,
-        "n": 18,
-        "odds": 1.43,
-        "book": "1xBet",
-        "age": 0.01963972222222222,
-        "dispersion": 0.03918107986644559,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.43
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.4
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.39
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 1.35
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.33
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 1.4
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.34
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.36
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.33
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.36
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.38
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.39
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.36
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 1.36
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.4
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 1.4
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.39
-          },
-          {
-            "key": "betanysports",
-            "title": "BetAnything",
-            "odds": 1.39
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 68.9% da 18 bookmaker; quota disponibile 1.43 (1xBet)."
-    },
-    {
       "id": "0f961390e790ad2c80ecb3f302cad4a6:1",
       "eventId": "0f961390e790ad2c80ecb3f302cad4a6",
       "sport": "soccer_uefa_champs_league",
@@ -771,42 +51,27 @@
       "outcome": "1",
       "model": null,
       "market": {
-        "p": 0.35527666885120446,
-        "n": 18,
-        "odds": 2.8,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.009969094522400801,
+        "p": 0.3597166958486415,
+        "n": 11,
+        "odds": 2.72,
+        "book": "Coolbet",
+        "age": 0.025596666666666667,
+        "dispersion": 0.018531588257604925,
         "prices": [
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 2.8
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.79
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 2.72
-          },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 2.55
+            "odds": 2.45
           },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 2.6
+            "odds": 2.48
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 2.7
+            "odds": 2.65
           },
           {
             "key": "winamax_fr",
@@ -814,34 +79,14 @@
             "odds": 2.55
           },
           {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 2.6
-          },
-          {
             "key": "betsson",
             "title": "Betsson",
             "odds": 2.68
           },
           {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.7
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 2.55
-          },
-          {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 2.6
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2.62
+            "odds": 2.65
           },
           {
             "key": "williamhill",
@@ -851,34 +96,110 @@
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 2.78
+            "odds": 2.72
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 2.8
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 2.61
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 2.76
+            "odds": 2.66
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 2.7
+            "odds": 2.65
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 35.5% da 18 bookmaker; quota disponibile 2.80 (Matchbook)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 2.55,
+            "to": 2.45,
+            "change": -0.039215686274509665
+          },
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 2.6,
+            "to": 2.48,
+            "change": -0.04615384615384621
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 2.7,
+            "to": 2.65,
+            "change": -0.0185185185185186
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 2.55,
+            "to": 2.55,
+            "change": 0
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 2.68,
+            "to": 2.68,
+            "change": 0
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 2.6,
+            "to": 2.65,
+            "change": 0.019230769230769162
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 2.62,
+            "to": 2.62,
+            "change": 0
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 2.78,
+            "to": 2.72,
+            "change": -0.021582733812949506
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 2.76,
+            "to": 2.66,
+            "change": -0.03623188405797084
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 2.7,
+            "to": 2.65,
+            "change": -0.0185185185185186
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 36.0% da 11 bookmaker; quota disponibile 2.72 (Coolbet)."
     },
     {
       "id": "0f961390e790ad2c80ecb3f302cad4a6:X",
@@ -891,52 +212,32 @@
       "outcome": "X",
       "model": null,
       "market": {
-        "p": 0.2805905460341277,
-        "n": 18,
-        "odds": 3.5,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.02005452940805652,
+        "p": 0.2853073297176069,
+        "n": 11,
+        "odds": 3.45,
+        "book": "Coolbet",
+        "age": 0.025596666666666667,
+        "dispersion": 0.018363629604847442,
         "prices": [
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 3.5
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.49
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 3.42
-          },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 3.3
+            "odds": 3.2
           },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 3.45
+            "odds": 3.28
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 3.4
+            "odds": 3.35
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 3.4
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 3.4
+            "odds": 3.3
           },
           {
             "key": "betsson",
@@ -944,29 +245,14 @@
             "odds": 3.3
           },
           {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.35
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.25
-          },
-          {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 3.35
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.3
+            "odds": 3.2
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 3.3
+            "odds": 3.1
           },
           {
             "key": "coolbet",
@@ -974,9 +260,9 @@
             "odds": 3.45
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 3.5
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 3.32
           },
           {
             "key": "betonlineag",
@@ -986,19 +272,95 @@
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 3.4
+            "odds": 3.35
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 28.1% da 18 bookmaker; quota disponibile 3.50 (Matchbook)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 3.3,
+            "to": 3.2,
+            "change": -0.030303030303030165
+          },
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 3.45,
+            "to": 3.28,
+            "change": -0.049275362318840665
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 3.4,
+            "to": 3.35,
+            "change": -0.014705882352941124
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 3.4,
+            "to": 3.3,
+            "change": -0.02941176470588236
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 3.3,
+            "to": 3.3,
+            "change": 0
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 3.35,
+            "to": 3.2,
+            "change": -0.04477611940298509
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 3.3,
+            "to": 3.1,
+            "change": -0.06060606060606055
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 3.45,
+            "to": 3.45,
+            "change": 0
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 3.36,
+            "to": 3.36,
+            "change": 0
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 3.4,
+            "to": 3.35,
+            "change": -0.014705882352941124
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 28.5% da 11 bookmaker; quota disponibile 3.45 (Coolbet)."
     },
     {
       "id": "0f961390e790ad2c80ecb3f302cad4a6:2",
@@ -1011,28 +373,13 @@
       "outcome": "2",
       "model": null,
       "market": {
-        "p": 0.3641327851146677,
-        "n": 18,
-        "odds": 2.74,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.017339878963625988,
+        "p": 0.35497597443375156,
+        "n": 11,
+        "odds": 2.77,
+        "book": "BetOnline.ag",
+        "age": 0.025596666666666667,
+        "dispersion": 0.011707937759577736,
         "prices": [
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 2.74
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.7
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 2.72
-          },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
@@ -1041,22 +388,17 @@
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 2.53
+            "odds": 2.62
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 2.6
+            "odds": 2.65
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 2.45
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 2.5
+            "odds": 2.55
           },
           {
             "key": "betsson",
@@ -1064,61 +406,122 @@
             "odds": 2.68
           },
           {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.7
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 2.5
-          },
-          {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 2.6
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2.5
+            "odds": 2.63
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 2.5
+            "odds": 2.62
           },
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 2.68
+            "odds": 2.75
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 2.74
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 2.63
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 2.67
+            "odds": 2.77
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 2.65
+            "odds": 2.7
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 36.4% da 18 bookmaker; quota disponibile 2.74 (Matchbook)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 2.5,
+            "to": 2.5,
+            "change": 0
+          },
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 2.53,
+            "to": 2.62,
+            "change": 0.035573122529644285
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 2.6,
+            "to": 2.65,
+            "change": 0.019230769230769162
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 2.45,
+            "to": 2.55,
+            "change": 0.04081632653061207
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 2.68,
+            "to": 2.68,
+            "change": 0
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 2.6,
+            "to": 2.63,
+            "change": 0.011538461538461497
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 2.5,
+            "to": 2.62,
+            "change": 0.04800000000000004
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 2.68,
+            "to": 2.75,
+            "change": 0.026119402985074647
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 2.67,
+            "to": 2.77,
+            "change": 0.03745318352059934
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 2.65,
+            "to": 2.7,
+            "change": 0.018867924528301883
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 35.5% da 11 bookmaker; quota disponibile 2.77 (BetOnline.ag)."
     },
     {
       "id": "d4ef112438afa4c2cdbbfc9376a009c9:1",
@@ -1131,32 +534,17 @@
       "outcome": "1",
       "model": null,
       "market": {
-        "p": 0.265466255741897,
-        "n": 18,
-        "odds": 3.85,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.019704437800032615,
+        "p": 0.26192354536102286,
+        "n": 11,
+        "odds": 3.83,
+        "book": "BetAnything",
+        "age": 0.025596666666666667,
+        "dispersion": 0.027455249011013594,
         "prices": [
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 3.85
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.72
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 3.79
-          },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 3.55
+            "odds": 3.6
           },
           {
             "key": "unibet_fr",
@@ -1166,27 +554,17 @@
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 3.45
+            "odds": 3.55
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 3.35
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 3.45
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.4
+            "odds": 3.5
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 3.55
+            "odds": 3.7
           },
           {
             "key": "betsson",
@@ -1194,51 +572,117 @@
             "odds": 3.55
           },
           {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.55
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.5
-          },
-          {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 3.5
+            "odds": 3.3
           },
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 3.77
+            "odds": 3.76
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 3.85
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 3.59
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 3.64
+            "odds": 3.83
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 3.64
+            "odds": 3.83
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 26.5% da 18 bookmaker; quota disponibile 3.85 (Matchbook)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 3.55,
+            "to": 3.6,
+            "change": 0.014084507042253502
+          },
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 3.5,
+            "to": 3.5,
+            "change": 0
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 3.45,
+            "to": 3.55,
+            "change": 0.02898550724637672
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 3.35,
+            "to": 3.5,
+            "change": 0.04477611940298498
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 3.55,
+            "to": 3.7,
+            "change": 0.04225352112676073
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 3.55,
+            "to": 3.55,
+            "change": 0
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 3.5,
+            "to": 3.3,
+            "change": -0.05714285714285716
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 3.77,
+            "to": 3.76,
+            "change": -0.0026525198938992522
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 3.64,
+            "to": 3.83,
+            "change": 0.052197802197802234
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 3.64,
+            "to": 3.83,
+            "change": 0.052197802197802234
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 26.2% da 11 bookmaker; quota disponibile 3.83 (BetAnything)."
     },
     {
       "id": "d4ef112438afa4c2cdbbfc9376a009c9:X",
@@ -1251,32 +695,17 @@
       "outcome": "X",
       "model": null,
       "market": {
-        "p": 0.2414296725277708,
-        "n": 18,
-        "odds": 4.09,
-        "book": "1xBet",
-        "age": 0.01963972222222222,
-        "dispersion": 0.015172594661371108,
+        "p": 0.23920176366752893,
+        "n": 11,
+        "odds": 4.05,
+        "book": "Coolbet",
+        "age": 0.025596666666666667,
+        "dispersion": 0.00805589549142724,
         "prices": [
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 4
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 4.09
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 3.99
-          },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 3.95
+            "odds": 3.85
           },
           {
             "key": "unibet_fr",
@@ -1286,7 +715,7 @@
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 3.95
+            "odds": 4
           },
           {
             "key": "winamax_fr",
@@ -1294,71 +723,127 @@
             "odds": 3.95
           },
           {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 4
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.7
-          },
-          {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 3.85
+            "odds": 3.9
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 4
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 4.05
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.75
+            "odds": 3.95
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 3.75
+            "odds": 3.9
           },
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 4
+            "odds": 4.05
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 4
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 3.93
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 4.04
+            "odds": 4
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 4.04
+            "odds": 4
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 24.1% da 18 bookmaker; quota disponibile 4.09 (1xBet)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 3.95,
+            "to": 3.85,
+            "change": -0.025316455696202556
+          },
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 3.9,
+            "to": 3.9,
+            "change": 0
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 3.95,
+            "to": 4,
+            "change": 0.012658227848101111
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 3.95,
+            "to": 3.95,
+            "change": 0
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 3.85,
+            "to": 3.9,
+            "change": 0.01298701298701288
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 4,
+            "to": 3.95,
+            "change": -0.012499999999999956
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 3.75,
+            "to": 3.9,
+            "change": 0.040000000000000036
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 4,
+            "to": 4.05,
+            "change": 0.012499999999999956
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 4.04,
+            "to": 4,
+            "change": -0.00990099009900991
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 4.04,
+            "to": 4,
+            "change": -0.00990099009900991
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 23.9% da 11 bookmaker; quota disponibile 4.05 (Coolbet)."
     },
     {
       "id": "d4ef112438afa4c2cdbbfc9376a009c9:2",
@@ -1371,77 +856,42 @@
       "outcome": "2",
       "model": null,
       "market": {
-        "p": 0.49310407173033227,
-        "n": 18,
-        "odds": 2.02,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.017327785156367626,
+        "p": 0.4988746909714484,
+        "n": 11,
+        "odds": 1.97,
+        "book": "Coolbet",
+        "age": 0.025596666666666667,
+        "dispersion": 0.023058753281876954,
         "prices": [
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 2.02
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.99
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.94
-          },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 1.89
+            "odds": 1.82
           },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 1.85
+            "odds": 1.82
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 1.97
+            "odds": 1.93
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 1.88
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.9
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.85
+            "odds": 1.84
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 1.89
+            "odds": 1.85
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 1.92
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
             "odds": 1.95
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.91
           },
           {
             "key": "williamhill",
@@ -1454,31 +904,107 @@
             "odds": 1.97
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 2.02
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 1.92
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 1.95
+            "odds": 1.91
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 1.95
+            "odds": 1.91
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 49.3% da 18 bookmaker; quota disponibile 2.02 (Matchbook)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 1.89,
+            "to": 1.82,
+            "change": -0.03703703703703698
+          },
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 1.85,
+            "to": 1.82,
+            "change": -0.016216216216216273
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 1.97,
+            "to": 1.93,
+            "change": -0.020304568527918843
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 1.88,
+            "to": 1.84,
+            "change": -0.02127659574468077
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 1.89,
+            "to": 1.85,
+            "change": -0.021164021164021052
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 1.92,
+            "to": 1.95,
+            "change": 0.015625
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 1.91,
+            "to": 1.91,
+            "change": 0
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 1.97,
+            "to": 1.97,
+            "change": 0
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 1.95,
+            "to": 1.91,
+            "change": -0.02051282051282055
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 1.95,
+            "to": 1.91,
+            "change": -0.02051282051282055
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 49.9% da 11 bookmaker; quota disponibile 1.97 (Coolbet)."
     },
     {
       "id": "3f3cb74e560dfcc3e795b667ed9ebdef:1",
@@ -1491,77 +1017,42 @@
       "outcome": "1",
       "model": null,
       "market": {
-        "p": 0.5663670644963731,
-        "n": 17,
-        "odds": 1.75,
-        "book": "Betfair",
-        "age": 0.01963972222222222,
-        "dispersion": 0.01853672437009668,
+        "p": 0.5820543629032657,
+        "n": 11,
+        "odds": 1.68,
+        "book": "Coolbet",
+        "age": 0.025596666666666667,
+        "dispersion": 0.03599018131152476,
         "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.74
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.75
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.69
-          },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 1.66
+            "odds": 1.56
           },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 1.6
+            "odds": 1.56
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 1.69
+            "odds": 1.64
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 1.64
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.66
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.57
+            "odds": 1.56
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 1.63
+            "odds": 1.6
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 1.68
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.7
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.67
+            "odds": 1.6
           },
           {
             "key": "williamhill",
@@ -1571,29 +1062,110 @@
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 1.74
+            "odds": 1.68
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 1.67
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 1.69
+            "odds": 1.65
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 1.68
+            "odds": 1.62
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 56.6% da 17 bookmaker; quota disponibile 1.75 (Betfair)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 1.66,
+            "to": 1.56,
+            "change": -0.06024096385542166
+          },
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 1.6,
+            "to": 1.56,
+            "change": -0.025000000000000022
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 1.69,
+            "to": 1.64,
+            "change": -0.029585798816568087
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 1.64,
+            "to": 1.56,
+            "change": -0.04878048780487798
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 1.63,
+            "to": 1.6,
+            "change": -0.018404907975460016
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 1.68,
+            "to": 1.6,
+            "change": -0.04761904761904756
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 1.67,
+            "to": 1.67,
+            "change": 0
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 1.74,
+            "to": 1.68,
+            "change": -0.034482758620689724
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 1.69,
+            "to": 1.65,
+            "change": -0.023668639053254448
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 1.68,
+            "to": 1.62,
+            "change": -0.03571428571428559
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 58.2% da 11 bookmaker; quota disponibile 1.68 (Coolbet)."
     },
     {
       "id": "3f3cb74e560dfcc3e795b667ed9ebdef:X",
@@ -1606,32 +1178,17 @@
       "outcome": "X",
       "model": null,
       "market": {
-        "p": 0.23641352558862588,
-        "n": 17,
-        "odds": 4.2,
-        "book": "Betfair",
-        "age": 0.01963972222222222,
-        "dispersion": 0.017112854091646756,
+        "p": 0.22927980660845962,
+        "n": 11,
+        "odds": 4.3,
+        "book": "Winamax (FR)",
+        "age": 0.025596666666666667,
+        "dispersion": 0.03220633158619826,
         "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 4.04
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 4.2
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 3.99
-          },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 4
+            "odds": 4.15
           },
           {
             "key": "unibet_fr",
@@ -1641,42 +1198,22 @@
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 4.1
+            "odds": 4.3
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 4
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 4.1
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.85
+            "odds": 4.3
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 4
+            "odds": 4.1
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 3.95
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 4
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.8
+            "odds": 4.1
           },
           {
             "key": "williamhill",
@@ -1686,29 +1223,110 @@
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 4.15
+            "odds": 4.2
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 3.99
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 4.15
+            "odds": 4.2
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 4.17
+            "odds": 4.21
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 23.6% da 17 bookmaker; quota disponibile 4.20 (Betfair)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 4,
+            "to": 4.15,
+            "change": 0.03750000000000009
+          },
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 3.9,
+            "to": 3.9,
+            "change": 0
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 4.1,
+            "to": 4.3,
+            "change": 0.04878048780487809
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 4,
+            "to": 4.3,
+            "change": 0.07499999999999996
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 4,
+            "to": 4.1,
+            "change": 0.02499999999999991
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 3.95,
+            "to": 4.1,
+            "change": 0.037974683544303556
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 3.8,
+            "to": 3.8,
+            "change": 0
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 4.15,
+            "to": 4.2,
+            "change": 0.012048192771084265
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 4.15,
+            "to": 4.2,
+            "change": 0.012048192771084265
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 4.17,
+            "to": 4.21,
+            "change": 0.00959232613908867
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 22.9% da 11 bookmaker; quota disponibile 4.30 (Winamax (FR))."
     },
     {
       "id": "3f3cb74e560dfcc3e795b667ed9ebdef:2",
@@ -1721,32 +1339,17 @@
       "outcome": "2",
       "model": null,
       "market": {
-        "p": 0.19721940991500114,
-        "n": 17,
-        "odds": 5.2,
-        "book": "Betfair",
-        "age": 0.01963972222222222,
-        "dispersion": 0.021018161033725558,
+        "p": 0.18866583048827473,
+        "n": 11,
+        "odds": 5.44,
+        "book": "BetAnything",
+        "age": 0.025596666666666667,
+        "dispersion": 0.023580394219391843,
         "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 5.18
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 5.2
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 5.1
-          },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 4.6
+            "odds": 4.75
           },
           {
             "key": "unibet_fr",
@@ -1756,42 +1359,22 @@
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 4.7
+            "odds": 4.9
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 4.4
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 4.5
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 4.7
+            "odds": 4.6
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 5
+            "odds": 5.1
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 4.9
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 4.95
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 4.75
+            "odds": 5.4
           },
           {
             "key": "williamhill",
@@ -1801,29 +1384,110 @@
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 4.8
+            "odds": 5.35
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 4.99
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 4.95
+            "odds": 5.3
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 4.85
+            "odds": 5.44
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 19.7% da 17 bookmaker; quota disponibile 5.20 (Betfair)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 4.6,
+            "to": 4.75,
+            "change": 0.03260869565217406
+          },
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 4.5,
+            "to": 4.5,
+            "change": 0
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 4.7,
+            "to": 4.9,
+            "change": 0.042553191489361764
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 4.4,
+            "to": 4.6,
+            "change": 0.04545454545454519
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 5,
+            "to": 5.1,
+            "change": 0.020000000000000018
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 4.9,
+            "to": 5.4,
+            "change": 0.1020408163265305
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 4.75,
+            "to": 4.75,
+            "change": 0
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 4.8,
+            "to": 5.35,
+            "change": 0.11458333333333326
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 4.95,
+            "to": 5.3,
+            "change": 0.07070707070707072
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 4.85,
+            "to": 5.44,
+            "change": 0.12164948453608271
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 18.9% da 11 bookmaker; quota disponibile 5.44 (BetAnything)."
     },
     {
       "id": "ca87a3874b0eae31b4173ae4a9324957:1",
@@ -1836,114 +1500,155 @@
       "outcome": "1",
       "model": null,
       "market": {
-        "p": 0.3187518025991881,
-        "n": 18,
-        "odds": 3.15,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.017332879317647654,
+        "p": 0.36118508416024775,
+        "n": 11,
+        "odds": 2.7,
+        "book": "LeoVegas (SE)",
+        "age": 0.025596666666666667,
+        "dispersion": 0.02420557531260764,
         "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.15
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 3.15
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 3.08
-          },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 2.85
+            "odds": 2.4
           },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 2.9
+            "odds": 2.6
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 2.9
+            "odds": 2.6
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 2.8
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 2.85
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 2.9
+            "odds": 2.5
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 3
+            "odds": 2.7
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 3
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.05
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2.9
+            "odds": 2.6
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 2.9
+            "odds": 2.62
           },
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 3.05
+            "odds": 2.68
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 3.15
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 2.69
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 3.01
+            "odds": 2.62
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 3.01
+            "odds": 2.69
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 31.9% da 18 bookmaker; quota disponibile 3.15 (Matchbook)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 2.85,
+            "to": 2.4,
+            "change": -0.1578947368421053
+          },
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 2.9,
+            "to": 2.6,
+            "change": -0.10344827586206895
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 2.9,
+            "to": 2.6,
+            "change": -0.10344827586206895
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 2.8,
+            "to": 2.5,
+            "change": -0.1071428571428571
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 3,
+            "to": 2.7,
+            "change": -0.09999999999999998
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 3,
+            "to": 2.6,
+            "change": -0.1333333333333333
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 2.9,
+            "to": 2.62,
+            "change": -0.096551724137931
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 3.05,
+            "to": 2.68,
+            "change": -0.121311475409836
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 3.01,
+            "to": 2.62,
+            "change": -0.1295681063122922
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 3.01,
+            "to": 2.69,
+            "change": -0.1063122923588039
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 36.1% da 11 bookmaker; quota disponibile 2.70 (LeoVegas (SE))."
     },
     {
       "id": "ca87a3874b0eae31b4173ae4a9324957:X",
@@ -1956,114 +1661,155 @@
       "outcome": "X",
       "model": null,
       "market": {
-        "p": 0.2411779209224179,
-        "n": 18,
-        "odds": 4.1,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.019859240679542894,
+        "p": 0.2502054421199471,
+        "n": 11,
+        "odds": 3.9,
+        "book": "GTbets",
+        "age": 0.025596666666666667,
+        "dispersion": 0.02153765769116664,
         "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 4.05
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 4.1
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 3.94
-          },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 4
+            "odds": 3.6
           },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 3.9
+            "odds": 3.8
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 3.95
+            "odds": 3.85
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 3.95
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 4
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.75
+            "odds": 3.85
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 3.9
+            "odds": 3.6
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 3.85
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.9
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.8
+            "odds": 3.7
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 3.8
+            "odds": 3.6
           },
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 4
+            "odds": 3.85
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 4.1
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 3.9
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 3.95
+            "odds": 3.83
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 3.95
+            "odds": 3.85
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 24.1% da 18 bookmaker; quota disponibile 4.10 (Matchbook)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 4,
+            "to": 3.6,
+            "change": -0.09999999999999998
+          },
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 3.9,
+            "to": 3.8,
+            "change": -0.02564102564102566
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 3.95,
+            "to": 3.85,
+            "change": -0.025316455696202556
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 3.95,
+            "to": 3.85,
+            "change": -0.025316455696202556
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 3.9,
+            "to": 3.6,
+            "change": -0.07692307692307687
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 3.85,
+            "to": 3.7,
+            "change": -0.038961038961038974
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 3.8,
+            "to": 3.6,
+            "change": -0.05263157894736836
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 4,
+            "to": 3.85,
+            "change": -0.03749999999999998
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 3.95,
+            "to": 3.83,
+            "change": -0.03037974683544309
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 3.95,
+            "to": 3.85,
+            "change": -0.025316455696202556
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 25.0% da 11 bookmaker; quota disponibile 3.90 (GTbets)."
     },
     {
       "id": "ca87a3874b0eae31b4173ae4a9324957:2",
@@ -2076,114 +1822,155 @@
       "outcome": "2",
       "model": null,
       "market": {
-        "p": 0.440070276478394,
-        "n": 18,
-        "odds": 2.26,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.023438912108723786,
+        "p": 0.3886094737198052,
+        "n": 11,
+        "odds": 2.58,
+        "book": "Coolbet",
+        "age": 0.025596666666666667,
+        "dispersion": 0.027999174376261204,
         "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.22
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 2.26
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 2.22
-          },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 2
+            "odds": 2.35
           },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 2.12
+            "odds": 2.25
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 2.21
+            "odds": 2.46
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 2.1
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 2.1
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 2.02
+            "odds": 2.35
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 2.08
+            "odds": 2.4
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 2.18
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.2
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2.1
+            "odds": 2.5
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 2.1
+            "odds": 2.38
           },
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 2.25
+            "odds": 2.58
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 2.26
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 2.38
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 2.22
+            "odds": 2.55
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 2.22
+            "odds": 2.48
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 44.0% da 18 bookmaker; quota disponibile 2.26 (Matchbook)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 2,
+            "to": 2.35,
+            "change": 0.17500000000000004
+          },
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 2.12,
+            "to": 2.25,
+            "change": 0.061320754716981174
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 2.21,
+            "to": 2.46,
+            "change": 0.1131221719457014
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 2.1,
+            "to": 2.35,
+            "change": 0.11904761904761907
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 2.08,
+            "to": 2.4,
+            "change": 0.15384615384615374
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 2.18,
+            "to": 2.5,
+            "change": 0.14678899082568808
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 2.1,
+            "to": 2.38,
+            "change": 0.1333333333333333
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 2.25,
+            "to": 2.58,
+            "change": 0.14666666666666672
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 2.22,
+            "to": 2.55,
+            "change": 0.14864864864864846
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 2.22,
+            "to": 2.48,
+            "change": 0.11711711711711703
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 38.9% da 11 bookmaker; quota disponibile 2.58 (Coolbet)."
     },
     {
       "id": "5a1a6a04c5561897741105e30d5d7ec4:1",
@@ -2196,28 +1983,13 @@
       "outcome": "1",
       "model": null,
       "market": {
-        "p": 0.473202093982792,
-        "n": 18,
-        "odds": 2.1,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.02578070115802128,
+        "p": 0.48969744950614214,
+        "n": 11,
+        "odds": 1.98,
+        "book": "Coolbet",
+        "age": 0.025596666666666667,
+        "dispersion": 0.033446137004122856,
         "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.06
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 2.1
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 2.05
-          },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
@@ -2226,84 +1998,140 @@
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 1.95
+            "odds": 1.93
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 2.03
+            "odds": 1.98
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 1.9
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.92
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.96
+            "odds": 1.86
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 2.02
+            "odds": 1.89
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 2.02
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.05
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.95
+            "odds": 1.9
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 1.95
+            "odds": 1.91
           },
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 2.1
+            "odds": 1.98
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 2.1
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 1.93
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 2.04
+            "odds": 1.93
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 2
+            "odds": 1.91
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 47.3% da 18 bookmaker; quota disponibile 2.10 (Matchbook)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 1.95,
+            "to": 1.95,
+            "change": 0
+          },
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 1.95,
+            "to": 1.93,
+            "change": -0.01025641025641022
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 2.03,
+            "to": 1.98,
+            "change": -0.024630541871921152
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 1.9,
+            "to": 1.86,
+            "change": -0.021052631578947323
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 2.02,
+            "to": 1.89,
+            "change": -0.06435643564356441
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 2.02,
+            "to": 1.9,
+            "change": -0.05940594059405946
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 1.95,
+            "to": 1.91,
+            "change": -0.02051282051282055
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 2.1,
+            "to": 1.98,
+            "change": -0.05714285714285716
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 2.04,
+            "to": 1.93,
+            "change": -0.05392156862745101
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 2,
+            "to": 1.91,
+            "change": -0.04500000000000004
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 49.0% da 11 bookmaker; quota disponibile 1.98 (Coolbet)."
     },
     {
       "id": "5a1a6a04c5561897741105e30d5d7ec4:X",
@@ -2316,114 +2144,155 @@
       "outcome": "X",
       "model": null,
       "market": {
-        "p": 0.23496461629427184,
-        "n": 18,
-        "odds": 4.21,
-        "book": "1xBet",
-        "age": 0.01963972222222222,
-        "dispersion": 0.022056537442790736,
+        "p": 0.22648238558940345,
+        "n": 11,
+        "odds": 4.4,
+        "book": "BetAnything",
+        "age": 0.025596666666666667,
+        "dispersion": 0.015564182867248866,
         "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 4.21
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 4.2
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 4.18
-          },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 4.2
+            "odds": 4.1
           },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 4.1
+            "odds": 4.2
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 4
+            "odds": 4.1
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 4.1
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
             "odds": 4.2
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.7
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 3.85
+            "odds": 4.1
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 3.9
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.95
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.8
+            "odds": 4.15
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 3.8
+            "odds": 4
           },
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 4.13
+            "odds": 4.23
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 4.2
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 3.98
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 4.16
+            "odds": 4.33
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 4.18
+            "odds": 4.4
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 23.5% da 18 bookmaker; quota disponibile 4.21 (1xBet)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 4.2,
+            "to": 4.1,
+            "change": -0.023809523809523947
+          },
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 4.1,
+            "to": 4.2,
+            "change": 0.024390243902439046
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 4,
+            "to": 4.1,
+            "change": 0.02499999999999991
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 4.1,
+            "to": 4.2,
+            "change": 0.024390243902439046
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 3.85,
+            "to": 4.1,
+            "change": 0.06493506493506485
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 3.9,
+            "to": 4.15,
+            "change": 0.06410256410256432
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 3.8,
+            "to": 4,
+            "change": 0.05263157894736836
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 4.13,
+            "to": 4.23,
+            "change": 0.02421307506053272
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 4.16,
+            "to": 4.33,
+            "change": 0.04086538461538458
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 4.18,
+            "to": 4.4,
+            "change": 0.052631578947368585
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 22.6% da 11 bookmaker; quota disponibile 4.40 (BetAnything)."
     },
     {
       "id": "5a1a6a04c5561897741105e30d5d7ec4:2",
@@ -2436,114 +2305,155 @@
       "outcome": "2",
       "model": null,
       "market": {
-        "p": 0.2918332897229362,
-        "n": 18,
-        "odds": 3.45,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.013397297937576547,
+        "p": 0.2838201649044544,
+        "n": 11,
+        "odds": 3.58,
+        "book": "Coolbet",
+        "age": 0.025596666666666667,
+        "dispersion": 0.03459780239783755,
         "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.42
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 3.4
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 3.31
-          },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 3.1
+            "odds": 3
           },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 3.15
+            "odds": 3
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 3.25
+            "odds": 3.35
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 3.15
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
             "odds": 3.2
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.05
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 3.2
+            "odds": 3.4
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 3.3
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.35
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.2
+            "odds": 3.5
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 3.2
+            "odds": 3.3
           },
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 3.29
+            "odds": 3.58
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 3.45
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 3.29
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 3.28
+            "odds": 3.51
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 3.32
+            "odds": 3.47
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 29.2% da 18 bookmaker; quota disponibile 3.45 (Matchbook)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 3.1,
+            "to": 3,
+            "change": -0.032258064516129115
+          },
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 3.15,
+            "to": 3,
+            "change": -0.04761904761904756
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 3.25,
+            "to": 3.35,
+            "change": 0.030769230769230882
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 3.15,
+            "to": 3.2,
+            "change": 0.01587301587301604
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 3.2,
+            "to": 3.4,
+            "change": 0.0625
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 3.3,
+            "to": 3.5,
+            "change": 0.06060606060606055
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 3.2,
+            "to": 3.3,
+            "change": 0.031249999999999778
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 3.29,
+            "to": 3.58,
+            "change": 0.08814589665653494
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 3.28,
+            "to": 3.51,
+            "change": 0.07012195121951215
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 3.32,
+            "to": 3.47,
+            "change": 0.04518072289156638
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 28.4% da 11 bookmaker; quota disponibile 3.58 (Coolbet)."
     },
     {
       "id": "4c7f87780ae5ab8bec9e83d6d6ec9909:1",
@@ -2556,28 +2466,13 @@
       "outcome": "1",
       "model": null,
       "market": {
-        "p": 0.4634435825332754,
-        "n": 18,
-        "odds": 2.12,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.011405059823226926,
+        "p": 0.4479121058072769,
+        "n": 11,
+        "odds": 2.16,
+        "book": "BetOnline.ag",
+        "age": 0.025596666666666667,
+        "dispersion": 0.016411264085836763,
         "prices": [
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 2.12
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.11
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 2.07
-          },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
@@ -2586,84 +2481,140 @@
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 1.95
+            "odds": 2
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 2
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 2
+            "odds": 2.05
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 2.07
+            "odds": 2.14
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 2.05
+            "odds": 2.12
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 2.02
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.95
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.05
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2
+            "odds": 2.1
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 2
+            "odds": 2.1
           },
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 2.1
+            "odds": 2.15
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 2.12
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 2.11
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 2.11
+            "odds": 2.16
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 2.11
+            "odds": 2.14
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 46.3% da 18 bookmaker; quota disponibile 2.12 (Matchbook)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 2.02,
+            "to": 2.02,
+            "change": 0
+          },
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 1.95,
+            "to": 2,
+            "change": 0.025641025641025772
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 2,
+            "to": 2.05,
+            "change": 0.02499999999999991
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 2.07,
+            "to": 2.14,
+            "change": 0.0338164251207731
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 2.05,
+            "to": 2.12,
+            "change": 0.034146341463414887
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 2.02,
+            "to": 2.1,
+            "change": 0.03960396039603964
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 2,
+            "to": 2.1,
+            "change": 0.050000000000000044
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 2.1,
+            "to": 2.15,
+            "change": 0.023809523809523725
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 2.11,
+            "to": 2.16,
+            "change": 0.02369668246445511
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 2.11,
+            "to": 2.14,
+            "change": 0.014218009478673022
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 44.8% da 11 bookmaker; quota disponibile 2.16 (BetOnline.ag)."
     },
     {
       "id": "4c7f87780ae5ab8bec9e83d6d6ec9909:X",
@@ -2676,28 +2627,13 @@
       "outcome": "X",
       "model": null,
       "market": {
-        "p": 0.25859532826234255,
-        "n": 18,
-        "odds": 3.85,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.013500659718566232,
+        "p": 0.26045160943302637,
+        "n": 11,
+        "odds": 3.7,
+        "book": "BetAnything",
+        "age": 0.025596666666666667,
+        "dispersion": 0.022391516043987342,
         "prices": [
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 3.85
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.8
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 3.75
-          },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
@@ -2714,11 +2650,6 @@
             "odds": 3.65
           },
           {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 3.7
-          },
-          {
             "key": "codere_it",
             "title": "Codere (IT)",
             "odds": 3.65
@@ -2726,27 +2657,12 @@
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 3.6
+            "odds": 3.5
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 3.65
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.5
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.65
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.5
+            "odds": 3.45
           },
           {
             "key": "williamhill",
@@ -2759,31 +2675,107 @@
             "odds": 3.7
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 3.85
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 3.67
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 3.75
+            "odds": 3.7
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 3.75
+            "odds": 3.7
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 25.9% da 18 bookmaker; quota disponibile 3.85 (Matchbook)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 3.6,
+            "to": 3.6,
+            "change": 0
+          },
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 3.6,
+            "to": 3.6,
+            "change": 0
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 3.65,
+            "to": 3.65,
+            "change": 0
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 3.65,
+            "to": 3.65,
+            "change": 0
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 3.6,
+            "to": 3.5,
+            "change": -0.02777777777777779
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 3.65,
+            "to": 3.45,
+            "change": -0.05479452054794509
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 3.5,
+            "to": 3.5,
+            "change": 0
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 3.7,
+            "to": 3.7,
+            "change": 0
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 3.75,
+            "to": 3.7,
+            "change": -0.013333333333333308
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 3.75,
+            "to": 3.7,
+            "change": -0.013333333333333308
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 26.0% da 11 bookmaker; quota disponibile 3.70 (BetAnything)."
     },
     {
       "id": "4c7f87780ae5ab8bec9e83d6d6ec9909:2",
@@ -2796,114 +2788,155 @@
       "outcome": "2",
       "model": null,
       "market": {
-        "p": 0.277961089204382,
-        "n": 18,
-        "odds": 3.6,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.017672249490614522,
+        "p": 0.29163628475969666,
+        "n": 11,
+        "odds": 3.5,
+        "book": "Coolbet",
+        "age": 0.025596666666666667,
+        "dispersion": 0.023731255549709673,
         "prices": [
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 3.6
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.6
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 3.58
-          },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 3.35
+            "odds": 3.15
           },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 3.2
+            "odds": 2.95
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 3.2
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 3.25
+            "odds": 3.05
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 3.4
+            "odds": 3.2
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 3.5
+            "odds": 3.35
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 3.4
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.25
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.55
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
             "odds": 3.3
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 3.3
+            "odds": 3.1
           },
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 3.6
+            "odds": 3.5
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 3.6
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 3.26
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 3.4
+            "odds": 3.35
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 3.4
+            "odds": 3.29
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 27.8% da 18 bookmaker; quota disponibile 3.60 (Matchbook)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 3.35,
+            "to": 3.15,
+            "change": -0.059701492537313494
+          },
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 3.2,
+            "to": 2.95,
+            "change": -0.078125
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 3.2,
+            "to": 3.05,
+            "change": -0.04687500000000011
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 3.4,
+            "to": 3.2,
+            "change": -0.05882352941176461
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 3.5,
+            "to": 3.35,
+            "change": -0.042857142857142816
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 3.4,
+            "to": 3.3,
+            "change": -0.02941176470588236
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 3.3,
+            "to": 3.1,
+            "change": -0.06060606060606055
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 3.6,
+            "to": 3.5,
+            "change": -0.02777777777777779
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 3.4,
+            "to": 3.35,
+            "change": -0.014705882352941124
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 3.4,
+            "to": 3.29,
+            "change": -0.032352941176470584
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 29.2% da 11 bookmaker; quota disponibile 3.50 (Coolbet)."
     },
     {
       "id": "d7576351b8cb2396e32cc3de0446f3de:1",
@@ -2916,114 +2949,155 @@
       "outcome": "1",
       "model": null,
       "market": {
-        "p": 0.12060039323617196,
-        "n": 18,
-        "odds": 9.2,
-        "book": "Betfair",
-        "age": 0.01963972222222222,
-        "dispersion": 0.02850705807827228,
+        "p": 0.13409069146094754,
+        "n": 11,
+        "odds": 8.2,
+        "book": "Betsson",
+        "age": 0.025596666666666667,
+        "dispersion": 0.027859423549160378,
         "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 8.75
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 9.2
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 7.91
-          },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 7.5
+            "odds": 6.2
           },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 7.5
+            "odds": 6.9
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 6.75
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 7
+            "odds": 6.5
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 7
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 7.5
+            "odds": 7.2
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 8
+            "odds": 7
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 7.9
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 8.1
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 7.5
+            "odds": 8.2
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 7.5
+            "odds": 6.5
           },
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 9
+            "odds": 7.7
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 9
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 7.39
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 8.6
+            "odds": 7
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 7.79
+            "odds": 6.86
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 12.1% da 18 bookmaker; quota disponibile 9.20 (Betfair)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 7.5,
+            "to": 6.2,
+            "change": -0.17333333333333334
+          },
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 7.5,
+            "to": 6.9,
+            "change": -0.07999999999999996
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 6.75,
+            "to": 6.5,
+            "change": -0.03703703703703709
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 7,
+            "to": 7.2,
+            "change": 0.028571428571428692
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 8,
+            "to": 7,
+            "change": -0.125
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 7.9,
+            "to": 8.2,
+            "change": 0.037974683544303556
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 7.5,
+            "to": 6.5,
+            "change": -0.1333333333333333
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 9,
+            "to": 7.7,
+            "change": -0.14444444444444438
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 8.6,
+            "to": 7,
+            "change": -0.18604651162790697
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 7.79,
+            "to": 6.86,
+            "change": -0.1193838254172015
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 13.4% da 11 bookmaker; quota disponibile 8.20 (Betsson)."
     },
     {
       "id": "d7576351b8cb2396e32cc3de0446f3de:X",
@@ -3036,46 +3110,26 @@
       "outcome": "X",
       "model": null,
       "market": {
-        "p": 0.16946851785774025,
-        "n": 18,
-        "odds": 6.2,
+        "p": 0.16721230672684914,
+        "n": 11,
+        "odds": 6,
         "book": "Coolbet",
-        "age": 0.01963972222222222,
-        "dispersion": 0.02682876292483466,
+        "age": 0.025596666666666667,
+        "dispersion": 0.024553650931840393,
         "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 5.77
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 6
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 5.63
-          },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 5.2
+            "odds": 5.3
           },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 5.4
+            "odds": 5.6
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 5.6
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
             "odds": 5.8
           },
           {
@@ -3084,29 +3138,14 @@
             "odds": 5.8
           },
           {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 5.2
-          },
-          {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 5.5
+            "odds": 5.4
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 5.7
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 5.75
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 5
+            "odds": 5.9
           },
           {
             "key": "williamhill",
@@ -3116,34 +3155,110 @@
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 6.2
+            "odds": 6
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 6
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 5.53
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 5.8
+            "odds": 5.9
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 5.67
+            "odds": 5.72
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 16.9% da 18 bookmaker; quota disponibile 6.20 (Coolbet)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 5.2,
+            "to": 5.3,
+            "change": 0.019230769230769162
+          },
+          {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 5.4,
+            "to": 5.6,
+            "change": 0.03703703703703698
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 5.6,
+            "to": 5.8,
+            "change": 0.03571428571428581
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 5.8,
+            "to": 5.8,
+            "change": 0
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 5.5,
+            "to": 5.4,
+            "change": -0.018181818181818077
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 5.7,
+            "to": 5.9,
+            "change": 0.03508771929824572
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 5,
+            "to": 5,
+            "change": 0
+          },
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 6.2,
+            "to": 6,
+            "change": -0.032258064516129115
+          },
+          {
+            "book": "BetOnline.ag",
+            "key": "betonlineag",
+            "from": 5.8,
+            "to": 5.9,
+            "change": 0.017241379310344973
+          },
+          {
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 5.67,
+            "to": 5.72,
+            "change": 0.008818342151675429
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 16.7% da 11 bookmaker; quota disponibile 6.00 (Coolbet)."
     },
     {
       "id": "d7576351b8cb2396e32cc3de0446f3de:2",
@@ -3156,37 +3271,22 @@
       "outcome": "2",
       "model": null,
       "market": {
-        "p": 0.7099310889060878,
-        "n": 18,
-        "odds": 1.37,
-        "book": "Matchbook",
-        "age": 0.01963972222222222,
-        "dispersion": 0.04121534156173745,
+        "p": 0.6986970018122034,
+        "n": 11,
+        "odds": 1.38,
+        "book": "BetAnything",
+        "age": 0.025596666666666667,
+        "dispersion": 0.04706153207908359,
         "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.37
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.37
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.36
-          },
           {
             "key": "unibet_fr",
             "title": "Unibet (FR)",
-            "odds": 1.29
+            "odds": 1.3
           },
           {
             "key": "betclic_fr",
             "title": "Betclic (FR)",
-            "odds": 1.33
+            "odds": 1.3
           },
           {
             "key": "winamax_fr",
@@ -3194,546 +3294,132 @@
             "odds": 1.32
           },
           {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.33
-          },
-          {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 1.36
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.29
+            "odds": 1.35
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 1.32
+            "odds": 1.36
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 1.33
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.34
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.33
+            "odds": 1.32
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 1.33
+            "odds": 1.36
           },
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 1.33
+            "odds": 1.38
           },
           {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 1.37
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 1.35
           },
           {
             "key": "betonlineag",
             "title": "BetOnline.ag",
-            "odds": 1.34
+            "odds": 1.38
           },
           {
             "key": "betanysports",
             "title": "BetAnything",
-            "odds": 1.35
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 71.0% da 18 bookmaker; quota disponibile 1.37 (Matchbook)."
-    },
-    {
-      "id": "4a32ee71a6c8285f8c637dc8c5414562:1",
-      "eventId": "4a32ee71a6c8285f8c637dc8c5414562",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Hapoel Tel Aviv",
-      "away": "Beşiktaş J.K.",
-      "kickoff": "2026-10-14T16:00:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.7223563774212358,
-        "n": 18,
-        "odds": 1.37,
-        "book": "Betfair",
-        "age": 0.027973055555555557,
-        "dispersion": 0.03273311555520142,
-        "prices": [
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.32
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.28
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.31
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.37
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.37
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.3
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.3
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.31
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.26
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 1.34
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.33
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.29
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 1.29
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 1.28
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.32
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 1.36
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.33
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.28
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 72.2% da 18 bookmaker; quota disponibile 1.37 (Betfair)."
-    },
-    {
-      "id": "4a32ee71a6c8285f8c637dc8c5414562:2",
-      "eventId": "4a32ee71a6c8285f8c637dc8c5414562",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Hapoel Tel Aviv",
-      "away": "Beşiktaş J.K.",
-      "kickoff": "2026-10-14T16:00:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.2776436225787641,
-        "n": 18,
-        "odds": 3.65,
-        "book": "Betfair",
-        "age": 0.027973055555555557,
-        "dispersion": 0.03273311555520142,
-        "prices": [
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 3.42
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 3.3
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 3.55
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.25
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 3.65
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 3.5
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.5
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 3.46
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.05
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 3.25
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 3.25
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.6
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 3.6
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 3.35
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 3.52
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 3.55
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 3.44
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 3.34
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 27.8% da 18 bookmaker; quota disponibile 3.65 (Betfair)."
-    },
-    {
-      "id": "cb3ed68e333b4904b08079631b653b4d:1",
-      "eventId": "cb3ed68e333b4904b08079631b653b4d",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Anadolu Efes",
-      "away": "FC Bayern München",
-      "kickoff": "2026-10-14T17:30:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.6752911200153109,
-        "n": 17,
-        "odds": 1.46,
-        "book": "Matchbook",
-        "age": 0.027973055555555557,
-        "dispersion": 0.027683564549610407,
-        "prices": [
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.41
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.36
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.4
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.46
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.46
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
             "odds": 1.38
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.38
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.35
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.35
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 1.43
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.43
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 1.4
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.4
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.41
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 1.46
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.43
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.36
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 67.5% da 17 bookmaker; quota disponibile 1.46 (Matchbook)."
-    },
-    {
-      "id": "cb3ed68e333b4904b08079631b653b4d:2",
-      "eventId": "cb3ed68e333b4904b08079631b653b4d",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Anadolu Efes",
-      "away": "FC Bayern München",
-      "kickoff": "2026-10-14T17:30:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.3247088799846891,
-        "n": 17,
-        "odds": 3.1,
-        "book": "Betfair",
-        "age": 0.027973055555555557,
-        "dispersion": 0.027683564549610407,
-        "prices": [
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
           {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 2.93
+            "book": "Unibet (FR)",
+            "key": "unibet_fr",
+            "from": 1.29,
+            "to": 1.3,
+            "change": 0.007751937984496138
           },
           {
+            "book": "Betclic (FR)",
+            "key": "betclic_fr",
+            "from": 1.33,
+            "to": 1.3,
+            "change": -0.022556390977443663
+          },
+          {
+            "book": "Winamax (FR)",
             "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 2.85
+            "from": 1.32,
+            "to": 1.32,
+            "change": 0
           },
           {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 3.05
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 1.36,
+            "to": 1.35,
+            "change": -0.007352941176470562
           },
           {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.86
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 3.1
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.05
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 3.05
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 2.98
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 2.63
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 2.8
-          },
-          {
+            "book": "LeoVegas (SE)",
             "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 2.8
+            "from": 1.32,
+            "to": 1.36,
+            "change": 0.030303030303030276
           },
           {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 1.33,
+            "to": 1.32,
+            "change": -0.007518796992481258
+          },
+          {
+            "book": "William Hill",
             "key": "williamhill",
-            "title": "William Hill",
-            "odds": 2.9
+            "from": 1.33,
+            "to": 1.36,
+            "change": 0.022556390977443552
           },
           {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2.9
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 1.33,
+            "to": 1.38,
+            "change": 0.037593984962405846
           },
           {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 3.02
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 2.96
-          },
-          {
+            "book": "BetOnline.ag",
             "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 2.93
+            "from": 1.34,
+            "to": 1.38,
+            "change": 0.02985074626865658
           },
           {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 2.87
+            "book": "BetAnything",
+            "key": "betanysports",
+            "from": 1.35,
+            "to": 1.38,
+            "change": 0.022222222222222143
           }
-        ]
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
       },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 32.5% da 17 bookmaker; quota disponibile 3.10 (Betfair)."
+      "why": "Nessun modello indipendente. Consenso no-vig 69.9% da 11 bookmaker; quota disponibile 1.38 (BetAnything)."
     },
     {
       "id": "5fb6df19e364c2deef8cd52ff40fc5b7:1",
@@ -3746,62 +3432,47 @@
       "outcome": "1",
       "model": null,
       "market": {
-        "p": 0.5962056671004997,
-        "n": 18,
-        "odds": 1.68,
-        "book": "Betfair",
-        "age": 0.027973055555555557,
-        "dispersion": 0.021317829457364268,
+        "p": 0.5785778843677926,
+        "n": 12,
+        "odds": 1.7,
+        "book": "Matchbook",
+        "age": 0.026707777777777778,
+        "dispersion": 0.03220747401863111,
         "prices": [
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 1.6
+            "odds": 1.66
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 1.54
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
             "odds": 1.6
           },
           {
             "key": "onexbet",
             "title": "1xBet",
-            "odds": 1.61
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.68
+            "odds": 1.67
           },
           {
             "key": "nordicbet",
             "title": "Nordic Bet",
-            "odds": 1.58
+            "odds": 1.65
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 1.58
+            "odds": 1.65
           },
           {
             "key": "gtbets",
             "title": "GTbets",
-            "odds": 1.53
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 1.6
+            "odds": 1.64
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 1.6
+            "odds": 1.57
           },
           {
             "key": "pmu_fr",
@@ -3811,49 +3482,124 @@
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 1.57
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.57
+            "odds": 1.67
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 1.56
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.65
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.64
+            "odds": 1.6
           },
           {
             "key": "matchbook",
             "title": "Matchbook",
-            "odds": 1.63
+            "odds": 1.7
           },
           {
             "key": "mybookieag",
             "title": "MyBookie.ag",
-            "odds": 1.56
+            "odds": 1.61
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 59.6% da 18 bookmaker; quota disponibile 1.68 (Betfair)."
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
+          {
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 1.6,
+            "to": 1.66,
+            "change": 0.03749999999999987
+          },
+          {
+            "book": "Winamax (FR)",
+            "key": "winamax_fr",
+            "from": 1.54,
+            "to": 1.6,
+            "change": 0.038961038961039085
+          },
+          {
+            "book": "1xBet",
+            "key": "onexbet",
+            "from": 1.61,
+            "to": 1.67,
+            "change": 0.03726708074534146
+          },
+          {
+            "book": "Nordic Bet",
+            "key": "nordicbet",
+            "from": 1.58,
+            "to": 1.65,
+            "change": 0.04430379746835422
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 1.58,
+            "to": 1.65,
+            "change": 0.04430379746835422
+          },
+          {
+            "book": "GTbets",
+            "key": "gtbets",
+            "from": 1.53,
+            "to": 1.64,
+            "change": 0.07189542483660127
+          },
+          {
+            "book": "LeoVegas (SE)",
+            "key": "leovegas_se",
+            "from": 1.6,
+            "to": 1.57,
+            "change": -0.018750000000000044
+          },
+          {
+            "book": "PMU (FR)",
+            "key": "pmu_fr",
+            "from": 1.5,
+            "to": 1.5,
+            "change": 0
+          },
+          {
+            "book": "William Hill",
+            "key": "williamhill",
+            "from": 1.57,
+            "to": 1.67,
+            "change": 0.06369426751592355
+          },
+          {
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 1.56,
+            "to": 1.6,
+            "change": 0.025641025641025772
+          },
+          {
+            "book": "Matchbook",
+            "key": "matchbook",
+            "from": 1.63,
+            "to": 1.7,
+            "change": 0.042944785276073594
+          },
+          {
+            "book": "MyBookie.ag",
+            "key": "mybookieag",
+            "from": 1.56,
+            "to": 1.61,
+            "change": 0.03205128205128216
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 57.9% da 12 bookmaker; quota disponibile 1.70 (Matchbook)."
     },
     {
       "id": "5fb6df19e364c2deef8cd52ff40fc5b7:2",
@@ -3866,544 +3612,174 @@
       "outcome": "2",
       "model": null,
       "market": {
-        "p": 0.40379433289950034,
-        "n": 18,
-        "odds": 2.44,
+        "p": 0.4214221156322074,
+        "n": 12,
+        "odds": 2.36,
         "book": "Matchbook",
-        "age": 0.027973055555555557,
-        "dispersion": 0.02131782945736438,
+        "age": 0.026707777777777778,
+        "dispersion": 0.03220747401863122,
         "prices": [
           {
             "key": "coolbet",
             "title": "Coolbet",
-            "odds": 2.35
+            "odds": 2.23
           },
           {
             "key": "winamax_fr",
             "title": "Winamax (FR)",
-            "odds": 2.25
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 2.4
+            "odds": 2.15
           },
           {
             "key": "onexbet",
             "title": "1xBet",
-            "odds": 2.41
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 2.42
+            "odds": 2.28
           },
           {
             "key": "nordicbet",
             "title": "Nordic Bet",
-            "odds": 2.38
+            "odds": 2.25
           },
           {
             "key": "betsson",
             "title": "Betsson",
-            "odds": 2.38
+            "odds": 2.25
           },
           {
             "key": "gtbets",
             "title": "GTbets",
-            "odds": 2.34
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 2.33
+            "odds": 2.15
           },
           {
             "key": "leovegas_se",
             "title": "LeoVegas (SE)",
-            "odds": 2.33
+            "odds": 2.35
           },
           {
             "key": "pmu_fr",
             "title": "PMU (FR)",
-            "odds": 2.18
+            "odds": 2.2
           },
           {
             "key": "williamhill",
             "title": "William Hill",
-            "odds": 2.38
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2.38
+            "odds": 2.2
           },
           {
             "key": "codere_it",
             "title": "Codere (IT)",
-            "odds": 2.29
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 2.31
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 2.37
+            "odds": 2.19
           },
           {
             "key": "matchbook",
             "title": "Matchbook",
-            "odds": 2.44
+            "odds": 2.36
           },
           {
             "key": "mybookieag",
             "title": "MyBookie.ag",
-            "odds": 2.29
+            "odds": 2.19
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "generatedAt": "2026-10-14T18:37:30.148Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 40.4% da 18 bookmaker; quota disponibile 2.44 (Matchbook)."
-    },
-    {
-      "id": "21bd71c108821f51f2f5c0d4494cba2c:1",
-      "eventId": "21bd71c108821f51f2f5c0d4494cba2c",
-      "sport": "tennis_atp_shanghai_masters",
-      "league": "ATP Shanghai Masters",
-      "home": "Tommy Paul",
-      "away": "Zizou Bergs",
-      "kickoff": "2026-10-14T11:55:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.6527803868137884,
-        "n": 15,
-        "odds": 1.51,
-        "book": "1xBet",
-        "age": 0.09186194444444444,
-        "dispersion": 0.02801490514905136,
-        "prices": [
+      "movement": {
+        "from": "2026-10-14T11:50:49.703Z",
+        "to": "2026-10-14T18:37:30.148Z",
+        "books": [
           {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.45
+            "book": "Coolbet",
+            "key": "coolbet",
+            "from": 2.35,
+            "to": 2.23,
+            "change": -0.051063829787234116
           },
           {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.4
-          },
-          {
-            "key": "unibet_se",
-            "title": "Unibet (SE)",
-            "odds": 1.45
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.44
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.45
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.45
-          },
-          {
+            "book": "Winamax (FR)",
             "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.45
+            "from": 2.25,
+            "to": 2.15,
+            "change": -0.04444444444444451
           },
           {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.47
+            "book": "1xBet",
+            "key": "onexbet",
+            "from": 2.41,
+            "to": 2.28,
+            "change": -0.05394190871369309
           },
           {
+            "book": "Nordic Bet",
+            "key": "nordicbet",
+            "from": 2.38,
+            "to": 2.25,
+            "change": -0.054621848739495715
+          },
+          {
+            "book": "Betsson",
+            "key": "betsson",
+            "from": 2.38,
+            "to": 2.25,
+            "change": -0.054621848739495715
+          },
+          {
+            "book": "GTbets",
             "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.47
+            "from": 2.34,
+            "to": 2.15,
+            "change": -0.08119658119658113
           },
           {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.51
-          },
-          {
-            "key": "tipico_de",
-            "title": "Tipico",
-            "odds": 1.4
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.48
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.44
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 1.44
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.45
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 65.3% da 15 bookmaker; quota disponibile 1.51 (1xBet)."
-    },
-    {
-      "id": "21bd71c108821f51f2f5c0d4494cba2c:2",
-      "eventId": "21bd71c108821f51f2f5c0d4494cba2c",
-      "sport": "tennis_atp_shanghai_masters",
-      "league": "ATP Shanghai Masters",
-      "home": "Tommy Paul",
-      "away": "Zizou Bergs",
-      "kickoff": "2026-10-14T11:55:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.34721961318621164,
-        "n": 15,
-        "odds": 2.85,
-        "book": "Winamax (DE)",
-        "age": 0.09186194444444444,
-        "dispersion": 0.028014905149051583,
-        "prices": [
-          {
+            "book": "LeoVegas (SE)",
             "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 2.7
+            "from": 2.33,
+            "to": 2.35,
+            "change": 0.008583690987124415
           },
           {
+            "book": "PMU (FR)",
             "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 2.6
+            "from": 2.18,
+            "to": 2.2,
+            "change": 0.00917431192660545
           },
           {
-            "key": "unibet_se",
-            "title": "Unibet (SE)",
-            "odds": 2.7
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 2.76
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 2.75
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.75
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 2.75
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 2.85
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 2.7
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.59
-          },
-          {
-            "key": "tipico_de",
-            "title": "Tipico",
-            "odds": 2.7
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 2.77
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2.75
-          },
-          {
+            "book": "William Hill",
             "key": "williamhill",
-            "title": "William Hill",
-            "odds": 2.75
+            "from": 2.38,
+            "to": 2.2,
+            "change": -0.07563025210084018
           },
           {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 2.78
+            "book": "Codere (IT)",
+            "key": "codere_it",
+            "from": 2.29,
+            "to": 2.19,
+            "change": -0.04366812227074235
+          },
+          {
+            "book": "Matchbook",
+            "key": "matchbook",
+            "from": 2.44,
+            "to": 2.36,
+            "change": -0.032786885245901676
+          },
+          {
+            "book": "MyBookie.ag",
+            "key": "mybookieag",
+            "from": 2.29,
+            "to": 2.19,
+            "change": -0.04366812227074235
           }
-        ]
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
       },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 34.7% da 15 bookmaker; quota disponibile 2.85 (Winamax (DE))."
-    },
-    {
-      "id": "52fda1c5d2926648da76673e3b2af4d9:1",
-      "eventId": "52fda1c5d2926648da76673e3b2af4d9",
-      "sport": "tennis_wta_wuhan_open",
-      "league": "WTA Wuhan Open",
-      "home": "Shi Han",
-      "away": "Leylah Fernandez",
-      "kickoff": "2026-10-14T12:30:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.2541078035582465,
-        "n": 16,
-        "odds": 4,
-        "book": "Winamax (DE)",
-        "age": 0.015473055555555556,
-        "dispersion": 0.03727718002248284,
-        "prices": [
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 3.6
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 3.8
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 3.8
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.6
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 3.85
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 3.42
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.46
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 3.8
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 4
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 3.95
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.85
-          },
-          {
-            "key": "tipico_de",
-            "title": "Tipico",
-            "odds": 3.8
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 3.7
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.5
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 3.83
-          },
-          {
-            "key": "betanysports",
-            "title": "BetAnything",
-            "odds": 3.75
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 25.4% da 16 bookmaker; quota disponibile 4.00 (Winamax (DE))."
-    },
-    {
-      "id": "52fda1c5d2926648da76673e3b2af4d9:2",
-      "eventId": "52fda1c5d2926648da76673e3b2af4d9",
-      "sport": "tennis_wta_wuhan_open",
-      "league": "WTA Wuhan Open",
-      "home": "Shi Han",
-      "away": "Leylah Fernandez",
-      "kickoff": "2026-10-14T12:30:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.7458921964417535,
-        "n": 16,
-        "odds": 1.33,
-        "book": "1xBet",
-        "age": 0.015473055555555556,
-        "dispersion": 0.0372771800224827,
-        "prices": [
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 1.29
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.21
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.27
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.29
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.27
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.31
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.33
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.26
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.28
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 1.25
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.27
-          },
-          {
-            "key": "tipico_de",
-            "title": "Tipico",
-            "odds": 1.22
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.28
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.23
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.28
-          },
-          {
-            "key": "betanysports",
-            "title": "BetAnything",
-            "odds": 1.27
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-10-14T11:50:49.703Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 74.6% da 16 bookmaker; quota disponibile 1.33 (1xBet)."
+      "why": "Nessun modello indipendente. Consenso no-vig 42.1% da 12 bookmaker; quota disponibile 2.36 (Matchbook)."
     }
   ],
   "quantInputs": {},
@@ -4417,31 +3793,31 @@
       "league": "Serie A",
       "matches": 1580,
       "lastMatch": "2026-10-12T18:45:00.000Z",
-      "downloadedAt": "2026-10-14T11:50:51.399Z"
+      "downloadedAt": "2026-10-14T18:37:32.261Z"
     },
     {
       "league": "Premier League",
       "matches": 1580,
       "lastMatch": "2026-10-12T19:00:00.000Z",
-      "downloadedAt": "2026-10-14T11:50:52.211Z"
+      "downloadedAt": "2026-10-14T18:37:33.302Z"
     },
     {
       "league": "Liga",
       "matches": 1598,
       "lastMatch": "2026-10-12T19:00:00.000Z",
-      "downloadedAt": "2026-10-14T11:50:53.054Z"
+      "downloadedAt": "2026-10-14T18:37:34.415Z"
     },
     {
       "league": "Bundesliga",
       "matches": 1269,
       "lastMatch": "2026-10-11T15:30:00.000Z",
-      "downloadedAt": "2026-10-14T11:50:53.640Z"
+      "downloadedAt": "2026-10-14T18:37:35.289Z"
     },
     {
       "league": "Ligue 1",
       "matches": 1352,
       "lastMatch": "2026-10-11T18:45:00.000Z",
-      "downloadedAt": "2026-10-14T11:50:54.350Z"
+      "downloadedAt": "2026-10-14T18:37:36.163Z"
     }
   ],
   "diagnostics": [
@@ -4451,7 +3827,9 @@
     "Bundesliga: nessun evento ancora da iniziare oggi.",
     "Ligue 1: nessun evento ancora da iniziare oggi.",
     "NBA: nessun evento ancora da iniziare oggi.",
-    "WNBA: nessun evento ancora da iniziare oggi."
+    "WNBA: nessun evento ancora da iniziare oggi.",
+    "ATP Shanghai Masters: nessun evento ancora da iniziare oggi.",
+    "WTA Wuhan Open: nessun evento ancora da iniziare oggi."
   ],
   "report": {
     "version": "dc-xg-180-audited-1",
@@ -4587,340 +3965,14 @@
       "fairPnl": 0.14025813302806678
     },
     "CONSENSO": {
-      "n": 78,
-      "wins": 36,
-      "pnl": 22.48,
+      "n": 80,
+      "wins": 37,
+      "pnl": 21.85,
       "fairPnl": 0
     }
   },
-  "pendingOld": 180,
+  "pendingOld": 186,
   "history": [
-    {
-      "id": "467fe6e71bc34a255dfb47e13b8fa34e:1",
-      "eventId": "467fe6e71bc34a255dfb47e13b8fa34e",
-      "sport": "soccer_germany_bundesliga",
-      "league": "Bundesliga",
-      "home": "FSV Mainz 05",
-      "away": "Eintracht Frankfurt",
-      "kickoff": "2026-09-12T13:30:00.000Z",
-      "outcome": "1",
-      "model": 0.5476780253381797,
-      "market": {
-        "p": 0.5288787007488467,
-        "n": 22,
-        "odds": 1.86,
-        "book": "Matchbook",
-        "age": 0.048361666666666664,
-        "dispersion": 0.028934116034446733,
-        "prices": [
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.76
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.72
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.83
-          },
-          {
-            "key": "tipico_de",
-            "title": "Tipico",
-            "odds": 1.75
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 1.79
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.84
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.72
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 1.76
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.81
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.8
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 1.8
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.86
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.82
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.77
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.78
-          },
-          {
-            "key": "suprabets",
-            "title": "Suprabets",
-            "odds": 1.79
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.8
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.8
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 1.86
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.81
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.8
-          },
-          {
-            "key": "everygame",
-            "title": "Everygame",
-            "odds": 1.8
-          }
-        ]
-      },
-      "analysis": {
-        "fair": 1.8258903109770033,
-        "edge": 0.018799324589332977,
-        "ev": 0.018681127129014152,
-        "gap": 0.018799324589332977,
-        "quality": 78.69204706275721,
-        "confidence": 83.67045201641865,
-        "category": "DA OSSERVARE",
-        "rank": 0.6312743023911698,
-        "eligible": true
-      },
-      "context": {
-        "teamN": 138,
-        "seasonN": 2,
-        "historyAgeDays": 5.885788217592593
-      },
-      "status": "closed",
-      "generatedAt": "2026-09-12T10:45:32.102Z",
-      "version": "dc-xg-180-audited-1",
-      "trainingMax": "2026-09-11T18:30:00.000Z",
-      "marketQuality": null,
-      "rates": {
-        "homeXG": 2.1722482531317278,
-        "awayXG": 1.3941629805980622,
-        "rho": -0.054999999999999896
-      },
-      "movement": null,
-      "why": "Modello 54.8%, mercato no-vig 52.9%. Quota equa 1.83, disponibile 1.86 (Matchbook). Scarto 1.9 punti percentuali: accordo alto.",
-      "result": "1-3",
-      "won": false,
-      "pnl": -1,
-      "fairPnl": -1
-    },
-    {
-      "id": "467fe6e71bc34a255dfb47e13b8fa34e:X",
-      "eventId": "467fe6e71bc34a255dfb47e13b8fa34e",
-      "sport": "soccer_germany_bundesliga",
-      "league": "Bundesliga",
-      "home": "FSV Mainz 05",
-      "away": "Eintracht Frankfurt",
-      "kickoff": "2026-09-12T13:30:00.000Z",
-      "outcome": "X",
-      "model": 0.2145138959801127,
-      "market": {
-        "p": 0.234692740710143,
-        "n": 22,
-        "odds": 4.3,
-        "book": "Matchbook",
-        "age": 0.048361666666666664,
-        "dispersion": 0.021873205239246546,
-        "prices": [
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 4.2
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 4.1
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 4.15
-          },
-          {
-            "key": "tipico_de",
-            "title": "Tipico",
-            "odds": 4.2
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 4.2
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 4.21
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 3.9
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 4
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 4.15
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.8
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 3.8
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 4.3
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 4.16
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 3.85
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.85
-          },
-          {
-            "key": "suprabets",
-            "title": "Suprabets",
-            "odds": 4
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 3.85
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.85
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 4.3
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 4
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 4.15
-          },
-          {
-            "key": "everygame",
-            "title": "Everygame",
-            "odds": 4
-          }
-        ]
-      },
-      "analysis": {
-        "fair": 4.661702662342717,
-        "edge": -0.020178844730030315,
-        "ev": -0.07759024728551545,
-        "gap": 0.020178844730030315,
-        "quality": 78.69204706275721,
-        "confidence": 83.18761996717458,
-        "category": "NO BET",
-        "rank": 0.6104204310405572,
-        "eligible": true
-      },
-      "context": {
-        "teamN": 138,
-        "seasonN": 2,
-        "historyAgeDays": 5.885788217592593
-      },
-      "status": "closed",
-      "generatedAt": "2026-09-12T10:45:32.102Z",
-      "version": "dc-xg-180-audited-1",
-      "trainingMax": "2026-09-11T18:30:00.000Z",
-      "marketQuality": null,
-      "rates": {
-        "homeXG": 2.1722482531317278,
-        "awayXG": 1.3941629805980622,
-        "rho": -0.054999999999999896
-      },
-      "movement": null,
-      "why": "Modello 21.5%, mercato no-vig 23.5%. Quota equa 4.66, disponibile 4.30 (Matchbook). Scarto 2.0 punti percentuali: accordo alto.",
-      "result": "1-3",
-      "won": false,
-      "pnl": -1,
-      "fairPnl": -1
-    },
     {
       "id": "467fe6e71bc34a255dfb47e13b8fa34e:2",
       "eventId": "467fe6e71bc34a255dfb47e13b8fa34e",
@@ -46336,6 +45388,254 @@
       "result": "55-72",
       "won": true,
       "pnl": 0.4099999999999999,
+      "fairPnl": null
+    },
+    {
+      "id": "4a32ee71a6c8285f8c637dc8c5414562:1",
+      "eventId": "4a32ee71a6c8285f8c637dc8c5414562",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Hapoel Tel Aviv",
+      "away": "Beşiktaş J.K.",
+      "kickoff": "2026-10-14T16:00:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.7223563774212358,
+        "n": 18,
+        "odds": 1.37,
+        "book": "Betfair",
+        "age": 0.027973055555555557,
+        "dispersion": 0.03273311555520142,
+        "prices": [
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.32
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 1.28
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 1.31
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.37
+          },
+          {
+            "key": "betfair_ex_eu",
+            "title": "Betfair",
+            "odds": 1.37
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 1.3
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.3
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 1.31
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.26
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 1.34
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 1.33
+          },
+          {
+            "key": "sport888",
+            "title": "888sport",
+            "odds": 1.29
+          },
+          {
+            "key": "williamhill",
+            "title": "William Hill",
+            "odds": 1.29
+          },
+          {
+            "key": "codere_it",
+            "title": "Codere (IT)",
+            "odds": 1.28
+          },
+          {
+            "key": "pinnacle",
+            "title": "Pinnacle",
+            "odds": 1.32
+          },
+          {
+            "key": "matchbook",
+            "title": "Matchbook",
+            "odds": 1.36
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 1.33
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.28
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 72.2% da 18 bookmaker; quota disponibile 1.37 (Betfair).",
+      "result": "100-82",
+      "won": true,
+      "pnl": 0.3700000000000001,
+      "fairPnl": null
+    },
+    {
+      "id": "4a32ee71a6c8285f8c637dc8c5414562:2",
+      "eventId": "4a32ee71a6c8285f8c637dc8c5414562",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Hapoel Tel Aviv",
+      "away": "Beşiktaş J.K.",
+      "kickoff": "2026-10-14T16:00:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.2776436225787641,
+        "n": 18,
+        "odds": 3.65,
+        "book": "Betfair",
+        "age": 0.027973055555555557,
+        "dispersion": 0.03273311555520142,
+        "prices": [
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 3.42
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 3.3
+          },
+          {
+            "key": "winamax_de",
+            "title": "Winamax (DE)",
+            "odds": 3.55
+          },
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 3.25
+          },
+          {
+            "key": "betfair_ex_eu",
+            "title": "Betfair",
+            "odds": 3.65
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 3.5
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 3.5
+          },
+          {
+            "key": "gtbets",
+            "title": "GTbets",
+            "odds": 3.46
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 3.05
+          },
+          {
+            "key": "unibet_nl",
+            "title": "Unibet (NL)",
+            "odds": 3.25
+          },
+          {
+            "key": "leovegas_se",
+            "title": "LeoVegas (SE)",
+            "odds": 3.25
+          },
+          {
+            "key": "sport888",
+            "title": "888sport",
+            "odds": 3.6
+          },
+          {
+            "key": "williamhill",
+            "title": "William Hill",
+            "odds": 3.6
+          },
+          {
+            "key": "codere_it",
+            "title": "Codere (IT)",
+            "odds": 3.35
+          },
+          {
+            "key": "pinnacle",
+            "title": "Pinnacle",
+            "odds": 3.52
+          },
+          {
+            "key": "matchbook",
+            "title": "Matchbook",
+            "odds": 3.55
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 3.44
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 3.34
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-10-14T11:50:49.703Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 27.8% da 18 bookmaker; quota disponibile 3.65 (Betfair).",
+      "result": "100-82",
+      "won": false,
+      "pnl": -1,
       "fairPnl": null
     }
   ],
