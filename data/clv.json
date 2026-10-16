@@ -3224,9 +3224,10 @@
     "modelProbability": 0.28111197377929276,
     "modelVersion": "dc-xg-180-audited-1",
     "status": "pending",
-    "closingOdds": null,
-    "closingAt": null,
-    "clv": null
+    "closingOdds": 4.2,
+    "closingAt": "2026-10-16T18:21:53Z",
+    "clv": null,
+    "observedAt": "2026-10-16T18:22:03.721Z"
   },
   {
     "id": "19ee731602634e5c9e3106630e087464:2|matchbook|dc-xg-180-audited-1",
