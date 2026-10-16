@@ -3227,5 +3227,25 @@
     "closingOdds": null,
     "closingAt": null,
     "clv": null
+  },
+  {
+    "id": "19ee731602634e5c9e3106630e087464:2|matchbook|dc-xg-180-audited-1",
+    "eventId": "19ee731602634e5c9e3106630e087464",
+    "sport": "soccer_spain_la_liga",
+    "home": "Deportivo La Coruña",
+    "away": "Levante",
+    "kickoff": "2026-10-16T19:00:00.000Z",
+    "market": "h2h",
+    "outcome": "2",
+    "book": "matchbook",
+    "bookTitle": "Matchbook",
+    "entryAt": "2026-10-16T18:03:19.132Z",
+    "entryOdds": 3.75,
+    "modelProbability": 0.3176610908332453,
+    "modelVersion": "dc-xg-180-audited-1",
+    "status": "pending",
+    "closingOdds": null,
+    "closingAt": null,
+    "clv": null
   }
 ]
