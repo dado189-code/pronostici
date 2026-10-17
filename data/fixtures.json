@@ -47737,10 +47737,10 @@
   ],
   "clvSummary": {
     "tracked": 182,
-    "closed": 10,
-    "pending": 19,
-    "missing": 153,
-    "mean": 0.012866351846477952,
+    "closed": 12,
+    "pending": 10,
+    "missing": 160,
+    "mean": 0.01303133298840011,
     "definition": "Entry / ultima quota osservata dello stesso bookmaker nei 20 minuti prima del via − 1. Media per segnalazione, non prova di profitto."
   },
   "fixtureInfo": {
