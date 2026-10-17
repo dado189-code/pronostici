@@ -3652,5 +3652,25 @@
     "closingOdds": null,
     "closingAt": null,
     "clv": null
+  },
+  {
+    "id": "18d478f469da3bcc654dd4555b85c7e3:1|onexbet|dc-xg-180-audited-1",
+    "eventId": "18d478f469da3bcc654dd4555b85c7e3",
+    "sport": "soccer_italy_serie_a",
+    "home": "AS Roma",
+    "away": "Genoa",
+    "kickoff": "2026-10-17T18:45:00.000Z",
+    "market": "h2h",
+    "outcome": "1",
+    "book": "onexbet",
+    "bookTitle": "1xBet",
+    "entryAt": "2026-10-17T17:09:21.216Z",
+    "entryOdds": 1.62,
+    "modelProbability": 0.6636429667080671,
+    "modelVersion": "dc-xg-180-audited-1",
+    "status": "pending",
+    "closingOdds": null,
+    "closingAt": null,
+    "clv": null
   }
 ]
