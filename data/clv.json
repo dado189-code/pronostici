@@ -3344,7 +3344,7 @@
     "entryOdds": 3.05,
     "modelProbability": 0.3572113940102762,
     "modelVersion": "dc-xg-180-audited-1",
-    "status": "pending",
+    "status": "missing",
     "closingOdds": null,
     "closingAt": null,
     "clv": null
@@ -3385,9 +3385,10 @@
     "modelProbability": 0.28597658857563113,
     "modelVersion": "dc-xg-180-audited-1",
     "status": "pending",
-    "closingOdds": null,
-    "closingAt": null,
-    "clv": null
+    "closingOdds": 5.6,
+    "closingAt": "2026-10-17T11:45:27Z",
+    "clv": null,
+    "observedAt": "2026-10-17T11:45:54.968Z"
   },
   {
     "id": "6436925dd15916d7041ba32b60000d48:X|coolbet|dc-xg-180-audited-1",
@@ -3405,9 +3406,10 @@
     "modelProbability": 0.25048004419391257,
     "modelVersion": "dc-xg-180-audited-1",
     "status": "pending",
-    "closingOdds": null,
-    "closingAt": null,
-    "clv": null
+    "closingOdds": 3.95,
+    "closingAt": "2026-10-17T11:45:04Z",
+    "clv": null,
+    "observedAt": "2026-10-17T11:45:54.968Z"
   },
   {
     "id": "846e496fc232b2fc20214754836727d0:1|matchbook|dc-xg-180-audited-1",
