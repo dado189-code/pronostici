@@ -3972,5 +3972,25 @@
     "closingOdds": null,
     "closingAt": null,
     "clv": null
+  },
+  {
+    "id": "471f891b1f6516a864ad94c8eb649f5e:1|gtbets|dc-xg-180-audited-1",
+    "eventId": "471f891b1f6516a864ad94c8eb649f5e",
+    "sport": "soccer_france_ligue_one",
+    "home": "Lyon",
+    "away": "Nice",
+    "kickoff": "2026-10-18T18:45:00.000Z",
+    "market": "h2h",
+    "outcome": "1",
+    "book": "gtbets",
+    "bookTitle": "GTbets",
+    "entryAt": "2026-10-18T17:22:26.898Z",
+    "entryOdds": 1.87,
+    "modelProbability": 0.5889614900846802,
+    "modelVersion": "dc-xg-180-audited-1",
+    "status": "pending",
+    "closingOdds": null,
+    "closingAt": null,
+    "clv": null
   }
 ]
