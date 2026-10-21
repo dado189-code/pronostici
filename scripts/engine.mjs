@@ -16,6 +16,12 @@ export function localDay(iso,zone=POLICY.zone) {
   utc(iso); const p=new Intl.DateTimeFormat('en-CA',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date(iso));
   const get=k=>p.find(x=>x.type===k).value;return `${get('year')}-${get('month')}-${get('day')}`;
 }
+// Ore locali (Europe/Rome) in cui lo scheduler automatico puo' consumare crediti API. Su richiesta: 14 e 18.
+export const SCHEDULE_HOURS=[14,18];
+export function scheduledSlot(now,zone=POLICY.zone,hours=SCHEDULE_HOURS) {
+  const h=+new Intl.DateTimeFormat('en-GB',{timeZone:zone,hour:'2-digit',hourCycle:'h23'}).formatToParts(new Date(now)).find(x=>x.type==='hour').value;
+  return hours.includes(h);
+}
 export function due(now,marker,manual=false) {
   if(marker===localDay(now))return false;
   const parts=new Intl.DateTimeFormat('en-GB',{timeZone:POLICY.zone,hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(now));

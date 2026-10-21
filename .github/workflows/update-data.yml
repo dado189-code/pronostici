@@ -1,9 +1,11 @@
 name: Prono · aggiorna dati e pubblica
 on:
   schedule:
-    # Aggiornamenti ogni quattro ore durante la giornata.
+    # Due aggiornamenti al giorno, alle 14 e alle 18 ora italiana (risparmio crediti API).
+    # Trigger UTC a 12,13,16,17: il gate in scripts/deployment.mjs lascia proseguire solo
+    # quello che cade alle 14/18 locali, con ora legale (UTC+2) o solare (UTC+1).
     # Gli orari UTC non dipendono dal cambio ora legale.
-    - cron: '17 6,10,14,18 * * *'
+    - cron: '17 12,13,16,17 * * *'
   workflow_dispatch:
   push:
     branches: [main]

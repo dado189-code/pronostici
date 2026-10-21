@@ -1,13 +1,14 @@
 import {PUBLIC_ASSETS} from './assets.mjs';
 import {readFileSync,writeFileSync,existsSync,appendFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {due,localDay} from './engine.mjs';
+import {due,localDay,scheduledSlot} from './engine.mjs';
 const mode=process.argv[2],read=p=>JSON.parse(readFileSync(p,'utf8'));
 const publicURL='https://dado189-code.github.io/pronostici/';
 if(mode==='gate'){
   const marker=existsSync('data/published.json')?read('data/published.json'):null;
   const now=new Date();const latest=existsSync('data/release.json')?read('data/release.json'):null;const refreshDue=!latest||now-Date.parse(latest.generatedAt)>=3*3600000;
-  const proceed=['push','workflow_dispatch'].includes(process.env.GITHUB_EVENT_NAME)||refreshDue;
+  // Lo scheduler UTC copre sia CEST sia CET: procede solo se l'ora locale e' 14 o 18, cosi' i trigger fuori fascia non consumano crediti.
+  const proceed=['push','workflow_dispatch'].includes(process.env.GITHUB_EVENT_NAME)||(refreshDue&&scheduledSlot(now.toISOString()));
   appendFileSync(process.env.GITHUB_OUTPUT,`proceed=${proceed}\n`);console.log('Esecuzione richiesta:',proceed);
 }else if(mode==='verify'){
   const expected=read('data/release.json');let verified=false;
