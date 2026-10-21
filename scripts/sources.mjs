@@ -17,7 +17,7 @@ export function archive(league){
 }
 export async function json(url,headers={}){
   for(let i=0;i<3;i++){
-    try{const r=await fetch(url,{headers,signal:AbortSignal.timeout(30000)});if(!r.ok)throw Error(`HTTP ${r.status}`);return await r.json();}
+    try{const r=await fetch(url,{headers,signal:AbortSignal.timeout(30000)});if(!r.ok){let d='';try{const b=await r.json();d=[b.error_code,b.message].filter(Boolean).join(': ').slice(0,160);}catch{}throw Error(`HTTP ${r.status}${d?' ('+d+')':''}`);}return await r.json();}
     catch(e){if(i===2)throw Error(`Fonte non disponibile: ${e instanceof SyntaxError?'JSON invalido':e.message.replace(/https?:\/\/\S+/g,'[URL]')}`);await new Promise(r=>setTimeout(r,1000*(i+1)));}
   }
 }
