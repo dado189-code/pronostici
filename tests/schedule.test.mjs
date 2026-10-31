@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {scheduledSlot,SCHEDULE_HOURS} from '../scripts/engine.mjs';
+import {scheduledSlot,SCHEDULE_HOURS} from '../scripts/schedule.mjs';
 test('scheduler runs only at 14 and 18 Europe/Rome, both with CEST and CET',()=>{
   assert.deepEqual(SCHEDULE_HOURS,[14,18]);
   // Ora legale (UTC+2): 12:17Z=14:17 e 16:17Z=18:17 procedono; 13:17Z=15:17 e 17:17Z=19:17 no.
