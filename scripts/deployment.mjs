@@ -1,7 +1,7 @@
 import {PUBLIC_ASSETS} from './assets.mjs';
 import {readFileSync,writeFileSync,existsSync,appendFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {due,localDay,scheduledSlot} from './engine.mjs';
+import {due,localDay} from './engine.mjs';import {scheduledSlot} from './schedule.mjs';
 const mode=process.argv[2],read=p=>JSON.parse(readFileSync(p,'utf8'));
 const publicURL='https://dado189-code.github.io/pronostici/';
 if(mode==='gate'){
