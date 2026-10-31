@@ -44,6 +44,7 @@ jobs:
         if: steps.gate.outputs.proceed == 'true'
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_API_KEY_2: ${{ secrets.ODDS_API_KEY_2 }}
         run: node scripts/update-data.mjs
       - name: Verifica integrità e selezioni dello snapshot
         if: steps.gate.outputs.proceed == 'true'
