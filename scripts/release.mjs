@@ -12,7 +12,10 @@ const now=new Date().toISOString(),day=localDay(now),season=+day.slice(0,4)-(+da
 const report=read('data/audit/report.json');
 const hash=createHash('sha256').update(readFileSync('scripts/model.mjs','utf8').replace(/\r\n/g,'\n')).update(readFileSync('scripts/engine.mjs','utf8').replace(/\r\n/g,'\n')).digest('hex');
 if(report.engineHash!==hash)throw Error('Il backtest non corrisponde al motore corrente');
-const key=process.env.ODDS_API_KEY;if(!key)throw Error('Manca ODDS_API_KEY');
+const keys=[process.env.ODDS_API_KEY,process.env.ODDS_API_KEY_2].filter(Boolean);if(!keys.length)throw Error('Manca ODDS_API_KEY');
+let keyIdx=0;
+// Se una chiave ha esaurito i crediti o e' rifiutata, passa alla successiva: le richieste sono senza stato, si riprende anche a meta' esecuzione.
+async function oddsJson(url){for(;;){try{return await json(url.replace('{KEY}',encodeURIComponent(keys[keyIdx])));}catch(e){if(keyIdx<keys.length-1&&/OUT_OF_USAGE_CREDITS|HTTP 401/.test(e.message)){keyIdx++;console.log('Chiave Odds API esaurita o non valida: passo alla chiave '+(keyIdx+1)+' di '+keys.length);continue;}throw e;}}}
 const old=existsSync('data/release.json')?read('data/release.json'):null;
 const ledger=existsSync('data/ledger.json')?read('data/ledger.json'):[];
 const marker=existsSync('data/published.json')?read('data/published.json'):null;
@@ -31,7 +34,7 @@ for(const [under,sport,name] of LEAGUES){
   coverage.push({league:name,matches:history.length,lastMatch:history.at(-1).data.toISOString(),downloadedAt:new Date().toISOString()});
 }
 const sports=[...LEAGUES.map(x=>({key:x[1],name:x[2]})),{key:'soccer_uefa_champs_league',name:'Champions League'}];
-const catalog=await json('https://api.the-odds-api.com/v4/sports/?apiKey='+encodeURIComponent(key));
+const catalog=await oddsJson('https://api.the-odds-api.com/v4/sports/?apiKey={KEY}');
 if(!Array.isArray(catalog))throw Error('Catalogo sport non valido');
 for(const s of catalog)if(s.active&&(s.key.startsWith('tennis_')||['basketball_nba','basketball_wnba','basketball_euroleague'].includes(s.key)))sports.push({key:s.key,name:s.title});
 // Closure requires provider ID AND kickoff AND home/away identities.
@@ -39,7 +42,7 @@ const results=new Map();
 for(const sport of sports){
   if(sport.key.startsWith('tennis_'))continue;
   if(!ledger.some(p=>p.sport===sport.key&&p.status==='pending'&&utc(p.kickoff)<utc(now)))continue;
-  const data=await json(`https://api.the-odds-api.com/v4/sports/${sport.key}/scores/?apiKey=${encodeURIComponent(key)}&daysFrom=3&dateFormat=iso`);
+  const data=await oddsJson(`https://api.the-odds-api.com/v4/sports/${sport.key}/scores/?apiKey={KEY}&daysFrom=3&dateFormat=iso`);
   if(!Array.isArray(data))throw Error('Risultati: schema invalido');
   for(const r of data){
     const home=r.scores?.find(x=>x.name===r.home_team),away=r.scores?.find(x=>x.name===r.away_team);
@@ -50,10 +53,10 @@ for(const sport of sports){
 const settled=ledger.map(p=>settleMarket(p,results.get(p.eventId)));
 for(const sport of sports){
   // Events discovery is free; avoid spending odds credits for empty days.
-  const upcoming=await json(`https://api.the-odds-api.com/v4/sports/${sport.key}/events?apiKey=${encodeURIComponent(key)}`);
+  const upcoming=await oddsJson(`https://api.the-odds-api.com/v4/sports/${sport.key}/events?apiKey={KEY}`);
   if(!Array.isArray(upcoming))throw Error(`${sport.name}: schema eventi invalido`);
   if(!upcoming.some(e=>localDay(e.commence_time)===day&&utc(e.commence_time)>utc(now))){diagnostics.push(`${sport.name}: nessun evento ancora da iniziare oggi.`);continue;}
-  const events=await json(`https://api.the-odds-api.com/v4/sports/${sport.key}/odds/?apiKey=${encodeURIComponent(key)}&regions=eu&markets=h2h&oddsFormat=decimal&dateFormat=iso`);
+  const events=await oddsJson(`https://api.the-odds-api.com/v4/sports/${sport.key}/odds/?apiKey={KEY}&regions=eu&markets=h2h&oddsFormat=decimal&dateFormat=iso`);
   if(!Array.isArray(events))throw Error(`${sport.name}: schema quote invalido`);
   for(const e of events){
     const mapped=transformEvent(e,sport.key,now);if(!mapped)continue;
