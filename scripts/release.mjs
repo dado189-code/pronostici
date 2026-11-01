@@ -86,8 +86,19 @@ for(const sport of sports){
 }
 const ids=new Set(settled.map(p=>p.id));for(const p of picks)if(!ids.has(p.id)){settled.push(p);ids.add(p.id);}
 const selected=selections(picks,now);
+// Giocate realmente proposte dall'app (le stesse della notifica Telegram): registro persistente, chiuso con i risultati.
+const seedGiven=existsSync('data/given-seed.json')?read('data/given-seed.json'):[];
+const givenMap=new Map();for(const g of [...seedGiven,...(old?.given||[])]){const {status,pnl,results,...raw}=g;givenMap.set(raw.key,raw);}
+const pickById=new Map(picks.map(p=>[p.id,p]));
+const legOf=p=>({id:p.id,home:p.home,away:p.away,outcome:p.outcome,league:p.league,kickoff:p.kickoff,odds:p.market.odds,book:p.market.book});
+const give=(type,rows,odds)=>{if(!rows.length||rows.some(p=>!p))return;const key=type+':'+rows.map(p=>p.id).sort().join('|');if(!givenMap.has(key))givenMap.set(key,{key,type,givenAt:now,day,odds,legs:rows.map(legOf)});};
+if(selected.single)give('single',[pickById.get(selected.single)],pickById.get(selected.single)?.market.odds);
+if(selected.high)give('high',[pickById.get(selected.high)],pickById.get(selected.high)?.market.odds);
+if(selected.combo)give('combo',selected.combo.legs.map(id=>pickById.get(id)),selected.combo.odds);
+const ledgerById=new Map(settled.map(p=>[p.id,p]));
+const givenOut=[...givenMap.values()].sort((x,y)=>Date.parse(x.givenAt)-Date.parse(y.givenAt)).map(g=>{const rs=g.legs.map(l=>ledgerById.get(l.id));const lost=rs.some(r=>r?.status==='closed'&&r.won===false);const won=!lost&&rs.every(r=>r?.status==='closed'&&r.won===true);const status=lost?'lost':won?'won':'pending';return {...g,status,pnl:won?g.odds-1:lost?-1:null,results:rs.map(r=>r?.status==='closed'?r.result:null)};});
 const bundle={schema:2,dataPipelineVersion:1,generation:randomUUID(),generatedAt:now,day,zone:POLICY.zone,version:VERSION,policy:POLICY,
-  picks,quantInputs:Object.fromEntries(picks.filter(p=>p.rates).map(p=>[p.eventId,{kind:"football",rates:p.rates}])),selections:selected,coverage,diagnostics,report,performance:performance(settled),
+  picks,quantInputs:Object.fromEntries(picks.filter(p=>p.rates).map(p=>[p.eventId,{kind:"football",rates:p.rates}])),selections:selected,given:givenOut,coverage,diagnostics,report,performance:performance(settled),
   pendingOld:settled.filter(p=>p.status==='pending'&&utc(now)-utc(p.kickoff)>3*864e5).length,
   history:settled.filter(p=>p.status==='closed').slice(-300),
   limits:['Nessun esito è certo. Confidence misura la qualità della stima, non la probabilità di vincita.',
