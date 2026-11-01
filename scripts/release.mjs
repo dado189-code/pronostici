@@ -50,7 +50,9 @@ for(const sport of sports){
     results.set(r.id,{eventId:r.id,home:r.home_team,away:r.away_team,kickoff:new Date(r.commence_time).toISOString(),completed:r.completed,homeGoals:Number(home.score),awayGoals:Number(away.score)});
   }
 }
-const settled=ledger.map(p=>settleMarket(p,results.get(p.eventId)));
+// Chiusura di riserva dal feed Understat gia' scaricato: le partite oltre la finestra di 3 giorni dell'API quote non si chiuderebbero mai.
+const byUnderstat=p=>{if(p.status!=='pending'||!live.has(p.sport)||utc(p.kickoff)>utc(now)-3*36e5)return p;const h=live.get(p.sport).history.find(r=>canonical(r.casa)===canonical(p.home)&&canonical(r.ospite)===canonical(p.away)&&Math.abs(+r.data-utc(p.kickoff))<36*36e5);return h?settleMarket(p,{eventId:p.eventId,home:p.home,away:p.away,kickoff:p.kickoff,completed:true,homeGoals:h.golCasa,awayGoals:h.golOspite}):p;};
+const settled=ledger.map(p=>byUnderstat(settleMarket(p,results.get(p.eventId))));
 for(const sport of sports){
   // Events discovery is free; avoid spending odds credits for empty days.
   const upcoming=await oddsJson(`https://api.the-odds-api.com/v4/sports/${sport.key}/events?apiKey={KEY}`);
