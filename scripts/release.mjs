@@ -26,7 +26,7 @@ const persistentHistory=existsSync('data/xg-history.json')?read('data/xg-history
 for(const [under,sport,name] of LEAGUES){
   const rows=new Map(archive(under).map(p=>[p.id,p]));
   for(const p of persistentHistory[under]||[])rows.set(p.id,{...p,data:new Date(p.data)});
-  for(const yr of [...new Set([season-1,season])])try{for(const p of await current(under,yr))rows.set(p.id,p);}catch(e){diagnostics.push(name+': Understat non disponibile ('+e.message+'); uso lo storico salvato.');}
+  for(const yr of [...new Set([season-1,season])])try{for(const p of await current(under,yr))rows.set(p.id,p);}catch(e){if(!(persistentHistory[under]||[]).length)throw e;diagnostics.push(name+': Understat non disponibile ('+e.message+'); uso lo storico salvato.');}
   const history=[...rows.values()].filter(p=>+p.data<utc(now)).sort((a,b)=>a.data-b.data);
   if(history.length<100)throw Error(`${name}: storico insufficiente`);
   live.set(sport,{history,model:fit(history,day+'T00:00:00Z'),name});
