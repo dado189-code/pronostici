@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "dataPipelineVersion": 1,
-  "generation": "59df2bb2-d64a-4e9a-b700-1b253d546f80",
-  "generatedAt": "2026-11-15T11:56:08.955Z",
+  "generation": "cba5618a-82f7-42e4-accb-64db672784b3",
+  "generatedAt": "2026-11-15T21:02:07.672Z",
   "day": "2026-11-15",
   "zone": "Europe/Rome",
   "version": "dc-xg-180-audited-1",
@@ -41,156 +41,6 @@
   },
   "picks": [
     {
-      "id": "de475830b5df0d1aae4fcd8f9bbaead9:1",
-      "eventId": "de475830b5df0d1aae4fcd8f9bbaead9",
-      "sport": "basketball_nba",
-      "league": "NBA",
-      "home": "Philadelphia 76ers",
-      "away": "Indiana Pacers",
-      "kickoff": "2026-11-15T18:10:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.693537016183299,
-        "n": 9,
-        "odds": 1.41,
-        "book": "Unibet (NL)",
-        "age": 0.033320833333333334,
-        "dispersion": 0.027799416517741204,
-        "prices": [
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.34
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.38
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.39
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.38
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.38
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.32
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 1.41
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.38
-          },
-          {
-            "key": "everygame",
-            "title": "Everygame",
-            "odds": 1.36
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-15T11:56:08.955Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 69.4% da 9 bookmaker; quota disponibile 1.41 (Unibet (NL))."
-    },
-    {
-      "id": "de475830b5df0d1aae4fcd8f9bbaead9:2",
-      "eventId": "de475830b5df0d1aae4fcd8f9bbaead9",
-      "sport": "basketball_nba",
-      "league": "NBA",
-      "home": "Philadelphia 76ers",
-      "away": "Indiana Pacers",
-      "kickoff": "2026-11-15T18:10:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.30646298381670095,
-        "n": 9,
-        "odds": 3.35,
-        "book": "Everygame",
-        "age": 0.033320833333333334,
-        "dispersion": 0.027799416517741204,
-        "prices": [
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.1
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 3.08
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.14
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 3.12
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 3.1
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 2.85
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 3.05
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 3.16
-          },
-          {
-            "key": "everygame",
-            "title": "Everygame",
-            "odds": 3.35
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-15T11:56:08.955Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 30.6% da 9 bookmaker; quota disponibile 3.35 (Everygame)."
-    },
-    {
       "id": "29b8bbf05645162d89780189eed390c2:1",
       "eventId": "29b8bbf05645162d89780189eed390c2",
       "sport": "basketball_nba",
@@ -201,69 +51,91 @@
       "outcome": "1",
       "model": null,
       "market": {
-        "p": 0.4246400946097503,
-        "n": 9,
-        "odds": 2.3,
-        "book": "GTbets",
-        "age": 0.033320833333333334,
-        "dispersion": 0.0132719555210139,
+        "p": 0.4073385162877484,
+        "n": 8,
+        "odds": 2.51,
+        "book": "MyBookie.ag",
+        "age": 0.19963111111111112,
+        "dispersion": 0.035626535626535616,
         "prices": [
+          {
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
+            "odds": 2.15
+          },
+          {
+            "key": "sport888",
+            "title": "888sport",
+            "odds": 2.3
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 2.15
+          },
+          {
+            "key": "codere_it",
+            "title": "Codere (IT)",
+            "odds": 2.31
+          },
           {
             "key": "onexbet",
             "title": "1xBet",
-            "odds": 2.27
+            "odds": 2.37
           },
           {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.25
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 2.35
           },
           {
             "key": "mybookieag",
             "title": "MyBookie.ag",
-            "odds": 2.21
-          },
-          {
-            "key": "unibet_se",
-            "title": "Unibet (SE)",
-            "odds": 2.25
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 2.26
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 2.3
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 2.3
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 2.1
+            "odds": 2.51
           },
           {
             "key": "everygame",
             "title": "Everygame",
-            "odds": 2.25
+            "odds": 2.45
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-11-15T11:56:08.955Z",
+      "generatedAt": "2026-11-15T21:02:07.672Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 42.5% da 9 bookmaker; quota disponibile 2.30 (GTbets)."
+      "movement": {
+        "from": "2026-11-15T11:56:08.955Z",
+        "to": "2026-11-15T21:02:07.672Z",
+        "books": [
+          {
+            "book": "1xBet",
+            "key": "onexbet",
+            "from": 2.27,
+            "to": 2.37,
+            "change": 0.04405286343612347
+          },
+          {
+            "book": "MyBookie.ag",
+            "key": "mybookieag",
+            "from": 2.21,
+            "to": 2.51,
+            "change": 0.1357466063348416
+          },
+          {
+            "book": "Everygame",
+            "key": "everygame",
+            "from": 2.25,
+            "to": 2.45,
+            "change": 0.08888888888888902
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 40.7% da 8 bookmaker; quota disponibile 2.51 (MyBookie.ag)."
     },
     {
       "id": "29b8bbf05645162d89780189eed390c2:2",
@@ -276,69 +148,91 @@
       "outcome": "2",
       "model": null,
       "market": {
-        "p": 0.5753599053902497,
-        "n": 9,
-        "odds": 1.69,
-        "book": "Everygame",
-        "age": 0.033320833333333334,
-        "dispersion": 0.013271955521014012,
+        "p": 0.5926614837122516,
+        "n": 8,
+        "odds": 1.63,
+        "book": "Coolbet",
+        "age": 0.19963111111111112,
+        "dispersion": 0.035626535626535616,
         "prices": [
+          {
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
+            "odds": 1.55
+          },
+          {
+            "key": "sport888",
+            "title": "888sport",
+            "odds": 1.61
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 1.55
+          },
+          {
+            "key": "codere_it",
+            "title": "Codere (IT)",
+            "odds": 1.62
+          },
           {
             "key": "onexbet",
             "title": "1xBet",
-            "odds": 1.68
+            "odds": 1.63
           },
           {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.62
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.63
           },
           {
             "key": "mybookieag",
             "title": "MyBookie.ag",
-            "odds": 1.68
-          },
-          {
-            "key": "unibet_se",
-            "title": "Unibet (SE)",
-            "odds": 1.67
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.66
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.67
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.67
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
             "odds": 1.56
           },
           {
             "key": "everygame",
             "title": "Everygame",
-            "odds": 1.69
+            "odds": 1.61
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-11-15T11:56:08.955Z",
+      "generatedAt": "2026-11-15T21:02:07.672Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 57.5% da 9 bookmaker; quota disponibile 1.69 (Everygame)."
+      "movement": {
+        "from": "2026-11-15T11:56:08.955Z",
+        "to": "2026-11-15T21:02:07.672Z",
+        "books": [
+          {
+            "book": "1xBet",
+            "key": "onexbet",
+            "from": 1.68,
+            "to": 1.63,
+            "change": -0.029761904761904767
+          },
+          {
+            "book": "MyBookie.ag",
+            "key": "mybookieag",
+            "from": 1.68,
+            "to": 1.56,
+            "change": -0.0714285714285714
+          },
+          {
+            "book": "Everygame",
+            "key": "everygame",
+            "from": 1.69,
+            "to": 1.61,
+            "change": -0.047337278106508784
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 59.3% da 8 bookmaker; quota disponibile 1.63 (Coolbet)."
     },
     {
       "id": "db26abc3cfd070ab012227413abafeb2:1",
@@ -351,69 +245,57 @@
       "outcome": "1",
       "model": null,
       "market": {
-        "p": 0.5229645662266221,
-        "n": 9,
-        "odds": 1.85,
-        "book": "1xBet",
-        "age": 0.033320833333333334,
-        "dispersion": 0.01986660178055133,
+        "p": 0.4963005043174473,
+        "n": 4,
+        "odds": 1.99,
+        "book": "MyBookie.ag",
+        "age": 0.04768666666666667,
+        "dispersion": 0.026021498084161265,
         "prices": [
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.82
-          },
           {
             "key": "mybookieag",
             "title": "MyBookie.ag",
-            "odds": 1.83
+            "odds": 1.99
           },
           {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.82
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.9
           },
           {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.83
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
+            "odds": 1.88
           },
           {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.85
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.82
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 1.8
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.76
-          },
-          {
-            "key": "everygame",
-            "title": "Everygame",
-            "odds": 1.83
+            "key": "unibet_se",
+            "title": "Unibet (SE)",
+            "odds": 1.88
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-11-15T11:56:08.955Z",
+      "generatedAt": "2026-11-15T21:02:07.672Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 52.3% da 9 bookmaker; quota disponibile 1.85 (1xBet)."
+      "movement": {
+        "from": "2026-11-15T11:56:08.955Z",
+        "to": "2026-11-15T21:02:07.672Z",
+        "books": [
+          {
+            "book": "MyBookie.ag",
+            "key": "mybookieag",
+            "from": 1.83,
+            "to": 1.99,
+            "change": 0.08743169398907091
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 49.6% da 4 bookmaker; quota disponibile 1.99 (MyBookie.ag)."
     },
     {
       "id": "db26abc3cfd070ab012227413abafeb2:2",
@@ -426,69 +308,57 @@
       "outcome": "2",
       "model": null,
       "market": {
-        "p": 0.477035433773378,
-        "n": 9,
-        "odds": 2.06,
-        "book": "Unibet (NL)",
-        "age": 0.033320833333333334,
-        "dispersion": 0.019866601780551274,
+        "p": 0.5036994956825527,
+        "n": 4,
+        "odds": 1.95,
+        "book": "Unibet (SE)",
+        "age": 0.04768666666666667,
+        "dispersion": 0.026021498084161265,
         "prices": [
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 2.02
-          },
           {
             "key": "mybookieag",
             "title": "MyBookie.ag",
-            "odds": 1.99
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.98
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 2
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.01
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 2.02
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 2.06
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
             "odds": 1.86
           },
           {
-            "key": "everygame",
-            "title": "Everygame",
-            "odds": 2
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.94
+          },
+          {
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
+            "odds": 1.79
+          },
+          {
+            "key": "unibet_se",
+            "title": "Unibet (SE)",
+            "odds": 1.95
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-11-15T11:56:08.955Z",
+      "generatedAt": "2026-11-15T21:02:07.672Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 47.7% da 9 bookmaker; quota disponibile 2.06 (Unibet (NL))."
+      "movement": {
+        "from": "2026-11-15T11:56:08.955Z",
+        "to": "2026-11-15T21:02:07.672Z",
+        "books": [
+          {
+            "book": "MyBookie.ag",
+            "key": "mybookieag",
+            "from": 1.99,
+            "to": 1.86,
+            "change": -0.0653266331658291
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 50.4% da 4 bookmaker; quota disponibile 1.95 (Unibet (SE))."
     },
     {
       "id": "b2ffb781fe21df092fae2cff6c4c8c89:1",
@@ -501,69 +371,69 @@
       "outcome": "1",
       "model": null,
       "market": {
-        "p": 0.1059059631201975,
-        "n": 9,
-        "odds": 10.1,
-        "book": "1xBet",
-        "age": 0.033320833333333334,
-        "dispersion": 0.033560933025116146,
+        "p": 0.1290360310944036,
+        "n": 5,
+        "odds": 8,
+        "book": "Unibet (SE)",
+        "age": 0.04768666666666667,
+        "dispersion": 0.01581144029895945,
         "prices": [
           {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 9.36
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 7.1
           },
           {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
+            "odds": 6.75
+          },
+          {
+            "key": "unibet_se",
+            "title": "Unibet (SE)",
             "odds": 8
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 9.4
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 7
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 10.1
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 9.5
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 10
           },
           {
             "key": "mybookieag",
             "title": "MyBookie.ag",
-            "odds": 9
+            "odds": 7.6
           },
           {
             "key": "everygame",
             "title": "Everygame",
-            "odds": 9.25
+            "odds": 7.5
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-11-15T11:56:08.955Z",
+      "generatedAt": "2026-11-15T21:02:07.672Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 10.6% da 9 bookmaker; quota disponibile 10.10 (1xBet)."
+      "movement": {
+        "from": "2026-11-15T11:56:08.955Z",
+        "to": "2026-11-15T21:02:07.672Z",
+        "books": [
+          {
+            "book": "MyBookie.ag",
+            "key": "mybookieag",
+            "from": 9,
+            "to": 7.6,
+            "change": -0.15555555555555556
+          },
+          {
+            "book": "Everygame",
+            "key": "everygame",
+            "from": 9.25,
+            "to": 7.5,
+            "change": -0.18918918918918914
+          }
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
+      },
+      "why": "Nessun modello indipendente. Consenso no-vig 12.9% da 5 bookmaker; quota disponibile 8.00 (Unibet (SE))."
     },
     {
       "id": "b2ffb781fe21df092fae2cff6c4c8c89:2",
@@ -576,269 +446,69 @@
       "outcome": "2",
       "model": null,
       "market": {
-        "p": 0.8940940368798026,
-        "n": 9,
-        "odds": 1.07,
-        "book": "GTbets",
-        "age": 0.033320833333333334,
-        "dispersion": 0.03356093302511609,
+        "p": 0.8709639689055964,
+        "n": 5,
+        "odds": 1.11,
+        "book": "Coolbet",
+        "age": 0.04768666666666667,
+        "dispersion": 0.015811440298959756,
         "prices": [
           {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.07
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.11
           },
           {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.07
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.07
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.04
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.07
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.07
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
+            "key": "betclic_fr",
+            "title": "Betclic (FR)",
             "odds": 1.06
+          },
+          {
+            "key": "unibet_se",
+            "title": "Unibet (SE)",
+            "odds": 1.09
           },
           {
             "key": "mybookieag",
             "title": "MyBookie.ag",
-            "odds": 1.06
+            "odds": 1.1
           },
           {
             "key": "everygame",
             "title": "Everygame",
-            "odds": 1.06
+            "odds": 1.1
           }
         ]
       },
       "analysis": null,
       "context": null,
       "status": "pending",
-      "generatedAt": "2026-11-15T11:56:08.955Z",
+      "generatedAt": "2026-11-15T21:02:07.672Z",
       "version": "market-only",
       "trainingMax": null,
       "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 89.4% da 9 bookmaker; quota disponibile 1.07 (GTbets)."
-    },
-    {
-      "id": "a09dfd51fadc5c32dd0adb4f799b8628:1",
-      "eventId": "a09dfd51fadc5c32dd0adb4f799b8628",
-      "sport": "tennis_atp_finals",
-      "league": "ATP Finals",
-      "home": "Alexander Zverev",
-      "away": "Rafael Jodar",
-      "kickoff": "2026-11-15T13:00:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.7070256107352465,
-        "n": 4,
-        "odds": 1.37,
-        "book": "Marathon Bet",
-        "age": 0.0124875,
-        "dispersion": 0.025373016352739364,
-        "prices": [
+      "movement": {
+        "from": "2026-11-15T11:56:08.955Z",
+        "to": "2026-11-15T21:02:07.672Z",
+        "books": [
           {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.26
+            "book": "MyBookie.ag",
+            "key": "mybookieag",
+            "from": 1.06,
+            "to": 1.1,
+            "change": 0.037735849056603765
           },
           {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.34
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 1.29
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.37
+            "book": "Everygame",
+            "key": "everygame",
+            "from": 1.06,
+            "to": 1.1,
+            "change": 0.037735849056603765
           }
-        ]
+        ],
+        "note": "Confronto fra due rilevazioni dello stesso bookmaker; non quota di apertura o closing certificata."
       },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-15T11:56:08.955Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 70.7% da 4 bookmaker; quota disponibile 1.37 (Marathon Bet)."
-    },
-    {
-      "id": "a09dfd51fadc5c32dd0adb4f799b8628:2",
-      "eventId": "a09dfd51fadc5c32dd0adb4f799b8628",
-      "sport": "tennis_atp_finals",
-      "league": "ATP Finals",
-      "home": "Alexander Zverev",
-      "away": "Rafael Jodar",
-      "kickoff": "2026-11-15T13:00:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.29297438926475355,
-        "n": 4,
-        "odds": 3.45,
-        "book": "Winamax (DE)",
-        "age": 0.0124875,
-        "dispersion": 0.025373016352739253,
-        "prices": [
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 2.9
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 3.45
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 3.25
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 3.12
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-15T11:56:08.955Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 29.3% da 4 bookmaker; quota disponibile 3.45 (Winamax (DE))."
-    },
-    {
-      "id": "2e7a66dfb5caacad9c224d3eaf230dee:1",
-      "eventId": "2e7a66dfb5caacad9c224d3eaf230dee",
-      "sport": "tennis_atp_finals",
-      "league": "ATP Finals",
-      "home": "Ben Shelton",
-      "away": "Arthur Fils",
-      "kickoff": "2026-11-15T19:30:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.6200498855447222,
-        "n": 4,
-        "odds": 1.56,
-        "book": "Winamax (DE)",
-        "age": 0.0124875,
-        "dispersion": 0.012170604776628346,
-        "prices": [
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.46
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.56
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 1.48
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.55
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-15T11:56:08.955Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 62.0% da 4 bookmaker; quota disponibile 1.56 (Winamax (DE))."
-    },
-    {
-      "id": "2e7a66dfb5caacad9c224d3eaf230dee:2",
-      "eventId": "2e7a66dfb5caacad9c224d3eaf230dee",
-      "sport": "tennis_atp_finals",
-      "league": "ATP Finals",
-      "home": "Ben Shelton",
-      "away": "Arthur Fils",
-      "kickoff": "2026-11-15T19:30:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.3799501144552778,
-        "n": 4,
-        "odds": 2.5,
-        "book": "Winamax (DE)",
-        "age": 0.0124875,
-        "dispersion": 0.012170604776628402,
-        "prices": [
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 2.45
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 2.5
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 2.45
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 2.47
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-15T11:56:08.955Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 38.0% da 4 bookmaker; quota disponibile 2.50 (Winamax (DE))."
+      "why": "Nessun modello indipendente. Consenso no-vig 87.1% da 5 bookmaker; quota disponibile 1.11 (Coolbet)."
     }
   ],
   "quantInputs": {},
@@ -1524,31 +1194,31 @@
       "league": "Serie A",
       "matches": 1613,
       "lastMatch": "2026-10-31T19:45:00.000Z",
-      "downloadedAt": "2026-11-15T11:56:17.131Z"
+      "downloadedAt": "2026-11-15T21:02:15.170Z"
     },
     {
       "league": "Premier League",
       "matches": 1608,
       "lastMatch": "2026-10-31T20:00:00.000Z",
-      "downloadedAt": "2026-11-15T11:56:24.447Z"
+      "downloadedAt": "2026-11-15T21:02:22.204Z"
     },
     {
       "league": "Liga",
       "matches": 1624,
       "lastMatch": "2026-10-31T20:00:00.000Z",
-      "downloadedAt": "2026-11-15T11:56:31.771Z"
+      "downloadedAt": "2026-11-15T21:02:29.304Z"
     },
     {
       "league": "Bundesliga",
       "matches": 1294,
       "lastMatch": "2026-10-31T17:30:00.000Z",
-      "downloadedAt": "2026-11-15T11:56:38.985Z"
+      "downloadedAt": "2026-11-15T21:02:36.207Z"
     },
     {
       "league": "Ligue 1",
       "matches": 1374,
       "lastMatch": "2026-10-31T19:45:00.000Z",
-      "downloadedAt": "2026-11-15T11:56:46.198Z"
+      "downloadedAt": "2026-11-15T21:02:43.106Z"
     }
   ],
   "diagnostics": [
@@ -1569,7 +1239,8 @@
     "Ligue 1: nessun evento ancora da iniziare oggi.",
     "Champions League: nessun evento ancora da iniziare oggi.",
     "Basketball Euroleague: nessun evento ancora da iniziare oggi.",
-    "Elina Svitolina – Mirra Andreeva: meno di 3 bookmaker completi e freschi."
+    "ATP Finals: nessun evento ancora da iniziare oggi.",
+    "WTA Finals: nessun evento ancora da iniziare oggi."
   ],
   "report": {
     "version": "dc-xg-180-audited-1",
@@ -42285,8 +41956,8 @@
   },
   "fixtureInfo": {
     "kind": "last-successful-snapshot",
-    "capturedAt": "2026-11-15T11:56:08.955Z",
-    "generation": "59df2bb2-d64a-4e9a-b700-1b253d546f80",
+    "capturedAt": "2026-11-15T21:02:07.672Z",
+    "generation": "cba5618a-82f7-42e4-accb-64db672784b3",
     "sources": [
       "The Odds API v4: eventi e quote h2h",
       "Understat: xG storici"
