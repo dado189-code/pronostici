@@ -1,9 +1,9 @@
 {
   "schema": 2,
   "dataPipelineVersion": 1,
-  "generation": "b416b48a-3911-4a87-a0bb-60d5a0f67e14",
-  "generatedAt": "2026-11-17T17:37:44.594Z",
-  "day": "2026-11-17",
+  "generation": "e37d4b82-43b3-4751-b141-37ee6b7f9cf6",
+  "generatedAt": "2026-11-18T17:15:05.547Z",
+  "day": "2026-11-18",
   "zone": "Europe/Rome",
   "version": "dc-xg-180-audited-1",
   "policy": {
@@ -39,948 +39,7 @@
     ],
     "consensusBooks": 3
   },
-  "picks": [
-    {
-      "id": "c09af9e2180fcadb93c24305447585a4:1",
-      "eventId": "c09af9e2180fcadb93c24305447585a4",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Fenerbahce SK",
-      "away": "ASVEL Lyon Villeurbanne",
-      "kickoff": "2026-11-17T18:00:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.8334829786166759,
-        "n": 6,
-        "odds": 1.14,
-        "book": "Coolbet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.04523420427352054,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.12
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.07
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.13
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.14
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.09
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.12
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 83.3% da 6 bookmaker; quota disponibile 1.14 (Coolbet)."
-    },
-    {
-      "id": "c09af9e2180fcadb93c24305447585a4:2",
-      "eventId": "c09af9e2180fcadb93c24305447585a4",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Fenerbahce SK",
-      "away": "ASVEL Lyon Villeurbanne",
-      "kickoff": "2026-11-17T18:00:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.166517021383324,
-        "n": 6,
-        "odds": 6.89,
-        "book": "1xBet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.04523420427352062,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 6.89
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 4.8
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 6
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 5.8
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 4.8
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 5.5
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 16.7% da 6 bookmaker; quota disponibile 6.89 (1xBet)."
-    },
-    {
-      "id": "d98d9ad5c0769750e7483d129766b628:1",
-      "eventId": "d98d9ad5c0769750e7483d129766b628",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Žalgiris",
-      "away": "FC Bayern München",
-      "kickoff": "2026-11-17T18:00:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.7743604327495578,
-        "n": 6,
-        "odds": 1.23,
-        "book": "Coolbet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.028209292472814562,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.22
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.15
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.22
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.23
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.16
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.2
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 77.4% da 6 bookmaker; quota disponibile 1.23 (Coolbet)."
-    },
-    {
-      "id": "d98d9ad5c0769750e7483d129766b628:2",
-      "eventId": "d98d9ad5c0769750e7483d129766b628",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Žalgiris",
-      "away": "FC Bayern München",
-      "kickoff": "2026-11-17T18:00:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.2256395672504421,
-        "n": 6,
-        "odds": 4.62,
-        "book": "1xBet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.028209292472814534,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 4.62
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 3.7
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 4.3
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 4.2
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.8
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 4.1
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 22.6% da 6 bookmaker; quota disponibile 4.62 (1xBet)."
-    },
-    {
-      "id": "d54e5d8c14d4b0a97e2d393d9602bae3:1",
-      "eventId": "d54e5d8c14d4b0a97e2d393d9602bae3",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "FC Barcelona Bàsquet",
-      "away": "Paris Basketball",
-      "kickoff": "2026-11-17T19:30:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.6453419426926401,
-        "n": 6,
-        "odds": 1.48,
-        "book": "Coolbet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.02273355444997227,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.46
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.37
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.48
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.48
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.38
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.45
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 64.5% da 6 bookmaker; quota disponibile 1.48 (Coolbet)."
-    },
-    {
-      "id": "d54e5d8c14d4b0a97e2d393d9602bae3:2",
-      "eventId": "d54e5d8c14d4b0a97e2d393d9602bae3",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "FC Barcelona Bàsquet",
-      "away": "Paris Basketball",
-      "kickoff": "2026-11-17T19:30:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.35465805730735994,
-        "n": 6,
-        "odds": 2.86,
-        "book": "1xBet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.022733554449972326,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.86
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 2.45
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.65
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 2.67
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 2.5
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 2.57
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 35.5% da 6 bookmaker; quota disponibile 2.86 (1xBet)."
-    },
-    {
-      "id": "da8bb84954673ddf92c15998b2757057:1",
-      "eventId": "da8bb84954673ddf92c15998b2757057",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Saski Baskonia",
-      "away": "Hapoel Tel Aviv",
-      "kickoff": "2026-11-17T19:30:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.28712194294962273,
-        "n": 6,
-        "odds": 3.4,
-        "book": "Nordic Bet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.015825890666404996,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.32
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 3
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.4
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 3.25
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.2
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 3.2
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 28.7% da 6 bookmaker; quota disponibile 3.40 (Nordic Bet)."
-    },
-    {
-      "id": "da8bb84954673ddf92c15998b2757057:2",
-      "eventId": "da8bb84954673ddf92c15998b2757057",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Saski Baskonia",
-      "away": "Hapoel Tel Aviv",
-      "kickoff": "2026-11-17T19:30:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.7128780570503772,
-        "n": 6,
-        "odds": 1.36,
-        "book": "1xBet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.01582589066640494,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.36
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.24
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.32
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.35
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.23
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.3
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 71.3% da 6 bookmaker; quota disponibile 1.36 (1xBet)."
-    },
-    {
-      "id": "3e14f0eac97f2bdd7dc7f03af6033da7:1",
-      "eventId": "3e14f0eac97f2bdd7dc7f03af6033da7",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Pallacanestro Olimpia Milano",
-      "away": "KK Crvena zvezda",
-      "kickoff": "2026-11-17T19:30:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.485168935780603,
-        "n": 6,
-        "odds": 2.06,
-        "book": "1xBet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.042163790107726196,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.06
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.85
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.98
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.93
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.74
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.92
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 48.5% da 6 bookmaker; quota disponibile 2.06 (1xBet)."
-    },
-    {
-      "id": "3e14f0eac97f2bdd7dc7f03af6033da7:2",
-      "eventId": "3e14f0eac97f2bdd7dc7f03af6033da7",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Pallacanestro Olimpia Milano",
-      "away": "KK Crvena zvezda",
-      "kickoff": "2026-11-17T19:30:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.514831064219397,
-        "n": 6,
-        "odds": 1.86,
-        "book": "Coolbet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.04216379010772603,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.82
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.67
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.85
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.86
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.82
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.79
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 51.5% da 6 bookmaker; quota disponibile 1.86 (Coolbet)."
-    },
-    {
-      "id": "d2e68cf1e57b5753197640008e091adb:1",
-      "eventId": "d2e68cf1e57b5753197640008e091adb",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "KK Partizan NIS",
-      "away": "Valencia Basket",
-      "kickoff": "2026-11-17T19:45:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.5367546991426572,
-        "n": 6,
-        "odds": 1.81,
-        "book": "1xBet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.016401928594669712,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.81
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.61
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.75
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.8
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.67
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.72
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 53.7% da 6 bookmaker; quota disponibile 1.81 (1xBet)."
-    },
-    {
-      "id": "d2e68cf1e57b5753197640008e091adb:2",
-      "eventId": "d2e68cf1e57b5753197640008e091adb",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "KK Partizan NIS",
-      "away": "Valencia Basket",
-      "kickoff": "2026-11-17T19:45:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.4632453008573428,
-        "n": 6,
-        "odds": 2.08,
-        "book": "Nordic Bet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.016401928594669657,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.06
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.93
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.08
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 2.02
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.91
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 2
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 46.3% da 6 bookmaker; quota disponibile 2.08 (Nordic Bet)."
-    },
-    {
-      "id": "294eb049f21c815e118d8e7591d59e2b:1",
-      "eventId": "294eb049f21c815e118d8e7591d59e2b",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Virtus Segafredo Bologna",
-      "away": "Panathinaikos",
-      "kickoff": "2026-11-17T20:00:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.2881025710830623,
-        "n": 6,
-        "odds": 3.4,
-        "book": "Nordic Bet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.020992577822089242,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.21
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 3.05
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.4
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 3.3
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.1
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 3.24
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 28.8% da 6 bookmaker; quota disponibile 3.40 (Nordic Bet)."
-    },
-    {
-      "id": "294eb049f21c815e118d8e7591d59e2b:2",
-      "eventId": "294eb049f21c815e118d8e7591d59e2b",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Virtus Segafredo Bologna",
-      "away": "Panathinaikos",
-      "kickoff": "2026-11-17T20:00:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.7118974289169376,
-        "n": 6,
-        "odds": 1.38,
-        "book": "1xBet",
-        "age": 0.06322055555555556,
-        "dispersion": 0.020992577822089298,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.38
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.23
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.32
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.34
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.25
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.29
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 71.2% da 6 bookmaker; quota disponibile 1.38 (1xBet)."
-    },
-    {
-      "id": "f0a6612a0e894025a58459b04ecd02c9:1",
-      "eventId": "f0a6612a0e894025a58459b04ecd02c9",
-      "sport": "tennis_atp_finals",
-      "league": "ATP Finals",
-      "home": "Alexander Zverev",
-      "away": "Ben Shelton",
-      "kickoff": "2026-11-17T19:30:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.6449170338708774,
-        "n": 4,
-        "odds": 1.51,
-        "book": "Betsson",
-        "age": 0.012942777777777777,
-        "dispersion": 0.0332561578386148,
-        "prices": [
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.5
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 1.5
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.51
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.38
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 64.5% da 4 bookmaker; quota disponibile 1.51 (Betsson)."
-    },
-    {
-      "id": "f0a6612a0e894025a58459b04ecd02c9:2",
-      "eventId": "f0a6612a0e894025a58459b04ecd02c9",
-      "sport": "tennis_atp_finals",
-      "league": "ATP Finals",
-      "home": "Alexander Zverev",
-      "away": "Ben Shelton",
-      "kickoff": "2026-11-17T19:30:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.35508296612912266,
-        "n": 4,
-        "odds": 2.75,
-        "book": "Unibet (FR)",
-        "age": 0.012942777777777777,
-        "dispersion": 0.03325615783861485,
-        "prices": [
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 2.75
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 2.6
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 2.6
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 2.75
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "pending",
-      "generatedAt": "2026-11-17T17:37:44.594Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 35.5% da 4 bookmaker; quota disponibile 2.75 (Unibet (FR))."
-    }
-  ],
+  "picks": [],
   "quantInputs": {},
   "selections": {
     "single": null,
@@ -1664,31 +723,31 @@
       "league": "Serie A",
       "matches": 1613,
       "lastMatch": "2026-10-31T19:45:00.000Z",
-      "downloadedAt": "2026-11-17T17:37:52.205Z"
+      "downloadedAt": "2026-11-18T17:15:13.779Z"
     },
     {
       "league": "Premier League",
       "matches": 1608,
       "lastMatch": "2026-10-31T20:00:00.000Z",
-      "downloadedAt": "2026-11-17T17:37:59.316Z"
+      "downloadedAt": "2026-11-18T17:15:21.268Z"
     },
     {
       "league": "Liga",
       "matches": 1624,
       "lastMatch": "2026-10-31T20:00:00.000Z",
-      "downloadedAt": "2026-11-17T17:38:06.441Z"
+      "downloadedAt": "2026-11-18T17:15:28.728Z"
     },
     {
       "league": "Bundesliga",
       "matches": 1294,
       "lastMatch": "2026-10-31T17:30:00.000Z",
-      "downloadedAt": "2026-11-17T17:38:13.446Z"
+      "downloadedAt": "2026-11-18T17:15:36.066Z"
     },
     {
       "league": "Ligue 1",
       "matches": 1374,
       "lastMatch": "2026-10-31T19:45:00.000Z",
-      "downloadedAt": "2026-11-17T17:38:20.441Z"
+      "downloadedAt": "2026-11-18T17:15:43.403Z"
     }
   ],
   "diagnostics": [
@@ -1708,7 +767,9 @@
     "Bundesliga: nessun evento ancora da iniziare oggi.",
     "Ligue 1: nessun evento ancora da iniziare oggi.",
     "Champions League: nessun evento ancora da iniziare oggi.",
-    "NBA: nessun evento ancora da iniziare oggi."
+    "Basketball Euroleague: nessun evento ancora da iniziare oggi.",
+    "NBA: nessun evento ancora da iniziare oggi.",
+    "Flavio Cobolli – Frances Tiafoe: meno di 3 bookmaker completi e freschi."
   ],
   "report": {
     "version": "dc-xg-180-audited-1",
@@ -1844,1422 +905,14 @@
       "fairPnl": 2.792551880057138
     },
     "CONSENSO": {
-      "n": 119,
-      "wins": 53,
-      "pnl": 14.550000000000002,
+      "n": 131,
+      "wins": 59,
+      "pnl": 13.280000000000003,
       "fairPnl": 0
     }
   },
-  "pendingOld": 258,
+  "pendingOld": 260,
   "history": [
-    {
-      "id": "392a93eaf1ea0b908993ca97f7805539:2",
-      "eventId": "392a93eaf1ea0b908993ca97f7805539",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "KK Crvena zvezda",
-      "away": "Anadolu Efes",
-      "kickoff": "2026-10-01T18:00:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.44340127734280005,
-        "n": 18,
-        "odds": 2.26,
-        "book": "Matchbook",
-        "age": 0.029718333333333333,
-        "dispersion": 0.018990191801640688,
-        "prices": [
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2.15
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 2.06
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 2.15
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.12
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 2.1
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 2.15
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.15
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 2.19
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 2.16
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 2.26
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 2.12
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.97
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 2.12
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 2.1
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 2.18
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 2.2
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 2.26
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 2.06
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "closed",
-      "generatedAt": "2026-10-01T13:12:55.986Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 44.3% da 18 bookmaker; quota disponibile 2.26 (Matchbook).",
-      "result": "77-72",
-      "won": false,
-      "pnl": -1,
-      "fairPnl": null
-    },
-    {
-      "id": "b317d475532739fa45af483e4a6b017f:1",
-      "eventId": "b317d475532739fa45af483e4a6b017f",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Virtus Segafredo Bologna",
-      "away": "Olympiacos",
-      "kickoff": "2026-10-01T18:30:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.22624105079592768,
-        "n": 18,
-        "odds": 4.5,
-        "book": "888sport",
-        "age": 0.029718333333333333,
-        "dispersion": 0.030003987240829394,
-        "prices": [
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 4.21
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 4.2
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 4
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 4.3
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 4.3
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 4.3
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 4.4
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 4.5
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 4
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 4.33
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 4.2
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.9
-          },
-          {
-            "key": "unibet_se",
-            "title": "Unibet (SE)",
-            "odds": 4.2
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 4.13
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 4.01
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 4.16
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 4.4
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 4
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "closed",
-      "generatedAt": "2026-10-01T13:12:55.986Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 22.6% da 18 bookmaker; quota disponibile 4.50 (888sport).",
-      "result": "96-94",
-      "won": true,
-      "pnl": 3.5,
-      "fairPnl": null
-    },
-    {
-      "id": "b317d475532739fa45af483e4a6b017f:2",
-      "eventId": "b317d475532739fa45af483e4a6b017f",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Virtus Segafredo Bologna",
-      "away": "Olympiacos",
-      "kickoff": "2026-10-01T18:30:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.7737589492040724,
-        "n": 18,
-        "odds": 1.28,
-        "book": "Betfair",
-        "age": 0.029718333333333333,
-        "dispersion": 0.03000398724082942,
-        "prices": [
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.2
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.23
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.21
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.23
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.22
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.22
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.28
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.2
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 1.2
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.23
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.22
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.15
-          },
-          {
-            "key": "unibet_se",
-            "title": "Unibet (SE)",
-            "odds": 1.23
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.26
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.27
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.25
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 1.27
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.2
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "closed",
-      "generatedAt": "2026-10-01T13:12:55.986Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 77.4% da 18 bookmaker; quota disponibile 1.28 (Betfair).",
-      "result": "96-94",
-      "won": false,
-      "pnl": -1,
-      "fairPnl": null
-    },
-    {
-      "id": "bc61cf4b9f34c324c42c6e9b6b3082a6:1",
-      "eventId": "bc61cf4b9f34c324c42c6e9b6b3082a6",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Paris Basketball",
-      "away": "Žalgiris",
-      "kickoff": "2026-10-01T18:45:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.395988851568177,
-        "n": 18,
-        "odds": 2.56,
-        "book": "Betfair",
-        "age": 0.029718333333333333,
-        "dispersion": 0.022847394540942922,
-        "prices": [
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 2.41
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 2.4
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.41
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 2.4
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 2.3
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.38
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 2.38
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 2.56
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2.5
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 2.32
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 2.39
-          },
-          {
-            "key": "unibet_se",
-            "title": "Unibet (SE)",
-            "odds": 2.43
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 2.28
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 2.43
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 2.39
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 2.45
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 2.42
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 2.32
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "closed",
-      "generatedAt": "2026-10-01T13:12:55.986Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 39.6% da 18 bookmaker; quota disponibile 2.56 (Betfair).",
-      "result": "82-78",
-      "won": true,
-      "pnl": 1.56,
-      "fairPnl": null
-    },
-    {
-      "id": "bc61cf4b9f34c324c42c6e9b6b3082a6:2",
-      "eventId": "bc61cf4b9f34c324c42c6e9b6b3082a6",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Paris Basketball",
-      "away": "Žalgiris",
-      "kickoff": "2026-10-01T18:45:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.6040111484318231,
-        "n": 18,
-        "odds": 1.63,
-        "book": "Betfair",
-        "age": 0.029718333333333333,
-        "dispersion": 0.022847394540942867,
-        "prices": [
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.59
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.58
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.61
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.58
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.54
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.58
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.58
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.63
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.53
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 1.54
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.6
-          },
-          {
-            "key": "unibet_se",
-            "title": "Unibet (SE)",
-            "odds": 1.56
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.45
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.55
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.61
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.61
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 1.62
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.54
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "closed",
-      "generatedAt": "2026-10-01T13:12:55.986Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 60.4% da 18 bookmaker; quota disponibile 1.63 (Betfair).",
-      "result": "82-78",
-      "won": false,
-      "pnl": -1,
-      "fairPnl": null
-    },
-    {
-      "id": "fc6da8af368783abc0b42a3997ff4f9c:1",
-      "eventId": "fc6da8af368783abc0b42a3997ff4f9c",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Saski Baskonia",
-      "away": "Pallacanestro Olimpia Milano",
-      "kickoff": "2026-10-02T18:30:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.4974628873248488,
-        "n": 19,
-        "odds": 1.97,
-        "book": "Unibet (NL)",
-        "age": 0.028386666666666668,
-        "dispersion": 0.0313512330366264,
-        "prices": [
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.91
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.92
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.91
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.91
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.9
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.89
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.9
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.92
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.86
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 1.86
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.96
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 1.97
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.92
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.96
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 1.88
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.86
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.92
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.85
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 1.91
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "closed",
-      "generatedAt": "2026-10-02T12:33:35.192Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 49.7% da 19 bookmaker; quota disponibile 1.97 (Unibet (NL)).",
-      "result": "87-76",
-      "won": true,
-      "pnl": 0.97,
-      "fairPnl": null
-    },
-    {
-      "id": "fc6da8af368783abc0b42a3997ff4f9c:2",
-      "eventId": "fc6da8af368783abc0b42a3997ff4f9c",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Saski Baskonia",
-      "away": "Pallacanestro Olimpia Milano",
-      "kickoff": "2026-10-02T18:30:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.5025371126751513,
-        "n": 19,
-        "odds": 2,
-        "book": "Betfair",
-        "age": 0.028386666666666668,
-        "dispersion": 0.03135123303662629,
-        "prices": [
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.91
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.85
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.96
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.91
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.9
-          },
-          {
-            "key": "marathonbet",
-            "title": "Marathon Bet",
-            "odds": 1.94
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.9
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.9
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.84
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 1.84
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.82
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 1.83
-          },
-          {
-            "key": "pinnacle",
-            "title": "Pinnacle",
-            "odds": 1.93
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 2
-          },
-          {
-            "key": "matchbook",
-            "title": "Matchbook",
-            "odds": 1.97
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.84
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.9
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.71
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 1.91
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "closed",
-      "generatedAt": "2026-10-02T12:33:35.192Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 50.3% da 19 bookmaker; quota disponibile 2.00 (Betfair).",
-      "result": "87-76",
-      "won": false,
-      "pnl": -1,
-      "fairPnl": null
-    },
-    {
-      "id": "9e310ad9a44b0e9e5e1d4244b3b1be8d:1",
-      "eventId": "9e310ad9a44b0e9e5e1d4244b3b1be8d",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Paris Basketball",
-      "away": "ASVEL Lyon Villeurbanne",
-      "kickoff": "2026-10-07T18:45:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.6664580953750839,
-        "n": 12,
-        "odds": 1.47,
-        "book": "Unibet (NL)",
-        "age": 0.02360138888888889,
-        "dispersion": 0.030678905151740654,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.45
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.41
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.44
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.4
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.41
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.4
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.4
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.4
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 1.47
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.45
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 1.39
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.38
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "closed",
-      "generatedAt": "2026-10-07T13:21:53.965Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 66.6% da 12 bookmaker; quota disponibile 1.47 (Unibet (NL)).",
-      "result": "96-98",
-      "won": false,
-      "pnl": -1,
-      "fairPnl": null
-    },
-    {
-      "id": "9e310ad9a44b0e9e5e1d4244b3b1be8d:2",
-      "eventId": "9e310ad9a44b0e9e5e1d4244b3b1be8d",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Paris Basketball",
-      "away": "ASVEL Lyon Villeurbanne",
-      "kickoff": "2026-10-07T18:45:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.333541904624916,
-        "n": 12,
-        "odds": 2.95,
-        "book": "Betsson",
-        "age": 0.02360138888888889,
-        "dispersion": 0.03067890515174071,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 2.88
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 2.93
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 2.85
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 2.7
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 2.84
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 2.95
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 2.95
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 2.9
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 2.7
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 2.7
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 2.8
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 2.79
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "closed",
-      "generatedAt": "2026-10-07T13:21:53.965Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 33.4% da 12 bookmaker; quota disponibile 2.95 (Betsson).",
-      "result": "96-98",
-      "won": true,
-      "pnl": 1.9500000000000002,
-      "fairPnl": null
-    },
-    {
-      "id": "82a9602dee45bcd6c373ad39c110c027:1",
-      "eventId": "82a9602dee45bcd6c373ad39c110c027",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Dubai Basketball",
-      "away": "KK Crvena zvezda",
-      "kickoff": "2026-10-08T16:00:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.7196266664544922,
-        "n": 16,
-        "odds": 1.36,
-        "book": "Betfair",
-        "age": 0.03905083333333333,
-        "dispersion": 0.017968566737039615,
-        "prices": [
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.29
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.32
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.32
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.32
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.36
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.31
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.32
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.32
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.25
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 1.33
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.33
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.3
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 1.3
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.34
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 1.3
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.29
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "closed",
-      "generatedAt": "2026-10-08T13:28:06.583Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 72.0% da 16 bookmaker; quota disponibile 1.36 (Betfair).",
-      "result": "58-77",
-      "won": false,
-      "pnl": -1,
-      "fairPnl": null
-    },
-    {
-      "id": "82a9602dee45bcd6c373ad39c110c027:2",
-      "eventId": "82a9602dee45bcd6c373ad39c110c027",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Dubai Basketball",
-      "away": "KK Crvena zvezda",
-      "kickoff": "2026-10-08T16:00:00.000Z",
-      "outcome": "2",
-      "model": null,
-      "market": {
-        "p": 0.28037333354550764,
-        "n": 16,
-        "odds": 3.65,
-        "book": "Betfair",
-        "age": 0.03905083333333333,
-        "dispersion": 0.01796856673703967,
-        "prices": [
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 3.2
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 3.45
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 3.42
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.58
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 3.65
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 3.3
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.4
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 3.4
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.1
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 3.3
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 3.3
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.5
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 3.5
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 3.36
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 3.25
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 3.24
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "closed",
-      "generatedAt": "2026-10-08T13:28:06.583Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 28.0% da 16 bookmaker; quota disponibile 3.65 (Betfair).",
-      "result": "58-77",
-      "won": true,
-      "pnl": 2.65,
-      "fairPnl": null
-    },
-    {
-      "id": "65221e3d065c2584c775d96a1f1b85f2:1",
-      "eventId": "65221e3d065c2584c775d96a1f1b85f2",
-      "sport": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Maccabi Tel Aviv",
-      "away": "Pallacanestro Olimpia Milano",
-      "kickoff": "2026-10-08T16:00:00.000Z",
-      "outcome": "1",
-      "model": null,
-      "market": {
-        "p": 0.6061949872577658,
-        "n": 16,
-        "odds": 1.65,
-        "book": "BetOnline.ag",
-        "age": 0.03905083333333333,
-        "dispersion": 0.04203995157384999,
-        "prices": [
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.57
-          },
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.53
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.61
-          },
-          {
-            "key": "winamax_de",
-            "title": "Winamax (DE)",
-            "odds": 1.58
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.54
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.57
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.58
-          },
-          {
-            "key": "betsson",
-            "title": "Betsson",
-            "odds": 1.58
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.48
-          },
-          {
-            "key": "unibet_nl",
-            "title": "Unibet (NL)",
-            "odds": 1.57
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.56
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.53
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 1.53
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.65
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 1.54
-          },
-          {
-            "key": "mybookieag",
-            "title": "MyBookie.ag",
-            "odds": 1.54
-          }
-        ]
-      },
-      "analysis": null,
-      "context": null,
-      "status": "closed",
-      "generatedAt": "2026-10-08T13:28:06.583Z",
-      "version": "market-only",
-      "trainingMax": null,
-      "marketQuality": "CONSENSO COERENTE",
-      "movement": null,
-      "why": "Nessun modello indipendente. Consenso no-vig 60.6% da 16 bookmaker; quota disponibile 1.65 (BetOnline.ag).",
-      "result": "97-79",
-      "won": true,
-      "pnl": 0.6499999999999999,
-      "fairPnl": null
-    },
     {
       "id": "65221e3d065c2584c775d96a1f1b85f2:2",
       "eventId": "65221e3d065c2584c775d96a1f1b85f2",
@@ -42237,6 +39890,774 @@
       "won": true,
       "pnl": 0.07000000000000006,
       "fairPnl": null
+    },
+    {
+      "id": "c09af9e2180fcadb93c24305447585a4:1",
+      "eventId": "c09af9e2180fcadb93c24305447585a4",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Fenerbahce SK",
+      "away": "ASVEL Lyon Villeurbanne",
+      "kickoff": "2026-11-17T18:00:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.8334829786166759,
+        "n": 6,
+        "odds": 1.14,
+        "book": "Coolbet",
+        "age": 0.06322055555555556,
+        "dispersion": 0.04523420427352054,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.12
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 1.07
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.13
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.14
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.09
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.12
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-17T17:37:44.594Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 83.3% da 6 bookmaker; quota disponibile 1.14 (Coolbet).",
+      "result": "115-81",
+      "won": true,
+      "pnl": 0.1399999999999999,
+      "fairPnl": null
+    },
+    {
+      "id": "c09af9e2180fcadb93c24305447585a4:2",
+      "eventId": "c09af9e2180fcadb93c24305447585a4",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Fenerbahce SK",
+      "away": "ASVEL Lyon Villeurbanne",
+      "kickoff": "2026-11-17T18:00:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.166517021383324,
+        "n": 6,
+        "odds": 6.89,
+        "book": "1xBet",
+        "age": 0.06322055555555556,
+        "dispersion": 0.04523420427352062,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 6.89
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 4.8
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 6
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 5.8
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 4.8
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 5.5
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-17T17:37:44.594Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 16.7% da 6 bookmaker; quota disponibile 6.89 (1xBet).",
+      "result": "115-81",
+      "won": false,
+      "pnl": -1,
+      "fairPnl": null
+    },
+    {
+      "id": "d98d9ad5c0769750e7483d129766b628:1",
+      "eventId": "d98d9ad5c0769750e7483d129766b628",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Žalgiris",
+      "away": "FC Bayern München",
+      "kickoff": "2026-11-17T18:00:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.7743604327495578,
+        "n": 6,
+        "odds": 1.23,
+        "book": "Coolbet",
+        "age": 0.06322055555555556,
+        "dispersion": 0.028209292472814562,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.22
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 1.15
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.22
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.23
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.16
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.2
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-17T17:37:44.594Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 77.4% da 6 bookmaker; quota disponibile 1.23 (Coolbet).",
+      "result": "117-114",
+      "won": true,
+      "pnl": 0.22999999999999998,
+      "fairPnl": null
+    },
+    {
+      "id": "d98d9ad5c0769750e7483d129766b628:2",
+      "eventId": "d98d9ad5c0769750e7483d129766b628",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Žalgiris",
+      "away": "FC Bayern München",
+      "kickoff": "2026-11-17T18:00:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.2256395672504421,
+        "n": 6,
+        "odds": 4.62,
+        "book": "1xBet",
+        "age": 0.06322055555555556,
+        "dispersion": 0.028209292472814534,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 4.62
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 3.7
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 4.3
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 4.2
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 3.8
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 4.1
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-17T17:37:44.594Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 22.6% da 6 bookmaker; quota disponibile 4.62 (1xBet).",
+      "result": "117-114",
+      "won": false,
+      "pnl": -1,
+      "fairPnl": null
+    },
+    {
+      "id": "d54e5d8c14d4b0a97e2d393d9602bae3:1",
+      "eventId": "d54e5d8c14d4b0a97e2d393d9602bae3",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "FC Barcelona Bàsquet",
+      "away": "Paris Basketball",
+      "kickoff": "2026-11-17T19:30:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.6453419426926401,
+        "n": 6,
+        "odds": 1.48,
+        "book": "Coolbet",
+        "age": 0.06322055555555556,
+        "dispersion": 0.02273355444997227,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.46
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 1.37
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.48
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.48
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.38
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.45
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-17T17:37:44.594Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 64.5% da 6 bookmaker; quota disponibile 1.48 (Coolbet).",
+      "result": "86-89",
+      "won": false,
+      "pnl": -1,
+      "fairPnl": null
+    },
+    {
+      "id": "d54e5d8c14d4b0a97e2d393d9602bae3:2",
+      "eventId": "d54e5d8c14d4b0a97e2d393d9602bae3",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "FC Barcelona Bàsquet",
+      "away": "Paris Basketball",
+      "kickoff": "2026-11-17T19:30:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.35465805730735994,
+        "n": 6,
+        "odds": 2.86,
+        "book": "1xBet",
+        "age": 0.06322055555555556,
+        "dispersion": 0.022733554449972326,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 2.86
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 2.45
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 2.65
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 2.67
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 2.5
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 2.57
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-17T17:37:44.594Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 35.5% da 6 bookmaker; quota disponibile 2.86 (1xBet).",
+      "result": "86-89",
+      "won": true,
+      "pnl": 1.8599999999999999,
+      "fairPnl": null
+    },
+    {
+      "id": "da8bb84954673ddf92c15998b2757057:1",
+      "eventId": "da8bb84954673ddf92c15998b2757057",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Saski Baskonia",
+      "away": "Hapoel Tel Aviv",
+      "kickoff": "2026-11-17T19:30:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.28712194294962273,
+        "n": 6,
+        "odds": 3.4,
+        "book": "Nordic Bet",
+        "age": 0.06322055555555556,
+        "dispersion": 0.015825890666404996,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 3.32
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 3
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 3.4
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 3.25
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 3.2
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 3.2
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-17T17:37:44.594Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 28.7% da 6 bookmaker; quota disponibile 3.40 (Nordic Bet).",
+      "result": "82-85",
+      "won": false,
+      "pnl": -1,
+      "fairPnl": null
+    },
+    {
+      "id": "da8bb84954673ddf92c15998b2757057:2",
+      "eventId": "da8bb84954673ddf92c15998b2757057",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Saski Baskonia",
+      "away": "Hapoel Tel Aviv",
+      "kickoff": "2026-11-17T19:30:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.7128780570503772,
+        "n": 6,
+        "odds": 1.36,
+        "book": "1xBet",
+        "age": 0.06322055555555556,
+        "dispersion": 0.01582589066640494,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.36
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 1.24
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.32
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.35
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.23
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.3
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-17T17:37:44.594Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 71.3% da 6 bookmaker; quota disponibile 1.36 (1xBet).",
+      "result": "82-85",
+      "won": true,
+      "pnl": 0.3600000000000001,
+      "fairPnl": null
+    },
+    {
+      "id": "3e14f0eac97f2bdd7dc7f03af6033da7:1",
+      "eventId": "3e14f0eac97f2bdd7dc7f03af6033da7",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Pallacanestro Olimpia Milano",
+      "away": "KK Crvena zvezda",
+      "kickoff": "2026-11-17T19:30:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.485168935780603,
+        "n": 6,
+        "odds": 2.06,
+        "book": "1xBet",
+        "age": 0.06322055555555556,
+        "dispersion": 0.042163790107726196,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 2.06
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 1.85
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.98
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.93
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.74
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.92
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-17T17:37:44.594Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 48.5% da 6 bookmaker; quota disponibile 2.06 (1xBet).",
+      "result": "91-77",
+      "won": true,
+      "pnl": 1.06,
+      "fairPnl": null
+    },
+    {
+      "id": "3e14f0eac97f2bdd7dc7f03af6033da7:2",
+      "eventId": "3e14f0eac97f2bdd7dc7f03af6033da7",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "Pallacanestro Olimpia Milano",
+      "away": "KK Crvena zvezda",
+      "kickoff": "2026-11-17T19:30:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.514831064219397,
+        "n": 6,
+        "odds": 1.86,
+        "book": "Coolbet",
+        "age": 0.06322055555555556,
+        "dispersion": 0.04216379010772603,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.82
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 1.67
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.85
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.86
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.82
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.79
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-17T17:37:44.594Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 51.5% da 6 bookmaker; quota disponibile 1.86 (Coolbet).",
+      "result": "91-77",
+      "won": false,
+      "pnl": -1,
+      "fairPnl": null
+    },
+    {
+      "id": "d2e68cf1e57b5753197640008e091adb:1",
+      "eventId": "d2e68cf1e57b5753197640008e091adb",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "KK Partizan NIS",
+      "away": "Valencia Basket",
+      "kickoff": "2026-11-17T19:45:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.5367546991426572,
+        "n": 6,
+        "odds": 1.81,
+        "book": "1xBet",
+        "age": 0.06322055555555556,
+        "dispersion": 0.016401928594669712,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 1.81
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 1.61
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.75
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.8
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.67
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.72
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-17T17:37:44.594Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 53.7% da 6 bookmaker; quota disponibile 1.81 (1xBet).",
+      "result": "64-76",
+      "won": false,
+      "pnl": -1,
+      "fairPnl": null
+    },
+    {
+      "id": "d2e68cf1e57b5753197640008e091adb:2",
+      "eventId": "d2e68cf1e57b5753197640008e091adb",
+      "sport": "basketball_euroleague",
+      "league": "Basketball Euroleague",
+      "home": "KK Partizan NIS",
+      "away": "Valencia Basket",
+      "kickoff": "2026-11-17T19:45:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.4632453008573428,
+        "n": 6,
+        "odds": 2.08,
+        "book": "Nordic Bet",
+        "age": 0.06322055555555556,
+        "dispersion": 0.016401928594669657,
+        "prices": [
+          {
+            "key": "onexbet",
+            "title": "1xBet",
+            "odds": 2.06
+          },
+          {
+            "key": "unibet_fr",
+            "title": "Unibet (FR)",
+            "odds": 1.93
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 2.08
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 2.02
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.91
+          },
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 2
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-17T17:37:44.594Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 46.3% da 6 bookmaker; quota disponibile 2.08 (Nordic Bet).",
+      "result": "64-76",
+      "won": true,
+      "pnl": 1.08,
+      "fairPnl": null
     }
   ],
   "limits": [
@@ -42259,8 +40680,8 @@
   },
   "fixtureInfo": {
     "kind": "last-successful-snapshot",
-    "capturedAt": "2026-11-17T17:37:44.594Z",
-    "generation": "b416b48a-3911-4a87-a0bb-60d5a0f67e14",
+    "capturedAt": "2026-11-18T17:15:05.547Z",
+    "generation": "e37d4b82-43b3-4751-b141-37ee6b7f9cf6",
     "sources": [
       "The Odds API v4: eventi e quote h2h",
       "Understat: xG storici"
