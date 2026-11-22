@@ -8,7 +8,7 @@ if(mode==='gate'){
   const marker=existsSync('data/published.json')?read('data/published.json'):null;
   const now=new Date();const latest=existsSync('data/release.json')?read('data/release.json'):null;const refreshDue=!latest||now-Date.parse(latest.generatedAt)>=3*3600000;
   // Lo scheduler UTC copre sia CEST sia CET: procede solo se l'ora locale e' 14 o 18, cosi' i trigger fuori fascia non consumano crediti.
-  const proceed=['push','workflow_dispatch'].includes(process.env.GITHUB_EVENT_NAME)||(!latest||Date.parse(latest.generatedAt)<lastSlotStart(now.toISOString()));
+  const proceed=['push','workflow_dispatch'].includes(process.env.GITHUB_EVENT_NAME)||((!latest||Date.parse(latest.generatedAt)<lastSlotStart(now.toISOString()))&&now-lastSlotStart(now.toISOString())<=18e6);
   appendFileSync(process.env.GITHUB_OUTPUT,`proceed=${proceed}\n`);console.log('Esecuzione richiesta:',proceed);
 }else if(mode==='verify'){
   const expected=read('data/release.json');let verified=false;
@@ -36,8 +36,9 @@ if(mode==='gate'){
     const d=read('data/release.json'),m=read('data/published.json');if(m.generation!==d.generation)throw Error('Generazione non verificata');
     const find=id=>d.picks.find(p=>p.id===id);
     const line=(label,id)=>{const p=find(id);return label+': '+(p?`${p.home} – ${p.away}, ${p.outcome} @ ${p.market.odds.toFixed(2)}`:'nessuna selezione idonea');};
-    message=[`Prono · aggiornamento verificato ${d.day}`,line('Singola prudente',d.selections.single),
-      'Combinata: '+(d.selections.combo?`${d.selections.combo.legs.length} eventi @ ${d.selections.combo.odds.toFixed(2)}`:'nessuna selezione idonea'),line('Alta quota',d.selections.high),
+    const none=!d.selections.single&&!d.selections.combo&&!d.selections.high;const best=none?d.picks.filter(p=>p.market&&Date.parse(p.kickoff)>Date.now()).map(p=>({p,s:p.model!=null?p.model*p.market.odds:1/p.market.odds-1})).sort((x,y)=>y.s-x.s)[0]?.p:null;
+message=[`Prono · aggiornamento verificato ${d.day}`,line('Singola prudente',d.selections.single),
+      'Combinata: '+(d.selections.combo?`${d.selections.combo.legs.length} eventi @ ${d.selections.combo.odds.toFixed(2)}`:'nessuna selezione idonea'),line('Alta quota',d.selections.high),...(best?["Nessuna selezione dell app oggi. Esito con la stima migliore: "+best.home+" – "+best.away+", "+best.outcome+" @ "+best.market.odds.toFixed(2)+" ("+best.league+"; stima, non una selezione)"]:[]),
       `${d.picks.length} esiti analizzati. Nessun esito certo.`,publicURL].join('\n');
   }else message='Prono: aggiornamento o notifica non riusciti. Nessuna conferma di successo. Verifica il workflow: https://github.com/dado189-code/pronostici/actions';
   try{
