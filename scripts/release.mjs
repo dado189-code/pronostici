@@ -86,6 +86,7 @@ for(const sport of sports){
     }
   }
 }
+if(!picks.length&&process.env.FORCE_REFRESH!=='1'&&old?.day===day&&old.picks?.length){console.log('Nessun evento utile: mantengo lo snapshot gia pubblicato oggi.');stage();process.exit(0);}
 const ids=new Set(settled.map(p=>p.id));for(const p of picks)if(!ids.has(p.id)){settled.push(p);ids.add(p.id);}
 const selected=selections(picks,now);
 // Giocate realmente proposte dall'app (le stesse della notifica Telegram): registro persistente, chiuso con i risultati.
