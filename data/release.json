@@ -1,9 +1,9 @@
 {
   "schema": 2,
   "dataPipelineVersion": 1,
-  "generation": "2f8485f3-ab1b-426a-8a4d-55f74277b5c4",
-  "generatedAt": "2026-11-22T21:51:03.924Z",
-  "day": "2026-11-22",
+  "generation": "72f53b69-1321-4b60-9b4a-6938e7fdcbb4",
+  "generatedAt": "2026-11-23T20:12:37.899Z",
+  "day": "2026-11-23",
   "zone": "Europe/Rome",
   "version": "dc-xg-180-audited-1",
   "policy": {
@@ -913,31 +913,31 @@
       "league": "Serie A",
       "matches": 1613,
       "lastMatch": "2026-10-31T19:45:00.000Z",
-      "downloadedAt": "2026-11-22T21:51:11.416Z"
+      "downloadedAt": "2026-11-23T20:12:45.635Z"
     },
     {
       "league": "Premier League",
       "matches": 1608,
       "lastMatch": "2026-10-31T20:00:00.000Z",
-      "downloadedAt": "2026-11-22T21:51:18.345Z"
+      "downloadedAt": "2026-11-23T20:12:52.847Z"
     },
     {
       "league": "Liga",
       "matches": 1624,
       "lastMatch": "2026-10-31T20:00:00.000Z",
-      "downloadedAt": "2026-11-22T21:51:25.267Z"
+      "downloadedAt": "2026-11-23T20:13:00.075Z"
     },
     {
       "league": "Bundesliga",
       "matches": 1294,
       "lastMatch": "2026-10-31T17:30:00.000Z",
-      "downloadedAt": "2026-11-22T21:51:32.089Z"
+      "downloadedAt": "2026-11-23T20:13:07.154Z"
     },
     {
       "league": "Ligue 1",
       "matches": 1374,
       "lastMatch": "2026-10-31T19:45:00.000Z",
-      "downloadedAt": "2026-11-22T21:51:38.914Z"
+      "downloadedAt": "2026-11-23T20:13:14.232Z"
     }
   ],
   "diagnostics": [
@@ -1094,270 +1094,14 @@
       "fairPnl": 1.6658671722942593
     },
     "CONSENSO": {
-      "n": 145,
-      "wins": 66,
-      "pnl": 11.420000000000003,
+      "n": 147,
+      "wins": 67,
+      "pnl": 11.580000000000004,
       "fairPnl": 0
     }
   },
-  "pendingOld": 271,
+  "pendingOld": 275,
   "history": [
-    {
-      "id": "5d3606630a2d3a218a6340d082c1bdc6:2",
-      "eventId": "5d3606630a2d3a218a6340d082c1bdc6",
-      "sport": "soccer_france_ligue_one",
-      "league": "Ligue 1",
-      "home": "Nice",
-      "away": "Strasbourg",
-      "kickoff": "2026-10-11T13:00:00.000Z",
-      "outcome": "2",
-      "model": 0.368024907095562,
-      "market": {
-        "p": 0.29853467366063363,
-        "n": 15,
-        "odds": 3.5,
-        "book": "Betfair",
-        "age": 0.06414055555555556,
-        "dispersion": 0.02422978615394511,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 3.29
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 3
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 3
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 3.15
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 3.15
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 3
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 3.1
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 3.1
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 3.25
-          },
-          {
-            "key": "everygame",
-            "title": "Everygame",
-            "odds": 3.3
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 3.25
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 3.05
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 3.5
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 3.16
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 3.07
-          }
-        ]
-      },
-      "analysis": {
-        "fair": 2.717207397433941,
-        "edge": 0.06949023343492838,
-        "ev": 0.2880871748344671,
-        "gap": 0.06949023343492838,
-        "quality": 82.63369365740742,
-        "confidence": 67.64977859175654,
-        "category": "VALORE",
-        "rank": 0.8023250846351268,
-        "eligible": true
-      },
-      "context": {
-        "teamN": 145,
-        "seasonN": 5,
-        "historyAgeDays": 21.898378541666666
-      },
-      "status": "closed",
-      "generatedAt": "2026-10-11T12:48:39.906Z",
-      "version": "dc-xg-180-audited-1",
-      "trainingMax": "2026-10-10T18:45:00.000Z",
-      "marketQuality": null,
-      "rates": {
-        "homeXG": 1.5880606896912175,
-        "awayXG": 1.5521387140853655,
-        "rho": -0.054999999999999896
-      },
-      "movement": null,
-      "why": "Modello 36.8%, mercato no-vig 29.9%. Quota equa 2.72, disponibile 3.50 (Betfair). Scarto 6.9 punti percentuali: disaccordo moderato.",
-      "result": "2-1",
-      "won": false,
-      "pnl": -1,
-      "fairPnl": -1
-    },
-    {
-      "id": "34f584ab922e220dc4f3b81217959d6d:1",
-      "eventId": "34f584ab922e220dc4f3b81217959d6d",
-      "sport": "soccer_france_ligue_one",
-      "league": "Ligue 1",
-      "home": "Rennes",
-      "away": "Auxerre",
-      "kickoff": "2026-10-11T15:15:00.000Z",
-      "outcome": "1",
-      "model": 0.561307898378175,
-      "market": {
-        "p": 0.6636275993367196,
-        "n": 15,
-        "odds": 1.47,
-        "book": "Betfair",
-        "age": 0.06414055555555556,
-        "dispersion": 0.029452592135643996,
-        "prices": [
-          {
-            "key": "onexbet",
-            "title": "1xBet",
-            "odds": 1.47
-          },
-          {
-            "key": "unibet_fr",
-            "title": "Unibet (FR)",
-            "odds": 1.4
-          },
-          {
-            "key": "betclic_fr",
-            "title": "Betclic (FR)",
-            "odds": 1.42
-          },
-          {
-            "key": "codere_it",
-            "title": "Codere (IT)",
-            "odds": 1.44
-          },
-          {
-            "key": "coolbet",
-            "title": "Coolbet",
-            "odds": 1.45
-          },
-          {
-            "key": "winamax_fr",
-            "title": "Winamax (FR)",
-            "odds": 1.41
-          },
-          {
-            "key": "sport888",
-            "title": "888sport",
-            "odds": 1.4
-          },
-          {
-            "key": "williamhill",
-            "title": "William Hill",
-            "odds": 1.4
-          },
-          {
-            "key": "everygame",
-            "title": "Everygame",
-            "odds": 1.4
-          },
-          {
-            "key": "pmu_fr",
-            "title": "PMU (FR)",
-            "odds": 1.4
-          },
-          {
-            "key": "leovegas_se",
-            "title": "LeoVegas (SE)",
-            "odds": 1.43
-          },
-          {
-            "key": "betfair_ex_eu",
-            "title": "Betfair",
-            "odds": 1.47
-          },
-          {
-            "key": "nordicbet",
-            "title": "Nordic Bet",
-            "odds": 1.43
-          },
-          {
-            "key": "gtbets",
-            "title": "GTbets",
-            "odds": 1.43
-          },
-          {
-            "key": "betonlineag",
-            "title": "BetOnline.ag",
-            "odds": 1.44
-          }
-        ]
-      },
-      "analysis": {
-        "fair": 1.781553409259638,
-        "edge": -0.10231970095854459,
-        "ev": -0.17487738938408282,
-        "gap": 0.10231970095854459,
-        "quality": 82.66610106481482,
-        "confidence": 56.98594362731482,
-        "category": "NO BET",
-        "rank": 0.5044350495173612,
-        "eligible": false
-      },
-      "context": {
-        "teamN": 111,
-        "seasonN": 5,
-        "historyAgeDays": 21.752545208333334
-      },
-      "status": "closed",
-      "generatedAt": "2026-10-11T12:48:39.906Z",
-      "version": "dc-xg-180-audited-1",
-      "trainingMax": "2026-10-10T18:45:00.000Z",
-      "marketQuality": null,
-      "rates": {
-        "homeXG": 2.0267965010025852,
-        "awayXG": 1.192209888325986,
-        "rho": -0.054999999999999896
-      },
-      "movement": null,
-      "why": "Modello 56.1%, mercato no-vig 66.4%. Quota equa 1.78, disponibile 1.47 (Betfair). Scarto 10.2 punti percentuali: disaccordo forte, penalizzato.",
-      "result": "4-1",
-      "won": true,
-      "pnl": 0.47,
-      "fairPnl": 0.7815534092596379
-    },
     {
       "id": "34f584ab922e220dc4f3b81217959d6d:X",
       "eventId": "34f584ab922e220dc4f3b81217959d6d",
@@ -37531,6 +37275,164 @@
       "won": false,
       "pnl": -1,
       "fairPnl": -1
+    },
+    {
+      "id": "222a2887819bb18d9b9572aef63d9b9e:1",
+      "eventId": "222a2887819bb18d9b9572aef63d9b9e",
+      "sport": "basketball_nba",
+      "league": "NBA",
+      "home": "Atlanta Hawks",
+      "away": "Detroit Pistons",
+      "kickoff": "2026-11-22T20:40:00.000Z",
+      "outcome": "1",
+      "model": null,
+      "market": {
+        "p": 0.45080925165083774,
+        "n": 9,
+        "odds": 2.16,
+        "book": "Marathon Bet",
+        "age": 0.05236777777777778,
+        "dispersion": 0.014429558476575621,
+        "prices": [
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 2.1
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 2
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 2.1
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 2.1
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 2.16
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 2.1
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 2.05
+          },
+          {
+            "key": "marathonbet",
+            "title": "Marathon Bet",
+            "odds": 2.16
+          },
+          {
+            "key": "everygame",
+            "title": "Everygame",
+            "odds": 2.1
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-22T08:47:21.524Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 45.1% da 9 bookmaker; quota disponibile 2.16 (Marathon Bet).",
+      "result": "107-97",
+      "won": true,
+      "pnl": 1.1600000000000001,
+      "fairPnl": null
+    },
+    {
+      "id": "222a2887819bb18d9b9572aef63d9b9e:2",
+      "eventId": "222a2887819bb18d9b9572aef63d9b9e",
+      "sport": "basketball_nba",
+      "league": "NBA",
+      "home": "Atlanta Hawks",
+      "away": "Detroit Pistons",
+      "kickoff": "2026-11-22T20:40:00.000Z",
+      "outcome": "2",
+      "model": null,
+      "market": {
+        "p": 0.5491907483491624,
+        "n": 9,
+        "odds": 1.77,
+        "book": "Everygame",
+        "age": 0.05236777777777778,
+        "dispersion": 0.014429558476575677,
+        "prices": [
+          {
+            "key": "mybookieag",
+            "title": "MyBookie.ag",
+            "odds": 1.75
+          },
+          {
+            "key": "winamax_fr",
+            "title": "Winamax (FR)",
+            "odds": 1.68
+          },
+          {
+            "key": "nordicbet",
+            "title": "Nordic Bet",
+            "odds": 1.72
+          },
+          {
+            "key": "betsson",
+            "title": "Betsson",
+            "odds": 1.72
+          },
+          {
+            "key": "coolbet",
+            "title": "Coolbet",
+            "odds": 1.73
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "odds": 1.77
+          },
+          {
+            "key": "pmu_fr",
+            "title": "PMU (FR)",
+            "odds": 1.63
+          },
+          {
+            "key": "marathonbet",
+            "title": "Marathon Bet",
+            "odds": 1.72
+          },
+          {
+            "key": "everygame",
+            "title": "Everygame",
+            "odds": 1.77
+          }
+        ]
+      },
+      "analysis": null,
+      "context": null,
+      "status": "closed",
+      "generatedAt": "2026-11-22T08:47:21.524Z",
+      "version": "market-only",
+      "trainingMax": null,
+      "marketQuality": "CONSENSO COERENTE",
+      "movement": null,
+      "why": "Nessun modello indipendente. Consenso no-vig 54.9% da 9 bookmaker; quota disponibile 1.77 (Everygame).",
+      "result": "107-97",
+      "won": false,
+      "pnl": -1,
+      "fairPnl": null
     }
   ],
   "limits": [
